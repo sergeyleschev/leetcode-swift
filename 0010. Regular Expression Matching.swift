@@ -87,7 +87,7 @@ class Solution {
         }
 
 
-        var list = [[-1, -1, 1]] // [start, end, is_need_to_add_next_start]
+        var list = [[-1, -1, 1]] // [start, end, is need to add next start]
         for (index, c) in chars.enumerated() {
             let mark = marks[index]
             list = next_range(list, c, mark)
