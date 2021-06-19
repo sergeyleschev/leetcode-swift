@@ -31,9 +31,9 @@ class Solution {
     // 2 <= n <= 10^5
     // 0 <= height[i] <= 10^4
 
-    /// - Complexity:
-    ///   - time: O(n), where n is the number of heights.
-    ///   - space: O(1), only constant space is used.
+    // - Complexity:
+    //   - time: O(n), where n is the number of heights.
+    //   - space: O(1), only constant space is used.
     
     func maxArea(_ height: [Int]) -> Int {
         var start = 0
