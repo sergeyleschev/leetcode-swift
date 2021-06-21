@@ -30,8 +30,7 @@ class Solution {
     // Follow up: Can you come up with an algorithm that runs in O(m + n) time?
 
     // - Complexity:
-    //   - time: O(m + n), where m is the number of elements in nums1, and n is
-    //     the number of elements in nums2.
+    //   - time: O(m + n), where m is the number of elements in nums1, and n is the number of elements in nums2.
     //   - space: O(1), only constant space is used.
 
     func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
