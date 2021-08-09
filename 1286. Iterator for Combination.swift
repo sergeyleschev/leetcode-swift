@@ -24,7 +24,7 @@ class CombinationIterator {
     // Constraints:
     // 1 <= combinationLength <= characters.length <= 15
     // All the characters of characters are unique.
-    // At most 104 calls will be made to next and hasNext.
+    // At most 10^4 calls will be made to next and hasNext.
     // It's guaranteed that all calls of the function next are valid.
 
     private var combinations: [String]
