@@ -34,7 +34,7 @@ class Solution {
     // Output: 5
      
     // Constraints:
-    // The number of nodes in the tree is in the range [0, 105].
+    // The number of nodes in the tree is in the range [0, 10^5].
     // -1000 <= Node.val <= 1000
 
     // - Complexity:
