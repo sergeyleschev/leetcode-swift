@@ -41,7 +41,7 @@ class Solution {
     // Output: 1076
 
     // Constraints:
-    // 1 <= n <= 105
+    // 1 <= n <= 10^5
     // 0 <= headID < n
     // manager.length == n
     // 0 <= manager[i] < n
