@@ -27,7 +27,7 @@ class Solution {
     // nums.length == n
     // adjacentPairs.length == n - 1
     // adjacentPairs[i].length == 2
-    // 2 <= n <= 105
+    // 2 <= n <= 10^5
     // -10^5 <= nums[i], ui, vi <= 10^5
     // There exists some nums that has adjacentPairs as its pairs.
 
