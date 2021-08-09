@@ -41,7 +41,7 @@ class Solution {
     // Output: 0
 
     // Constraints:
-    // The number of nodes in the tree is in the range [1, 5 * 104].
+    // The number of nodes in the tree is in the range [1, 5 * 10^4].
     // 1 <= Node.val <= 100
 
     enum Direction { case left, right }
