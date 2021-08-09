@@ -18,7 +18,7 @@ class Solution {
      
     // Constraints:
     // 0 <= nums.length <= 3000
-    // -105 <= nums[i] <= 105
+    // -10^5 <= nums[i] <= 10^5
 
     func threeSum(_ nums: [Int]) -> [[Int]] {
         guard nums.count > 2 else { return [] }
