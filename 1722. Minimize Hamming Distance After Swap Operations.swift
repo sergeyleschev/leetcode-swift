@@ -26,7 +26,7 @@ class Solution {
      
     // Constraints:
     // n == source.length == target.length
-    // 1 <= n <= 105
+    // 1 <= n <= 10^5
     // 1 <= source[i], target[i] <= 10^5
     // 0 <= allowedSwaps.length <= 10^5
     // allowedSwaps[i].length == 2
