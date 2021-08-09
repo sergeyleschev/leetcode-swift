@@ -12,8 +12,8 @@ class Solution {
     // Output: ["2*3+2","2+3*2"]
 
     // Example 3:
-    // Input: num = "105", target = 5
-    // Output: ["1*0+5","10-5"]
+    // Input: num = "10^5", target = 5
+    // Output: ["1*0+5","10^-5"]
 
     // Example 4:
     // Input: num = "00", target = 0
