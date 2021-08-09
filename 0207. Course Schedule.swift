@@ -18,7 +18,7 @@ class Solution {
     // To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.
      
     // Constraints:
-    // 1 <= numCourses <= 105
+    // 1 <= numCourses <= 10^5
     // 0 <= prerequisites.length <= 5000
     // prerequisites[i].length == 2
     // 0 <= ai, bi < numCourses
