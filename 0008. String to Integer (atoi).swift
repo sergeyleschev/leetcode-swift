@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 8. String to Integer (atoi)
     // Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++'s atoi function).
     // The algorithm for myAtoi(string s) is as follows:
@@ -96,9 +98,7 @@ class Solution {
         for c in s {
             switch c {
             case " ":
-                if isLeading == false {
-                    isValid = false
-                }
+                if isLeading == false { isValid = false }
             case "-", "+":
                 isLeading = false
                 if isSign || nums.count > 0 {
@@ -113,9 +113,7 @@ class Solution {
             default:
                 isValid = false
             }
-            if isValid == false {
-                break
-            }
+            if isValid == false { break }
         }
 
         for num in nums {
