@@ -1,5 +1,7 @@
 class Solution {
 
+	// Solution @ Sergey Leschev, Belarusian State University
+
 	// 32. Longest Valid Parentheses
 	// Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.
 
@@ -30,6 +32,7 @@ class Solution {
 			for c in string.reversed() { res.append(c == "(" ? ")" : "(") }
 			return res
 		}
+		
 
 		func _max(_ string: [Character]) -> Int {
 			var max = 0
