@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 22. Generate Parentheses
     // Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 
@@ -29,9 +31,7 @@ class Solution {
                 return
             }
 
-            for c in path {
-                if c == "(" { count += 1 }
-            }
+            for c in path where c == "(" { count += 1 }
             
             for c in ["(", ")"] {
                 if (c == "(" && count >= n) || (c == ")" && path.count - count >= count)  { continue }
@@ -42,7 +42,6 @@ class Solution {
         }
 
         backtrack([], n * 2)
-        
         return res
     }
 
