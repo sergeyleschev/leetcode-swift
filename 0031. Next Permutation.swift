@@ -1,12 +1,13 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 31. Next Permutation
     // Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
     // If such an arrangement is not possible, it must rearrange it as the lowest possible order (i.e., sorted in ascending order).
     // The replacement must be in place and use only constant extra memory.
 
-    // Rearranges numbers into the lexicographically next greater permutation of
-    // numbers.
+    // Rearranges numbers into the lexicographically next greater permutation of numbers.
 
     // - Parameter nums: An array of numbers.
 
