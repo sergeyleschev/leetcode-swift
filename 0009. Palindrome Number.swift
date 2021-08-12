@@ -1,5 +1,7 @@
 class Solution {
 
+	// Solution @ Sergey Leschev, Belarusian State University
+
 	// 9. Palindrome Number
 	// Given an integer x, return true if x is palindrome integer.
 	// An integer is a palindrome when it reads the same backward as forward. For example, 121 is palindrome while 123 is not.
@@ -37,12 +39,7 @@ class Solution {
 			tmp = tmp / 10
 		}
         
-		for (i, num) in nums.enumerated() {
-			if nums[nums.count - i - 1] != num {
-				return false
-			} 
-		}
-        
+		for (i, num) in nums.enumerated() where nums[nums.count - i - 1] != num { return false }
         return true
     }
 
