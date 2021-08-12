@@ -10,6 +10,8 @@
  */
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 25. Reverse Nodes in k-Group
     // Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
     // k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes, in the end, should remain as it is.
@@ -42,7 +44,7 @@ class Solution {
     func reverseKGroup(_ head: ListNode?, _ k: Int) -> ListNode? {
         var tmp1: ListNode? = head
         
-        for _ in 0..<k-1 { tmp1 = tmp1?.next }
+        for _ in 0..<k - 1 { tmp1 = tmp1?.next }
 
         if tmp1 == nil {
             return head
