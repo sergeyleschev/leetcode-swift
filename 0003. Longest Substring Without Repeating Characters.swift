@@ -1,5 +1,6 @@
-
 class Solution {
+
+    // Solution @ Sergey Leschev, Belarusian State University
 
     // 3. Longest Substring Without Repeating Characters
     // Given a string s, find the length of the longest substring without repeating characters.
@@ -39,9 +40,7 @@ class Solution {
         
         for i in 0..<length {
             let char = string[i]
-            if let same_char_index = chars.firstIndex(of: char) {
-                chars = Array(chars[(same_char_index+1)..<chars.count])
-            }
+            if let same_char_index = chars.firstIndex(of: char) { chars = Array(chars[(same_char_index+1)..<chars.count]) }
             chars.append(char)
             max = chars.count > max ? chars.count : max
         }
