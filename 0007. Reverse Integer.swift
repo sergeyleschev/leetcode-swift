@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 7. Reverse Integer
     // Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-2^31, 2^31 - 1], then return 0.
     // Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
@@ -28,16 +30,14 @@ class Solution {
         var val = isNegtive ? -x : x
         var nums: [Int] = []
         let max: Double = pow(2, 31)
+        var res: Int = 0
         
         while val > 0 {
             nums.append(val % 10)
             val = val / 10
         }
         
-        var res: Int = 0
-        for num in nums {
-            res = 10 * res + num
-        }
+        for num in nums { res = 10 * res + num }
         res = isNegtive ? -res : res
         
         if res < -Int(max) || res > Int(max)  - 1 { res = 0 }
