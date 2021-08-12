@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 29. Divide Two Integers
     // Given two integers dividend and divisor, divide two integers without using multiplication, division, and mod operator.
     // Return the quotient after dividing dividend by divisor.
