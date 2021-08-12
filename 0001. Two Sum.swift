@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1. Two Sum
     // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
     // You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -38,9 +40,7 @@ class Solution {
         var dict = [Int: Int]()
 
         for (i, num) in nums.enumerated() {
-            if let j = dict[target - num] {
-                return [j, i]
-            }
+            if let j = dict[target - num] { return [j, i] }
 
             dict[num] = i
         }
