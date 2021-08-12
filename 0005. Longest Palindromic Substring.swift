@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 5. Longest Palindromic Substring
     // Given a string s, return the longest palindromic substring in s.
 
@@ -28,18 +30,18 @@ class Solution {
         guard s.count > 0 else { return s }
         var string = Array(s)
         let count = string.count
-        var max_1 = 0
-        var index_1 = 0
-        var max_2 = 0
-        var index_2 = -1
+        var max1 = 0
+        var index1 = 0
+        var max2 = 0
+        var index2 = -1
 
         for i in 0..<count {
             var tmp = 0
             for j in 0..<count {
                 if (i - j < 0 || i + j > count-1) { break }
                 if (string[i  - j] != string[i + j]) { break }
-                max_1 = max_1 > tmp ? max_1 : tmp
-                index_1 = max_1 > tmp ? index_1 : i
+                max1 = max1 > tmp ? max1 : tmp
+                index1 = max1 > tmp ? index1 : i
                 tmp += 1
             }
         }
@@ -50,19 +52,19 @@ class Solution {
                 if (i - j < 0 || i + j + 1 > count - 1) { break }
                 if (string[i - j] != string[i + j + 1]) { break }
                 tmp += 1
-                max_2 = max_2 > tmp ? max_2 : tmp
-                index_2 = max_2 > tmp ? index_2 : i
+                max2 = max2 > tmp ? max2 : tmp
+                index2 = max2 > tmp ? index2 : i
             }
         }
 
-        if ((max_1 * 2 + 1) >= max_2 * 2) {
-            let start = s.index(s.startIndex, offsetBy: index_1 - max_1)
-            let end = s.index(s.startIndex, offsetBy: index_1 + max_1 + 1)
+        if ((max1 * 2 + 1) >= max2 * 2) {
+            let start = s.index(s.startIndex, offsetBy: index1 - max1)
+            let end = s.index(s.startIndex, offsetBy: index1 + max1 + 1)
             return String(s[start..<end])
 
         } else {
-            let start = s.index(s.startIndex, offsetBy: index_2 - max_2 + 1)
-            let end = s.index(s.startIndex, offsetBy: index_2 + max_2 + 1)
+            let start = s.index(s.startIndex, offsetBy: index2 - max2 + 1)
+            let end = s.index(s.startIndex, offsetBy: index2 + max2 + 1)
             return String(s[start..<end])
         }  
     }
