@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 37. Sudoku Solver
     // Write a program to solve a Sudoku puzzle by filling the empty cells.
 
@@ -25,9 +27,7 @@ class Solution {
         
         func backtrack(_ path: [Character], _ input: [[Character]], _ index: Int) {
             if path.count == 81 {
-                if isValidSudoku(input) {
-                    board = input
-                }
+                if isValidSudoku(input) { board = input }
                 return
             }
             let x = index / 9
@@ -107,10 +107,8 @@ class Solution {
 
         func isInvalid(_ box: [Character]) -> Bool {
             var chars: [Character] = []
-            for c in box {
-                if c != "." {
-                    if chars.contains(c) { return true } else { chars.append(c) }
-                }
+            for c in box where c != "." {
+                if chars.contains(c) { return true } else { chars.append(c) }
             }
             return false
         }
@@ -121,7 +119,7 @@ class Solution {
             if isInvalid(board.map({ $0[i] })) { return false }
             let col = (i % 3) * 3
             let row = (i / 3) * 3
-            let box = Array(board[row][col..<col+3]) + Array(board[row + 1][col..<col + 3]) + Array(board[row + 2][col..<col + 3])
+            let box = Array(board[row][col..<col + 3]) + Array(board[row + 1][col..<col + 3]) + Array(board[row + 2][col..<col + 3])
             if isInvalid(box) { return false }
         }
 
