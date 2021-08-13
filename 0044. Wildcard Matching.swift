@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 44. Wildcard Matching
     // Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for '?' and '*' where:
     // '?' Matches any single character.
