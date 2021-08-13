@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 38. Count and Say
     // The count-and-say sequence is a sequence of digit strings defined by the recursive formula:
     // countAndSay(1) = "1"
