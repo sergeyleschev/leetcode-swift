@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 87. Scramble String
     // We can scramble a string s to get a string t using the following algorithm:
     // If the length of the string is 1, stop.
