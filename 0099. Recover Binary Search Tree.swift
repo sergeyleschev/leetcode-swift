@@ -15,6 +15,8 @@
  */
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 99. Recover Binary Search Tree
     // You are given the root of a binary search tree (BST), where exactly two nodes of the tree were swapped by mistake. Recover the tree without changing its structure.
     // Follow up: A solution using O(n) space is pretty straight forward. Could you devise a constant space solution?
