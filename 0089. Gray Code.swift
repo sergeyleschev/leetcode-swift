@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 89. Gray Code
     // The gray code is a binary numeral system where two successive values differ in only one bit.
     // Given an integer n representing the total number of bits in the code, return any sequence of gray code.
