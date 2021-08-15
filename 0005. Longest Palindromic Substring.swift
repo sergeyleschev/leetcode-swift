@@ -61,8 +61,8 @@ class Solution {
             let start = s.index(s.startIndex, offsetBy: index1 - max1)
             let end = s.index(s.startIndex, offsetBy: index1 + max1 + 1)
             return String(s[start..<end])
-
-        } else {
+        } 
+        else {
             let start = s.index(s.startIndex, offsetBy: index2 - max2 + 1)
             let end = s.index(s.startIndex, offsetBy: index2 + max2 + 1)
             return String(s[start..<end])
