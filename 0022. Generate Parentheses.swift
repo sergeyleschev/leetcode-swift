@@ -32,7 +32,6 @@ class Solution {
             }
 
             for c in path where c == "(" { count += 1 }
-            
             for c in ["(", ")"] {
                 if (c == "(" && count >= n) || (c == ")" && path.count - count >= count)  { continue }
                 path.append(c)
