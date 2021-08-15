@@ -39,9 +39,7 @@ class Solution {
         
         for num in nums { res = 10 * res + num }
         res = isNegtive ? -res : res
-        
         if res < -Int(max) || res > Int(max)  - 1 { res = 0 }
-
         return res
     }
 
