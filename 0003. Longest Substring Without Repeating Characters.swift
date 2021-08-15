@@ -29,8 +29,8 @@ class Solution {
     // 0 <= s.length <= 5 * 10^4
     // s consists of English letters, digits, symbols and spaces.
 
-    /// - Complexity:
-    ///   - time: O(n)
+    // - Complexity:
+    //   - time: O(n)
 
     func lengthOfLongestSubstring(_ s: String) -> Int {
         var max = 0
