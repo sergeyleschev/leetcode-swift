@@ -55,7 +55,6 @@ class Solution {
         
         if (is_negtive && res >= 2147483648) { res = 2147483648 }
         if (!is_negtive && res >= 2147483647) { res = 2147483647 }
-
         return is_negtive ? -1 * res : res
     }
     
