@@ -55,7 +55,6 @@ class Solution {
             default: return false
             }
         }
-        
         return stack.isEmpty
     }
 
