@@ -41,33 +41,9 @@ class Solution {
     func swapPairs(_ head: ListNode?) -> ListNode? {
         if head == nil || head?.next == nil { return head }
         let res = head?.next
-        
         head?.next = swapPairs(res?.next)
         res?.next = head
         return res
     }
-
-    /*
-    func swapPairs(_ head: ListNode?) -> ListNode? {
-        let dummy = ListNode(-1)
-        dummy.next = head
-
-        var head = head
-        var prevNode: ListNode? = dummy
-
-        while head?.next != nil {
-            let firstNode = head
-            let secondNode = head?.next
-
-            prevNode?.next = secondNode
-            firstNode?.next = secondNode?.next
-            secondNode?.next = firstNode
-
-            prevNode = firstNode
-            head = firstNode?.next
-        }
-
-        return dummy.next
-    }
-    */
+    
 }
