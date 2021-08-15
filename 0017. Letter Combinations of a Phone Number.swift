@@ -24,7 +24,7 @@ class Solution {
 
     func letterCombinations(_ digits: String) -> [String] {
         guard digits.count > 0 else { return [] }
-
+        var res: [String] = []
         let map: [Character: [Character]] = [
             "2": ["a", "b", "c"],
             "3": ["d", "e", "f"],
@@ -35,14 +35,10 @@ class Solution {
             "8": ["t", "u", "v"],
             "9": ["w", "x", "y", "z"]
         ]
-        var res: [String] = []
 
 
         func backtrack(_ path: [Character], _ input: [Character]) {
-            if path.count >= digits.count {
-                res.append(String(path))
-                return
-            }
+            if path.count >= digits.count { res.append(String(path)); return }
             let index = path.count
             let digit = input[index]
             var path = path   
