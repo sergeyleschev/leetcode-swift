@@ -44,7 +44,6 @@ class Solution {
         
         while start < end {
             ans = max(ans, min(height[start], height[end]) * (end - start))
-            
             if height[start] < height[end] { start += 1 } else { end -= 1 }
         }
         
