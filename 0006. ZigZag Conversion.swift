@@ -51,9 +51,7 @@ class Solution {
         }
 
         for row in rows {
-            for c in row {
-                res += String(c)
-            }
+            for c in row { res += String(c) }
         }
 
         return res
