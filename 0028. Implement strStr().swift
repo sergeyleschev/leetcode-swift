@@ -28,7 +28,6 @@ class Solution {
 
     func strStr(_ haystack: String, _ needle: String) -> Int {
 		guard haystack.count >= needle.count else { return -1 }
-        
 		let chars1 = Array(haystack)
 		let chars2 = Array(needle)
 		
@@ -44,7 +43,6 @@ class Solution {
 				continue
 			}
 		}
-        
         return -1
     }
 
