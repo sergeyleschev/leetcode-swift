@@ -48,6 +48,8 @@ class Solution {
 	// It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 
     func romanToInt(_ s: String) -> Int {
+		var num: Int = 0
+		var prev: Character = " "
 		let map: [Character : Int] = [
 			"I": 1,
 			"V": 5,
@@ -57,9 +59,7 @@ class Solution {
 			"D": 500,
 			"M": 1000,
 		]
-		var num: Int = 0
-		var prev: Character = " "
-        
+		        
 		for c in s {
 			if prev == "I" && (c == "V" || c == "X") {
 				num += (map[c]! - 2 * map[prev]!)
