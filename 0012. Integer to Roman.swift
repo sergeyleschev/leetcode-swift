@@ -67,15 +67,11 @@ class Solution {
                 res += map[i]! + map[i * 10]!
             } else if d >= 5 {
                 res += map[i * 5]!
-                for _ in 0..<d - 5 {
-                    res += map[i]!
-                }
+                for _ in 0..<d - 5 { res += map[i]! }
             } else if d == 4 {
                 res += map[i]! +  map[i * 5]!
             } else if d > 0 {
-                for _ in 0..<d {
-                    res += map[i]!
-                }
+                for _ in 0..<d { res += map[i]! }
             }
             count -= 1
         }
