@@ -34,6 +34,7 @@ class Solution {
                 if j - 1 > i, sorted[j] == sorted[j - 1] { j += 1; continue }
                 var k = j + 1
                 var l = sorted.count - 1
+                
                 while k < l {
                     let sum = sorted[i] + sorted[j] + sorted[k] + sorted[l]
                     if sum == target {
