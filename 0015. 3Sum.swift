@@ -26,7 +26,7 @@ class Solution {
         guard nums.count > 2 else { return [] }
         var res: [[Int]] = []
         let sorted = nums.sorted()
-        var i: Int = 0
+        var i = 0
         
         while i < sorted.count - 2 {
             if i > 0, sorted[i] == sorted[i - 1] {
