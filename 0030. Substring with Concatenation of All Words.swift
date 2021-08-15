@@ -67,32 +67,32 @@ class Solution {
     func findSubstring(_ s: String, _ words: [String]) -> [Int] {
         let s = Array(s)
         let words = words.map({ Array($0) })
-        let s_length = s.count
-        let w_length = words.reduce(0, { $0 + $1.count })
+        let sLength = s.count
+        let wLength = words.reduce(0, { $0 + $1.count })
         
-        if s_length < w_length { return [] }
+        if sLength < wLength { return [] }
         
         let w_hash = words.reduce(0, { $0 + hash($1)  })
-        let w_sub_length = words.count > 0 ? words[0].count : 0
-        var invalid_string_list: [[Character]] = []
-        var valid_string_list: [[Character]] = []
+        let wSubLength = words.count > 0 ? words[0].count : 0
+        var invalidStringList: [[Character]] = []
+        var validStringList: [[Character]] = []
         var res: [Int] = []
         var i = 0
         var s_hash = 0
 
-        while i <= s_length - w_length {
+        while i <= sLength - wLength {
             if i == 0 {
-                s_hash = hash(Array(s[i..<i+w_length]))
+                s_hash = hash(Array(s[i..<i+wLength]))
             } else {
-                s_hash += map[s[i + w_length - 1]]! - map[s[i - 1]]!
+                s_hash += map[s[i + wLength - 1]]! - map[s[i - 1]]!
             }
             if w_hash == s_hash {
-                let sub_string = Array(s[i..<i+w_length])
-                if invalid_string_list.contains(sub_string) {
+                let subString = Array(s[i..<i + wLength])
+                if invalidStringList.contains(subString) {
                     i += 1
                     continue
                 }
-                if valid_string_list.contains(sub_string) {
+                if validStringList.contains(subString) {
                     res.append(i)
                     i += 1
                     continue
@@ -100,7 +100,7 @@ class Solution {
                 var is_match = true
                 var words = words
                 for j in 0..<words.count {
-                    let word = Array(s[(i + j * w_sub_length)..<(i + (j + 1) * w_sub_length)])
+                    let word = Array(s[(i + j * wSubLength)..<(i + (j + 1) * wSubLength)])
                     if !words.contains(word) {
                         is_match = false
                         break
@@ -111,14 +111,13 @@ class Solution {
                 }
                 if is_match {
                     res.append(i)
-                    valid_string_list.append(sub_string)
+                    validStringList.append(subString)
                 } else {
-                    invalid_string_list.append(sub_string)
+                    invalidStringList.append(subString)
                 }
             }
             i += 1
         }
-
         return res
     }
 
