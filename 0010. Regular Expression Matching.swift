@@ -44,19 +44,11 @@ class Solution {
         var chars: [Character] = []
         var marks: [Bool] = []
         var isMark: Bool = false
+        var list = [[-1, -1, 1]] // [start, end, is need to add next start]
+        var max = Int.min
 
-        for (_, c) in p.enumerated().reversed() {
-            if c == "*" {
-                isMark = true
-            } else {
-                chars.insert(c, at: 0)
-                marks.insert(isMark, at: 0)
-                isMark = false
-            }
-        }
-        
 
-        func next_range(_ list: [[Int]], _ char: Character, _ mark: Bool) -> [[Int]] {
+        func nextRange(_ list: [[Int]], _ char: Character, _ mark: Bool) -> [[Int]] {
             var res = Set<[Int]>()
 
             for range in list {
@@ -79,27 +71,28 @@ class Solution {
                             res.insert(range)
                         }
                     } else {
-                        if i < string.count && (char == string[i] || char == ".") {
-                            res.insert([i, i, 1])
-                        }
+                        if i < string.count && (char == string[i] || char == ".") { res.insert([i, i, 1]) }
                     }
                 }
             }
             return Array(res)
         }
 
+        for (_, c) in p.enumerated().reversed() {
+            if c == "*" {
+                isMark = true
+            } else {
+                chars.insert(c, at: 0)
+                marks.insert(isMark, at: 0)
+                isMark = false
+            }
+        }
 
-        var list = [[-1, -1, 1]] // [start, end, is need to add next start]
         for (index, c) in chars.enumerated() {
             let mark = marks[index]
-            list = next_range(list, c, mark)
+            list = nextRange(list, c, mark)
         }
-        
-        var max = Int.min
-        for rang in list {
-            max = max > rang[1] ? max : rang[1]
-        }
-        
+        for rang in list { max = max > rang[1] ? max : rang[1] }
         return max == string.count - 1
     }
 }
