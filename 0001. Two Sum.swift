@@ -41,7 +41,6 @@ class Solution {
 
         for (i, num) in nums.enumerated() {
             if let j = dict[target - num] { return [j, i] }
-
             dict[num] = i
         }
 
