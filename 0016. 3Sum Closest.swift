@@ -17,9 +17,9 @@ class Solution {
 
     func threeSumClosest(_ nums: [Int], _ target: Int) -> Int {
         let sorted = nums.sorted()
-        var i: Int = 0
-        var min: Int = Int.max
-        var res: Int = Int.max
+        var i = 0
+        var min = Int.max
+        var res = Int.max
 
         while i < sorted.count - 2 {
             var j = i + 1
