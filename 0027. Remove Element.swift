@@ -55,7 +55,6 @@ class Solution {
 
         for num in nums {
             guard num != val else { continue }
-
             nums[i] = num
             i += 1
         }
