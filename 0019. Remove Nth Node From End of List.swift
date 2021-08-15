@@ -47,9 +47,7 @@ class Solution {
         if fast == nil { return head?.next }
 
         while slow != nil && fast != nil {
-            if fast?.next == nil { // end
-                slow?.next = slow?.next?.next
-            }
+            if fast?.next == nil { slow?.next = slow?.next?.next } // end
             slow = slow?.next
             fast = fast?.next
         }
