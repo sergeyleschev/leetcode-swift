@@ -45,7 +45,6 @@ class Solution {
         var tmp1: ListNode? = head
         
         for _ in 0..<k - 1 { tmp1 = tmp1?.next }
-
         if tmp1 == nil {
             return head
         } else {
@@ -66,7 +65,6 @@ class Solution {
             }
             return tmp1
         }
-
     }
 
 }
