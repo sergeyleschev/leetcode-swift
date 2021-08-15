@@ -38,13 +38,13 @@ class Solution {
     // - Parameters:
     //   - l1: Linked list representing non-negative integer. The digits are stored in reverse
     //     order and each of nodes contain a single digit.
-    ///   - l2: Linked list representing non-negative integer. The digits are stored in reverse
-    ///     order and each of nodes contain a single digit.
-    /// - Returns: Sum of l1 and l2 represented as linked list.
-    ///
-    /// - Complexity:
-    ///   - time: O(max(n, m)), where n is the length of the l1 and m is the length of the l2.
-    ///   - space: O(max(n, m)), where n is the length of the l1 and m is the length of the l2.
+    //   - l2: Linked list representing non-negative integer. The digits are stored in reverse
+    //     order and each of nodes contain a single digit.
+    // - Returns: Sum of l1 and l2 represented as linked list.
+    //
+    // - Complexity:
+    //   - time: O(max(n, m)), where n is the length of the l1 and m is the length of the l2.
+    //   - space: O(max(n, m)), where n is the length of the l1 and m is the length of the l2.
     
     func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
         var l1 = l1
