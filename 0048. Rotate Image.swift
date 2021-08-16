@@ -45,7 +45,6 @@ class Solution {
 				let n2 = matrix[i2][j2]
 				let n3 = matrix[i3][j3]
 				let n4 = matrix[i4][j4]
-
 				matrix[i1][j1] = n4
 				matrix[i2][j2] = n1
 				matrix[i3][j3] = n2
