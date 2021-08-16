@@ -25,16 +25,12 @@ class Solution {
         
         
         func backtarck(_ path: [Int]) {
-            if path.count == n { 
-                res.append(path) 
-            }
-            
+            if path.count == n { res.append(path)  }
             var path = path
             var available: [Int] = []
             for i in 0..<n { available.append(i) }
             
             for (i, val) in path.enumerated() {
-                
                 if let index = available.firstIndex(of: val - path.count + i) {
                     available.remove(at: index)
                 }
@@ -49,10 +45,7 @@ class Solution {
             }
             
             for i in 0..<n {
-                if available.contains(i) == false { 
-                    continue
-                }
-                
+                if available.contains(i) == false { continue }
                 path.append(i)
                 backtarck(path)
                 path.remove(at: path.count - 1)
@@ -65,9 +58,7 @@ class Solution {
             var res: [String] = []
             for i in path {
                 var string = ""
-                for j in 0..<n {
-                    string += (i == j ? "Q" : ".")
-                }
+                for j in 0..<n { string += (i == j ? "Q" : ".") }
                 res.append(string)
             }
             return res
