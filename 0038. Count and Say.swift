@@ -28,7 +28,7 @@ class Solution {
     // 1 <= n <= 30
 
     func countAndSay(_ n: Int) -> String {
-        func count_and_say(_ s: String, _ n: Int) -> String {
+        func helper(_ s: String, _ n: Int) -> String {
             guard n > 1 else { return s }
             var string = ""
             var prev: Character?
@@ -46,10 +46,10 @@ class Solution {
                 prev = c
             }
             string += "\(count)\(prev!)"
-            return count_and_say(string, n - 1)
+            return helper(string, n - 1)
         }
 
-        return count_and_say("1", n)
+        return helper("1", n)
     }
     
 }
