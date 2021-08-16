@@ -37,7 +37,6 @@ class Solution {
                 recursion(list, rest)
 			}
 		}
-        
 		recursion([], nums)
 		return res
 	}
