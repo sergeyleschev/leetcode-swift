@@ -20,7 +20,6 @@ class Solution {
     // 0 <= height[i] <= 10^5
 
     func trap(_ height: [Int]) -> Int {
-
         func subtrap(_ height: [Int], _ i: Int, _ j: Int) -> Int {
             var max = 0
             var iMax = i
@@ -63,7 +62,6 @@ class Solution {
                 return max + subtrap(height, i, iMax) + subtrap(height, jMax, j)
             }
         }
-
         return subtrap(height, 0, height.count - 1)
     }
 
