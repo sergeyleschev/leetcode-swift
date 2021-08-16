@@ -57,7 +57,6 @@ class Solution {
                 end = mid
             }
         }
-
         return start
     }
 
