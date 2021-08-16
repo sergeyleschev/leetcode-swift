@@ -44,7 +44,6 @@ class Solution {
                 map[sorted_str] = [str]
             }
         }
-
         for (_, value) in map { res.append(value) }        
         return res
     }
