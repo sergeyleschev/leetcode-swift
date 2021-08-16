@@ -44,7 +44,6 @@ class Solution {
 
         for i in 0..<nums.count {
             let num = abs(nums[i])
-
             if num == nums.count {
                 nums[0] = -abs(nums[0])
             } else {
@@ -56,7 +55,6 @@ class Solution {
             guard nums[i] > 0 else { continue }
             return i
         }
-
         return nums.count + (nums[0] > 0 ? 0 : 1)
     }
     
