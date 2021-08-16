@@ -47,7 +47,6 @@ class Solution {
     // board[i][j] is a digit or '.'.
 
     func isValidSudoku(_ board: [[Character]]) -> Bool {
-
         func isInvalid(_ box: [Character]) -> Bool {
             var chars: [Character] = []
             for c in box where c != "." {
@@ -55,7 +54,6 @@ class Solution {
             }
             return false
         }
-
 
         for i in 0..<9 {
             if isInvalid(board[i]) { return false }
@@ -65,7 +63,6 @@ class Solution {
             let box = Array(board[row][col..<col + 3]) + Array(board[row + 1][col..<col + 3]) + Array(board[row + 2][col..<col + 3])
             if isInvalid(box) { return false }
         }
-
         return true
     }
     
