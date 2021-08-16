@@ -24,7 +24,6 @@ class Solution {
     // It is guaranteed that the input board has only one solution.
 
     func solveSudoku(_ board: inout [[Character]]) {
-        
         func backtrack(_ path: [Character], _ input: [[Character]], _ index: Int) {
             if path.count == 81 {
                 if isValidSudoku(input) { board = input }
@@ -104,7 +103,6 @@ class Solution {
 
 
     func isValidSudoku(_ board: [[Character]]) -> Bool {
-
         func isInvalid(_ box: [Character]) -> Bool {
             var chars: [Character] = []
             for c in box where c != "." {
@@ -112,7 +110,6 @@ class Solution {
             }
             return false
         }
-
 
         for i in 0..<9 {
             if isInvalid(board[i]) { return false }
@@ -122,7 +119,6 @@ class Solution {
             let box = Array(board[row][col..<col + 3]) + Array(board[row + 1][col..<col + 3]) + Array(board[row + 2][col..<col + 3])
             if isInvalid(box) { return false }
         }
-
         return true
     }
 
