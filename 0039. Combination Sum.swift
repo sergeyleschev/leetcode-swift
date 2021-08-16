@@ -46,8 +46,8 @@ class Solution {
     // 1 <= target <= 500
 
     /// - Complexity:
-    ///   - time: O(n^m), where n is the length of `candidates` and m is the `target` value.
-    ///   - space: O(m), where m is the `target` value.
+    ///   - time: O(n^m), where n is the length of candidates and m is the target value.
+    ///   - space: O(m), where m is the target value.
     
     func combinationSum(_ candidates: [Int], _ target: Int) -> [[Int]] {
         var ans = [[Int]]()
