@@ -56,25 +56,14 @@ class Solution {
 
 
     func regularExpressionMatching(_ s: String, _ p: String) -> Bool {
-        //  1.
         var string = Array(s)
         var chars: [Character] = []
         var marks : [Bool] = []
-        var is_mark: Bool = false
+        var isMark: Bool = false
         var list = [[-1, -1, 1]] // [start, end, is need to add next start]
+        var max = Int.min
 
-        for (_, c) in p.enumerated().reversed() {
-            if c == "*" {
-                is_mark = true
-            } else {
-                chars.insert(c, at: 0)
-                marks.insert(is_mark, at: 0)
-                is_mark = false
-            }
-        }
-        
 
-        //  2.
         func nextRange(_ list: [[Int]], _ char: Character, _ mark: Bool) -> [[Int]] {
             var res = Set<[Int]>()
             for range in list {
@@ -109,17 +98,21 @@ class Solution {
             return Array(res)
         }
 
+        for (_, c) in p.enumerated().reversed() {
+            if c == "*" {
+                isMark = true
+            } else {
+                chars.insert(c, at: 0)
+                marks.insert(isMark, at: 0)
+                isMark = false
+            }
+        }
+
         for (index, c) in chars.enumerated() {
             let mark = marks[index]
             list = nextRange(list, c, mark)
         }
-        
-        //  3.
-        var max = Int.min
-        for rang in list {
-            max = max > rang[1] ? max : rang[1]
-        }
-        
+        for rang in list { max = max > rang[1] ? max : rang[1] }        
         return max == string.count - 1
     }
 
