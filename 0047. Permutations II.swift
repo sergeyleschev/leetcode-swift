@@ -34,10 +34,7 @@ class Solution {
         var ans = [[Int]]()
         var comb = [Int]()
 
-        for num in nums {
-            dict[num, default: 0] += 1
-        }
-
+        for num in nums { dict[num, default: 0] += 1 }
         backtrack(&comb, nums.count, &dict, &ans)
         return ans
     }
@@ -48,7 +45,6 @@ class Solution {
 
         for (_, el) in dict.enumerated() {
             guard el.value != 0 else { continue }
-            
             comb.append(el.key)
             dict[el.key, default: 0] -= 1
             backtrack(&comb, n, &dict, &ans)
