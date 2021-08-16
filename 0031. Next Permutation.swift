@@ -47,7 +47,6 @@ class Solution {
         
         var j = n - 1
         while j >= 0, nums[j] <= nums[i] { j -= 1 }
-
         nums.swapAt(i, j)
         reverse(&nums, start: i + 1, end: n - 1)
     }
