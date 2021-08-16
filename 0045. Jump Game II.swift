@@ -38,7 +38,6 @@ class Solution {
 
 			maxIndex.append(max)
 		}
-
         return 0
     }
     
