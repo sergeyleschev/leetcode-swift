@@ -20,12 +20,9 @@ class Solution {
 	// Both num1 and num2 do not contain any leading zero, except the number 0 itself.
 
     func multiply(_ num1: String, _ num2: String) -> String {
-		//	0.
 		if (num1 == "0" || num2 == "0") { return "0"}
-		//	1.
 		let list1 = convertString(num1)
 		let list2 = convertString(num2)
-		//	2. 
 		var tmp1 = list1
 		var tmp2 = list2
 		var lists: [ListNode?] = []
