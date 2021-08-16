@@ -65,7 +65,6 @@ class Solution {
 				return a > b ? a : b
 			}
 		}
-
 		return _max(string)
     }
 
