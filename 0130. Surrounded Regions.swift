@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 130. Surrounded Regions
     // Given an m x n matrix board containing 'X' and 'O', capture all regions surrounded by 'X'.
     // A region is captured by flipping all 'O's into 'X's in that surrounded region.
