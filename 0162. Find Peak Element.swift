@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 162. Find Peak Element
     // A peak element is an element that is strictly greater than its neighbors.
     // Given an integer array nums, find a peak element, and return its index. If the array contains multiple peaks, return the index to any of the peaks.
