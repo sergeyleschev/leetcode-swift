@@ -1,3 +1,5 @@
+-- Solution @ Sergey Leschev, Belarusian State University
+
 -- 175. Combine Two Tables
 -- Table: Person
 -- +-------------+---------+
