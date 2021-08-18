@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 172. Factorial Trailing Zeroes
     // Given an integer n, return the number of trailing zeroes in n!.
     // Follow up: Could you write a solution that works in logarithmic time complexity?
