@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 171. Excel Sheet Column Number
     // Given a string columnTitle that represents the column title as appear in an Excel sheet, return its corresponding column number.
     // For example:
