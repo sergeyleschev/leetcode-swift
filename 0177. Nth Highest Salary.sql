@@ -1,3 +1,5 @@
+-- Solution @ Sergey Leschev, Belarusian State University
+
 -- 177. Nth Highest Salary
 -- Write a SQL query to get the nth highest salary from the Employee table.
 -- +----+--------+
