@@ -1,3 +1,5 @@
+-- Solution @ Sergey Leschev, Belarusian State University
+
 -- 180. Consecutive Numbers
 -- Table: Logs
 -- +-------------+---------+
