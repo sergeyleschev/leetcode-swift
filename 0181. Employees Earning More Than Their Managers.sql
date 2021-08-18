@@ -1,3 +1,5 @@
+-- Solution @ Sergey Leschev, Belarusian State University
+
 -- 181. Employees Earning More Than Their Managers
 -- The Employee table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.
 -- +----+-------+--------+-----------+
