@@ -1,3 +1,5 @@
+-- Solution @ Sergey Leschev, Belarusian State University
+
 -- 196. Delete Duplicate Emails
 -- Write a SQL query to delete all duplicate email entries in a table named Person, keeping only unique emails based on its smallest Id.
 -- +----+------------------+
