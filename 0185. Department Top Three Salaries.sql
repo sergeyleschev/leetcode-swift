@@ -1,5 +1,6 @@
--- 185. Department Top Three Salaries
+-- Solution @ Sergey Leschev, Belarusian State University
 
+-- 185. Department Top Three Salaries
 -- Table: Employee
 -- +--------------+---------+
 -- | Column Name  | Type    |
