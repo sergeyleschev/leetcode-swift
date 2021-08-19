@@ -10,6 +10,8 @@
  */
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 206. Reverse Linked List
     // Given the head of a singly linked list, reverse the list, and return the reversed list.
 
