@@ -1,5 +1,7 @@
 class WordDictionary {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 211. Design Add and Search Words Data Structure
     // Design a data structure that supports adding new words and finding if a string matches any previously added string.
     // Implement the WordDictionary class:
