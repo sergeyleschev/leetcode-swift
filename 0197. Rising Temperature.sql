@@ -1,3 +1,5 @@
+-- Solution @ Sergey Leschev, Belarusian State University
+
 -- 197. Rising Temperature
 -- Table: Weather
 -- +---------------+---------+
