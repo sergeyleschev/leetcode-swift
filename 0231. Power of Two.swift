@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 231. Power of Two
     // Given an integer n, return true if it is a power of two. Otherwise, return false.
     // An integer n is a power of two, if there exists an integer x such that n == 2x.
@@ -40,8 +42,6 @@ class Solution {
     //   - time: O(1), only constant time is used.
     //   - space: O(1), only constant space is used.
 
-    func isPowerOfTwo(_ n: Int) -> Bool {
-        return n > 0 && (n & (n - 1)) == 0
-    }
+    func isPowerOfTwo(_ n: Int) -> Bool { n > 0 && (n & (n - 1)) == 0 }
 
 }
