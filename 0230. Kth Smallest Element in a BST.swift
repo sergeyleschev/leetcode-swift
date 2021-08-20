@@ -15,6 +15,8 @@
  */
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 230. Kth Smallest Element in a BST
     // Given the root of a binary search tree, and an integer k, return the k-th (1-indexed) smallest element in the tree.
 
