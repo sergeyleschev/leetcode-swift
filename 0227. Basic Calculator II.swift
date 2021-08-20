@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 227. Basic Calculator II
     // Given a string s which represents an expression, evaluate this expression and return its value. 
     // The integer division should truncate toward zero.
