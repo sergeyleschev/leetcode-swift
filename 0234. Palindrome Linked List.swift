@@ -10,6 +10,8 @@
  */
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 234. Palindrome Linked List
     // Given the head of a singly linked list, return true if it is a palindrome.
 
@@ -56,9 +58,7 @@ class Solution {
         
         var head = head
         while head != nil && tail != nil {
-            if head!.val != tail!.val {
-                return false
-            }
+            if head!.val != tail!.val { return false }
             head = head?.next
             tail = tail?.next
         }
