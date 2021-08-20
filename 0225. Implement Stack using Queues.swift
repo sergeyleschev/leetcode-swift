@@ -1,5 +1,7 @@
 class MyStack {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 225. Implement Stack using Queues
     // Implement a last in first out (LIFO) stack using only two queues. The implemented stack should support all the functions of a normal queue (push, top, pop, and empty).
     // Implement the MyStack class:
