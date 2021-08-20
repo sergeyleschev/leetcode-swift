@@ -1,5 +1,7 @@
 class Solution {
 
+  // Solution @ Sergey Leschev, Belarusian State University
+
   // 263. Ugly Number
   // An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.
   // Given an integer n, return true if n is an ugly number.
@@ -28,17 +30,16 @@ class Solution {
   // -2^31 <= n <= 2^31 - 1
 
   func isUgly(_ num: Int) -> Bool {
-    guard num > 0 else { return false }
-    var loopNum = num
-    
-    while loopNum != 1 {
-          if loopNum % 2 == 0 { loopNum /= 2 } 
-          else if loopNum % 3 == 0 { loopNum /= 3 } 
-          else if loopNum % 5 == 0 { loopNum /= 5 } 
-          else { return false }
-    }
-
-    return true
+      guard num > 0 else { return false }
+      var loopNum = num
+      
+      while loopNum != 1 {
+            if loopNum % 2 == 0 { loopNum /= 2 } 
+            else if loopNum % 3 == 0 { loopNum /= 3 } 
+            else if loopNum % 5 == 0 { loopNum /= 5 } 
+            else { return false }
+      }
+      return true
   }
 
 }
