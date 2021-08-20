@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 240. Search a 2D Matrix II
     // Write an efficient algorithm that searches for a target value in an m x n integer matrix. The matrix has the following properties:
     // Integers in each row are sorted in ascending from left to right.
