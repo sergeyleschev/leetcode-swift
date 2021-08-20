@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 258. Add Digits
     // Given an integer num, repeatedly add all its digits until the result has only one digit, and return it.
 
@@ -28,8 +30,6 @@ class Solution {
     //   - time: O(1), only constant time is used.
     //   - space: O(1), only constant space is used.
 
-    func addDigits(_ num: Int) -> Int {
-        return num == 0 ? 0 : 1 + (num - 1) % 9
-    }
+    func addDigits(_ num: Int) -> Int { num == 0 ? 0 : 1 + (num - 1) % 9 }
 
 }
