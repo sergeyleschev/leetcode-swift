@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 223. Rectangle Area
     // Given the coordinates of two rectilinear rectangles in a 2D plane, return the total area covered by the two rectangles.
     // The first rectangle is defined by its bottom-left corner (ax1, ay1) and its top-right corner (ax2, ay2).
@@ -27,7 +29,7 @@ class Solution {
     
     
     func computeArea(_ A: Int, _ B: Int, _ C: Int, _ D: Int) -> Int {
-        return abs((C - A) * (D - B))
+        abs((C - A) * (D - B))
     }
     
     
