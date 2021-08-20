@@ -1,5 +1,6 @@
--- 262. Trips and Users
+-- Solution @ Sergey Leschev, Belarusian State University
 
+-- 262. Trips and Users
 -- Table: Trips
 -- +-------------+----------+
 -- | Column Name | Type     |
