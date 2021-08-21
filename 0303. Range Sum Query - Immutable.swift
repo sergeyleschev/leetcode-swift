@@ -1,4 +1,6 @@
 class NumArray {
+
+    // Solution @ Sergey Leschev, Belarusian State University
     
     // 303. Range Sum Query - Immutable
     // Given an integer array nums, handle multiple queries of the following type:
