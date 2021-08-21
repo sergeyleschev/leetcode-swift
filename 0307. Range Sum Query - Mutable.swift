@@ -1,5 +1,7 @@
 class NumArray {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 307. Range Sum Query - Mutable
     // Given an integer array nums, handle multiple queries of the following types:
     // Update the value of an element in nums.
