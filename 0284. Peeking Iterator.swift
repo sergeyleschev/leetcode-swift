@@ -3,6 +3,8 @@
 
 class PeekingIterator {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 284. Peeking Iterator
     // Design an iterator that supports the peek operation on a list in addition to the hasNext and the next operations.
     // Implement the PeekingIterator class:
