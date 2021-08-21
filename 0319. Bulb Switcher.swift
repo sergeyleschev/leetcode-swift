@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 319. Bulb Switcher
     // There are n bulbs that are initially off. You first turn on all the bulbs, then you turn off every second bulb.
     // On the third round, you toggle every third bulb (turning on if it's off or turning off if it's on). For the ith round, you toggle every i bulb. For the nth round, you only toggle the last bulb.
@@ -25,8 +27,6 @@ class Solution {
     // Constraints:
     // 0 <= n <= 10^9
 
-    func bulbSwitch(_ n: Int) -> Int {
-        return Int(sqrt(Double(n)))
-    }
+    func bulbSwitch(_ n: Int) -> Int { Int(sqrt(Double(n))) }
     
 }
