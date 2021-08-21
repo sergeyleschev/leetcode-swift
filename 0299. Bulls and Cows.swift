@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 299. Bulls and Cows
     // You are playing the Bulls and Cows game with your friend.
     // You write down a secret number and ask your friend to guess what the number is. When your friend makes a guess, you provide a hint with the following info
