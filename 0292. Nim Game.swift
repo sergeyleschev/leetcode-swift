@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 292. Nim Game
     // You are playing the following Nim Game with your friend:
     // Initially, there is a heap of stones on the table.
@@ -36,8 +38,6 @@ class Solution {
     //   - time: O(1), only constant time is used.
     //   - space: O(1), only constant space is used.
 
-    func canWinNim(_ n: Int) -> Bool {
-        return n % 4 != 0
-    }
+    func canWinNim(_ n: Int) -> Bool { n % 4 != 0 }
 
 }
