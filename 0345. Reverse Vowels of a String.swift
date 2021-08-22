@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 345. Reverse Vowels of a String
     // Given a string s, reverse only all the vowels in the string and return it.
     // The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both cases.
