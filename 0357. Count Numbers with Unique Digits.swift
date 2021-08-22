@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 357. Count Numbers with Unique Digits
     // Given an integer n, return the count of all numbers with unique digits, x, where 0 <= x < 10n.
 
