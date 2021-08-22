@@ -1,5 +1,7 @@
 class SummaryRanges {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 352. Data Stream as Disjoint Intervals
     // Given a data stream input of non-negative integers a1, a2, ..., an, summarize the numbers seen so far as a list of disjoint intervals.
     // Implement the SummaryRanges class:
