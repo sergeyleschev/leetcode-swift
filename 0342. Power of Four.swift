@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 342. Power of Four
     // Given an integer n, return true if it is a power of four. Otherwise, return false.
     // An integer n is a power of four, if there exists an integer x such that n == 4x.
@@ -30,7 +32,7 @@ class Solution {
     //   - space: O(1), only constant space is used.
 
     func isPowerOfFour(_ num: Int) -> Bool {
-        return num > 0 && (log(Double(num)) / log(2.0)).truncatingRemainder(dividingBy: 2) == 0
+        num > 0 && (log(Double(num)) / log(2.0)).truncatingRemainder(dividingBy: 2) == 0
     }
 
 }
