@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 367. Valid Perfect Square
     // Given a positive integer num, write a function which returns True if num is a perfect square else False.
     // Follow up: Do not use any built-in library function such as sqrt.
@@ -28,8 +30,7 @@ class Solution {
         guard num > 0 else { return false }
         var n = num
 
-        while n * n > num { n = (n + num/n) / 2 }
-
+        while n * n > num { n = (n + num / n) / 2 }
         return n * n == num
     }
 
