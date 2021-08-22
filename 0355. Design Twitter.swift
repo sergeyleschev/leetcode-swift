@@ -1,5 +1,7 @@
 class Twitter {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 355. Design Twitter
     // Design a simplified version of Twitter where users can post tweets, follow/unfollow another user, and is able to see the 10 most recent tweets in the user's news feed.
     // Implement the Twitter class:
@@ -36,9 +38,7 @@ class Twitter {
         var timestamp = 0
         var next: Tweet? = nil
             
-        init(_ id: Int) {
-            self.id = id
-        }
+        init(_ id: Int) { self.id = id }
     }
         
     
@@ -58,9 +58,7 @@ class Twitter {
         let tweet = Tweet(tweetId)
         tweet.timestamp = totalTweets       // simulate timestamp
             
-        if let lastTweet = tweets[userId] {
-            tweet.next = lastTweet
-        }
+        if let lastTweet = tweets[userId] { tweet.next = lastTweet }
         tweets[userId] = tweet
     }
         
@@ -72,9 +70,7 @@ class Twitter {
             
         var userTweets: [Tweet] = []
         for id in users {
-            if let tweet = tweets[id] {
-                userTweets.append(tweet)
-            }
+            if let tweet = tweets[id] { userTweets.append(tweet) }
         }
             
         var feeds: [Int] = []
