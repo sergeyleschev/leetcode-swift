@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 365. Water and Jug Problem
     // You are given two jugs with capacities jug1Capacity and jug2Capacity liters. There is an infinite amount of water supply available. Determine whether it is possible to measure exactly targetCapacity liters using these two jugs.
     // If targetCapacity liters of water are measurable, you must have targetCapacity liters of water contained within one or both buckets by the end.
