@@ -22,6 +22,8 @@
  */
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 385. Mini Parser
     // Given a string s represents the serialization of a nested list, implement a parser to deserialize it and return the deserialized NestedInteger.
     // Each element is either an integer or a list whose elements may also be integers or other lists.
