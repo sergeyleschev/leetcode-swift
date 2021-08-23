@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 390. Elimination Game
     // You have a list arr of all integers in the range [1, n] sorted in a strictly increasing order. Apply the following algorithm on arr:
     // Starting from left to right, remove the first number and every other number afterward until you reach the end of the list.
