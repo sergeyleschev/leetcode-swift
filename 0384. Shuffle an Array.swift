@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 384. Shuffle an Array
     // Given an integer array nums, design an algorithm to randomly shuffle the array.
     // Implement the Solution class:
