@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 393. UTF-8 Validation
     // Given an integer array data representing the data, return whether it is a valid UTF-8 encoding.
     // A character in UTF8 can be from 1 to 4 bytes long, subjected to the following rules:
