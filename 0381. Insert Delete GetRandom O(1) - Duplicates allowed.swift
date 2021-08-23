@@ -1,5 +1,7 @@
 class RandomizedCollection {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 381. Insert Delete GetRandom O(1) - Duplicates allowed
     // Implement the RandomizedCollection class:
     // RandomizedCollection() Initializes the RandomizedCollection object.
@@ -23,7 +25,6 @@ class RandomizedCollection {
     // randomizedCollection.getRandom(); // getRandom should return 1 and 2 both equally likely.
 
     // Constraints:
-
     // -2^31 <= val <= 2^31 - 1
     // At most 10^5 calls will be made to insert, remove, and getRandom.
     // There will be at least one element in the data structure when getRandom is called.
