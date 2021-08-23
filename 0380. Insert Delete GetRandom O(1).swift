@@ -1,5 +1,7 @@
 class RandomizedSet {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 380. Insert Delete GetRandom O(1)
     // Implement the RandomizedSet class:
     // RandomizedSet() Initializes the RandomizedSet object.
