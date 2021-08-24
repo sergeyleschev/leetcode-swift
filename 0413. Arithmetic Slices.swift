@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 413. Arithmetic Slices
     // An integer array is called arithmetic if it consists of at least three elements and if the difference between any two consecutive elements is the same.
     // For example, [1,3,5,7,9], [7,7,7,7], and [3,-1,-5,-9] are arithmetic sequences.
