@@ -13,6 +13,8 @@ public class ListNode {
 
 class AllOne {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 432. All O`one Data Structure
     // Design a data structure to store the strings' count with the ability to return the strings with minimum and maximum counts.
     // Implement the AllOne class:
