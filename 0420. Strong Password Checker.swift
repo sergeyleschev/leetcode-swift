@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 420. Strong Password Checker
     // A password is considered strong if the below conditions are all met:
     // It has at least 6 characters and at most 20 characters.
