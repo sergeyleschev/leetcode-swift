@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 433. Minimum Genetic Mutation
     // A gene string can be represented by an 8-character long string, with choices from 'A', 'C', 'G', and 'T'.
     // Suppose we need to investigate a mutation from a gene string start to a gene string end where one mutation is defined as one single character changed in the gene string.
