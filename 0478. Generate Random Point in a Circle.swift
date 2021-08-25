@@ -1,4 +1,6 @@
 class Solution {
+
+    // Solution @ Sergey Leschev, Belarusian State University
     
     // 478. Generate Random Point in a Circle
     // Given the radius and the position of the center of a circle, implement the function randPoint which generates a uniform random point inside the circle.
