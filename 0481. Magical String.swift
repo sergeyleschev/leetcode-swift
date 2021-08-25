@@ -1,5 +1,7 @@
 class Solution  {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 481. Magical String
     // A magical string s consists of only '1' and '2' and obeys the following rules:
     // The string s is magical because concatenating the number of contiguous occurrences of characters '1' and '2' generates the string s itself.
@@ -35,10 +37,7 @@ class Solution  {
         }
         
         if magical.count > n { magical.removeLast() }
-        
-        return magical.reduce(0, { (res, str) -> Int in
-            return str == "1" ? res + 1 : res
-        })
+        return magical.reduce(0, { (res, str) -> Int in str == "1" ? res + 1 : res })
     }
     
 }
