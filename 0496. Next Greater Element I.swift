@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 496. Next Greater Element I
     // You are given two integer arrays nums1 and nums2 both of unique elements, where nums1 is a subset of nums2.
     // Find all the next greater numbers for nums1's elements in the corresponding places of nums2.
@@ -33,9 +35,7 @@ class Solution {
         var stack = [Int]()
         
         for n in nums {
-            while !stack.isEmpty && stack.last! < n {
-                dict[stack.removeLast()] = n
-            }
+            while !stack.isEmpty && stack.last! < n { dict[stack.removeLast()] = n }
             stack.append(n)
         }
         
