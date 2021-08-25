@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 497. Random Point in Non-overlapping Rectangles
     // Given a list of non-overlapping axis-aligned rectangles rects, write a function pick which randomly and uniformily picks an integer point in the space covered by the rectangles.
     // Note:
@@ -27,17 +29,17 @@ class Solution {
     // Explanation of Input Syntax:
     // The input is two lists: the subroutines called and their arguments. Solution's constructor has one argument, the array of rectangles rects. pick has no arguments. Arguments are always wrapped with a list, even if there aren't any.
 
-    private let rects: [[Int]]
-    private var psum: [Int]
-    private var total: Int
-
-
     // Initialization of data structures.
     // - Parameter rects: A list of non-overlapping axis-aligned rectangles.
 
     // - Complexity:
     //   - time: O(n), where n is the length of *rects*.
     //   - space: O(n), where n is the length of *rects*.
+
+    private let rects: [[Int]]
+    private var psum: [Int]
+    private var total: Int
+
     
     init(_ rects: [[Int]]) {
         self.rects = rects
