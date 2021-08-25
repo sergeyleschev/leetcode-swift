@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 479. Largest Palindrome Product
     // Given an integer n, return the largest palindromic integer that can be represented as the product of two n-digits integers. Since the answer can be very large, return it modulo 1337.
 
@@ -16,7 +18,7 @@ class Solution {
     // 1 <= n <= 8
 
     func largestPalindrome(_ n: Int) -> Int {
-        return [9, 9009, 906609, 99000099, 9966006699, 999000000999,
+        [9, 9009, 906609, 99000099, 9966006699, 999000000999,
             99956644665999, 9999000000009999][n - 1] % 1337
     }
     
