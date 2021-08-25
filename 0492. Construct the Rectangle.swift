@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 492. Construct the Rectangle
     // A web developer needs to know how to design a web page's size. So, given a specific rectangular web page’s area, your job by now is to design a rectangular web page, whose length L and width W satisfy the following requirements:
     // The area of the rectangular web page you designed must equal to the given target area.
@@ -29,11 +31,7 @@ class Solution {
         if sqrt == 1 { return [area, 1] }
         var factors = [[Int]]()
         
-        for i in sqrt...area {
-            if area % i == 0 {
-                factors.append([i, area/i])
-            }
-        }
+        for i in sqrt...area where area % i == 0 { factors.append([i, area / i]) }
         
         if factors.count == 0 { return [] }
         var primeFactor = factors.first!
