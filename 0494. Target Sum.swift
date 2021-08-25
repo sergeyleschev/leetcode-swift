@@ -1,4 +1,6 @@
 class Solution {
+
+    // Solution @ Sergey Leschev, Belarusian State University
     
     // 494. Target Sum
     // You are given an integer array nums and an integer target.
