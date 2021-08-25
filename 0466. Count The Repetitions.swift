@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 466. Count The Repetitions
     // We define str = [s, n] as the string str which consists of the string s concatenated n times.
     // For example, str == ["abc", 3] =="abcabcabc".
