@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 475. Heaters
     // Winter is coming! During the contest, your first job is to design a standard heater with a fixed warm radius to warm all the houses.
     // Every house can be warmed, as long as the house is within the heater's warm radius range. 
