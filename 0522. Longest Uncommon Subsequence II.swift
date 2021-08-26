@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 522. Longest Uncommon Subsequence II
     // Given an array of strings strs, return the length of the longest uncommon subsequence between them. If the longest uncommon subsequence does not exist, return -1.
     // An uncommon subsequence between an array of strings is a string that is a subsequence of one string but not the others.
