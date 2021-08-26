@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 504. Base 7
     // Given an integer num, return a string of its base 7 representation.
 
