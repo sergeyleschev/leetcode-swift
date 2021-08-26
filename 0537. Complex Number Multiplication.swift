@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 537. Complex Number Multiplication
     // A complex number can be represented as a string on the form "real+imaginaryi" where:
     // real is the real part and is an integer in the range [-100, 100].
