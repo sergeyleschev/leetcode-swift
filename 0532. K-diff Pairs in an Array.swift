@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 532. K-diff Pairs in an Array
     // Given an array of integers nums and an integer k, return the number of unique k-diff pairs in the array.
     // A k-diff pair is an integer pair (nums[i], nums[j]), where the following are true:
