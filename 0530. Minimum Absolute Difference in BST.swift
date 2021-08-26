@@ -13,7 +13,9 @@
  *     }
  * }
  */
-class Solution {    
+class Solution {
+
+    // Solution @ Sergey Leschev, Belarusian State University
 
     // 530. Minimum Absolute Difference in BST
     // Given the root of a Binary Search Tree (BST), return the minimum absolute difference between the values of any two different nodes in the tree.
