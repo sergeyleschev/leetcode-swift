@@ -15,6 +15,8 @@
  */
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 513. Find Bottom Left Tree Value
     // Given the root of a binary tree, return the leftmost value in the last row of the tree.
 
