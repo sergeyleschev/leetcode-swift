@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 500. Keyboard Row
     // Given an array of strings words, return the words that can be typed using letters of the alphabet on only one row of American keyboard like the image below.
     // In the American keyboard:
@@ -31,16 +33,12 @@ class Solution {
         
         func checkWords(word: String) -> Bool {
             let rule = rules.filter { $0.range(of: String(word.first!)) != nil }
-            for c in word {
-                if (rule.first!.range(of: String(c))) == nil { return true }
-            }            
+            for c in word where (rule.first!.range(of: String(c))) == nil { return true }
             return false
         }
         
         words.forEach { word in
-            if (checkWords(word: word.uppercased())) {
-                result = result.filter { $0 != word }
-            }
+            if (checkWords(word: word.uppercased())) { result = result.filter { $0 != word } }
         }
         
         return result
