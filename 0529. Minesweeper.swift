@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 529. Minesweeper
     // Let's play the minesweeper game (Wikipedia, online game)!
     // You are given an m x n char matrix board representing the game board where:
