@@ -1,5 +1,7 @@
 class Codec {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 535. Encode and Decode TinyURL
     // Note: This is a companion problem to the System Design problem: Design TinyURL.
     // TinyURL is a URL shortening service where you enter a URL such as https://leetcode.com/problems/design-tinyurl and it returns a short URL such as http://tinyurl.com/4e9iAk. Design a class to encode a URL and decode a tiny URL.
