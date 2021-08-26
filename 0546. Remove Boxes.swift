@@ -1,4 +1,6 @@
 class Solution {
+
+    // Solution @ Sergey Leschev, Belarusian State University
     
     // 546. Remove Boxes
     // You are given several boxes with different colors represented by different positive numbers.
