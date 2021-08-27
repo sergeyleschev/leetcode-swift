@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 553. Optimal Division
     // You are given an integer array nums. The adjacent integers in nums will perform the float division.
     // For example, for nums = [2,3,4], we will evaluate the expression "2/3/4".
