@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 592. Fraction Addition and Subtraction
     // Given a string expression representing an expression of fraction addition and subtraction, return the calculation result in string format
     // The final result should be an irreducible fraction. If your final result is an integer, say 2, you need to change it to the format of a fraction that has a denominator 1. So in this case, 2 should be converted to 2/1.
@@ -28,7 +30,7 @@ class Solution {
     // The numerator and denominator of the final result are guaranteed to be valid and in the range of 32-bit int.
 
     func greatestCommonDivisor(m: Int, d: Int) -> Int {
-        return m == 0 ? d : greatestCommonDivisor(m: d % m, d: m)
+        m == 0 ? d : greatestCommonDivisor(m: d % m, d: m)
     }
 
     
