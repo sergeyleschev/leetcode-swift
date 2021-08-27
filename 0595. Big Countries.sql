@@ -1,3 +1,5 @@
+-- Solution @ Sergey Leschev, Belarusian State University
+
 -- 595. Big Countries
 -- There is a table World
 -- +-----------------+------------+------------+--------------+---------------+
