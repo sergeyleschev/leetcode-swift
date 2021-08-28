@@ -16,6 +16,8 @@
 
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 623. Add One Row to Tree
     // Given the root of a binary tree and two integers val and depth, add a row of nodes with value val at the given depth depth.
     // Note that the root node is at depth 1.
