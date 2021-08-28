@@ -1,4 +1,6 @@
 class Solution {
+
+    // Solution @ Sergey Leschev, Belarusian State University
     
     // 636. Exclusive Time of Functions
     // On a single-threaded CPU, we execute a program containing n functions. Each function has a unique ID between 0 and n-1.
