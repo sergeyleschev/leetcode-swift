@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 659. Split Array into Consecutive Subsequences
     // You are given an integer array nums that is sorted in non-decreasing order.
     // Determine if it is possible to split nums into one or more subsequences such that both of the following conditions are true:
