@@ -1,3 +1,5 @@
+-- Solution @ Sergey Leschev, Belarusian State University
+
 -- 627. Swap Salary
 -- Table: Salary
 -- +-------------+----------+
