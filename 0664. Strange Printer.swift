@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 664. Strange Printer
     // There is a strange printer with the following two special properties:
     // The printer can only print a sequence of the same character each time.
