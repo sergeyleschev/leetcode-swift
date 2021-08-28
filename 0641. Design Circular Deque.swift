@@ -1,5 +1,7 @@
 class MyCircularDeque {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 641. Design Circular Deque
     // Design your implementation of the circular double-ended queue (deque).
     // Your implementation should support following operations:
