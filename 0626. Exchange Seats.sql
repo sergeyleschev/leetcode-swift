@@ -1,3 +1,5 @@
+-- Solution @ Sergey Leschev, Belarusian State University
+
 -- 626. Exchange Seats
 -- Mary is a teacher in a middle school and she has a table seat storing students' names and their corresponding seat ids.
 -- The column id is continuous increment.
