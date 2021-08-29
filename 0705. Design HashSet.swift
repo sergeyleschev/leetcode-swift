@@ -1,5 +1,7 @@
 class MyHashSet {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 705. Design HashSet
     // Design a HashSet without using any built-in hash table libraries.
     // Implement MyHashSet class:
