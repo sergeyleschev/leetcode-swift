@@ -1,5 +1,7 @@
 class MapSum {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 677. Map Sum Pairs
     // Implement the MapSum class:
     // MapSum() Initializes the MapSum object.
