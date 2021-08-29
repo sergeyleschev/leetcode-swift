@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 673. Number of Longest Increasing Subsequence
     // Given an integer array nums, return the number of longest increasing subsequences.
     // Notice that the sequence has to be strictly increasing.
