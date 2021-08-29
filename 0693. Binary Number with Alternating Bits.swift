@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 693. Binary Number with Alternating Bits
     // Given a positive integer, check whether it has alternating bits: namely, if two adjacent bits will always have different values.
 
