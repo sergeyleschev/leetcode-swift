@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 753. Cracking the Safe
     // There is a box protected by a password. The password is a sequence of n digits where each digit can be in the range [0, k - 1].
     // While entering a password, the last n digits entered will automatically be matched against the correct password.
