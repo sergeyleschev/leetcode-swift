@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 738. Monotone Increasing Digits
     // An integer has monotone increasing digits if and only if each pair of adjacent digits x and y satisfy x <= y.
     // Given an integer n, return the largest number that is less than or equal to n with monotone increasing digits.
