@@ -1,5 +1,7 @@
 class MyLinkedList {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 707. Design Linked List
     // Design your implementation of the linked list. You can choose to use a singly or doubly linked list.
     // A node in a singly linked list should have two attributes: val and next. val is the value of the current node, and next is a pointer/reference to the next node.
