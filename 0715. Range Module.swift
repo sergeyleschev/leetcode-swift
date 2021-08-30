@@ -1,5 +1,7 @@
 class RangeModule {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 715. Range Module
     // A Range Module is a module that tracks ranges of numbers. Design a data structure to track the ranges represented as half-open intervals and query about them.
     // A half-open interval [left, right) denotes all the real numbers x where left <= x < right.
