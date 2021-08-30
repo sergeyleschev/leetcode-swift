@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 754. Reach a Number
     // You are standing at position 0 on an infinite number line. There is a goal at position target.
     // On each move, you can either go left or right. During the nth move (starting from n == 1), you take n steps.
