@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 730. Count Different Palindromic Subsequences
     // Given a string s, return the number of different non-empty palindromic subsequences in s. Since the answer may be very large, return it modulo 109 + 7.
     // A subsequence of a string is obtained by deleting zero or more characters from the string.
