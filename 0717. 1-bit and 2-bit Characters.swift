@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 717. 1-bit and 2-bit Characters
     // We have two special characters:
     // The first character can be represented by one bit 0.
