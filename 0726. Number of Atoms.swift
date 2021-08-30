@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 726. Number of Atoms
     // Given a chemical formula (given as a string), return the count of each atom.
     // The atomic element always starts with an uppercase character, then zero or more lowercase letters, representing the name.
