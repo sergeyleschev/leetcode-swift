@@ -1,5 +1,7 @@
 class WordFilter {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 745. Prefix and Suffix Search
     // Design a special dictionary with some words that searchs the words in it by a prefix and a suffix.
     // Implement the WordFilter class:
