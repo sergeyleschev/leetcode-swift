@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 741. Cherry Pickup
     // You are given an n x n grid representing a field of cherries, each cell is one of three possible integers.
     // 0 means the cell is empty, so you can pass through,
