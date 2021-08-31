@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 786. K-th Smallest Prime Fraction
     // You are given a sorted integer array arr containing 1 and prime numbers, where all the integers of arr are unique. You are also given an integer k.
     // For every i and j where 0 <= i < j < arr.length, we consider the fraction arr[i] / arr[j].
