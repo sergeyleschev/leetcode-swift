@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 773. Sliding Puzzle
     // On a 2x3 board, there are 5 tiles represented by the integers 1 through 5, and an empty square represented by 0.
     // A move consists of choosing 0 and a 4-directionally adjacent number and swapping it.
