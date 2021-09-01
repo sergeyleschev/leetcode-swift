@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 822. Card Flipping Game
     // On a table are N cards, with a positive integer printed on the front and back of each card (possibly different).
     // We flip any number of cards, and after we choose one card. 
