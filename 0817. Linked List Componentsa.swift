@@ -10,6 +10,8 @@
  */
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 817. Linked List Components
     // We are given head, the head node of a linked list containing unique integer values.
     // We are also given the list nums, a subset of the values in the linked list.
