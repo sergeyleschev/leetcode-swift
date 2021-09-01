@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 803. Bricks Falling When Hit
     // You are given an m x n binary grid, where each 1 represents a brick and 0 represents an empty space. A brick is stable if:
     // It is directly connected to the top of the grid, or
