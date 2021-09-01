@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 792. Number of Matching Subsequences
     // Given a string s and an array of strings words, return the number of words[i] that is a subsequence of s.
     // A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.
