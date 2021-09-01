@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 805. Split Array With Same Average
     // You are given an integer array nums.
     // You should move each element of nums into one of the two arrays A and B such that A and B are non-empty, and average(A) == average(B).
