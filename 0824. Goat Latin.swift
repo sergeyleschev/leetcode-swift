@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 824. Goat Latin
     // A sentence sentence is given, composed of words separated by spaces. Each word consists of lowercase and uppercase letters only.
     // We would like to convert the sentence to "Goat Latin" (a made-up language similar to Pig Latin.)
