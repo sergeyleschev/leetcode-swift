@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 801. Minimum Swaps To Make Sequences Increasing
     // We have two integer sequences nums1 and nums2 of the same non-zero length.
     // We are allowed to swap elements nums1[i] and nums2[i]. Note that both elements are in the same index position in their respective sequences.
