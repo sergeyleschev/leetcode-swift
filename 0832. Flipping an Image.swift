@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 832. Flipping an Image
     // Given an n x n binary matrix image, flip the image horizontally, then invert it, and return the resulting image.
     // To flip an image horizontally means that each row of the image is reversed.
