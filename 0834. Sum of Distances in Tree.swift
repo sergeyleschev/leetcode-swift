@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 834. Sum of Distances in Tree
     // An undirected, connected tree with n nodes labelled 0...n-1 and n-1 edges are given.
     // The ith edge connects nodes edges[i][0] and edges[i][1] together.
