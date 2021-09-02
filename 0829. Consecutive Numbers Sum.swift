@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 829. Consecutive Numbers Sum
     // Given a positive integer n, how many ways can we write it as a sum of consecutive positive integers?
 
