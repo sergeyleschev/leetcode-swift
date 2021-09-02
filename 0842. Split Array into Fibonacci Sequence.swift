@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 842. Split Array into Fibonacci Sequence
     // You are given a string of digits num, such as "123456579". We can split it into a Fibonacci-like sequence [123, 456, 579].
     // Formally, a Fibonacci-like sequence is a list f of non-negative integers such that:
