@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 857. Minimum Cost to Hire K Workers
     // There are n workers.  The i-th worker has a quality[i] and a minimum wage expectation wage[i].
     // Now we want to hire exactly k workers to form a paid group.  When hiring a group of k workers, we must pay them according to the following rules:
