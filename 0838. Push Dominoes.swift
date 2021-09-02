@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 838. Push Dominoes
     // There are N dominoes in a line, and we place each domino vertically upright.
     // In the beginning, we simultaneously push some of the dominoes either to the left or to the right.
