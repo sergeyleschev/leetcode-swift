@@ -1,5 +1,7 @@
  class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 853. Car Fleet
     // N cars are going to the same destination along a one lane road.  The destination is target miles away.
     // Each car i has a constant speed speed[i] (in miles per hour), and initial position position[i] miles towards the target along the road.
