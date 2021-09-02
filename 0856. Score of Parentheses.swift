@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 856. Score of Parentheses
     // Given a balanced parentheses string s, compute the score of the string based on the following rule:
     // () has score 1
