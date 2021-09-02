@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 845. Longest Mountain in Array
     // You may recall that an array arr is a mountain array if and only if:
     // arr.length >= 3
