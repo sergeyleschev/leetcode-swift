@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 830. Positions of Large Groups
     // In a string s of lowercase letters, these letters form consecutive groups of the same character.
     // For example, a string like s = "abbxxxxzyy" has the groups "a", "bb", "xxxx", "z", and "yy".
