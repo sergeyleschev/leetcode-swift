@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 854. K-Similar Strings
     // Strings s1 and s2 are k-similar (for some non-negative integer k) if we can swap the positions of two letters in s1 exactly k times so that the resulting string equals s2.
     // Given two anagrams s1 and s2, return the smallest k for which s1 and s2 are k-similar.
