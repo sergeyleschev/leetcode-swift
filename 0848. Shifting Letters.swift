@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 848. Shifting Letters
     // We have a string s of lowercase letters, and an integer array shifts.
     // Call the shift of a letter, the next letter in the alphabet, (wrapping around so that 'z' becomes 'a'). 
