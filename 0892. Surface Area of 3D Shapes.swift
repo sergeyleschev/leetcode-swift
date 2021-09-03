@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 892. Surface Area of 3D Shapes
     // You are given an n x n grid where you have placed some 1 x 1 x 1 cubes. Each value v = grid[i][j] represents a tower of v cubes placed on top of cell (i, j).
     // After placing these cubes, you have decided to glue any directly adjacent cubes to each other, forming several irregular 3D shapes.
