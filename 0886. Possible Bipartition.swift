@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 886. Possible Bipartition
     // Given a set of n people (numbered 1, 2, ..., n), we would like to split everyone into two groups of any size.
     // Each person may dislike some other people, and they should not go into the same group. 
