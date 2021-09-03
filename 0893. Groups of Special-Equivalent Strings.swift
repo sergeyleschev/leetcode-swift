@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 893. Groups of Special-Equivalent Strings
     // You are given an array words of strings.
     // A move onto s consists of swapping any two even indexed characters of s, or any two odd indexed characters of s.
