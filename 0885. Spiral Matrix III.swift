@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 885. Spiral Matrix III
     // On a 2 dimensional grid with rows rows and cols columns, we start at (rStart, cStart) facing east.
     // Here, the north-west corner of the grid is at the first row and column, and the south-east corner of the grid is at the last row and column.
