@@ -15,6 +15,8 @@
  */
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 872. Leaf-Similar Trees
     // Consider all the leaves of a binary tree, from left to right order, the values of those leaves form a leaf value sequence.
     // For example, in the given tree above, the leaf value sequence is (6, 7, 4, 9, 8).
