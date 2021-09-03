@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 873. Length of Longest Fibonacci Subsequence
     // A sequence x1, x2, ..., xn is Fibonacci-like if:
     // n >= 3
