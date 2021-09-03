@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 891. Sum of Subsequence Widths
     // Given an array of integers nums, consider all non-empty subsequences of nums.
     // For any sequence seq, let the width of seq be the difference between the maximum and minimum element of seq.
