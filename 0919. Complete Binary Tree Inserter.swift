@@ -16,6 +16,8 @@
 
 class CBTInserter {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 919. Complete Binary Tree Inserter
     // A complete binary tree is a binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.
     // Write a data structure CBTInserter that is initialized with a complete binary tree and supports the following operations:
