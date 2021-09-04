@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 913. cat and mouse
     // A game on an undirected graph is played by two players, mouse and cat, who alternate turns.
     // The graph is given as follows: graph[a] is a list of all nodes b such that ab is an edge of the graph.
