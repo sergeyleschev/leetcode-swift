@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 906. Super Palindromes
     // Let's say a positive integer is a super-palindrome if it is a palindrome, and it is also the square of a palindrome.
     // Given two positive integers left and right represented as strings, return the number of super-palindromes integers in the inclusive range [left, right].
