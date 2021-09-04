@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 929. Unique Email Addresses
     // Every valid email consists of a local name and a domain name, separated by the '@' sign. Besides lowercase letters, the email may contain one or more '.' or '+'.
     // For example, in "alice@leetcode.com", "alice" is the local name, and "leetcode.com" is the domain name.
