@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 899. Orderly Queue
     // A string s of lowercase letters is given.  Then, we may make any number of moves.
     // In each move, we choose one of the first k letters (starting from the left), remove it, and place it at the end of the string.
