@@ -1,4 +1,6 @@
-public class TopVotedCandidate {
+class TopVotedCandidate {
+
+    // Solution @ Sergey Leschev, Belarusian State University
 
     // 911. Online Election
     // In an election, the i-th vote was cast for persons[i] at time times[i].
