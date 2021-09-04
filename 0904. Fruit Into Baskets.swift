@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 904. Fruit Into Baskets
     // In a row of trees, the i-th tree produces fruit with type tree[i].
     // You start at any tree of your choice, then repeatedly perform the following steps:
