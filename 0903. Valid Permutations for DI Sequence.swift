@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 903. Valid Permutations for DI Sequence
     // We are given s, a length n string of characters from the set {'D', 'I'}. (These letters stand for "decreasing" and "increasing".)
     // A valid permutation is a permutation p[0], p[1], ..., p[n] of integers {0, 1, ..., n}, such that for all i:
