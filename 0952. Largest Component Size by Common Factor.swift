@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 952. Largest Component Size by Common Factor
     // Given a non-empty array of unique positive integers nums, consider the following graph:
     // There are nums.length nodes, labelled nums[0] to nums[nums.length - 1];
