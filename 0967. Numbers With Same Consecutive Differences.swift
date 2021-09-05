@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 967. Numbers With Same Consecutive Differences
     // Return all non-negative integers of length n such that the absolute difference between every two consecutive digits is k.
     // Note that every number in the answer must not have leading zeros. For example, 01 has one leading zero and is invalid.
