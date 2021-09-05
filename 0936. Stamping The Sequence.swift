@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 936. Stamping The Sequence
     // You want to form a target string of lowercase letters.
     // At the beginning, your sequence is target.length '?' marks.  You also have a stamp of lowercase letters.
