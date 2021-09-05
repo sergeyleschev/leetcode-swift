@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 940. Distinct Subsequences II
     // Given a string s, count the number of distinct, non-empty subsequences of s .
     // Since the result may be large, return the answer modulo 10^9 + 7.
