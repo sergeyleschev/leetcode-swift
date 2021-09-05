@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 934. Shortest Bridge
     // In a given 2D binary array grid, there are two islands.  (An island is a 4-directionally connected group of 1s not connected to any other 1s.)
     // Now, we may change 0s to 1s so as to connect the two islands together to form 1 island.
