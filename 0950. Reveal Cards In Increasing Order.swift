@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 950. Reveal Cards In Increasing Order
     // In a deck of cards, every card has a unique integer.  You can order the deck in any order you want.
     // Initially, all the cards start face down (unrevealed) in one deck.
