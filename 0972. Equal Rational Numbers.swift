@@ -8,6 +8,8 @@ struct Fraction {
 
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 972. Equal Rational Numbers
     // Given two strings s and t, each of which represents a non-negative rational number, return true if and only if they represent the same number. The strings may use parentheses to denote the repeating part of the rational number.
     // A rational number can be represented using up to three parts: <IntegerPart>, <NonRepeatingPart>, and a <RepeatingPart>. The number will be represented in one of the following three ways:
