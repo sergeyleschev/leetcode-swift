@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 949. Largest Time for Given Digits
     // Given an array arr of 4 digits, find the latest 24-hour time that can be made using each digit exactly once.
     // 24-hour times are formatted as "HH:MM", where HH is between 00 and 23, and MM is between 00 and 59. The earliest 24-hour time is 00:00, and the latest is 23:59.
