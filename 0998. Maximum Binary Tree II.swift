@@ -15,6 +15,8 @@
  */
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 998. Maximum Binary Tree II
     // We are given the root node of a maximum tree: a tree where every node has a value greater than any other value in its subtree.
     // Just as in the previous problem, the given tree was constructed from an list A (root = Construct(A)) recursively with the following Construct(A) routine:
