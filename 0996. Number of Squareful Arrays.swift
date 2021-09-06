@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 996. Number of Squareful Arrays
     // Given an array nums of non-negative integers, the array is squareful if for every pair of adjacent elements, their sum is a perfect square.
     // Return the number of permutations of nums that are squareful.  Two permutations perm1 and perm2 differ if and only if there is some index i such that perm1[i] != perm2[i].
