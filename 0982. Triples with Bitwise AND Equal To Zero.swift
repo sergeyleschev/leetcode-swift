@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 982. Triples with Bitwise AND Equal To Zero
     // Given an array of integers nums, find the number of triples of indices (i, j, k) such that:
     // 0 <= i < nums.length
