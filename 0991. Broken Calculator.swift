@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 991. Broken Calculator
     // On a broken calculator that has a number showing on its display, we can perform two operations:
     // Double: Multiply the number on the display by 2, or;
