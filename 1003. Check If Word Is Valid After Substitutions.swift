@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1003. Check If Word Is Valid After Substitutions
     // Given a string s, determine if it is valid.
     // A string s is valid if, starting with an empty string t = "", you can transform t into s after performing the following operation any number of times:
