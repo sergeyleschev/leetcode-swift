@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 978. Longest Turbulent Subarray
     // Given an integer array arr, return the length of a maximum size turbulent subarray of arr.
     // A subarray is turbulent if the comparison sign flips between each adjacent pair of elements in the subarray.
