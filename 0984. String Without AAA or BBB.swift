@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 984. String Without AAA or BBB
     // Given two integers a and b, return any string s such that:
     // s has length a + b and contains exactly a 'a' letters, and exactly b 'b' letters,
