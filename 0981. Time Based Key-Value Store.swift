@@ -1,5 +1,7 @@
 class TimeMap {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 981. Time Based Key-Value Store
     // Create a timebased key-value store class TimeMap, that supports two operations.
     // 1. set(string key, string value, int timestamp)
