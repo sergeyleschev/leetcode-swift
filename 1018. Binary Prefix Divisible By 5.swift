@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1018. Binary Prefix Divisible By 5
     // You are given a binary array nums (0-indexed).
     // We define xi as the number whose binary representation is the subarray nums[0..i] (from most-significant-bit to least-significant-bit).
