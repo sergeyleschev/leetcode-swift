@@ -1,5 +1,7 @@
 class StreamChecker {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1032. Stream of Characters
     // Implement the StreamChecker class as follows:
     // StreamChecker(words): Constructor, init the data structure with the given words.
