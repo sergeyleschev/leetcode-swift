@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1012. Numbers With Repeated Digits
     // Given a positive integer n, return the number of positive integers less than or equal to n that have at least 1 repeated digit.
 
