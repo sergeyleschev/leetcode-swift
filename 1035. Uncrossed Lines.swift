@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1035. Uncrossed Lines
     // We write the integers of nums1 and nums2 (in the order they are given) on two separate horizontal lines.
     // Now, we may draw connecting lines: a straight line connecting two numbers nums1[i] and nums2[j] such that:
