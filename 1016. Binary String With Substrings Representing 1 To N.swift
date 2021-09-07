@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1016. Binary String With Substrings Representing 1 To N
     // Given a binary string s (a string consisting only of '0' and '1's) and a positive integer n, return true if and only if for every integer x from 1 to n, the binary representation of x is a substring of s.
 
