@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1025. Divisor Game
     // Alice and Bob take turns playing a game, with Alice starting first.
     // Initially, there is a number n on the chalkboard. On each player's turn, that player makes a move consisting of:
