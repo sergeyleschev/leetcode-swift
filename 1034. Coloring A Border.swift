@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1034. Coloring A Border
     // Given a 2-dimensional grid of integers, each value in the grid represents the color of the grid square at that location.
     // Two squares belong to the same connected component if and only if they have the same color and are next to each other in any of the 4 directions.
