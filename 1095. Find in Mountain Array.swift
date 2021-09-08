@@ -8,6 +8,8 @@
  */
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1095. Find in Mountain Array
     // (This problem is an interactive problem.)
     // You may recall that an array A is a mountain array if and only if:
