@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1125. Smallest Sufficient Team
     // In a project, you have a list of required skills req_skills, and a list of people. The ith person people[i] contains a list of skills that the person has
     // Consider a sufficient team: a set of people such that for every required skill in req_skills, there is at least one person in the team who has that skill. We can represent these teams by the index of each person.
