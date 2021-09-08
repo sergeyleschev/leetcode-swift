@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1096. Brace Expansion II
     // Under the grammar given below, strings can represent a set of lowercase words. Let's use R(expr) to denote the set of words the expression represents.
     // Grammar can best be understood through simple examples:
