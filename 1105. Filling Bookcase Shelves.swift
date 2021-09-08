@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1105. Filling Bookcase Shelves
     // We have a sequence of books: the i-th book has thickness books[i][0] and height books[i][1].
     // We want to place these books in order onto bookcase shelves that have total width shelf_width.
