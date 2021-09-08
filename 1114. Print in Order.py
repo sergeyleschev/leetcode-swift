@@ -1,3 +1,5 @@
+# Solution @ Sergey Leschev, Belarusian State University
+
 # 1114. Print in Order
 # Suppose we have a class:
 # public class Foo {
