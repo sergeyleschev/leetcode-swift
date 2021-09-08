@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1090. Largest Values From Labels
     // We have a set of items: the i-th item has value values[i] and label labels[i].
     // Then, we choose a subset S of these items, such that:
