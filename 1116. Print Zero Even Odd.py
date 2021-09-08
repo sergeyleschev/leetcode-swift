@@ -1,3 +1,5 @@
+# Solution @ Sergey Leschev, Belarusian State University
+
 # 1116. Print Zero Even Odd
 # Suppose you are given the following code:
 
