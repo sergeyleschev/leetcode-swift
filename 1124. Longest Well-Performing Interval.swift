@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1124. Longest Well-Performing Interval
     // We are given hours, a list of the number of hours worked per day for a given employee
     // A day is considered to be a tiring day if and only if the number of hours worked is (strictly) greater than 8.
