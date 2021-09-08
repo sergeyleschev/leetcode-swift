@@ -1,4 +1,6 @@
 class Solution {
+
+    // Solution @ Sergey Leschev, Belarusian State University
     
     // 1074. Number of Submatrices That Sum to Target
     // Given a matrix and a target, return the number of non-empty submatrices that sum to target.
