@@ -1,3 +1,5 @@
+# Solution @ Sergey Leschev, Belarusian State University
+
 # 1115. Print FooBar Alternately
 # Suppose you are given the following code:
 
