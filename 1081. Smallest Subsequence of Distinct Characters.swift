@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1081. Smallest Subsequence of Distinct Characters
     // Return the lexicographically smallest subsequence of s that contains all the distinct characters of s exactly once.
 
