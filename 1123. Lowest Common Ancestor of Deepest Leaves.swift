@@ -15,6 +15,8 @@
  */
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1123. Lowest Common Ancestor of Deepest Leaves
     // Given the root of a binary tree, return the lowest common ancestor of its deepest leaves.
     // Recall that:
