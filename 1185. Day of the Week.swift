@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1185. Day of the Week
     // Given a date, return the corresponding day of the week for that date.
     // The input is given as three integers representing the day, month and year respectively.
