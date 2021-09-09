@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1138. Alphabet Board Path
     // On an alphabet board, we start at position (0, 0), corresponding to character board[0][0].
     // Here, board = ["abcde", "fghij", "klmno", "pqrst", "uvwxy", "z"], as shown in the diagram below.
