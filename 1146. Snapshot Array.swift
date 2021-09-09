@@ -1,5 +1,7 @@
 class SnapshotArray {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1146. Snapshot Array
     // Implement a SnapshotArray that supports the following interface:
     // SnapshotArray(int length) initializes an array-like data structure with the given length.  Initially, each element equals 0.
