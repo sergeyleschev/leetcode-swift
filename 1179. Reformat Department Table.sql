@@ -1,5 +1,6 @@
--- 1179. Reformat Department Table
+-- Solution @ Sergey Leschev, Belarusian State University
 
+-- 1179. Reformat Department Table
 -- Table: Department
 -- +---------------+---------+
 -- | Column Name   | Type    |
