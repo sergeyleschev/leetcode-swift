@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1144. Decrease Elements To Make Array Zigzag
     // Given an array nums of integers, a move consists of choosing any element and decreasing it by 1.
     // An array A is a zigzag array if either:
