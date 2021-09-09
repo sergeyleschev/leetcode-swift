@@ -33,6 +33,8 @@ class Transaction {
 
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1169. Invalid Transactions
     // A transaction is possibly invalid if:
     // the amount exceeds $1000, or;
