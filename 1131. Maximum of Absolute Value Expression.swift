@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1131. Maximum of Absolute Value Expression
     // Given two arrays of integers with equal lengths, return the maximum value of:
     // |arr1[i] - arr1[j]| + |arr2[i] - arr2[j]| + |i - j|
