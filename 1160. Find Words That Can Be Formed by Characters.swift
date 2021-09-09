@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1160. Find Words That Can Be Formed by Characters
     // You are given an array of strings words and a string chars.
     // A string is good if it can be formed by characters from chars (each character can only be used once).
