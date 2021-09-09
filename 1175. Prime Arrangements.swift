@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1175. Prime Arrangements
     // Return the number of permutations of 1 to n so that prime numbers are at prime indices (1-indexed.)
     // (Recall that an integer is prime if and only if it is greater than 1, and cannot be written as a product of two positive integers both smaller than it.)
