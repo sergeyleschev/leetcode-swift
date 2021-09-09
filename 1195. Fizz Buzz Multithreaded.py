@@ -1,3 +1,5 @@
+# Solution @ Sergey Leschev, Belarusian State University
+
 # 1195. Fizz Buzz Multithreaded
 # Write a program that outputs the string representation of numbers from 1 to n, however:
 # If the number is divisible by 3, output "fizz".
