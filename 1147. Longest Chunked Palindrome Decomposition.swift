@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1147. Longest Chunked Palindrome Decomposition
     // You are given a string text. You should split it to k substrings (subtext1, subtext2, ..., subtextk) such that:
     // subtexti is a non-empty string.
