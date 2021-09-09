@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1207. Unique Number of Occurrences
     // Given an array of integers arr, write a function that returns true if and only if the number of occurrences of each value in the array is unique.
 
