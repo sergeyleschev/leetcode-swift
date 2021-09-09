@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1178. Number of Valid Words for Each Puzzle
     // With respect to a given puzzle string, a word is valid if both the following conditions are satisfied:
     // word contains the first letter of puzzle.
