@@ -16,6 +16,8 @@
 
 class FindElements {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1261. Find Elements in a Contaminated Binary Tree
     // Given a binary tree with the following rules:
     // root.val == 0
