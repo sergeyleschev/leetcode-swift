@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1233. Remove Sub-Folders from the Filesystem
     // Given a list of folders, remove all sub-folders in those folders and return in any order the folders after removing.
     // If a folder[i] is located within another folder[j], it is called a sub-folder of it.
