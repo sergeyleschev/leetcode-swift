@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1234. Replace the Substring for Balanced String
     // You are given a string containing only 4 kinds of characters 'Q', 'W', 'E' and 'R'.
     // A string is said to be balanced if each of its characters appears n/4 times where n is the length of the string.
