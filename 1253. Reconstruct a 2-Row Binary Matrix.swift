@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1253. Reconstruct a 2-Row Binary Matrix
     // Given the following details of a matrix with n columns and 2 rows:
     // The matrix is a binary matrix, which means each element in the matrix can be 0 or 1.
