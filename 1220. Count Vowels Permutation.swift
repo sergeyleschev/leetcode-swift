@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1220. Count Vowels Permutation
     // Given an integer n, your task is to count how many strings of length n can be formed under the following rules:
     // Each character is a lower case vowel ('a', 'e', 'i', 'o', 'u')
