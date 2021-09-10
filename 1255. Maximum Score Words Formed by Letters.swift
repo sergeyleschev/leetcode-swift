@@ -3,6 +3,8 @@ typealias Counter = [Character: Int]
 
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1255. Maximum Score Words Formed by Letters
     // Given a list of words, list of  single letters (might be repeating) and score of every character.
     // Return the maximum score of any valid set of words formed by using the given letters (words[i] cannot be used two or more times).
