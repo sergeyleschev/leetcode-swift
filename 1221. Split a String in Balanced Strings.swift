@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1221. Split a String in Balanced Strings
     // Balanced strings are those that have an equal quantity of 'L' and 'R' characters.
     // Given a balanced string s, split it in the maximum amount of balanced strings.
