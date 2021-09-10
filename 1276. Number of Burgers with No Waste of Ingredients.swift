@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1276. Number of Burgers with No Waste of Ingredients
     // Given two integers tomatoSlices and cheeseSlices. The ingredients of different burgers are as follows:
     // Jumbo Burger: 4 tomato slices and 1 cheese slice.
