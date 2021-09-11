@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1297. Maximum Number of Occurrences of a Substring
     // Given a string s, return the maximum number of ocurrences of any substring under the following rules:
     // The number of unique characters in the substring must be less than or equal to maxLetters.
