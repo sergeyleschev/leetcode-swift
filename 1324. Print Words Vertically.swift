@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1324. Print Words Vertically
     // Given a string s. Return all the words vertically in the same order in which they appear in s.
     // Words are returned as a list of strings, complete with spaces when is necessary. (Trailing spaces are not allowed).
