@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1298. Maximum Candies You Can Get from Boxes
     // Given n boxes, each box is given in the format [status, candies, keys, containedBoxes] where:
     // status[i]: an integer which is 1 if box[i] is open and 0 if box[i] is closed.
