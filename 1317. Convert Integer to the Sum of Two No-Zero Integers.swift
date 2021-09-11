@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1317. Convert Integer to the Sum of Two No-Zero Integers
     // Given an integer n. No-Zero integer is a positive integer which doesn't contain any 0 in its decimal representation.
     // Return a list of two integers [A, B] where:
