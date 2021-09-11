@@ -1,5 +1,7 @@
 class CombinationIterator {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1286. Iterator for Combination
     // Design the CombinationIterator class:
     // CombinationIterator(string characters, int combinationLength) Initializes the object with a string characters of sorted distinct lowercase English letters and a number combinationLength as arguments.
