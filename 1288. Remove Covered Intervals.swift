@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1288. Remove Covered Intervals
     // Given a list of intervals, remove all intervals that are covered by another interval in the list.
     // Interval [a,b) is covered by interval [c,d) if and only if c <= a and b <= d.
