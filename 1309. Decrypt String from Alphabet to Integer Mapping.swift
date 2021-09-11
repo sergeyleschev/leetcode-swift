@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1309. Decrypt String from Alphabet to Integer Mapping
     // Given a string s formed by digits ('0' - '9') and '#' . We want to map s to English lowercase characters as follows:
     // Characters ('a' to 'i') are represented by ('1' to '9') respectively.
