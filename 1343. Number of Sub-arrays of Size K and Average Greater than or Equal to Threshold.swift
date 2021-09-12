@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1343. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold
     // Given an array of integers arr and two integers k and threshold.
     // Return the number of sub-arrays of size k and average greater than or equal to threshold.
