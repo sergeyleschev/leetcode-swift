@@ -1,5 +1,7 @@
 class ProductOfNumbers {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1352. Product of the Last K Numbers
     // Implement the class ProductOfNumbers that supports two methods:
     // 1. add(int num)
