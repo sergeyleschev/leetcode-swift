@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1340. Jump Game V
     // Given an array of integers arr and an integer d. In one step you can jump from index i to index:
     // i + x where: i + x < arr.length and 0 < x <= d.
