@@ -1,5 +1,7 @@
 class TweetCounts {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1348. Tweet Counts Per Frequency
     // A social media company is trying to monitor activity on their site by analyzing the number of tweets that occur in select periods of time. These periods can be partitioned into smaller time chunks based on a certain frequency (every minute, hour, or day).
     // For example, the period [10, 10000] (in seconds) would be partitioned into the following time chunks with these frequencies:
