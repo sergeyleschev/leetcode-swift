@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1345. Jump Game IV
     // Given an array of integers arr, you are initially positioned at the first index of the array.
     // In one step you can jump from index i to index:
