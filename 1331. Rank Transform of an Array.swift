@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1331. Rank Transform of an Array
     // Given an array of integers arr, replace each element with its rank.
     // The rank represents how large the element is. The rank has the following rules:
