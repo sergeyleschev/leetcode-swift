@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1332. Remove Palindromic Subsequences
     // You are given a string s consisting only of letters 'a' and 'b'. In a single step you can remove one palindromic subsequence from s.
     // Return the minimum number of steps to make the given string empty.
