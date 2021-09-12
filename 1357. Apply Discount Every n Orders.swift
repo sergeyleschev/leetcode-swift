@@ -1,5 +1,7 @@
 class Cashier {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1357. Apply Discount Every n Orders
     // There is a sale in a supermarket, there will be a discount every n customer.
     // There are some products in the supermarket where the id of the i-th product is products[i] and the price per unit of this product is prices[i].
