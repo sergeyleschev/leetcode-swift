@@ -1,5 +1,7 @@
 class Solution {
 
+	// Solution @ Sergey Leschev, Belarusian State University
+
 	// 1326. Minimum Number of Taps to Open to Water a Garden
 	// There is a one-dimensional garden on the x-axis. The garden starts at the point 0 and ends at the point n. (i.e The length of the garden is n).
 	// There are n + 1 taps located at points [0, 1, ..., n] in the garden.
