@@ -1,5 +1,7 @@
 class UndergroundSystem {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1396. Design Underground System
     // An underground railway system is keeping track of customer travel times between different stations. They are using this data to calculate the average time it takes to travel from one station to another.
     // Implement the UndergroundSystem class:
