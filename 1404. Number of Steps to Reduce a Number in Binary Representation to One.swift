@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1404. Number of Steps to Reduce a Number in Binary Representation to One
     // Given a number s in their binary representation. Return the number of steps to reduce it to 1 under the following rules:
     // If the current number is even, you have to divide it by 2.
