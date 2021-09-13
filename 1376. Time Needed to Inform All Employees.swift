@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1376. Time Needed to Inform All Employees
     // A company has n employees with a unique ID for each employee from 0 to n - 1. The head of the company is the one with headID.
     // Each employee has one direct manager given in the manager array where manager[i] is the direct manager of the i-th employee, manager[headID] = -1. Also, it is guaranteed that the subordination relationships have a tree structure.
