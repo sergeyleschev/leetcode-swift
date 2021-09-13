@@ -15,6 +15,8 @@
  */
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1372. Longest ZigZag Path in a Binary Tree
     // You are given the root of a binary tree.
     // A ZigZag path for a binary tree is defined as follow:
