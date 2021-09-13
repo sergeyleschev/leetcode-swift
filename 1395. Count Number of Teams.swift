@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1395. Count Number of Teams
     // There are n soldiers standing in a line. Each soldier is assigned a unique rating value.
     // You have to form a team of 3 soldiers amongst them under the following rules:
