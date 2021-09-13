@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1391. Check if There is a Valid Path in a Grid
     // Given a m x n grid. Each cell of the grid represents a street. The street of grid[i][j] can be:
     // 1 which means a street connecting the left cell and the right cell.
