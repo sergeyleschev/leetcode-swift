@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1432. Max Difference You Can Get From Changing an Integer
     // You are given an integer num. You will apply the following steps exactly two times:
     // Pick a digit x (0 <= x <= 9).
