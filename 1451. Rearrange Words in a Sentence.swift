@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1451. Rearrange Words in a Sentence
     // Given a sentence text (A sentence is a string of space-separated words) in the following format:
     // First letter is in upper case.
