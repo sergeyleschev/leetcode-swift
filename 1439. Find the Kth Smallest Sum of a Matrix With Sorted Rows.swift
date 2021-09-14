@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows
     // You are given an m * n matrix, mat, and an integer k, which has its rows sorted in non-decreasing order.
     // You are allowed to choose exactly 1 element from each row to form an array. Return the Kth smallest array sum among all possible arrays.
