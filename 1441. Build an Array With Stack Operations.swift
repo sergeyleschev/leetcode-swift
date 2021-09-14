@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1441. Build an Array With Stack Operations
     // Given an array target and an integer n. In each iteration, you will read a number from  list = {1,2,3..., n}.
     // Build the target array using the following operations:
