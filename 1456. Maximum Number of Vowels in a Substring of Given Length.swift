@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1456. Maximum Number of Vowels in a Substring of Given Length
     // Given a string s and an integer k.
     // Return the maximum number of vowel letters in any substring of s with length k.
