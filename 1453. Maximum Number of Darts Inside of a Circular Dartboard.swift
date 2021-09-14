@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1453. Maximum Number of Darts Inside of a Circular Dartboard
     // You have a very large square wall and a circular dartboard placed on the wall. You have been challenged to throw darts into the board blindfolded. Darts thrown at the wall are represented as an array of points on a 2D plane. 
     // Return the maximum number of points that are within or lie on any circular dartboard of radius r.
