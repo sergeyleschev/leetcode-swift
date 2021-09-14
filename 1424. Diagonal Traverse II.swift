@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1424. Diagonal Traverse II
     // Given a list of lists of integers, nums, return all elements of nums in diagonal order as shown in the below images.
 
