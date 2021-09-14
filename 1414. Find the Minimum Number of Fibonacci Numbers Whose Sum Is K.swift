@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1414. Find the Minimum Number of Fibonacci Numbers Whose Sum Is K
     // Given an integer k, return the minimum number of Fibonacci numbers whose sum is equal to k. The same Fibonacci number can be used multiple times.
     // The Fibonacci numbers are defined as:
