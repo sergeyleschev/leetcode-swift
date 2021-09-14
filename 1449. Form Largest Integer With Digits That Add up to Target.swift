@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1449. Form Largest Integer With Digits That Add up to Target
     // Given an array of integers cost and an integer target. Return the maximum integer you can paint under the following rules:
     // The cost of painting a digit (i+1) is given by cost[i] (0 indexed).
