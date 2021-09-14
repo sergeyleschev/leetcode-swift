@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1450. Number of Students Doing Homework at a Given Time
     // Given two integer arrays startTime and endTime and given an integer queryTime.
     // The ith student started doing their homework at the time startTime[i] and finished it at time endTime[i].
