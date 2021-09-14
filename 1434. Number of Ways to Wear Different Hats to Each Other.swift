@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1434. Number of Ways to Wear Different Hats to Each Other
     // There are n people and 40 types of hats labeled from 1 to 40.
     // Given a list of list of integers hats, where hats[i] is a list of all hats preferred by the i-th person.
