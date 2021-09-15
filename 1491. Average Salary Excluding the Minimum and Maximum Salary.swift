@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1491. Average Salary Excluding the Minimum and Maximum Salary
     // Given an array of unique integers salary where salary[i] is the salary of the employee i.
 
