@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1460. Make Two Arrays Equal by Reversing Sub-arrays
     // Given two integer arrays of equal length target and arr.
     // In one step, you can select any non-empty sub-array of arr and reverse it. You are allowed to make any number of steps.
