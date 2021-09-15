@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1465. Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts
     // You are given a rectangular cake of size h x w and two arrays of integers horizontalCuts and verticalCuts where:
     // horizontalCuts[i] is the distance from the top of the rectangular cake to the ith horizontal cut and similarly, and
