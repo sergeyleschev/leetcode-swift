@@ -1,5 +1,7 @@
 class TreeAncestor {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1483. Kth Ancestor of a Tree Node
     // You are given a tree with n nodes numbered from 0 to n - 1 in the form of a parent array parent where parent[i] is the parent of ith node. The root of the tree is node 0. Find the kth ancestor of a given node.
     // The kth ancestor of a tree node is the kth node in the path from that node to the root node.
