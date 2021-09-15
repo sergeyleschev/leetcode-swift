@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1458. Max Dot Product of Two Subsequences
     // Given two arrays nums1 and nums2.
     // Return the maximum dot product between non-empty subsequences of nums1 and nums2 with the same length.
