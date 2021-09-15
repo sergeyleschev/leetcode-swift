@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1482. Minimum Number of Days to Make m Bouquets
     // Given an integer array bloomDay, an integer m and an integer k.
     // We need to make m bouquets. To make a bouquet, you need to use k adjacent flowers from the garden.
