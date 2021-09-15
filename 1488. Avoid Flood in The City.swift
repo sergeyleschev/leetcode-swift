@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1488. Avoid Flood in The City
     // Your country has an infinite number of lakes. Initially, all the lakes are empty, but when it rains over the nth lake, the nth lake becomes full of water. If it rains over a lake which is full of water, there will be a flood. Your goal is to avoid the flood in any lake.
     // Given an integer array rains where:
