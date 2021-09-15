@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1497. Check If Array Pairs Are Divisible by k
     // Given an array of integers arr of even length n and an integer k.
     // We want to divide the array into exactly n / 2 pairs such that the sum of each pair is divisible by k.
