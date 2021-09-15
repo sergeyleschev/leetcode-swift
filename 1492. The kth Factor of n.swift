@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1492. The kth Factor of n
     // Given two positive integers n and k.
     // A factor of an integer n is defined as an integer i where n % i == 0.
