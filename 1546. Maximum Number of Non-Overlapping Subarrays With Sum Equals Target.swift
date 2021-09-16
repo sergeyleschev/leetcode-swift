@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1546. Maximum Number of Non-Overlapping Subarrays With Sum Equals Target
     // Given an array nums and an integer target.
     // Return the maximum number of non-empty non-overlapping subarrays such that the sum of values in each subarray is equal to target.
