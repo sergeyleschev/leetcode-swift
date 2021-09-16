@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1537. Get the Maximum Score
     // You are given two sorted arrays of distinct integers nums1 and nums2.
 
