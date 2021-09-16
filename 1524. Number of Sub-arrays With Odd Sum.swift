@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1524. Number of Sub-arrays With Odd Sum
     // Given an array of integers arr. Return the number of sub-arrays with odd sum.
     // As the answer may grow large, the answer must be computed modulo 10^9 + 7.
