@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1536. Minimum Swaps to Arrange a Binary Grid
     // Given an n x n binary grid, in one step you can choose two adjacent rows of the grid and swap them.
     // A grid is said to be valid if all the cells above the main diagonal are zeros.
