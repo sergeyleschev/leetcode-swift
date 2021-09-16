@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1545. Find Kth Bit in Nth Binary String
     // Given two positive integers n and k, the binary string  Sn is formed as follows:
     // S1 = "0"
