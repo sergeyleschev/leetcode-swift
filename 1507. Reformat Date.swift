@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1507. Reformat Date
     // Given a date string in the form Day Month Year, where:
     // Day is in the set {"1st", "2nd", "3rd", "4th", ..., "30th", "31st"}.
