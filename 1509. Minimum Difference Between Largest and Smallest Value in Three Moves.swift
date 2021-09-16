@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1509. Minimum Difference Between Largest and Smallest Value in Three Moves
     // Given an array nums, you are allowed to choose one element of nums and change it by any value in one move.
 
