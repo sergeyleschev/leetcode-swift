@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1588. Sum of All Odd Length Subarrays
     // Given an array of positive integers arr, calculate the sum of all possible odd-length subarrays.
     // A subarray is a contiguous subsequence of the array.
