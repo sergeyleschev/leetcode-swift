@@ -15,6 +15,8 @@
  */
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1609. Even Odd Tree
     // A binary tree is named Even-Odd if it meets the following conditions:
     // The root of the binary tree is at level index 0, its children are at level index 1, their children are at level index 2, etc.
