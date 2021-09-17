@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1558. Minimum Numbers of Function Calls to Make Target Array
     // Your task is to form an integer array nums from an initial array of zeros arr that is the same size as nums.
     // Return the minimum number of function calls to make nums from arr.
