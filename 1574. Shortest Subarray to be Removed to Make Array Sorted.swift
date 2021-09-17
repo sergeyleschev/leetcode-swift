@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1574. Shortest Subarray to be Removed to Make Array Sorted
     // Given an integer array arr, remove a subarray (can be empty) from arr such that the remaining elements in arr are non-decreasing.
     // A subarray is a contiguous subsequence of the array.
