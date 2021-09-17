@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1573. Number of Ways to Split a String
     // Given a binary string s (a string consisting only of '0's and '1's), we can split s into 3 non-empty strings s1, s2, s3 (s1+ s2+ s3 = s).
     // Return the number of ways s can be split such that the number of characters '1' is the same in s1, s2, and s3.
