@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1639. Number of Ways to Form a Target String Given a Dictionary
     // You are given a list of strings of the same length words and a string target.
     // Your task is to form target using the given words under the following rules:
