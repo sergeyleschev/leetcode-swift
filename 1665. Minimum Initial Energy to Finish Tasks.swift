@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1665. Minimum Initial Energy to Finish Tasks
     // You are given an array tasks where tasks[i] = [actuali, minimumi]:
     // actuali is the actual amount of energy you spend to finish the ith task.
