@@ -1,5 +1,7 @@
 class OrderedStream {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1656. Design an Ordered Stream
     // There is a stream of n (idKey, value) pairs arriving in an arbitrary order, where idKey is an integer between 1 and n and value is a string. No two pairs have the same id.
     // Design a stream that returns the values in increasing order of their IDs by returning a chunk (list) of values after each insertion. The concatenation of all the chunks should result in a list of the sorted values.
