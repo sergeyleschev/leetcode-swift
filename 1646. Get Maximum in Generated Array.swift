@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1646. Get Maximum in Generated Array
     // You are given an integer n. An array nums of length n + 1 is generated in the following way:
     // nums[0] = 0
