@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1712. Ways to Split Array Into Three Subarrays
     // A split of an integer array is good if:
     // The array is split into three non-empty contiguous subarrays - named left, mid, right respectively from left to right.
