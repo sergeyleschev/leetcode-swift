@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1701. Average Waiting Time
     // There is a restaurant with a single chef. You are given an array customers, where customers[i] = [arrivali, timei]:
     // arrivali is the arrival time of the ith customer. The arrival times are sorted in non-decreasing order.
