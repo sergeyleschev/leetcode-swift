@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1687. Delivering Boxes from Storage to Ports
     // You have the task of delivering some boxes from storage to their ports using only one ship. However, this ship has a limit on the number of boxes and the total weight that it can carry.
     // You are given an array boxes, where boxes[i] = [ports i, weight i], and three integers portsCount, maxBoxes, and maxWeight.
