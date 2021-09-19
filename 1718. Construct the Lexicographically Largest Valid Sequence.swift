@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1718. Construct the Lexicographically Largest Valid Sequence
     // Given an integer n, find a sequence that satisfies all of the following:
     // The integer 1 occurs once in the sequence.
