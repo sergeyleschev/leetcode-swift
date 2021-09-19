@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1673. Find the Most Competitive Subsequence
     // Given an integer array nums and a positive integer k, return the most competitive subsequence of nums of size k.
     // An array's subsequence is a resulting sequence obtained by erasing some (possibly zero) elements from the array.
