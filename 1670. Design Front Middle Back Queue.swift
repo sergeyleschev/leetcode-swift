@@ -1,5 +1,7 @@
 class FrontMiddleBackQueue {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1670. Design Front Middle Back Queue
     // Design a queue that supports push and pop operations in the front, middle, and back.
     // Implement the FrontMiddleBack class:
