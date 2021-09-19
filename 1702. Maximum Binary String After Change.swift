@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1702. Maximum Binary String After Change
     // You are given a binary string binary consisting of only 0's or 1's. You can apply each of the following operations any number of times:
     // Operation 1: If the number contains the substring "00", you can replace it with "10".
