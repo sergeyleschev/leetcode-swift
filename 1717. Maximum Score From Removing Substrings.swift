@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1717. Maximum Score From Removing Substrings
     // You are given a string s and two integers x and y. You can perform two types of operations any number of times.
     // Remove substring "ab" and gain x points.
