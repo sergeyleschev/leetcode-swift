@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1737. Change Minimum Characters to Satisfy One of Three Conditions
     // You are given two strings a and b that consist of lowercase letters. In one operation, you can change any character in a or b to any lowercase letter.
     // Your goal is to satisfy one of the following three conditions:
