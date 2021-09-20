@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1733. Minimum Number of People to Teach
     // On a social network consisting of m users and some friendships between users, two users can communicate with each other if they know a common language.
     // You are given an integer n, an array languages, and an array friendships where:
