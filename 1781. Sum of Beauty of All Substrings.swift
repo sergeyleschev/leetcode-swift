@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1781. Sum of Beauty of All Substrings
     // The beauty of a string is the difference in frequencies between the most frequent and least frequent characters.
     // For example, the beauty of "abaacc" is 3 - 1 = 2.
