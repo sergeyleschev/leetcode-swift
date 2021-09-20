@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1758. Minimum Changes To Make Alternating Binary String
     // You are given a string s consisting only of the characters '0' and '1'. In one operation, you can change any '0' to '1' or vice versa.
     // The string is called alternating if no two adjacent characters are equal. For example, the string "010" is alternating, while the string "0100" is not.
