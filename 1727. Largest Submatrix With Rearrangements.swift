@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1727. Largest Submatrix With Rearrangements
     // You are given a binary matrix matrix of size m x n, and you are allowed to rearrange the columns of the matrix in any order.
 
