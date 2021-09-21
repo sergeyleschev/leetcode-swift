@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1819. Number of Different Subsequences GCDs
     // You are given an array nums that consists of positive integers.
     // The GCD of a sequence of numbers is defined as the greatest integer that divides all the numbers in the sequence evenly.
