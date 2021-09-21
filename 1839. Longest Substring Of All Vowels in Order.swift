@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1839. Longest Substring Of All Vowels in Order
     // A string is considered beautiful if it satisfies the following conditions:
     // Each of the 5 English vowels ('a', 'e', 'i', 'o', 'u') must appear at least once in it.
