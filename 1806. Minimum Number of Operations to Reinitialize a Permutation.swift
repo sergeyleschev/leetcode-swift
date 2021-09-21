@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1806. Minimum Number of Operations to Reinitialize a Permutation
     // You are given an even integer n. You initially have a permutation perm of size n where perm[i] == i (0-indexed).
     // In one operation, you will create a new array arr, and for each i:
