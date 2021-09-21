@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1808. Maximize Number of Nice Divisors
     // You are given a positive integer primeFactors. You are asked to construct a positive integer n that satisfies the following conditions:
     // The number of prime factors of n (not necessarily distinct) is at most primeFactors.
