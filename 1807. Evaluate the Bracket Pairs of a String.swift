@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1807. Evaluate the Bracket Pairs of a String
     // You are given a string s that contains some bracket pairs, with each pair containing a non-empty key.
     // For example, in the string "(name)is(age)yearsold", there are two bracket pairs that contain the keys "name" and "age".
