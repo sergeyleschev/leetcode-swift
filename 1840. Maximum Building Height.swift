@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1840. Maximum Building Height
     // You want to build n new buildings in a city. The new buildings will be built in a line and are labeled from 1 to n.
     // However, there are city restrictions on the heights of the new buildings:
