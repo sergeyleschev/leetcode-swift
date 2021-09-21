@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1799. Maximize Score After N Operations
     // You are given nums, an array of positive integers of size 2 * n. You must perform n operations on this array.
     // In the ith operation (1-indexed), you will:
