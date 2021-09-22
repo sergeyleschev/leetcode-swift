@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1850. Minimum Adjacent Swaps to Reach the Kth Smallest Number
     // You are given a string num, representing a large integer, and an integer k.
     // We call some integer wonderful if it is a permutation of the digits in num and is greater in value than num. There can be many wonderful integers. However, we only care about the smallest-valued ones.
