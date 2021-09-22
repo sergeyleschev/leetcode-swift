@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1863. Sum of All Subset XOR Totals
     // The XOR total of an array is defined as the bitwise XOR of all its elements, or 0 if the array is empty.
     // For example, the XOR total of the array [2,5,6] is 2 XOR 5 XOR 6 = 1.
