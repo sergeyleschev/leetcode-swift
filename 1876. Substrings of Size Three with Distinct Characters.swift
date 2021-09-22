@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1876. Substrings of Size Three with Distinct Characters
     // A string is good if there are no repeated characters.
     // Given a string s, return the number of good substrings of length three in s.
