@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1846. Maximum Element After Decreasing and Rearranging
     // You are given an array of positive integers arr. Perform some operations (possibly none) on arr so that it satisfies these conditions:
     // The value of the first element in arr must be 1.
