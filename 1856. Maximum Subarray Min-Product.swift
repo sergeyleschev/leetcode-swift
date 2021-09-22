@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1856. Maximum Subarray Min-Product
     // The min-product of an array is equal to the minimum value in the array multiplied by the array's sum.
     // For example, the array [3,2,5] (minimum value is 2) has a min-product of 2 * (3+2+5) = 2 * 10 = 20.
