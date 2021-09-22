@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1872. Stone Game VIII
     // Alice and Bob take turns playing a game, with Alice starting first.
     // There are n stones arranged in a row. On each player's turn, while the number of stones is more than one, they will do the following:
