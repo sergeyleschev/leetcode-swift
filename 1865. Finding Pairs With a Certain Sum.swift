@@ -1,5 +1,7 @@
 class FindSumPairs {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1865. Finding Pairs With a Certain Sum
     // You are given two integer arrays nums1 and nums2. You are tasked to implement a data structure that supports queries of two types:
     // Add a positive integer to an element of a given index in the array nums2.
