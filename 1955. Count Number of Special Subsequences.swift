@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1955. Count Number of Special Subsequences
     // A sequence is special if it consists of a positive number of 0s, followed by a positive number of 1s, then a positive number of 2s.
     // For example, [0,1,2] and [0,0,1,1,1,2] are special.
