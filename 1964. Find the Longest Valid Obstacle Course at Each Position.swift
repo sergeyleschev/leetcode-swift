@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1964. Find the Longest Valid Obstacle Course at Each Position
     // You want to build some obstacle courses. You are given a 0-indexed integer array obstacles of length n, where obstacles[i] describes the height of the ith obstacle.
     // For every index i between 0 and n - 1 (inclusive), find the length of the longest obstacle course in obstacles such that:
