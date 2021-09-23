@@ -1,5 +1,7 @@
 class Solution {
 
+    // Solution @ Sergey Leschev, Belarusian State University
+
     // 1913. Maximum Product Difference Between Two Pairs
     // The product difference between two pairs (a, b) and (c, d) is defined as (a * b) - (c * d).
     // For example, the product difference between (5, 6) and (2, 7) is (5 * 6) - (2 * 7) = 16.
