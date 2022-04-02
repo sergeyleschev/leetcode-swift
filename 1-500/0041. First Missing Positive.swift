@@ -28,8 +28,8 @@ class Solution {
     // -2^31 <= nums[i] <= 2^31 - 1
 
     // - Complexity:
-    //   - time: O(n), where n is the length of the `nums`.
-    //   - space: O(1), only constant space is used, if we have parameter `nums` as inout.
+    //   - time: O(n), where n is the length of the nums.
+    //   - space: O(1), only constant space is used, if we have parameter nums as inout.
 
     func firstMissingPositive(_ nums: [Int]) -> Int {
         var nums = nums
@@ -57,29 +57,5 @@ class Solution {
         }
         return nums.count + (nums[0] > 0 ? 0 : 1)
     }
-    
-    
-    /*
-    func firstMissingPositive(_ nums: [Int]) -> Int {
-        var map: [Int: Bool] = [:]
-        var i = 1
-        
-        for num in nums {
-            if num <= 0 {
-                continue
-            }
-            map[num] = true
-        }
-
-        while true {
-            if let _ = map[i] {
-                i += 1
-                continue
-            } else {
-                return i
-            }
-        }
-    }
-    */
 
 }
