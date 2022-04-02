@@ -56,9 +56,7 @@ class Solution {
                         extra = k
                     }
                 }
-                if extra >= 0 {
-                    max = subtrap(height, iMax, extra) + subtrap(height, extra, jMax)
-                }
+                if extra >= 0 { max = subtrap(height, iMax, extra) + subtrap(height, extra, jMax) }
                 return max + subtrap(height, i, iMax) + subtrap(height, jMax, j)
             }
         }
