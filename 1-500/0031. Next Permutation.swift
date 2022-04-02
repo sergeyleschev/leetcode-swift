@@ -32,7 +32,7 @@ class Solution {
     // 0 <= nums[i] <= 100
 
     // - Complexity:
-    //   - time: O(n), where n is the length of the `nums`.
+    //   - time: O(n), where n is the length of the nums.
     //   - space: O(1), only constant space is used.
     
     func nextPermutation(_ nums: inout [Int]) {
