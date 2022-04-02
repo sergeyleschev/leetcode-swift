@@ -36,7 +36,7 @@ class Solution {
     // -10^4 <= target <= 10^4
 
     // - Complexity:
-    //     - time: O(log n), where n is the length of `nums`.
+    //     - time: O(log n), where n is the length of nums.
     //     - space: O(1), only constant space is used.
     
     func search(_ nums: [Int], _ target: Int) -> Int {
