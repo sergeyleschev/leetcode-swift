@@ -72,21 +72,21 @@ class Solution {
         
         if sLength < wLength { return [] }
         
-        let w_hash = words.reduce(0, { $0 + hash($1)  })
+        let wHash = words.reduce(0, { $0 + hash($1) })
         let wSubLength = words.count > 0 ? words[0].count : 0
         var invalidStringList: [[Character]] = []
         var validStringList: [[Character]] = []
         var res: [Int] = []
         var i = 0
-        var s_hash = 0
+        var sHash = 0
 
         while i <= sLength - wLength {
             if i == 0 {
-                s_hash = hash(Array(s[i..<i+wLength]))
+                sHash = hash(Array(s[i..<i+wLength]))
             } else {
-                s_hash += map[s[i + wLength - 1]]! - map[s[i - 1]]!
+                sHash += map[s[i + wLength - 1]]! - map[s[i - 1]]!
             }
-            if w_hash == s_hash {
+            if wHash == sHash {
                 let subString = Array(s[i..<i + wLength])
                 if invalidStringList.contains(subString) {
                     i += 1
