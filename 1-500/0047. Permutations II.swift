@@ -26,8 +26,8 @@ class Solution {
     // -10 <= nums[i] <= 10
 
     // - Complexity:
-    //   - time: O(n * n!), where n is the length of the `nums`.
-    //   - space: O(n), where n is the length of the `nums`.
+    //   - time: O(n * n!), where n is the length of the nums.
+    //   - space: O(n), where n is the length of the nums.
 
     func permuteUnique(_ nums: [Int]) -> [[Int]] {
         var dict = [Int: Int]()
