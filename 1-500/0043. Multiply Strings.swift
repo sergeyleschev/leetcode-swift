@@ -55,7 +55,6 @@ class Solution {
 			lists.append(list)
 			index += 1
 		}
-		//	3.
 		let res = addLists(lists)
         return convertListNode(res)
     }
