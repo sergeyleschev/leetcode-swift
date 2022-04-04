@@ -43,8 +43,8 @@ class Solution {
     // 0 <= newInterval[0] <= newInterval[1] <= 10^5
 
     // - Complexity:
-    //   - time: O(n), where n is the number of `intervals`.
-    //   - space: O(n), where n is the number of `intervals`.
+    //   - time: O(n), where n is the number of intervals.
+    //   - space: O(n), where n is the number of intervals.
 
     func insert(_ intervals: [[Int]], _ newInterval: [Int]) -> [[Int]] {
         var ans = [[Int]]()
