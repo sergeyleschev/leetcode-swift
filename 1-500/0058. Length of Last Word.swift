@@ -24,7 +24,7 @@ class Solution {
     // s consists of only English letters and spaces ' '.
 
     // - Complexity:
-    //   - time: O(n), where n is the length of `s`.
+    //   - time: O(n), where n is the length of s.
     //   - space: O(1), only constant space is used.
 
     func lengthOfLastWord(_ s: String) -> Int {
