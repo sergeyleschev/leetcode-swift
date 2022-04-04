@@ -50,10 +50,7 @@ class Solution {
             num += index
         }
         
-        if n % 2 == 1 {
-            matrix[(n - 1) / 2][(n - 1) / 2] = n * n
-        }
-
+        if n % 2 == 1 { matrix[(n - 1) / 2][(n - 1) / 2] = n * n }
         return matrix
     }
 
