@@ -15,7 +15,7 @@ class Solution {
     // 61. Rotate List
     // Given the head of a linked list, rotate the list to the right by k places.
 
-    // Rotates the list to the right by `k` places.
+    // Rotates the list to the right by k places.
 
     // - Parameters:
     //   - head: Head of the linked list.
