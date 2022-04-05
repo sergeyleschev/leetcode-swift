@@ -31,8 +31,8 @@ class Solution {
     // 0 <= digits[i] <= 9
 
     // - Complexity:
-    //   - time: O(n), where n is the length of the `digits`.
-    //   - space: O(n), where n is the length of the `digits`.
+    //   - time: O(n), where n is the length of the digits.
+    //   - space: O(n), where n is the length of the digits.
 
     func plusOne(_ digits: [Int]) -> [Int] {
         var digits = digits
