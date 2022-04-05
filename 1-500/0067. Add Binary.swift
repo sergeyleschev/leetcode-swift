@@ -24,8 +24,8 @@ class Solution {
     // Each string does not contain leading zeros except for the zero itself.
 
     // - Complexity:
-    //   - time: O(n + m), where n is the length of the `a` and m is the length of the `b`.
-    //   - space: O(n + m), where n is the length of the `a` and m is the length of the `b`.
+    //   - time: O(n + m), where n is the length of the a and m is the length of the b.
+    //   - space: O(n + m), where n is the length of the a and m is the length of the b.
 
     func addBinary(_ a: String, _ b: String) -> String {
         guard !a.isEmpty else { return b }
