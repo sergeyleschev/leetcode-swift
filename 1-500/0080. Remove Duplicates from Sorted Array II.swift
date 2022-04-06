@@ -40,9 +40,9 @@ class Solution {
     // -10^4 <= nums[i] <= 10^4
     // nums is sorted in ascending order.
 
-    /// - Complexity:
-    ///   - time: O(n), where n is the length of nums.
-    ///   - space: O(1), only constant space is used.
+    // - Complexity:
+    //   - time: O(n), where n is the length of nums.
+    //   - space: O(1), only constant space is used.
     
     func removeDuplicates(_ nums: inout [Int]) -> Int {
         let n = nums.count
