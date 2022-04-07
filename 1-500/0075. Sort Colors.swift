@@ -36,7 +36,7 @@ class Solution {
     // Follow up: Could you come up with a one-pass algorithm using only constant extra space?
 
     // - Complexity:
-    //   - time: O(n), where n is the length of the `nums`.
+    //   - time: O(n), where n is the length of the nums.
     //   - space: O(1), only constant space is used.
 
     func sortColors(_ nums: inout [Int]) {
