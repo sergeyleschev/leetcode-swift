@@ -47,14 +47,14 @@ class Solution {
     }
 
 
-    func helper(_ matrix: [[Character]], _ i: Int, _ j: Int, _ max_i: Int, _ max_j: Int) -> Int {
-        if matrix[i][j] == "0" || max_i == i || max_j == j { return 0 }
+    func helper(_ matrix: [[Character]], _ i: Int, _ j: Int, _ maxI: Int, _ maxJ: Int) -> Int {
+        if matrix[i][j] == "0" || maxI == i || maxJ == j { return 0 }
         var x = -1
         var y = -1
 
         loop: 
-        for row in i..<max_i {
-            for col in j..<max_j {
+        for row in i..<maxI {
+            for col in j..<maxJ {
                 if matrix[row][col] == "0" {
                     x = row
                     y = col
@@ -64,9 +64,9 @@ class Solution {
         }
         
         if x >= 0 {
-            return max(helper(matrix, i, j, x, max_j), helper(matrix, i, j, max_i, y))
+            return max(helper(matrix, i, j, x, maxJ), helper(matrix, i, j, maxI, y))
         } else {
-            return (max_i - i) * (max_j - j)
+            return (maxI - i) * (maxJ - j)
         } 
     }
     
