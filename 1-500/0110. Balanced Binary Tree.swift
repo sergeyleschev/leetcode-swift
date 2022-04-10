@@ -43,9 +43,9 @@ class Solution {
     // The number of nodes in the tree is in the range [0, 5000].
     // -10^4 <= Node.val <= 10^4
 
-    /// - Complexity:
-    ///   - time: O(n), where n is the number of nodes in the binary tree.
-    ///   - space: O(n), where n is the number of nodes in the binary tree.
+    // - Complexity:
+    //   - time: O(n), where n is the number of nodes in the binary tree.
+    //   - space: O(n), where n is the number of nodes in the binary tree.
     
     func isBalanced(_ root: TreeNode?) -> Bool {
         isBalancedTree(root).balanced
