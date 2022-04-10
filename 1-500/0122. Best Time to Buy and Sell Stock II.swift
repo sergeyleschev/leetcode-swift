@@ -33,9 +33,9 @@ class Solution {
     // 1 <= prices.length <= 3 * 10^4
     // 0 <= prices[i] <= 10^4
 
-    /// - Complexity:
-    ///   - time: O(n), where n is the length of the prices.
-    ///   - space: O(1), only constant space is used.
+    // - Complexity:
+    //   - time: O(n), where n is the length of the prices.
+    //   - space: O(1), only constant space is used.
     
     func maxProfit(_ prices: [Int]) -> Int {
         guard !prices.isEmpty else { return 0 }
