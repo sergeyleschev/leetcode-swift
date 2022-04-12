@@ -49,9 +49,7 @@ class Solution {
             for word in queue {
 				let next = nextWords(word, &wordSet)
                 list += next
-				if next.contains(endWord) {
-					isLoopEnd = true
-				}
+				if next.contains(endWord) { isLoopEnd = true }
 			}
 			
             if isLoopEnd { break loop } 
@@ -64,11 +62,7 @@ class Solution {
 		while i < words.count - 1 {
 			var tmp = Set<String>()
 			for word0 in words[words.count - 1 - i] {
-				for word1 in lastWords {
-					if isNext(word0, word1) {
-						tmp.insert(word0)
-					}
-				}
+				for word1 in lastWords where isNext(word0, word1) { tmp.insert(word0) }
 			}
 			lastWords = Array(tmp)
 			words[words.count - 1 - i] = lastWords
