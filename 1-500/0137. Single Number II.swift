@@ -20,7 +20,8 @@ class Solution {
     // Each element in nums appears exactly three times except for one element which appears once.
 
     func singleNumber(_ nums: [Int]) -> Int {
-        var a = 0, b = 0
+        var a = 0
+        var b = 0
         
         for num in nums {
             let newA = a & ~b & ~num + ~a & b & num
