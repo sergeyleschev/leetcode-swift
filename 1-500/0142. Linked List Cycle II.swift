@@ -46,9 +46,9 @@ class Solution {
 
     // Follow up: Can you solve it using O(1) (i.e. constant) memory?
 
-    /// - Complexity:
-    ///   - time: O(n), where n is the number of nodes in the linked list.
-    ///   - space: O(1), only constant space is used.
+    // - Complexity:
+    //   - time: O(n), where n is the number of nodes in the linked list.
+    //   - space: O(1), only constant space is used.
     
     func detectCycle(_ head: ListNode?) -> ListNode? {
         guard head?.next != nil else { return nil }
