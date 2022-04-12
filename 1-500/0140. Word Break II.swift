@@ -33,9 +33,9 @@ class Solution {
     // s and wordDict[i] consist of only lowercase English letters.
     // All the strings of wordDict are unique.
 
-    /// - Complexity:
-    ///   - time: O(2 ^ n), where n is the length of the wordDict.
-    ///   - space: O(2 ^ n), where n is the length of the wordDict.
+    // - Complexity:
+    //   - time: O(2 ^ n), where n is the length of the wordDict.
+    //   - space: O(2 ^ n), where n is the length of the wordDict.
 
     func wordBreak(_ s: String, _ wordDict: [String]) -> [String] {
         var dict = [String: [String]]()
