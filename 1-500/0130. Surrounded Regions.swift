@@ -30,20 +30,14 @@ class Solution {
         var indexs: [Int] = []
         
         for i in 0..<row {
-            for j in 0..<col {
-                if board[i][j] == "O" && map[i][j] < 1 {
-                    markRegion(i, j, board, &map, index, &indexs)
-                    index += 1
-                }
+            for j in 0..<col where board[i][j] == "O" && map[i][j] < 1 {
+                markRegion(i, j, board, &map, index, &indexs)
+                index += 1
             } 
         }
         
         for i in 0..<row {
-            for j in 0..<col {
-                if map[i][j] > 0 && indexs.contains(map[i][j]) == false {
-                    board[i][j] = "X"
-                }
-            }
+            for j in 0..<col where map[i][j] > 0 && indexs.contains(map[i][j]) == false { board[i][j] = "X" }
         }
     }
     
