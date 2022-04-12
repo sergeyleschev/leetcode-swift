@@ -86,29 +86,5 @@ class Solution {
             second = tmp
         }
     }
-    
-    /*
-    func reorderList(_ head: ListNode?) {
-        var nodes: [ListNode?] = []
-        var curr = head
-        
-        while curr != nil {
-            nodes.append(curr)
-            curr = curr?.next
-        }
-        
-        var prev: ListNode?
-        
-        for i in 0..<nodes.count {
-            let index = i % 2 == 0 ? i / 2 : nodes.count - 1 - i / 2
-            let node = nodes[index]
-            
-            prev?.next = node
-            prev = node
-        }
-        
-        prev?.next = nil
-    }
-    */
 
 }
