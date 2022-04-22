@@ -48,7 +48,7 @@ class LRUCache {
 
     
 	func get(_ key: Int) -> Int {
-		if let node = cache[key] { // update
+		if let node = cache[key] {
 			moveToHead(node)
 			
             return node.val
@@ -59,11 +59,11 @@ class LRUCache {
 
     
 	func put(_ key: Int, _ value: Int) {
-		if let node = cache[key] { // update
+		if let node = cache[key] {
 			node.val = value
 			moveToHead(node)
 
-        } else { // add
+        } else {
 			let node = Node(key, value)
 			
             node.next = head
@@ -76,7 +76,7 @@ class LRUCache {
             }
 		}
         
-		if count > capacity { // remove
+		if count > capacity {
 			cache.removeValue(forKey: tail!.key)
 			tail = tail?.prev
 			tail?.next = nil
