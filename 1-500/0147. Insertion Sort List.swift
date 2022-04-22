@@ -69,40 +69,4 @@ class Solution {
         return newHead
     }
 
-
-    // - Complexity:
-    //   - time: O(n^2), where n is the number of nodes in the linked list.
-    //   - space: O(1), only constant space is used.
-    /*
-    func insertionSortList(_ head: ListNode?) -> ListNode? {
-        let dummy = ListNode()
-        var curr = head
-        var prevNode: ListNode?
-        var nextNode: ListNode?
-
-        while curr != nil {
-            prevNode = dummy
-            nextNode = dummy.next
-
-            while nextNode != nil {
-                guard
-                    let currVal = curr?.val,
-                    let nextVal = nextNode?.val,
-                    currVal >= nextVal
-                else { break }
-                prevNode = nextNode
-                nextNode = nextNode?.next
-            }
-
-            let tmp = curr?.next
-            curr?.next = nextNode
-            prevNode?.next = curr
-
-            curr = tmp
-        }
-
-        return dummy.next
-    }
-    */
-
 }
