@@ -125,34 +125,5 @@ class Solution {
 
         return count
     }
-    
-    /*
-    func sortList(_ head: ListNode?) -> ListNode? {
-        var nodes: [ListNode] = []
-        var curr = head
-        
-        while curr != nil {
-            nodes.append(curr!)
-            curr = curr?.next
-        }
-        
-        nodes.sort(by: { $0.val < $1.val })
-        
-        var new_head: ListNode?
-        var prev: ListNode?
-        
-        for node in nodes {
-            if new_head == nil {
-                new_head = node
-            }
-            
-            prev?.next = node
-            prev = node
-        }
-        
-        prev?.next = nil
-        return new_head
-    }
-    */
 
 }
