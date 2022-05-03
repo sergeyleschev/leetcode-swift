@@ -24,7 +24,6 @@ class Solution {
     // The given integer num is guaranteed to fit within the range of a 32-bit signed integer.
     // num >= 1
     // You could assume no leading zero bit in the integer’s binary representation.
-    // This question is the same as 1009: https://leetcode.com/problems/complement-of-base-10-integer/
 
     // - Complexity:
     //   - time: O(n), where n is the number of digits in num.
