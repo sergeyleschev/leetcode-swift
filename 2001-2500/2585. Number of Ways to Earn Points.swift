@@ -1,6 +1,7 @@
-// Solution @ Sergey Leschev
-
 class Solution {
+
+    // Solution @ Sergey Leschev
+
     func waysToReachTarget(_ target: Int, _ types: [[Int]]) -> Int {
         let mod = 1_000_000_007
         var dp = Array(repeating: 0, count: target + 1)
