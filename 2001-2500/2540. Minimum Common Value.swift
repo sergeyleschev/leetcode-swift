@@ -1,6 +1,7 @@
-// Solution @ Sergey Leschev
-
 class Solution {
+
+    // Solution @ Sergey Leschev
+
     func getCommon(_ nums1: [Int], _ nums2: [Int]) -> Int {
         var i = 0, j = 0
         while i < nums1.count && j < nums2.count {
