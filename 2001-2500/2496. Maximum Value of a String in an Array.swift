@@ -1,6 +1,7 @@
-// Solution @ Sergey Leschev
-
 class Solution {
+
+    // Solution @ Sergey Leschev
+
     func maximumValue(_ strs: [String]) -> Int {
         var maxValue = 0
         
