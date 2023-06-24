@@ -7,9 +7,11 @@ class Solution {
     // The code uses dynamic programming to solve the problem. It maintains a dictionary dp, where the keys represent the possible height differences between the two billboards, and the values represent the maximum sum of heights achieved for each height difference.
 
     // The code iterates through each rod in the given input rods. For each rod i, it creates a new dictionary cur to store the updated values for dp. Then, it iterates through the existing entries in dp and updates the values in cur based on three cases:
-    // Adding the current rod i to the same height difference: cur[sum + i] = max(dp[sum]! + i, cur[sum + i, default: 0])
-    // Keeping the same height difference: cur[sum] = max(dp[sum]!, cur[sum, default: 0])
-    // Subtracting the current rod i from the height difference: cur[sum - i] = max(dp[sum]!, cur[sum - i, default: 0])
+    
+    // 1. Adding the current rod i to the same height difference: cur[sum + i] = max(dp[sum]! + i, cur[sum + i, default: 0])
+    // 2. Keeping the same height difference: cur[sum] = max(dp[sum]!, cur[sum, default: 0])
+    // 3. Subtracting the current rod i from the height difference: cur[sum - i] = max(dp[sum]!, cur[sum - i, default: 0])
+    
     // After iterating through all the rods, the final result is obtained from dp[0], which represents the maximum possible sum of heights for a height difference of 0 (i.e., the two billboards have equal heights).
 
     // Complexity
