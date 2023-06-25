@@ -16,7 +16,6 @@ class Solution {
 
     // Complexity
     // - Time complexity: O(n * m).
-    // - Space complexity: O(n * m).
 
     func tallestBillboard(_ rods: [Int]) -> Int {
         var dp = [0: 0]
