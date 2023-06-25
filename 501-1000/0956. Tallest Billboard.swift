@@ -15,8 +15,7 @@ class Solution {
     // After iterating through all the rods, the final result is obtained from dp[0], which represents the maximum possible sum of heights for a height difference of 0 (i.e., the two billboards have equal heights).
 
     // Complexity
-    // - Time complexity: O(n).
-    // The code iterates through each rod in the input rods, so the time complexity is O(n), where n is the number of rods.
+    // - Time complexity: O(n^2).
     // - Space complexity: O(n).
     // The code uses a dictionary dp to store the maximum sums of heights for each height difference. The size of the dictionary grows as the number of rods increases, so the space complexity is also O(n), where n is the number of rods.
 
