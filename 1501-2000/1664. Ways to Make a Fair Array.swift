@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1664. Ways to Make a Fair Array
     // You are given an integer array nums. You can choose exactly one index (0-indexed) and remove the element. Notice that the index of the elements may change after the removal.

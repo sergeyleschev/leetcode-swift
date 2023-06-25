@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1878. Get Biggest Three Rhombus Sums in a Grid
     // You are given an m x n integer matrix grid.

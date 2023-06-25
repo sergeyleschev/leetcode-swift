@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1898. Maximum Number of Removable Characters
     // You are given two strings s and p where p is a subsequence of s. You are also given a distinct 0-indexed integer array removable containing a subset of indices of s (s is also 0-indexed).

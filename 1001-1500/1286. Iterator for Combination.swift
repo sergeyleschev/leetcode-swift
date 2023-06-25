@@ -1,6 +1,6 @@
 class CombinationIterator {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1286. Iterator for Combination
     // Design the CombinationIterator class:

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1324. Print Words Vertically
     // Given a string s. Return all the words vertically in the same order in which they appear in s.

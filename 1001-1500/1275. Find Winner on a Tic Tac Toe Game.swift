@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1275. Find Winner on a Tic Tac Toe Game
     // Tic-tac-toe is played by two players A and B on a 3 x 3 grid.

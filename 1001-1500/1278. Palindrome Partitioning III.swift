@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1278. Palindrome Partitioning III
     // You are given a string s containing lowercase letters and an integer k. You need to:

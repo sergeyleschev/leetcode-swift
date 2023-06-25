@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1771. Maximize Palindrome Length From Subsequences
     // You are given two strings, word1 and word2. You want to construct a string in the following manner:

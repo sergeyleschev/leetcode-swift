@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1481. Least Number of Unique Integers after K Removals
     // Given an array of integers arr and an integer k. Find the least number of unique integers after removing exactly k elements.

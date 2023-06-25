@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1442. Count Triplets That Can Form Two Arrays of Equal XOR
     // Given an array of integers arr.

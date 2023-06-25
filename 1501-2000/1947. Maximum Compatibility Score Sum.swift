@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1947. Maximum Compatibility Score Sum
     // There is a survey that consists of n questions where each question's answer is either 0 (no) or 1 (yes).

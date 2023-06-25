@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1301. Number of Paths with Max Score
     // You are given a square board of characters. You can move on the board starting at the bottom right square marked with the character 'S'.

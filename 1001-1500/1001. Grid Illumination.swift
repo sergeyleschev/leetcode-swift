@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1001. Grid Illumination
     // There is a 2D grid of size n x n where each cell of this grid has a lamp that is initially turned off.

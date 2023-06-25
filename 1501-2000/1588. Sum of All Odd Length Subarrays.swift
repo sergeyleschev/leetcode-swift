@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1588. Sum of All Odd Length Subarrays
     // Given an array of positive integers arr, calculate the sum of all possible odd-length subarrays.

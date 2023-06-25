@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1702. Maximum Binary String After Change
     // You are given a binary string binary consisting of only 0's or 1's. You can apply each of the following operations any number of times:

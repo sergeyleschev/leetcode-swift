@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1313. Decompress Run-Length Encoded List
     // We are given a list nums of integers representing a list compressed with run-length encoding.

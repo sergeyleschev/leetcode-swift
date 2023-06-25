@@ -33,7 +33,7 @@ class Transaction {
 
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1169. Invalid Transactions
     // A transaction is possibly invalid if:

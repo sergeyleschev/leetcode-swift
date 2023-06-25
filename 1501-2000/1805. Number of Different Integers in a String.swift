@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1805. Number of Different Integers in a String
     // You are given a string word that consists of digits and lowercase English letters.

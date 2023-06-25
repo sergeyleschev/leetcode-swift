@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1175. Prime Arrangements
     // Return the number of permutations of 1 to n so that prime numbers are at prime indices (1-indexed.)

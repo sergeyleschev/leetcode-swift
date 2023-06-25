@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1510. Stone Game IV
     // Alice and Bob take turns playing a game, with Alice starting first.

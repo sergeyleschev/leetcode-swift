@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1248. Count Number of Nice Subarrays
     // Given an array of integers nums and an integer k. A continuous subarray is called nice if there are k odd numbers on it.

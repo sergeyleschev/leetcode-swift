@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1935. Maximum Number of Words You Can Type
     // There is a malfunctioning keyboard where some letter keys do not work. All other keys on the keyboard work properly.

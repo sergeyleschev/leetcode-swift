@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1417. Reformat The String
     // Given alphanumeric string s. (Alphanumeric string is a string consisting of lowercase English letters and digits).

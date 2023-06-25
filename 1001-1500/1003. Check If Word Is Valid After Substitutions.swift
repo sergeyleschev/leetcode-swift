@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1003. Check If Word Is Valid After Substitutions
     // Given a string s, determine if it is valid.

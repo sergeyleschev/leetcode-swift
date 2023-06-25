@@ -25,7 +25,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1367. Linked List in Binary Tree
     // Given a binary tree root and a linked list with head as the first node. 

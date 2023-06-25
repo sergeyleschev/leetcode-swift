@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1110. Delete Nodes And Return Forest
     // Given the root of a binary tree, each node in the tree has a distinct value.

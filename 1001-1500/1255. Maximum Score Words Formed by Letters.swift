@@ -3,7 +3,7 @@ typealias Counter = [Character: Int]
 
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1255. Maximum Score Words Formed by Letters
     // Given a list of words, list of  single letters (might be repeating) and score of every character.

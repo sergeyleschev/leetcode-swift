@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1079. Letter Tile Possibilities
     // You have n  tiles, where each tile has one letter tiles[i] printed on it.

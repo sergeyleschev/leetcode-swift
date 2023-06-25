@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1526. Minimum Number of Increments on Subarrays to Form a Target Array
     // Given an array of positive integers target and an array initial of same size with all zeros.

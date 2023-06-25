@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1827. Minimum Operations to Make the Array Increasing
     // You are given an integer array nums (0-indexed). In one operation, you can choose an element of the array and increment it by 1.

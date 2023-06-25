@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1696. Jump Game VI
     // You are given a 0-indexed integer array nums and an integer k.

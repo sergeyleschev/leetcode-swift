@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1561. Maximum Number of Coins You Can Get
     // There are 3n piles of coins of varying size, you and your friends will take piles of coins as follows:

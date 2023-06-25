@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1855. Maximum Distance Between a Pair of Values
     // You are given two non-increasing 0-indexed integer arrays nums1 and nums2.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1144. Decrease Elements To Make Array Zigzag
     // Given an array nums of integers, a move consists of choosing any element and decreasing it by 1.

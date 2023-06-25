@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1679. Max Number of K-Sum Pairs
     // You are given an integer array nums and an integer k.

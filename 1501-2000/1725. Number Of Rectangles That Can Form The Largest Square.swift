@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1725. Number Of Rectangles That Can Form The Largest Square
     // You are given an array rectangles where rectangles[i] = [li, wi] represents the ith rectangle of length li and width wi.

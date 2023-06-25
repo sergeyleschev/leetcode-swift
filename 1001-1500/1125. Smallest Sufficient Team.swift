@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1125. Smallest Sufficient Team
     // In a project, you have a list of required skills req_skills, and a list of people. The ith person people[i] contains a list of skills that the person has

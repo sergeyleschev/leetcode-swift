@@ -1,6 +1,6 @@
 class SnapshotArray {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1146. Snapshot Array
     // Implement a SnapshotArray that supports the following interface:

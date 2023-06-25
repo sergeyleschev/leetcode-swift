@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1036. Escape a Large Maze
     // There is a 1 million by 1 million grid on an XY-plane, and the coordinates of each grid square are (x, y).

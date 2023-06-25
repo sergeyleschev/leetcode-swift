@@ -6,7 +6,7 @@ typealias Info = (id: Int, leavingTime: Int, position: Int)
 
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1942. The Number of the Smallest Unoccupied Chair
     // There is a party where n friends numbered from 0 to n - 1 are attending. There is an infinite number of chairs in this party that are numbered from 0 to infinity. When a friend arrives at the party, they sit on the unoccupied chair with the smallest number.

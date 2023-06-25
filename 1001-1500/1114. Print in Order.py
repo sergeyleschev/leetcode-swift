@@ -1,4 +1,4 @@
-# Solution @ Sergey Leschev, Belarusian State University
+# Solution @ Sergey Leschev
 
 # 1114. Print in Order
 # Suppose we have a class:

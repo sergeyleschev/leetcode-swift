@@ -1,4 +1,4 @@
--- Solution @ Sergey Leschev, Belarusian State University
+-- Solution @ Sergey Leschev
 
 -- 1179. Reformat Department Table
 -- Table: Department

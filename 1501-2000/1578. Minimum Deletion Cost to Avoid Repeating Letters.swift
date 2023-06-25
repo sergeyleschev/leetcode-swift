@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1578. Minimum Deletion Cost to Avoid Repeating Letters
     // Given a string s and an array of integers cost where cost[i] is the cost of deleting the ith character in s.

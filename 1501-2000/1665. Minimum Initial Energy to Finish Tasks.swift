@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1665. Minimum Initial Energy to Finish Tasks
     // You are given an array tasks where tasks[i] = [actuali, minimumi]:

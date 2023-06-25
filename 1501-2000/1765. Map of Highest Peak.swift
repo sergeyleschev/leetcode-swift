@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1765. Map of Highest Peak
     // You are given an integer matrix isWater of size m x n that represents a map of land and water cells.

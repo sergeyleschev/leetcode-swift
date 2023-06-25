@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1033. Moving Stones Until Consecutive
     // Three stones are on a number line at positions a, b, and c.

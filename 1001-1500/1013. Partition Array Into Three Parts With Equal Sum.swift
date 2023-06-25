@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1013. Partition Array Into Three Parts With Equal Sum
     // Given an array of integers arr, return true if we can partition the array into three non-empty parts with equal sums.

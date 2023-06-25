@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1733. Minimum Number of People to Teach
     // On a social network consisting of m users and some friendships between users, two users can communicate with each other if they know a common language.

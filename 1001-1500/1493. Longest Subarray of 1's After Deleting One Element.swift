@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1493. Longest Subarray of 1's After Deleting One Element
     // Given a binary array nums, you should delete one element from it.

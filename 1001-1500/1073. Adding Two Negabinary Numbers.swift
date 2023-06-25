@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1073. Adding Two Negabinary Numbers
     // Given two numbers arr1 and arr2 in base -2, return the result of adding them together.

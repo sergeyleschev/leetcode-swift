@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1037. Valid Boomerang
     // Given an array points where points[i] = [xi, yi] represents a point on the X-Y plane, return true if these points are a boomerang.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1392. Longest Happy Prefix
     // A string is called a happy prefix if is a non-empty prefix which is also a suffix (excluding itself).

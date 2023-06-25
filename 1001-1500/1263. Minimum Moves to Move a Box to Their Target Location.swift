@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1263. Minimum Moves to Move a Box to Their Target Location
     // Storekeeper is a game in which the player pushes boxes around in a warehouse trying to get them to target locations.

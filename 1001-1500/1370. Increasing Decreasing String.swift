@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1370. Increasing Decreasing String
     // Given a string s. You should re-order the string using the following algorithm:

@@ -1,6 +1,6 @@
 class Solution {
 
-	// Solution @ Sergey Leschev, Belarusian State University
+	// Solution @ Sergey Leschev
 
 	// 1926. Nearest Exit from Entrance in Maze
 	// You are given an m x n matrix maze (0-indexed) with empty cells (represented as '.') and walls (represented as '+'). You are also given the entrance of the maze, where entrance = [entrancerow, entrancecol] denotes the row and column of the cell you are initially standing at.

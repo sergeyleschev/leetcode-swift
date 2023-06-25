@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1018. Binary Prefix Divisible By 5
     // You are given a binary array nums (0-indexed).

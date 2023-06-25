@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1799. Maximize Score After N Operations
     // You are given nums, an array of positive integers of size 2 * n. You must perform n operations on this array.

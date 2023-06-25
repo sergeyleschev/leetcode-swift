@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1201. Ugly Number III
     // An ugly number is a positive integer that is divisible by a, b, or c.

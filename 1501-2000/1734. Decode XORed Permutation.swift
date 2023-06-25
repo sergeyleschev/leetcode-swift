@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1734. Decode XORed Permutation
     // There is an integer array perm that is a permutation of the first n positive integers, where n is always odd.

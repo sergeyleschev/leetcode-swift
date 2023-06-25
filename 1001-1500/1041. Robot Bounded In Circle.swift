@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1041. Robot Bounded In Circle
     // On an infinite plane, a robot initially stands at (0, 0) and faces north. The robot can receive one of three instructions:

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1648. Sell Diminishing-Valued Colored Balls
     // You have an inventory of different colored balls, and there is a customer that wants orders balls of any color.

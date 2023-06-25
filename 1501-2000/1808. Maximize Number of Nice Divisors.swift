@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1808. Maximize Number of Nice Divisors
     // You are given a positive integer primeFactors. You are asked to construct a positive integer n that satisfies the following conditions:

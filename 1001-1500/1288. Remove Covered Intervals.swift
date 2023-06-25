@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1288. Remove Covered Intervals
     // Given a list of intervals, remove all intervals that are covered by another interval in the list.

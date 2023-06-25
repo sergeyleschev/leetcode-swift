@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1413. Minimum Value to Get Positive Step by Step Sum
     // Given an array of integers nums, you start with an initial positive value startValue.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1020. Number of Enclaves
     // You are given an m x n binary matrix grid, where 0 represents a sea cell and 1 represents a land cell.

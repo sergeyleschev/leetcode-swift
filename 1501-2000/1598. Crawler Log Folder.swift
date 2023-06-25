@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1598. Crawler Log Folder
     // The Leetcode file system keeps a log each time some user performs a change folder operation.

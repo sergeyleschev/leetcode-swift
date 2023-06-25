@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1760. Minimum Limit of Balls in a Bag
     // You are given an integer array nums where the ith bag contains nums[i] balls. You are also given an integer maxOperations.

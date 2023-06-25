@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1103. Distribute Candies to People
     // We distribute some number of candies, to a row of n = num_people people in the following way:

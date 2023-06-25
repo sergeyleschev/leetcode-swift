@@ -1,4 +1,4 @@
-# Solution @ Sergey Leschev, Belarusian State University
+# Solution @ Sergey Leschev
 
 # 1115. Print FooBar Alternately
 # Suppose you are given the following code:

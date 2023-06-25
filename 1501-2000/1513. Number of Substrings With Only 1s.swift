@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1513. Number of Substrings With Only 1s
     // Given a binary string s (a string consisting only of '0' and '1's).

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1566. Detect Pattern of Length M Repeated K or More Times
     // Given an array of positive integers arr,  find a pattern of length m that is repeated k or more times.

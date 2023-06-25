@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1345. Jump Game IV
     // Given an array of integers arr, you are initially positioned at the first index of the array.

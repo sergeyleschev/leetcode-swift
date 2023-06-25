@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1577. Number of Ways Where Square of Number Is Equal to Product of Two Numbers
     // Given two arrays of integers nums1 and nums2, return the number of triplets formed (type 1 and type 2) under the following rules:

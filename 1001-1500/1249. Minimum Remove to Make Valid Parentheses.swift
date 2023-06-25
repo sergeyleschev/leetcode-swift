@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1249. Minimum Remove to Make Valid Parentheses
     // Given a string s of '(' , ')' and lowercase English characters. 

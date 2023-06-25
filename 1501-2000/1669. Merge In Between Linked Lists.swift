@@ -10,7 +10,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1669. Merge In Between Linked Lists
     // You are given two linked lists: list1 and list2 of sizes n and m respectively.

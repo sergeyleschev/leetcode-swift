@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1105. Filling Bookcase Shelves
     // We have a sequence of books: the i-th book has thickness books[i][0] and height books[i][1].

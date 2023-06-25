@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1359. Count All Valid Pickup and Delivery Options
     // Given n orders, each order consist in pickup and delivery services. 

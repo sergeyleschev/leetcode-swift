@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1688. Count of Matches in Tournament
     // You are given an integer n, the number of teams in a tournament that has strange rules:

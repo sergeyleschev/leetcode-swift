@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1108. Defanging an IP Address
     // Given a valid (IPv4) IP address, return a defanged version of that IP address.

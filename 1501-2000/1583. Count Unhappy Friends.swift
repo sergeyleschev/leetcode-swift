@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1583. Count Unhappy Friends
     // You are given a list of preferences for n friends, where n is always even.

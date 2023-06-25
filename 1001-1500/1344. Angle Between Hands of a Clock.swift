@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1344. Angle Between Hands of a Clock
     // Given two numbers, hour and minutes. Return the smaller angle (in degrees) formed between the hour and the minute hand.

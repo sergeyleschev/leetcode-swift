@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1887. Reduction Operations to Make the Array Elements Equal
     // Given an integer array nums, your goal is to make all elements in nums equal. To complete one operation, follow these steps:

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1233. Remove Sub-Folders from the Filesystem
     // Given a list of folders, remove all sub-folders in those folders and return in any order the folders after removing.

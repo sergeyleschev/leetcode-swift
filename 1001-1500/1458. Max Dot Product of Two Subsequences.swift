@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1458. Max Dot Product of Two Subsequences
     // Given two arrays nums1 and nums2.

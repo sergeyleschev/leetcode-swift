@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1718. Construct the Lexicographically Largest Valid Sequence
     // Given an integer n, find a sequence that satisfies all of the following:

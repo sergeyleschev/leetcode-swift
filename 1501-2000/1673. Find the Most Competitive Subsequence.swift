@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1673. Find the Most Competitive Subsequence
     // Given an integer array nums and a positive integer k, return the most competitive subsequence of nums of size k.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1925. Count Square Sum Triples
     // A square triple (a,b,c) is a triple where a, b, and c are integers and a2 + b2 = c2.

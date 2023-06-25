@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1296. Divide Array in Sets of K Consecutive Numbers
     // Given an array of integers nums and a positive integer k, find whether it's possible to divide this array into sets of k consecutive numbers

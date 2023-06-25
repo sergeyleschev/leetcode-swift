@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1130. Minimum Cost Tree From Leaf Values
     // Given an array arr of positive integers, consider all binary trees such that:

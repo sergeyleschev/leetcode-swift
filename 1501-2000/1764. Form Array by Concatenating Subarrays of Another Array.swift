@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1764. Form Array by Concatenating Subarrays of Another Array
     // You are given a 2D integer array groups of length n. You are also given an integer array nums.

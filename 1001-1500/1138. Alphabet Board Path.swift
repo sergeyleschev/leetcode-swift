@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1138. Alphabet Board Path
     // On an alphabet board, we start at position (0, 0), corresponding to character board[0][0].

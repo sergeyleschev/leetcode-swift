@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1360. Number of Days Between Two Dates
     // Write a program to count the number of days between two dates.

@@ -1,6 +1,6 @@
 class Solution {
 
-	// Solution @ Sergey Leschev, Belarusian State University
+	// Solution @ Sergey Leschev
 
 	// 1897. Redistribute Characters to Make All Strings Equal
 	// You are given an array of strings words (0-indexed).

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1536. Minimum Swaps to Arrange a Binary Grid
     // Given an n x n binary grid, in one step you can choose two adjacent rows of the grid and swap them.

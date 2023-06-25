@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
     
     // 1358. Number of Substrings Containing All Three Characters
     // Given a string s consisting only of characters a, b and c.

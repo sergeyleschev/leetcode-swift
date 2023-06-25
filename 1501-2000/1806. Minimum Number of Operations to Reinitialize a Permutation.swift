@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1806. Minimum Number of Operations to Reinitialize a Permutation
     // You are given an even integer n. You initially have a permutation perm of size n where perm[i] == i (0-indexed).

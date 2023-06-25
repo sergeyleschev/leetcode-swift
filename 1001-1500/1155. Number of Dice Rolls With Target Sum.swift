@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1155. Number of Dice Rolls With Target Sum
     // You have d dice and each die has f faces numbered 1, 2, ..., f.

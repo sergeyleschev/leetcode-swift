@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1541. Minimum Insertions to Balance a Parentheses String
     // Given a parentheses string s containing only the characters '(' and ')'. A parentheses string is balanced if:

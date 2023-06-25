@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1819. Number of Different Subsequences GCDs
     // You are given an array nums that consists of positive integers.

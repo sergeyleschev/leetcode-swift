@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1812. Determine Color of a Chessboard Square
     // You are given coordinates, a string that represents the coordinates of a square of the chessboard. Below is a chessboard for your reference.

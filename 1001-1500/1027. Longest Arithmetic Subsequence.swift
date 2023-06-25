@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1027. Longest Arithmetic Subsequence
     // Given an array nums of integers, return the length of the longest arithmetic subsequence in nums.

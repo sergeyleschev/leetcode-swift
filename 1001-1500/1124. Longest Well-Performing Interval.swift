@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1124. Longest Well-Performing Interval
     // We are given hours, a list of the number of hours worked per day for a given employee

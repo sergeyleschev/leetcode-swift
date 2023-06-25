@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1856. Maximum Subarray Min-Product
     // The min-product of an array is equal to the minimum value in the array multiplied by the array's sum.

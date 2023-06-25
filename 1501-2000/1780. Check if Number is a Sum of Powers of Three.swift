@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1780. Check if Number is a Sum of Powers of Three
     // Given an integer n, return true if it is possible to represent n as the sum of distinct powers of three. Otherwise, return false.

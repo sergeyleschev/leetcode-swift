@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1389. Create Target Array in the Given Order
     // Given two arrays of integers nums and index. Your task is to create target array under the following rules:

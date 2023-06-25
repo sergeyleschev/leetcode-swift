@@ -1,4 +1,4 @@
-# Solution @ Sergey Leschev, Belarusian State University
+# Solution @ Sergey Leschev
 
 # 1226. The Dining Philosophers
 # Five silent philosophers sit at a round table with bowls of spaghetti. Forks are placed between each pair of adjacent philosophers.

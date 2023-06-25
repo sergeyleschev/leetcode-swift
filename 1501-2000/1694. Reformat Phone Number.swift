@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1694. Reformat Phone Number
     // You are given a phone number as a string number. number consists of digits, spaces ' ', and/or dashes '-'.

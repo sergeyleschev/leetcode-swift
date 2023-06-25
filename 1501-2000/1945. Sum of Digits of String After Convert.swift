@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1945. Sum of Digits of String After Convert
     // You are given a string s consisting of lowercase English letters, and an integer k.

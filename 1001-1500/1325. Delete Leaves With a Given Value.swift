@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1325. Delete Leaves With a Given Value
     // Given a binary tree root and an integer target, delete all the leaf nodes with value target.

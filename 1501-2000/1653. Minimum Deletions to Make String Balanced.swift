@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1653. Minimum Deletions to Make String Balanced
     // You are given a string s consisting only of characters 'a' and 'b'.

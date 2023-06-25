@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1685. Sum of Absolute Differences in a Sorted Array
     // You are given an integer array nums sorted in non-decreasing order.

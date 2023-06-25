@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1046. Last Stone Weight
     // We have a collection of stones, each stone has a positive integer weight.

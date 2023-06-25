@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1011. Capacity To Ship Packages Within D Days
     // A conveyor belt has packages that must be shipped from one port to another within days days.

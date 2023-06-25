@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1822. Sign of the Product of an Array
     // There is a function signFunc(x) that returns:

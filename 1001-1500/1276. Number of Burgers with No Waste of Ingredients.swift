@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1276. Number of Burgers with No Waste of Ingredients
     // Given two integers tomatoSlices and cheeseSlices. The ingredients of different burgers are as follows:

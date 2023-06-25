@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1104. Path In Zigzag Labelled Binary Tree
     // In an infinite binary tree where every node has two children, the nodes are labelled in row order.

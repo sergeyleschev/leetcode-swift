@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1035. Uncrossed Lines
     // We write the integers of nums1 and nums2 (in the order they are given) on two separate horizontal lines.

@@ -1,6 +1,6 @@
 class Cashier {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1357. Apply Discount Every n Orders
     // There is a sale in a supermarket, there will be a discount every n customer.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1463. Cherry Pickup II
     // Given a rows x cols matrix grid representing a field of cherries. Each cell in grid represents the number of cherries that you can collect.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev, Belarusian State University
+    // Solution @ Sergey Leschev
 
     // 1374. Generate a String With Characters That Have Odd Counts
     // Given an integer n, return a string with n characters such that each character in such string occurs an odd number of times.
