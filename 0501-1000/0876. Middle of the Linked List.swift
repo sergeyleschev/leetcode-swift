@@ -10,7 +10,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 876. Middle of the Linked List
     // Given a non-empty, singly linked list with head node head, return a middle node of linked list.

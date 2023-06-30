@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     func getCommon(_ nums1: [Int], _ nums2: [Int]) -> Int {
         var i = 0, j = 0

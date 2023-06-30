@@ -1,6 +1,6 @@
 class Solution {
 
-	// Solution @ Sergey Leschev
+	// Solution by Sergey Leschev
 
 	// 1354. Construct Target Array With Multiple Sums
 	// You are given an array target of n integers. From a starting array arr consisting of n 1's, you may perform the following procedure :

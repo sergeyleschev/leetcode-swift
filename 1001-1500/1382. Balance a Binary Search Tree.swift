@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1382. Balance a Binary Search Tree
     // Given a binary search tree, return a balanced binary search tree with the same node values.

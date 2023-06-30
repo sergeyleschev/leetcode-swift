@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1879. Minimum XOR Sum of Two Arrays
     // You are given two integer arrays nums1 and nums2 of length n.

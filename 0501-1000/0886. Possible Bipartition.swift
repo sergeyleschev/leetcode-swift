@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 886. Possible Bipartition
     // Given a set of n people (numbered 1, 2, ..., n), we would like to split everyone into two groups of any size.

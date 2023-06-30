@@ -1,6 +1,6 @@
 class OrderedStream {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1656. Design an Ordered Stream
     // There is a stream of n (idKey, value) pairs arriving in an arbitrary order, where idKey is an integer between 1 and n and value is a string. No two pairs have the same id.

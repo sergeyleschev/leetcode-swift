@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 846. Hand of Straights
     // Alice has a hand of cards, given as an array of integers.

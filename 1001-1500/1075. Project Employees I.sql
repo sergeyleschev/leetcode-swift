@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-# Solution @ Sergey Leschev
+# Solution by Sergey Leschev
 
 SELECT project_id, ROUND(AVG(experience_years), 2) AS average_years
 FROM Project

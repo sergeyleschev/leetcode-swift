@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 913. cat and mouse
     // A game on an undirected graph is played by two players, mouse and cat, who alternate turns.

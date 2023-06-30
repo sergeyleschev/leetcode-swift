@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 393. UTF-8 Validation
     // Given an integer array data representing the data, return whether it is a valid UTF-8 encoding.

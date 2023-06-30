@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 969. Pancake Sorting
     // Given an array of integers arr, sort the array by performing a series of pancake flips.

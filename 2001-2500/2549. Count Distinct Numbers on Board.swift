@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     func distinctIntegers(_ n: Int) -> Int {
         var board = Set<Int>()

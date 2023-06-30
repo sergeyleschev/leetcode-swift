@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 845. Longest Mountain in Array
     // You may recall that an array arr is a mountain array if and only if:

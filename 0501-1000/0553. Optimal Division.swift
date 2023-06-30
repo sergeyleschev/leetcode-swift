@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 553. Optimal Division
     // You are given an integer array nums. The adjacent integers in nums will perform the float division.

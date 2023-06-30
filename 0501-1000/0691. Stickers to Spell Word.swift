@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 691. Stickers to Spell Word
     // We are given n different types of stickers. Each sticker has a lowercase English word on it.

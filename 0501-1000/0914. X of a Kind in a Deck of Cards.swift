@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 914. X of a Kind in a Deck of Cards
     // In a deck of cards, each card has an integer written on it.

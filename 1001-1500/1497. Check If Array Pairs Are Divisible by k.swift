@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1497. Check If Array Pairs Are Divisible by k
     // Given an array of integers arr of even length n and an integer k.

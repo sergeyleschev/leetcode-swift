@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 861. Score After Flipping Matrix
     // We have a two dimensional matrix grid where each value is 0 or 1.

@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1302. Deepest Leaves Sum
     // Given the root of a binary tree, return the sum of values of its deepest leaves.

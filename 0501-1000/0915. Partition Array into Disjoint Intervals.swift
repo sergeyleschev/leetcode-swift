@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 915. Partition Array into Disjoint Intervals
     // Given an array nums, partition it into two (contiguous) subarrays left and right so that:

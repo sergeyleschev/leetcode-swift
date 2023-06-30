@@ -1,4 +1,4 @@
--- Solution @ Sergey Leschev
+-- Solution by Sergey Leschev
 
 -- 262. Trips and Users
 -- Table: Trips

@@ -20,7 +20,7 @@ class TreeNode {
 
 public class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1379. Find a Corresponding Node of a Binary Tree in a Clone of That Tree
     // Given two binary trees original and cloned and given a reference to a node target in the original tree.

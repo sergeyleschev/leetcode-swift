@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1178. Number of Valid Words for Each Puzzle
     // With respect to a given puzzle string, a word is valid if both the following conditions are satisfied:

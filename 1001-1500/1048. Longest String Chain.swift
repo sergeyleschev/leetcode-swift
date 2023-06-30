@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1048. Longest String Chain
     // You are given an array of words where each word consists of lowercase English letters.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 870. Advantage Shuffle
     // Given two arrays nums1 and nums2 of equal size, the advantage of nums1 with respect to nums2 is the number of indices i for which nums1[i] > nums2[i].

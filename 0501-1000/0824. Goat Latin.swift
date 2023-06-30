@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 824. Goat Latin
     // A sentence sentence is given, composed of words separated by spaces. Each word consists of lowercase and uppercase letters only.

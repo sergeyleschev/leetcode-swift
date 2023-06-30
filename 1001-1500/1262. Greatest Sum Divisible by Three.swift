@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1262. Greatest Sum Divisible by Three
     // Given an array nums of integers, we need to find the maximum possible sum of elements of the array such that it is divisible by three.

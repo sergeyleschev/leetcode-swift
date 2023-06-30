@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1253. Reconstruct a 2-Row Binary Matrix
     // Given the following details of a matrix with n columns and 2 rows:

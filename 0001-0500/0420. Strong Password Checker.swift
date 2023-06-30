@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 420. Strong Password Checker
     // A password is considered strong if the below conditions are all met:

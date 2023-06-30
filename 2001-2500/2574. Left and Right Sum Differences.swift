@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     func leftRigthDifference(_ nums: [Int]) -> [Int] {
         var leftSum = [Int](repeating: 0, count: nums.count)

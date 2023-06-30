@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1884. Egg Drop With 2 Eggs and N Floors
     // You are given two identical eggs and you have access to a building with n floors labeled from 1 to n.

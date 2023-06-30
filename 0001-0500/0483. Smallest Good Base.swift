@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 483. Smallest Good Base
     // Given an integer n represented as a string, return the smallest good base of n.

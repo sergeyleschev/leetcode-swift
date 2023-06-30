@@ -1,4 +1,4 @@
--- Solution @ Sergey Leschev
+-- Solution by Sergey Leschev
 
 -- 184. Department Highest Salary
 -- The Employee table holds all employees. Every employee has an Id, a salary, and there is also a column for the department Id.

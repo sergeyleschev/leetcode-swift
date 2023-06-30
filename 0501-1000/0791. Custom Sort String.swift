@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 791. Custom Sort String
     // order and str are strings composed of lowercase letters. In order, no letter occurs more than once.

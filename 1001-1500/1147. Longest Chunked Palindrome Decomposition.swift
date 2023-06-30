@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1147. Longest Chunked Palindrome Decomposition
     // You are given a string text. You should split it to k substrings (subtext1, subtext2, ..., subtextk) such that:

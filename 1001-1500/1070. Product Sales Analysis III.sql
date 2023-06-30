@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-# Solution @ Sergey Leschev
+# Solution by Sergey Leschev
 
 WITH min_sales AS (
   SELECT product_id, MIN(year) AS min_year

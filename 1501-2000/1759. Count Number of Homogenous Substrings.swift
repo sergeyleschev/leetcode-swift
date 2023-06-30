@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1759. Count Number of Homogenous Substrings
     // Given a string s, return the number of homogenous substrings of s. Since the answer may be too large, return it modulo 109 + 7.

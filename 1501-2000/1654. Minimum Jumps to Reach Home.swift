@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1654. Minimum Jumps to Reach Home
     // A certain bug's home is on the x-axis at position x. Help them get there from position 0.

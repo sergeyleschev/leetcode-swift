@@ -1,6 +1,6 @@
 class Solution {
 
-	// Solution @ Sergey Leschev
+	// Solution by Sergey Leschev
 
 	// 132. Palindrome Partitioning II
 	// Given a string s, partition s such that every substring of the partition is a palindrome.

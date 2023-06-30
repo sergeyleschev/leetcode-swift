@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 692. Top K Frequent Words
     // Given a non-empty list of words, return the k most frequent elements.

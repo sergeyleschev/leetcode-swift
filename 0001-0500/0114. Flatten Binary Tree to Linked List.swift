@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 114. Flatten Binary Tree to Linked List
     // Given the root of a binary tree, flatten the tree into a "linked list":

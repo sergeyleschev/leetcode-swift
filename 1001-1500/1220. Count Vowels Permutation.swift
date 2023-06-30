@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1220. Count Vowels Permutation
     // Given an integer n, your task is to count how many strings of length n can be formed under the following rules:

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 834. Sum of Distances in Tree
     // An undirected, connected tree with n nodes labelled 0...n-1 and n-1 edges are given.

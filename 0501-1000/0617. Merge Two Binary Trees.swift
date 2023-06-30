@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 617. Merge Two Binary Trees
     // You are given two binary trees root1 and root2.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 55. Jump Game
     // Given an array of non-negative integers nums, you are initially positioned at the first index of the array.

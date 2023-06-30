@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1390. Four Divisors
     // Given an integer array nums, return the sum of divisors of the integers in that array that have exactly four divisors.

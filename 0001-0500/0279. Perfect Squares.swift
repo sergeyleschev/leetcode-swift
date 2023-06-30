@@ -1,6 +1,6 @@
 class Solution {
 
-  // Solution @ Sergey Leschev
+  // Solution by Sergey Leschev
 
   // 279. Perfect Squares
   // Given an integer n, return the least number of perfect square numbers that sum to n.

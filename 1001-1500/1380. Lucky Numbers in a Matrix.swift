@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1380. Lucky Numbers in a Matrix
     // Given a m * n matrix of distinct numbers, return all lucky numbers in the matrix in any order.

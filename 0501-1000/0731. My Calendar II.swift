@@ -1,6 +1,6 @@
 class MyCalendarTwo {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 731. My Calendar II
     // You are implementing a program to use as your calendar. We can add a new event if adding the event will not cause a triple booking.

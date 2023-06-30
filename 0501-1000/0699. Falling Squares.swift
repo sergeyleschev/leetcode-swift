@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 699. Falling Squares
     // There are several squares being dropped onto the X-axis of a 2D plane.

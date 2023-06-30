@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 179. Largest Number
     // Given a list of non-negative integers nums, arrange them such that they form the largest number.

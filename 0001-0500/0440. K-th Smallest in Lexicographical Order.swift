@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 440. K-th Smallest in Lexicographical Order
     // Given two integers n and k, return the kth lexicographically smallest integer in the range [1, n].

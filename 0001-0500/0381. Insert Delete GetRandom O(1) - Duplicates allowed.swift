@@ -1,6 +1,6 @@
 class RandomizedCollection {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 381. Insert Delete GetRandom O(1) - Duplicates allowed
     // Implement the RandomizedCollection class:

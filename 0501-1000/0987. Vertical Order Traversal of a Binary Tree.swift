@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 987. Vertical Order Traversal of a Binary Tree
     // Given the root of a binary tree, calculate the vertical order traversal of the binary tree.

@@ -16,7 +16,7 @@
 
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 117. Populating Next Right Pointers in Each Node II
     // Given a binary tree

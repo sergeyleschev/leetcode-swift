@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1528. Shuffle String
     // Given a string s and an integer array indices of the same length.

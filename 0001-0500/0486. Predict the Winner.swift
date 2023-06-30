@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 486. Predict the Winner
     // You are given an integer array nums. Two players are playing a game with this array: player 1 and player 2.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 867. Transpose Matrix
     // Given a 2D integer array matrix, return the transpose of matrix.

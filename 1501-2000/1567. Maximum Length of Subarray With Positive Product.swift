@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1567. Maximum Length of Subarray With Positive Product
     // Given an array of integers nums, find the maximum length of a subarray where the product of all its elements is positive.

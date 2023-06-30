@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 80. Remove Duplicates from Sorted Array II
     // Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twice and return the new length.

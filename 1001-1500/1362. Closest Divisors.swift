@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1362. Closest Divisors
     // Given an integer num, find the closest two integers in absolute difference whose product equals num + 1 or num + 2.

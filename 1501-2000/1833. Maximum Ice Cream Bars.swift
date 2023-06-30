@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1833. Maximum Ice Cream Bars
     // It is a sweltering summer day, and a boy wants to buy some ice cream bars.

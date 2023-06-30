@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 880. Decoded String at Index
     // An encoded string s is given.  To find and write the decoded string to a tape, the encoded string is read one character at a time and the following steps are taken:

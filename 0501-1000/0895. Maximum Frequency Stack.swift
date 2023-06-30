@@ -1,6 +1,6 @@
 class FreqStack {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 895. Maximum Frequency Stack
     // Design a stack-like data structure to push elements to the stack and pop the most frequent element from the stack.

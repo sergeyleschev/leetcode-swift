@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1465. Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts
     // You are given a rectangular cake of size h x w and two arrays of integers horizontalCuts and verticalCuts where:

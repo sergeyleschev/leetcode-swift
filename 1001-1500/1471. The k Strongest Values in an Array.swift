@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1471. The k Strongest Values in an Array
     // Given an array of integers arr and an integer k.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 891. Sum of Subsequence Widths
     // Given an array of integers nums, consider all non-empty subsequences of nums.

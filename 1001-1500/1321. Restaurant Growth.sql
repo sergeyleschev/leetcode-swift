@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-# Solution @ Sergey Leschev
+# Solution by Sergey Leschev
 # 1321. Restaurant Growth
 
 select a.visited_on as visited_on, sum(b.day_sum) as amount,

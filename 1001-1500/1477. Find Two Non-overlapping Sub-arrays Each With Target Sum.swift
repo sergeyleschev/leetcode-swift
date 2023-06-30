@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1477. Find Two Non-overlapping Sub-arrays Each With Target Sum
     // Given an array of integers arr and an integer target.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1652. Defuse the Bomb
     // You have a bomb to defuse, and your time is running out! Your informer will provide you with a circular array code of length of n and a key k.

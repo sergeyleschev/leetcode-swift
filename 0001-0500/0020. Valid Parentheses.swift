@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 20. Valid Parentheses
     // Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.

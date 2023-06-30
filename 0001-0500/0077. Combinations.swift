@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 77. Combinations
     // Given two integers n and k, return all possible combinations of k numbers out of the range [1, n].

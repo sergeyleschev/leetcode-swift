@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 898. Bitwise ORs of Subarrays
     // We have an array arr of non-negative integers.

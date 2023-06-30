@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 740. Delete and Earn
     // Given an array nums of integers, you can perform operations on the array.

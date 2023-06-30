@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1540. Can Convert String in K Moves
     // Given two strings s and t, your goal is to convert s into t in k moves or less.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 299. Bulls and Cows
     // You are playing the Bulls and Cows game with your friend.

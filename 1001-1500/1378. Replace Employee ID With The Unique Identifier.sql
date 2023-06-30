@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-# Solution @ Sergey Leschev
+# Solution by Sergey Leschev
 
 SELECT EmployeeUNI.unique_id, Employees.name
 FROM Employees

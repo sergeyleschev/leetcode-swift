@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 337. House Robber III
     // The thief has found himself a new place for his thievery again. There is only one entrance to this area, called root.

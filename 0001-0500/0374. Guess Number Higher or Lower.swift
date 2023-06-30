@@ -9,7 +9,7 @@
 
 class Solution : GuessGame {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 374. Guess Number Higher or Lower
     // We are playing the Guess Game. The game is as follows:

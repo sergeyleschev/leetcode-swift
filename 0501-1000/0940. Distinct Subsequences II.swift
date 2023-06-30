@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 940. Distinct Subsequences II
     // Given a string s, count the number of distinct, non-empty subsequences of s .

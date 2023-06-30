@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 827. Making A Large Island
     // You are given an n x n binary matrix grid. You are allowed to change at most one 0 to be 1.

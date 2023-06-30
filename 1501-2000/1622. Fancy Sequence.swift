@@ -1,6 +1,6 @@
 class Fancy {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1622. Fancy Sequence
     // Write an API that generates fancy sequences using the append, addAll, and multAll operations.

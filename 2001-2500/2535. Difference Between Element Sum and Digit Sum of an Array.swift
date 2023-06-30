@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     func differenceOfSum(_ nums: [Int]) -> Int {
         var elementSum = 0

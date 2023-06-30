@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 838. Push Dominoes
     // There are N dominoes in a line, and we place each domino vertically upright.

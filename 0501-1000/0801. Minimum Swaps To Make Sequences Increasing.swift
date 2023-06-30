@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 801. Minimum Swaps To Make Sequences Increasing
     // We have two integer sequences nums1 and nums2 of the same non-zero length.

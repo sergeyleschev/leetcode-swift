@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1317. Convert Integer to the Sum of Two No-Zero Integers
     // Given an integer n. No-Zero integer is a positive integer which doesn't contain any 0 in its decimal representation.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 871. Minimum Number of Refueling Stops
     // A car travels from a starting position to a destination which is target miles east of the starting position.

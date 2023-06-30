@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1781. Sum of Beauty of All Substrings
     // The beauty of a string is the difference in frequencies between the most frequent and least frequent characters.

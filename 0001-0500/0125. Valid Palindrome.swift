@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 125. Valid Palindrome
     // Given a string s, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.

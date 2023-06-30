@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1090. Largest Values From Labels
     // We have a set of items: the i-th item has value values[i] and label labels[i].

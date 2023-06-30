@@ -1,6 +1,6 @@
 class Solution {
 
-	// Solution @ Sergey Leschev
+	// Solution by Sergey Leschev
 
 	// 28. Implement strStr()
 	// Implement strStr().

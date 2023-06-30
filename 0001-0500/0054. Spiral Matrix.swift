@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 54. Spiral Matrix
     // Given an m x n matrix, return all elements of the matrix in spiral order.

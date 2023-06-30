@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 966. Vowel Spellchecker
     // Given a wordlist, we want to implement a spellchecker that converts a query word into a correct word.

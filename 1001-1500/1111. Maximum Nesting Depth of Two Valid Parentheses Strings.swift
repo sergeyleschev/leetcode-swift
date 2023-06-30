@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1111. Maximum Nesting Depth of Two Valid Parentheses Strings
     // A string is a valid parentheses string (denoted VPS) if and only if it consists of "(" and ")" characters only, and:

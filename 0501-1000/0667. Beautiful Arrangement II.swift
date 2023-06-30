@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 667. Beautiful Arrangement II
     // Given two integers n and k, construct a list answer that contains n different positive integers ranging from 1 to n and obeys the following requirement:

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 912. Sort an Array
     // Given an array of integers nums, sort the array in ascending order.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1461. Check If a String Contains All Binary Codes of Size K
     // Given a binary string s and an integer k.

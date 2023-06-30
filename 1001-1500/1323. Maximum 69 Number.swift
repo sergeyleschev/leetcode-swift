@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1323. Maximum 69 Number
     // Given a positive integer num consisting only of digits 6 and 9.

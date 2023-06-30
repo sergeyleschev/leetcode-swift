@@ -1,6 +1,6 @@
 class ProductOfNumbers {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1352. Product of the Last K Numbers
     // Implement the class ProductOfNumbers that supports two methods:

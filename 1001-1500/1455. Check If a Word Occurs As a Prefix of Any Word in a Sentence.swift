@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1455. Check If a Word Occurs As a Prefix of Any Word in a Sentence
     // Given a sentence that consists of some words separated by a single space, and a searchWord.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1106. Parsing A Boolean Expression
     // Return the result of evaluating a given boolean expression, represented as a string.

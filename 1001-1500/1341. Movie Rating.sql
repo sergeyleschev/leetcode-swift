@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-# Solution @ Sergey Leschev
+# Solution by Sergey Leschev
 # 1341. Movie Rating
 
 with movie_rating as (

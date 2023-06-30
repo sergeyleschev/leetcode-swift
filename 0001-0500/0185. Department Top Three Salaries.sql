@@ -1,4 +1,4 @@
--- Solution @ Sergey Leschev
+-- Solution by Sergey Leschev
 
 -- 185. Department Top Three Salaries
 -- Table: Employee

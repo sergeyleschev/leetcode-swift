@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 565. Array Nesting
     // You are given an integer array nums of length n where nums is a permutation of the numbers in the range [0, n - 1].

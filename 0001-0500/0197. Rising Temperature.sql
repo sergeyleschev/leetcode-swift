@@ -1,4 +1,4 @@
--- Solution @ Sergey Leschev
+-- Solution by Sergey Leschev
 
 -- 197. Rising Temperature
 -- Table: Weather

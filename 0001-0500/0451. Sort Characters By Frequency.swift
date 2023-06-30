@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 451. Sort Characters By Frequency
     // Given a string s, sort it in decreasing order based on the frequency of characters, and return the sorted string.

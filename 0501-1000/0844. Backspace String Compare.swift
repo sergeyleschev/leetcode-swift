@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 844. Backspace String Compare
     // Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.

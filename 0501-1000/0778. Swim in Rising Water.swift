@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 778. Swim in Rising Water
     // On an N x N grid, each square grid[i][j] represents the elevation at that point (i,j).

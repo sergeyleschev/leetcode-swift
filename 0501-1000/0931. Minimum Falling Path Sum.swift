@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 931. Minimum Falling Path Sum
     // Given an n x n array of integers matrix, return the minimum sum of any falling path through matrix.

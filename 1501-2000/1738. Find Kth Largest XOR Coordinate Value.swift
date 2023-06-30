@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1738. Find Kth Largest XOR Coordinate Value
     // You are given a 2D matrix of size m x n, consisting of non-negative integers. You are also given an integer k.

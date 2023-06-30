@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1518. Water Bottles
     // Given numBottles full water bottles, you can exchange numExchange empty water bottles for one full water bottle.

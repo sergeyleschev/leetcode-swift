@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1405. Longest Happy String
     // A string is called happy if it does not have any of the strings 'aaa', 'bbb' or 'ccc' as a substring.

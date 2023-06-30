@@ -1,6 +1,6 @@
 class LFUCache {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 460. LFU Cache
     // Design and implement a data structure for a Least Frequently Used (LFU) cache.

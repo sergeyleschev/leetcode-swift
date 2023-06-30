@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1579. Remove Max Number of Edges to Keep Graph Fully Traversable
     // Alice and Bob have an undirected graph of n nodes and 3 types of edges:

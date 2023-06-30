@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 228. Summary Ranges
     // You are given a sorted unique integer array nums.

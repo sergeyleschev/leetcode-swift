@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 908. Smallest Range I
     // Given an array nums of integers, for each integer nums[i] we may choose any x with -k <= x <= k, and add x to nums[i].

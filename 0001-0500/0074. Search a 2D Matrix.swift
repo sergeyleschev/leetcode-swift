@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 74. Search a 2D Matrix
     // Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:

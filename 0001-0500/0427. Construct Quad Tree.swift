@@ -20,7 +20,7 @@
 
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     func construct(_ grid: [[Int]]) -> Node? {
         let N = grid.count

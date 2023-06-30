@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
     // 2497. Maximum Star Sum of a Graph
 
     func maxStarSum(_ vals: [Int], _ edges: [[Int]], _ k: Int) -> Int {

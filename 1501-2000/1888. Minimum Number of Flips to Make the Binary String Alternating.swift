@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1888. Minimum Number of Flips to Make the Binary String Alternating
     // You are given a binary string s. You are allowed to perform two types of operations on the string in any sequence:

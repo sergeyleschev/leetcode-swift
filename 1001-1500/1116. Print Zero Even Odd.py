@@ -1,4 +1,4 @@
-# Solution @ Sergey Leschev
+# Solution by Sergey Leschev
 
 # 1116. Print Zero Even Odd
 # Suppose you are given the following code:

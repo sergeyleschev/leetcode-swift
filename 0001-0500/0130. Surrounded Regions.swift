@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 130. Surrounded Regions
     // Given an m x n matrix board containing 'X' and 'O', capture all regions surrounded by 'X'.

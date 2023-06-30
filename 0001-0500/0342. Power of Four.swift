@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 342. Power of Four
     // Given an integer n, return true if it is a power of four. Otherwise, return false.

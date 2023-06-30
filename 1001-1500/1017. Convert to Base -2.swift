@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1017. Convert to Base -2
     // Given a number n, return a string consisting of "0"s and "1"s that represents its value in base -2 (negative two).

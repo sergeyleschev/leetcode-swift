@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 446. Arithmetic Slices II - Subsequence
     // Given an integer array nums, return the number of all the arithmetic subsequences of nums.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 733. Flood Fill
     // An image is represented by an m x n integer grid image where image[i][j] represents the pixel value of the image.

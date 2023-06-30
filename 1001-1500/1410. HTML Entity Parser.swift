@@ -1,6 +1,6 @@
 class Solution {
 
-   // Solution @ Sergey Leschev
+   // Solution by Sergey Leschev
 
    // 1410. HTML Entity Parser
    // HTML entity parser is the parser that takes HTML code as input and replace all the entities of the special characters by the characters itself.

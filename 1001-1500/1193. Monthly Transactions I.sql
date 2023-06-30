@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-# Solution @ Sergey Leschev
+# Solution by Sergey Leschev
 
 SELECT DATE_FORMAT(trans_date, '%Y-%m') AS month, country,
 COUNT(*) AS trans_count,

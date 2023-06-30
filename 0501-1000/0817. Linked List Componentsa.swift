@@ -10,7 +10,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 817. Linked List Components
     // We are given head, the head node of a linked list containing unique integer values.

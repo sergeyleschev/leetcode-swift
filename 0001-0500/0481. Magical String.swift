@@ -1,6 +1,6 @@
 class Solution  {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 481. Magical String
     // A magical string s consists of only '1' and '2' and obeys the following rules:

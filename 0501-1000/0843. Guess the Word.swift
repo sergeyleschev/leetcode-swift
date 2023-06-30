@@ -7,7 +7,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 843. Guess the Word
     // This is an interactive problem.

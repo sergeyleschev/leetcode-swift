@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1553. Minimum Number of Days to Eat N Oranges
     // There are n oranges in the kitchen and you decided to eat some of these oranges every day as follows:

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 187. Repeated DNA Sequences
     // The DNA sequence is composed of a series of nucleotides abbreviated as 'A', 'C', 'G', and 'T'.

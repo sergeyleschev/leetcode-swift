@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 529. Minesweeper
     // Let's play the minesweeper game (Wikipedia, online game)!

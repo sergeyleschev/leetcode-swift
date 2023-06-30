@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     func findTheArrayConcVal(_ nums: [Int]) -> Int {
         var concatValue = 0

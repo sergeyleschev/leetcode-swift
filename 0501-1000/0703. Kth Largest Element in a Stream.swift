@@ -1,6 +1,6 @@
 class KthLargest {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 703. Kth Largest Element in a Stream
     // Design a class to find the kth largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element.

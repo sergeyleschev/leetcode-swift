@@ -1,4 +1,4 @@
--- Solution @ Sergey Leschev
+-- Solution by Sergey Leschev
 
 -- 182. Duplicate Emails
 -- Write a SQL query to find all duplicate emails in a table named Person.

@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 111. Minimum Depth of Binary Tree
     // Given a binary tree, find its minimum depth.

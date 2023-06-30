@@ -12,7 +12,7 @@
 
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 133. Clone Graph
     // Given a reference of a node in a connected undirected graph.

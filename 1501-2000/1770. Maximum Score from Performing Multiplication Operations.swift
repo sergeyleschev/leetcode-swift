@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1770. Maximum Score from Performing Multiplication Operations
     // You are given two integer arrays nums and multipliers of size n and m respectively, where n >= m. The arrays are 1-indexed.

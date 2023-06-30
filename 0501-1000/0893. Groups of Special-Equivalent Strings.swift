@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 893. Groups of Special-Equivalent Strings
     // You are given an array words of strings.

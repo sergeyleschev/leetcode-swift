@@ -1,4 +1,4 @@
-# Solution @ Sergey Leschev
+# Solution by Sergey Leschev
 
 # 194. Transpose File
 # Given a text file file.txt, transpose its content.

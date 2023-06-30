@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 997. Find the Town Judge
     // In a town, there are n people labelled from 1 to n.  There is a rumor that one of these people is secretly the town judge.

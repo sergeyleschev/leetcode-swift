@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 172. Factorial Trailing Zeroes
     // Given an integer n, return the number of trailing zeroes in n!.

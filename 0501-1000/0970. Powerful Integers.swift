@@ -1,6 +1,6 @@
 public class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 970. Powerful Integers
     // Given three integers x, y, and bound, return a list of all the powerful integers that have a value less than or equal to bound.

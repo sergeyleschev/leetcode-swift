@@ -1,6 +1,6 @@
 class TimeMap {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 981. Time Based Key-Value Store
     // Create a timebased key-value store class TimeMap, that supports two operations.

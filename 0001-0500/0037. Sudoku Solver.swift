@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 37. Sudoku Solver
     // Write a program to solve a Sudoku puzzle by filling the empty cells.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 466. Count The Repetitions
     // We define str = [s, n] as the string str which consists of the string s concatenated n times.

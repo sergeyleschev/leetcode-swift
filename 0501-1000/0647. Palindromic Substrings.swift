@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 647. Palindromic Substrings
     // Given a string s, return the number of palindromic substrings in it.

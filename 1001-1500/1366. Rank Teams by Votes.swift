@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1366. Rank Teams by Votes
     // In a special ranking system, each voter gives a rank from highest to lowest to all teams participated in the competition.

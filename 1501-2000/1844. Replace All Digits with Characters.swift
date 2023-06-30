@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1844. Replace All Digits with Characters
     // You are given a 0-indexed string s that has lowercase English letters in its even indices and digits in its odd indices.

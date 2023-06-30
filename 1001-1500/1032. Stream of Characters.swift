@@ -1,6 +1,6 @@
 class StreamChecker {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1032. Stream of Characters
     // Implement the StreamChecker class as follows:

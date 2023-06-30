@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 414. Third Maximum Number
     // Given integer array nums, return the third maximum number in this array. If the third maximum does not exist, return the maximum number.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 397. Integer Replacement
     // Given a positive integer n, you can apply one of the following operations:

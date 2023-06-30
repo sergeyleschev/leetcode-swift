@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 423. Reconstruct Original Digits from English
     // Given a string s containing an out-of-order English representation of digits 0-9, return the digits in ascending order.

@@ -1,6 +1,6 @@
 class LRUCache {
 
-	// Solution @ Sergey Leschev
+	// Solution by Sergey Leschev
 
 	// 146. LRU Cache
 	// Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.

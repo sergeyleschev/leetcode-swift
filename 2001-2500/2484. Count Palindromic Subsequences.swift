@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
     // 2484. Count Palindromic Subsequences
 
     var dp: [[[[Int]]]] = Array(repeating: Array(repeating: Array(repeating: Array(repeating: -1, count: 6), count: 11), count: 11), count: 10001)

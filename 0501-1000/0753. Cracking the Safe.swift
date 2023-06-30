@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 753. Cracking the Safe
     // There is a box protected by a password. The password is a sequence of n digits where each digit can be in the range [0, k - 1].

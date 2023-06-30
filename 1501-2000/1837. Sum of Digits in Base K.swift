@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1837. Sum of Digits in Base K
     // Given an integer n (in base 10) and a base k, return the sum of the digits of n after converting n from base 10 to base k.

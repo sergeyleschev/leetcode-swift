@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1028. Recover a Tree From Preorder Traversal
     // We run a preorder depth-first search (DFS) on the root of a binary tree.

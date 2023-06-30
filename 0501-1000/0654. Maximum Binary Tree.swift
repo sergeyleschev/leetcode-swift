@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 654. Maximum Binary Tree
     // You are given an integer array nums with no duplicates. A maximum binary tree can be built recursively from nums using the following algorithm:

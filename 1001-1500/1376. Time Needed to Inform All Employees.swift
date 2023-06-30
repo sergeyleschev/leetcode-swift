@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1376. Time Needed to Inform All Employees
     // A company has n employees with a unique ID for each employee from 0 to n - 1. The head of the company is the one with headID.

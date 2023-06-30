@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 724. Find Pivot Index
     // Given an array of integers nums, calculate the pivot index of this array.

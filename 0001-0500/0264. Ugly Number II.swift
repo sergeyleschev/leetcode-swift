@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 264. Ugly Number II
     // An ugly number is a positive integer whose prime factors are limited to 2, 3, and 5.

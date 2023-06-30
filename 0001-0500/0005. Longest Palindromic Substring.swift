@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 5. Longest Palindromic Substring
     // Given a string s, return the longest palindromic substring in s.

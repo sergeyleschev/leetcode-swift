@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-# Solution @ Sergey Leschev
+# Solution by Sergey Leschev
 
 SELECT ROUND(SUM(tiv_2016), 2) AS tiv_2016
 FROM Insurance

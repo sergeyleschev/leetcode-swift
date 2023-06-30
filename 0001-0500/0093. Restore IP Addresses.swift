@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 93. Restore IP Addresses
     // Given a string s containing only digits, return all possible valid IP addresses that can be obtained from s. You can return them in any order.

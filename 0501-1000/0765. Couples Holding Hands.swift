@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 765. Couples Holding Hands
     // There are n couples sitting in 2n seats arranged in a row and want to hold hands.

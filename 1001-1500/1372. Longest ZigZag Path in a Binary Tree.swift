@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1372. Longest ZigZag Path in a Binary Tree
     // You are given the root of a binary tree.

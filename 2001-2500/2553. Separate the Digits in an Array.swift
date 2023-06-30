@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     func separateDigits(_ nums: [Int]) -> [Int] {
         var answer = [Int]()

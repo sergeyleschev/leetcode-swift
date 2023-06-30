@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1189. Maximum Number of Balloons
     // Given a string text, you want to use the characters of text to form as many instances of the word "balloon" as possible.

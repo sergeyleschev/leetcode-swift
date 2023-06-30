@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 386. Lexicographical Numbers
     // Given an integer n, return all the numbers in the range [1, n] sorted in lexicographical order.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 475. Heaters
     // Winter is coming! During the contest, your first job is to design a standard heater with a fixed warm radius to warm all the houses.

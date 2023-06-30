@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 69. Sqrt(x)
     // Given a non-negative integer x, compute and return the square root of x.

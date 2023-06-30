@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 784. Letter Case Permutation
     // Given a string s, we can transform every letter individually to be lowercase or uppercase to create another string.

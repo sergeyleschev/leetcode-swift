@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 748. Shortest Completing Word
     // Given a string licensePlate and an array of strings words, find the shortest completing word in words.

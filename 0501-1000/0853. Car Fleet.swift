@@ -1,6 +1,6 @@
  class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 853. Car Fleet
     // N cars are going to the same destination along a one lane road.  The destination is target miles away.

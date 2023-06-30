@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 899. Orderly Queue
     // A string s of lowercase letters is given.  Then, we may make any number of moves.

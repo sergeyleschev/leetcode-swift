@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 496. Next Greater Element I
     // You are given two integer arrays nums1 and nums2 both of unique elements, where nums1 is a subset of nums2.

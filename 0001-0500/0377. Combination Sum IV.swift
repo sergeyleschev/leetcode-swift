@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 377. Combination Sum IV
     // Given an array of distinct integers nums and a target integer target, return the number of possible combinations that add up to target.

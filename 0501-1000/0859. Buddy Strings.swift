@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 859. Buddy Strings
     // Given two strings s and goal, return true if you can swap two letters in s so the result is equal to goal, otherwise, return false.

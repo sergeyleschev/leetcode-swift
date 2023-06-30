@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1675. Minimize Deviation in Array
     // You are given an array nums of n positive integers.

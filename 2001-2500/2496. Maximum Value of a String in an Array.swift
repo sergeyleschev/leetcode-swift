@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     func maximumValue(_ strs: [String]) -> Int {
         var maxValue = 0

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 852. Peak Index in a Mountain Array
     // Let's call an array arr a mountain if the following properties hold:

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 744. Find Smallest Letter Greater Than Target
     // Given a characters array letters that is sorted in non-decreasing order and a character target, return the smallest character in the array that is larger than target.

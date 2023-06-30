@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 477. Total Hamming Distance
     // The Hamming distance between two integers is the number of positions at which the corresponding bits are different.

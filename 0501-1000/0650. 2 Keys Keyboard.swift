@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 650. 2 Keys Keyboard
     // There is only one character 'A' on the screen of a notepad. You can perform two operations on this notepad for each step:

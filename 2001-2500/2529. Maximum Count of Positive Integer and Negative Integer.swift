@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     func maximumCount(_ nums: [Int]) -> Int {
         var posCount = 0

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
     
     // 831. Masking Personal Information
     // We are given a personal information string s, which may represent either an email address or a phone number.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1535. Find the Winner of an Array Game
     // Given an integer array arr of distinct integers and an integer k.

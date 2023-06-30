@@ -1,6 +1,6 @@
 class MyHashMap {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 706. Design HashMap
     // Design a HashMap without using any built-in hash table libraries.

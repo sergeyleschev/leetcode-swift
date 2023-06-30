@@ -15,7 +15,7 @@
  */
  class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1080. Insufficient Nodes in Root to Leaf Paths
     // Given the root of a binary tree, consider all root to leaf paths: paths from the root to any leaf.  (A leaf is a node with no children.)

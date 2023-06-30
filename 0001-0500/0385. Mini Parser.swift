@@ -22,7 +22,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 385. Mini Parser
     // Given a string s represents the serialization of a nested list, implement a parser to deserialize it and return the deserialized NestedInteger.

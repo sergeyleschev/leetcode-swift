@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
     // 2498. Frog Jump II
 
     func maxJump(_ stones: [Int]) -> Int {

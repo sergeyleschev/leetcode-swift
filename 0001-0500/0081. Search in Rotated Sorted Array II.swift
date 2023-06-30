@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 81. Search in Rotated Sorted Array II
     // There is an integer array nums sorted in non-decreasing order (not necessarily with distinct values).

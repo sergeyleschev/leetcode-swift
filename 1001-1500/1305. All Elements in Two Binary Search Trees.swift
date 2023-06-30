@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1305. All Elements in Two Binary Search Trees
     // Given two binary search trees root1 and root2.

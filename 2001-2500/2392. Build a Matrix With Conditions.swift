@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
     // 2392. Build a Matrix With Conditions
 
     private var color = [Int]()

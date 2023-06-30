@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 537. Complex Number Multiplication
     // A complex number can be represented as a string on the form "real+imaginaryi" where:

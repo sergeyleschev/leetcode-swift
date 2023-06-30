@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1941. Check if All Characters Have Equal Number of Occurrences
     // Given a string s, return true if s is a good string, or false otherwise.

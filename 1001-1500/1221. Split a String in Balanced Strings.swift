@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1221. Split a String in Balanced Strings
     // Balanced strings are those that have an equal quantity of 'L' and 'R' characters.

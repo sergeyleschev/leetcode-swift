@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 967. Numbers With Same Consecutive Differences
     // Return all non-negative integers of length n such that the absolute difference between every two consecutive digits is k.

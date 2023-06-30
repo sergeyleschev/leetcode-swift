@@ -1,6 +1,6 @@
 class CustomStack {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1381. Design a Stack With Increment Operation
     // Design a stack which supports the following operations.

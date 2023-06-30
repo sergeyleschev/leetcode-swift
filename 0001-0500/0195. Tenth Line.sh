@@ -1,4 +1,4 @@
-# Solution @ Sergey Leschev
+# Solution by Sergey Leschev
 
 # 195. Tenth Line
 # Given a text file file.txt, print just the 10th line of the file.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     func mergeArrays(_ nums1: [[Int]], _ nums2: [[Int]]) -> [[Int]] {
         var idToSum = [Int: Int]()

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1593. Split a String Into the Max Number of Unique Substrings
     // Given a string s, return the maximum number of unique substrings that the given string can be split into.

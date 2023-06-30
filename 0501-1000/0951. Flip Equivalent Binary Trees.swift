@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 951. Flip Equivalent Binary Trees
     // For a binary tree T, we can define a flip operation as follows: choose any node, and swap the left and right child subtrees.

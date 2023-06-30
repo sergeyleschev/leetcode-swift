@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 860. Lemonade Change
     // At a lemonade stand, each lemonade costs $5. 

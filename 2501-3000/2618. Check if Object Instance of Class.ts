@@ -1,4 +1,4 @@
-// Solution @ Sergey Leschev
+// Solution by Sergey Leschev
 
 function checkIfInstanceOf(obj: any, classFunction: any): boolean {
     if (obj === null || obj === undefined || classFunction === null || classFunction === undefined) {

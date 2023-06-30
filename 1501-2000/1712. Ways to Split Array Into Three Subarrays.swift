@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1712. Ways to Split Array Into Three Subarrays
     // A split of an integer array is good if:

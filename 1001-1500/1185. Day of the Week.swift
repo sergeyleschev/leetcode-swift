@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1185. Day of the Week
     // Given a date, return the corresponding day of the week for that date.

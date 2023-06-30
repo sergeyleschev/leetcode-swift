@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1662. Check If Two String Arrays are Equivalent
     // Given two string arrays word1 and word2, return true if the two arrays represent the same string, and false otherwise.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1163. Last Substring in Lexicographical Order
     // Given a string s, return the last substring of s in lexicographical order.

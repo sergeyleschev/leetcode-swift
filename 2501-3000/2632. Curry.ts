@@ -1,4 +1,4 @@
-// Solution @ Sergey Leschev
+// Solution by Sergey Leschev
 
 function curry(fn: Function): Function {
     return function curried(...args: any[]) {

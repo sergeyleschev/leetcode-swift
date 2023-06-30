@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 659. Split Array into Consecutive Subsequences
     // You are given an integer array nums that is sorted in non-decreasing order.

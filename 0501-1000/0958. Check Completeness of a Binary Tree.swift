@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 958. Check Completeness of a Binary Tree
     // Given the root of a binary tree, determine if it is a complete binary tree.

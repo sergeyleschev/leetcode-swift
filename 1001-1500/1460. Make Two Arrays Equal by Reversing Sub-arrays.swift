@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1460. Make Two Arrays Equal by Reversing Sub-arrays
     // Given two integer arrays of equal length target and arr.

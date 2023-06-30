@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
     // 2750. Ways to Split Array Into Good Subarrays
     // Time complexity: O(n)
     // Space complexity: O(n)

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 665. Non-decreasing Array
     // Given an array nums with n integers, your task is to check if it could become non-decreasing by modifying at most one element.

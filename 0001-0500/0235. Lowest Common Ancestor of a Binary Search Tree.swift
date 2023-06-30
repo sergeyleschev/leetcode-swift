@@ -14,7 +14,7 @@
 
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 235. Lowest Common Ancestor of a Binary Search Tree
     // Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.

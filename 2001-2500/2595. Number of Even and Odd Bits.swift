@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     func evenOddBit(_ n: Int) -> [Int] {
         var even = 0

@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-# Solution @ Sergey Leschev
+# Solution by Sergey Leschev
 
 SELECT machine_id, ROUND(AVG(end_time - start_time), 3) AS processing_time
 FROM (

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1402. Reducing Dishes
     // A chef has collected data on the satisfaction level of his n dishes. Chef can cook any dish in 1 unit of time.

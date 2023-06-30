@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1298. Maximum Candies You Can Get from Boxes
     // Given n boxes, each box is given in the format [status, candies, keys, containedBoxes] where:

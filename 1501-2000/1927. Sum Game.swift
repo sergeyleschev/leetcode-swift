@@ -1,6 +1,6 @@
 class Solution {
 
-	// Solution @ Sergey Leschev
+	// Solution by Sergey Leschev
 
 	// 1927. Sum Game
 	// Alice and Bob take turns playing a game, with Alice starting first.

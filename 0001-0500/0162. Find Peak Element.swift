@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 162. Find Peak Element
     // A peak element is an element that is strictly greater than its neighbors.

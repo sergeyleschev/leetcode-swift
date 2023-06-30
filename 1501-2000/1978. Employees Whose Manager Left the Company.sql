@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-# Solution @ Sergey Leschev
+# Solution by Sergey Leschev
 # 1978. Employees Whose Manager Left the Company
 
 select e1.employee_id from Employees e1

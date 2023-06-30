@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 903. Valid Permutations for DI Sequence
     // We are given s, a length n string of characters from the set {'D', 'I'}. (These letters stand for "decreasing" and "increasing".)

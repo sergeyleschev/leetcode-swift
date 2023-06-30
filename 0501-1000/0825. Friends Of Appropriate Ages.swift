@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 825. Friends Of Appropriate Ages
     // Some people will make friend requests. The list of their ages is given and ages[i] is the age of the ith person. 

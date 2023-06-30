@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 920. Number of Music Playlists
     // Your music player contains n different songs and she wants to listen to goal (not necessarily different) songs during your trip.  You create a playlist so that:

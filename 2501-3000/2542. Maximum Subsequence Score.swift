@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     func maxScore(_ nums1: [Int], _ nums2: [Int], _ k: Int) -> Int {
         let a = zip(nums1, nums2).sorted(by: { $0.1 > $1.1 })

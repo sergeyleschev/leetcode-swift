@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1611. Minimum One Bit Operations to Make Integers Zero
     // Given an integer n, you must transform it into 0 using the following operations any number of times:

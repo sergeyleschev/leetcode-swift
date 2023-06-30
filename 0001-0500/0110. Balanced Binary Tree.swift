@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 110. Balanced Binary Tree
     // Given a binary tree, determine if it is height-balanced.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 960. Delete Columns to Make Sorted III
     // You are given an array of n strings strs, all of the same length.

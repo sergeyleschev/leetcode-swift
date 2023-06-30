@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 890. Find and Replace Pattern
     // Given a list of strings words and a string pattern, return a list of words[i] that match pattern. You may return the answer in any order.

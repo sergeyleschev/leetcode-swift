@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows
     // You are given an m * n matrix, mat, and an integer k, which has its rows sorted in non-decreasing order.

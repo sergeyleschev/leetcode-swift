@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1486. XOR Operation in an Array
     // Given an integer n and an integer start.

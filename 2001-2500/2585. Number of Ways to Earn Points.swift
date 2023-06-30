@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     func waysToReachTarget(_ target: Int, _ types: [[Int]]) -> Int {
         let mod = 1_000_000_007

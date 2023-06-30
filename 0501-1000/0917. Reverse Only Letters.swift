@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 917. Reverse Only Letters
     // Given a string s, return the "reversed" string where all characters that are not a letter stay in the same place, and all letters reverse their positions.

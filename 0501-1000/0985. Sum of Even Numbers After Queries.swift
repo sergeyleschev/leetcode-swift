@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 985. Sum of Even Numbers After Queries
     // We have an array nums of integers, and an array queries of queries.

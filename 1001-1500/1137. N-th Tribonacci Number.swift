@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1137. N-th Tribonacci Number
     // The Tribonacci sequence Tn is defined as follows: 

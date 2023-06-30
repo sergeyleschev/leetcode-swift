@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 405. Convert a Number to Hexadecimal
     // Given an integer num, return a string representing its hexadecimal representation. For negative integers, two’s complement method is used.

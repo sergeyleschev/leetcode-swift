@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 837. New 21 Game
     // Alice plays the following game, loosely based on the card game "21".

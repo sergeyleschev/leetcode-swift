@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1456. Maximum Number of Vowels in a Substring of Given Length
     // Given a string s and an integer k.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1838. Frequency of the Most Frequent Element
     // The frequency of an element is the number of times it occurs in an array.

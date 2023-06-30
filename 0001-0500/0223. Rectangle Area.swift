@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 223. Rectangle Area
     // Given the coordinates of two rectilinear rectangles in a 2D plane, return the total area covered by the two rectangles.

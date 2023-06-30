@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-# Solution @ Sergey Leschev
+# Solution by Sergey Leschev
 
 SELECT id, COUNT(*) as num FROM 
 (SELECT requester_id AS id FROM RequestAccepted

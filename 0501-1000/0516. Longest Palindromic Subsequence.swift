@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 516. Longest Palindromic Subsequence
     // Given a string s, find the longest palindromic subsequence's length in s.

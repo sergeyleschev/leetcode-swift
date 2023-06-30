@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     func vowelStrings(_ words: [String], _ left: Int, _ right: Int) -> Int {
         let vowels: Set<Character> = ["a", "e", "i", "o", "u"]

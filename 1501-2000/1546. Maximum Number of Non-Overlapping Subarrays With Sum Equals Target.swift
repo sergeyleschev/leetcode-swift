@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1546. Maximum Number of Non-Overlapping Subarrays With Sum Equals Target
     // Given an array nums and an integer target.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
     // 2413. Smallest Even Multiple
 
     func smallestEvenMultiple(_ n: Int) -> Int {

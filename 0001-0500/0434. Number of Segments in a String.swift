@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 434. Number of Segments in a String
     // You are given a string s, return the number of segments in the string. 

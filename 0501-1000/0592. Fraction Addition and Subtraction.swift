@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 592. Fraction Addition and Subtraction
     // Given a string expression representing an expression of fraction addition and subtraction, return the calculation result in string format

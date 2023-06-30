@@ -1,6 +1,6 @@
 class Solution {
 
-	// Solution @ Sergey Leschev
+	// Solution by Sergey Leschev
 
 	// 32. Longest Valid Parentheses
 	// Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.

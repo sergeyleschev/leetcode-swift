@@ -13,7 +13,7 @@ class TreeNode {
 
 class MyCalendar {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 729. My Calendar I
     // You are implementing a program to use as your calendar. We can add a new event if adding the event will not cause a double booking.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 680. Valid Palindrome I
     // Given a string s, return true if the s can be palindrome after deleting at most one character from it.

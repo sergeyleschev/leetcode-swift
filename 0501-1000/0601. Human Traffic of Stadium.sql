@@ -1,4 +1,4 @@
--- Solution @ Sergey Leschev
+-- Solution by Sergey Leschev
 
 -- 601. Human Traffic of Stadium
 -- Table: Stadium

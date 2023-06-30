@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 60. Permutation Sequence
     // The set [1, 2, 3, ..., n] contains a total of n! unique permutations.

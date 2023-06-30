@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1297. Maximum Number of Occurrences of a Substring
     // Given a string s, return the maximum number of ocurrences of any substring under the following rules:

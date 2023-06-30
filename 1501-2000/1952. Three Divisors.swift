@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1952. Three Divisors
     // Given an integer n, return true if n has exactly three positive divisors. Otherwise, return false.

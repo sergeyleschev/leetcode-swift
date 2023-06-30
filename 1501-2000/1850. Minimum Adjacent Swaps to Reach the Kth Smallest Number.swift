@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1850. Minimum Adjacent Swaps to Reach the Kth Smallest Number
     // You are given a string num, representing a large integer, and an integer k.

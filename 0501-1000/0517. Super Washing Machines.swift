@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 517. Super Washing Machines
     // You have n super washing machines on a line. Initially, each washing machine has some dresses or is empty.

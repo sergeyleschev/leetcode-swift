@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 726. Number of Atoms
     // Given a chemical formula (given as a string), return the count of each atom.

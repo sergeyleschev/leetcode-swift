@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1222. Queens That Can Attack the King
     // On an 8x8 chessboard, there can be multiple Black Queens and one White King.

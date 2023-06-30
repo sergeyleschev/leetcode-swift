@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1720. Decode XORed Array
     // There is a hidden integer array arr that consists of n non-negative integers.

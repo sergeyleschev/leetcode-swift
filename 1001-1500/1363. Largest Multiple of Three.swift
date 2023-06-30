@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1363. Largest Multiple of Three
     // Given an integer array of digits, return the largest multiple of three that can be formed by concatenating some of the given digits in any order.

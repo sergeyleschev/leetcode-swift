@@ -1,6 +1,6 @@
 class SeatManager {
 
-  // Solution @ Sergey Leschev
+  // Solution by Sergey Leschev
 
   // 1845. Seat Reservation Manager
   // Design a system that manages the reservation state of n seats that are numbered from 1 to n.

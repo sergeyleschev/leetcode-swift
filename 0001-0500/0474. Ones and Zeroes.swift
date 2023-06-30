@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 474. Ones and Zeroes
     // You are given an array of binary strings strs and two integers m and n.

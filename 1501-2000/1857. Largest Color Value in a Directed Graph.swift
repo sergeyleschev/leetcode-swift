@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1857. Largest Color Value in a Directed Graph
     // There is a directed graph of n colored nodes and m edges. The nodes are numbered from 0 to n - 1.

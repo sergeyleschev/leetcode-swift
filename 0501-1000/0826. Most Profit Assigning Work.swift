@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 826. Most Profit Assigning Work
     // We have jobs: difficulty[i] is the difficulty of the ith job, and profit[i] is the profit of the ith job. 

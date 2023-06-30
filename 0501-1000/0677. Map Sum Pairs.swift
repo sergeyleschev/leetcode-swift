@@ -1,6 +1,6 @@
 class MapSum {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 677. Map Sum Pairs
     // Implement the MapSum class:

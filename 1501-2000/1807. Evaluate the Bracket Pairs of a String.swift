@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1807. Evaluate the Bracket Pairs of a String
     // You are given a string s that contains some bracket pairs, with each pair containing a non-empty key.

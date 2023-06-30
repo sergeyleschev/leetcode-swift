@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1711. Count Good Meals
     // A good meal is a meal that contains exactly two different food items with a sum of deliciousness equal to a power of two.

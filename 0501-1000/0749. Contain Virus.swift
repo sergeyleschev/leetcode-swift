@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 749. Contain Virus
     // A virus is spreading rapidly, and your task is to quarantine the infected area by installing walls.

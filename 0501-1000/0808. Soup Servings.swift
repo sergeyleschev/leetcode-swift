@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 808. Soup Servings
     // There are two types of soup: type A and type B. Initially we have n ml of each type of soup. There are four kinds of operations:

@@ -1,4 +1,4 @@
-// Solution @ Sergey Leschev
+// Solution by Sergey Leschev
 
 function areDeeplyEqual(o1: any, o2: any): boolean {
     if (o1 === o2) {

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 306. Additive Number
     // Additive number is a string whose digits can form additive sequence.

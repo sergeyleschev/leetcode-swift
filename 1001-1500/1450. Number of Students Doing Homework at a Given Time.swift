@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1450. Number of Students Doing Homework at a Given Time
     // Given two integer arrays startTime and endTime and given an integer queryTime.

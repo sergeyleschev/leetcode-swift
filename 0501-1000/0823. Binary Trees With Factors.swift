@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 823. Binary Trees With Factors
     // Given an array of unique integers, arr, where each integer arr[i] is strictly greater than 1.

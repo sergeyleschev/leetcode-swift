@@ -1,6 +1,6 @@
 class TopVotedCandidate {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 911. Online Election
     // In an election, the i-th vote was cast for persons[i] at time times[i].

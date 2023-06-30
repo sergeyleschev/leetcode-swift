@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 115. Distinct Subsequences
     // Given two strings s and t, return the number of distinct subsequences of s which equals t.

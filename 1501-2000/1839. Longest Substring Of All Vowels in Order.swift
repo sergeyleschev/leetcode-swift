@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1839. Longest Substring Of All Vowels in Order
     // A string is considered beautiful if it satisfies the following conditions:

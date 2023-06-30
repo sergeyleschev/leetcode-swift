@@ -1,6 +1,6 @@
 class Solution {
 
-  // Solution @ Sergey Leschev
+  // Solution by Sergey Leschev
 
   // 1400. Construct K Palindrome Strings
   // Given a string s and an integer k. You should construct k non-empty palindrome strings using all the characters in s.

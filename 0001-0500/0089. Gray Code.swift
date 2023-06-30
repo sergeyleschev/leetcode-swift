@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 89. Gray Code
     // The gray code is a binary numeral system where two successive values differ in only one bit.

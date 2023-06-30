@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 980. Unique Paths III
     // On a 2-dimensional grid, there are 4 types of squares:

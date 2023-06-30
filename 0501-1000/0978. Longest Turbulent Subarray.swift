@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 978. Longest Turbulent Subarray
     // Given an integer array arr, return the length of a maximum size turbulent subarray of arr.

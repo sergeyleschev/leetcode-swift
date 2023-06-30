@@ -14,7 +14,7 @@
 
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 690. Employee Importance
     // You have a data structure of employee information, which includes the employee's unique id, their importance value, and their direct subordinates' id.

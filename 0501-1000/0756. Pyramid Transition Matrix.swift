@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 756. Pyramid Transition Matrix
     // We are stacking blocks to form a pyramid. Each block has a color which is a one-letter string.

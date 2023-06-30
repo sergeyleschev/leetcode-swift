@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 738. Monotone Increasing Digits
     // An integer has monotone increasing digits if and only if each pair of adjacent digits x and y satisfy x <= y.

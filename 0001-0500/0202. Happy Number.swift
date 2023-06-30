@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 202. Happy Number
     // Write an algorithm to determine if a number n is happy.

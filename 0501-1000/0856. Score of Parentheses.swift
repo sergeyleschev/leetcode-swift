@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 856. Score of Parentheses
     // Given a balanced parentheses string s, compute the score of the string based on the following rule:

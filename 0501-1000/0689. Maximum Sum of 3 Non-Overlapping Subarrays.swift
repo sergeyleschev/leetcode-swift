@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 689. Maximum Sum of 3 Non-Overlapping Subarrays
     // Given an integer array nums and an integer k, find three non-overlapping subarrays of length k with maximum sum and return them.

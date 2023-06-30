@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 878. Nth Magical Number
     // A positive integer is magical if it is divisible by either a or b.

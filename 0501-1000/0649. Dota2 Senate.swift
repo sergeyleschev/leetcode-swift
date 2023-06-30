@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 649. Dota2 Senate
     // the world of Dota2, there are two parties: the Radiant and the Dire.

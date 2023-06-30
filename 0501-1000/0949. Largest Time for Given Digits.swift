@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 949. Largest Time for Given Digits
     // Given an array arr of 4 digits, find the latest 24-hour time that can be made using each digit exactly once.

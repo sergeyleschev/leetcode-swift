@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 567. Permutation in String
     // Given two strings s1 and s2, return true if s2 contains the permutation of s1.

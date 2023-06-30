@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1131. Maximum of Absolute Value Expression
     // Given two arrays of integers with equal lengths, return the maximum value of:

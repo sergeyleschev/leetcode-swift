@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1861. Rotating the Box
     // You are given an m x n matrix of characters box representing a side-view of a box. Each cell of the box is one of the following:

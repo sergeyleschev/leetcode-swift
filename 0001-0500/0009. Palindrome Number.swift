@@ -1,6 +1,6 @@
 class Solution {
 
-	// Solution @ Sergey Leschev
+	// Solution by Sergey Leschev
 
 	// 9. Palindrome Number
 	// Given an integer x, return true if x is palindrome integer.

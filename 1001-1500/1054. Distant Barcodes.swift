@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1054. Distant Barcodes
     // In a warehouse, there is a row of barcodes, where the ith barcode is barcodes[i].

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 932. Beautiful Array
     // For some fixed n, an array nums is beautiful if it is a permutation of the integers 1, 2, ..., n, such that:

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 290. Word Pattern
     // Given a pattern and a string s, find if s follows the same pattern.

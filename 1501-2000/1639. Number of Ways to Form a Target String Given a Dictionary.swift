@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1639. Number of Ways to Form a Target String Given a Dictionary
     // You are given a list of strings of the same length words and a string target.

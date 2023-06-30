@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 916. Word Subsets
     // We are given two arrays words1 and words2 of words.  Each word is a string of lowercase letters.

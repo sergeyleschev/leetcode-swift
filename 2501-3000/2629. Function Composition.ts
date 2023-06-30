@@ -1,4 +1,4 @@
-// Solution @ Sergey Leschev
+// Solution by Sergey Leschev
 
 type F = (x: number) => number;
 

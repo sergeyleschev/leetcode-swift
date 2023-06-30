@@ -1,4 +1,4 @@
--- Solution @ Sergey Leschev
+-- Solution by Sergey Leschev
 
 -- 596. Classes More Than 5 Students
 -- There is a table courses with columns: student and class

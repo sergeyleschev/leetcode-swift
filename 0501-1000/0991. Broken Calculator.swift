@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 991. Broken Calculator
     // On a broken calculator that has a number showing on its display, we can perform two operations:

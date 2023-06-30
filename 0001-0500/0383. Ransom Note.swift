@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 383. Ransom Note
     // Given two stings ransomNote and magazine, return true if ransomNote can be constructed from magazine and false otherwise.

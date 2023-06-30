@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1432. Max Difference You Can Get From Changing an Integer
     // You are given an integer num. You will apply the following steps exactly two times:

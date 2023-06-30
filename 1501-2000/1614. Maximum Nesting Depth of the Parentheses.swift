@@ -1,6 +1,6 @@
 class Solution {
 
-	// Solution @ Sergey Leschev
+	// Solution by Sergey Leschev
 	
 	// 1614. Maximum Nesting Depth of the Parentheses
 	// A string is a valid parentheses string (denoted VPS) if it meets one of the following:

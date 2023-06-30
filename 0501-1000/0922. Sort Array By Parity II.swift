@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 922. Sort Array By Parity II
     // Given an array of integers nums, half of the integers in nums are odd, and the other half are even.

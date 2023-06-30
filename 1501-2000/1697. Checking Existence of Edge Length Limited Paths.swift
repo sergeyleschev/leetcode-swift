@@ -1,4 +1,4 @@
-// Solution @ Sergey Leschev
+// Solution by Sergey Leschev
 
 class UnionFind {
     private var parent: [Int]

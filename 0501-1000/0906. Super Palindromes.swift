@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 906. Super Palindromes
     // Let's say a positive integer is a super-palindrome if it is a palindrome, and it is also the square of a palindrome.

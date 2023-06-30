@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1391. Check if There is a Valid Path in a Grid
     // Given a m x n grid. Each cell of the grid represents a street. The street of grid[i][j] can be:

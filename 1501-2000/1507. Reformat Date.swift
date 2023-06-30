@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1507. Reformat Date
     // Given a date string in the form Day Month Year, where:

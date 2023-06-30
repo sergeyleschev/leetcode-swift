@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
     // 2751. Robot Collisions
 
     func performOperations(_ h: inout [Int], _ st: inout [Int], _ i: Int) {

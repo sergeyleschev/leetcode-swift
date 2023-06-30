@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1864. Minimum Number of Swaps to Make the Binary String Alternating
     // Given a binary string s, return the minimum number of character swaps to make it alternating, or -1 if it is impossible.

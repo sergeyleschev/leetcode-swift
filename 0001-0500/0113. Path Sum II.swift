@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 113. Path Sum II
     // Given the root of a binary tree and an integer targetSum, return all root-to-leaf paths where each path's sum equals targetSum.

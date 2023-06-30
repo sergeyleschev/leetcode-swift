@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 936. Stamping The Sequence
     // You want to form a target string of lowercase letters.

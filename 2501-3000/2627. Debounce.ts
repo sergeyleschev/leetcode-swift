@@ -1,4 +1,4 @@
-// Solution @ Sergey Leschev
+// Solution by Sergey Leschev
 
 type DebouncedFunction<F extends (...args: any[]) => any> = (
     ...args: Parameters<F>

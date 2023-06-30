@@ -5,7 +5,7 @@
  */
 class Solution: SolBase {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 470. Implement Rand10() Using Rand7()
     // Given the API rand7() that generates a uniform random integer in the range [1, 7], write a function rand10() that generates a uniform random integer in the range [1, 10]. You can only call the API rand7(), and you shouldn't call any other API. Please do not use a language's built-in random API.

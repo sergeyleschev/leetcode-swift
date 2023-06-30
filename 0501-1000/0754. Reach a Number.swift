@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 754. Reach a Number
     // You are standing at position 0 on an infinite number line. There is a goal at position target.

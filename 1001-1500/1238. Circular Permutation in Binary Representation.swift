@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1238. Circular Permutation in Binary Representation
     // Given 2 integers n and start. Your task is return any permutation p of (0,1,2.....,2^n -1) such that :

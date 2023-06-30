@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 29. Divide Two Integers
     // Given two integers dividend and divisor, divide two integers without using multiplication, division, and mod operator.

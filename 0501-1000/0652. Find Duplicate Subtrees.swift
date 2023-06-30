@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 652. Find Duplicate Subtrees
     // Given the root of a binary tree, return all duplicate subtrees.

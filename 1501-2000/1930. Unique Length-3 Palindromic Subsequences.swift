@@ -1,6 +1,6 @@
 class Solution {
 
-	// Solution @ Sergey Leschev
+	// Solution by Sergey Leschev
 
 	// 1930. Unique Length-3 Palindromic Subsequences
 	// Given a string s, return the number of unique palindromes of length three that are a subsequence of s.

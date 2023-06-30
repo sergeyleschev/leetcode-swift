@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1415. The k-th Lexicographical String of All Happy Strings of Length n
     // A happy string is a string that:

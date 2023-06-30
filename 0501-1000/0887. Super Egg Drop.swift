@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 887. Super Egg Drop
     // You are given k identical eggs and you have access to a building with n floors labeled from 1 to n.

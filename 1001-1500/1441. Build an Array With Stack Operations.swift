@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1441. Build an Array With Stack Operations
     // Given an array target and an integer n. In each iteration, you will read a number from  list = {1,2,3..., n}.

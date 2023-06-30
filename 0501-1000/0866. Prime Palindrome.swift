@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 866. Prime Palindrome
     // Find the smallest prime palindrome greater than or equal to n.

@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 687. Longest Univalue Path
     // Given the root of a binary tree, return the length of the longest path, where each node in the path has the same value. This path may or may not pass through the root.

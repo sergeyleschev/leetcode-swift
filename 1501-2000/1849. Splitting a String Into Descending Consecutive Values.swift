@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1849. Splitting a String Into Descending Consecutive Values
     // You are given a string s that consists of only digits.

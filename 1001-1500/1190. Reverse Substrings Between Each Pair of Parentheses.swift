@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1190. Reverse Substrings Between Each Pair of Parentheses
     // You are given a string s that consists of lower case English letters and brackets. 

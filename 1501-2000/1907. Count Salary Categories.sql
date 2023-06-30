@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-# Solution @ Sergey Leschev
+# Solution by Sergey Leschev
 
 SELECT 
   'Low Salary' AS category, COUNT(*) AS accounts_count 

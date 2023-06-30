@@ -1,6 +1,6 @@
 class RLEIterator {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 900. RLE Iterator
     // We can use run-length encoding (i.e., RLE) to encode a sequence of integers. In a run-length encoded array of even length encoding (0-indexed), for all even i, encoding[i] tells us the number of times that the non-negative integer value encoding[i + 1] is repeated in the sequence.

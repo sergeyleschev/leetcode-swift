@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 491. Increasing Subsequences
     // Given an integer array nums, return all the different possible increasing subsequences of the given array with at least two elements. You may return the answer in any order.

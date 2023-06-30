@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 848. Shifting Letters
     // We have a string s of lowercase letters, and an integer array shifts.

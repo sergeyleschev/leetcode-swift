@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 984. String Without AAA or BBB
     // Given two integers a and b, return any string s such that:

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1482. Minimum Number of Days to Make m Bouquets
     // Given an integer array bloomDay, an integer m and an integer k.

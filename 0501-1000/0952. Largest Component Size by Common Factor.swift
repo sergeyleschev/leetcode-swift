@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 952. Largest Component Size by Common Factor
     // Given a non-empty array of unique positive integers nums, consider the following graph:

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 90. Subsets II
     // Given an integer array nums that may contain duplicates, return all possible subsets (the power set).

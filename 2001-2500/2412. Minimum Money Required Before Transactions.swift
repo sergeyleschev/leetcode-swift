@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
     // 2412. Minimum Money Required Before Transactions
 
     func minimumMoney(_ transactions: [[Int]]) -> Int {

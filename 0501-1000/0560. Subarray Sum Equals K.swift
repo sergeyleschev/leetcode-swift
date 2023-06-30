@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 560. Subarray Sum Equals K
     // Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k.

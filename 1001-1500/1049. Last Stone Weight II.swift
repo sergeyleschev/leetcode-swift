@@ -1,6 +1,6 @@
  class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1049. Last Stone Weight II
     // You are given an array of integers stones where stones[i] is the weight of the ith stone.

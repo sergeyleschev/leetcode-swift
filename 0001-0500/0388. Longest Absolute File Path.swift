@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 388. Longest Absolute File Path
     // Suppose we have a file system that stores both files and directories. An example of one system is represented in the following picture:

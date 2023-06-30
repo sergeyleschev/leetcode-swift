@@ -8,7 +8,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1095. Find in Mountain Array
     // (This problem is an interactive problem.)

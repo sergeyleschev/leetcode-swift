@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1609. Even Odd Tree
     // A binary tree is named Even-Odd if it meets the following conditions:

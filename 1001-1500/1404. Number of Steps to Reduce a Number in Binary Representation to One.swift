@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1404. Number of Steps to Reduce a Number in Binary Representation to One
     // Given a number s in their binary representation. Return the number of steps to reduce it to 1 under the following rules:

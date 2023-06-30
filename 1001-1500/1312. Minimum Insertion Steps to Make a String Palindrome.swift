@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1312. Minimum Insertion Steps to Make a String Palindrome
     // Given a string s. In one step you can insert any character at any index of the string.

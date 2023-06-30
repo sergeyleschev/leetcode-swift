@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 12. Integer to Roman
     // Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.

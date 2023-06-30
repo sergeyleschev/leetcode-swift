@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 229. Majority Element II
     // Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.

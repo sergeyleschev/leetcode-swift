@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 226. Invert Binary Tree
     // Given the root of a binary tree, invert the tree, and return its root.

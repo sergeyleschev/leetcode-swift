@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
     
     // 301. Remove Invalid Parentheses
     // Given a string s that contains parentheses and letters, remove the minimum number of invalid parentheses to make the input string valid.

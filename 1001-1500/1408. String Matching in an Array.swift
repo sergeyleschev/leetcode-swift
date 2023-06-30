@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1408. String Matching in an Array
     // Given an array of string words. Return all strings in words which is substring of another word in any order. 

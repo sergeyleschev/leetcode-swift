@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 865. Smallest Subtree with all the Deepest Nodes
     // Given the root of a binary tree, the depth of each node is the shortest distance to the root.

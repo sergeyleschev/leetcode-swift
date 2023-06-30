@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 998. Maximum Binary Tree II
     // We are given the root node of a maximum tree: a tree where every node has a value greater than any other value in its subtree.

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1177. Can Make Palindrome from Substring
     // Given a string s, we make queries on substrings of s.

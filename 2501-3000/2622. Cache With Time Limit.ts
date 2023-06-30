@@ -1,4 +1,4 @@
-// Solution @ Sergey Leschev
+// Solution by Sergey Leschev
 
 class TimeLimitedCache {
     private cache: Map<number, [number, number]>; // [value, expiration time]

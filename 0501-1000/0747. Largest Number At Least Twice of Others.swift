@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 747. Largest Number At Least Twice of Others
     // You are given an integer array nums where the largest integer is unique.

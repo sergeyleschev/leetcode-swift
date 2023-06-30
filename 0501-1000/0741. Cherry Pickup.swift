@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 741. Cherry Pickup
     // You are given an n x n grid representing a field of cherries, each cell is one of three possible integers.

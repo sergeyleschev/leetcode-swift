@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 889. Construct Binary Tree from Preorder and Postorder Traversal
     // Return any binary tree that matches the given preorder and postorder traversals.

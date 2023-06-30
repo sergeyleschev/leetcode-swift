@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1234. Replace the Substring for Balanced String
     // You are given a string containing only 4 kinds of characters 'Q', 'W', 'E' and 'R'.

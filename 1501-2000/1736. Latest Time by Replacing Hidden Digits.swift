@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1736. Latest Time by Replacing Hidden Digits
     // You are given a string time in the form of hh:mm, where some of the digits in the string are hidden (represented by ?).

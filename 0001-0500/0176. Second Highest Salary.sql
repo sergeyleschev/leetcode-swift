@@ -1,4 +1,4 @@
--- Solution @ Sergey Leschev
+-- Solution by Sergey Leschev
 
 -- 176. Second Highest Salary
 -- Write a SQL query to get the second highest salary from the Employee table.

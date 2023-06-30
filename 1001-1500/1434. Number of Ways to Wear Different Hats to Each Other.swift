@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1434. Number of Ways to Wear Different Hats to Each Other
     // There are n people and 40 types of hats labeled from 1 to 40.

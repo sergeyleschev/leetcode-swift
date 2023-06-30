@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 433. Minimum Genetic Mutation
     // A gene string can be represented by an 8-character long string, with choices from 'A', 'C', 'G', and 'T'.

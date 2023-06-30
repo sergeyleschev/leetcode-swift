@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 965. Univalued Binary Tree
     // A binary tree is univalued if every node in the tree has the same value.

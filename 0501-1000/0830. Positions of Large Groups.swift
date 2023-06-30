@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 830. Positions of Large Groups
     // In a string s of lowercase letters, these letters form consecutive groups of the same character.

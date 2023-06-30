@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 862. Shortest Subarray with Sum at Least K
     // Return the length of the shortest, non-empty, contiguous subarray of nums with sum at least k.

@@ -1,6 +1,6 @@
 class Codec {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 535. Encode and Decode TinyURL
     // Note: This is a companion problem to the System Design problem: Design TinyURL.

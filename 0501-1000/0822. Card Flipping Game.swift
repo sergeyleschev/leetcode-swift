@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 822. Card Flipping Game
     // On a table are N cards, with a positive integer printed on the front and back of each card (possibly different).

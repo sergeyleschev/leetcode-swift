@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 375. Guess Number Higher or Lower II
     // We are playing the Guessing Game. The game will work as follows:

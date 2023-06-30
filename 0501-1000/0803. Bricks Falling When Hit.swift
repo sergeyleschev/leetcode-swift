@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 803. Bricks Falling When Hit
     // You are given an m x n binary grid, where each 1 represents a brick and 0 represents an empty space. A brick is stable if:

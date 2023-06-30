@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 945. Minimum Increment to Make Array Unique
     // Given an array of integers nums, a move consists of choosing any nums[i], and incrementing it by 1.

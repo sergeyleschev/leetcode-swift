@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 820. Short Encoding of Words
     // A valid encoding of an array of words is any reference string s and array of indices indices such that:

@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 896. Monotonic Array
     // An array is monotonic if it is either monotone increasing or monotone decreasing.

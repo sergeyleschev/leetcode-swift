@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1109. Corporate Flight Bookings
     // There are n flights that are labeled from 1 to n.

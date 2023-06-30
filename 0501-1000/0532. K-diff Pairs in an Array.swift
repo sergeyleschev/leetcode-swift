@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 532. K-diff Pairs in an Array
     // Given an array of integers nums and an integer k, return the number of unique k-diff pairs in the array.

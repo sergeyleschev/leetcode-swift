@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 942. DI String Match
     // A permutation perm of n + 1 integers of all the integers in the range [0, n] can be represented as a string s of length n where:

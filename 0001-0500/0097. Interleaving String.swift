@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 97. Interleaving String
     // Given strings s1, s2, and s3, find whether s3 is formed by an interleaving of s1 and s2.

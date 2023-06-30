@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1399. Count Largest Group
     // Given an integer n. Each number from 1 to n is grouped according to the sum of its digits. 

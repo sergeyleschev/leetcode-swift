@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 996. Number of Squareful Arrays
     // Given an array nums of non-negative integers, the array is squareful if for every pair of adjacent elements, their sum is a perfect square.

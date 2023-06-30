@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 885. Spiral Matrix III
     // On a 2 dimensional grid with rows rows and cols columns, we start at (rStart, cStart) facing east.

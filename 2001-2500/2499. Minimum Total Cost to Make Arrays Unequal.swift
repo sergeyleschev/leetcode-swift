@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
     // 2499. Minimum Total Cost to Make Arrays Unequal
 
     func minimumTotalCost(_ nums1: [Int], _ nums2: [Int]) -> Int {

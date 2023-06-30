@@ -15,7 +15,7 @@
  */
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 662. Maximum Width of Binary Tree
     // Given the root of a binary tree, return the maximum width of the given tree.

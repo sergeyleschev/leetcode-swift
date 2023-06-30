@@ -1,6 +1,6 @@
 class Solution {
 
-    // Solution @ Sergey Leschev
+    // Solution by Sergey Leschev
 
     // 1915. Number of Wonderful Substrings
     // A wonderful string is a string where at most one letter appears an odd number of times.

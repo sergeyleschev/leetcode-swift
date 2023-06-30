@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-# Solution @ Sergey Leschev
+# Solution by Sergey Leschev
 
 SELECT u.product_id, ROUND(SUM(u.units * p.price) / SUM(u.units), 2) as average_price
 FROM UnitsSold u
