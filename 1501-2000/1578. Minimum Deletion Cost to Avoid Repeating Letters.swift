@@ -35,7 +35,6 @@ class Solution {
         let chars = [Character](s)
         var last = [Int]()
 
-
         func update(_ indices: [Int]) {
             guard indices.count > 1 else { return }
             let sunStr = cost[indices.first!...indices.last!]
@@ -43,12 +42,15 @@ class Solution {
         }
 
         for i in 0..<n {
-            if last.isEmpty { last.append(i) } 
-            else {
+            if last.isEmpty {
+                last.append(i)
+            } else {
                 if chars[i] != chars[last.last!] {
                     update(last)
                     last = [i]
-                } else { last.append(i) }
+                } else {
+                    last.append(i)
+                }
             }
         }
         update(last)

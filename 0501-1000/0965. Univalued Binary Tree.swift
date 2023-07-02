@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -37,17 +35,17 @@ class Solution {
 
     func isUnivalTree(_ root: TreeNode?) -> Bool {
         var queue: [TreeNode] = []
-        
+
         if let root = root {
             queue.append(root)
-            while (queue.count > 0) {
+            while queue.count > 0 {
                 let node = queue.removeFirst()
                 if node.val != root.val { return false }
                 if let leftNode = node.left { queue.append(leftNode) }
                 if let rightNode = node.right { queue.append(rightNode) }
             }
         }
-        
+
         return true
     }
 

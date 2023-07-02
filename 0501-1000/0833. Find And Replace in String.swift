@@ -37,28 +37,37 @@ class Solution {
     // s consists of only lowercase English letters.
     // sources[i] and targets[i] consist of only lowercase English letters.
 
-    func findReplaceString(_ S: String, _ indexes: [Int], _ sources: [String], _ targets: [String]) -> String {
+    func findReplaceString(_ S: String, _ indexes: [Int], _ sources: [String], _ targets: [String])
+        -> String
+    {
         var ans = ""
         var last = 0
         var replaceRules = [(Int, String, String)]()
-        
-        for ((offset: i, element: index), source) in zip(indexes.enumerated(), sources) {
+
+        for ((offset:i, element:index), source) in zip(indexes.enumerated(), sources) {
             replaceRules.append((index, source, targets[i]))
         }
 
-        replaceRules.sort{ $0.0 < $1.0 }
-        
+        replaceRules.sort { $0.0 < $1.0 }
+
         for (i, (index, source, target)) in replaceRules.enumerated() {
             if String(S[S.index(S.startIndex, offsetBy: index)...]).hasPrefix(source) {
-                ans.append(String(S[S.index(S.startIndex, offsetBy: last)..<S.index(S.startIndex, offsetBy: index)]))
+                ans.append(
+                    String(
+                        S[
+                            S.index(
+                                S.startIndex, offsetBy: last)..<S.index(
+                                    S.startIndex, offsetBy: index)]))
                 last = index + source.count
                 ans.append(target)
             }
 
-            if i == replaceRules.count - 1 { ans.append(String(S[S.index(S.startIndex, offsetBy: last)..<S.endIndex])) }
+            if i == replaceRules.count - 1 {
+                ans.append(String(S[S.index(S.startIndex, offsetBy: last)..<S.endIndex]))
+            }
         }
 
         return ans
     }
-    
+
 }

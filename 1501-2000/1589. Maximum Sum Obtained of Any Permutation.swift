@@ -3,14 +3,14 @@ class Solution {
     // Solution by Sergey Leschev
 
     // 1589. Maximum Sum Obtained of Any Permutation
-    // We have an array of integers, nums, and an array of requests where requests[i] = [starti, endi]. The ith request asks for the sum of nums[starti] + nums[starti + 1] + ... + nums[endi - 1] + nums[endi]. Both starti and endi are 0-indexed.
+    // We have an array of integers, nums, and an array of requests where requests[i] = [start(i), end(i)]. The ith request asks for the sum of nums[start(i)] + nums[start(i) + 1] + ... + nums[end(i) - 1] + nums[end(i)]. Both start(i) and end(i) are 0-indexed.
     // Return the maximum total sum of all requests among all permutations of nums.
     // Since the answer may be too large, return it modulo 10^9 + 7.
 
     // Example 1:
     // Input: nums = [1,2,3,4,5], requests = [[1,3],[0,1]]
     // Output: 19
-    // Explanation: One permutation of nums is [2,1,3,4,5] with the following result: 
+    // Explanation: One permutation of nums is [2,1,3,4,5] with the following result:
     // requests[0] -> nums[1] + nums[2] + nums[3] = 1 + 3 + 4 = 8
     // requests[1] -> nums[0] + nums[1] = 2 + 1 = 3
     // Total sum: 8 + 3 = 11.
@@ -35,10 +35,9 @@ class Solution {
     // 0 <= nums[i] <= 10^5
     // 1 <= requests.length <= 10^5
     // requests[i].length == 2
-    // 0 <= starti <= endi < n
+    // 0 <= start(i) <= end(i) < n
 
     private let mod = 1_000_000_007
-
 
     func maxSumRangeQuery(_ nums: [Int], _ requests: [[Int]]) -> Int {
         guard !requests.isEmpty else { return 0 }
@@ -46,10 +45,10 @@ class Solution {
         let n = nums.count
         var cnt = [Int](repeating: 0, count: n + 1)
         var ans = 0
-        
-        for requst in requests {
-            cnt[requst[0]] += 1
-            cnt[requst[1] + 1] -= 1
+
+        for request in requests {
+            cnt[request[0]] += 1
+            cnt[request[1] + 1] -= 1
         }
         for j in 1...n { cnt[j] += cnt[j - 1] }
         cnt.sort { $0 > $1 }

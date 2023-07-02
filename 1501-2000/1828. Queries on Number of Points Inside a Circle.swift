@@ -37,24 +37,23 @@ class Solution {
         var x: Int
         var y: Int
 
-        func squreDistance(to other: Point) -> Int {
+        func squareDistance(to other: Point) -> Int {
             let dx = x - other.x
             let dy = y - other.y
-            return dx * dx  + dy  * dy
+            return dx * dx + dy * dy
         }
     }
 
-
     func countPoints(_ ps: [[Int]], _ queries: [[Int]]) -> [Int] {
-        var points = [Point:Int]()
+        var points = [Point: Int]()
         var ans = [Int]()
 
-        for p in ps { points[Point(x: p[0], y: p[1]),default: 0 ] += 1 }
+        for p in ps { points[Point(x: p[0], y: p[1]), default: 0] += 1 }
         for query in queries {
             let centre = Point(x: query[0], y: query[1])
             let limit = query[2] * query[2]
             var cnt = 0
-            for (p,c) in points where centre.squreDistance(to: p) <= limit { cnt += c }
+            for (p, c) in points where centre.squareDistance(to: p) <= limit { cnt += c }
             ans.append(cnt)
         }
         return ans

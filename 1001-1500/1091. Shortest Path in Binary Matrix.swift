@@ -36,9 +36,10 @@ class Solution {
     //   - time: O(n * m), where n is the number of rows in the grid, and m is the number of columns in the grid.
     //   - space: O(n * m), where n is the number of rows in the grid, and m is the number of columns in the grid.
 
-    private let directions: [(x: Int, y: Int)] = [ (-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1) ]
+    private let directions: [(x: Int, y: Int)] = [
+        (-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1),
+    ]
 
-    
     func shortestPathBinaryMatrix(_ grid: [[Int]]) -> Int {
         var grid = grid
         let n = grid.count
@@ -47,12 +48,12 @@ class Solution {
         var queue = [(x: Int, y: Int)]()
         grid[0][0] = 1
         queue.append((0, 0))
-                
+
         while !queue.isEmpty {
             let (x, y) = queue.removeFirst()
 
             guard x != n - 1 || y != m - 1 else { return grid[x][y] }
-            
+
             for direction in directions {
                 let newX = x + direction.x
                 let newY = y + direction.y
@@ -61,11 +62,10 @@ class Solution {
                 grid[newX][newY] = grid[x][y] + 1
             }
         }
-        
+
         return -1
     }
-    
-    
+
     private func isValid(_ x: Int, _ y: Int, _ n: Int, _ m: Int, _ grid: [[Int]]) -> Bool {
         x >= 0 && y >= 0 && x < n && y < m && grid[x][y] == 0
     }

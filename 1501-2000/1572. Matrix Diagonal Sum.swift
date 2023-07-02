@@ -32,13 +32,13 @@ class Solution {
 
     func diagonalSum(_ mat: [[Int]]) -> Int {
         var result = 0
-        
+
         for i in 0..<mat.count {
             result += mat[i][i]
             guard mat.count % 2 == 0 || i != mat.count >> 1 else { continue }
             result += mat[i][mat.count - i - 1]
         }
-        
+
         return result
     }
 

@@ -28,7 +28,7 @@ class Solution {
     func removeKdigits(_ num: String, _ k: Int) -> String {
         var stack: [Character] = []
         var k = k
-        
+
         for n in num {
             while k > 0 && !stack.isEmpty && n < stack.last! {
                 stack.removeLast()
@@ -36,19 +36,19 @@ class Solution {
             }
             stack.append(n)
         }
-        
+
         if k > 0 { stack.removeLast(k) }
-        
+
         var result = ""
         var skipZeros = true
-        
+
         for n in stack {
             if skipZeros && n == "0" { continue }
             skipZeros = false
             result.append(n)
         }
-        
+
         return result == "" ? "0" : String(result)
     }
-    
+
 }

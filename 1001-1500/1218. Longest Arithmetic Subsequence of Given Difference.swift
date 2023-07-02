@@ -38,7 +38,7 @@ class Solution {
                 map[num] = 1
             }
         }
-        
+
         return ans
     }
 

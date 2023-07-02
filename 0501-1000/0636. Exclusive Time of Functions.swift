@@ -1,7 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
-    
+
     // 636. Exclusive Time of Functions
     // On a single-threaded CPU, we execute a program containing n functions. Each function has a unique ID between 0 and n-1.
     // Function calls are stored in a call stack: when a function call starts, its ID is pushed onto the stack, and when a function call ends, its ID is popped off the stack. The function whose ID is at the top of the stack is the current function being executed. Each time a function starts or ends, we write a log with the ID, whether it started or ended, and the timestamp.
@@ -63,7 +63,6 @@ class Solution {
         var cost: Int
     }
 
-
     func exclusiveTime(_ n: Int, _ logs: [String]) -> [Int] {
         var stack: [MT] = []
         var res: [Int] = Array(repeating: 0, count: n)
@@ -74,7 +73,10 @@ class Solution {
             let sTime = Int(String(parts[2]))!
             let isStart = (String(parts[1]) == "start")
 
-            if stack.count == 0 { stack.append(MT(idx: idx, sTime: sTime, cost: 0)); continue }
+            if stack.count == 0 {
+                stack.append(MT(idx: idx, sTime: sTime, cost: 0))
+                continue
+            }
             if isStart {
                 var last = stack.removeLast()
                 last.cost += (sTime - last.sTime)

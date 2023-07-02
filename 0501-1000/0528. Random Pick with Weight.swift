@@ -38,7 +38,7 @@ class Solution {
     // [null,1,0,1,0,0]
     // ......
     // and so on.
-     
+
     // Constraints:
     // 1 <= w.length <= 10000
     // 1 <= w[i] <= 10^5
@@ -48,23 +48,20 @@ class Solution {
 
     var prefixSum = [Int]()
 
-
     init(_ w: [Int]) {
         guard !w.isEmpty else { return }
-        
+
         prefixSum.append(w[0])
         for i in 1..<w.count {
             prefixSum.append(prefixSum[i - 1] + w[i])
         }
     }
 
-    
     func pickIndex() -> Int {
         let rn = Int.random(in: 1...prefixSum[prefixSum.count - 1])
         return binarySearch(prefixSum, rn)
     }
 
-    
     private func binarySearch(_ nums: [Int], _ target: Int) -> Int {
         var low = 0
         var high = nums.count

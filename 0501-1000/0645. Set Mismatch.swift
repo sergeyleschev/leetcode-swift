@@ -21,13 +21,16 @@ class Solution {
 
     func findErrorNums(_ nums: [Int]) -> [Int] {
         var dict = [Int: Int]()
-        
+
         for num in nums {
-            if dict[num] == nil { dict[num] = 1 } 
-            else { return [num, (1 + nums.count) * nums.count / 2 - nums.reduce(0, +) + num] }
+            if dict[num] == nil {
+                dict[num] = 1
+            } else {
+                return [num, (1 + nums.count) * nums.count / 2 - nums.reduce(0, +) + num]
+            }
         }
-        
+
         return [0, 1]
     }
-    
+
 }

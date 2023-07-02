@@ -32,11 +32,11 @@ class Solution {
     // - Complexity:
     //   - time: O(n)
     //   - space: O(k)
-    
+
     func checkSubarraySum(_ nums: [Int], _ k: Int) -> Bool {
         let n = nums.count
         guard n > 1 else { return false }
-        var dict = [Int : Int]()
+        var dict = [Int: Int]()
         var sum = 0
 
         dict[0] = -1
@@ -49,7 +49,7 @@ class Solution {
                 dict[sum] = i
             }
         }
-        
+
         return false
     }
 

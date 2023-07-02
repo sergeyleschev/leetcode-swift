@@ -17,7 +17,7 @@ class Solution {
     // Example 2:
     // Input: matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
     // Output: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
-     
+
     // Constraints:
     // m == matrix.length
     // n == matrix[0].length
@@ -27,7 +27,7 @@ class Solution {
     func setZeroes(_ matrix: inout [[Int]]) {
         let row = matrix.count
         let col = matrix[0].count
-        
+
         for i in 0..<row {
             for j in 0..<col {
                 if matrix[i][j] == 0 {
@@ -35,7 +35,7 @@ class Solution {
                 }
             }
         }
-        
+
         for i in 0..<row {
             for j in 0..<col {
                 if matrix[i][j] != 0 {
@@ -45,23 +45,21 @@ class Solution {
         }
     }
 
-    
     func setMax(_ matrix: inout [[Int]], _ row: Int, _ col: Int) {
-        for i in 0..<matrix.count { 
+        for i in 0..<matrix.count {
             let val = matrix[i][col]
             matrix[i][col] = val == 0 ? 0 : Int.max
         }
-        
+
         for j in 0..<matrix[0].count {
             let val = matrix[row][j]
             matrix[row][j] = val == 0 ? 0 : Int.max
         }
     }
-    
-    
+
     func resetMax(_ matrix: inout [[Int]], _ row: Int, _ col: Int) {
         let val = matrix[row][col]
         if val == Int.max { matrix[row][col] = 0 }
     }
-    
+
 }

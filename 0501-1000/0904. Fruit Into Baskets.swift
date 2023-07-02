@@ -42,17 +42,17 @@ class Solution {
         var j = 0
         var ans = 0
         var cache: [Int: Int] = [:]
-        
+
         for i in 0..<tree.count {
             cache[tree[i]] = (cache[tree[i]] ?? 0) + 1
             while cache.keys.count > 2 {
                 ans = max(ans, i - j)
-                cache[tree[j]]! -= 1;
+                cache[tree[j]]! -= 1
                 if cache[tree[j]]! == 0 { cache.removeValue(forKey: tree[j]) }
                 j += 1
             }
         }
-        
+
         ans = max(ans, tree.count - j)
         return ans
     }

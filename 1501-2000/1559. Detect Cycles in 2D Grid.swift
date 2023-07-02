@@ -30,8 +30,7 @@ class Solution {
     // 1 <= n <= 500
     // grid consists only of lowercase English letters.
 
-    private let  directions = [1, 0, -1, 0, 1]
-
+    private let directions = [1, 0, -1, 0, 1]
 
     func containsCycle(_ grid: [[Character]]) -> Bool {
         var gridCopy = grid.map { $0.map { $0.asciiValue! } }
@@ -55,7 +54,9 @@ class Solution {
                             for j in 0..<4 {
                                 let nextX = x + directions[j]
                                 let nextY = y + directions[j + 1]
-                                if nextX >= 0 && nextX < m && nextY >= 0 && nextY < n && gridCopy[nextX][nextY] == target {
+                                if nextX >= 0 && nextX < m && nextY >= 0 && nextY < n
+                                    && gridCopy[nextX][nextY] == target
+                                {
                                     nextLevel.append(nextX << 16 | nextY)
                                 }
                             }

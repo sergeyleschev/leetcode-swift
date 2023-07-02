@@ -59,21 +59,23 @@ class Solution {
         let col = grid[0].count
         let size = row * col
         let unionFind = UnionFind(count: size + 1)
-        let directions = [[0,1], [1,0], [-1, 0], [0,-1]]
+        let directions = [[0, 1], [1, 0], [-1, 0], [0, -1]]
         let getIndex = { (x: Int, y: Int) -> Int in return x * col + y }
-        
+
         for hit in hits { copy[hit[0]][hit[1]] = 0 }
-        
+
         for i in 0..<col where copy[0][i] == 1 { unionFind.union(num1: getIndex(0, i), num2: size) }
-        
+
         for i in 1..<row {
             for j in 0..<col where copy[i][j] == 1 {
                 let cur = getIndex(i, j)
-                if j > 0 && copy[i][j - 1] == 1 { unionFind.union(num1: cur, num2: getIndex(i, j - 1)) }
+                if j > 0 && copy[i][j - 1] == 1 {
+                    unionFind.union(num1: cur, num2: getIndex(i, j - 1))
+                }
                 if copy[i - 1][j] == 1 { unionFind.union(num1: cur, num2: getIndex(i - 1, j)) }
             }
         }
-        
+
         var res = Array(repeating: 0, count: hits.count)
         for i in stride(from: hits.count - 1, to: -1, by: -1) {
             let hit = hits[i]
@@ -95,25 +97,21 @@ class Solution {
     }
 }
 
-
 private class UnionFind {
     private var size: [Int]
     private var parent: [Int]
-    
-    
+
     init(count: Int) {
         self.parent = Array(repeating: 0, count: count)
         self.size = Array(repeating: 1, count: count)
         for i in 0..<count { parent[i] = i }
     }
-    
-    
+
     func find(num: Int) -> Int {
         if num != parent[num] { parent[num] = find(num: parent[num]) }
         return parent[num]
     }
-    
-    
+
     func union(num1: Int, num2: Int) {
         let fnum1 = find(num: num1)
         let fnum2 = find(num: num2)
@@ -122,8 +120,7 @@ private class UnionFind {
             size[fnum2] += size[fnum1]
         }
     }
-    
-    
-    func getSize(with num:Int) -> Int { size[find(num: num)] }
+
+    func getSize(with num: Int) -> Int { size[find(num: num)] }
 
 }

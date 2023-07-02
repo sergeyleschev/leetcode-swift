@@ -33,7 +33,7 @@ class Solution {
     // Example 5:
     // Input: intervals = [[1,5]], newInterval = [2,7]
     // Output: [[1,7]]
-     
+
     // Constraints:
     // 0 <= intervals.length <= 10^4
     // intervals[i].length == 2

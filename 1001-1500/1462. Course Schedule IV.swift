@@ -42,23 +42,22 @@ class Solution {
         var edges: [[Int]] = Array(repeating: [], count: n)
         var res = Set<String>()
         var ans: [Bool] = []
-        
+
         for info in prerequisites { edges[info.first!].append(info.last!) }
-        for i in 0 ..< n { bfs(edges: edges, i: i, n: n, res: &res) }
+        for i in 0..<n { bfs(edges: edges, i: i, n: n, res: &res) }
         for query in queries { ans.append(res.contains("\(query.first!)->\(query.last!)")) }
-        
+
         return ans
     }
-    
 
     func bfs(edges: [[Int]], i: Int, n: Int, res: inout Set<String>) {
         guard i < edges.count else { return }
         var visited: [Bool] = Array(repeating: false, count: n)
         var queue: [Int] = []
-        
+
         queue.append(i)
         visited[i] = true
-        
+
         while !queue.isEmpty {
             let u = queue.removeFirst()
             let children = edges[u]

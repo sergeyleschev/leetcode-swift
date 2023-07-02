@@ -9,7 +9,7 @@ class Solution {
     // Example 1:
     // Input: arr = [17,18,5,4,6,1]
     // Output: [18,6,6,6,1,-1]
-    // Explanation: 
+    // Explanation:
     // - index 0 --> the greatest element to the right of index 0 is index 1 (18).
     // - index 1 --> the greatest element to the right of index 1 is index 4 (6).
     // - index 2 --> the greatest element to the right of index 2 is index 4 (6).
@@ -30,11 +30,11 @@ class Solution {
         var i = 0
         var maxVal = 0
         var newArr = [Int]()
-        let lenght = arr.count
+        let length = arr.count
 
         maxVal = maxValue(arr)
-        while i < lenght {
-            if arr[i] == maxVal { maxVal = maxValueRight(arr, i, lenght) }
+        while i < length {
+            if arr[i] == maxVal { maxVal = maxValueRight(arr, i, length) }
             newArr.append(maxVal)
             i += 1
         }
@@ -42,7 +42,6 @@ class Solution {
         newArr[i - 1] = -1
         return newArr
     }
-
 
     func maxValueRight(_ array: [Int], _ start: Int, _ end: Int) -> Int {
         var maxVal = 0
@@ -56,18 +55,17 @@ class Solution {
         return maxVal
     }
 
-
     func maxValue(_ array: [Int]) -> Int {
         var maxVal = 0
         var i = 0
-        let lenght = array.count
+        let length = array.count
 
-        while i < lenght {
+        while i < length {
             if array[i] > maxVal { maxVal = array[i] }
             i += 1
         }
 
         return maxVal
     }
-    
+
 }

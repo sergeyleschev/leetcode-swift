@@ -3,12 +3,12 @@ class Solution {
     // Solution by Sergey Leschev
 
     // 1744. Can You Eat Your Favorite Candy on Your Favorite Day?
-    // You are given a (0-indexed) array of positive integers candiesCount where candiesCount[i] represents the number of candies of the ith type you have. You are also given a 2D array queries where queries[i] = [favoriteTypei, favoriteDayi, dailyCapi].
+    // You are given a (0-indexed) array of positive integers candiesCount where candiesCount[i] represents the number of candies of the ith type you have. You are also given a 2D array queries where queries[i] = [favoriteType(i), favoriteDay(i), dailyCap(i)].
     // You play a game with the following rules:
     // You start eating candies on day 0.
     // You cannot eat any candy of type i unless you have eaten all candies of type i - 1.
     // You must eat at least one candy per day until you have eaten all the candies.
-    // Construct a boolean array answer such that answer.length == queries.length and answer[i] is true if you can eat a candy of type favoriteTypei on day favoriteDayi without eating more than dailyCapi candies on any day, and false otherwise. Note that you can eat different types of candy on the same day, provided that you follow rule 2.
+    // Construct a boolean array answer such that answer.length == queries.length and answer[i] is true if you can eat a candy of type favoriteType(i) on day favoriteDay(i) without eating more than dailyCap(i) candies on any day, and false otherwise. Note that you can eat different types of candy on the same day, provided that you follow rule 2.
 
     // Return the constructed array answer.
 
@@ -31,9 +31,9 @@ class Solution {
     // 1 <= candiesCount[i] <= 10^5
     // 1 <= queries.length <= 10^5
     // queries[i].length == 3
-    // 0 <= favoriteTypei < candiesCount.length
-    // 0 <= favoriteDayi <= 10^9
-    // 1 <= dailyCapi <= 10^9
+    // 0 <= favoriteType(i) < candiesCount.length
+    // 0 <= favoriteDay(i) <= 10^9
+    // 1 <= dailyCap(i) <= 10^9
 
     func canEat(_ candiesCount: [Int], _ queries: [[Int]]) -> [Bool] {
         let sums = candiesCount.reduce(into: [Int]()) { result, count in
@@ -43,7 +43,7 @@ class Solution {
             }
             result.append(lastSum + count)
         }
-        
+
         let result = queries.map { query -> Bool in
             let (favoriteType, favoriteDay, dailyCap) = (query[0], query[1], query[2])
             let x1 = favoriteDay + 1
@@ -53,7 +53,7 @@ class Solution {
 
             return !(x1 > y2 || y1 < x2)
         }
-        
+
         return result
     }
 

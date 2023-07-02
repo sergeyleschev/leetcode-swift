@@ -40,7 +40,6 @@ class Solution {
 
     private var maxTime = -1
 
-
     func largestTimeFromDigits(_ A: [Int]) -> String {
         maxTime = -1
         var array = A
@@ -50,9 +49,11 @@ class Solution {
         return String(format: "%02d:%02d", maxTime / 60, maxTime % 60)
     }
 
-
     private func permutate(_ array: inout [Int], start: Int) {
-        guard array.count != start else { buildTime(array); return }
+        guard array.count != start else {
+            buildTime(array)
+            return
+        }
 
         for i in start..<array.count {
             array.swapAt(i, start)
@@ -60,7 +61,6 @@ class Solution {
             array.swapAt(i, start)
         }
     }
-
 
     private func buildTime(_ array: [Int]) {
         let hour = array[0] * 10 + array[1]

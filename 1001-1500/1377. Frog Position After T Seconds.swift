@@ -36,16 +36,16 @@ class Solution {
         var visited = Set<Int>()
 
 
-        func dfs(_ root: Int, _ probablity: Double, _ time: Int ) {
+        func dfs(_ root: Int, _ probability: Double, _ time: Int ) {
             guard root != target else {
                 if time == t {
-                    ans += probablity
+                    ans += probability
                 } else if time < t {
                     var nextPosition = -1
                     if let nextPositions = tree[root] {
                         for p in nextPositions where !visited.contains(p) { nextPosition = p; break }
                     }
-                    if nextPosition == -1 { ans += probablity }
+                    if nextPosition == -1 { ans += probability }
                 }
                 return
             }
@@ -56,7 +56,7 @@ class Solution {
 
             for p in nextPositions {
                 visited.insert(p)
-                dfs(p, probablity * currentP, time + 1)
+                dfs(p, probability * currentP, time + 1)
                 visited.remove(p)
             }
   

@@ -14,7 +14,7 @@ class Solution {
     // Input: strs = ["dog","racecar","car"]
     // Output: ""
     // Explanation: There is no common prefix among the input strings.
-     
+
     // Constraints:
     // 1 <= strs.length <= 200
     // 0 <= strs[i].length <= 200
@@ -25,7 +25,7 @@ class Solution {
         let chars_array = strs.map({ Array($0) })
         var string = ""
         var i = 0
-        
+
         while true {
             var c: Character? = nil
             for chars in chars_array {
@@ -34,14 +34,16 @@ class Solution {
                 } else {
                     if c == nil {
                         c = chars[i]
-                    } else if chars[i] != c! { return string }
-                }  
+                    } else if chars[i] != c! {
+                        return string
+                    }
+                }
             }
             string += String(c!)
             i += 1
         }
-        
+
         return string
     }
-    
+
 }

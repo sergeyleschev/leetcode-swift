@@ -37,14 +37,18 @@ class Solution {
     // Both start and end will only consist of characters in 'L', 'R', and 'X'.
 
     func canTransform(_ start: String, _ end: String) -> Bool {
-        if start.replacingOccurrences(of: "X", with: "") != end.replacingOccurrences(of: "X", with: "") { return false }
+        if start.replacingOccurrences(of: "X", with: "")
+            != end.replacingOccurrences(of: "X", with: "")
+        {
+            return false
+        }
         var i = 0
         var j = 0
         let count = start.count
         let start = Array(start)
         let end = Array(end)
-        
-        while i < count && j < count  {
+
+        while i < count && j < count {
             while i < count && start[i] == "X" { i += 1 }
             while j < count && end[j] == "X" { j += 1 }
             if i < count && start[i] == "L" && i < j { return false }
@@ -52,7 +56,7 @@ class Solution {
             i += 1
             j += 1
         }
-        
+
         return true
     }
 

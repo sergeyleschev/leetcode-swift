@@ -30,22 +30,21 @@ class Solution {
     // 1 <= a * b * c <= 1018
     // It is guaranteed that the result will be in range [1, 2 * 10^9].
 
-    func gcd(a:Int, b:Int) -> Int{ a % b == 0 ? b : gcd(a: b, b: a % b) }
+    func gcd(a: Int, b: Int) -> Int { a % b == 0 ? b : gcd(a: b, b: a % b) }
 
-    
     func nthUglyNumber(_ n: Int, _ a: Int, _ b: Int, _ c: Int) -> Int {
-        let factors = [a,b,c].sorted()
+        let factors = [a, b, c].sorted()
         let a = factors[0]
         let b = factors[1]
         let c = factors[2]
-        
+
         let ab = a * b / gcd(a: a, b: b)
         let ac = a * c / gcd(a: a, b: c)
         let bc = b * c / gcd(a: b, b: c)
         let abc = ab * c / gcd(a: ab, b: c)
 
         var left = 1
-        var right = 2000000000
+        var right = 2_000_000_000
         var result = 0
 
         while left <= right {
@@ -54,9 +53,9 @@ class Solution {
             if target == n {
                 result = mid
                 break
-            }else if target > n {
+            } else if target > n {
                 right = mid - 1
-            }else{
+            } else {
                 left = mid + 1
             }
         }
@@ -64,5 +63,5 @@ class Solution {
         while result % a != 0 && result % b != 0 && result % c != 0 { result -= 1 }
         return result
     }
-    
+
 }

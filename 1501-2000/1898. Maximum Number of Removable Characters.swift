@@ -48,7 +48,6 @@ class Solution {
         var ans = Int.min
         var visited = Set<Int>()
 
-
         func check() -> Bool {
             var j = 0
             for i in 0..<n {
@@ -60,7 +59,7 @@ class Solution {
             }
             return false
         }
-        
+
         func getRemovedIndices(_ to: Int) {
             var idx = 0
             while idx < to {
@@ -69,14 +68,14 @@ class Solution {
             }
         }
 
-        func recoverRemovedIndices(_ to: Int)  {
+        func recoverRemovedIndices(_ to: Int) {
             var idx = 0
             while idx < to {
                 if removedIndices[removable[idx]] { removedIndices[removable[idx]] = false }
                 idx += 1
             }
         }
-        
+
         while low < high {
             let mid = low + ((high - low) >> 1)
             visited.insert(mid)
@@ -89,7 +88,6 @@ class Solution {
             }
             recoverRemovedIndices(mid)
         }
-
 
         guard low > 0 else { return 0 }
         if !visited.contains(low) {

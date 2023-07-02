@@ -43,9 +43,9 @@ class Solution {
         var rMod = 0
         var minW = nums.count
         var pos = [Int: Int]()
-        
+
         pos[0] = -1
-        
+
         for idx in 0..<nums.count {
             rMod = (rMod + nums[idx]) % p
             let cmp = (p - mod + rMod) % p

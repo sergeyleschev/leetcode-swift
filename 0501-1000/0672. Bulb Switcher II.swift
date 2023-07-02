@@ -36,8 +36,8 @@ class Solution {
         if n == 2 { return 4 - (m % 2) }
         if m == 1 { return 4 }
         if m == 2 { return 7 }
-        
+
         return 8
     }
-    
+
 }

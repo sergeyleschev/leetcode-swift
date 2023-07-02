@@ -26,28 +26,28 @@ class Solution {
     // - Complexity:
     //   - time: O(m), where m is the number of digits in n.
     //   - space: O(m), where m is the number of digits in n.
-    
-   func nextGreaterElement(_ n: Int) -> Int {
+
+    func nextGreaterElement(_ n: Int) -> Int {
         // convert n to digits array
         var digits: [Int] = []
         var n = n
-        
+
         while n != 0 {
             digits.append(n % 10)
             n /= 10
         }
         digits.reverse()
-        
+
         // get next permutation, same solutin as P31
         var i = digits.count - 2
         while i >= 0 && digits[i] >= digits[i + 1] { i -= 1 }
         if i == -1 { return -1 }
-        
+
         var j = digits.count - 1
         while j >= i && digits[i] >= digits[j] { j -= 1 }
-        
+
         digits.swapAt(i, j)
-        
+
         i = i + 1
         j = digits.count - 1
         while i < j {
@@ -55,16 +55,16 @@ class Solution {
             i += 1
             j -= 1
         }
-        
+
         // convert back to number
         var number = 0
-        let limit = 0x7fffffff
+        let limit = 0x7fff_ffff
         for n in digits {
-            if number > (limit - n) / 10 { return -1 } // overflow
+            if number > (limit - n) / 10 { return -1 }  // overflow
             number = number * 10 + n
         }
-        
+
         return number
     }
-    
+
 }

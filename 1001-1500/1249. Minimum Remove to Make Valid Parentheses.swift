@@ -3,7 +3,7 @@ class Solution {
     // Solution by Sergey Leschev
 
     // 1249. Minimum Remove to Make Valid Parentheses
-    // Given a string s of '(' , ')' and lowercase English characters. 
+    // Given a string s of '(' , ')' and lowercase English characters.
     // Your task is to remove the minimum number of parentheses ( '(' or ')', in any positions ) so that the resulting parentheses string is valid and return any valid string.
     // Formally, a parentheses string is valid if and only if:
     // It is the empty string, contains only lowercase characters, or
@@ -40,12 +40,12 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of s.
     //   - space: O(n), where n is the length of s.
-    
+
     func minRemoveToMakeValid(_ s: String) -> String {
         var remove = Set<Int>()
         var stack = [Int]()
         var ans = [Character]()
-        
+
         for (i, ch) in s.enumerated() {
             if ch == "(" {
                 stack.append(i)
@@ -57,14 +57,14 @@ class Solution {
                 }
             }
         }
-        
+
         while !stack.isEmpty { remove.insert(stack.removeLast()) }
-        
+
         for (i, ch) in s.enumerated() {
             guard !remove.contains(i) else { continue }
             ans.append(ch)
         }
-        
+
         return String(ans)
     }
 

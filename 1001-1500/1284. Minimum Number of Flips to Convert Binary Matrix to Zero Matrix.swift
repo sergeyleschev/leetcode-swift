@@ -60,7 +60,9 @@ class Solution {
                         for offset in offsets {
                             let r = i + offset.0
                             let c = j + offset.1
-                            if r >= 0 && r < row && c >= 0 && c < col { flipped[r][c] = (flipped[r][c] + 1) % 2 }
+                            if r >= 0 && r < row && c >= 0 && c < col {
+                                flipped[r][c] = (flipped[r][c] + 1) % 2
+                            }
                         }
 
                         if !visited.contains(flipped) {
@@ -71,7 +73,7 @@ class Solution {
                 }
             }
         }
-        
+
         return -1
     }
 

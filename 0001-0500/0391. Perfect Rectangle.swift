@@ -1,7 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
-    
+
     // 391. Perfect Rectangle
     // Given an array rectangles where rectangles[i] = [xi, yi, ai, bi] represents an axis-aligned rectangle. The bottom-left point of the rectangle is (xi, yi) and the top-right point of it is (ai, bi).
     // Return true if all the rectangles together form an exact cover of a rectangular region.
@@ -34,28 +34,26 @@ class Solution {
     struct Point: Hashable {
         let x: Int
         let y: Int
-        
+
         init(_ xx: Int, _ yy: Int) {
             self.x = xx
             self.y = yy
         }
-        
+
         var hashValue: Int {
             return self.x ^ self.y
         }
-        
+
         static func == (lhs: Point, rhs: Point) -> Bool {
             return lhs.x == rhs.x && lhs.y == rhs.y
         }
     }
 
-    
     struct Rectangle {
         private let x1: Int
         private let y1: Int
         private let x2: Int
         private let y2: Int
-        
 
         var p1: Point { Point(x1, y1) }
         var p2: Point { Point(x1, y2) }
@@ -66,7 +64,6 @@ class Solution {
         var miny: Int { self.y1 }
         var maxx: Int { self.x2 }
         var maxy: Int { self.y2 }
-        
 
         init(x1: Int, y1: Int, x2: Int, y2: Int) {
             self.x1 = x1
@@ -76,9 +73,8 @@ class Solution {
         }
     }
 
-    
     func isRectangleCover(_ rectangles: [[Int]]) -> Bool {
-        let rectList = rectangles.map {Rectangle(x1: $0[0], y1: $0[1], x2: $0[2], y2: $0[3])}
+        let rectList = rectangles.map { Rectangle(x1: $0[0], y1: $0[1], x2: $0[2], y2: $0[3]) }
         var minx = Int.max
         var miny = Int.max
         var maxx = Int.min
@@ -97,8 +93,12 @@ class Solution {
             area += rect.area
         }
         let mRect = Rectangle(x1: minx, y1: miny, x2: maxx, y2: maxy)
-        if set.count != 4 || !set.contains(mRect.p1) || !set.contains(mRect.p2) || !set.contains(mRect.p3) || !set.contains(mRect.p4) { return false }
+        if set.count != 4 || !set.contains(mRect.p1) || !set.contains(mRect.p2)
+            || !set.contains(mRect.p3) || !set.contains(mRect.p4)
+        {
+            return false
+        }
         return mRect.area == area
     }
-    
+
 }

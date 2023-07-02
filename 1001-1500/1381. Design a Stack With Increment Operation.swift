@@ -29,7 +29,7 @@ class CustomStack {
     // customStack.pop();                            // return 103 --> Return top of the stack 103, stack becomes [201, 202]
     // customStack.pop();                            // return 202 --> Return top of the stack 102, stack becomes [201]
     // customStack.pop();                            // return 201 --> Return top of the stack 101, stack becomes []
-    // customStack.pop();                            // return -1 --> Stack is empty return -1. 
+    // customStack.pop();                            // return -1 --> Stack is empty return -1.
 
     // Constraints:
     // 1 <= maxSize <= 1000
@@ -40,26 +40,22 @@ class CustomStack {
 
     var stack = [Int]()
     var maxSize: Int
-    
 
     init(_ maxSize: Int) {
         self.maxSize = maxSize
     }
-    
 
     func push(_ x: Int) {
         guard stack.count < maxSize else { return }
         stack.append(x)
     }
-    
 
     func pop() -> Int {
         stack.isEmpty ? -1 : stack.removeLast()
     }
 
-    
     func increment(_ k: Int, _ val: Int) {
-        for i in 0..<min(k,stack.count) { stack[i] += val  }
+        for i in 0..<min(k, stack.count) { stack[i] += val }
     }
 
 }

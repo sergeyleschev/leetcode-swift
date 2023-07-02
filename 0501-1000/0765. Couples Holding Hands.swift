@@ -27,32 +27,29 @@ class Solution {
     func minSwapsCouples(_ row: [Int]) -> Int {
         let union = Union(row.count)
         for i in stride(from: 0, to: row.count, by: 2) {
-            let v1 = row[i], v2 = row[i + 1]
+            let v1 = row[i]
+            let v2 = row[i + 1]
             union.unit(v1, v2)
             union.unit(i, i + 1)
         }
 
         return row.count / 2 - union.count
     }
-    
-    
+
     private class Union {
         private(set) var union: [Int]
         private(set) var count: Int
-        
-        
+
         init(_ n: Int) {
             union = Array(0..<n)
             count = n
         }
-        
-        
+
         func find(_ i: Int) -> Int {
             if union[i] != i { union[i] = find(union[i]) }
             return union[i]
         }
-        
-        
+
         func unit(_ i1: Int, _ i2: Int) {
             if find(i1) != find(i2) {
                 union[find(i1)] = find(i2)
@@ -60,5 +57,5 @@ class Solution {
             }
         }
     }
-    
+
 }

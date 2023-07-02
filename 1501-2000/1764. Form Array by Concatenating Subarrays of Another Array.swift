@@ -39,9 +39,8 @@ class Solution {
         let groupCnt = groups.count
         let n = nums.count
         var potentialStartIdx = [[Int]](repeating: [], count: groupCnt)
-        
 
-        func dfs(_ fromIdx: Int, _ groupIdx: Int)-> Bool {
+        func dfs(_ fromIdx: Int, _ groupIdx: Int) -> Bool {
             guard groupIdx < groupCnt else { return true }
             guard fromIdx < n else { return false }
             for startIdx in potentialStartIdx[groupIdx] where startIdx >= fromIdx {
@@ -50,7 +49,7 @@ class Solution {
             return false
         }
 
-        for idx in 0..<groupCnt {    
+        for idx in 0..<groupCnt {
             let length = groups[idx].count
             for idx2 in 0...(n - length) {
                 if nums[idx2] == groups[idx][0] {

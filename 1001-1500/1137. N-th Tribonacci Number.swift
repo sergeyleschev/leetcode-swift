@@ -3,7 +3,7 @@ class Solution {
     // Solution by Sergey Leschev
 
     // 1137. N-th Tribonacci Number
-    // The Tribonacci sequence Tn is defined as follows: 
+    // The Tribonacci sequence Tn is defined as follows:
     // T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n >= 0.
     // Given n, return the value of Tn.
 
@@ -31,7 +31,7 @@ class Solution {
     func tribonacci(_ n: Int) -> Int {
         var arr = [0, 1, 1]
         if n < 3 { return arr[n] }
-        
+
         for i in 1..<n - 1 {
             var next = arr[0] + arr[1] + arr[2]
             arr[0] = arr[1]
@@ -41,5 +41,5 @@ class Solution {
 
         return arr[2]
     }
-    
+
 }

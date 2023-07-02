@@ -51,12 +51,12 @@ class Solution {
 
         while count[left] == 0 { left += 1 }
         while count[right] == 0 { right -= 1 }
-        
+
         let totalCount = count.reduce(0, +)
-                
+
         let mid1 = (totalCount + 1) / 2
         let mid2 = mid1 + (totalCount % 2 == 0 ? 1 : 0)
-        
+
         var i = left
         while i <= right {
             if mid1 > c, mid1 <= c + count[i] { median += Double(i) / Double(2) }
@@ -69,7 +69,7 @@ class Solution {
             }
             i += 1
         }
-        
+
         return [Double(left), Double(right), sum / Double(totalCount), median, mode]
     }
 

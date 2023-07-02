@@ -1,16 +1,14 @@
-/**
- * Definition for Employee.
- * public class Employee {
- *     public var id: Int
- *     public var importance: Int
- *     public var subordinates: [Int]
- *     public init(_ id: Int, _ importance: Int, _ subordinates: [Int]) {
- *         self.id = id
- *         self.importance = importance
- *         self.subordinates = subordinates
- *     }
- * }
- */
+/// Definition for Employee.
+/// public class Employee {
+///     public var id: Int
+///     public var importance: Int
+///     public var subordinates: [Int]
+///     public init(_ id: Int, _ importance: Int, _ subordinates: [Int]) {
+///         self.id = id
+///         self.importance = importance
+///         self.subordinates = subordinates
+///     }
+/// }
 
 class Solution {
 
@@ -43,16 +41,14 @@ class Solution {
     // One employee has at most one direct leader and may have several subordinates.
     // id is guaranteed to be a valid employee id.
 
-    var employeeMap = [Int : Employee]()
-    
-    
+    var employeeMap = [Int: Employee]()
+
     func getImportance(_ employees: [Employee], _ id: Int) -> Int {
         for emp in employees { employeeMap[emp.id] = emp }
         return statistics(employeeMap[id]!)
     }
-    
 
-    func statistics(_ employee: Employee) -> Int{
+    func statistics(_ employee: Employee) -> Int {
         if employee.subordinates.count == 0 { return employee.importance }
         var sum = 0
         for i in 0..<employee.subordinates.count {

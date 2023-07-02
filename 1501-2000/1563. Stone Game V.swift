@@ -33,7 +33,6 @@ class Solution {
         let accu = stoneValue.reduce(into: [0]) { arr, val in arr.append(arr.last! + val) }
         var memo = [[Int?]](repeating: .init(repeating: nil, count: N + 1), count: N + 1)
 
-
         func worker(_ lo: Int, _ hi: Int) -> Int {
             if let m = memo[lo][hi] { return m }
             switch hi - lo + 1 {

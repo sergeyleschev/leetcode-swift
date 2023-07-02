@@ -47,5 +47,5 @@ class Solution {
 
         return global
     }
-    
+
 }

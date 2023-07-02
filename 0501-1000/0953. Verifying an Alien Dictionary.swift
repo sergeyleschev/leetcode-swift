@@ -26,29 +26,34 @@ class Solution {
     // 1 <= words[i].length <= 20
     // order.length == 26
     // All characters in words[i] and order are English lowercase letters.
-    
+
     func isAlienSorted(_ words: [String], _ order: String) -> Bool {
         let orderArray = Array(order)
         var lastWord = words[0]
-        
+
         for i in 1..<words.count {
             let currentWord = words[i]
             let minCountChar = min(currentWord.count, lastWord.count)
-            
+
             for j in 0..<minCountChar {
                 let indexCurrent = Array(currentWord)[j]
                 let indexLast = Array(lastWord)[j]
                 let costCurrent = orderArray.firstIndex(of: indexCurrent) ?? 0
                 let costLast = orderArray.firstIndex(of: indexLast) ?? 0
-                
-                if costCurrent > costLast { break }
-                else if costCurrent < costLast || (j == minCountChar - 1 && currentWord.count < lastWord.count) { return false }
+
+                if costCurrent > costLast {
+                    break
+                } else if costCurrent < costLast
+                    || (j == minCountChar - 1 && currentWord.count < lastWord.count)
+                {
+                    return false
+                }
             }
-            
+
             lastWord = currentWord
         }
-        
+
         return true
     }
-    
+
 }

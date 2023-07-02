@@ -21,7 +21,7 @@ class Solution {
     func findLength(_ A: [Int], _ B: [Int]) -> Int {
         var dp = Array(repeating: Array(repeating: 0, count: B.count + 1), count: A.count + 1)
         var ans = 0
-        
+
         for i in 0...A.count {
             for j in 0...B.count {
                 guard i > 0 && j > 0 else { continue }
@@ -31,8 +31,8 @@ class Solution {
                 }
             }
         }
-        
+
         return ans
     }
-    
+
 }

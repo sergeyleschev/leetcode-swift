@@ -43,22 +43,25 @@ class Solution {
 
     func canBeEqual(_ target: [Int], _ arr: [Int]) -> Bool {
         var arr = arr
-        
+
         for i in 0..<arr.count - 1 {
             let expected = target[i]
             let current = arr[i]
             if expected == current { continue }
             var index2: Int?
 
-            for j in i..<arr.count where expected == arr[j]  { index2 = j; break }
-            
+            for j in i..<arr.count where expected == arr[j] {
+                index2 = j
+                break
+            }
+
             guard let index = index2 else { return false }
             for j in (i..<index).reversed() {
                 let removed = arr.remove(at: i)
                 arr.insert(removed, at: j + 1)
             }
         }
-        
+
         return arr == target
     }
 

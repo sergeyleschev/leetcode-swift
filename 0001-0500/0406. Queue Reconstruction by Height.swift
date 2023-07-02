@@ -30,7 +30,7 @@ class Solution {
 
     func reconstructQueue(_ people: [[Int]]) -> [[Int]] {
         var res = [[Int]]()
-        
+
         let sortP = people.sorted { (p1, p2) -> Bool in
             if p1[0] != p2[0] {
                 return p1[0] > p2[0]
@@ -38,7 +38,7 @@ class Solution {
                 return p1[1] < p2[1]
             }
         }
-        
+
         for p in sortP {
             if res.isEmpty {
                 res.append(p)
@@ -49,10 +49,10 @@ class Solution {
                     res.insert(p, at: p[1])
                 }
             }
-            
+
         }
-        
+
         return res
     }
-    
+
 }

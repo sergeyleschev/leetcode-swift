@@ -18,9 +18,9 @@ class MyCalendarTwo {
     // [null, true, true, true, false, true, true]
     // Explanation
     // MyCalendarTwo myCalendarTwo = new MyCalendarTwo();
-    // myCalendarTwo.book(10, 20); // return True, The event can be booked. 
-    // myCalendarTwo.book(50, 60); // return True, The event can be booked. 
-    // myCalendarTwo.book(10, 40); // return True, The event can be double booked. 
+    // myCalendarTwo.book(10, 20); // return True, The event can be booked.
+    // myCalendarTwo.book(50, 60); // return True, The event can be booked.
+    // myCalendarTwo.book(10, 40); // return True, The event can be double booked.
     // myCalendarTwo.book(5, 15);  // return False, The event ca not be booked, because it would result in a triple booking.
     // myCalendarTwo.book(5, 10); // return True, The event can be booked, as it does not use time 10 which is already double booked.
     // myCalendarTwo.book(25, 55); // return True, The event can be booked, as the time in [25, 40) will be double booked with the third event, the time [40, 50) will be single booked, and the time [50, 55) will be double booked with the second event.
@@ -35,18 +35,16 @@ class MyCalendarTwo {
 
     var firstBook = [(Int, Int)]()
     var secondBook = [(Int, Int)]()
-    
 
-    init() { }
-    
+    init() {}
 
     func book(_ start: Int, _ end: Int) -> Bool {
         for i in secondBook { if i.0 < end, i.1 > start { return false } }
-        
+
         for i in firstBook {
             if i.0 < end, i.1 > start { secondBook.append((max(i.0, start), min(i.1, end))) }
         }
-        
+
         firstBook.append((start, end))
         return true
     }

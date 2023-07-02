@@ -27,7 +27,7 @@ class Solution {
 
     // Example 5:
     // Input: n = 3
-    // Output: false 
+    // Output: false
 
     // Constraints:
     // 1 <= n <= 2^31 - 1
@@ -35,15 +35,15 @@ class Solution {
     func hasAlternatingBits(_ n: Int) -> Bool {
         var num = n
         var bit = num % 2
-        
+
         while num > 2 {
             num /= 2
             let b = num % 2
             if b == bit { return false }
             bit = b
         }
-        
+
         return true
     }
-    
+
 }

@@ -29,37 +29,35 @@ class Solution {
     typealias Destinations = [String]
     typealias Graph = [Departure: Destinations]
 
-    
     func findItinerary(_ tickets: [[String]]) -> [String] {
         var graph = sortDestination(buildGraph(tickets))
         var path = [String]()
         var stack = ["JFK"]
-        
+
         while !stack.isEmpty, let lastAirport = stack.last {
             // no ticket depture from lastAirport OR all tickets have been used
             if graph[lastAirport] == nil || graph[lastAirport]!.isEmpty {
                 path.append(lastAirport)
                 stack.removeLast()
-            } else { // still have tickets not used yet
+            } else {  // still have tickets not used yet
                 let first = graph[lastAirport]!.removeFirst()
                 stack.append(first)
             }
         }
-        
+
         return path.reversed()
     }
-    
-    
+
     private func buildGraph(_ tickets: [[String]]) -> Graph {
         var graph = Graph()
         for t in tickets {
-            let from = t[0], to = t[1]
+            let from = t[0]
+            let to = t[1]
             graph[from, default: []].append(to)
         }
         return graph
     }
-    
-    
+
     private func sortDestination(_ graph: Graph) -> Graph {
         var graph = graph
         for (k, v) in graph { graph[k] = v.sorted(by: <) }

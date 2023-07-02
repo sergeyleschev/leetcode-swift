@@ -35,19 +35,22 @@ class Solution {
     // The letters in all input strings are from the set {'A', 'B', 'C', 'D', 'E', 'F', 'G'}.
 
     func pyramidTransition(_ bottom: String, _ allowed: [String]) -> Bool {
-        var tree = [[Character]:Set<Character>]()
+        var tree = [[Character]: Set<Character>]()
 
-
-        func helper(currentLevel: [Character],nextLevel: [Character], index: Int) -> Bool {
+        func helper(currentLevel: [Character], nextLevel: [Character], index: Int) -> Bool {
             let size = currentLevel.count
             guard size != 1 else { return true }
-            guard index != size - 1 else { return helper(currentLevel: nextLevel, nextLevel: [], index: 0) }
-            let key = [currentLevel[index],currentLevel[ index + 1]]
+            guard index != size - 1 else {
+                return helper(currentLevel: nextLevel, nextLevel: [], index: 0)
+            }
+            let key = [currentLevel[index], currentLevel[index + 1]]
             guard let chars = tree[key] else { return false }
             for ch in chars {
                 var next = nextLevel
                 next.append(ch)
-                if helper(currentLevel: currentLevel, nextLevel: next, index: index + 1) { return true }
+                if helper(currentLevel: currentLevel, nextLevel: next, index: index + 1) {
+                    return true
+                }
             }
             return false
         }
@@ -58,8 +61,8 @@ class Solution {
             if nil == tree[chars] { tree[chars] = [] }
             tree[chars]?.insert(ch)
         }
-        
+
         return helper(currentLevel: [Character](bottom), nextLevel: [], index: 0)
     }
-    
- }
+
+}

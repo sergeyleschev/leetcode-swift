@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -35,7 +33,7 @@ class Solution {
     func deepestLeavesSum(_ root: TreeNode?) -> Int {
         guard let node = root else { return 0 }
         var cache = [node]
-        
+
         while true {
             var temp = [TreeNode]()
 
@@ -46,8 +44,8 @@ class Solution {
 
             if temp.isEmpty { break } else { cache = temp }
         }
-        
-        return cache.reduce(0) { (res, node) -> Int in  res + node.val }
+
+        return cache.reduce(0) { (res, node) -> Int in res + node.val }
     }
-    
+
 }

@@ -44,7 +44,10 @@ class Solution {
         var digits = ""
 
         for char in s {
-            guard !char.isNumber else { digits = "\(digits)\(char)"; continue }
+            guard !char.isNumber else {
+                digits = "\(digits)\(char)"
+                continue
+            }
 
             guard char != "]" else {
                 var tmp = ""

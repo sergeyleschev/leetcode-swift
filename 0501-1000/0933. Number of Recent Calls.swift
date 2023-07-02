@@ -30,12 +30,10 @@ class RecentCounter {
     private var timeLimit: Int
     private var slideWindow: [Int]
 
-
     init(timeLimit: Int = 3_000) {
         self.timeLimit = timeLimit
         slideWindow = [Int]()
     }
-
 
     // Adds a new request at a time t.
     // - Parameter t: Time in milliseconds.
@@ -45,7 +43,7 @@ class RecentCounter {
     // - Complexity:
     //   - time: O(n), where n is the number of calls.
     //   - space: O(n), where n is the number of calls.
-    
+
     func ping(_ t: Int) -> Int {
         slideWindow.append(t)
         var remove = 0
@@ -54,7 +52,7 @@ class RecentCounter {
             guard t - time > timeLimit else { break }
             remove += 1
         }
-        
+
         if remove > 0 { slideWindow.removeFirst(remove) }
         return slideWindow.count
     }

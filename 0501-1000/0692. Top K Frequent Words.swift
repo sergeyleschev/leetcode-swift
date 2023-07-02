@@ -24,12 +24,12 @@ class Solution {
     // Try to solve it in O(n log k) time and O(n) extra space.
 
     func topKFrequent(_ words: [String], _ k: Int) -> [String] {
-        var map = [String : Int]()
-        
+        var map = [String: Int]()
+
         for word in words { map[word] = (map[word] ?? 0) + 1 }
-        
+
         var keys = Array(map.keys)
-        
+
         keys.sort(by: {
             if let value1 = map[$0], let value2 = map[$1], value1 != value2 {
                 return value1 > value2
@@ -37,8 +37,8 @@ class Solution {
                 return $0 < $1
             }
         })
-        
+
         return Array(keys[0..<k])
     }
-    
+
 }

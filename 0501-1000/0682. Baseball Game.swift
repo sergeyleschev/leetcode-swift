@@ -49,7 +49,7 @@ class Solution {
     func calPoints(_ ops: [String]) -> Int {
         var score = 0
         var opScores = [Int]()
-        
+
         for op in ops {
             var tmp = 0
             if op == "+" {
@@ -68,7 +68,7 @@ class Solution {
             }
             score += tmp
         }
-        
+
         return score
     }
 

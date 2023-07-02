@@ -37,7 +37,7 @@ class Solution {
         guard n >= 3 else { return 0 }
         // build dictionary for i, of number of sequences
         // (including length 2) end at i
-        var mark = Array(repeating: [Int : Int](), count: n)
+        var mark = Array(repeating: [Int: Int](), count: n)
         var total = 0
 
         for i in 1..<n {
@@ -46,8 +46,8 @@ class Solution {
                 // the number of sequences end at i with distance dist
                 // add the number of sequences of all dist to ans
                 let diff = A[i] - A[j]
-                if let _ = mark[i][diff] {} else {mark[i][diff] = 0}
-                if let _ = mark[j][diff] {} else {mark[j][diff] = 0}
+                if let _ = mark[i][diff] {} else { mark[i][diff] = 0 }
+                if let _ = mark[j][diff] {} else { mark[j][diff] = 0 }
 
                 // Add elements i to the sequence,
                 // Add (A[j], A[i]) as part of solution.
@@ -60,7 +60,7 @@ class Solution {
             // (A[j], A[i]) for all the j (0...i-1) smaller than i.
             total -= i
         }
-        
+
         return total
     }
 

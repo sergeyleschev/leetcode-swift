@@ -44,7 +44,7 @@ class Solution {
             let r = i + S
             res += (ind[i + 1] - ind[i]) * (ind[r + 1] - ind[r])
         }
-        
+
         return res
     }
 

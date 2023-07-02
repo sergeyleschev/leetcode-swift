@@ -9,7 +9,7 @@ class Solution {
     // A string is called palindrome if is one that reads the same backward as well as forward.
 
     // Finds the minimum number of steps to make the given string empty.
-    
+
     // - Parameter s: The string.
     // - Returns: The minimum number of steps.
 
@@ -21,13 +21,13 @@ class Solution {
     // Example 2:
     // Input: s = "abb"
     // Output: 2
-    // Explanation: "abb" -> "bb" -> "". 
+    // Explanation: "abb" -> "bb" -> "".
     // Remove palindromic subsequence "a" then "bb".
 
     // Example 3:
     // Input: s = "baabb"
     // Output: 2
-    // Explanation: "baabb" -> "b" -> "". 
+    // Explanation: "baabb" -> "b" -> "".
     // Remove palindromic subsequence "baab" then "b".
 
     // Constraints:
@@ -37,23 +37,22 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of s.
     //   - space: O(1), only constant space is used.
-    
+
     func removePalindromeSub(_ s: String) -> Int {
         guard !s.isEmpty else { return 0 }
         return isPalindrome(Array(s)) ? 1 : 2
     }
-    
-    
+
     private func isPalindrome(_ s: [Character]) -> Bool {
         var start = 0
         var end = s.count - 1
-        
+
         while start < end {
             guard s[start] == s[end] else { return false }
             start += 1
             end -= 1
         }
-        
+
         return true
     }
 

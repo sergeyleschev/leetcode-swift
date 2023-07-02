@@ -31,7 +31,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of nums.
     //   - space: O(1), only constant space is used.
-    
+
     func numSubarrayProductLessThanK(_ nums: [Int], _ k: Int) -> Int {
         guard k > 1 else { return 0 }
         var ans = 0

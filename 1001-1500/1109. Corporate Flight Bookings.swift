@@ -4,7 +4,7 @@ class Solution {
 
     // 1109. Corporate Flight Bookings
     // There are n flights that are labeled from 1 to n.
-    // You are given an array of flight bookings bookings, where bookings[i] = [firsti, lasti, seatsi] represents a booking for flights firsti through lasti (inclusive) with seatsi seats reserved for each flight in the range.
+    // You are given an array of flight bookings bookings, where bookings[i] = [first i, last i, seats i] represents a booking for flights first i through last i (inclusive) with seats i seats reserved for each flight in the range.
     // Return an array answer of length n, where answer[i] is the total number of seats reserved for flight i.
 
     // Example 1:
@@ -32,8 +32,8 @@ class Solution {
     // 1 <= n <= 2 * 10^4
     // 1 <= bookings.length <= 2 * 10^4
     // bookings[i].length == 3
-    // 1 <= firsti <= lasti <= n
-    // 1 <= seatsi <= 10^4
+    // 1 <= first i <= last i <= n
+    // 1 <= seats i <= 10^4
 
     func corpFlightBookings(_ bookings: [[Int]], _ n: Int) -> [Int] {
         var openings: [Int: Int] = [:]
@@ -49,7 +49,7 @@ class Solution {
             closings[closing, default: 0] += count
         }
 
-        for i in 1 ... n {
+        for i in 1...n {
             let opening = openings[i, default: 0]
             let closing = closings[i - 1, default: 0]
             count = count + opening - closing
@@ -58,5 +58,5 @@ class Solution {
 
         return result
     }
-    
+
 }

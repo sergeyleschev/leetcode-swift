@@ -37,12 +37,12 @@ class Solution {
         var dict: [Int: Int] = [:]
 
         for i in 0..<arr.count { dict[arr[i]] = i }
-        
+
         for i in 0..<arr.count {
             if let j = dict[arr[i] * 2], i != j { return true }
         }
-        
+
         return false
     }
-    
+
 }

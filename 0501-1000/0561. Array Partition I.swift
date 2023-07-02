@@ -29,8 +29,8 @@ class Solution {
             let (i, val) = item
             return res + (i % 2 == 0 ? val : 0)
         }
-        
+
         return ans
     }
-    
+
 }

@@ -24,24 +24,23 @@ class Solution {
     func countSubstrings(_ s: String) -> Int {
         let chars = Array(s)
         var count = 0
-        
-        
+
         func expandAroundCenter(_ left: Int, _ right: Int) {
             var left = left
             var right = right
-            
+
             while left >= 0 && right < chars.count && chars[left] == chars[right] {
                 count += 1
                 left -= 1
                 right += 1
             }
         }
-        
+
         for i in 0..<chars.count {
             expandAroundCenter(i, i)
             expandAroundCenter(i, i + 1)
         }
-        
+
         return count
     }
 

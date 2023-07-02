@@ -26,7 +26,6 @@ class Solution {
         return mergeSort(nums, 0, nums.count - 1)
     }
 
-    
     private func mergeSort(_ nums: [Int], _ start: Int, _ end: Int) -> [Int] {
         guard end > start else { return [nums[start]] }
         var res: [Int] = []
@@ -41,7 +40,7 @@ class Solution {
                 res.append(right.removeFirst())
             }
         }
-        
+
         return res + left + right
     }
 

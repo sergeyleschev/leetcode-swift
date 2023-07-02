@@ -47,9 +47,9 @@ class Solution {
         let n = arr.count
         let arr = arr.sorted()
         let m = arr[(n - 1) / 2]
-        let sortArr = arr.sorted{ abs($0 - m) >= abs($1 - m) }
-        
+        let sortArr = arr.sorted { abs($0 - m) >= abs($1 - m) }
+
         return Array(sortArr[0..<k])
     }
-    
+
 }

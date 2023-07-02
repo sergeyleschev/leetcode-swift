@@ -17,7 +17,7 @@ class Solution {
     // Example 1:
     // Input: arr = [3,2,4,1]
     // Output: [4,2,4,3]
-    // Explanation: 
+    // Explanation:
     // We perform 4 pancake flips, with k values 4, 2, 4, and 3.
     // Starting state: arr = [3, 2, 4, 1]
     // After 1st flip (k = 4): arr = [1, 4, 2, 3]
@@ -39,7 +39,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n^2), where n is the length of the array of integers.
     //   - space: O(n), where n is the length of the array of integers.
-    
+
     func pancakeSort(_ A: [Int]) -> [Int] {
         var ans = [Int]()
         var nums = A
@@ -66,7 +66,6 @@ class Solution {
         return ans
     }
 
-    
     private func flip(_ nums: inout [Int], _ end: Int) {
         var start = 0
         var end = end - 1

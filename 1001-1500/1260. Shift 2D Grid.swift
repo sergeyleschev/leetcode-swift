@@ -48,7 +48,7 @@ class Solution {
                 shiftedGrid[newRow][newCol] = grid[r][c]
             }
         }
-        
+
         return shiftedGrid
     }
 

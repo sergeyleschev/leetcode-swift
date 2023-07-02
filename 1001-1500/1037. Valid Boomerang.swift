@@ -22,26 +22,26 @@ class Solution {
     func isBoomerang(_ points: [[Int]]) -> Bool {
         var i = 0
         var preGradient: Float = 0
-        
+
         while i < points.count - 1 {
             let point1 = points[i]
             let point2 = points[i + 1]
             var gradient: Float = 0
-            
+
             if point1[0] == point2[0], point1[1] == point2[1] { return false }
-            
+
             if point2[0] - point1[0] == 0 {
                 gradient = Float(Int.max)
             } else {
                 gradient = Float((point2[1] - point1[1])) / Float((point2[0] - point1[0]))
             }
-            
+
             if i > 0 && gradient == preGradient { return false }
             preGradient = gradient
             i += 1
         }
-        
+
         return true
     }
-    
+
 }

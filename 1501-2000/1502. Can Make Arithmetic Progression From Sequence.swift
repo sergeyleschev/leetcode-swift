@@ -24,8 +24,10 @@ class Solution {
         guard arr.count > 2 else { return true }
         let sortArray = arr.sorted()
         let tmp = sortArray[1] - sortArray[0]
-        
-        for i in 1..<sortArray.count - 1 where sortArray[i + 1] - sortArray[i] != tmp { return false }
+
+        for i in 1..<sortArray.count - 1 where sortArray[i + 1] - sortArray[i] != tmp {
+            return false
+        }
         return true
     }
 

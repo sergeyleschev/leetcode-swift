@@ -9,7 +9,7 @@ class Solution {
     // Example 1:
     // Input: nums = [1,2,2,3,1]
     // Output: 2
-    // Explanation: 
+    // Explanation:
     // The input array has a degree of 2 because both elements 1 and 2 appear twice.
     // Of the subarrays that have the same degree:
     // [1, 2, 2, 3, 1], [1, 2, 2, 3], [2, 2, 3, 1], [1, 2, 2], [2, 2, 3], [2, 2]
@@ -18,7 +18,7 @@ class Solution {
     // Example 2:
     // Input: nums = [1,2,2,3,1,4,2]
     // Output: 6
-    // Explanation: 
+    // Explanation:
     // The degree is 3 because the element 2 is repeated 3 times.
     // So [2,2,3,1,4,2] is the shortest subarray, therefore returning 6.
 
@@ -31,16 +31,16 @@ class Solution {
         var dict = [Int: (Int, Int, Int)]()
         var degreeLength = nums.count
         var maxFrequency = 0
-        
-        for i in 0 ..< nums.count {
+
+        for i in 0..<nums.count {
             if let (count, head, _) = dict[nums[i]] {
                 dict[nums[i]] = (count + 1, head, i - head + 1)
             } else {
                 dict[nums[i]] = (1, i, 1)
             }
-            
+
         }
-        
+
         for (_, value) in dict {
             if maxFrequency < value.0 {
                 degreeLength = value.2
@@ -50,8 +50,8 @@ class Solution {
                 degreeLength = min(degreeLength, value.2)
             }
         }
-        
+
         return degreeLength
     }
-    
+
 }

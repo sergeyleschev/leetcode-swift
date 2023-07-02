@@ -19,7 +19,7 @@ class Solution {
     // -2^31 <= nums[i] <= 2^31 - 1
 
     func reversePairs(_ nums: [Int]) -> Int {
-        if nums.count < 2 {return 0 }
+        if nums.count < 2 { return 0 }
         var count = 0
         var newNums = nums
 
@@ -27,13 +27,12 @@ class Solution {
         return count
     }
 
-    
-    func reversePairsSort(_ nums:inout [Int], _ left:Int, _ right:Int, count:inout Int) -> Void {
+    func reversePairsSort(_ nums: inout [Int], _ left: Int, _ right: Int, count: inout Int) {
         if left == right { return }
-        let mid = left + (right - left)/2
+        let mid = left + (right - left) / 2
 
         reversePairsSort(&nums, left, mid, count: &count)
-        reversePairsSort(&nums, mid+1, right, count: &count)
+        reversePairsSort(&nums, mid + 1, right, count: &count)
 
         var i = left
         var j = mid + 1
@@ -66,5 +65,5 @@ class Solution {
 
         for k in 0..<newNums.count { nums[left + k] = newNums[k] }
     }
-    
+
 }

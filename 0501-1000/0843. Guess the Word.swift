@@ -1,10 +1,8 @@
-/**
- * // This is the Master's API interface.
- * // You should not implement it, or speculate about its implementation
- * class Master {
- *     public func guess(word: String) -> Int {}
- * }
- */
+/// // This is the Master's API interface.
+/// // You should not implement it, or speculate about its implementation
+/// class Master {
+///     public func guess(word: String) -> Int {}
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -38,15 +36,15 @@ class Solution {
     // All the strings of wordlist are unique.
     // secret exists in wordlist.
     // numguesses == 10
-    
+
     func findSecretWord(_ wordlist: [String], _ master: Master) {
         var possible = wordlist
-        
+
         while let word = possible.randomElement() {
             let matches = master.guess(word)
-            if matches == 6 { return } // finded 
+            if matches == 6 { return }  // finded
             var nextTry = [String]()
-            
+
             for next in possible {
                 guard next != word else { continue }
                 var i = word.startIndex
@@ -64,5 +62,5 @@ class Solution {
             possible = nextTry
         }
     }
-    
+
 }

@@ -37,7 +37,7 @@ class Solution {
     // - Complexity:
     //   - time: O(log^2 n), where n is the given N.
     //   - space: O(log n), where n is the given N.
-    
+
     func reorderedPowerOf2(_ N: Int) -> Bool {
         let a = count(N)
         for i in 0..<31 {
@@ -46,12 +46,11 @@ class Solution {
         }
         return false
     }
-    
 
     private func count(_ n: Int) -> [Int] {
         var n = n
         var ans = [Int](repeating: 0, count: 10)
-        
+
         while n > 0 {
             ans[n % 10] += 1
             n /= 10

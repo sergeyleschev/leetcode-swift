@@ -27,7 +27,7 @@ class MyLinkedList {
     // myLinkedList.addAtIndex(1, 2);    // linked list becomes 1->2->3
     // myLinkedList.get(1);              // return 2
     // myLinkedList.deleteAtIndex(1);    // now the linked list is 1->3
-    // myLinkedList.get(1);              // return 3 
+    // myLinkedList.get(1);              // return 3
 
     // Constraints:
     // 0 <= index, val <= 1000
@@ -44,12 +44,9 @@ class MyLinkedList {
         }
     }
 
-
     private var head: Node?
 
-
     init() { head = nil }
-
 
     func get(_ index: Int) -> Int {
         var index = index
@@ -63,11 +60,9 @@ class MyLinkedList {
         return temp?.val ?? -1
     }
 
-
     func addAtHead(_ val: Int) {
         head = Node(val: val, next: head)
     }
-
 
     func addAtTail(_ val: Int) {
         var tail = head
@@ -80,7 +75,6 @@ class MyLinkedList {
             tail?.next = Node(val: val, next: nil)
         }
     }
-
 
     func addAtIndex(_ index: Int, _ val: Int) {
         var index = index
@@ -99,7 +93,6 @@ class MyLinkedList {
             prev?.next = Node(val: val, next: temp)
         }
     }
-
 
     func deleteAtIndex(_ index: Int) {
         var index = index

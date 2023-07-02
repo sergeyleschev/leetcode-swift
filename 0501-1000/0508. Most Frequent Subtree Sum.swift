@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -34,10 +32,9 @@ class Solution {
     // -10^5 <= Node.val <= 10^5
 
     func findFrequentTreeSum(_ root: TreeNode?) -> [Int] {
-        var dic = Dictionary<Int,Int>()
-        var res = Array<Int>()
-        
-        
+        var dic = [Int: Int]()
+        var res = [Int]()
+
         func traversalTree(_ root: TreeNode?) -> Int {
             guard let root = root else { return 0 }
             let left = traversalTree(root.left)
@@ -46,15 +43,15 @@ class Solution {
             dic[sum] = (dic[sum] ?? 0) + 1
             return sum
         }
-        
+
         _ = traversalTree(root)
 
         let max = dic.values.max()
-        for (k,_) in dic {
+        for (k, _) in dic {
             if dic[k] == max { res.append(k) }
         }
-        
+
         return res
     }
-    
+
 }

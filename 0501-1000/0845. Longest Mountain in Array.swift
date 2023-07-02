@@ -28,7 +28,7 @@ class Solution {
     // Constraints:
     // 1 <= arr.length <= 10^4
     // 0 <= arr[i] <= 10^4
- 
+
     // Follow up:
     // Can you solve it using only one pass?
     // Can you solve it in O(1) space?
@@ -36,7 +36,7 @@ class Solution {
     // - Complexity:
     //     - time: O(n), where n is the length of `A`.
     //     - space: O(1), only constant space is used.
-    
+
     func longestMountain(_ A: [Int]) -> Int {
         guard A.count >= 3 else { return 0 }
         var ans = 0

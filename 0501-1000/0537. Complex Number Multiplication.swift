@@ -23,27 +23,32 @@ class Solution {
     // num1 and num2 are valid complex numbers.
 
     func complexNumberMultiply(_ a: String, _ b: String) -> String {
-        var aInt = 0,bInt = 0,cInt = 0,dInt = 0
-        
+        var aInt = 0
+        var bInt = 0
+        var cInt = 0
+        var dInt = 0
+
         (aInt, bInt) = self.stringToint(a)
         (cInt, dInt) = self.stringToint(b)
 
         return String(aInt * cInt - bInt * dInt) + "+" + String(bInt * cInt + aInt * dInt) + "i"
     }
-    
-    
-    func stringToint(_ str:String) -> (Int,Int) {
+
+    func stringToint(_ str: String) -> (Int, Int) {
         var real = ""
         var vir = ""
-        
-        for (i,k) in str.enumerated() {
+
+        for (i, k) in str.enumerated() {
             if k == "+" {
-                real = String(str[..<str.index(str.startIndex, offsetBy:i)])
-                vir = String(str[str.index(str.startIndex, offsetBy: i + 1)..<str.index(before: str.endIndex)])
+                real = String(str[..<str.index(str.startIndex, offsetBy: i)])
+                vir = String(
+                    str[
+                        str.index(str.startIndex, offsetBy: i + 1)..<str.index(before: str.endIndex)
+                    ])
             }
         }
-        
+
         return (Int(real)!, Int(vir)!)
     }
-    
+
 }

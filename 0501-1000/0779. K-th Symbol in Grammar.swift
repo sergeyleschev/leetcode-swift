@@ -40,12 +40,12 @@ class Solution {
 
     // f(N, K) = f(N - 1, K), if K <= N / 2 or !f(N - 1, N - K) if K > N / 2
 
-    func kthGrammar(_ N: Int, _ K: Int) -> Int { kthGrammar3(N, K)  }
+    func kthGrammar(_ N: Int, _ K: Int) -> Int { kthGrammar3(N, K) }
 
     func kthGrammar3(_ N: Int, _ K: Int) -> Int {
         if N == 1 { return 0 }
-        if K % 2 == 0 { return kthGrammar(N - 1, K / 2) == 0 ? 1: 0 }
-        return kthGrammar(N - 1, (K + 1) / 2) == 0 ? 0: 1
+        if K % 2 == 0 { return kthGrammar(N - 1, K / 2) == 0 ? 1 : 0 }
+        return kthGrammar(N - 1, (K + 1) / 2) == 0 ? 0 : 1
     }
 
 }

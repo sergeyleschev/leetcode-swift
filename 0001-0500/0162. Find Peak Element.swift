@@ -25,10 +25,10 @@ class Solution {
 
     func findPeakElement(_ nums: [Int]) -> Int {
         if nums.count == 1 { return 0 }
-        
+
         var left = 0
         var right = nums.count - 1
-        
+
         while left < right {
             var mid = (left + right) / 2
             if nums[mid] < nums[mid + 1] {
@@ -37,8 +37,8 @@ class Solution {
                 right = mid
             }
         }
-        
+
         return left
     }
-    
+
 }

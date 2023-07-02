@@ -45,7 +45,7 @@ class Solution {
         let numStr = "\(num)"
         let a: Int
         let b: Int
-        
+
         if let victim = numStr.first(where: { $0 != "9" }) {
             a = Int(numStr.replacingOccurrences(of: "\(victim)", with: "9"))!
         } else {

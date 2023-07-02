@@ -26,15 +26,17 @@ class Solution {
         let upperCaseChars = CharacterSet.uppercaseLetters
 
         for c in str {
-            let val =  c.asciiValue ?? 0
+            let val = c.asciiValue ?? 0
             if upperCaseChars.contains(UnicodeScalar(val)) {
                 if val >= 65 && val <= 97 {
                     result.append(Character(UnicodeScalar(val + 32)))
                 }
-            } else { result.append(c) }
+            } else {
+                result.append(c)
+            }
         }
 
-        return result.map{ String($0) }.joined()
+        return result.map { String($0) }.joined()
     }
-    
+
 }

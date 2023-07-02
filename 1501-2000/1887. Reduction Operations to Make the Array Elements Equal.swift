@@ -43,14 +43,14 @@ class Solution {
 
         for num in nums { counter[num] += 1 }
 
-        for  idx in stride(from: 50001, through: 1, by: -1) {
+        for idx in stride(from: 50001, through: 1, by: -1) {
             guard idx > minEle else { break }
             if counter[idx] > 0 {
                 pre += counter[idx]
-                ans += pre 
+                ans += pre
             }
         }
         return ans
     }
-    
+
 }

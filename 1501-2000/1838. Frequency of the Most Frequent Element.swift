@@ -36,7 +36,7 @@ class Solution {
         var ans = 1
         var l = 0
         var total = 0
-        
+
         for r in 1..<nums.count {
             total += (sortedNums[r] - sortedNums[r - 1]) * (r - l)
             while total > k {
@@ -47,5 +47,5 @@ class Solution {
         }
         return ans
     }
-    
+
 }

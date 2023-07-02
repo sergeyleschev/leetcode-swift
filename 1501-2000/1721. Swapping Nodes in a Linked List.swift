@@ -1,13 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init() { self.val = 0; self.next = nil; }
- *     public init(_ val: Int) { self.val = val; self.next = nil; }
- *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init() { self.val = 0; self.next = nil; }
+///     public init(_ val: Int) { self.val = val; self.next = nil; }
+///     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -51,17 +49,17 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of nodes in the list.
     //   - space: O(1), only constant space is used.
-    
+
     func swapNodes(_ head: ListNode?, _ k: Int) -> ListNode? {
         var listLength = 0
         var frontNode: ListNode? = nil
         var endNode: ListNode? = nil
         var currentNode = head
-        
+
         while currentNode != nil {
             listLength += 1
             if endNode != nil { endNode = endNode?.next }
-            
+
             if listLength == k {
                 frontNode = currentNode
                 endNode = head
@@ -69,12 +67,12 @@ class Solution {
 
             currentNode = currentNode?.next
         }
-        
+
         guard let frontVal = frontNode?.val, let endVal = endNode?.val else { return head }
-        
+
         frontNode?.val = endVal
         endNode?.val = frontVal
-        
+
         return head
     }
 

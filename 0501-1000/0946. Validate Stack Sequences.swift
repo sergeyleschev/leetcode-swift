@@ -25,23 +25,31 @@ class Solution {
 
     func validateStackSequences(_ pushed: [Int], _ popped: [Int]) -> Bool {
         if pushed.isEmpty, popped.isEmpty { return true }
-        guard !pushed.isEmpty && !popped.isEmpty && pushed.count == popped.count else { return false }
+        guard !pushed.isEmpty && !popped.isEmpty && pushed.count == popped.count else {
+            return false
+        }
         var stack = [Int]()
         var pushIndex = 0
-        
+
         for val in popped {
-            if stack.last == val { stack.removeLast(); continue }
+            if stack.last == val {
+                stack.removeLast()
+                continue
+            }
             if pushIndex >= pushed.count { return false }
             var exist = false
             while pushIndex < pushed.count {
                 let pushVal = pushed[pushIndex]
                 pushIndex += 1
-                if pushVal == val { exist = true; break }
+                if pushVal == val {
+                    exist = true
+                    break
+                }
                 stack.append(pushVal)
             }
             if !exist { return false }
         }
-        
+
         return true
     }
 

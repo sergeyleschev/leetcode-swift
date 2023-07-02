@@ -38,20 +38,17 @@ class FreqStack {
     var freq2List: [Int: [Int]]
     var highestFreq: Int
 
-
     init() {
         freq = [:]
         freq2List = [:]
         highestFreq = 0
     }
-    
 
     func push(_ x: Int) {
         freq[x, default: 0] += 1
         if freq[x, default: 0] > highestFreq { highestFreq = freq[x, default: 0] }
         freq2List[freq[x, default: 0], default: []].append(x)
     }
-    
 
     func pop() -> Int {
         if let element = freq2List[highestFreq, default: []].popLast() {

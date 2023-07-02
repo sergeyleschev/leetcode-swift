@@ -18,14 +18,14 @@ class Solution {
     // Example 1:
     // Input: tops = [2,1,2,4,2,2], bottoms = [5,2,6,2,3,2]
     // Output: 2
-    // Explanation: 
+    // Explanation:
     // The first figure represents the dominoes as given by tops and bottoms: before we do any rotations.
     // If we rotate the second and fourth dominoes, we can make every value in the top row equal to 2, as indicated by the second figure.
 
     // Example 2:
     // Input: tops = [3,5,1,2,3], bottoms = [3,6,3,3,4]
     // Output: -1
-    // Explanation: 
+    // Explanation:
     // In this case, it is not possible to rotate the dominoes to make one row of values equal.
 
     // Constraints:
@@ -35,13 +35,12 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of A and the length of B.
     //   - space: O(1), only constant space is used.
-    
+
     func minDominoRotations(_ A: [Int], _ B: [Int]) -> Int {
         let ans = check(A[0], B, A)
         if ans != -1 || A[0] == B[0] { return ans }
         return check(B[0], B, A)
     }
-
 
     private func check(_ x: Int, _ A: [Int], _ B: [Int]) -> Int {
         var ansA = 0
@@ -50,8 +49,7 @@ class Solution {
         for i in 0..<A.count {
             guard A[i] == x || B[i] == x else { return -1 }
 
-            if A[i] != x { ansA += 1 } 
-            else if B[i] != x { ansB += 1 }
+            if A[i] != x { ansA += 1 } else if B[i] != x { ansB += 1 }
         }
 
         return min(ansA, ansB)

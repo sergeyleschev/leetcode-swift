@@ -24,7 +24,7 @@ class Solution {
     // Input: intervals = [[1,2],[2,3]]
     // Output: 0
     // Explanation: You don't need to remove any of the intervals since they're already non-overlapping.
-     
+
     // Constraints:
     // 1 <= intervals.length <= 2 * 10^4
     // intervals[i].length == 2
@@ -33,7 +33,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n log(n)), where n is the number of intervals.
     //   - space: O(n), where n is the number of intervals.
-    
+
     func eraseOverlapIntervals(_ intervals: [[Int]]) -> Int {
         guard !intervals.isEmpty else { return 0 }
         let intervals = intervals.sorted(by: { $0[1] != $1[1] ? $0[1] < $1[1] : $0[0] < $1[0] })

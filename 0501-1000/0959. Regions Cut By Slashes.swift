@@ -63,27 +63,23 @@ class Solution {
                 if j != n - 1 { union.unit(base + 1, (i * n + j + 1) * 4 + 3) }
             }
         }
-        
+
         return union.setCount
     }
-    
-    
+
     private class Union {
         private var union: [Int] = []
         var setCount: Int
-        
 
         init(_ n: Int) {
             setCount = n
             for i in 0..<n { union.append(i) }
         }
-        
 
         func find(_ i: Int) -> Int {
             if union[i] != i { union[i] = find(union[i]) }
             return union[i]
         }
-        
 
         func unit(_ i1: Int, _ i2: Int) {
             if find(i1) != find(i2) {

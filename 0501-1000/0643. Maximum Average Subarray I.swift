@@ -24,13 +24,13 @@ class Solution {
         var sum = 0
 
         for i in 0..<k { sum += nums[i] }
-        
+
         var max = sum
         for j in k..<nums.count {
             sum += nums[j] - nums[j - k]
             max = max > sum ? max : sum
         }
-        
+
         return Double(max) / Double(k)
     }
 

@@ -11,7 +11,7 @@ class Solution {
     // Example 1:
     // Input: customers = [1,0,1,2,1,1,7,5], grumpy = [0,1,0,1,0,1,0,1], minutes = 3
     // Output: 16
-    // Explanation: The bookstore owner keeps themselves not grumpy for the last 3 minutes. 
+    // Explanation: The bookstore owner keeps themselves not grumpy for the last 3 minutes.
     // The maximum number of customers that can be satisfied = 1 + 1 + 1 + 1 + 7 + 5 = 16.
 
     // Note:
@@ -23,21 +23,22 @@ class Solution {
         var total = 0
         var increase = 0
         var ans = 0
-        
+
         for i in 0..<customers.count {
-            let customer = customers[i], isGrumpy = grumpy[i] == 1
+            let customer = customers[i]
+            let isGrumpy = grumpy[i] == 1
             if !isGrumpy { total += customer }
             if i < X && isGrumpy { increase += customer }
         }
-        
+
         ans = increase
-        
+
         for i in X..<customers.count {
             increase = increase - customers[i - X] * grumpy[i - X] + customers[i] * grumpy[i]
             ans = max(increase, ans)
         }
-        
+
         return total + ans
     }
-    
+
 }

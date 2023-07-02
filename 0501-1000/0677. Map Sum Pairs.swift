@@ -16,9 +16,9 @@ class MapSum {
     // [null, null, 3, null, 5]
     // Explanation
     // MapSum mapSum = new MapSum();
-    // mapSum.insert("apple", 3);  
+    // mapSum.insert("apple", 3);
     // mapSum.sum("ap");           // return 3 (apple = 3)
-    // mapSum.insert("app", 2);    
+    // mapSum.insert("app", 2);
     // mapSum.sum("ap");           // return 5 (apple + app = 3 + 2 = 5)
 
     // Constraints:
@@ -35,17 +35,14 @@ class MapSum {
         var val: Int = 0
         var child: [Character: TrieNode] = [:]
     }
-    
-    
-    var root: TrieNode
 
+    var root: TrieNode
 
     /** Initialize your data structure here. */
     init() {
         root = TrieNode()
     }
 
-    
     func insert(_ key: String, _ val: Int) {
         var cur = root
         for c in key {
@@ -54,7 +51,6 @@ class MapSum {
         }
         cur.val = val
     }
-    
 
     func sum(_ prefix: String) -> Int {
         var cur = root
@@ -64,7 +60,6 @@ class MapSum {
         }
         return getChildSum(cur)
     }
-    
 
     func getChildSum(_ node: TrieNode?) -> Int {
         guard let node = node else { return 0 }

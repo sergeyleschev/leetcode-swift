@@ -32,7 +32,7 @@ class TweetCounts {
     // tweetCounts.getTweetCountsPerFrequency("minute", "tweet3", 0, 60); // return [2,1]; chunk [0,59] had 2 tweets, chunk [60,60] had 1 tweet
     // tweetCounts.recordTweet("tweet3", 120);                            // New tweet "tweet3" at time 120
     // tweetCounts.getTweetCountsPerFrequency("hour", "tweet3", 0, 210);  // return [4]; chunk [0,210] had 4 tweets
-     
+
     // Constraints:
     // 0 <= time, startTime, endTime <= 10^9
     // 0 <= endTime - startTime <= 10^4
@@ -42,7 +42,7 @@ class TweetCounts {
         case day
         case minute
         case hour
-        
+
         var seconds: Int {
             switch self {
             case .day: return 60 * 60 * 24
@@ -51,18 +51,18 @@ class TweetCounts {
             }
         }
     }
-    
 
-    private var records = [String:[Int]]()
+    private var records = [String: [Int]]()
 
+    init() {}
 
-    init() { }
-    
+    func recordTweet(_ tweetName: String, _ time: Int) {
+        records[tweetName, default: [Int]()].append(time)
+    }
 
-    func recordTweet(_ tweetName: String, _ time: Int) { records[tweetName,default: [Int]()].append(time) }
-    
-
-    func getTweetCountsPerFrequency(_ freq: String, _ tweetName: String, _ startTime: Int, _ endTime: Int) -> [Int] {
+    func getTweetCountsPerFrequency(
+        _ freq: String, _ tweetName: String, _ startTime: Int, _ endTime: Int
+    ) -> [Int] {
         guard let times = records[tweetName], !times.isEmpty else { return [] }
         let frequency = Frequency(rawValue: freq)!.seconds
         var ans = [Int](repeating: 0, count: (endTime - startTime) / frequency + 1)
@@ -72,7 +72,7 @@ class TweetCounts {
         return ans
     }
 
- }
+}
 
 /**
  * Your TweetCounts object will be instantiated and called as such:

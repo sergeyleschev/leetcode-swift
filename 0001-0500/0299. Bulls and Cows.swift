@@ -11,7 +11,7 @@ class Solution {
     // The hint should be formatted as "xAyB", where x is the number of bulls and y is the number of cows. Note that both secret and guess may contain duplicate digits.
 
     // Calculates bulls and cows hint according to the secret number and a guess.
-    
+
     // - Parameters:
     //   - secret: The secret number.
     //   - guess: The guess number.
@@ -58,8 +58,11 @@ class Solution {
         let g = Array(guess)
 
         for (i, s) in secret.enumerated() {
-            guard s != g[i] else { bulls += 1; continue }
-            
+            guard s != g[i] else {
+                bulls += 1
+                continue
+            }
+
             if tmp[s, default: 0] < 0 { cows += 1 }
             if tmp[g[i], default: 0] > 0 { cows += 1 }
 

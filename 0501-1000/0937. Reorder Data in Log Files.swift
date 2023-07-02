@@ -53,7 +53,7 @@ class Solution {
             }
         }
 
-        letters.sort { $0.value <= $1.value } // only letter-logs's values(ignore id) need to be ordered lexicographically
+        letters.sort { $0.value <= $1.value }  // only letter-logs's values(ignore id) need to be ordered lexicographically
 
         for letter in letters { orderedLetters.append(letter.key + " " + letter.value) }
         return orderedLetters + orderedDigits

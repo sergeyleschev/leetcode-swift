@@ -10,14 +10,14 @@ class Solution {
     // Example 1:
     // Input: s = "cba", k = 1
     // Output: "acb"
-    // Explanation: 
+    // Explanation:
     // In the first move, we move the 1st character ("c") to the end, obtaining the string "bac".
     // In the second move, we move the 1st character ("b") to the end, obtaining the final result "acb".
 
     // Example 2:
     // Input: s = "baaca", k = 3
     // Output: "aaabc"
-    // Explanation: 
+    // Explanation:
     // In the first move, we move the 1st character ("b") to the end, obtaining the string "aacab".
     // In the second move, we move the 3rd character ("c") to the end, obtaining the final result "aaabc".
 
@@ -30,16 +30,15 @@ class Solution {
         return String(s.sorted())
     }
 
-
     private func getAnsOnKEqualToOne(of s: String) -> String {
         var ans = s
         var s1 = s
-        
+
         for _ in 0..<s.count {
             s1.append(s1.removeFirst())
             if s1 < ans { ans = s1 }
         }
-        
+
         return ans
     }
 

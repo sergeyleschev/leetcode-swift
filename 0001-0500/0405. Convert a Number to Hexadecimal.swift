@@ -20,10 +20,10 @@ class Solution {
 
     func toHex(_ num: Int) -> String {
         if case 0..<10 = num { return "\(num)" }
-        
+
         var n = num
-        if num < 0 { n += 4294967296 }
-        
+        if num < 0 { n += 4_294_967_296 }
+
         var res = ""
         while n > 0 {
             let digit = n % 16
@@ -34,8 +34,8 @@ class Solution {
             }
             n /= 16
         }
-        
+
         return res
     }
-    
+
 }

@@ -37,12 +37,19 @@ class Solution {
         return ans
     }
 
-    
-    private func dfs(_ ans: inout [[String]], str: [Character], n: Int, start: Int, _ currentList: inout [String], _ dp: inout [[Bool]]) {
-        guard start < n else { ans.append(currentList); return }
-            
+    private func dfs(
+        _ ans: inout [[String]], str: [Character], n: Int, start: Int,
+        _ currentList: inout [String], _ dp: inout [[Bool]]
+    ) {
+        guard start < n else {
+            ans.append(currentList)
+            return
+        }
+
         for end in start..<n {
-            guard str[start] == str[end], (end - start <= 2 || dp[start + 1][end - 1]) else { continue }
+            guard str[start] == str[end], end - start <= 2 || dp[start + 1][end - 1] else {
+                continue
+            }
             dp[start][end] = true
             currentList.append(String(str[start...end]))
             dfs(&ans, str: str, n: n, start: end + 1, &currentList, &dp)

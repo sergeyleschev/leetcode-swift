@@ -31,11 +31,11 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of nums.
     //   - space: O(n), where n is the length of nums.
-    
+
     func mostCompetitive(_ nums: [Int], _ k: Int) -> [Int] {
         var tmp = [Int]()
         var count = nums.count - k
-        
+
         for num in nums {
             while !tmp.isEmpty, let last = tmp.last, last > num, count > 0 {
                 tmp.removeLast()
@@ -43,7 +43,7 @@ class Solution {
             }
             tmp.append(num)
         }
-        
+
         return Array(tmp[0..<k])
     }
 

@@ -25,7 +25,7 @@ class Solution {
 
     // Example 4:
     // Input: nums = [1,1,2]
-    // Output: 1 
+    // Output: 1
 
     // Constraints:
     // 2 <= n <= 10^5

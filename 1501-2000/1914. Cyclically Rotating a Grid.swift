@@ -37,7 +37,7 @@ class Solution {
             var rows = [Int]()
             var cols = [Int]()
             var values = [Int]()
-            
+
             for i in cycle..<(m - 1 - cycle) {
                 rows.append(i)
                 cols.append(cycle)
@@ -58,7 +58,7 @@ class Solution {
                 cols.append(j)
                 values.append(grid[cycle][j])
             }
-            
+
             let total = values.count
             let kk = k % total
             for i in 0..<total {

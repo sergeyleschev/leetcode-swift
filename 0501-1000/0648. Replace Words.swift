@@ -42,7 +42,7 @@ class Solution {
         let words = sentence.components(separatedBy: " ")
         var newSentence = ""
         let dictSet = Set(dict)
-        
+
         for word in words {
             var newWords = ""
             var index = 0
@@ -50,12 +50,15 @@ class Solution {
                 newWords += String(char)
                 index += 1
                 if dictSet.contains(newWords) { break }
-                if index > 100 { newWords = word; break }
+                if index > 100 {
+                    newWords = word
+                    break
+                }
             }
             newSentence += " \(newWords)"
         }
-        
+
         return newSentence.trimmingCharacters(in: .whitespacesAndNewlines)
     }
-    
+
 }

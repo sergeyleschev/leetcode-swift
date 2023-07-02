@@ -28,24 +28,25 @@ class Solution {
     // date represents a calendar date between Jan 1st, 1900 and Dec 31, 2019.
 
     func dayOfYear(_ date: String) -> Int {
-        let parts =  date.components(separatedBy: CharacterSet(charactersIn: "-"))
+        let parts = date.components(separatedBy: CharacterSet(charactersIn: "-"))
         let days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
         let dateNumer = parts.map { (str) -> Int in Int(str)! }
         var totalDays = 0
 
-        for month in 1..<dateNumer[1]{
+        for month in 1..<dateNumber[1] {
             if month == 2 {
-                totalDays += (isLeapYear(year: dateNumer[0]) ? 29 : 28)
+                totalDays += (isLeapYear(year: dateNumber[0]) ? 29 : 28)
                 continue
             }
-            totalDays += days[month  - 1]
+            totalDays += days[month - 1]
         }
-        
-        totalDays += dateNumer[2]
+
+        totalDays += dateNumber[2]
         return totalDays
     }
 
-
-    private func isLeapYear(year: Int) -> Bool { (year % 100 != 0 && year % 4 == 0) || (year % 400 == 0 ) }
+    private func isLeapYear(year: Int) -> Bool {
+        (year % 100 != 0 && year % 4 == 0) || (year % 400 == 0)
+    }
 
 }

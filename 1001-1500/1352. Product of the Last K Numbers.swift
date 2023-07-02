@@ -28,8 +28,8 @@ class ProductOfNumbers {
     // productOfNumbers.getProduct(3); // return 40. The product of the last 3 numbers is 2 * 5 * 4 = 40
     // productOfNumbers.getProduct(4); // return 0. The product of the last 4 numbers is 0 * 2 * 5 * 4 = 0
     // productOfNumbers.add(8);        // [3,0,2,5,4,8]
-    // productOfNumbers.getProduct(2); // return 32. The product of the last 2 numbers is 4 * 8 = 32 
-     
+    // productOfNumbers.getProduct(2); // return 32. The product of the last 2 numbers is 4 * 8 = 32
+
     // Constraints:
     // There will be at most 40000 operations considering both add and getProduct.
     // 0 <= num <= 100
@@ -40,10 +40,8 @@ class ProductOfNumbers {
 
     private var products: [Int]
 
-    
     init() { products = [] }
 
-    
     func add(_ num: Int) {
         if num == 0 {
             products = []
@@ -56,7 +54,6 @@ class ProductOfNumbers {
         }
     }
 
-    
     func getProduct(_ k: Int) -> Int {
         if k > products.count {
             return 0
@@ -66,7 +63,7 @@ class ProductOfNumbers {
             return products.last! / products[products.count - k - 1]
         }
     }
-    
+
 }
 
 /**

@@ -37,7 +37,6 @@ class Solution {
     //   - time: O(n^3)
     //   - space: O(n^3)
 
-
     func cherryPickup(_ grid: [[Int]]) -> Int {
         let n = grid.count
         if n == 1 { return grid[0][0] == 1 ? 1 : 0 }
@@ -45,16 +44,20 @@ class Solution {
         // dp[r1][c1][c2] be the most number of cherries obtained by
         // 2 people at (r1, c1) (r2, c2) -> r2 = r1+c1-c2
         // r1 + c1 = r2 + c2 = t which means 2 people walk t steps
-        var dp: [[[Int?]]] = Array(repeating: Array(repeating: Array(repeating: nil, count: n), count: n), count: n)
+        var dp: [[[Int?]]] = Array(
+            repeating: Array(repeating: Array(repeating: nil, count: n), count: n), count: n)
 
         return max(0, check(0, 0, 0, n, grid, &dp))
     }
 
-
-    func check(_ r1: Int, _ c1: Int, _ c2: Int, _ n: Int, _ grid: [[Int]], _ dp: inout [[[Int?]]]) -> Int {
+    func check(_ r1: Int, _ c1: Int, _ c2: Int, _ n: Int, _ grid: [[Int]], _ dp: inout [[[Int?]]])
+        -> Int
+    {
         let r2 = r1 + c1 - c2
         // invalid case
-        if r1 == n || c1 == n || r2 == n || c2 == n || grid[r1][c1] == -1 || grid[r2][c2] == -1 { return Int.min }
+        if r1 == n || c1 == n || r2 == n || c2 == n || grid[r1][c1] == -1 || grid[r2][c2] == -1 {
+            return Int.min
+        }
 
         if r1 == n - 1, c1 == n - 1 { return grid[r1][c1] }
         if let val = dp[r1][c1][c2] { return val }

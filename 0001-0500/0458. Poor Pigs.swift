@@ -39,7 +39,7 @@ class Solution {
     // - Complexity:
     //   - time: O(1), only constant time is used.
     //   - space: O(1), only constant space is used.
-    
+
     func poorPigs(_ buckets: Int, _ minutesToDie: Int, _ minutesToTest: Int) -> Int {
         let states = minutesToTest / minutesToDie + 1
         return Int(ceil(log(Double(buckets)) / log(Double(states))))

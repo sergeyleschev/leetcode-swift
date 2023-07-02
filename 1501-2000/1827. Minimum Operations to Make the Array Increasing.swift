@@ -36,9 +36,11 @@ class Solution {
             if num <= last {
                 cnt += last + 1 - num
                 last = last + 1
-            } else { last = num }
+            } else {
+                last = num
+            }
         }
         return cnt
     }
-    
+
 }

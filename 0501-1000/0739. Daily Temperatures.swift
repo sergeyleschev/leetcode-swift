@@ -24,15 +24,15 @@ class Solution {
     func dailyTemperatures(_ temperatures: [Int]) -> [Int] {
         var stack = [(index: Int, value: Int)]()
         var ans = Array(repeating: 0, count: temperatures.count)
-        
+
         for (i, t) in temperatures.enumerated() {
             while !stack.isEmpty && stack.last!.value < t {
                 let top = stack.removeLast()
                 ans[top.index] = i - top.index
             }
-            stack.append((index: i,value: t))
+            stack.append((index: i, value: t))
         }
-        
+
         return ans
     }
 

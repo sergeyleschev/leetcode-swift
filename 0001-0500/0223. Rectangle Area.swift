@@ -19,27 +19,29 @@ class Solution {
     // Constraints:
     // -10^4 <= ax1, ay1, ax2, ay2, bx1, by1, bx2, by2 <= 10^4
 
-    func computeArea(_ A: Int, _ B: Int, _ C: Int, _ D: Int, _ E: Int, _ F: Int, _ G: Int, _ H: Int) -> Int {
+    func computeArea(_ A: Int, _ B: Int, _ C: Int, _ D: Int, _ E: Int, _ F: Int, _ G: Int, _ H: Int)
+        -> Int
+    {
         let areaA = computeArea(A, B, C, D)
         let areaB = computeArea(E, F, G, H)
         let areaIntersect = computeIntersectArea(A, B, C, D, E, F, G, H)
-        
+
         return areaA + areaB - areaIntersect
     }
-    
-    
+
     func computeArea(_ A: Int, _ B: Int, _ C: Int, _ D: Int) -> Int {
         abs((C - A) * (D - B))
     }
-    
-    
-    func computeIntersectArea(_ A: Int, _ B: Int, _ C: Int, _ D: Int, _ E: Int, _ F: Int, _ G: Int, _ H: Int) -> Int {
+
+    func computeIntersectArea(
+        _ A: Int, _ B: Int, _ C: Int, _ D: Int, _ E: Int, _ F: Int, _ G: Int, _ H: Int
+    ) -> Int {
         let x = [A, C, E, G].sorted()
         let y = [B, D, F, H].sorted()
         let intersectX = (x[3] - x[0]) < (abs(C - A) + abs(G - E))
         let intersectY = (y[3] - y[0]) < (abs(D - B) + abs(H - F))
-        
+
         if intersectX && intersectY { return computeArea(x[1], y[1], x[2], y[2]) } else { return 0 }
     }
-    
+
 }

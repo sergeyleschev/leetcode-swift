@@ -28,19 +28,19 @@ class Solution {
     func deleteAndEarn(_ nums: [Int]) -> Int {
         var dict = [Int: Int]()
         var maxNum = 0
-        
+
         for num in nums {
             dict[num] = (dict[num] ?? 0) + 1
             maxNum = max(maxNum, num)
         }
-        
+
         var dp = Array(repeating: 0, count: maxNum + 3)
-        
+
         for num in 1...maxNum + 1 {
             dp[num] = max(dp[num - 1], (num > 2 ? dp[num - 2] : 0) + (dict[num] ?? 0) * num)
         }
-        
+
         return dp[maxNum]
     }
-    
+
 }

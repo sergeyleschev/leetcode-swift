@@ -24,16 +24,16 @@ class Solution {
     // The number of words in s is between 1 and 9.
     // The words in s are separated by a single space.
     // s contains no leading or trailing spaces.
-    
+
     func sortSentence(_ s: String) -> String {
-        let compoments = s.split(separator: " ").map { String($0) }
-        var strs = [String](repeating: "", count: compoments.count)
+        let components = s.split(separator: " ").map { String($0) }
+        var strs = [String](repeating: "", count: components.count)
         var ans = ""
 
-        for var compoment in compoments {
-            let  order = Int(compoment.last!.asciiValue! - 49)
-            compoment.removeLast()
-            strs[order] =  compoment
+        for var component in components {
+            let order = Int(component.last!.asciiValue! - 49)
+            component.removeLast()
+            strs[order] = component
         }
 
         for str in strs { ans += str + " " }

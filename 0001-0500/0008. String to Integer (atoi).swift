@@ -12,11 +12,11 @@ class Solution {
     // Convert these digits into an integer (i.e. "123" -> 123, "0032" -> 32). If no digits were read, then the integer is 0. Change the sign as necessary (from step 2).
     // If the integer is out of the 32-bit signed integer range [-2^31, 2^31 - 1], then clamp the integer so that it remains in the range. Specifically, integers less than -2^31 should be clamped to -2^31, and integers greater than 2^31 - 1 should be clamped to 2^31 - 1.
     // Return the integer as the final result.
-    
+
     // Note:
     // Only the space character ' ' is considered a whitespace character.
     // Do not ignore any characters other than the leading whitespace or the rest of the string after the digits.
-     
+
     // Example 1:
     // Input: s = "42"
     // Output: 42
@@ -29,7 +29,7 @@ class Solution {
     //            ^
     // The parsed integer is 42.
     // Since 42 is in the range [-2^31, 2^31 - 1], the final result is 42.
-    
+
     // Example 2:
     // Input: s = "   -42"
     // Output: -42
@@ -42,7 +42,7 @@ class Solution {
     //                ^
     // The parsed integer is -42.
     // Since -42 is in the range [-2^31, 2^31 - 1], the final result is -42.
-    
+
     // Example 3:
     // Input: s = "4193 with words"
     // Output: 4193
@@ -55,7 +55,7 @@ class Solution {
     //              ^
     // The parsed integer is 4193.
     // Since 4193 is in the range [-2^31, 2^31 - 1], the final result is 4193.
-    
+
     // Example 4:
     // Input: s = "words and 987"
     // Output: 0
@@ -68,7 +68,7 @@ class Solution {
     //          ^
     // The parsed integer is 0 because no digits were read.
     // Since 0 is in the range [-2^31, 2^31 - 1], the final result is 0.
-    
+
     // Example 5:
     // Input: s = "-91283472332"
     // Output: -2147483648
@@ -81,7 +81,7 @@ class Solution {
     //                      ^
     // The parsed integer is -91283472332.
     // Since -91283472332 is less than the lower bound of the range [-2^31, 2^31 - 1], the final result is clamped to -2^31 = -2147483648.
-     
+
     // Constraints:
     // 0 <= s.length <= 200
     // s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.
@@ -101,8 +101,9 @@ class Solution {
                 if isLeading == false { isValid = false }
             case "-", "+":
                 isLeading = false
-                if isSign || nums.count > 0 { isValid = false } 
-                else {
+                if isSign || nums.count > 0 {
+                    isValid = false
+                } else {
                     isSign = true
                     isNegtive = c == "-" ? true : false
                 }
@@ -117,9 +118,15 @@ class Solution {
         for num in nums {
             if num == 0 && isLeadingZero { continue } else { isLeadingZero = false }
             res = num + 10 * res
-            
-            if isNegtive && res > Int(pow(2.0, 31)) { res = Int(pow(2.0, 31)); break }
-            if !isNegtive && res > Int(pow(2.0, 31)) - 1 { res = Int(pow(2.0, 31)) - 1; break }
+
+            if isNegtive && res > Int(pow(2.0, 31)) {
+                res = Int(pow(2.0, 31))
+                break
+            }
+            if !isNegtive && res > Int(pow(2.0, 31)) - 1 {
+                res = Int(pow(2.0, 31)) - 1
+                break
+            }
         }
 
         return isNegtive ? -1 * res : res

@@ -11,7 +11,7 @@ class Solution {
     // Example 1:
     // Input: k = 1, n = 2
     // Output: 2
-    // Explanation: 
+    // Explanation:
     // Drop the egg from floor 1. If it breaks, we know that f = 0.
     // Otherwise, drop the egg from floor 2. If it breaks, we know that f = 1.
     // If it does not break, then we know f = 2.
@@ -31,14 +31,13 @@ class Solution {
 
     func superEggDrop(_ K: Int, _ N: Int) -> Int {
         var memo = Array(repeating: Array(repeating: -1, count: N + 1), count: K + 1)
-        
 
         func dp(_ K: Int, _ N: Int) -> Int {
             if N == 0 { return 0 }
             if K == 1 { return N }
-            
+
             if memo[K][N] != -1 { return memo[K][N] }
-            
+
             var count = Int.max
             var lo = 1
             var hi = N
@@ -55,11 +54,11 @@ class Solution {
                     count = min(count, safe + 1)
                 }
             }
-            
+
             memo[K][N] = count
             return count
         }
-        
+
         return dp(K, N)
     }
 

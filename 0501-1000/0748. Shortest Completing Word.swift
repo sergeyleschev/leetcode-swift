@@ -46,14 +46,17 @@ class Solution {
         var dict = [Character: Int]()
         var ans = ""
         let express = try! NSRegularExpression(pattern: "[a-z]", options: .caseInsensitive)
-        
+
         for n in licensePlate.lowercased() {
             let s = String(n)
-            if express.matches(in: s, options: NSRegularExpression.MatchingOptions.reportProgress, range: NSRange(location: 0, length: 1)).count >= 1{
+            if express.matches(
+                in: s, options: NSRegularExpression.MatchingOptions.reportProgress,
+                range: NSRange(location: 0, length: 1)
+            ).count >= 1 {
                 dict[n] = (dict[n] ?? 0) + 1
             }
         }
-        
+
         for word in words {
             var tmp = dict
             for char in word {
@@ -67,7 +70,7 @@ class Solution {
                 ans = ans.count <= word.count ? ans : word
             }
         }
-        
+
         return ans
     }
 

@@ -9,15 +9,15 @@ class Solution {
 
     // Example 1:
     // Input: restaurants = [[1,4,1,40,10],[2,8,0,50,5],[3,8,1,30,4],[4,10,0,10,3],[5,1,1,15,1]], veganFriendly = 1, maxPrice = 50, maxDistance = 10
-    // Output: [3,1,5] 
-    // Explanation: 
+    // Output: [3,1,5]
+    // Explanation:
     // The restaurants are:
     // Restaurant 1 [id=1, rating=4, veganFriendly=1, price=40, distance=10]
     // Restaurant 2 [id=2, rating=8, veganFriendly=0, price=50, distance=5]
     // Restaurant 3 [id=3, rating=8, veganFriendly=1, price=30, distance=4]
     // Restaurant 4 [id=4, rating=10, veganFriendly=0, price=10, distance=3]
-    // Restaurant 5 [id=5, rating=1, veganFriendly=1, price=15, distance=1] 
-    // After filter restaurants with veganFriendly = 1, maxPrice = 50 and maxDistance = 10 we have restaurant 3, restaurant 1 and restaurant 5 (ordered by rating from highest to lowest). 
+    // Restaurant 5 [id=5, rating=1, veganFriendly=1, price=15, distance=1]
+    // After filter restaurants with veganFriendly = 1, maxPrice = 50 and maxDistance = 10 we have restaurant 3, restaurant 1 and restaurant 5 (ordered by rating from highest to lowest).
 
     // Example 2:
     // Input: restaurants = [[1,4,1,40,10],[2,8,0,50,5],[3,8,1,30,4],[4,10,0,10,3],[5,1,1,15,1]], veganFriendly = 0, maxPrice = 50, maxDistance = 10
@@ -36,16 +36,22 @@ class Solution {
     // veganFriendlyi and veganFriendly are 0 or 1.
     // All idi are distinct.
 
-    func filterRestaurants(_ restaurants: [[Int]], _ veganFriendly: Int, _ maxPrice: Int, _ maxDistance: Int) -> [Int] {
+    func filterRestaurants(
+        _ restaurants: [[Int]], _ veganFriendly: Int, _ maxPrice: Int, _ maxDistance: Int
+    ) -> [Int] {
         var sortedRestaurants = [(id: Int, rating: Int)]()
-        
+
         restaurants.forEach { rest in
-            if (veganFriendly == 0 || veganFriendly == rest[2]) && rest[3] <= maxPrice && rest[4] <= maxDistance {
+            if (veganFriendly == 0 || veganFriendly == rest[2]) && rest[3] <= maxPrice
+                && rest[4] <= maxDistance
+            {
                 sortedRestaurants.append((rest[0], rest[1]))
             }
         }
 
-        sortedRestaurants.sort{ $0.rating > $1.rating || ($0.rating == $1.rating && $0.id > $1.id) }
+        sortedRestaurants.sort {
+            $0.rating > $1.rating || ($0.rating == $1.rating && $0.id > $1.id)
+        }
         return sortedRestaurants.map { $0.id }
     }
 

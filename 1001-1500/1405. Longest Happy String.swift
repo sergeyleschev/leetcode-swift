@@ -56,25 +56,29 @@ class Solution {
         return ""
     }
 
-
-    func helper(max: (count: Int, str: String), other: (count: Int, str: String), another: (count: Int, str: String)) -> String {
+    func helper(
+        max: (count: Int, str: String), other: (count: Int, str: String),
+        another: (count: Int, str: String)
+    ) -> String {
         var arrays: [[String]] = []
         var tmp: [String] = []
         var j = 0
         var isDiscard = false
 
-
         func handle(tuple: (count: Int, str: String)) {
-            for _ in 0 ..< tuple.count {
+            for _ in 0..<tuple.count {
                 arrays[j].append(tuple.str)
                 j += 1
                 if j >= arrays.count { j = 0 }
             }
         }
 
-        for _ in 0 ..< max.count {
+        for _ in 0..<max.count {
             tmp.append(max.str)
-            if tmp.count == 2 { arrays.append(tmp); tmp = [] }
+            if tmp.count == 2 {
+                arrays.append(tmp)
+                tmp = []
+            }
         }
 
         if !tmp.isEmpty { arrays.append(tmp) }

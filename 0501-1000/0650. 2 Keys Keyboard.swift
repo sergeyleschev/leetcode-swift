@@ -25,9 +25,9 @@ class Solution {
 
     func minSteps(_ n: Int) -> Int {
         guard n > 1 else { return 0 }
-        
+
         for i in 2..<n where n % i == 0 { return i + minSteps(n / i) }
         return n
     }
-    
+
 }

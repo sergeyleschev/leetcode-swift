@@ -19,12 +19,12 @@ class Solution {
     // Example 2:
     // Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
     // Output: [4,9]
-    // Explanation: [9,4] is also accepted. 
+    // Explanation: [9,4] is also accepted.
 
     // Constraints:
     // 1 <= nums1.length, nums2.length <= 1000
     // 0 <= nums1[i], nums2[i] <= 1000
-     
+
     // Follow up:
     // What if the given array is already sorted? How would you optimize your algorithm?
     // What if nums1's size is small compared to nums2's size? Which algorithm is better?
@@ -37,16 +37,16 @@ class Solution {
     func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
         var dic = [Int: Int]()
         var ans = [Int]()
-        
+
         for num in nums1 { dic[num, default: 0] += 1 }
-                
+
         for num in nums2 {
             guard let val = dic[num], val > 0 else { continue }
             ans.append(num)
             dic[num] = val - 1
         }
-        
+
         return ans
     }
-    
+
 }

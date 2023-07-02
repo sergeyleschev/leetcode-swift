@@ -5,7 +5,7 @@ class Solution {
     // 1388. Pizza With 3n Slices
     // There is a pizza with 3n slices of varying size, you and your friends will take slices of pizza as follows:
     // You will pick any pizza slice.
-    // Your friend Alice will pick next slice in anti clockwise direction of your pick. 
+    // Your friend Alice will pick next slice in anti clockwise direction of your pick.
     // Your friend Bob will pick next slice in clockwise direction of your pick.
     // Repeat until there are no more slices of pizzas.
     // Sizes of Pizza slices is represented by circular array slices in clockwise direction.
@@ -48,21 +48,21 @@ class Solution {
         var total = 0
         let n = slices.count
         let k = n / 3
-        
+
         total = max(total, check(Array(slices[0..<n - 1]), k))
         total = max(total, check(Array(slices[1...n - 1]), k))
         return total
     }
 
-
-    func check(_ slices: [Int], _ k: Int) -> Int { // max sum when pick k non-adjacent elements from slices
+    func check(_ slices: [Int], _ k: Int) -> Int {  // max sum when pick k non-adjacent elements from slices
         let n = slices.count
-        var dp = Array( repeating: Array(repeating: 0, count: k + 1), count: n + 1) // dp[i][j] record max sum pick j elements from slices[0...i]
+        var dp = Array(repeating: Array(repeating: 0, count: k + 1), count: n + 1)  // dp[i][j] record max sum pick j elements from slices[0...i]
 
         for i in 1...n {
             for j in 1...k {
-                if i == 1 { dp[i][j] = slices[0] } 
-                else {
+                if i == 1 {
+                    dp[i][j] = slices[0]
+                } else {
                     // dp[i - 1][j], don't pick ith elements
                     // dp[i - 2][j - 1], pick j - 1 elements from slices[0...i - 2]
                     dp[i][j] = max(

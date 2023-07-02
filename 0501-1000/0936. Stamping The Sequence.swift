@@ -43,9 +43,9 @@ class Solution {
         var stamp = Array(stamp)
         var target = Array(target)
 
-        var queue = [Int]() // use to memo cannot fully replaced element
-        var done = Array(repeating: false, count: n) // true - if already replaced
-        var res = [Int]() // result stamp order
+        var queue = [Int]()  // use to memo cannot fully replaced element
+        var done = Array(repeating: false, count: n)  // true - if already replaced
+        var res = [Int]()  // result stamp order
         var arr = [Node]()  // help checking remaining todo element in this window
 
         for i in 0...(n - m) {
@@ -96,11 +96,9 @@ class Solution {
     }
 }
 
-
 class Node {
     var made = Set<Int>()
     var todo = Set<Int>()
-
 
     init(made: Set<Int>, todo: Set<Int>) {
         self.made = made

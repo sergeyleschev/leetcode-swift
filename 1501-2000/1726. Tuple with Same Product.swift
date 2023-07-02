@@ -15,7 +15,7 @@ class Solution {
     // Example 2:
     // Input: nums = [1,2,4,5,10]
     // Output: 16
-    // Explanation: There are 16 valids tuples:
+    // Explanation: There are 16 valid tuples:
     // (1,10,2,5) , (1,10,5,2) , (10,1,2,5) , (10,1,5,2)
     // (2,5,1,10) , (2,5,10,1) , (5,2,1,10) , (5,2,10,1)
     // (2,10,4,5) , (2,10,5,4) , (10,2,4,5) , (10,2,4,5)
@@ -46,5 +46,5 @@ class Solution {
         for (_, cnt) in counter where cnt > 1 { ans += (cnt - 1) * cnt / 2 }
         return ans * 8
     }
-    
+
 }

@@ -21,18 +21,18 @@ class Solution {
     func originalDigits(_ s: String) -> String {
         var count = Array(repeating: 0, count: 10)
         var res = ""
-        
+
         for s in s {
-            if s == "z" {count[0] += 1} //0
-            if s == "w" {count[2] += 1} //2
-            if s == "x" {count[6] += 1} //6
-            if s == "s" {count[7] += 1} //7 6
-            if s == "g" {count[8] += 1} //8
-            if s == "u" {count[4] += 1} //4
-            if s == "f" {count[5] += 1} //5 4
-            if s == "h" {count[3] += 1} //3 8
-            if s == "i" {count[9] += 1} //5 8 9 6
-            if s == "o" {count[1] += 1} //0 1 2 4
+            if s == "z" { count[0] += 1 }  //0
+            if s == "w" { count[2] += 1 }  //2
+            if s == "x" { count[6] += 1 }  //6
+            if s == "s" { count[7] += 1 }  //7 6
+            if s == "g" { count[8] += 1 }  //8
+            if s == "u" { count[4] += 1 }  //4
+            if s == "f" { count[5] += 1 }  //5 4
+            if s == "h" { count[3] += 1 }  //3 8
+            if s == "i" { count[9] += 1 }  //5 8 9 6
+            if s == "o" { count[1] += 1 }  //0 1 2 4
         }
 
         count[7] -= count[6]
@@ -46,7 +46,7 @@ class Solution {
                 res += "\(i)"
             }
         }
-        
+
         return res
     }
 

@@ -10,7 +10,7 @@ class Solution {
     // Example 1:
     // Input: nums1 = [7,4], nums2 = [5,2,8,9]
     // Output: 1
-    // Explanation: Type 1: (1,1,2), nums1[1]^2 = nums2[1] * nums2[2]. (4^2 = 2 * 8). 
+    // Explanation: Type 1: (1,1,2), nums1[1]^2 = nums2[1] * nums2[2]. (4^2 = 2 * 8).
 
     // Example 2:
     // Input: nums1 = [1,1], nums2 = [1,1,1]
@@ -41,7 +41,7 @@ class Solution {
             var cnt = 0
             var map = [Int: Int]()
             let m = numsCopy1.count
-            
+
             for i in 0..<(m - 1) {
                 for j in (i + 1)..<m { map[numsCopy1[i] * numsCopy1[j], default: 0] += 1 }
             }
@@ -49,7 +49,7 @@ class Solution {
             for num in numsCopy2 {
                 if let c = map[num * num] { cnt += c }
             }
-            
+
             return cnt
         }
 

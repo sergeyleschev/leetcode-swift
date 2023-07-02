@@ -31,12 +31,11 @@ class Solution {
         var num = 0
         var index = 0
     }
-    
-    
+
     func findRelativeRanks(_ nums: [Int]) -> [String] {
         var result = [String]()
         var object = [Number]()
-        
+
         for (index, element) in nums.enumerated() {
             result.append("\(element)")
             let number = Number()
@@ -46,15 +45,24 @@ class Solution {
         }
 
         object = object.sorted(by: { (first, second) -> Bool in first.num < second.num })
-        
+
         for rank in 0..<object.count {
-            if rank == nums.count - 1 { result[object[rank].index] = ("Gold Medal"); continue }
-            if rank == nums.count - 2 { result[object[rank].index] = ("Silver Medal"); continue }
-            if rank == nums.count - 3 { result[object[rank].index] = ("Bronze Medal"); continue }
+            if rank == nums.count - 1 {
+                result[object[rank].index] = ("Gold Medal")
+                continue
+            }
+            if rank == nums.count - 2 {
+                result[object[rank].index] = ("Silver Medal")
+                continue
+            }
+            if rank == nums.count - 3 {
+                result[object[rank].index] = ("Bronze Medal")
+                continue
+            }
             result[object[rank].index] = "\(nums.count - rank)"
         }
-        
+
         return result
     }
-    
+
 }

@@ -1,14 +1,12 @@
-/**
- * Definition for a Node.
- * public class Node {
- *     public var val: Int
- *     public var children: [Node]
- *     public init(_ val: Int) {
- *         self.val = val
- *         self.children = []
- *     }
- * }
- */
+/// Definition for a Node.
+/// public class Node {
+///     public var val: Int
+///     public var children: [Node]
+///     public init(_ val: Int) {
+///         self.val = val
+///         self.children = []
+///     }
+/// }
 
 class Solution {
 
@@ -33,10 +31,10 @@ class Solution {
     func levelOrder(_ root: Node?) -> [[Int]] {
         var result = [[Int]]()
         guard let rootNode = root else { return result }
-        
+
         var stack = [Node]()
         stack.append(rootNode)
-        
+
         while !stack.isEmpty {
             var rowArray = [Int]()
 
@@ -44,14 +42,14 @@ class Solution {
             for _ in 0..<stack.count {
                 let dequedNode = stack.removeFirst()
                 rowArray.append(dequedNode.val)
-                
+
                 for child in dequedNode.children {
                     stack.append(child)
                 }
             }
             result.append(rowArray)
         }
-        
+
         return result
     }
 

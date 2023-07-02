@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -39,7 +37,6 @@ class Solution {
 
     func findSecondMinimumValue(_ root: TreeNode?) -> Int {
         var array = [Int]()
-      
 
         func traverse(_ root: TreeNode?) {
             guard root != nil else { return }
@@ -47,10 +44,10 @@ class Solution {
             traverse(root?.left)
             traverse(root?.right)
         }
-        
+
         traverse(root)
         array = Array(Set(array))
-        if array.count == 1 { return -1 } 
+        if array.count == 1 { return -1 }
         return array.sorted()[1]
     }
 

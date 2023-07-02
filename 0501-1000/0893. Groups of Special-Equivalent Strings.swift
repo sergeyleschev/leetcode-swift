@@ -15,7 +15,7 @@ class Solution {
     // Example 1:
     // Input: words = ["abcd","cdab","cbad","xyzz","zzxy","zzyx"]
     // Output: 3
-    // Explanation: 
+    // Explanation:
     // One group is ["abcd", "cdab", "cbad"], since they are all pairwise special equivalent, and none of the other strings are all pairwise special equivalent to these.
     // The other two groups are ["xyzz", "zzxy"] and ["zzyx"].  Note that in particular, "zzxy" is not special equivalent to "zzyx".
 
@@ -57,7 +57,7 @@ class Solution {
                 set.insert(s)
             }
         }
-        
+
         return set.count
     }
 

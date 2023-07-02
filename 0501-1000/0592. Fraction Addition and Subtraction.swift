@@ -33,13 +33,12 @@ class Solution {
         m == 0 ? d : greatestCommonDivisor(m: d % m, d: m)
     }
 
-    
     func fractionAddition(_ expression: String) -> String {
         var ans = (0, 1)
         var score = (0, 0)
         var symbol = 1
         var num = 0
-        
+
         for (i, e) in expression.enumerated() {
             if e == "-" || e == "+" {
                 symbol = e == "-" ? -1 : 1
@@ -50,7 +49,7 @@ class Solution {
                 num = num * 10 + Int(String(e))!
             }
 
-            if ((e == "-" || e == "+") && num != 0)  || i == expression.count - 1 {
+            if ((e == "-" || e == "+") && num != 0) || i == expression.count - 1 {
                 score.1 = num
                 ans = (score.0 * ans.1 + score.1 * ans.0, (score.1 * ans.1))
                 let gcd = greatestCommonDivisor(m: abs(ans.0), d: ans.1)
@@ -58,8 +57,8 @@ class Solution {
                 num = 0
             }
         }
-        
+
         return "\(ans.0)" + "/" + "\(ans.1)"
     }
-    
+
 }

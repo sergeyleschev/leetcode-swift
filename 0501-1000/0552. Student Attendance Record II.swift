@@ -32,13 +32,13 @@ class Solution {
 
     func checkRecord(_ n: Int) -> Int {
         guard n > 1 else { return 1 == n ? 3 : 0 }
-        let M = 1000000007
+        let M = 1_000_000_007
         var f = [Int]()
 
         if n <= 5 {
-            for _ in 0 ..< 6 { f.append(0) }
+            for _ in 0..<6 { f.append(0) }
         } else {
-            for _ in 0 ..< n + 1 { f.append(0) }
+            for _ in 0..<n + 1 { f.append(0) }
         }
 
         f[0] = 1
@@ -46,15 +46,15 @@ class Solution {
         f[2] = 4
         f[3] = 7
         if n >= 4 {
-            for i in 4 ... n {
+            for i in 4...n {
                 f[i] = ((2 * f[i - 1]) % M + (M - f[i - 4])) % M
             }
         }
 
         var res = f[n]
-        for i in 1 ... n { res += (f[i - 1] * f[n - i])%M }
-        
+        for i in 1...n { res += (f[i - 1] * f[n - i]) % M }
+
         return res % M
     }
-    
+
 }

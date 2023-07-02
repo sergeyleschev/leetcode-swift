@@ -17,33 +17,33 @@ class Solution {
     // Example 3:
     // Input: nums = [5,4,-1,7,8]
     // Output: 23
-     
+
     // Constraints:
     // 1 <= nums.length <= 3 * 10^4
     // -10^5 <= nums[i] <= 10^5
-     
+
     // Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
 
     func maxSubArray(_ nums: [Int]) -> Int {
         var max = nums[0]
         var sum = 0
         var i = 0
-        
+
         while i < nums.count {
             let num = nums[i]
             sum += num
-            
+
             if sum > 0 {
                 max = max > sum ? max : sum
             } else {
                 max = max > num ? max : num
                 sum = 0
             }
-            
+
             i += 1
         }
-        
+
         return max
     }
-    
+
 }

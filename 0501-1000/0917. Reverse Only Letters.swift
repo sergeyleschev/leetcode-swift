@@ -19,15 +19,15 @@ class Solution {
 
     // Note:
     // s.length <= 100
-    // 33 <= s[i].ASCIIcode <= 122 
+    // 33 <= s[i].ASCIIcode <= 122
     // s doesn't contain \ or "
 
     func reverseOnlyLetters(_ S: String) -> String {
         var charSet = [Character](S)
         guard charSet.count > 0 else { return S }
         var i = 0
-        var j = charSet.count-1
-        
+        var j = charSet.count - 1
+
         while i < j {
             while !isLetter(charSet[i]) {
                 if i >= j { break }
@@ -37,23 +37,22 @@ class Solution {
                 if i >= j { break }
                 j -= 1
             }
-            
+
             let c = charSet[i]
             charSet[i] = charSet[j]
             charSet[j] = c
             i += 1
             j -= 1
         }
-        
+
         return String(charSet)
     }
-    
-    
+
     func isLetter(_ c: Character) -> Bool {
         guard c.isASCII else { return false }
         let ascii = c.asciiValue!
-        
+
         return (65 <= ascii && ascii <= 90) || (97 <= ascii && ascii <= 122)
     }
-    
+
 }

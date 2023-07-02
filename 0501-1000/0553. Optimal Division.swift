@@ -38,12 +38,12 @@ class Solution {
         guard let max = nums.first else { return "" }
         guard nums.count != 1 else { return "\(max)" }
         guard nums.count != 2 else { return "\(max)/\(String(describing: nums.last!))" }
-        
+
         var res = "\(max)/("
         for i in 1..<nums.count { res += "\(nums[i])/" }
-        
+
         res.remove(at: res.index(before: res.endIndex))
-        
+
         return res + ")"
     }
 

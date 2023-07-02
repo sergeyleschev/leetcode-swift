@@ -40,7 +40,6 @@ class Solution {
     var numberOfX: Int = 0
     var numberOfO: Int = 0
 
-
     func validTicTacToe(_ board: [String]) -> Bool {
         initGameBoard(board)
 
@@ -58,10 +57,9 @@ class Solution {
         return true
     }
 
-
     func initGameBoard(_ board: [String]) {
         gameBoard.reserveCapacity(3)
-        
+
         for i in 0...2 {
             for j in 0...2 {
                 let char: String = String(Array(board[i])[j])
@@ -72,21 +70,30 @@ class Solution {
         }
     }
 
-
     func didPlayerWins(with char: String) -> Bool {
         func didRowHasSame(_ char: String) -> Bool {
-            for i in 0...2 where gameBoard[i][0] == char && gameBoard[i][1] == char && gameBoard[i][2] == char { return true }
+            for i in 0...2
+            where gameBoard[i][0] == char && gameBoard[i][1] == char && gameBoard[i][2] == char {
+                return true
+            }
             return false
         }
 
         func didColumnHasSame(_ char: String) -> Bool {
-            for i in 0...2 where gameBoard[0][i] == char && gameBoard[1][i] == char && gameBoard[2][i] == char { return true }
+            for i in 0...2
+            where gameBoard[0][i] == char && gameBoard[1][i] == char && gameBoard[2][i] == char {
+                return true
+            }
             return false
         }
 
         func didDiagnolHasSame(_ char: String) -> Bool {
-            if gameBoard[0][0] == char && gameBoard[1][1] == char && gameBoard[2][2] == char { return true }
-            if gameBoard[0][2] == char && gameBoard[1][1] == char && gameBoard[2][0] == char { return true }
+            if gameBoard[0][0] == char && gameBoard[1][1] == char && gameBoard[2][2] == char {
+                return true
+            }
+            if gameBoard[0][2] == char && gameBoard[1][1] == char && gameBoard[2][0] == char {
+                return true
+            }
             return false
         }
 

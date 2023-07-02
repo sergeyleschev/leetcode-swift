@@ -11,7 +11,7 @@ class Solution {
     // Example 1:
     // Input: nums = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]
     // Output: [8,6,2,4]
-    // Explanation: 
+    // Explanation:
     // At the beginning, the array is [1,2,3,4].
     // After adding 1 to nums[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.
     // After adding -3 to nums[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.
@@ -28,7 +28,7 @@ class Solution {
     func sumEvenAfterQueries(_ A: [Int], _ queries: [[Int]]) -> [Int] {
         var arr = A
         var evemSum = A.reduce(0, { (res: Int, a: Int) -> Int in res + (a & 1 == 0 ? a : 0) })
-        
+
         var resArr = [Int](repeating: 0, count: queries.count)
         for (i, q) in queries.enumerated() {
             if arr[q[1]] & 1 == 0 { evemSum -= arr[q[1]] }
@@ -36,8 +36,8 @@ class Solution {
             if arr[q[1]] & 1 == 0 { evemSum += arr[q[1]] }
             resArr[i] = evemSum
         }
-        
+
         return resArr
     }
-    
+
 }

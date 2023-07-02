@@ -27,7 +27,7 @@ class Solution {
     // Example 3:
     // Input: nums = [1], target = 0
     // Output: -1
-     
+
     // Constraints:
     // 1 <= nums.length <= 5000
     // -10^4 <= nums[i] <= 10^4
@@ -38,7 +38,7 @@ class Solution {
     // - Complexity:
     //     - time: O(log n), where n is the length of nums.
     //     - space: O(1), only constant space is used.
-    
+
     func search(_ nums: [Int], _ target: Int) -> Int {
         var start = 0
         var end = nums.count - 1

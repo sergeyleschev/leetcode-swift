@@ -17,7 +17,7 @@ class Solution {
     // Example 2:
     // Input: nums = [1,10,2,9]
     // Output: 16
-     
+
     // Constraints:
     // n == nums.length
     // 1 <= nums.length <= 10^5
@@ -26,10 +26,12 @@ class Solution {
     func minMoves2(_ nums: [Int]) -> Int {
         let sortNums = nums.sorted()
         let mid = sortNums[sortNums.count / 2]
-        
-        return sortNums.reduce(0, { (result, element) -> Int in
-            return result + abs(element - mid)
-        })
+
+        return sortNums.reduce(
+            0,
+            { (result, element) -> Int in
+                return result + abs(element - mid)
+            })
     }
-    
+
 }

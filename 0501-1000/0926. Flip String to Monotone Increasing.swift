@@ -37,7 +37,9 @@ class Solution {
             index = S.index(after: index)
         }
 
-        for i in 0...S.count { ans =  min(ans, onesCount[i] + N - i - (onesCount[N] - onesCount[i])) }
+        for i in 0...S.count {
+            ans = min(ans, onesCount[i] + N - i - (onesCount[N] - onesCount[i]))
+        }
         return ans
     }
 

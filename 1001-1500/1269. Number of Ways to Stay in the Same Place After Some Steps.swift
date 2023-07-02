@@ -9,7 +9,7 @@ class Solution {
     // Example 1:
     // Input: steps = 3, arrLen = 2
     // Output: 4
-    // Explanation: There are 4 differents ways to stay at index 0 after 3 steps.
+    // Explanation: There are 4 different ways to stay at index 0 after 3 steps.
     // Right, Left, Stay
     // Stay, Right, Left
     // Right, Stay, Left
@@ -18,7 +18,7 @@ class Solution {
     // Example 2:
     // Input: steps = 2, arrLen = 4
     // Output: 2
-    // Explanation: There are 2 differents ways to stay at index 0 after 2 steps
+    // Explanation: There are 2 different ways to stay at index 0 after 2 steps
     // Right, Left
     // Stay, Stay
 
@@ -41,7 +41,7 @@ class Solution {
                 var value = dp[j]
                 if j != 0 { value += dp[j - 1] }
                 if j != len - 1 { value += dp[j + 1] }
-                dpnext.append(value % 1000000007)
+                dpnext.append(value % 1_000_000_007)
             }
             dp = dpnext
         }

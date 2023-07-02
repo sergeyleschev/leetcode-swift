@@ -45,17 +45,17 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is given n.
     //   - space: O(1), only constant space is used.
-    
+
     func kthFactor(_ n: Int, _ k: Int) -> Int {
         var k = k
-        
+
         for i in 1...(n / 2 + 1) {
             guard n % i == 0 else { continue }
             k -= 1
             guard k == 0 else { continue }
             return i
         }
-        
+
         return k == 1 ? n : -1
     }
 

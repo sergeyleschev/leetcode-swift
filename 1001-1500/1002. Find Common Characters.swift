@@ -21,7 +21,7 @@ class Solution {
 
     func commonChars(_ A: [String]) -> [String] {
         var minfreq = [Character: Int]()
-        
+
         for i in 0..<A.count {
             let a = A[i]
             var freq = [Character: Int]()
@@ -32,8 +32,11 @@ class Solution {
                     freq[c]! += 1
                 }
             }
-            
-            if i == 0 { minfreq = freq; continue }
+
+            if i == 0 {
+                minfreq = freq
+                continue
+            }
             for key in minfreq.keys {
                 if freq[key] == nil {
                     minfreq.removeValue(forKey: key)
@@ -42,12 +45,12 @@ class Solution {
                 }
             }
         }
-        
+
         return minfreq.reduce([String]()) { (res, arg1) -> [String] in
             let (key, val) = arg1
             let cs = [String](repeating: String(key), count: val)
-            return res + cs;
+            return res + cs
         }
     }
-    
+
 }

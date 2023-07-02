@@ -1,4 +1,4 @@
-class Solution  {
+class Solution {
 
     // Solution by Sergey Leschev
 
@@ -24,20 +24,20 @@ class Solution  {
         guard n > 0 else { return 0 }
         var magical = ["1", "2", "2"]
         var p = 2
-        
+
         while magical.count < n {
             let add = magical.last! == "1" ? "2" : "1"
             if magical[p] == "1" {
                 magical.append(add)
-            }else {
+            } else {
                 magical.append(add)
                 magical.append(add)
             }
             p += 1
         }
-        
+
         if magical.count > n { magical.removeLast() }
         return magical.reduce(0, { (res, str) -> Int in str == "1" ? res + 1 : res })
     }
-    
+
 }

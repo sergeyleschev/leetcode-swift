@@ -29,17 +29,16 @@ class Solution {
     func simplifiedFractions(_ n: Int) -> [String] {
         var res = [String]()
 
-
         func gcd(_ a: Int, _ b: Int) -> Int {
             let r = a % b
             if r != 0 { return gcd(b, r) } else { return b }
         }
 
-        if (n == 1) { return [] }
+        if n == 1 { return [] }
         for i in 2...n {
             for j in 1..<i where gcd(i, j) == 1 { res.append("\(j)/\(i)") }
         }
-        return res 
+        return res
     }
 
 }

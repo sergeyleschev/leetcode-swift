@@ -1,16 +1,14 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init(_ val: Int) {
- *         self.val = val
- *         self.left = nil
- *         self.right = nil
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init(_ val: Int) {
+///         self.val = val
+///         self.left = nil
+///         self.right = nil
+///     }
+/// }
 
 class Solution {
 
@@ -33,7 +31,7 @@ class Solution {
     // Example 3:
     // Input: root = [1,2], p = 1, q = 2
     // Output: 1
-     
+
     // Constraints:
     // The number of nodes in the tree is in the range [2, 10^5].
     // -10^9 <= Node.val <= 10^9
@@ -45,11 +43,10 @@ class Solution {
         var nodeP: Node?
         var nodeQ: Node?
         var set: Set<Node?> = []
-        
 
         func rebuildBinaryTree(_ root: TreeNode?, _ parent: Node?) -> Node? {
             guard let root = root else { return nil }
-            
+
             let _root = Node(root)
             _root.parent = parent
             _root.left = rebuildBinaryTree(root.left, _root)
@@ -58,7 +55,7 @@ class Solution {
             if q === root { nodeQ = _root }
             return _root
         }
-        
+
         rebuildBinaryTree(root, nil)
 
         var curr = nodeP
@@ -71,22 +68,20 @@ class Solution {
             if set.contains(curr) { return curr?.node }
             curr = curr?.parent
         }
-        
+
         return nil
     }
 
 }
-
 
 class Node {
     var node: TreeNode
     var parent: Node?
     var left: Node?
     var right: Node?
-    
+
     init(_ node: TreeNode) { self.node = node }
 }
-
 
 extension Node: Hashable {
     public static func == (lhs: Node, rhs: Node) -> Bool { lhs.node.val == rhs.node.val }

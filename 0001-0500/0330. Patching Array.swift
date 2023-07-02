@@ -30,7 +30,7 @@ class Solution {
     // nums is sorted in ascending order.
     // 1 <= n <= 2^31 - 1
 
-    public func minPatches(_ nums: Array<Int>, _ n: Int) -> Int {
+    public func minPatches(_ nums: [Int], _ n: Int) -> Int {
         var patches = 0
         var x = 1
         var index = 0
@@ -48,5 +48,5 @@ class Solution {
 
         return patches
     }
-    
+
 }

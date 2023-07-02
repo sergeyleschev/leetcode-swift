@@ -1,13 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init() { self.val = 0; self.next = nil; }
- *     public init(_ val: Int) { self.val = val; self.next = nil; }
- *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init() { self.val = 0; self.next = nil; }
+///     public init(_ val: Int) { self.val = val; self.next = nil; }
+///     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -22,13 +20,13 @@ class Solution {
     // Example 2:
     // Input: head = [5], left = 1, right = 1
     // Output: [5]
-     
+
     // Constraints:
     // The number of nodes in the list is n.
     // 1 <= n <= 500
     // -500 <= Node.val <= 500
     // 1 <= left <= right <= n
-     
+
     // Follow up: Could you do it in one pass?
 
     func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
@@ -36,18 +34,18 @@ class Solution {
         var left_tail: ListNode?
         var current = head
         var index = 1
-        
+
         while index < left {
             left_tail = current
             current = current?.next
-            index += 1 
+            index += 1
         }
 
         var mid_tail = current
         var node0: ListNode? = current
         var node1: ListNode? = node0?.next
         var node2: ListNode? = node1?.next
-        
+
         while index < right {
             node1?.next = node0
             node0 = node1
@@ -59,7 +57,7 @@ class Solution {
         if left_tail == nil {
             mid_tail?.next = node1
             return node0
-            
+
         } else {
             left_tail?.next = node0
             mid_tail?.next = node1

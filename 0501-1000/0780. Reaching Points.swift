@@ -26,48 +26,49 @@ class Solution {
     // Constraints:
     // 1 <= sx, sy, tx, ty <= 10^9
 
-    func reachingPoints(_ sx: Int, _ sy: Int, _ tx: Int, _ ty: Int) -> Bool {  moduleBackTracing(sx, sy, tx, ty) }
-    
-    
+    func reachingPoints(_ sx: Int, _ sy: Int, _ tx: Int, _ ty: Int) -> Bool {
+        moduleBackTracing(sx, sy, tx, ty)
+    }
+
     func recursive(_ sx: Int, _ sy: Int, _ tx: Int, _ ty: Int) -> Bool {
         if (sx != tx || sy != ty) && (sx > tx || sy > ty) { return false }
         if sx == tx && sy == ty { return true }
         return reachingPoints(sx + sy, sy, tx, ty) || reachingPoints(sx, sx + sy, tx, ty)
     }
-    
-    
+
     func backTracing(_ sx: Int, _ sy: Int, _ tx: Int, _ ty: Int) -> Bool {
-        var tx = tx, ty = ty
-        
+        var tx = tx
+        var ty = ty
+
         while sx <= tx && sy <= ty {
             if sx == tx && sy == ty { return true }
             if tx > ty {
                 tx -= ty
             } else if ty > tx {
                 ty -= tx
-            } else { break }
+            } else {
+                break
+            }
         }
 
         return false
     }
-    
-    
+
     func moduleBackTracing(_ sx: Int, _ sy: Int, _ tx: Int, _ ty: Int) -> Bool {
-        var tx = tx, ty = ty
-        
-        while (tx >= sx && ty >= sy) {
+        var tx = tx
+        var ty = ty
+
+        while tx >= sx && ty >= sy {
             if tx == ty { break }
             if tx > ty {
-                if ty > sy { tx %= ty }
-                else { return (tx - sx) % ty == 0 }
+                if ty > sy { tx %= ty } else { return (tx - sx) % ty == 0 }
 
             } else {
-                if tx > sx { ty %= tx }
-                else { return (ty - sy) % tx == 0 }
+                if tx > sx { ty %= tx } else { return (ty - sy) % tx == 0 }
             }
         }
 
-        return (tx == sx && ty == sy);
+        return (tx == sx && ty == sy)
     }
-    
+
 }

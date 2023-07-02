@@ -21,12 +21,12 @@ class Solution {
     // 1 <= values[i] <= 1000
 
     // A[i] + i + A[j] - j
-    
+
     func maxScoreSightseeingPair(_ A: [Int]) -> Int {
         if A.count == 0 { return 0 }
         var res = 0
         var maxLeft = A[0]
-        
+
         for j in 1..<A.count {
             res = max(res, maxLeft + A[j] - j)
             maxLeft = max(maxLeft, A[j] + j)
@@ -34,5 +34,5 @@ class Solution {
 
         return res
     }
-    
+
 }

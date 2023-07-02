@@ -65,11 +65,10 @@ class Solution {
         return left
     }
 
-
     private func getHour(_ dist: [Int], _ n: Int, _ speed: Int) -> Double {
         var h: Double = 0
         for i in 0..<n - 1 { h += Double((dist[i] + speed - 1) / speed) }
-        return h + (Double(dist[n - 1])/Double(speed))
+        return h + (Double(dist[n - 1]) / Double(speed))
     }
 
 }

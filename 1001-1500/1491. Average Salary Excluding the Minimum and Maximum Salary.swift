@@ -33,6 +33,8 @@ class Solution {
     // salary[i] is unique.
     // Answers within 10^-5 of the actual value will be accepted as correct.
 
-    func average(_ salary: [Int]) -> Double { Double(salary.reduce(0, +) - salary.max()! - salary.min()!) / Double(salary.count - 2) }
-    
+    func average(_ salary: [Int]) -> Double {
+        Double(salary.reduce(0, +) - salary.max()! - salary.min()!) / Double(salary.count - 2)
+    }
+
 }

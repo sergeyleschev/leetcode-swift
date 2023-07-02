@@ -32,7 +32,7 @@ class Solution {
     // - Complexity:
     //   - time: O(log(n)), where n is the length of the nums.
     //   - space: O(1), only constant space is used.
-    
+
     func search(_ nums: [Int], _ target: Int) -> Int {
         var low = 0
         var high = nums.count - 1

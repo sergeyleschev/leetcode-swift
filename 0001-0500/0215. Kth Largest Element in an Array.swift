@@ -1,7 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
-    
+
     // 215. Kth Largest Element in an Array
     // Given an integer array nums and an integer k, return the kth largest element in the array.
     // Note that it is the kth largest element in the sorted order, not the kth distinct element.
@@ -31,41 +31,38 @@ class Solution {
 
     private var nums = [Int]()
 
-
     func findKthLargest(_ nums: [Int], _ k: Int) -> Int {
         self.nums = nums
         let n = nums.count
         return quickselect(0, n - 1, n - k)
     }
-    
 
     private func quickselect(_ left: Int, _ right: Int, _ kSmallest: Int) -> Int {
         guard left != right else { return nums[left] }
-        
+
         var pivot = left + (right - left) / 2
         pivot = partition(left, right, pivot)
-        
+
         if kSmallest < pivot {
             return quickselect(left, pivot - 1, kSmallest)
         } else if kSmallest > pivot {
             return quickselect(pivot + 1, right, kSmallest)
         }
-        
+
         return nums[kSmallest]
     }
-    
-    
+
     private func partition(_ left: Int, _ right: Int, _ pivotIndex: Int) -> Int {
         let pivot = nums[pivotIndex]
         nums.swapAt(pivotIndex, right)
         var storeIndex = left
-        
+
         for i in left..<right {
             guard nums[i] < pivot else { continue }
             nums.swapAt(storeIndex, i)
             storeIndex += 1
         }
-        
+
         nums.swapAt(storeIndex, right)
         return storeIndex
     }

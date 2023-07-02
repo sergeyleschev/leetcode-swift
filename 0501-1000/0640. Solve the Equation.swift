@@ -36,8 +36,8 @@ class Solution {
         var tempVal: Int?
         var leftX = 0
         var rightVal = 0
-        var leftSide = -1 // Set -1 means on left side, 1 is on right side
-        
+        var leftSide = -1  // Set -1 means on left side, 1 is on right side
+
         for ch in equation + "+" {
             switch ch {
             case "x":
@@ -48,22 +48,24 @@ class Solution {
                 opt = ""
             case "+", "-":
                 opt = String(ch)
-                rightVal += leftSide*(tempVal ?? 0)
+                rightVal += leftSide * (tempVal ?? 0)
                 tempVal = nil
             case "=":
                 opt = ""
-                rightVal += leftSide*(tempVal ?? 0)
+                rightVal += leftSide * (tempVal ?? 0)
                 tempVal = nil
                 leftSide = 1
-            default: tempVal = (tempVal ?? 0)*10 + (opt == "-" ? -Int(String(ch))! : Int(String(ch))!)
+            default:
+                tempVal = (tempVal ?? 0) * 10 + (opt == "-" ? -Int(String(ch))! : Int(String(ch))!)
             }
         }
 
-        if leftX == 0 { return rightVal != 0 ? "No solution" : "Infinite solutions" }
-        else {
+        if leftX == 0 {
+            return rightVal != 0 ? "No solution" : "Infinite solutions"
+        } else {
             if leftX < 0 { rightVal *= -1 }
             leftX = abs(leftX)
-            if leftX > 1 { rightVal = rightVal/leftX }
+            if leftX > 1 { rightVal = rightVal / leftX }
             return "x=\(rightVal)"
         }
     }

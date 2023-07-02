@@ -38,21 +38,20 @@ class Solution {
             if str.count >= length { return false }
             if !intToStrings[str.count].contains(str) { return false }
         }
-        
+
         return true
     }
 
-
-    func intToString(_ number: Int) -> String  {
+    func intToString(_ number: Int) -> String {
         var ans = ""
         var i = number
-        
+
         while i > 0 {
             let ch: Character = i & 1 == 0 ? "0" : "1"
             ans.insert(ch, at: ans.startIndex)
             i >>= 1
         }
-        
+
         return ans
     }
 

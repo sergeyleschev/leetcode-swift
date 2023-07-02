@@ -18,7 +18,7 @@ class Solution {
     // Output: 1
     // Explanation: The longest continuous increasing subsequence is [2] with length 1. Note that it must be strictly
     // increasing.
-     
+
     // Constraints:
     // 1 <= nums.length <= 10^4
     // -10^9 <= nums[i] <= 10^9
@@ -27,8 +27,8 @@ class Solution {
         guard nums.count > 1 else { return nums.count }
         var index = 1
         var res = 1
-        
-        for i in 0..<nums.count - 1{
+
+        for i in 0..<nums.count - 1 {
             if nums[i + 1] > nums[i] { index += 1 } else { index = 1 }
             res = max(index, res)
         }

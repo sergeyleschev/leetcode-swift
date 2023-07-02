@@ -35,19 +35,19 @@ class Solution {
     // - Complexity:
     //   - time: O(n log(n)), where n is the number of people.
     //   - space: O(n), where n is the number of people.
-    
+
     func numRescueBoats(_ people: [Int], _ limit: Int) -> Int {
         var people = people.sorted()
         var ans = 0
         var i = 0
         var j = people.count - 1
-        
+
         while i <= j {
             if people[i] + people[j] <= limit { i += 1 }
             j -= 1
             ans += 1
         }
-        
+
         return ans
     }
 

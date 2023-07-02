@@ -19,7 +19,7 @@ class Solution {
     // Example 1:
     // Input: equations = [["a","b"],["b","c"]], values = [2.0,3.0], queries = [["a","c"],["b","a"],["a","e"],["a","a"],["x","x"]]
     // Output: [6.00000,0.50000,-1.00000,1.00000,-1.00000]
-    // Explanation: 
+    // Explanation:
     // Given: a / b = 2.0, b / c = 3.0
     // queries are: a / c = ?, b / a = ?, a / e = ?, a / a = ?, x / x = ?
     // return: [6.0, 0.5, -1.0, 1.0, -1.0 ]
@@ -47,7 +47,9 @@ class Solution {
     //   - time: O((n + m) log(n)), where n is the number of equations and m is the number of queries.
     //   - space: O(n), where n is the number of equations.
 
-    func calcEquation(_ equations: [[String]], _ values: [Double], _ queries: [[String]]) -> [Double] {
+    func calcEquation(_ equations: [[String]], _ values: [Double], _ queries: [[String]])
+        -> [Double]
+    {
         var gidWeight = [String: (key: String, value: Double)]()
         var ans = [Double]()
 
@@ -74,17 +76,22 @@ class Solution {
         return ans
     }
 
-
-    private func union(_ gidWeight: inout [String: (key: String, value: Double)], dividend: String, divisor: String, value: Double) {
+    private func union(
+        _ gidWeight: inout [String: (key: String, value: Double)], dividend: String,
+        divisor: String, value: Double
+    ) {
         let dividendEntry = find(&gidWeight, dividend)
         let divisorEntry = find(&gidWeight, divisor)
 
         guard dividendEntry.key != divisorEntry.key else { return }
-        gidWeight[dividendEntry.key] = (divisorEntry.key, divisorEntry.value * value / dividendEntry.value)
+        gidWeight[dividendEntry.key] = (
+            divisorEntry.key, divisorEntry.value * value / dividendEntry.value
+        )
     }
 
-
-    private func find(_ gidWeight: inout [String: (key: String, value: Double)], _ nodeID: String) -> (key: String, value: Double) {
+    private func find(_ gidWeight: inout [String: (key: String, value: Double)], _ nodeID: String)
+        -> (key: String, value: Double)
+    {
         if !gidWeight.keys.contains(nodeID) { gidWeight[nodeID] = (nodeID, 1.0) }
 
         let entry = gidWeight[nodeID] ?? (nodeID, 1.0)

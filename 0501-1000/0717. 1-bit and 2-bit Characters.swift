@@ -26,12 +26,12 @@ class Solution {
 
     func isOneBitCharacter(_ bits: [Int]) -> Bool {
         var i = 0
-        
+
         while i < bits.count - 1 {
             if bits[i] == 0 { i += 1 } else { i += 2 }
         }
-        
+
         return i == bits.count - 1
     }
-    
+
 }

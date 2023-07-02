@@ -41,7 +41,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n log(n)), where n is the number of intervals.
     //   - space: O(n), where n is the number of intervals.
-    
+
     func removeCoveredIntervals(_ intervals: [[Int]]) -> Int {
         let intervals = intervals.sorted(by: { $0[0] != $1[0] ? $0[0] < $1[0] : $0[1] > $1[1] })
         var ans = 0

@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -29,7 +27,7 @@ class Solution {
     // Example 1:
     // Input: root = [1,2,3]
     // Output: 1
-    // Explanation: 
+    // Explanation:
     // Tilt of node 2 : |0-0| = 0 (no children)
     // Tilt of node 3 : |0-0| = 0 (no children)
     // Tilt of node 1 : |2-3| = 1 (left subtree is just left child, so sum is 2; right subtree is just right child, so sum is 3)
@@ -38,7 +36,7 @@ class Solution {
     // Example 2:
     // Input: root = [4,2,9,3,5,null,7]
     // Output: 15
-    // Explanation: 
+    // Explanation:
     // Tilt of node 3 : |0-0| = 0 (no children)
     // Tilt of node 5 : |0-0| = 0 (no children)
     // Tilt of node 7 : |0-0| = 0 (no children)
@@ -60,7 +58,6 @@ class Solution {
     //   - space: O(n), where n is the number of nodes in the binary tree.
 
     private var totalTilt = 0
-
 
     func findTilt(_ root: TreeNode?) -> Int {
         _ = dfs(root)

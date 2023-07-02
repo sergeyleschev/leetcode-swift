@@ -41,13 +41,17 @@ class Solution {
         var i = 0
         var j = 0
         var res = [[Int]]()
-        
+
         while i < A.count && j < B.count {
             if A[i][1] < B[j][1] {
-                if A[i][1] >= B[j][0] { res.append([max(A[i][0], B[j][0]), min(A[i][1], B[j][1])]) }
+                if A[i][1] >= B[j][0] {
+                    res.append([max(A[i][0], B[j][0]), min(A[i][1], B[j][1])])
+                }
                 i += 1
             } else {
-                if A[i][0] <= B[j][1] { res.append([max(A[i][0], B[j][0]), min(A[i][1], B[j][1])]) }
+                if A[i][0] <= B[j][1] {
+                    res.append([max(A[i][0], B[j][0]), min(A[i][1], B[j][1])])
+                }
                 j += 1
             }
         }

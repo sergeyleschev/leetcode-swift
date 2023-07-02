@@ -33,12 +33,13 @@ class Solution {
 
         for i in (0..<arr.count) {
             for j in (i + 1..<arr.count) {
-                if (abs(arr[i] - arr[j]) <= a) {
-                    for k in (j + 1..<arr.count) where (abs(arr[j] - arr[k]) <= b) && (abs(arr[i] - arr[k]) <= c) { res += 1 }
+                if abs(arr[i] - arr[j]) <= a {
+                    for k in (j + 1..<arr.count)
+                    where (abs(arr[j] - arr[k]) <= b) && (abs(arr[i] - arr[k]) <= c) { res += 1 }
                 }
             }
         }
         return res
     }
-    
+
 }

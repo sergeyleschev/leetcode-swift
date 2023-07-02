@@ -29,14 +29,14 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the word.
     //   - space: O(1), only constant space is used.
-    
+
     func detectCapitalUse(_ word: String) -> Bool {
         guard word.count > 1 else { return true }
         let word = Array(word)
 
         for i in 1..<word.count {
-            if word[i].isUppercase, word[i-1].isUppercase { continue }
-            if word[i].isLowercase && (i == 1 || word[i-1].isLowercase) { continue }
+            if word[i].isUppercase, word[i - 1].isUppercase { continue }
+            if word[i].isLowercase && (i == 1 || word[i - 1].isLowercase) { continue }
             return false
         }
 

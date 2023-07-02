@@ -21,12 +21,12 @@ class Solution {
     // All the words in s are separated by a single space.
 
     func reverseWords(_ s: String) -> String {
-        let stringArray = s.components(separatedBy:" ")
-        
+        let stringArray = s.components(separatedBy: " ")
+
         var resultArray = [String]()
         for str in stringArray { resultArray.append(String(str.reversed())) }
-        
-        return resultArray.joined(separator:" ")
+
+        return resultArray.joined(separator: " ")
     }
 
 }

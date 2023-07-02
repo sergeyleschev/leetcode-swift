@@ -19,14 +19,14 @@ class Solution {
     // Example 2:
     // Input: n = 11111111111111111111111111111101
     // Output:   3221225471 (10111111111111111111111111111111)
-    // Explanation: The input binary string 11111111111111111111111111111101 represents the unsigned integer 4294967293, so return 3221225471 which its binary representation is 10111111111111111111111111111111. 
+    // Explanation: The input binary string 11111111111111111111111111111101 represents the unsigned integer 4294967293, so return 3221225471 which its binary representation is 10111111111111111111111111111111.
 
     // Constraints:
     // The input must be a binary string of length 32
 
     func reverseBits(_ n: Int) -> Int {
         var res = n
-        
+
         for i in 0..<16 {
             let mask0 = 1 << i
             let mask1 = 1 << (31 - i)
@@ -40,14 +40,14 @@ class Solution {
                 res ^= mask0
             }
         }
-        
+
         return res
     }
 
     /*
     func reverseBits(_ n: Int) -> Int {
         var res = 0
-        
+
         for i in 0..<32 {
             let mask = 1 << i
             if i < 16 {
@@ -56,7 +56,7 @@ class Solution {
                 res |= (mask & n) >> (2 * i - 31)
             }
         }
-        
+
         return res
     }
     */

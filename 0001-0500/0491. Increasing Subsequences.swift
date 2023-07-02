@@ -21,11 +21,11 @@ class Solution {
     func findSubsequences(_ nums: [Int]) -> [[Int]] {
         guard nums.count > 1 else { return [] }
         var dp = Array(repeating: Set<[Int]>(), count: nums.count)
-        
+
         dp[0] = [[nums.first!]]
         for i in 1..<nums.count {
             let num = nums[i]
-            for arr in dp[i-1] {
+            for arr in dp[i - 1] {
                 if arr.last! <= num {
                     dp[i].insert(arr + [num])
                 }

@@ -11,7 +11,7 @@ class Solution {
     // Example 1:
     // Input: grid = [[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]]
     // Output: 35
-    // Explanation: 
+    // Explanation:
     // The skyline viewed from top or bottom is: [9, 4, 8, 7]
     // The skyline viewed from left or right is: [8, 7, 9, 3]
     // The grid after increasing the height of buildings without affecting skylines is:
@@ -37,24 +37,24 @@ class Solution {
         var topBot = [Int](repeatElement(0, count: n))
         var leftRight = [Int](repeatElement(0, count: m))
         var res = 0
-        
+
         for i in 0..<topBot.count {
             for j in 0..<grid[i].count { topBot[i] = max(topBot[i], grid[i][j]) }
         }
-        
+
         for i in 0..<leftRight.count {
             for j in 0..<grid[i].count { leftRight[i] = max(grid[j][i], leftRight[i]) }
         }
-        
+
         var dp = [[Int]](repeatElement([Int](repeatElement(0, count: n)), count: m))
-        
+
         for i in 0..<m {
             for j in 0..<n {
                 dp[i][j] = min(topBot[j], leftRight[i])
                 res += (dp[i][j] - grid[i][j])
             }
         }
-        
+
         return res
     }
 

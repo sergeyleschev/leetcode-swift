@@ -32,25 +32,24 @@ class Solution {
 
     private let mod = 1_000_000_007
 
-
     func waysToSplit(_ nums: [Int]) -> Int {
         let n = nums.count
-        var preffix = [0]
-        for num in nums { preffix.append(preffix.last! + num) }
+        var prefix = [0]
+        for num in nums { prefix.append(prefix.last! + num) }
         var ans = 0
         var midStartIdx = 2
 
         for l in 1...(n - 2) {
-            let leftSum = preffix[l]
+            let leftSum = prefix[l]
             midStartIdx = max(midStartIdx, l + 1)
-            while midStartIdx < n && preffix[midStartIdx] - leftSum < leftSum  { midStartIdx += 1 }
+            while midStartIdx < n && prefix[midStartIdx] - leftSum < leftSum { midStartIdx += 1 }
             guard midStartIdx < n else { break }
             var low = midStartIdx
             var high = n - 1
 
             while low <= high {
                 let mid = (low + high) >> 1
-                if preffix[n] - preffix[mid] < preffix[mid] - leftSum {
+                if prefix[n] - prefix[mid] < prefix[mid] - leftSum {
                     high = mid - 1
                 } else {
                     low = mid + 1

@@ -29,25 +29,26 @@ class Solution {
     // - Complexity:
     //   - time: O(n log n), where n is the length of A and B.
     //   - space: O(n), where n is the length of A and B.
-    
+
     func advantageCount(_ A: [Int], _ B: [Int]) -> [Int] {
         let sortedA = A.sorted()
         let sortedB = B.sorted()
         var assigned = [Int: [Int]]()
         for b in B { assigned[b] = [Int]() }
-        let n = B.count        
+        let n = B.count
         var ans = [Int](repeating: 0, count: n)
         var remaining = [Int]()
         var j = 0
-        
+
         for a in sortedA {
             if a > sortedB[j] {
                 assigned[sortedB[j]]?.append(a)
                 j += 1
-            } else { remaining.append(a) }
+            } else {
+                remaining.append(a)
+            }
         }
-        
-        
+
         for i in 0..<n {
             if assigned[B[i]]?.isEmpty ?? true {
                 ans[i] = remaining.removeLast()
@@ -55,7 +56,7 @@ class Solution {
                 ans[i] = assigned[B[i]]?.removeLast() ?? -1
             }
         }
-        
+
         return ans
     }
 

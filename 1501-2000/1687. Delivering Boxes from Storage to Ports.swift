@@ -21,7 +21,7 @@ class Solution {
     // Example 1:
     // Input: boxes = [[1,1],[2,1],[1,1]], portsCount = 2, maxBoxes = 3, maxWeight = 3
     // Output: 4
-    // Explanation: The optimal strategy is as follows: 
+    // Explanation: The optimal strategy is as follows:
     // - The ship takes all the boxes in the queue, goes to port 1, then port 2, then port 1 again, then returns to storage. 4 trips.
     // So the total number of trips is 4.
     // Note that the first and third boxes cannot be delivered together because the boxes need to be delivered in order (i.e. the second box needs to be delivered at port 2 before the third box).
@@ -29,7 +29,7 @@ class Solution {
     // Example 2:
     // Input: boxes = [[1,2],[3,3],[3,1],[3,1],[2,4]], portsCount = 3, maxBoxes = 3, maxWeight = 6
     // Output: 6
-    // Explanation: The optimal strategy is as follows: 
+    // Explanation: The optimal strategy is as follows:
     // - The ship takes the first box, goes to port 1, then returns to storage. 2 trips.
     // - The ship takes the second, third and fourth boxes, goes to port 3, then returns to storage. 2 trips.
     // - The ship takes the fifth box, goes to port 3, then returns to storage. 2 trips.
@@ -52,10 +52,10 @@ class Solution {
     // - The ship takes the second box, goes to port 2, then storage. 2 trips.
     // - The ship takes the third and fourth boxes, goes to port 3, then storage. 2 trips.
     // - The ship takes the fifth box, goes to port 3, then storage. 2 trips.
-    // - The ship takes the sixth and seventh boxes, goes to port 3, then port 4, then storage. 3 trips. 
+    // - The ship takes the sixth and seventh boxes, goes to port 3, then port 4, then storage. 3 trips.
     // - The ship takes the eighth and ninth boxes, goes to port 1, then port 5, then storage. 3 trips.
     // So the total number of trips is 2 + 2 + 2 + 2 + 3 + 3 = 14.
-     
+
     // Constraints:
     // 1 <= boxes.length <= 10^5
     // 1 <= portsCount, maxBoxes, maxWeight <= 10^5
@@ -69,7 +69,9 @@ class Solution {
     //   - time: O(n)
     //   - space: O(n)
 
-    func boxDelivering(_ boxes: [[Int]], _ portsCount: Int, _ maxBoxes: Int, _ maxWeight: Int) -> Int {
+    func boxDelivering(_ boxes: [[Int]], _ portsCount: Int, _ maxBoxes: Int, _ maxWeight: Int)
+        -> Int
+    {
         let n = boxes.count
         var dp = Array(repeating: 200000, count: n + 1)
         var diff = 0
@@ -81,26 +83,26 @@ class Solution {
         dp[0] = 0
 
         for i in 0..<n {
-            while right < n, remainBox > 0, remainWeight >= boxes[right][1] { // keep expanding right
+            while right < n, remainBox > 0, remainWeight >= boxes[right][1] {  // keep expanding right
                 remainBox -= 1
                 remainWeight -= boxes[right][1]
-                if right == 0 || boxes[right][0] != boxes[right - 1][0] { // 2 ports are different
+                if right == 0 || boxes[right][0] != boxes[right - 1][0] {  // 2 ports are different
                     last = right
                     diff += 1
                 }
                 right += 1
             }
 
-            dp[right] = min(dp[right], dp[i] + diff + 1) // keep load as far as right as we can
-            dp[last] = min(dp[last], dp[i] + diff) // waste some weight to save trip
+            dp[right] = min(dp[right], dp[i] + diff + 1)  // keep load as far as right as we can
+            dp[last] = min(dp[last], dp[i] + diff)  // waste some weight to save trip
 
-            remainBox += 1 // move left pointer i
+            remainBox += 1  // move left pointer i
             remainWeight += boxes[i][1]
 
-            if i == n - 1 || boxes[i][0] != boxes[i + 1][0] { diff -= 1 } // if current box port is different with previous one, reduce diff
+            if i == n - 1 || boxes[i][0] != boxes[i + 1][0] { diff -= 1 }  // if current box port is different with previous one, reduce diff
         }
 
         return dp[n]
     }
-    
+
 }

@@ -39,12 +39,12 @@ class Solution {
         var ans = [Int]()
         var map = [Int: [Int]]()
         for ap in adjacentPairs {
-            map[ap[0],default: []].append(ap[1])
-            map[ap[1],default: []].append(ap[0])
+            map[ap[0], default: []].append(ap[1])
+            map[ap[1], default: []].append(ap[0])
         }
         var visited = Set<Int>()
-        
-        for (v,neighbors) in map {
+
+        for (v, neighbors) in map {
             if neighbors.count == 1 {
                 ans.append(v)
                 ans.append(neighbors[0])

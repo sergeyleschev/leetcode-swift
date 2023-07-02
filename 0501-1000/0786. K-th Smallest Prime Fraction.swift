@@ -26,8 +26,7 @@ class Solution {
     // All the numbers of arr are unique and sorted in strictly increasing order.
     // 1 <= k <= arr.length * (arr.length - 1) / 2
 
-    private typealias Triple = (numerator: Int,denominator: Int, fraction: Double)
-    
+    private typealias Triple = (numerator: Int, denominator: Int, fraction: Double)
 
     func kthSmallestPrimeFraction(_ arr: [Int], _ k: Int) -> [Int] {
         let N = arr.count
@@ -38,9 +37,9 @@ class Solution {
                 fractions.append((arr[i], arr[j], Double(arr[i]) / Double(arr[j])))
             }
         }
-        
+
         fractions.sort { (t1, t2) -> Bool in t1.fraction < t2.fraction }
-        return [fractions[k - 1].numerator,fractions[k - 1].denominator]
+        return [fractions[k - 1].numerator, fractions[k - 1].denominator]
     }
 
 }

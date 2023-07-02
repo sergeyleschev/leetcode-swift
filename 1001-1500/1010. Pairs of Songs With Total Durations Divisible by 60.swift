@@ -31,21 +31,21 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of time.
     //   - space: O(n), where n is the length of time.
-    
+
     func numPairsDivisibleBy60(_ time: [Int]) -> Int {
         var ans = 0
         var dict = [Int: Int]()
-        
+
         for t in time {
             if t % 60 == 0 {
                 ans += dict[0] ?? 0
             } else if let val = dict[60 - t % 60] {
                 ans += val
             }
-            
+
             dict[t % 60, default: 0] += 1
         }
-        
+
         return ans
     }
 

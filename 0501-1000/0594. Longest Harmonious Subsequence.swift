@@ -32,7 +32,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of nums.
     //   - space: O(n), where n is the length of nums.
-    
+
     func findLHS(_ nums: [Int]) -> Int {
         var dict = [Int: Int]()
         var ans = 0
@@ -42,7 +42,7 @@ class Solution {
             if let val = dict[num + 1] { ans = max(ans, val + (dict[num] ?? 0)) }
             if let val = dict[num - 1] { ans = max(ans, val + (dict[num] ?? 0)) }
         }
-        
+
         return ans
     }
 

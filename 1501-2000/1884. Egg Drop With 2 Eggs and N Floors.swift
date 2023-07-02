@@ -36,13 +36,13 @@ class Solution {
     func twoEggDrop(_ n: Int) -> Int {
         var step = 0
         var drops = 0
-        
+
         while drops < n {
             step += 1
             drops += step
         }
-        
+
         return step
     }
-    
+
 }

@@ -17,20 +17,20 @@ class Solution {
     // 1 <= nums.length <= 2 * 10^4
     // -1000 <= nums[i] <= 1000
     // -10^7 <= k <= 10^7
-    
+
     // Use hash map to record the number of prefix sum's appearance.
 
     func subarraySum(_ nums: [Int], _ k: Int) -> Int {
         var prefixSum = 0
         var map = [0: 1]
         var count = 0
-        
+
         for i in 0..<nums.count {
             prefixSum += nums[i]
             count += map[prefixSum - k] ?? 0
             map[prefixSum, default: 0] += 1
         }
-        
+
         return count
     }
 

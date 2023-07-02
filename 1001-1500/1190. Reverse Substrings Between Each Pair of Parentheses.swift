@@ -3,7 +3,7 @@ class Solution {
     // Solution by Sergey Leschev
 
     // 1190. Reverse Substrings Between Each Pair of Parentheses
-    // You are given a string s that consists of lower case English letters and brackets. 
+    // You are given a string s that consists of lower case English letters and brackets.
     // Reverse the strings in each pair of matching parentheses, starting from the innermost one.
     // Your result should not contain any brackets.
 
@@ -33,7 +33,7 @@ class Solution {
     func reverseParentheses(_ s: String) -> String {
         var s = Array(s)
         var stack = [Character]()
-        
+
         while !s.isEmpty {
             let last = s.removeFirst()
             if last == Character(")") {
@@ -45,8 +45,8 @@ class Solution {
                 stack.append(last)
             }
         }
-        
+
         return String(stack)
     }
-    
+
 }

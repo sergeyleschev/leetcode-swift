@@ -22,7 +22,7 @@ class Solution {
     // Example 2:
     // Input: firstWord = "aaa", secondWord = "a", targetWord = "aab"
     // Output: false
-    // Explanation: 
+    // Explanation:
     // The numerical value of firstWord is "aaa" -> "000" -> 0.
     // The numerical value of secondWord is "a" -> "0" -> 0.
     // The numerical value of targetWord is "aab" -> "001" -> 1.
@@ -31,7 +31,7 @@ class Solution {
     // Example 3:
     // Input: firstWord = "aaa", secondWord = "a", targetWord = "aaaa"
     // Output: true
-    // Explanation: 
+    // Explanation:
     // The numerical value of firstWord is "aaa" -> "000" -> 0.
     // The numerical value of secondWord is "a" -> "0" -> 0.
     // The numerical value of targetWord is "aaaa" -> "0000" -> 0.
@@ -41,8 +41,9 @@ class Solution {
     // 1 <= firstWord.length, secondWord.length, targetWord.length <= 8
     // firstWord, secondWord, and targetWord consist of lowercase English letters from 'a' to 'j' inclusive.
 
-    func isSumEqual(_ firstWord: String, _ secondWord: String, _ targetWord: String) -> Bool { getNumber(of: firstWord) + getNumber(of: secondWord) == getNumber(of: targetWord) }
-
+    func isSumEqual(_ firstWord: String, _ secondWord: String, _ targetWord: String) -> Bool {
+        getNumber(of: firstWord) + getNumber(of: secondWord) == getNumber(of: targetWord)
+    }
 
     private func getNumber(of numberString: String) -> Int {
         var ans = 0

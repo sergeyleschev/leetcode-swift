@@ -19,19 +19,17 @@ class Solution {
     // 1 <= n <= 1000
 
     private var cache = [Int: [Int]]()
-    
 
     func beautifulArray(_ N: Int) -> [Int] {
-        self.cache = [Int:[Int]]()
+        self.cache = [Int: [Int]]()
         return form(N)
     }
-    
 
     private func form(_ N: Int) -> [Int] {
-        if (cache[N] != nil) { return cache[N]! }
+        if cache[N] != nil { return cache[N]! }
         var ans = [Int](repeating: 0, count: N)
-        
-        if (N == 1) {
+
+        if N == 1 {
             ans[0] = 1
         } else {
             var idx = 0
@@ -44,7 +42,7 @@ class Solution {
                 idx += 1
             }
         }
-        
+
         cache[N] = ans
         return ans
     }

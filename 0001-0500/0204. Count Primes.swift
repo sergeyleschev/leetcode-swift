@@ -26,12 +26,12 @@ class Solution {
 
         var result = 0
         var primes = [Bool](repeating: true, count: n)
-        
-        for i in 2 ..< n {
+
+        for i in 2..<n {
             if primes[i] {
                 result += 1
 
-                var j = 2;
+                var j = 2
                 while i * j < n {
                     primes[i * j] = false
                     j += 1
@@ -42,5 +42,5 @@ class Solution {
 
         return result
     }
-    
+
 }

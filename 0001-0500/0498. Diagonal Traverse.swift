@@ -28,7 +28,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n * m), where n is the number of rows, and m is the number of columns.
     //   - space: O(n * m), where n is the number of rows, and m is the number of columns.
-    
+
     func findDiagonalOrder(_ matrix: [[Int]]) -> [Int] {
         guard !matrix.isEmpty else { return [] }
         let n = matrix.count
@@ -38,14 +38,14 @@ class Solution {
         var col = 0
         var up = true
         var r = 0
-        
+
         while row < n, col < m {
             ans[r] = matrix[row][col]
             r += 1
-            
+
             var newRow = row + (up ? -1 : 1)
             var newCol = col + (up ? 1 : -1)
-            
+
             if newRow < 0 || newRow == n || newCol < 0 || newCol == m {
                 if up {
                     row += col == m - 1 ? 1 : 0

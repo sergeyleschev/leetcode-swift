@@ -1,13 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init() { self.val = 0; self.next = nil; }
- *     public init(_ val: Int) { self.val = val; self.next = nil; }
- *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init() { self.val = 0; self.next = nil; }
+///     public init(_ val: Int) { self.val = val; self.next = nil; }
+///     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -27,7 +25,7 @@ class Solution {
     // Example 2:
     // Input: head = [1,1,2,3,3]
     // Output: [1,2,3]
-     
+
     // Constraints:
     // The number of nodes in the list is in the range [0, 300].
     // -100 <= Node.val <= 100
@@ -36,22 +34,22 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of nodes in the linked list.
     //   - space: O(1), only constant space is used.
-    
+
     func deleteDuplicates(_ head: ListNode?) -> ListNode? {
         var current = head
         var last: ListNode?
-        
+
         while current != nil {
             if last != nil && current!.val == last!.val {
                 last?.next = current?.next
-            
+
             } else {
                 last = current
             }
-            
+
             current = current?.next
         }
-        
+
         return head
     }
 

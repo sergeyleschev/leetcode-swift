@@ -35,7 +35,7 @@ class Solution {
         var temp: [String: [Int]] = [:]
         var length = 0
         var start = -1
-        
+
         for (i, c) in s.enumerated() {
             let c = String(c)
             if temp[c] == nil {
@@ -50,9 +50,9 @@ class Solution {
                 start = temp[c]![0]
             }
         }
-        
+
         if start < 0 { return -1 }
         return length - 1
     }
-    
+
 }

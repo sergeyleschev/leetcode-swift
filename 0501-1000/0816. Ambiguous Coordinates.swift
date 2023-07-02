@@ -36,16 +36,17 @@ class Solution {
         var ans: [String] = []
         var chars = Array(S)
 
-        
         func transfer(chars: [Character]) -> [String] {
-            if chars.count == 0 || (chars.count > 1 && chars.first == "0" && chars.last == "0") { return [] }
+            if chars.count == 0 || (chars.count > 1 && chars.first == "0" && chars.last == "0") {
+                return []
+            }
             if chars.count > 1 && chars[0] == "0" { return ["0." + chars[1...]] }
             if chars.count == 1 || chars.last == "0" { return [String(chars)] }
             var points = [String(chars)]
             for i in 1..<chars.count { points.append(chars[0..<i] + "." + chars[i...]) }
             return points
         }
-        
+
         for i in 1..<chars.count - 1 {
             let points1 = transfer(chars: Array(chars[1...i]))
             let points2 = transfer(chars: Array(chars[i + 1..<chars.count - 1]))
@@ -53,7 +54,7 @@ class Solution {
                 for p2 in points2 { ans.append("(\(p1), \(p2))") }
             }
         }
-        
+
         return ans
     }
 

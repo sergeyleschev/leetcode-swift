@@ -3,9 +3,9 @@ class Solution {
     // Solution by Sergey Leschev
 
     // 1665. Minimum Initial Energy to Finish Tasks
-    // You are given an array tasks where tasks[i] = [actuali, minimumi]:
-    // actuali is the actual amount of energy you spend to finish the ith task.
-    // minimumi is the minimum amount of energy you require to begin the ith task.
+    // You are given an array tasks where tasks[i] = [actual(i), minimum(i)]:
+    // actual(i) is the actual amount of energy you spend to finish the ith task.
+    // minimum(i) is the minimum amount of energy you require to begin the ith task.
     // For example, if the task is [10, 12] and your current energy is 11, you cannot start this task. However, if your current energy is 13, you can complete this task, and your energy will be 3 after finishing it.
     // You can finish the tasks in any order you like.
 
@@ -46,7 +46,7 @@ class Solution {
 
     // Constraints:
     // 1 <= tasks.length <= 10^5
-    // 1 <= actual i <= minimumi <= 10^4
+    // 1 <= actual i <= minimum(i) <= 10^4
 
     func minimumEffort(_ tasks: [[Int]]) -> Int {
         let sortedTasks = tasks.sorted { t1, t2 in t1[0] - t1[1] < t2[0] - t2[1] }

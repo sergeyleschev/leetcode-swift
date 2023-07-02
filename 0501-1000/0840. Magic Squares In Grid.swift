@@ -9,7 +9,7 @@ class Solution {
     // Example 1:
     // Input: grid = [[4,3,8,4],[9,5,1,9],[2,7,6,2]]
     // Output: 1
-    // Explanation: 
+    // Explanation:
     // The following subgrid is a 3 x 3 magic square:
     // while this one is not:
     // In total, there is only one magic square inside the given grid.
@@ -39,51 +39,53 @@ class Solution {
         let jLen = grid[0].count
 
         if iLen < len || jLen < len { return 0 }
-        
-        for i in 0 ... iLen - len {
-            for j in 0 ... jLen - len {
-                var rowSum = 0, columnSum = 0, slashSum1 = 0, slashSum2 = 0
+
+        for i in 0...iLen - len {
+            for j in 0...jLen - len {
+                var rowSum = 0
+                var columnSum = 0
+                var slashSum1 = 0
+                var slashSum2 = 0
                 let targetSet: Set = [1, 2, 3, 4, 5, 6, 7, 8, 9]
                 var currentSet = Set<Int>()
                 var equal = false
-                
-                for k in 0 ..< len {
+
+                for k in 0..<len {
                     slashSum1 += grid[i + k][j + k]
                     slashSum2 += grid[i + len - k - 1][j + k]
                 }
 
                 if slashSum1 != slashSum2 { continue }
-                
-                for row in 0 ..< len {
-                    var newRowSum = 0, newColumnSum = 0
-                    for column in 0 ..< len {
+
+                for row in 0..<len {
+                    var newRowSum = 0
+                    var newColumnSum = 0
+                    for column in 0..<len {
                         let num = grid[i + row][j + column]
                         if num < 1 || num > 9 { continue }
                         currentSet.insert(num)
-                        
+
                         newRowSum += grid[i + row][j + column]
                         newColumnSum += grid[i + column][j + row]
                     }
-                    
+
                     if row == 0 {
                         rowSum = newRowSum
                         columnSum = newColumnSum
                     }
-                    
-                    if rowSum == newRowSum  &&
-                        columnSum == newColumnSum &&
-                        rowSum == columnSum {
+
+                    if rowSum == newRowSum && columnSum == newColumnSum && rowSum == columnSum {
                         equal = true
                     } else {
                         equal = false
                         break
                     }
                 }
-                
+
                 if equal && currentSet == targetSet { count += 1 }
             }
         }
-        
+
         return count
     }
 

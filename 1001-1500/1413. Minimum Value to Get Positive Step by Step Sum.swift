@@ -23,7 +23,7 @@ class Solution {
     // Example 2:
     // Input: nums = [1,2]
     // Output: 1
-    // Explanation: Minimum start value should be positive. 
+    // Explanation: Minimum start value should be positive.
 
     // Example 3:
     // Input: nums = [1,-2,-3]
@@ -44,7 +44,7 @@ class Solution {
                 sum = 1
             }
         }
-        
+
         return startVal
     }
 

@@ -33,7 +33,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of digits in num.
     //   - space: O(1), only constant space is used.
-    
+
     func bitwiseComplement(_ N: Int) -> Int {
         guard N != 0 else { return 1 }
         var i = 1

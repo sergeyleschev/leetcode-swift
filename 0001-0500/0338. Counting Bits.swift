@@ -1,7 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
-    
+
     // 338. Counting Bits
     // Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.
 
@@ -26,7 +26,7 @@ class Solution {
 
     // Constraints:
     // 0 <= n <= 10^5
-     
+
     // Follow up:
     // It is very easy to come up with a solution with a runtime of O(n log n). Can you do it in linear time O(n) and possibly in a single pass?
     // Can you do it without using any built-in function (i.e., like __builtin_popcount in C++)?
@@ -38,13 +38,13 @@ class Solution {
         for i in 1...num { ans[i] = ans[i & (i - 1)] + 1 }
         return ans
     }
-    
-    
+
     func stupid(_ num: Int) -> [Int] {
         var ans = [Int]()
-        
+
         for i in 0...num {
-            var val = i, count = 0
+            var val = i
+            var count = 0
             while val > 1 {
                 if val % 2 == 1 { count += 1 }
                 val /= 2
@@ -55,5 +55,5 @@ class Solution {
 
         return ans
     }
-    
+
 }

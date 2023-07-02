@@ -26,26 +26,28 @@ class Solution {
         let column = A[0].count
         var A = A
         var ans = 0
-        
+
         for i in 0..<A.count {
-            if A[i][0] == 1 { continue } 
-            else { for j in 0..<A[i].count { A[i][j] = abs(A[i][j] - 1) } }
+            if A[i][0] == 1 {
+                continue
+            } else {
+                for j in 0..<A[i].count { A[i][j] = abs(A[i][j] - 1) }
+            }
         }
-        
+
         for i in 1..<column {
             let sum = A.reduce(0) { (res, arr) -> Int in res + arr[i] }
             if sum * 2 < row { for j in 0..<row { A[j][i] = abs(A[j][i] - 1) } }
         }
-        
+
         for arr in A { ans += b2d(arr) }
         return ans
     }
-    
-    
+
     func b2d(_ arr: [Int]) -> Int {
         var ans = 0
         for i in 0..<arr.count { ans += (arr[i] << (arr.count - i - 1)) }
         return ans
     }
-    
+
 }

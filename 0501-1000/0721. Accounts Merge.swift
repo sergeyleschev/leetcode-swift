@@ -13,7 +13,7 @@ class Solution {
     // Explanation:
     // The first and third John's are the same person as they have the common email "johnsmith@mail.com".
     // The second John and Mary are different people as none of their email addresses are used by other accounts.
-    // We could return these lists in any order, for example the answer [['Mary', 'mary@mail.com'], ['John', 'johnnybravo@mail.com'], 
+    // We could return these lists in any order, for example the answer [['Mary', 'mary@mail.com'], ['John', 'johnnybravo@mail.com'],
     // ['John', 'john00@mail.com', 'john_newyork@mail.com', 'johnsmith@mail.com']] would still be accepted.
 
     // Example 2:
@@ -30,24 +30,20 @@ class Solution {
     class DisjointSetUnion {
         var parent = Array(repeating: 0, count: 10001)
 
-
-        public init()  {
+        public init() {
             for i in 0...10000 { parent[i] = i }
         }
 
-
-        public  func find(_ x: Int) -> Int {
+        public func find(_ x: Int) -> Int {
             if parent[x] != x { parent[x] = find(parent[x]) }
             return parent[x]
         }
 
-
-        public  func union(_ x: Int, _ y: Int) {
+        public func union(_ x: Int, _ y: Int) {
             parent[find(x)] = find(y)
         }
     }
-    
-    
+
     func accountsMerge(_ accounts: [[String]]) -> [[String]] {
         // dict, key as name, if value contains one of new values, merge into one, otherwise, append a new array
         // name -> [[emails],[email]]
@@ -55,13 +51,16 @@ class Solution {
         var emailToName = [String: String]()
         var emailToID = [String: Int]()
         var id = 0
-        var ans = [Int:[String]]()
+        var ans = [Int: [String]]()
         var res = [[String]]()
 
         for account in accounts {
             var name = ""
             for email in account {
-                if name == ""{ name = email; continue }
+                if name == "" {
+                    name = email
+                    continue
+                }
                 emailToName[email] = name
                 if emailToID[email] == nil {
                     emailToID[email] = id

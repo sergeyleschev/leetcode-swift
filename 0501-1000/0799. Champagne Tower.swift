@@ -37,7 +37,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n^2), where n is the number of rows.
     //   - space: O(n^2), where n is the number of rows.
-    
+
     func champagneTower(_ poured: Int, _ query_row: Int, _ query_glass: Int) -> Double {
         var dp = [[Double]](repeating: [Double](repeating: 0.0, count: 102), count: 102)
 

@@ -41,7 +41,7 @@ class Solution {
         var xy = 0
         var xz = Array(repeating: 0, count: grid[0].count)
         var yz = 0
-        
+
         for i in 0..<grid.count {
             var maxYZ = 0
             for j in 0..<grid[i].count {
@@ -54,8 +54,8 @@ class Solution {
             }
             yz += maxYZ
         }
-        
+
         return xy + yz + xz.reduce(0, +)
     }
-    
+
 }

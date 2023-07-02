@@ -28,7 +28,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of digits in num.
     //   - space: O(1), only constant space is used.
-    
+
     func findComplement(_ num: Int) -> Int {
         guard num != 0 else { return 1 }
         var i = 1

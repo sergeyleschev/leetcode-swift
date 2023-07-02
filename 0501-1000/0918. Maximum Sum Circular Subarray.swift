@@ -47,7 +47,7 @@ class Solution {
         var minSum = Int.max
         var curMin = 0
         var total = 0
-        
+
         for num in A {
             curMax = max(curMax + num, num)
             maxSum = max(curMax, maxSum)
@@ -55,8 +55,8 @@ class Solution {
             minSum = min(minSum, curMin)
             total += num
         }
-        
+
         return maxSum > 0 ? max(maxSum, total - minSum) : maxSum
     }
-    
+
 }

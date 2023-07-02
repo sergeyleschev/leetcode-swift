@@ -28,7 +28,7 @@ class Solution {
     // Example 3:
     // Input: word1  = ["abc", "d", "defg"], word2 = ["abcddefg"]
     // Output: true
-     
+
     // Constraints:
     // 1 <= word1.length, word2.length <= 10^3
     // 1 <= word1[i].length, word2[i].length <= 10^3
@@ -38,7 +38,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of characters in word1 and word2.
     //   - space: O(n), where n is the number of characters in word1 and word2.
-    
+
     func arrayStringsAreEqual(_ word1: [String], _ word2: [String]) -> Bool {
         word1.joined(separator: "") == word2.joined(separator: "")
     }

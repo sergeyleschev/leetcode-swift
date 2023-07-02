@@ -31,12 +31,12 @@ class Solution {
         var ans = 0
         var last = ""
 
-        for word in (words.map{ String($0.reversed()) }.sorted{ $0 > $1 } + [""]){
+        for word in (words.map { String($0.reversed()) }.sorted { $0 > $1 } + [""]) {
             if !last.hasPrefix(word) { ans += word.count + 1 }
             last = word
         }
-        
+
         return ans
     }
-    
+
 }

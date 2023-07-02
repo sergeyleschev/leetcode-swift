@@ -28,25 +28,24 @@ class Solution {
     func largestMagicSquare(_ grid: [[Int]]) -> Int {
         let m = grid.count
         let n = grid[0].count
-        var colsPreffix = [[Int]]()
-        var rowsPreffix = [[Int]](repeating: [Int](repeating: 0, count: n), count: m + 1)
+        var colsPrefix = [[Int]]()
+        var rowsPrefix = [[Int]](repeating: [Int](repeating: 0, count: n), count: m + 1)
         var ans = 1
-        
 
         func check(_ r: Int, _ c: Int, _ length: Int) -> Bool {
-            let up = colsPreffix[r][c + length] - colsPreffix[r][c]
-            let MaxRow =  r + length - 1
+            let up = colsPrefix[r][c + length] - colsPrefix[r][c]
+            let MaxRow = r + length - 1
             var row = r + 1
-            while  row <= MaxRow {
-                guard colsPreffix[row][c + length] - colsPreffix[row][c] == up else { return false }
+            while row <= MaxRow {
+                guard colsPrefix[row][c + length] - colsPrefix[row][c] == up else { return false }
                 row += 1
             }
-            let left = rowsPreffix[r + length ][c] - rowsPreffix[r][c]
+            let left = rowsPrefix[r + length][c] - rowsPrefix[r][c]
             guard left == up else { return false }
             let maxCol = c + length - 1
             var col = c + 1
             while col <= maxCol {
-                guard rowsPreffix[r + length][col] - rowsPreffix[r][col]  == up else { return false }
+                guard rowsPrefix[r + length][col] - rowsPrefix[r][col] == up else { return false }
                 col += 1
             }
             var pie = 0
@@ -64,8 +63,8 @@ class Solution {
             guard pie == up && na == up else { return false }
             return true
         }
-        
-        func getMaxLengthOf(r : Int, _ c: Int) -> Int?{
+
+        func getMaxLengthOf(r: Int, _ c: Int) -> Int? {
             let maxLength = min(m - r, n - c)
             var l = maxLength
             while l > ans {
@@ -78,10 +77,10 @@ class Solution {
         for r in 0..<m {
             var newRow = [0]
             for c in 0..<n {
-                rowsPreffix[r + 1][c] = grid[r][c] + rowsPreffix[r][c]
+                rowsPrefix[r + 1][c] = grid[r][c] + rowsPrefix[r][c]
                 newRow.append(newRow.last! + grid[r][c])
             }
-            colsPreffix.append(newRow)
+            colsPrefix.append(newRow)
         }
 
         for r in 0..<m {

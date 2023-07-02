@@ -14,7 +14,7 @@ class Solution {
     // There are 6 rectangles of side 1x1.
     // There are 2 rectangles of side 1x2.
     // There are 3 rectangles of side 2x1.
-    // There is 1 rectangle of side 2x2. 
+    // There is 1 rectangle of side 2x2.
     // There is 1 rectangle of side 3x1.
     // Total number of rectangles = 6 + 2 + 3 + 1 + 1 = 13.
 
@@ -26,11 +26,11 @@ class Solution {
     // Explanation:
     // There are 8 rectangles of side 1x1.
     // There are 5 rectangles of side 1x2.
-    // There are 2 rectangles of side 1x3. 
+    // There are 2 rectangles of side 1x3.
     // There are 4 rectangles of side 2x1.
-    // There are 2 rectangles of side 2x2. 
-    // There are 2 rectangles of side 3x1. 
-    // There is 1 rectangle of side 3x2. 
+    // There are 2 rectangles of side 2x2.
+    // There are 2 rectangles of side 3x1.
+    // There is 1 rectangle of side 3x2.
     // Total number of rectangles = 8 + 5 + 2 + 4 + 2 + 2 + 1 = 24.
 
     // Example 3:
@@ -47,7 +47,7 @@ class Solution {
     // 0 <= mat[i][j] <= 1
 
     func numSubmat(_ mat: [[Int]]) -> Int {
-        guard !mat.isEmpty && !mat[0].isEmpty  else { return 0 }
+        guard !mat.isEmpty && !mat[0].isEmpty else { return 0 }
         let M = mat.count
         let N = mat[0].count
         var dp = [[Int]](repeating: [Int](repeating: 0, count: N), count: M)
@@ -68,7 +68,7 @@ class Solution {
                 }
             }
         }
-        
+
         return ans
     }
 

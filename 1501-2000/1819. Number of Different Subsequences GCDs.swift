@@ -29,13 +29,16 @@ class Solution {
         let max = nums.max()!
         var numbers = [Bool](repeating: false, count: max + 1)
         for num in nums { numbers[num] = true }
-        
+
         for i in 1...max {
-            guard !numbers[i] else { cnt += 1; continue }
+            guard !numbers[i] else {
+                cnt += 1
+                continue
+            }
             var gcd = 0
             var b = i
 
-            while b <= max  {
+            while b <= max {
                 if numbers[b] { gcd = f(gcd, b) }
                 b += i
             }
@@ -43,7 +46,6 @@ class Solution {
         }
         return cnt
     }
-    
 
     private func f(_ a: Int, _ b: Int) -> Int {
         guard b != 0 else { return a }

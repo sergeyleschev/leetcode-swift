@@ -7,7 +7,7 @@ class Solution {
     // Return a list of integers representing the size of these parts.
 
     // Partitions a string into as many parts as possible so that each letter appears in at most one part.
-    
+
     // - Parameter S: The string.
     // - Returns: A list of integers representing the size of parts.
 
@@ -30,7 +30,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the given string.
     //   - space: O(n), where n is the length of the given string.
-    
+
     func partitionLabels(_ S: String) -> [Int] {
         var dict = [Character: Int]()
         var j = 0

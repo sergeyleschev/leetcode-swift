@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -47,22 +45,25 @@ class Solution {
     // All the values in voyage are unique.
 
     func flipMatchVoyage(_ root: TreeNode?, _ voyage: [Int]) -> [Int] {
-            var result = [Int]()
-            var index = 0
-            if !flipMatchVoyageHelper(root, voyage, &index, &result) { result = [-1] }
-            return result
+        var result = [Int]()
+        var index = 0
+        if !flipMatchVoyageHelper(root, voyage, &index, &result) { result = [-1] }
+        return result
+    }
+
+    func flipMatchVoyageHelper(
+        _ root: TreeNode?, _ voyage: [Int], _ index: inout Int, _ result: inout [Int]
+    ) -> Bool {
+        guard let root = root else { return true }
+        if index >= voyage.count || root.val != voyage[index] { return false }
+        index += 1
+        if root.left != nil && index < voyage.count && root.left?.val != voyage[index] {
+            result.append(root.val)
+            return flipMatchVoyageHelper(root.right, voyage, &index, &result)
+                && flipMatchVoyageHelper(root.left, voyage, &index, &result)
         }
-    
-    
-        func flipMatchVoyageHelper(_ root: TreeNode?, _ voyage: [Int],_ index:inout Int, _ result:inout [Int]) -> Bool {
-            guard let root = root else { return true }
-            if index >= voyage.count || root.val != voyage[index] { return false }
-            index += 1
-            if root.left != nil && index < voyage.count && root.left?.val != voyage[index] {
-                result.append(root.val)
-                return flipMatchVoyageHelper(root.right, voyage, &index, &result) && flipMatchVoyageHelper(root.left, voyage, &index, &result)
-            }
-            return flipMatchVoyageHelper(root.left, voyage, &index, &result) && flipMatchVoyageHelper(root.right, voyage, &index, &result)
-        }
-        
+        return flipMatchVoyageHelper(root.left, voyage, &index, &result)
+            && flipMatchVoyageHelper(root.right, voyage, &index, &result)
+    }
+
 }

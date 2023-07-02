@@ -37,7 +37,6 @@ class WordFilter {
     // value: index of word which has this prefix
     var map = [String: [Int]]()
 
-
     init(_ words: [String]) {
         self.words = words
         self.n = words.count
@@ -48,14 +47,13 @@ class WordFilter {
         }
     }
 
-
     func buildMap(_ word: String, _ index: Int) {
         var key = "#"
 
         let size = word.count
         for s in word.reversed() {
             key.insert(s, at: key.startIndex)
-            for p in word{
+            for p in word {
                 key.append(p)
                 map[key, default: [Int]()].append(index)
             }
@@ -63,7 +61,6 @@ class WordFilter {
             key.removeLast(size)
         }
     }
-
 
     func f(_ prefix: String, _ suffix: String) -> Int {
         let key = suffix + "#" + prefix

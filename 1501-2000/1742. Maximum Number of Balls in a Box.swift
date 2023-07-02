@@ -36,12 +36,11 @@ class Solution {
 
     func countBalls(_ lowLimit: Int, _ highLimit: Int) -> Int {
         var cnt = [Int](repeating: 0, count: 50)
-        (lowLimit...highLimit).forEach {  cnt[$0.sumOfDigits] += 1 }
+        (lowLimit...highLimit).forEach { cnt[$0.sumOfDigits] += 1 }
         return cnt.max()!
     }
 
 }
-
 
 extension Int {
     var sumOfDigits: Int {

@@ -24,7 +24,7 @@ class Solution {
     // Input: x = 2.00000, n = -2
     // Output: 0.25000
     // Explanation: 2-2 = 1/22 = 1/4 = 0.25
-     
+
     // Constraints:
     // -100.0 < x < 100.0
     // -2^31 <= n <= 2^31-1
@@ -33,7 +33,7 @@ class Solution {
     // - Complexity:
     //   - time: O(log n), where n is the power value.
     //   - space: O(log n), where n is the power value.
-    
+
     func myPow(_ x: Double, _ n: Int) -> Double {
         guard n != 0 else { return 1 }
 

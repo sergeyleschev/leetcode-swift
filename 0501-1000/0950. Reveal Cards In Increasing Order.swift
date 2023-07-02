@@ -15,7 +15,7 @@ class Solution {
     // Example 1:
     // Input: [17,13,11,2,3,5,7]
     // Output: [2,13,3,11,5,17,7]
-    // Explanation: 
+    // Explanation:
     // We get the deck in the order [17,13,11,2,3,5,7] (this order doesn't matter), and reorder it.
     // After reordering, the deck starts as [2,13,3,11,5,17,7], where 2 is the top of the deck.
     // We reveal 2, and move 13 to the bottom.  The deck is now [3,11,5,17,7,13].
@@ -40,17 +40,17 @@ class Solution {
         guard !deck.isEmpty else { return [] }
         var sortedDeck = deck.sorted()
         var cards = [Int]()
-        
+
         while !sortedDeck.isEmpty {
             if let card = cards.last {
                 cards.popLast()
                 cards.insert(card, at: 0)
             }
-            
+
             if let revealed = sortedDeck.popLast() { cards.insert(revealed, at: 0) }
         }
-        
+
         return cards
     }
-    
+
 }

@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -47,9 +45,8 @@ class Solution {
     // -10^5 <= k <= 10^5
 
     func findTarget(_ root: TreeNode?, _ k: Int) -> Bool {
-        var array = Array<Int>()
+        var array = [Int]()
         var i = 0
-        
 
         func traversalTree(_ root: TreeNode?) {
             guard let root = root else { return }
@@ -57,9 +54,9 @@ class Solution {
             array.append(root.val)
             traversalTree(root.right)
         }
-        
+
         traversalTree(root)
-        
+
         var j = array.count - 1
 
         while i < j {
@@ -71,7 +68,7 @@ class Solution {
                 j -= 1
             }
         }
-        
+
         return false
     }
 

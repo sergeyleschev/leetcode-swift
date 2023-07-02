@@ -38,7 +38,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of t.
     //   - space: O(1), only constant space is used. The total number of unique characters is 26.
-    
+
     func findTheDifference(_ s: String, _ t: String) -> Character {
         var dict = [Character: Int]()
         for ch in s { dict[ch, default: 0] += 1 }

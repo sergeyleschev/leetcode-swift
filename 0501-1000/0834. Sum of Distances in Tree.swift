@@ -10,7 +10,7 @@ class Solution {
     // Example 1:
     // Input: n = 6, edges = [[0,1],[0,2],[2,3],[2,4],[2,5]]
     // Output: [8,12,6,10,10,10]
-    // Explanation: 
+    // Explanation:
     // Here is a diagram of the given tree:
     //   0
     //  / \
@@ -47,8 +47,10 @@ class Solution {
             answer[u] = table[u]
             for v in gragh[u] {
                 if v == f { continue }
-                var preU = table[u], preV = table[v]
-                var sumU = sonNum[u], sumV = sonNum[v]
+                var preU = table[u]
+                var preV = table[v]
+                var sumU = sonNum[u]
+                var sumV = sonNum[v]
                 table[u] -= table[v] + sonNum[v]
                 sonNum[u] -= sonNum[v]
                 table[v] += table[u] + sonNum[u]
@@ -65,5 +67,5 @@ class Solution {
         transfer(0, -1)
         return answer
     }
-    
+
 }

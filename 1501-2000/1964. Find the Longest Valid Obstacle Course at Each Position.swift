@@ -59,22 +59,19 @@ class Solution {
         for i in 1..<n {
             let index = find(obstacles[i], arr)
             res[i] = index + 1
-            if index == arr.count { arr.append(obstacles[i]) } 
-            else { arr[index] = obstacles[i] }
+            if index == arr.count { arr.append(obstacles[i]) } else { arr[index] = obstacles[i] }
         }
 
         return res
     }
 
-
     private func find(_ target: Int, _ arr: [Int]) -> Int {
         var left = 0
         var right = arr.count - 1
-        
+
         while left < right {
             let mid = left + (right - left) / 2
-            if arr[mid] <= target { left = mid + 1 } 
-            else { right = mid }
+            if arr[mid] <= target { left = mid + 1 } else { right = mid }
         }
         return arr[left] <= target ? left + 1 : left
     }

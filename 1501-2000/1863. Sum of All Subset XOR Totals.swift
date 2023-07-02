@@ -5,7 +5,7 @@ class Solution {
     // 1863. Sum of All Subset XOR Totals
     // The XOR total of an array is defined as the bitwise XOR of all its elements, or 0 if the array is empty.
     // For example, the XOR total of the array [2,5,6] is 2 XOR 5 XOR 6 = 1.
-    // Given an array nums, return the sum of all XOR totals for every subset of nums. 
+    // Given an array nums, return the sum of all XOR totals for every subset of nums.
     // Note: Subsets with the same elements should be counted multiple times.
     // An array a is a subset of an array b if a can be obtained from b by deleting some (possibly zero) elements of b.
 
@@ -43,12 +43,12 @@ class Solution {
     // 1 <= nums[i] <= 20
 
     func subsetXORSum(_ nums: [Int]) -> Int {
-        guard nums.count > 1 else { return  nums.isEmpty ? 0 : nums[0] }
+        guard nums.count > 1 else { return nums.isEmpty ? 0 : nums[0] }
         var ans = 0
         let n = nums.count
         let maxMask = Int(pow(2, Double(n)))
 
-        for i in 1..<maxMask{
+        for i in 1..<maxMask {
             var temp = 0
             for bit in 0..<n where i & (1 << bit) != 0 { temp ^= nums[bit] }
             ans += temp

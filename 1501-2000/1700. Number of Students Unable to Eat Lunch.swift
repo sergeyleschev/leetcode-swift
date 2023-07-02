@@ -12,7 +12,7 @@ class Solution {
 
     // Example 1:
     // Input: students = [1,1,0,0], sandwiches = [0,1,0,1]
-    // Output: 0 
+    // Output: 0
     // Explanation:
     // - Front student leaves the top sandwich and returns to the end of the line making students = [1,0,0,1].
     // - Front student leaves the top sandwich and returns to the end of the line making students = [0,0,1,1].
@@ -37,7 +37,7 @@ class Solution {
     func countStudents(_ students: [Int], _ sandwiches: [Int]) -> Int {
         var studentsCopy = students
         var sandwichesCopy = sandwiches
-        
+
         while !sandwichesCopy.isEmpty {
             guard let firstIdx = studentsCopy.firstIndex(of: sandwichesCopy.first!) else { break }
             var i = 0
@@ -49,7 +49,7 @@ class Solution {
             sandwichesCopy.removeFirst()
             studentsCopy.removeFirst()
 
-        }    
+        }
         return studentsCopy.count
     }
 

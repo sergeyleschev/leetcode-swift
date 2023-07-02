@@ -13,7 +13,7 @@ class Solution {
     // Example 2:
     // Input: s = "leetcode"
     // Output: "tcode"
-     
+
     // Constraints:
     // 1 <= s.length <= 4 * 10^5
     // s contains only lowercase English letters.
@@ -22,11 +22,11 @@ class Solution {
         var max = ""
 
         for index in s.indices {
-            let suffix = s[index ..< s.endIndex]
+            let suffix = s[index..<s.endIndex]
             if suffix > max { max = String(suffix) }
         }
 
         return max
     }
-    
+
 }

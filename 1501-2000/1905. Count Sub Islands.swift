@@ -16,7 +16,7 @@ class Solution {
 
     // Example 2:
     // Input: grid1 = [[1,0,1,0,1],[1,1,1,1,1],[0,0,0,0,0],[1,1,1,1,1],[1,0,1,0,1]], grid2 = [[0,0,0,0,0],[1,1,1,1,1],[0,1,0,1,0],[0,1,0,1,0],[1,0,0,0,1]]
-    // Output: 2 
+    // Output: 2
     // Explanation: In the picture above, the grid on the left is grid1 and the grid on the right is grid2.
     // The 1s colored red in grid2 are those considered to be part of a sub-island. There are two sub-islands.
 
@@ -26,20 +26,19 @@ class Solution {
     // 1 <= m, n <= 500
     // grid1[i][j] and grid2[i][j] are either 0 or 1.
 
-    private typealias Direction = (dr:Int ,dc: Int)
-    private let directions: [Direction] = [(-1,0),(1,0),(0,-1),(0,1)]
-    
-    
+    private typealias Direction = (dr: Int, dc: Int)
+    private let directions: [Direction] = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+
     func countSubIslands(_ grid1: [[Int]], _ grid2: [[Int]]) -> Int {
         let R = grid1.count
         let C = grid1[0].count
         var islandId = 2
         var grid1Copy = grid1
         var ans = 0
-        
+
         func dfs1(_ r: Int, _ c: Int) {
             grid1Copy[r][c] = islandId
-            for (dr,dc) in directions {
+            for (dr, dc) in directions {
                 let newR = r + dr
                 guard newR >= 0 && newR < R else { continue }
                 let newC = c + dc
@@ -48,11 +47,11 @@ class Solution {
                 dfs1(newR, newC)
             }
         }
-        
-        func dfs2(_ r: Int, _ c: Int, _ positions: inout [Int])  {
+
+        func dfs2(_ r: Int, _ c: Int, _ positions: inout [Int]) {
             grid2Visited[r][c] = true
             positions.append(r << 16 | c)
-            for (dr,dc) in directions {
+            for (dr, dc) in directions {
                 let newR = r + dr
                 guard newR >= 0 && newR < R else { continue }
                 let newC = c + dc
@@ -61,7 +60,7 @@ class Solution {
                 dfs2(newR, newC, &positions)
             }
         }
-        
+
         func check(_ positions: [Int]) -> Bool {
             let target = grid1Copy[positions[0] >> 16][positions[0] & 0xffff]
             guard target >= 2 else { return false }
@@ -73,16 +72,15 @@ class Solution {
             return true
         }
 
-        
         for r in 0..<R {
             for c in 0..<C where grid1Copy[r][c] == 1 {
                 islandId += 1
                 dfs1(r, c)
             }
         }
-        
+
         var grid2Visited = [[Bool]](repeating: [Bool](repeating: false, count: C), count: R)
-        
+
         for r in 0..<R {
             for c in 0..<C {
                 if grid2[r][c] == 1 && !grid2Visited[r][c] {

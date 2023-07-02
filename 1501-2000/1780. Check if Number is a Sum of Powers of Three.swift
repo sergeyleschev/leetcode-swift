@@ -31,5 +31,5 @@ class Solution {
         }
         return true
     }
-    
+
 }

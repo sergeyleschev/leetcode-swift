@@ -42,8 +42,7 @@ class Solution {
         var i = 0
 
         for char in s {
-            if char.isLowercase { letterStr.append(char) } 
-            else { digitStr.append(char) }
+            if char.isLowercase { letterStr.append(char) } else { digitStr.append(char) }
         }
 
         if abs(digitStr.count - letterStr.count) > 1 { return "" }
@@ -56,7 +55,9 @@ class Solution {
 
         while i < digitStr.count {
             finalStr.append(digitStr[String.Index(utf16Offset: i, in: s)])
-            if i < letterStr.count { finalStr.append(letterStr[String.Index(utf16Offset: i, in: s)]) }
+            if i < letterStr.count {
+                finalStr.append(letterStr[String.Index(utf16Offset: i, in: s)])
+            }
             i += 1
         }
 

@@ -24,7 +24,6 @@ class Solution {
 
     func findClosestElements(_ arr: [Int], _ k: Int, _ x: Int) -> [Int] {
 
-
         func binarySearch() -> Int {
             var l = 0
             var r = arr.count - 1
@@ -61,5 +60,5 @@ class Solution {
 
         return Array(arr[l...r])
     }
-    
+
 }

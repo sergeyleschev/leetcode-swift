@@ -8,13 +8,13 @@ class Solution {
 
     // Example 1:
     // Input: croakOfFrogs = "croakcroak"
-    // Output: 1 
+    // Output: 1
     // Explanation: One frog yelling "croak" twice.
 
     // Example 2:
     // Input: croakOfFrogs = "crcoakroak"
-    // Output: 2 
-    // Explanation: The minimum number of frogs is two. 
+    // Output: 2
+    // Explanation: The minimum number of frogs is two.
     // The first frog could yell "crcoakroak".
     // The second frog could yell later "crcoakroak".
 
@@ -35,17 +35,16 @@ class Solution {
         var croak = Croak()
         var croakingFrogsCount = 0
         var frogsCount = 0
-        
+
         for c in croakOfFrogs {
             if !croak.addAndCheckValid(with: c) { return -1 }
             if c == "c" { croakingFrogsCount += 1 }
             if c == "k" { croakingFrogsCount -= 1 }
             frogsCount = max(frogsCount, croakingFrogsCount)
         }
-        
+
         return croakingFrogsCount == 0 && croak.isCountEqualed() ? frogsCount : -1
     }
-    
 
     class Croak {
         var c = 0
@@ -53,7 +52,7 @@ class Solution {
         var o = 0
         var a = 0
         var k = 0
-        
+
         func addAndCheckValid(with character: Character) -> Bool {
             switch character {
             case "c": c += 1
@@ -65,7 +64,7 @@ class Solution {
             }
             return isCountValid()
         }
-        
+
         func isCountValid() -> Bool { (c >= r) && (r >= o) && (o >= a) && (a >= k) }
         func isCountEqualed() -> Bool { (c == r) && (c == o) && (c == a) && (c == k) }
     }

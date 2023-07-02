@@ -36,7 +36,7 @@ class Solution {
         var map = [Int: [Int]]()
         var ans = 0
         var visitedMaxIndex: Int? = nil
-        
+
         map[0] = [-1]
 
         for num in nums {
@@ -44,15 +44,21 @@ class Solution {
             if let indices = map[sum - target] {
                 for index in indices {
                     if let i = visitedMaxIndex {
-                        if i <= index { ans += 1; visitedMaxIndex = cnt }
-                    } else { ans += 1; visitedMaxIndex = cnt }
+                        if i <= index {
+                            ans += 1
+                            visitedMaxIndex = cnt
+                        }
+                    } else {
+                        ans += 1
+                        visitedMaxIndex = cnt
+                    }
                 }
             }
-            map[sum,default: []].append(cnt)
+            map[sum, default: []].append(cnt)
             cnt += 1
             last = sum
         }
-        
+
         return ans
     }
 

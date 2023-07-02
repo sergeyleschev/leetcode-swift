@@ -30,7 +30,6 @@ class Solution {
 
     private let seq = Sequential()
 
-    
     func sequentialDigits(_ low: Int, _ high: Int) -> [Int] {
         var ans = [Int]()
 
@@ -44,11 +43,9 @@ class Solution {
 
 }
 
-
 class Sequential {
     var nums = [Int]()
 
-    
     init() {
         let sample: [Character] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
         let n = 10

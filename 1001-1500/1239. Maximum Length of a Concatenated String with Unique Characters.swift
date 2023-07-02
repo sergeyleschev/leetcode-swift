@@ -29,27 +29,25 @@ class Solution {
     func maxLength(_ arr: [String]) -> Int {
         var map: [String: Int] = [:]
         var len = 0
-        
 
         func getBitMask(_ s: String) -> Int {
             var bitMask = 0
             for c in s {
-                var mask = 1                    
+                var mask = 1
                 // one line code as 'let mask = 1 << (c.asciiValue! - 97)' won't work because Swift will treat mask as UInt8 (due to asciiValue is type of UInt8),
                 // once c.asciiValue! - 97 > 7, overflow happens and mask will be zero hence we split it into two lines, such that mask will be Int instead
-                
-                mask <<= (c.asciiValue! - 97)   // 97 is the ascii value of 'a'
-                if bitMask & mask != 0 { return 0 } // contains duplicated char
+
+                mask <<= (c.asciiValue! - 97)  // 97 is the ascii value of 'a'
+                if bitMask & mask != 0 { return 0 }  // contains duplicated char
                 bitMask |= mask
             }
 
             return bitMask
         }
 
-        
         func backtrack(_ path: String, _ pathMask: Int, _ index: Int) {
             len = max(len, path.count)
-            
+
             for i in index..<arr.count {
                 guard let bitMask = map[arr[i]], bitMask & pathMask == 0 else { continue }
                 if bitMask == 0 { continue }
@@ -57,8 +55,7 @@ class Solution {
             }
         }
 
-
-        for s in arr { map[s] = getBitMask(s) }        
+        for s in arr { map[s] = getBitMask(s) }
         backtrack("", 0, 0)
         return len
     }

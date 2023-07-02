@@ -13,7 +13,7 @@ class Solution {
     // Output: 2
     // Explanation:
     // You currently cannot reach the last rung.
-    // Add rungs at heights 7 and 8 to climb this ladder. 
+    // Add rungs at heights 7 and 8 to climb this ladder.
     // The ladder will now have rungs at [1,3,5,7,8,10].
 
     // Example 2:
@@ -50,9 +50,9 @@ class Solution {
             let delta = rungs[i] - pre
             pre = rungs[i]
             if delta <= dist { continue }
-            needStairs += (delta  - 1) / dist
+            needStairs += (delta - 1) / dist
         }
         return needStairs
     }
-    
+
 }

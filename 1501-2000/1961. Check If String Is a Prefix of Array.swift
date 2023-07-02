@@ -47,7 +47,9 @@ class Solution {
                     iw2 = 0
                     if iw == words.count { return i == s.count - 1 }
                 }
-            } else { return false }
+            } else {
+                return false
+            }
             if i == s.count - 1 { return iw2 == 0 }
         }
         return true

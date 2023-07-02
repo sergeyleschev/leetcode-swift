@@ -7,10 +7,10 @@ class Solution {
 
     // Example 1:
     // Input: nums = [8,2,4,7], limit = 4
-    // Output: 2 
-    // Explanation: All subarrays are: 
+    // Output: 2
+    // Explanation: All subarrays are:
     // [8] with maximum absolute diff |8-8| = 0 <= 4.
-    // [8,2] with maximum absolute diff |8-2| = 6 > 4. 
+    // [8,2] with maximum absolute diff |8-2| = 6 > 4.
     // [8,2,4] with maximum absolute diff |8-2| = 6 > 4.
     // [8,2,4,7] with maximum absolute diff |8-2| = 6 > 4.
     // [2] with maximum absolute diff |2-2| = 0 <= 4.
@@ -18,12 +18,12 @@ class Solution {
     // [2,4,7] with maximum absolute diff |2-7| = 5 > 4.
     // [4] with maximum absolute diff |4-4| = 0 <= 4.
     // [4,7] with maximum absolute diff |4-7| = 3 <= 4.
-    // [7] with maximum absolute diff |7-7| = 0 <= 4. 
+    // [7] with maximum absolute diff |7-7| = 0 <= 4.
     // Therefore, the size of the longest subarray is 2.
 
     // Example 2:
     // Input: nums = [10,1,2,4,7,2], limit = 5
-    // Output: 4 
+    // Output: 4
     // Explanation: The subarray [2,4,7,2] is the longest since the maximum absolute diff is |2-7| = 5 <= 5.
 
     // Example 3:
@@ -36,13 +36,16 @@ class Solution {
     // 0 <= limit <= 10^9
 
     func longestSubarray(_ nums: [Int], _ limit: Int) -> Int {
-        var left = 0, right = 0
-        var maxQueue: [Int] = [], minQueue: [Int] = [], ans = 0
-        
+        var left = 0
+        var right = 0
+        var maxQueue: [Int] = []
+        var minQueue: [Int] = []
+        var ans = 0
+
         while right < nums.count {
             while !minQueue.isEmpty && nums[right] < nums[minQueue.last!] { minQueue.removeLast() }
             minQueue.append(right)
-            
+
             while !maxQueue.isEmpty && nums[right] > nums[maxQueue.last!] { maxQueue.removeLast() }
             maxQueue.append(right)
 
@@ -57,7 +60,7 @@ class Solution {
             ans = max(ans, right - left + 1)
             right += 1
         }
-        
+
         return ans
     }
 

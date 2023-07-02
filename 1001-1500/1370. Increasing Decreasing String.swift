@@ -45,15 +45,18 @@ class Solution {
     // s contains only lower-case English letters.
 
     func sortString(_ s: String) -> String {
-        var s = Array(s), dict = Array(repeating: 0, count: 26), ans: [Character] = [], flag = false
+        var s = Array(s)
+        var dict = Array(repeating: 0, count: 26)
+        var ans: [Character] = []
+        var flag = false
         var i = 0
         var stride = 1
-        
+
         for c in s {
             let i = Int(c.asciiValue!) - 97
             dict[i] += 1
         }
-        
+
         while true {
             if i < 0 {
                 i = 0
@@ -68,16 +71,16 @@ class Solution {
                 if !flag { break }
                 flag = false
             }
-            
+
             if dict[i] > 0 {
-                ans.append(Character(String(UnicodeScalar(UInt8(i+97)))))
+                ans.append(Character(String(UnicodeScalar(UInt8(i + 97)))))
                 dict[i] -= 1
                 flag = true
             }
-            
+
             i += stride
         }
-        
+
         return String(ans)
     }
 

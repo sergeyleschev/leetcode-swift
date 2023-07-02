@@ -25,16 +25,14 @@ class ParkingSystem {
     // 0 <= big, medium, small <= 1000
     // carType is 1, 2, or 3
     // At most 1000 calls will be made to addCar
-    
+
     private var slots: [Int]
     private var occupied: [Int]
-
 
     init(_ big: Int, _ medium: Int, _ small: Int) {
         slots = [big, medium, small]
         occupied = [0, 0, 0]
     }
-    
 
     func addCar(_ carType: Int) -> Bool {
         if occupied[carType - 1] < slots[carType - 1] {
@@ -43,7 +41,7 @@ class ParkingSystem {
         }
         return false
     }
-    
+
 }
 
 /**

@@ -27,15 +27,14 @@ class Solution {
     // 1 <= cards[i] <= 9
 
     func judgePoint24(_ nums: [Int]) -> Bool {
-        
 
         func judgePoint24(_ nums: [Double]) -> Bool {
             if nums.count == 1 { return abs(24 - nums[0]) <= 1e-9 }
             var found = false
-            for i in 0 ..< nums.count - 1 {
-                for j in i + 1 ..< nums.count {
+            for i in 0..<nums.count - 1 {
+                for j in i + 1..<nums.count {
                     let (a, b) = (nums[i], nums[j])
-                    let nums = nums[..<i] + nums[(i + 1) ..< j] + nums[(j + 1)...]
+                    let nums = nums[..<i] + nums[(i + 1)..<j] + nums[(j + 1)...]
                     found = found || judgePoint24(nums + [a + b])
                     found = found || judgePoint24(nums + [a - b])
                     found = found || judgePoint24(nums + [b - a])

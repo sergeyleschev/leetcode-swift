@@ -32,11 +32,11 @@ class Solution {
         var maxEle = 0
 
         for i in 0..<arr.count {
-            maxEle =  max(maxEle, arr[i])
-            if maxEle ==  i { ans += 1 }
+            maxEle = max(maxEle, arr[i])
+            if maxEle == i { ans += 1 }
         }
 
         return ans
     }
-    
+
 }

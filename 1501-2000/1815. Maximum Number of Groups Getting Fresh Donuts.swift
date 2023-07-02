@@ -22,7 +22,7 @@ class Solution {
     // 1 <= groups[i] <= 10^9
 
     // Solution:
-    // We have bunch of nubmers and we need to make them in special order, such that as much groups are divisible by B. Notice, that what matters, is not element g in groups, but in fact g % B.
+    // We have bunch of numbers and we need to make them in special order, such that as much groups are divisible by B. Notice, that what matters, is not element g in groups, but in fact g % B.
     // Now, we have elements in groups be numbers from 0 to B-1. Notice, that if we have element 0, than this group is always happy, so no need to consider it: remove it and add 1 to final answer. Also, notice, that if we have two elements, which give B in total, if we put them one after another, we will make happy group as well.
     // Let us call position how many of each reminders we have, for example for case [1, 2, 3, 3, 4, 5, 5, 5] and B = 4, we have [4,1,2], because we have 4 numbers with reminder 1, 1 number with reminder 2 and 2 numbers with reminder 3.
     // It is time now to use dfs(position, last), where position is what we discussed earlier and last is last number in our sequence. Where we can go from this position: we try to decrease one of the elements of position by one and run function recursively: we add 1 (using U%B == 0), if we make one more group happy.
@@ -33,7 +33,7 @@ class Solution {
         var remain = Array(repeating: 0, count: batchSize)
         var remainGroup = 0
         var cache = [String: Int]()
-        
+
         for g in groups {
             let temp = g % batchSize
             remain[temp] += 1
@@ -47,9 +47,11 @@ class Solution {
         return happy
     }
 
-
-    private func dfs(_ cur: Int, _ remain: inout [Int], _ remainGroup: Int, _ batchSize: Int, _ cache: inout [String: Int]) -> Int {
-        if remainGroup == 0 { return 0 } // check if remain is all zero now
+    private func dfs(
+        _ cur: Int, _ remain: inout [Int], _ remainGroup: Int, _ batchSize: Int,
+        _ cache: inout [String: Int]
+    ) -> Int {
+        if remainGroup == 0 { return 0 }  // check if remain is all zero now
         var res = 0
         var cur = cur
         let key = String(cur) + getKey(remain)
@@ -61,12 +63,12 @@ class Solution {
         }
 
         if let val = cache[key] { return val }
-        
+
         for i in 1..<batchSize {
             if remain[i] > 0 {
                 remain[i] -= 1
-                var nextCur = cur - i // how much left in the batch
-                if nextCur < 0 { nextCur += batchSize } // not enough, add n (this was my bug during the contest)
+                var nextCur = cur - i  // how much left in the batch
+                if nextCur < 0 { nextCur += batchSize }  // not enough, add n (this was my bug during the contest)
                 val = max(val, dfs(nextCur, &remain, remainGroup - 1, batchSize, &cache))
                 remain[i] += 1
             }
@@ -75,7 +77,6 @@ class Solution {
         cache[key] = res
         return res
     }
-
 
     private func getKey(_ arr: [Int]) -> String {
         var res = ""

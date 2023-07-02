@@ -1,6 +1,5 @@
 typealias Counter = [Character: Int]
 
-
 class Solution {
 
     // Solution by Sergey Leschev
@@ -41,9 +40,8 @@ class Solution {
     // 0 <= score[i] <= 10
     // words[i], letters[i] contains only lower case English letters.
 
-    private static let permunation = (0...16384).map{$0.binaryDigitArr}
-    private let aAsciiValue  =  Character("a").asciiValue!
-
+    private static let permunation = (0...16384).map { $0.binaryDigitArr }
+    private let aAsciiValue = Character("a").asciiValue!
 
     func maxScoreWords(_ words: [String], _ letters: [Character], _ score: [Int]) -> Int {
         let lettersCounter = letters.counter
@@ -51,10 +49,9 @@ class Solution {
         let wordsCounter = words.map { $0.counter }.filter { lettersCounter.canFormed(another: $0) }
         var ans = 0
 
-
-        func calculateScore(_ counter: Counter) ->  Int {
+        func calculateScore(_ counter: Counter) -> Int {
             var ans = 0
-            for (ch,val) in counter { if let s = letterScore[ch] { ans += s * val } }
+            for (ch, val) in counter { if let s = letterScore[ch] { ans += s * val } }
             return ans
         }
 
@@ -62,12 +59,14 @@ class Solution {
             let index = Int(letter.asciiValue! - aAsciiValue)
             if nil == letterScore[letter] { letterScore[letter] = score[index] }
         }
-        
+
         for i in 1..<Int(pow(2.0, Double(wordsCounter.count))) {
             var tempCounter = [Character: Int]()
             let arr = Solution.permunation[i]
             for j in 0..<arr.count where arr[j] { tempCounter.add(another: wordsCounter[j]) }
-            if lettersCounter.canFormed(another: tempCounter){ ans = max(ans, calculateScore(tempCounter)) }
+            if lettersCounter.canFormed(another: tempCounter) {
+                ans = max(ans, calculateScore(tempCounter))
+            }
         }
 
         return ans
@@ -75,31 +74,28 @@ class Solution {
 
 }
 
-
-extension Sequence where Element == Character  {
-    var counter: [Character:Int] {
-        var ans = [Character:Int]()
+extension Sequence where Element == Character {
+    var counter: [Character: Int] {
+        var ans = [Character: Int]()
         for ch in self {
             if let c = ans[ch] {
                 ans.updateValue(c + 1, forKey: ch)
-            }  else {
+            } else {
                 ans.updateValue(1, forKey: ch)
             }
         }
         return ans
     }
- }
- 
+}
 
 extension Counter {
     func canFormed(another counter: Counter) -> Bool {
-        for (ch,c) in counter { guard let num = self[ch], num >= c else { return false } }
+        for (ch, c) in counter { guard let num = self[ch], num >= c else { return false } }
         return true
     }
 
-
-    mutating func add(another  counter: Counter) {
-        for (ch,val) in counter {
+    mutating func add(another counter: Counter) {
+        for (ch, val) in counter {
             if let c = self[ch] {
                 self.updateValue(c + val, forKey: ch)
             } else {
@@ -108,7 +104,6 @@ extension Counter {
         }
     }
 }
- 
 
 extension Int {
     var binaryDigitArr: [Bool] {

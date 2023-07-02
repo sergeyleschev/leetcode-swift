@@ -7,7 +7,7 @@ class Solution {
     // Return a list of two integers [A, B] where:
     // A and B are No-Zero integers.
     // A + B = n
-    // It's guarateed that there is at least one valid solution. If there are many valid solutions you can return any of them.
+    // It's guaranteed that there is at least one valid solution. If there are many valid solutions you can return any of them.
 
     // Example 1:
     // Input: n = 2
@@ -35,8 +35,8 @@ class Solution {
 
     func getNoZeroIntegers(_ n: Int) -> [Int] {
         var target = 0
-        
-        for i in 1...n/2 {
+
+        for i in 1...n / 2 {
             if containZero(i) { continue }
             if containZero(n - i) { continue }
             target = i
@@ -46,16 +46,15 @@ class Solution {
         return [target, n - target]
     }
 
-
     func containZero(_ num: Int) -> Bool {
         if num == 0 { return true }
         var num = num
-        
+
         while num > 0 {
             if num % 10 == 0 { return true }
             num = num / 10
         }
-        
+
         return false
     }
 

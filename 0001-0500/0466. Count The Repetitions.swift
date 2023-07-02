@@ -18,14 +18,14 @@ class Solution {
 
     // Example 2:
     // Input: s1 = "acb", n1 = 1, s2 = "acb", n2 = 1
-    // Output: 1 
+    // Output: 1
 
     // Constraints:
     // 1 <= s1.length, s2.length <= 100
     // s1 and s2 consist of lowercase English letters.
     // 1 <= n1, n2 <= 10^6
-    
-    func getMaxRepetitions(_ s1: String, _ n1: Int, _ s2: String, _ n2: Int) -> Int {    
+
+    func getMaxRepetitions(_ s1: String, _ n1: Int, _ s2: String, _ n2: Int) -> Int {
         guard s1.count > 0 else { return 0 }
         let a1 = Array(s1)
         let a2 = Array(s2)
@@ -33,7 +33,7 @@ class Solution {
         var start = 0
         var res = 0
         var next = 0
-        
+
         for i in 0..<s2.count {
             start = i
             var count = 0
@@ -48,12 +48,12 @@ class Solution {
             }
             dp.append([start, count])
         }
-        
+
         for _ in 0..<n1 {
             res += dp[next][1]
             next = dp[next][0]
         }
-        
+
         return res / n2
     }
 

@@ -33,7 +33,7 @@ class Solution {
     func countTriplets(_ nums: [Int]) -> Int {
         var ans = 0
         var counter = [Int](repeating: 0, count: 1 << 16)
-        
+
         for i in nums {
             for j in nums { counter[i & j] += 1 }
         }
@@ -47,8 +47,8 @@ class Solution {
             }
             ans += counter[0]
         }
-        
+
         return ans
     }
-    
+
 }

@@ -1,7 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
-    
+
     // 134. Gas Station
     // There are n gas stations along a circular route, where the amount of gas at the ith station is gas[i].
     // You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from the ith station to its next (i + 1)th station. You begin the journey with an empty tank at one of the gas stations.
@@ -35,7 +35,7 @@ class Solution {
     // Travel to station 0. Your tank = 4 - 3 + 2 = 3
     // Travel to station 1. Your tank = 3 - 3 + 3 = 3
     // You cannot travel back to station 2, as it requires 4 unit of gas but you only have 3.
-    // Therefore, you can't travel around the circuit once no matter where you start. 
+    // Therefore, you can't travel around the circuit once no matter where you start.
 
     // Constraints:
     // gas.length == n
@@ -46,33 +46,33 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of gas stations.
     //   - space: O(1), only constant space is used.
-    
+
     func canCompleteCircuit(_ gas: [Int], _ cost: [Int]) -> Int {
         let count = gas.count
         var dp: [Int] = Array(repeating: Int.min, count: count)
         var i = 0
         var loop = 0
         var start = -1
-        
+
         while loop <= 1 {
             let index = i > 0 ? i - 1 : count - 1
-            
+
             if dp[i] >= 0 && start == i { return start }
-            
+
             if dp[index] >= 0 {
                 dp[i] = dp[index] + gas[i] - cost[i]
-            
+
             } else {
                 dp[i] = gas[i] - cost[i]
                 start = i
             }
-            
+
             if dp[i] < 0 { start = i }
             i += 1
             if i == count { loop += 1 }
             i %= count
         }
-        
+
         return -1
     }
 

@@ -35,11 +35,11 @@ class Solution {
     // - Complexity:
     //   - time: O(1), only constant time is used.
     //   - space: O(1), only constant space is used.
-    
+
     func validSquare(_ p1: [Int], _ p2: [Int], _ p3: [Int], _ p4: [Int]) -> Bool {
         var arr = [(p1[0], p1[1]), (p2[0], p2[1]), (p3[0], p3[1]), (p4[0], p4[1])]
         var length = Set<Int>()
-        
+
         for i in 0..<arr.count {
             for j in i + 1..<arr.count {
                 let x = abs(arr[i].0 - arr[j].0)
@@ -48,8 +48,9 @@ class Solution {
             }
         }
 
-        if length.count != 2 { return false } 
-        else {
+        if length.count != 2 {
+            return false
+        } else {
             let first = length.removeFirst()
             let second = length.removeFirst()
             if first > second { return first == second * 2 } else { return second == first * 2 }

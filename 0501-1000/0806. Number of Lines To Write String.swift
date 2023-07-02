@@ -35,7 +35,7 @@ class Solution {
     func numberOfLines(_ widths: [Int], _ s: String) -> [Int] {
         var lev = 0
         var space = 0
-        
+
         for c in s {
             let i = Int(c.asciiValue! - Character("a").asciiValue!)
             let width = widths[i]
@@ -46,8 +46,8 @@ class Solution {
                 lev += 1
             }
         }
-        
+
         return [lev + 1, space]
     }
-    
+
 }

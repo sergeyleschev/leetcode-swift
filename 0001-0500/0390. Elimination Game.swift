@@ -30,7 +30,7 @@ class Solution {
         var res = 1
         var p = 1
         var cnt = 0
-        
+
         while num > 1 {
             num /= 2
             cnt += 1
@@ -43,5 +43,5 @@ class Solution {
         }
         return res
     }
-    
+
 }

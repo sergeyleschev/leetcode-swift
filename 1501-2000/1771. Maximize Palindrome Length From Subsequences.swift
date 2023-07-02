@@ -34,7 +34,7 @@ class Solution {
         let s = word1 + word2
         let size = s.count
         let stringToArray = [Character](s)
-        let m = word1.count     
+        let m = word1.count
         var dp = [[Int]](repeating: [Int](repeating: 0, count: size), count: size)
         var i = size - 1
         var ans = 0
@@ -45,11 +45,12 @@ class Solution {
                 if stringToArray[i] == stringToArray[j] {
                     dp[i][j] = dp[i + 1][j - 1] + 2
                     if i < m && j >= m { ans = max(ans, dp[i][j]) }
-                } 
-                else { dp[i][j] = max(dp[i + 1][j], dp[i][j - 1]) }
+                } else {
+                    dp[i][j] = max(dp[i + 1][j], dp[i][j - 1])
+                }
             }
             i -= 1
-        }    
+        }
         return ans
     }
 

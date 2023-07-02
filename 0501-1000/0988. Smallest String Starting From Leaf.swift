@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -40,10 +38,12 @@ class Solution {
 
     var map = [Int: String]()
 
-
     func smallestFromLeaf(_ root: TreeNode?) -> String {
         var n = 0
-        "abcdefghijklmnopqrstuvwxyz".forEach { map[n] = String($0); n += 1 }
+        "abcdefghijklmnopqrstuvwxyz".forEach {
+            map[n] = String($0)
+            n += 1
+        }
         return postTraverseTree(root, "")
     }
 
@@ -55,10 +55,13 @@ class Solution {
             let left = postTraverseTree(root!.left, curStr)
             let right = postTraverseTree(root!.right, curStr)
             return left < right ? left : right
+        } else if root!.left != nil {
+            return postTraverseTree(root!.left, curStr)
+        } else if root!.right != nil {
+            return postTraverseTree(root!.right, curStr)
+        } else {
+            return curStr
         }
-        else if root!.left != nil { return postTraverseTree(root!.left, curStr) }
-        else if root!.right != nil { return postTraverseTree(root!.right, curStr) }
-        else { return curStr }
     }
 
 }

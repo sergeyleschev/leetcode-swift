@@ -32,9 +32,8 @@ class Solution {
 
     typealias Info = (cnt: Int, included: [Int])
 
-
     func smallestSufficientTeam(_ req_skills: [String], _ people: [[String]]) -> [Int] {
-        var skillMask = [String:Int]()
+        var skillMask = [String: Int]()
         var requiredSkills: Int = 0
         var memo = [Int: Info]()
 
@@ -43,18 +42,20 @@ class Solution {
             requiredSkills |= (1 << idx)
         }
 
-        let peopleSkills = people.map { (skills) -> Int in skills.reduce(0) { $0 | (skillMask[$1] ?? 0 )} }
-        
+        let peopleSkills = people.map { (skills) -> Int in
+            skills.reduce(0) { $0 | (skillMask[$1] ?? 0) }
+        }
+
         for idx in 0..<people.count {
-            for (skills,info) in memo {
+            for (skills, info) in memo {
                 let currentSkills = peopleSkills[idx] | skills
                 if let tempInfo = memo[currentSkills], tempInfo.cnt < 1 + info.cnt { continue }
-                memo[currentSkills] = (1 + info.cnt,info.included + [idx])
+                memo[currentSkills] = (1 + info.cnt, info.included + [idx])
             }
-            memo[peopleSkills[idx]] = (1,[idx])
+            memo[peopleSkills[idx]] = (1, [idx])
         }
 
         return memo[requiredSkills]?.included ?? []
     }
-    
+
 }

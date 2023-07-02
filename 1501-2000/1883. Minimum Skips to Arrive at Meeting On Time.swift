@@ -46,12 +46,12 @@ class Solution {
 
     func minSkips(_ dist: [Int], _ speed: Int, _ hoursBefore: Int) -> Int {
         let n = dist.count
-        var dp = Array(repeating: 0, count: n + 1) // dp[j] means the minimum arrival time with j skip.
+        var dp = Array(repeating: 0, count: n + 1)  // dp[j] means the minimum arrival time with j skip.
 
         for i in 0..<n {
             for j in stride(from: n, through: 0, by: -1) {
                 dp[j] += dist[i]
-                if i < n - 1 { dp[j] = (dp[j] + speed - 1) / speed * speed } // rest
+                if i < n - 1 { dp[j] = (dp[j] + speed - 1) / speed * speed }  // rest
                 if j > 0 { dp[j] = min(dp[j], dp[j - 1] + dist[i]) }
             }
         }

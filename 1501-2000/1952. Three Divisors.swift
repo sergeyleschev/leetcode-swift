@@ -9,12 +9,12 @@ class Solution {
     // Example 1:
     // Input: n = 2
     // Output: false
-    // Explantion: 2 has only two divisors: 1 and 2.
+    // Explanation: 2 has only two divisors: 1 and 2.
 
     // Example 2:
     // Input: n = 4
     // Output: true
-    // Explantion: 4 has three divisors: 1, 2, and 4.
+    // Explanation: 4 has three divisors: 1, 2, and 4.
 
     // Constraints:
     // 1 <= n <= 10^4
@@ -28,5 +28,5 @@ class Solution {
         }
         return count == 3
     }
-    
+
 }

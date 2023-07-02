@@ -45,17 +45,22 @@ class Solution {
         if check(n, index, maxSum, low) { ans = max(ans, low) }
         return ans
     }
-    
 
-    private func check(_ n: Int, _ index: Int,_ maxSum: Int, _ curVal: Int) -> Bool {
+    private func check(_ n: Int, _ index: Int, _ maxSum: Int, _ curVal: Int) -> Bool {
         var sum = 0
-        
-        if curVal < index + 1 { sum += (curVal + 1) * curVal / 2 + index  + 1 - curVal } 
-        else { sum += (curVal * 2 - index) * (index + 1) / 2 }
 
-        if curVal < n - index { sum += curVal * (curVal - 1) / 2 + n - index - curVal } 
-        else { sum += (curVal * 2 - n + index) * (n - 1 - index) / 2 }
-        
+        if curVal < index + 1 {
+            sum += (curVal + 1) * curVal / 2 + index + 1 - curVal
+        } else {
+            sum += (curVal * 2 - index) * (index + 1) / 2
+        }
+
+        if curVal < n - index {
+            sum += curVal * (curVal - 1) / 2 + n - index - curVal
+        } else {
+            sum += (curVal * 2 - n + index) * (n - 1 - index) / 2
+        }
+
         return sum <= maxSum
     }
 

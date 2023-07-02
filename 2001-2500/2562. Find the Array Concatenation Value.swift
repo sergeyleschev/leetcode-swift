@@ -5,7 +5,7 @@ class Solution {
     func findTheArrayConcVal(_ nums: [Int]) -> Int {
         var concatValue = 0
         var nums = nums
-        
+
         while nums.count > 0 {
             if nums.count == 1 {
                 concatValue += nums[0]
@@ -17,7 +17,7 @@ class Solution {
                 nums.removeLast()
             }
         }
-        
+
         return concatValue
     }
 }

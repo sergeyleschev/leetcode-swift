@@ -1,7 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
-    
+
     // 478. Generate Random Point in a Circle
     // Given the radius and the position of the center of a circle, implement the function randPoint which generates a uniform random point inside the circle.
     // Implement the Solution class:
@@ -35,15 +35,13 @@ class Solution {
     private let radius: Double
     private let xCenter: Double
     private let yCenter: Double
-    
 
     init(_ radius: Double, _ x_center: Double, _ y_center: Double) {
         self.radius = radius
         xCenter = x_center
         yCenter = y_center
     }
-    
-    
+
     func randPoint() -> [Double] {
         let randomR = Double.random(in: 0.0...1.0).squareRoot() * radius
         let randomTheta = Double.random(in: 0.0...1.0) * 2 * Double.pi

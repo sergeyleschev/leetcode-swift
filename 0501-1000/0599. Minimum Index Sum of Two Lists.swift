@@ -37,9 +37,9 @@ class Solution {
 
     func findRestaurant(_ list1: [String], _ list2: [String]) -> [String] {
         var returnList = [String]()
-        var dic1 = [String : Int]()
+        var dic1 = [String: Int]()
         var min = list1.count + list2.count
-        
+
         for (i, v1) in list1.enumerated() { dic1[v1] = i }
 
         for (j, v2) in list2.enumerated() {
@@ -51,9 +51,9 @@ class Solution {
                     returnList.append(v2)
                 }
             }
-            
+
         }
-        
+
         return returnList
     }
 

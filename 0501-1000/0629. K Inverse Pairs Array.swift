@@ -21,9 +21,9 @@ class Solution {
     // 0 <= k <= 1000
 
     func kInversePairs(_ n: Int, _ k: Int) -> Int {
-        let modulo = 1000000007
+        let modulo = 1_000_000_007
         var dp = [1]
-        
+
         for i in 2..<n + 1 {
             var ndp = [Int]()
             var num = 0
@@ -34,7 +34,7 @@ class Solution {
             }
             dp = ndp
         }
-        
+
         return k < dp.count ? dp[k] : 0
     }
 

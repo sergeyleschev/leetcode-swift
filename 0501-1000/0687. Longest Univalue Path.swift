@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -35,14 +33,12 @@ class Solution {
     // The depth of the tree will not exceed 1000.
 
     var ans = 0
-    
-    
+
     func longestUnivaluePath(_ root: TreeNode?) -> Int {
         findLongest(root)
         return ans
     }
-    
-    
+
     func findLongest(_ root: TreeNode?) -> Int {
         guard root != nil else { return 0 }
         let left = findLongest(root?.left)
@@ -52,10 +48,10 @@ class Solution {
 
         if root?.left?.val == root?.val { leftLength = left + 1 }
         if root?.right?.val == root?.val { rightLength = right + 1 }
-        
+
         ans = max(ans, leftLength + rightLength)
         return max(leftLength, rightLength)
-        
+
     }
 
 }

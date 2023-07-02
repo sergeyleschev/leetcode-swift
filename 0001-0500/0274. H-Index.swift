@@ -35,7 +35,7 @@ class Solution {
         let n = citations.count
         var ans = 0
 
-        var papers = [Int](repeating: 0, count: n+1)
+        var papers = [Int](repeating: 0, count: n + 1)
         for citation in citations {
             papers[min(n, citation)] += 1
         }

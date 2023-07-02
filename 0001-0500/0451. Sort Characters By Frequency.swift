@@ -28,9 +28,9 @@ class Solution {
     // s consists of English letters and digits.
 
     func frequencySort(_ s: String) -> String {
-        var dict = [Character : Int]()
+        var dict = [Character: Int]()
         var result = [Character]()
-        
+
         s.forEach { (char) in
             if dict[char] == nil {
                 dict[char] = 1
@@ -38,16 +38,18 @@ class Solution {
                 dict[char] = dict[char]! + 1
             }
         }
-        
-        let sortDict = dict.sorted(by: { (dict1 :(key1: Character, value1: Int), dict2: (key2: Character, value2: Int)) -> Bool in
+
+        let sortDict = dict.sorted(by: {
+            (dict1: (key1: Character, value1: Int), dict2: (key2: Character, value2: Int)) -> Bool
+            in
             return dict1.value1 > dict2.value2
         })
-                
+
         for dict in sortDict {
             for _ in 0..<dict.value { result.append(dict.key) }
         }
-        
+
         return String(result)
     }
-    
+
 }

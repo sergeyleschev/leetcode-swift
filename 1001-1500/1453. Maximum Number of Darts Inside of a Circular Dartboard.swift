@@ -3,7 +3,7 @@ class Solution {
     // Solution by Sergey Leschev
 
     // 1453. Maximum Number of Darts Inside of a Circular Dartboard
-    // You have a very large square wall and a circular dartboard placed on the wall. You have been challenged to throw darts into the board blindfolded. Darts thrown at the wall are represented as an array of points on a 2D plane. 
+    // You have a very large square wall and a circular dartboard placed on the wall. You have been challenged to throw darts into the board blindfolded. Darts thrown at the wall are represented as an array of points on a 2D plane.
     // Return the maximum number of points that are within or lie on any circular dartboard of radius r.
 
     // Example 1:
@@ -34,27 +34,34 @@ class Solution {
         var x: Double
         var y: Double
 
-        func distance(to  another: Point) -> Double { sqrt((x - another.x) * (x - another.x) + (y - another.y) * (y - another.y )) }
+        func distance(to another: Point) -> Double {
+            sqrt((x - another.x) * (x - another.x) + (y - another.y) * (y - another.y))
+        }
     }
-
 
     func numPoints(_ points: [[Int]], _ r: Int) -> Int {
         guard points.count > 1 else { return points.count }
-        let doublePoints = points.map {$0.map {Double($0)}}.map { (arr) -> Point in Point(x: arr[0], y: arr[1]) }
+        let doublePoints = points.map { $0.map { Double($0) } }.map { (arr) -> Point in
+            Point(x: arr[0], y: arr[1])
+        }
         let doubleRadius = Double(r)
         let error = 1e-6
-        guard points.count > 2 else { return  doublePoints[0].distance(to: doublePoints[1]) - 2.0 * doubleRadius <= error ? 2 : 1 }
+        guard points.count > 2 else {
+            return doublePoints[0].distance(to: doublePoints[1]) - 2.0 * doubleRadius <= error
+                ? 2 : 1
+        }
         let n = points.count
         var ans = Int.min
 
-
         func count(center: Point) -> Int {
             var cnt = 0
-            for point in doublePoints where center.distance(to: point) - doubleRadius <= error { cnt += 1 }
+            for point in doublePoints where center.distance(to: point) - doubleRadius <= error {
+                cnt += 1
+            }
             return cnt
         }
 
-        func getCenters(_ one: Point, _ another: Point) -> (Point,Point) {
+        func getCenters(_ one: Point, _ another: Point) -> (Point, Point) {
             let mid = Point(x: (one.x + another.x) / 2.0, y: (one.y + another.y) / 2.0)
             let dis1 = mid.distance(to: one)
             let dis2 = sqrt(doubleRadius * doubleRadius - dis1 * dis1)
@@ -72,7 +79,10 @@ class Solution {
                 dirX = dy / dis3
                 dirY = -dx / dis3
             }
-            return (Point(x: mid.x + dis2 * dirX, y: mid.y + dis2 * dirY),Point(x: mid.x - dis2 * dirX, y: mid.y - dis2 * dirY))
+            return (
+                Point(x: mid.x + dis2 * dirX, y: mid.y + dis2 * dirY),
+                Point(x: mid.x - dis2 * dirX, y: mid.y - dis2 * dirY)
+            )
         }
 
         for i in 0..<(n - 1) {
@@ -80,10 +90,10 @@ class Solution {
                 let dis = doublePoints[i].distance(to: doublePoints[j])
                 guard dis - 2.0 * doubleRadius <= error else { continue }
                 let centers = getCenters(doublePoints[i], doublePoints[j])
-                ans = max(ans, count(center: centers.0),count(center: centers.1))
+                ans = max(ans, count(center: centers.0), count(center: centers.1))
             }
         }
-        return max(1,ans)
+        return max(1, ans)
     }
 
 }

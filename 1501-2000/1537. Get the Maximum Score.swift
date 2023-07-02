@@ -55,10 +55,16 @@ class Solution {
         var first = 0
         var second = 0
 
-        while  k < intersectionNode.count {
+        while k < intersectionNode.count {
             let cur = intersectionNode[k]
-            while nums1[i] < cur && i < M { first += nums1[i]; i += 1 }
-            while nums2[j] < cur && j < N  { second += nums2[j]; j += 1 }
+            while nums1[i] < cur && i < M {
+                first += nums1[i]
+                i += 1
+            }
+            while nums2[j] < cur && j < N {
+                second += nums2[j]
+                j += 1
+            }
             ans += max(first, second) + cur
             first = 0
             second = 0
@@ -67,8 +73,14 @@ class Solution {
             k += 1
         }
 
-        while  i < M { first += nums1[i]; i += 1 }
-        while j < N { second += nums2[j]; j += 1 }
+        while i < M {
+            first += nums1[i]
+            i += 1
+        }
+        while j < N {
+            second += nums2[j]
+            j += 1
+        }
         ans += max(first, second)
         return ans % 1_000_000_007
     }

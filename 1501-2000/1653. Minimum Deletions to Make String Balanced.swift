@@ -19,7 +19,6 @@ class Solution {
     // Input: s = "bbaaaaabb"
     // Output: 2
     // Explanation: The only solution is to delete the first two characters.
-     
 
     // Constraints:
     // 1 <= s.length <= 10^5
@@ -27,12 +26,11 @@ class Solution {
 
     private typealias CharCounter = (a: Int, b: Int)
 
-
     func minimumDeletions(_ s: String) -> Int {
         var ans = Int.max
         var total: CharCounter = (0, 0)
         var currentCnt: CharCounter = (0, 0)
-        
+
         for ch in s {
             if ch == "a" {
                 total.a += 1
@@ -40,8 +38,8 @@ class Solution {
                 total.b += 1
             }
         }
-        
-        for ch in  s {
+
+        for ch in s {
             if ch == "a" {
                 currentCnt.a += 1
             } else {
@@ -49,7 +47,7 @@ class Solution {
             }
             ans = min(ans, currentCnt.b + total.a - currentCnt.a)
         }
-        return min(ans,total.a,total.b)
+        return min(ans, total.a, total.b)
     }
 
 }

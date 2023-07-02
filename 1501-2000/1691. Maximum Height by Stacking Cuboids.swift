@@ -3,8 +3,8 @@ class Solution {
     // Solution by Sergey Leschev
 
     // 1691. Maximum Height by Stacking Cuboids
-    // Given n cuboids where the dimensions of the ith cuboid is cuboids[i] = [widthi, lengthi, heighti] (0-indexed). Choose a subset of cuboids and place them on each other.
-    // You can place cuboid i on cuboid j if widthi <= widthj and lengthi <= lengthj and heighti <= heightj. You can rearrange any cuboid's dimensions by rotating it to put it on another cuboid.
+    // Given n cuboids where the dimensions of the ith cuboid is cuboids[i] = [width(i), length(i), height(i)] (0-indexed). Choose a subset of cuboids and place them on each other.
+    // You can place cuboid i on cuboid j if width(i) <= width(j) and length(i) <= length(j) and height(i) <= height(j). You can rearrange any cuboid's dimensions by rotating it to put it on another cuboid.
 
     // Return the maximum height of the stacked cuboids.
 
@@ -35,40 +35,41 @@ class Solution {
     // Constraints:
     // n == cuboids.length
     // 1 <= n <= 100
-    // 1 <= widthi, lengthi, heighti <= 100
+    // 1 <= width(i), length(i), height(i) <= 100
 
     private struct Cuboid {
         var width: Int
         var length: Int
         var height: Int
 
-        static func <(l:Cuboid,r:Cuboid) -> Bool {
-            if l.width !=  r.width { return l.width < r.width }
+        static func < (l: Cuboid, r: Cuboid) -> Bool {
+            if l.width != r.width { return l.width < r.width }
             if l.length != r.length { return l.length < r.length }
             return l.height <= r.height
         }
     }
 
-
     func maxHeight(_ cuboids: [[Int]]) -> Int {
         let N = cuboids.count
         guard N > 1 else { return cuboids[0].max()! }
-        let sortedCuboids = cuboids.map { createCubiod($0)}.sorted { $0 < $1 }
+        let sortedCuboids = cuboids.map { createCuboid($0) }.sorted { $0 < $1 }
         var dp = sortedCuboids.map { $0.height }
 
         for idx in 1..<N {
             var ans = sortedCuboids[idx].height
-            for j in stride(from: idx - 1, through: 0, by: -1) 
-                where sortedCuboids[idx].width >= sortedCuboids[j].width && sortedCuboids[idx].length >= sortedCuboids[j].length && sortedCuboids[idx].height >= sortedCuboids[j].height {
-                    ans = max(ans, dp[j] + sortedCuboids[idx].height)
+            for j in stride(from: idx - 1, through: 0, by: -1)
+            where sortedCuboids[idx].width >= sortedCuboids[j].width
+                && sortedCuboids[idx].length >= sortedCuboids[j].length
+                && sortedCuboids[idx].height >= sortedCuboids[j].height
+            {
+                ans = max(ans, dp[j] + sortedCuboids[idx].height)
             }
             dp[idx] = ans
         }
         return dp.max()!
     }
-    
 
-    private func createCubiod(_ cuboid: [Int]) -> Cuboid {
+    private func createCuboid(_ cuboid: [Int]) -> Cuboid {
         let w = cuboid.min()!
         let h = cuboid.max()!
         let l = cuboid.reduce(0) { $0 + $1 } - w - h

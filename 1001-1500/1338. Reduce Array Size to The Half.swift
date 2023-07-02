@@ -46,16 +46,16 @@ class Solution {
                 map[num] = 1
             }
         }
-        
+
         let sorted = map.sorted { (kv1, kv2) -> Bool in kv1.value > kv2.value }
-        
+
         for i in 0..<sorted.count {
             let kv = sorted[i]
             count += kv.value
             if count >= arr.count / 2 { return i + 1 }
         }
-        
+
         return 0
     }
-    
+
 }

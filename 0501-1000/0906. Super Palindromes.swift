@@ -27,12 +27,12 @@ class Solution {
     // - Say P = R^2is a super palindrome.
     // - Because RR is a palindrome, the first half of the digits in RR determine RR up to two possibilities. We can iterate through these digits: let kk be the first half of the digits in RR. For example, if k = 12344, then R = 1234321 or R = 12344321. Each possibility has either an odd or an even number of digits in RR.
     // - Notice because P < 10^{18}, R < (10^{18})^{\frac{1}{2}} = 10^9, and R = k | k', where k' is k reversed (and also possibly truncated by one digit); so that k < 10^5 = \small\text{MAGIC}, our magic constant.
-    
+
     // Algorithm
     // - For each 1≤k<MAGIC, let's create the associated palindrome R, and check whether R^2 is a palindrome.
     // - We should handle the odd and even possibilities separately, as we would like to break early so as not to do extra work.
     // To check whether an integer is a palindrome, we could check whether it is equal to its reverse. To create the reverse of an integer, we can do it digit by digit.
-    
+
     // - Complexity:
     //   - time: O(W^{\frac{1}{4}} * \log W), where W = 10^{18} is our upper limit for RR. The \log WlogW term comes from checking whether each candidate is the root of a palindrome.
     //   - space: O(logW), the space used to create the candidate palindrome.
@@ -71,15 +71,13 @@ class Solution {
         return finded
     }
 
-
     func isPalindrome(_ num: Int) -> Bool { num == reverse(num) }
-
 
     func reverse(_ num: Int) -> Int {
         var res = 0
         var num = num
         while num != 0 {
-            res = res*10 + num%10
+            res = res * 10 + num % 10
             num /= 10
         }
         return res

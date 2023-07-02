@@ -40,12 +40,11 @@ class Solution {
         let half = n >> 1
 
         while cnt == 0 || idx > 1 {
-            if idx < half { idx = idx * 2 } 
-            else { idx = (idx - half) * 2 + 1 }
+            if idx < half { idx = idx * 2 } else { idx = (idx - half) * 2 + 1 }
 
             cnt += 1
         }
         return cnt
     }
-    
+
 }

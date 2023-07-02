@@ -1,13 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init() { self.val = 0; self.next = nil; }
- *     public init(_ val: Int) { self.val = val; self.next = nil; }
- *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init() { self.val = 0; self.next = nil; }
+///     public init(_ val: Int) { self.val = val; self.next = nil; }
+///     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -49,7 +47,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of nodes in the linked list.
     //   - space: O(1), only constant space is used.
-    
+
     func getDecimalValue(_ head: ListNode?) -> Int {
         var ans = 0
         var cur = head

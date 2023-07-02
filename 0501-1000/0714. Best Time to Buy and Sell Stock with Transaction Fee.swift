@@ -36,16 +36,16 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of prices.
     //   - space: O(1), only constant space is used.
-    
+
     func maxProfit(_ prices: [Int], _ fee: Int) -> Int {
         var ans = 0
         var hold = -prices[0]
-        
+
         for i in 1..<prices.count {
             ans = max(ans, hold + prices[i] - fee)
             hold = max(hold, ans - prices[i])
         }
-        
+
         return ans
     }
 

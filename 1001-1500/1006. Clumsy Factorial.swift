@@ -25,9 +25,10 @@ class Solution {
 
     func clumsy(_ N: Int) -> Int {
         guard N > 0 else { return 0 }
-        var stack: [Int] = [], o = "+"
+        var stack: [Int] = []
+        var o = "+"
         let operators = ["*", "/", "+", "-"]
-        
+
         for i in stride(from: N, to: 0, by: -1) {
             switch o {
             case "*": stack.append(stack.removeLast() * i)
@@ -38,9 +39,9 @@ class Solution {
             }
             o = operators[(N - i) % 4]
         }
-        
+
         let ans = stack.reduce(0, +)
         return ans
     }
-    
+
 }

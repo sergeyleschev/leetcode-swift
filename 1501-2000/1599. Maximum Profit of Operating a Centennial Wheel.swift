@@ -57,17 +57,21 @@ class Solution {
     // 9. 4 board and 1 waits, the wheel rotates. Current profit is 36 * $3 - 9 * $8 = $36.
     // 10. 1 board and 0 wait, the wheel rotates. Current profit is 37 * $3 - 10 * $8 = $31.
     // The highest profit was $36 after rotating the wheel 9 times.
-     
+
     // Constraints:
     // n == customers.length
     // 1 <= n <= 10^5
     // 0 <= customers[i] <= 50
     // 1 <= boardingCost, runningCost <= 100
 
-    func minOperationsMaxProfit(_ customers: [Int], _ boardingCost: Int, _ runningCost: Int) -> Int {
+    func minOperationsMaxProfit(_ customers: [Int], _ boardingCost: Int, _ runningCost: Int) -> Int
+    {
         guard !customers.isEmpty else { return -1 }
         guard boardingCost * 4 > runningCost else { return -1 }
-        let profits = [-runningCost,boardingCost - runningCost, 2 * boardingCost - runningCost, 3 * boardingCost - runningCost, 4 * boardingCost - runningCost]
+        let profits = [
+            -runningCost, boardingCost - runningCost, 2 * boardingCost - runningCost,
+            3 * boardingCost - runningCost, 4 * boardingCost - runningCost,
+        ]
         var maxProfit = Int.min
         var currentProfit = 0
         var rollsOnMaxProfit = -1
@@ -80,22 +84,26 @@ class Solution {
             let boardCustomers = min(4, currentCustomers)
             currentProfit += profits[boardCustomers]
             currentCustomers -= boardCustomers
-            if currentProfit > 0 && currentProfit > maxProfit { (maxProfit, rollsOnMaxProfit) = (currentProfit,rolls) }
+            if currentProfit > 0 && currentProfit > maxProfit {
+                (maxProfit, rollsOnMaxProfit) = (currentProfit, rolls)
+            }
         }
-        
+
         let t = currentCustomers / 4
         currentCustomers = currentCustomers % 4
-        
+
         if t > 0 {
             rolls += t
             currentProfit += t * profits[4]
-            (maxProfit, rollsOnMaxProfit) = (currentProfit,rolls)
+            (maxProfit, rollsOnMaxProfit) = (currentProfit, rolls)
         }
 
         if currentCustomers > 0 {
             rolls += 1
             currentProfit += profits[currentCustomers]
-            if currentProfit > 0 && currentProfit > maxProfit { (maxProfit, rollsOnMaxProfit) = (currentProfit,rolls) }
+            if currentProfit > 0 && currentProfit > maxProfit {
+                (maxProfit, rollsOnMaxProfit) = (currentProfit, rolls)
+            }
         }
 
         return rollsOnMaxProfit

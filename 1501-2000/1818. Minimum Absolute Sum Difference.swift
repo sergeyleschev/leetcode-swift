@@ -22,7 +22,7 @@ class Solution {
     // Example 2:
     // Input: nums1 = [2,4,6,8,10], nums2 = [2,4,6,8,10]
     // Output: 0
-    // Explanation: nums1 is equal to nums2 so no replacement is needed. This will result in an 
+    // Explanation: nums1 is equal to nums2 so no replacement is needed. This will result in an
     // absolute sum difference of 0.
 
     // Example 3:
@@ -39,7 +39,6 @@ class Solution {
 
     private let mod = 1_000_000_007
 
-
     func minAbsoluteSumDiff(_ nums1: [Int], _ nums2: [Int]) -> Int {
         let n = nums1.count
         var noChange = 0
@@ -47,7 +46,6 @@ class Solution {
         var ans = noChange
         let sortedNums1 = nums1.sorted()
 
-        
         func searchPosition(for val: Int) -> Int {
             guard val > sortedNums1[0] else { return -1 }
             guard val < sortedNums1[n - 1] else { return n }
@@ -56,8 +54,9 @@ class Solution {
 
             while left < right {
                 let mid = left + (right - left) >> 1
-                if sortedNums1[mid] == val { return mid } 
-                else if sortedNums1[mid] < val {
+                if sortedNums1[mid] == val {
+                    return mid
+                } else if sortedNums1[mid] < val {
                     guard sortedNums1[mid + 1] <= val else { return mid }
                     left = mid + 1
                 } else {
@@ -73,10 +72,15 @@ class Solution {
             temp -= abs(nums2[idx] - nums1[idx])
             let idx1 = searchPosition(for: nums2[idx])
 
-            if idx1 == -1 { temp += abs(sortedNums1[0] - nums2[idx]) } 
-            else if idx1 == n { temp += abs(sortedNums1[n - 1] - nums2[idx]) } 
-            else { temp += min(abs(sortedNums1[idx1] - nums2[idx]), abs(sortedNums1[idx1 + 1] - nums2[idx])) }
-            
+            if idx1 == -1 {
+                temp += abs(sortedNums1[0] - nums2[idx])
+            } else if idx1 == n {
+                temp += abs(sortedNums1[n - 1] - nums2[idx])
+            } else {
+                temp += min(
+                    abs(sortedNums1[idx1] - nums2[idx]), abs(sortedNums1[idx1 + 1] - nums2[idx]))
+            }
+
             ans = min(ans, temp)
         }
         return ans % mod

@@ -26,7 +26,7 @@ class PeekingIterator {
     // peekingIterator.next();    // return 2, the pointer moves to the next element [1,2,3]
     // peekingIterator.next();    // return 3, the pointer moves to the next element [1,2,3]
     // peekingIterator.hasNext(); // return False
-     
+
     // Constraints:
     // 1 <= nums.length <= 1000
     // 1 <= nums[i] <= 1000
@@ -34,16 +34,14 @@ class PeekingIterator {
     // At most 1000 calls will be made to next, hasNext, and peek.
 
     // Follow up: How would you extend your design to be generic and work with all types, not just integer?
-    
-    private var iterator: IndexingIterator<Array<Int>>
-    private var nextVal: Int?
-    
 
-    init(_ arr: IndexingIterator<Array<Int>>) {
+    private var iterator: IndexingIterator<[Int]>
+    private var nextVal: Int?
+
+    init(_ arr: IndexingIterator<[Int]>) {
         iterator = arr
         nextVal = iterator.next()
     }
-    
 
     // Finds the next item in the sequence.
     // - Returns: The next item.
@@ -57,7 +55,6 @@ class PeekingIterator {
         nextVal = iterator.next()
         return tmp ?? 0
     }
-    
 
     // Peek the next item.
     // - Returns: The next item.
@@ -69,8 +66,7 @@ class PeekingIterator {
     func peek() -> Int {
         nextVal ?? 0
     }
-    
-    
+
     // Finds whether or not the next item is available.
     // - Returns: True if the next item is available, otherwise returns false.
 
@@ -81,7 +77,7 @@ class PeekingIterator {
     func hasNext() -> Bool {
         nextVal != nil
     }
-    
+
 }
 
 /**

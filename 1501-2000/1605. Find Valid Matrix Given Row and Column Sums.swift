@@ -51,7 +51,7 @@ class Solution {
         var row = rowSum
         var col = colSum
         var ans = [[Int]](repeating: [Int](repeating: 0, count: n), count: m)
-        
+
         for r in 0..<m {
             for c in 0..<n {
                 ans[r][c] = min(row[r], col[c])

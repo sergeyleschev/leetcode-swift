@@ -1,13 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init() { self.val = 0; self.next = nil; }
- *     public init(_ val: Int) { self.val = val; self.next = nil; }
- *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init() { self.val = 0; self.next = nil; }
+///     public init(_ val: Int) { self.val = val; self.next = nil; }
+///     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -36,7 +34,7 @@ class Solution {
         var oddArr = [Int]()
         var evenArr = [Int]()
         var count = 1
-        
+
         while list != nil {
             if count % 2 == 1 {
                 oddArr.append((list?.val)!)
@@ -50,7 +48,7 @@ class Solution {
         list = head
         var index = 0
         let oddCount = oddArr.count
-        
+
         while list != nil {
             if index < oddCount {
                 list?.val = oddArr[index]
@@ -59,10 +57,10 @@ class Solution {
             }
             index += 1
             list = list?.next
-            
+
         }
-        
+
         return head
     }
-    
+
 }

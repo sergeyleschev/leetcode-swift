@@ -34,7 +34,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n log(n)), where n is the number of points.
     //   - space: O(n), where n is the number of points.
-    
+
     func findMinArrowShots(_ points: [[Int]]) -> Int {
         guard !points.isEmpty else { return 0 }
         let points = points.sorted(by: { $0[1] < $1[1] })

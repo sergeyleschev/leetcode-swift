@@ -32,7 +32,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the nums.
     //   - space: O(n), where n is the length of the nums.
-    
+
     func findDuplicates(_ nums: [Int]) -> [Int] {
         var nums = nums
         var ans = [Int]()

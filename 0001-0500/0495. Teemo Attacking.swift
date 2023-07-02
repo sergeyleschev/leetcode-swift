@@ -38,12 +38,14 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of `timeSeries`.
     //   - space: O(1), only constant space is used.
-    
+
     func findPoisonedDuration(_ timeSeries: [Int], _ duration: Int) -> Int {
         guard !timeSeries.isEmpty else { return 0 }
         var ans = duration
 
-        for i in 0..<timeSeries.count - 1 { ans += min(duration, timeSeries[i + 1] - timeSeries[i]) }
+        for i in 0..<timeSeries.count - 1 {
+            ans += min(duration, timeSeries[i + 1] - timeSeries[i])
+        }
         return ans
     }
 

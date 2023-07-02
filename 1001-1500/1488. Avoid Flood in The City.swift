@@ -60,14 +60,15 @@ class Solution {
         var dd = [Int]()
 
         for i in 0..<rains.count {
-            if rains[i] == 0 { dd.append(i) } 
-            else {
+            if rains[i] == 0 {
+                dd.append(i)
+            } else {
                 let r = rains[i]
-                if map[r] == nil { map[r] = [1, i] } 
-                else {
-                    if let d = dd.last { if d < map[r]![1] { return [] } } 
-                    else { return [] }
-                    
+                if map[r] == nil {
+                    map[r] = [1, i]
+                } else {
+                    if let d = dd.last { if d < map[r]![1] { return [] } } else { return [] }
+
                     for j in 0..<dd.count where dd[j] > map[r]![1] {
                         result[dd[j]] = r
                         dd.remove(at: j)
@@ -77,7 +78,7 @@ class Solution {
                 }
             }
         }
-        
+
         dd.forEach({ result[$0] = 1 })
         return result
     }

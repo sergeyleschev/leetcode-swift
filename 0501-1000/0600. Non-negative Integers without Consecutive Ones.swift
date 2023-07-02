@@ -16,7 +16,7 @@ class Solution {
     // 3 : 11
     // 4 : 100
     // 5 : 101
-    // Among them, only integer 3 disobeys the rule (two consecutive ones) and the other 5 satisfy the rule. 
+    // Among them, only integer 3 disobeys the rule (two consecutive ones) and the other 5 satisfy the rule.
 
     // Example 2:
     // Input: n = 1
@@ -40,11 +40,16 @@ class Solution {
         var i = 30
 
         while i >= 0 {
-            if n & (1<<i) != 0 {
+            if n & (1 << i) != 0 {
                 sum += f[i]
-                if preBit == 1 { sum -= 1; break }
+                if preBit == 1 {
+                    sum -= 1
+                    break
+                }
                 preBit = 1
-            } else { preBit = 0 }
+            } else {
+                preBit = 0
+            }
             i -= 1
         }
 

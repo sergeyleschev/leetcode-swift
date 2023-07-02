@@ -29,13 +29,12 @@ class Solution {
     // 1 <= k <= nums.length
 
     func minKBitFlips(_ A: [Int], _ K: Int) -> Int { difArr(A, K) }
-    
 
     func difArr(_ A: [Int], _ K: Int) -> Int {
         var arr: [Int] = Array(repeating: 0, count: A.count + 1)
         var cnt = 0
         var ans = 0
-        
+
         for i in 0..<A.count {
             let n = A[i]
             cnt += arr[i]
@@ -47,7 +46,7 @@ class Solution {
                 arr[i] += 1
             }
         }
-        
+
         return ans
     }
 

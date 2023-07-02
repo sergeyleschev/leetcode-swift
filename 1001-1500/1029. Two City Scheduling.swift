@@ -9,7 +9,7 @@ class Solution {
     // Example 1:
     // Input: costs = [[10,20],[30,200],[400,50],[30,20]]
     // Output: 110
-    // Explanation: 
+    // Explanation:
     // The first person goes to city A for a cost of 10.
     // The second person goes to city A for a cost of 30.
     // The third person goes to city B for a cost of 50.
@@ -36,13 +36,13 @@ class Solution {
         var cost: Int = 0
         let mid: Int = costs.count / 2
         var index = 0
-        
+
         for arr in costsSorted {
             cost += index < mid ? arr[0] : arr[1]
             index += 1
         }
-        
+
         return cost
     }
-    
+
 }

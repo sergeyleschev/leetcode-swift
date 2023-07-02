@@ -32,11 +32,9 @@ class MyHashMap {
     // At most 10^4 calls will be made to put, get, and remove.
 
     private var map: [Int]
-    
 
     /** Initialize your data structure here. */
     init() { map = [] }
-    
 
     /** value will always be non-negative. */
     func put(_ key: Int, _ value: Int) {
@@ -44,13 +42,11 @@ class MyHashMap {
         map[key] = value
     }
 
-    
     /** Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key */
     func get(_ key: Int) -> Int {
         if key < map.count { return map[key] }
         return -1
     }
-    
 
     /** Removes the mapping of the specified value key if this map contains a mapping for the key */
     func remove(_ key: Int) {

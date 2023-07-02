@@ -33,7 +33,7 @@ class Solution {
     // - Complexity:
     //   - time: O(K), where K is the given number K.
     //   - space: O(1), only constant space is used.
-    
+
     func smallestRepunitDivByK(_ K: Int) -> Int {
         var ans = 0
 

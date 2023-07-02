@@ -9,7 +9,7 @@ class Solution {
     // Example 1:
     // Input: root = [3,5,1,6,2,0,8,null,null,7,4], target = 5, k = 2
     // Output: [7,4,1]
-    // Explanation: 
+    // Explanation:
     // The nodes that are a distance 2 from the target node (with value 5)
     // have values 7, 4, and 1.
     // Note that the inputs "root" and "target" are actually TreeNodes.
@@ -27,10 +27,9 @@ class Solution {
         var result = [Int]()
         var seen = Set<Int>()
 
-
         func dfs(_ root: TreeNode?) {
             guard let root = root else { return }
-            
+
             if let left = root.left {
                 if let _ = graph[root.val] {
                     graph[root.val]?.append(left.val)
@@ -47,7 +46,7 @@ class Solution {
                     temp.append(root.val)
                     graph[left.val] = temp
                 }
-                
+
                 dfs(left)
             }
 
@@ -76,7 +75,7 @@ class Solution {
 
         result.append(target!.val)
         seen.insert(target!.val)
-        
+
         // BFS
         while K > 0 {
             var NextTime = [Int]()
@@ -96,7 +95,7 @@ class Solution {
             K -= 1
             result = NextTime
         }
-        
+
         return result
     }
 

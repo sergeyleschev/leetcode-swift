@@ -30,9 +30,8 @@ class Solution {
 
     typealias Direction = (dx: Int, dy: Int)
 
-    let directions: [Direction] = [(0,1),(0,-1),(1,0),(-1,0)]
-    
-    
+    let directions: [Direction] = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+
     func numEnclaves(_ A: [[Int]]) -> Int {
         let row = A.count
         let col = A[0].count
@@ -40,10 +39,11 @@ class Solution {
         var visited = [[Bool]](repeating: [Bool](repeating: false, count: col), count: row)
         var ans = 0
 
+        func valid(_ p: Position) -> Bool {
+            p.x < row && p.x >= 0 && p.y >= 0 && p.y < col && A[p.x][p.y] == 1 && !visited[p.x][p.y]
+        }
 
-        func valid(_ p: Position) -> Bool { p.x < row && p.x >= 0  && p.y >= 0 && p.y < col && A[p.x][p.y] == 1 && !visited[p.x][p.y] }
-        
-        func dfs(_ p: Position)  {
+        func dfs(_ p: Position) {
             for dir in directions {
                 let newP = Position(x: p.x + dir.dx, y: p.y + dir.dy)
                 if valid(newP) {
@@ -55,11 +55,11 @@ class Solution {
 
         for i in 0..<col {
             if A[0][i] == 1 && !visited[0][i] {
-                visited[0][i] =  true
+                visited[0][i] = true
                 dfs(Position(x: 0, y: i))
             }
             if A[row - 1][i] == 1 && !visited[row - 1][i] {
-                visited[row - 1][i] =  true
+                visited[row - 1][i] = true
                 dfs(Position(x: row - 1, y: i))
             }
         }

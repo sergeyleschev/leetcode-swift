@@ -3,7 +3,7 @@ class Solution {
     // Solution by Sergey Leschev
 
     // 825. Friends Of Appropriate Ages
-    // Some people will make friend requests. The list of their ages is given and ages[i] is the age of the ith person. 
+    // Some people will make friend requests. The list of their ages is given and ages[i] is the age of the ith person.
     // Person A will NOT friend request person B (B != A) if any of the following conditions are true:
     // age[B] <= 0.5 * age[A] + 7
     // age[B] > age[A]
@@ -25,7 +25,7 @@ class Solution {
     // Example 3:
     // Input: [20,30,100,110,120]
     // Output: 3
-    // Explanation: Friend requests are made 110 -> 100, 120 -> 110, 120 -> 100. 
+    // Explanation: Friend requests are made 110 -> 100, 120 -> 110, 120 -> 100.
 
     // Notes:
     // 1 <= ages.length <= 20000.

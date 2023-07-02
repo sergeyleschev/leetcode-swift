@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -24,7 +22,7 @@ class Solution {
     // Example 1:
     // Input: root = [1,2,3,2,null,2,4], target = 2
     // Output: [1,null,3,null,4]
-    // Explanation: Leaf nodes in green with value (target = 2) are removed (Picture in left). 
+    // Explanation: Leaf nodes in green with value (target = 2) are removed (Picture in left).
     // After removing, new nodes become leaf nodes with value (target = 2) (Picture in center).
 
     // Example 2:
@@ -51,14 +49,17 @@ class Solution {
 
     func removeLeafNodes(_ root: TreeNode?, _ target: Int) -> TreeNode? { delete(root, target) }
 
-    
     func delete(_ root: TreeNode?, _ target: Int) -> TreeNode? {
         guard let root = root else { return nil }
 
         root.left = delete(root.left, target)
         root.right = delete(root.right, target)
-        
-        if root.val == target && root.right == nil && root.left == nil { return nil } else { return root }
+
+        if root.val == target && root.right == nil && root.left == nil {
+            return nil
+        } else {
+            return root
+        }
     }
 
 }

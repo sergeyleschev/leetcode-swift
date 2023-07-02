@@ -9,19 +9,19 @@ class Solution {
     // Example 1:
     // Input: nums = [3,6,9,12]
     // Output: 4
-    // Explanation: 
+    // Explanation:
     // The whole array is an arithmetic sequence with steps of length = 3.
 
     // Example 2:
     // Input: nums = [9,4,7,2,10]
     // Output: 3
-    // Explanation: 
+    // Explanation:
     // The longest arithmetic subsequence is [4,7,10].
 
     // Example 3:
     // Input: nums = [20,1,15,3,10,5,8]
     // Output: 4
-    // Explanation: 
+    // Explanation:
     // The longest arithmetic subsequence is [20,15,10,5].
 
     // Constraints:
@@ -32,16 +32,16 @@ class Solution {
         guard A.count > 1 else { return A.count }
         var res = Int.min
         var dp = Array(repeating: [Int: Int](), count: A.count)
-        
+
         for i in 0..<A.count {
             for j in 0..<i {
                 let d = A[j] - A[i]
                 dp[i][d] = dp[j][d, default: 1] + 1
-                res = max(res, dp[i][d, default: 2])                
+                res = max(res, dp[i][d, default: 2])
             }
-        }        
-        
+        }
+
         return res
     }
-    
+
 }

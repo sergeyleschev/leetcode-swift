@@ -34,20 +34,27 @@ class Solution {
 
         for i in (1...minLen).reversed() {
             if len1 % i == 0 && len2 % i == 0 {
-                let subStr = String(str1[str1.index(str1.startIndex, offsetBy: 0)..<str1.index(str1.startIndex, offsetBy: i)])
+                let subStr = String(
+                    str1[
+                        str1.index(
+                            str1.startIndex, offsetBy: 0)..<str1.index(str1.startIndex, offsetBy: i)
+                    ])
                 if check(str1, subStr) && check(str2, subStr) { return subStr }
             }
         }
 
         return ""
     }
-    
 
     func check(_ strA: String, _ strB: String) -> Bool {
         let len = strA.count / strB.count
 
         for i in 0..<len {
-            let subA = String(strA[strA.index(strA.startIndex, offsetBy:  strB.count * i)..<strA.index(strA.startIndex, offsetBy: strB.count * (i + 1))])
+            let subA = String(
+                strA[
+                    strA.index(
+                        strA.startIndex, offsetBy: strB.count * i)..<strA.index(
+                            strA.startIndex, offsetBy: strB.count * (i + 1))])
             if subA != strB { return false }
         }
 

@@ -34,7 +34,7 @@ class Solution {
         var stack = [Character]()
         var i = 0
         var S = Array(S)
-        
+
         while i < S.count {
             if Character("(") == S[i] {
                 stack.append(S.remove(at: i))
@@ -42,10 +42,12 @@ class Solution {
                 if !stack.isEmpty {
                     S.remove(at: i)
                     stack.removeLast()
-                } else { i += 1 }
+                } else {
+                    i += 1
+                }
             }
         }
-        
+
         return S.count + stack.count
     }
 

@@ -31,9 +31,9 @@ class Solution {
     // 0 <= graph[i][j] < graph.length
     // graph[i][j] != i
     // graph[i] is unique.
-    // The mouse and the cat can always move. 
+    // The mouse and the cat can always move.
 
-    // Solution: 
+    // Solution:
     // The state of the game can be represented as (m, c, t) where m is the location of the mouse, c is the location of the cat, and t is 1 if it is the mouse's move, else 2. Let's call these states nodes. These states form a directed graph: the player whose turn it is has various moves which can be considered as outgoing edges from this node to other nodes.
     // Some of these nodes are already resolved: if the mouse is at the hole (m = 0), then the mouse wins; if the cat is where the mouse is (c = m), then the cat wins. Let's say that nodes will either be colored \small\text{mouse}mouse, \small\text{cat}cat, or \small\text{draw}draw depending on which player is assured victory.
     // As in a standard minimax algorithm, the mouse player will prefer \small\text{mouse}mouse nodes first, \small\text{draw}draw nodes second, and \small\text{cat}cat nodes last, and the cat player prefers these nodes in the opposite order.
@@ -64,12 +64,12 @@ class Solution {
         let cat = 2
         var color = Array(repeating: Array(repeating: [0, 0, 0], count: 50), count: 50)
         var degree = Array(repeating: Array(repeating: [0, 0, 0], count: 50), count: 50)
-        
+
         // degree[node]: number of neutral children of this node
         for m in 0..<n {
             for c in 0..<n {
-                degree[m][c][1] = graph[m].count // 1 means this step is mouse
-                degree[m][c][2] = graph[c].count // 2 means this step is cat
+                degree[m][c][1] = graph[m].count  // 1 means this step is mouse
+                degree[m][c][2] = graph[c].count  // 2 means this step is cat
                 for x in graph[c] where x == 0 {
                     // find a hole
                     degree[m][c][2] -= 1
@@ -77,7 +77,7 @@ class Solution {
                 }
             }
         }
-        
+
         // queue: the nodes which are colored
         var queue = [[Int]]()
         for i in 0..<n {
@@ -90,7 +90,7 @@ class Solution {
                 }
             }
         }
-        
+
         // bottom up
         while !queue.isEmpty {
             var node = queue.removeLast()
@@ -98,13 +98,13 @@ class Solution {
             let j = node[1]
             let t = node[2]
             let c = node[3]
-            
+
             // check parent of this node
             for parent in getParents(graph, i, j, t) {
                 let i2 = parent[0]
                 let j2 = parent[1]
                 let t2 = parent[2]
-                
+
                 // if this parent is not colored
                 if color[i2][j2][t2] == draw {
                     // check if the parent can make a win move
@@ -124,7 +124,6 @@ class Solution {
         }
         return color[1][2][1]
     }
-    
 
     // which node will arrive at (m, c, t)
     func getParents(_ graph: [[Int]], _ m: Int, _ c: Int, _ t: Int) -> [[Int]] {

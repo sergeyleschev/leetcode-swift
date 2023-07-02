@@ -50,7 +50,7 @@ class Solution {
     // - Complexity:
     //   - time: O(max(t, n)), where t is the length of the *trust*, and n is the *N*.
     //   - space: O(n), where n is the *N*.
-    
+
     func findJudge(_ N: Int, _ trust: [[Int]]) -> Int {
         var people = [Int](repeating: 0, count: N)
 

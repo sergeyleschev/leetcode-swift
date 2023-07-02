@@ -48,7 +48,7 @@ class Solution {
                 while chars[index] == targetChars[index] { index += 1 }
                 var j = index + 1
                 while j < ALength {
-                    if chars[j] == targetChars[index] && chars[j] != targetChars[j]{
+                    if chars[j] == targetChars[index] && chars[j] != targetChars[j] {
                         var temp = chars
                         temp.swapAt(index, j)
                         let newStr = String(temp)
@@ -63,8 +63,8 @@ class Solution {
             }
             queue = nextLevel
         }
-        
+
         return Int.max
     }
 
- }
+}

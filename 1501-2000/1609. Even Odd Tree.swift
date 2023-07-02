@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -70,8 +68,9 @@ class Solution {
             var newq = [TreeNode]()
 
             while head != q.endIndex {
-                let node = q[head]; head += 1
-                
+                let node = q[head]
+                head += 1
+
                 if let left = node?.left {
                     if left.val.isMultiple(of: 2) != level.isMultiple(of: 2) { return false }
                     if !newq.isEmpty {
@@ -90,7 +89,7 @@ class Solution {
                     newq.append(right)
                 }
             }
-            
+
             q = newq
             level += 1
         }

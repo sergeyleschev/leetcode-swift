@@ -51,7 +51,6 @@ class Solution {
         guard threshold > 0 else { return [Bool](repeating: true, count: queries.count) }
         var fa = [Int](0...n)
 
-
         func find(_ node: Int) -> Int {
             if fa[node] == node { return node }
             fa[node] = find(fa[node])

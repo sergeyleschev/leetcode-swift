@@ -30,7 +30,7 @@ class Solution {
         var l = 1
         var r = piles.max()!
         var ans = r
-        
+
         while l <= r {
             let m = (l + r) / 2
             var total = 0
@@ -46,5 +46,5 @@ class Solution {
 
         return ans
     }
-    
+
 }

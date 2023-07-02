@@ -38,9 +38,9 @@ class Solution {
     // - Complexity:
     //   - time: O(n ^ 2), where n is the length of s.
     //   - space: O(n), where n is the length of s.
-    
+
     func wordBreak(_ s: String, _ wordDict: [String]) -> Bool {
-        var dp = [Bool](repeating: false, count: s.count+1)
+        var dp = [Bool](repeating: false, count: s.count + 1)
         dp[0] = true
 
         let chars = Array(s)

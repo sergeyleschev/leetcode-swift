@@ -13,7 +13,7 @@ class SnapshotArray {
     // Input: ["SnapshotArray","set","snap","set","get"]
     // [[3],[0,5],[],[0,6],[0,0]]
     // Output: [null,null,0,null,5]
-    // Explanation: 
+    // Explanation:
     // SnapshotArray snapshotArr = new SnapshotArray(3); // set the length to be 3
     // snapshotArr.set(0,5);  // Set array[0] = 5
     // snapshotArr.snap();  // Take a snapshot, return snapId = 0
@@ -32,30 +32,26 @@ class SnapshotArray {
     private var snapValues = [Int: [Int: Int]]()
     private var currentSnapId = -1
 
-
     init(_ length: Int) {
         data = [Int](repeating: 0, count: length)
         self.length = length
     }
-    
 
     func set(_ index: Int, _ val: Int) {
         if nil == snapValues[currentSnapId] { snapValues[currentSnapId] = [:] }
         snapValues[currentSnapId]?.updateValue(val, forKey: index)
     }
-    
 
     func snap() -> Int {
         currentSnapId += 1
         snapValues[currentSnapId] = [:]
         return currentSnapId
     }
-    
 
     func get(_ index: Int, _ snapId: Int) -> Int {
         var snapId = snapId - 1
         while snapId >= -1 {
-            if let dic = snapValues[snapId], let val = dic[index]  { return val }
+            if let dic = snapValues[snapId], let val = dic[index] { return val }
             snapId -= 1
         }
         return data[index]

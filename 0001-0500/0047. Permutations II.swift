@@ -20,7 +20,7 @@ class Solution {
     // Example 2:
     // Input: nums = [1,2,3]
     // Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
-     
+
     // Constraints:
     // 1 <= nums.length <= 8
     // -10 <= nums[i] <= 10
@@ -39,9 +39,13 @@ class Solution {
         return ans
     }
 
-
-    private func backtrack(_ comb: inout [Int], _ n: Int, _ dict: inout [Int: Int], _ ans: inout [[Int]]) {
-        guard comb.count != n else { ans.append(comb); return }
+    private func backtrack(
+        _ comb: inout [Int], _ n: Int, _ dict: inout [Int: Int], _ ans: inout [[Int]]
+    ) {
+        guard comb.count != n else {
+            ans.append(comb)
+            return
+        }
 
         for (_, el) in dict.enumerated() {
             guard el.value != 0 else { continue }

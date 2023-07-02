@@ -37,14 +37,13 @@ class Trie {
         self.root = root
     }
 
-
     // Inserts a word into the trie.
     // - Parameter word: The string to insert.
 
     // - Complexity:
     //   - time: O(n), where n is the length of the word.
     //   - space: O(n), where n is the length of the word.
-    
+
     func insert(_ word: String) {
         var curr: TrieNode? = root
 
@@ -57,7 +56,6 @@ class Trie {
         curr?.isEnd = true
     }
 
-
     // Returns if the word is in the trie.
     // - Parameter word: The string for search.
     // - Returns: True if the word is in the trie, otherwise returns false.
@@ -65,7 +63,7 @@ class Trie {
     // - Complexity:
     //   - time: O(n), where n is the length of the word.
     //   - space: O(1), only constant space is used.
-    
+
     func search(_ word: String) -> Bool {
         var curr = root
 
@@ -76,7 +74,6 @@ class Trie {
 
         return curr.isEnd
     }
-
 
     // Returns if there is any word in the trie that starts with the given prefix.
     // - Parameter prefix: The prefix string for search.
@@ -100,22 +97,18 @@ class Trie {
 
 }
 
-
 final class TrieNode {
     private var children: [Character: TrieNode]
     var isEnd: Bool
 
-
-    init(_ children: [Character: TrieNode] = [:], isEnd: Bool = false ) {
+    init(_ children: [Character: TrieNode] = [:], isEnd: Bool = false) {
         self.children = children
         self.isEnd = isEnd
     }
 
-
     func contains(_ key: Character) -> Bool {
         return children.keys.contains(key)
     }
-
 
     subscript(_ key: Character) -> TrieNode? {
         set { children[key] = newValue }

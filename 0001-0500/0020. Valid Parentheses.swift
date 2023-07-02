@@ -4,7 +4,7 @@ class Solution {
 
     // 20. Valid Parentheses
     // Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
-    
+
     // An input string is valid if:
     // 1. Contains just the characters '(', ')', '{', '}', '[' and ']'
     // 2. Open brackets must be closed by the same type of brackets.
@@ -12,7 +12,7 @@ class Solution {
     // 4. An empty string is also considered valid.
 
     // Returns boolean value indicating whether the input string is valid.
-     
+
     // Example 1:
     // Input: s = "()"
     // Output: true
@@ -32,7 +32,7 @@ class Solution {
     // Example 5:
     // Input: s = "{[]}"
     // Output: true
-     
+
     // Constraints:
     // 1 <= s.length <= 10^4
     // s consists of parentheses only '()[]{}'.
@@ -43,15 +43,16 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the s.
     //   - space: O(n), where n is the length of the s.
-    
+
     func isValid(_ s: String) -> Bool {
-        var stack = [Character]()        
+        var stack = [Character]()
         let dict: [Character: Character] = ["(": ")", "{": "}", "[": "]"]
-        
+
         for char in s {
             switch char {
             case "(", "{", "[": stack.append(char)
-            case ")", "}", "]": guard !stack.isEmpty, dict[stack.removeLast()] == char else { return false }
+            case ")", "}", "]":
+                guard !stack.isEmpty, dict[stack.removeLast()] == char else { return false }
             default: return false
             }
         }

@@ -43,9 +43,9 @@ class Solution {
         while idx < s.endIndex {
             var idx2 = idx
             while idx2 < s.endIndex && s[idx2] == s[idx] { idx2 = s.index(after: idx2) }
-            
+
             let cnt = s.distance(from: idx, to: idx2)
-            
+
             if s[idx] == "1" {
                 if ones < cnt { ones = cnt }
             } else {
@@ -53,7 +53,7 @@ class Solution {
             }
             idx = idx2
         }
-        
+
         return ones > zeros
     }
 

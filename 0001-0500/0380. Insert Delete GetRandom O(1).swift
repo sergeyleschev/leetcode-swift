@@ -35,13 +35,11 @@ class RandomizedSet {
     private var arr: [Int]
     private var dict: [Int: Int]
 
-
     // Initialize data structure.
     init() {
         arr = [Int]()
         dict = [Int: Int]()
     }
-
 
     // Inserts a value to the set.
     // - Parameter val: The value.
@@ -57,7 +55,6 @@ class RandomizedSet {
         dict[val] = arr.count - 1
         return true
     }
-
 
     // Removes a value from the set.
     // - Parameter val: The value
@@ -77,7 +74,6 @@ class RandomizedSet {
         dict[val] = nil
         return true
     }
-
 
     // Get a random element from the set.
     // - Returns: Random element.

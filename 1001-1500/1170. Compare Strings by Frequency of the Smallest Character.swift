@@ -27,21 +27,24 @@ class Solution {
         let queries = queries.map { f($0) }
         let words = words.map { f($0) }.sorted()
         var ans = [Int]()
-        
+
         for query in queries {
             var num = 0
-            for i in 0..<words.count where query < words[i] { num = words.count - i; break }
+            for i in 0..<words.count where query < words[i] {
+                num = words.count - i
+                break
+            }
             ans.append(num)
         }
 
         return ans
     }
-    
-    
+
     private func f(_ string: String) -> Int {
-        var c = "z", val = 0
+        var c = "z"
+        var val = 0
         let characters = Array(string).map { String($0) }
-        
+
         for character in characters {
             if character == c {
                 val += 1

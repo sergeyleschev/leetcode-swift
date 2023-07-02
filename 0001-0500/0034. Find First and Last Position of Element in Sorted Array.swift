@@ -1,7 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
-    
+
     // 34. Find First and Last Position of Element in Sorted Array
     // Given an array of integers nums sorted in ascending order, find the starting and ending position of a given target value.
     // If target is not found in the array, return [-1, -1].
@@ -18,7 +18,7 @@ class Solution {
     // Example 3:
     // Input: nums = [], target = 0
     // Output: [-1,-1]
-     
+
     // Constraints:
     // 0 <= nums.length <= 10^5
     // -10^9 <= nums[i] <= 10^9
@@ -32,7 +32,10 @@ class Solution {
         var mid = (lower + upper) / 2
 
         while upper >= lower {
-            if nums[mid] == target { index = mid; break }
+            if nums[mid] == target {
+                index = mid
+                break
+            }
             if mid == lower {
                 if nums[upper] == target { index = upper }
                 break
@@ -44,17 +47,17 @@ class Solution {
             }
             mid = (lower + upper) / 2
         }
-        
+
         if index == -1 {
             return [-1, -1]
         } else {
             var i = index
             var j = index
             while i > 0 {
-                if nums[i] == nums[i-1] { i -= 1 } else { break }
+                if nums[i] == nums[i - 1] { i -= 1 } else { break }
             }
             while j < nums.count - 1 {
-                if nums[j] == nums[j+1] { j += 1 } else { break }
+                if nums[j] == nums[j + 1] { j += 1 } else { break }
             }
             return [i, j]
         }

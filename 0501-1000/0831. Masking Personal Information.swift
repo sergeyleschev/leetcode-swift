@@ -1,13 +1,13 @@
 class Solution {
 
     // Solution by Sergey Leschev
-    
+
     // 831. Masking Personal Information
     // We are given a personal information string s, which may represent either an email address or a phone number.
     // We would like to mask this personal information according to the following rules:
     // 1. Email address:
     // We define a name to be a string of length ≥ 2 consisting of only lowercase letters a-z or uppercase letters A-Z.
-    // An email address starts with a name, followed by the symbol '@', followed by a name, followed by the dot '.' and followed by a name. 
+    // An email address starts with a name, followed by the symbol '@', followed by a name, followed by the dot '.' and followed by a name.
     // All email addresses are guaranteed to be valid and in the format of "name1@name2.name3".
     // To mask an email, all names must be converted to lowercase and all letters between the first and last letter of the first name must be replaced by 5 asterisks '*'.
     // 2. Phone number:
@@ -29,7 +29,7 @@ class Solution {
     // Example 2:
     // Input: s = "AB@qq.com"
     // Output: "a*****b@qq.com"
-    // Explanation: There must be 5 asterisks between the first and last letter 
+    // Explanation: There must be 5 asterisks between the first and last letter
     //              of the first name "ab". Therefore, "ab" -> "a*****b".
 
     // Example 3:
@@ -40,7 +40,7 @@ class Solution {
     // Example 4:
     // Input: s = "86-(10)12345678"
     // Output: "+**-***-***-5678"
-    // Explanation: 12 digits, 2 digits for country code and 10 digits for local number. 
+    // Explanation: 12 digits, 2 digits for country code and 10 digits for local number.
 
     // Notes:
     // s.length <= 40.
@@ -51,10 +51,9 @@ class Solution {
         if S.contains("@") { return maskEmailAddress(emeil: S) }
         return maskPhoneNumbers(phoneNumber: S)
     }
-    
 
     private func maskEmailAddress(emeil: String) -> String {
-        let stars  = "*****"
+        let stars = "*****"
         var ans = emeil.lowercased()
         let index = ans.firstIndex(of: "@")!
         let to = ans.index(before: index)
@@ -63,15 +62,15 @@ class Solution {
         if to == from {
             ans.insert(contentsOf: stars, at: from)
         } else {
-            ans.replaceSubrange(Range<String.Index>(uncheckedBounds: (lower: from, upper: to)), with: stars)
+            ans.replaceSubrange(
+                Range<String.Index>(uncheckedBounds: (lower: from, upper: to)), with: stars)
         }
-        
+
         return ans
     }
-    
 
     private func maskPhoneNumbers(phoneNumber: String) -> String {
-        let numbers  = phoneNumber.filter { (ch) -> Bool in ch.isNumber }
+        let numbers = phoneNumber.filter { (ch) -> Bool in ch.isNumber }
         var chars = [Character](numbers)
         for i in 0..<(chars.count - 4) { chars[i] = "*" }
         var internationalNumber = ""

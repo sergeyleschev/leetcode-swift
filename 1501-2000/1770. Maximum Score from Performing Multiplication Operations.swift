@@ -27,7 +27,7 @@ class Solution {
     // - Choose from the start, [-3,-3,-2,7,1], adding -3 * -5 = 15 to the score.
     // - Choose from the start, [-3,-2,7,1], adding -3 * 3 = -9 to the score.
     // - Choose from the end, [-2,7,1], adding 1 * 4 = 4 to the score.
-    // - Choose from the end, [-2,7], adding 7 * 6 = 42 to the score. 
+    // - Choose from the end, [-2,7], adding 7 * 6 = 42 to the score.
     // The total score is 50 + 15 - 9 + 4 + 42 = 102.
 
     // Constraints:
@@ -42,11 +42,12 @@ class Solution {
         let n = multipliers.count
         var memo = [[Int?]](repeating: [Int?](repeating: nil, count: n + 1), count: n + 1)
 
-
         func dfs(_ l: Int, _ r: Int, _ i: Int) -> Int {
             guard i < n else { return 0 }
             if let score = memo[i][l] { return score }
-            memo[i][l] = max(nums[l] * multipliers[i] + dfs(l + 1, r, i + 1), nums[r] * multipliers[i] + dfs(l, r - 1, i + 1))
+            memo[i][l] = max(
+                nums[l] * multipliers[i] + dfs(l + 1, r, i + 1),
+                nums[r] * multipliers[i] + dfs(l, r - 1, i + 1))
             return memo[i][l] ?? 0
         }
         return dfs(0, m - 1, 0)

@@ -1,13 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init() { self.val = 0; self.next = nil; }
- *     public init(_ val: Int) { self.val = val; self.next = nil; }
- *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init() { self.val = 0; self.next = nil; }
+///     public init(_ val: Int) { self.val = val; self.next = nil; }
+///     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -41,7 +39,6 @@ class Solution {
         var list = root
         var ans = [ListNode?]()
 
-        
         func findlength(root: ListNode?) -> Int {
             var list = root
             var length = 0
@@ -51,28 +48,34 @@ class Solution {
             }
             return length
         }
-        
-        
+
         func findListLength(length: Int) -> [Int] {
             let num = length / k
             let r = length % k
             let counts: [Int]
-            if r > 0 && r < length { counts = Array(repeating: num + 1, count: r) + Array(repeating: num, count: k - r) } 
-            else if r == length { counts = Array(repeating: 1, count: length) + Array(repeating: -1, count: k - length) } 
-            else { counts = Array(repeating: num, count: k) }
+            if r > 0 && r < length {
+                counts = Array(repeating: num + 1, count: r) + Array(repeating: num, count: k - r)
+            } else if r == length {
+                counts =
+                    Array(repeating: 1, count: length) + Array(repeating: -1, count: k - length)
+            } else {
+                counts = Array(repeating: num, count: k)
+            }
             return counts
         }
-        
-        
+
         for count in counts {
             var node = list
-            if count == -1 { ans.append(nil); continue }
-            for _ in 0..<count - 1 { node = node?.next }            
+            if count == -1 {
+                ans.append(nil)
+                continue
+            }
+            for _ in 0..<count - 1 { node = node?.next }
             ans.append(list)
             list = node?.next
             node?.next = nil
         }
-        
+
         return ans
     }
 

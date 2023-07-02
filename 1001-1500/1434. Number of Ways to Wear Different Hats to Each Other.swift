@@ -11,7 +11,7 @@ class Solution {
     // Example 1:
     // Input: hats = [[3,4],[4,5],[5]]
     // Output: 1
-    // Explanation: There is only one way to choose hats given the conditions. 
+    // Explanation: There is only one way to choose hats given the conditions.
     // First person choose hat 3, Second person choose hat 4 and last one hat 5.
 
     // Example 2:
@@ -45,12 +45,11 @@ class Solution {
     //   - time: O(40 * 2^n * n), where n is the number of people, n <= 10
     //   - space: O(40 * 2^n)
 
-    let mod = Int(1e9+7)
-
+    let mod = Int(1e9 + 7)
 
     func numberWays(_ hats: [[Int]]) -> Int {
         let n = hats.count
-        var dp: [[Int?]] = Array(repeating: Array(repeating: nil, count: 1 << 10), count: 41) // dp[i][j] number of ways assign i different hats with j different people
+        var dp: [[Int?]] = Array(repeating: Array(repeating: nil, count: 1 << 10), count: 41)  // dp[i][j] number of ways assign i different hats with j different people
 
         var h2p = Array(repeating: [Int](), count: 41)
         for i in 0..<n {
@@ -61,16 +60,18 @@ class Solution {
     }
 
     // mask: all people assigned mask, will be 11111...111
-    func check(_ hat: Int, _ visitedPeople: Int, _ mask: Int,_ h2p: [[Int]], _ dp: inout [[Int?]]) -> Int {
-        if visitedPeople == mask { return 1 } // assigned different hat to all people
-        if hat > 40 { return 0 } // no more hats to process
+    func check(_ hat: Int, _ visitedPeople: Int, _ mask: Int, _ h2p: [[Int]], _ dp: inout [[Int?]])
+        -> Int
+    {
+        if visitedPeople == mask { return 1 }  // assigned different hat to all people
+        if hat > 40 { return 0 }  // no more hats to process
         if let val = dp[hat][visitedPeople] { return val }
 
-        var val = check(hat + 1, visitedPeople, mask, h2p, &dp) // not wear the hat
+        var val = check(hat + 1, visitedPeople, mask, h2p, &dp)  // not wear the hat
 
         for p in h2p[hat] {
-            if (visitedPeople & (1<<p)) != 0 { continue } // p already assigned
-            val = (val + check(hat+1, visitedPeople | (1<<p), mask, h2p, &dp)) % mod // wear hat for p person
+            if (visitedPeople & (1 << p)) != 0 { continue }  // p already assigned
+            val = (val + check(hat + 1, visitedPeople | (1 << p), mask, h2p, &dp)) % mod  // wear hat for p person
         }
 
         dp[hat][visitedPeople] = val

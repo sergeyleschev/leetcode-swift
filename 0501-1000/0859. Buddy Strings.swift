@@ -8,7 +8,7 @@ class Solution {
     // For example, swapping at indices 0 and 2 in "abcd" results in "cbad".
 
     // Finds if two letters in A can be swapped so the result is equal to B.
-    
+
     // - Parameters:
     //   - A: A string of lowercase letters.
     //   - B: A string of lowercase letters.
@@ -40,7 +40,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of A and B.
     //   - space: O(n), where n is the length of A and B.
-    
+
     func buddyStrings(_ A: String, _ B: String) -> Bool {
         guard A.count == B.count else { return false }
         var dif = [Int]()

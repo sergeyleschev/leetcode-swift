@@ -42,12 +42,14 @@ class Solution {
                 if K == 0 { return A.reduce(0, +) }
             } else if A[i] == 0 {
                 return A.reduce(0, +)
-            } else { break }
+            } else {
+                break
+            }
         }
-        
+
         var sum = A.reduce(0, +)
         // Reverse minimum number, diff is double value
-        if K % 2 != 0 { sum -= 2 * minAbs }    
+        if K % 2 != 0 { sum -= 2 * minAbs }
         return sum
     }
 

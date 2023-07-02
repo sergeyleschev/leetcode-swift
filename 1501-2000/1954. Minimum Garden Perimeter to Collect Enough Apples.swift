@@ -30,7 +30,7 @@ class Solution {
 
     func minimumPerimeter(_ neededApples: Int) -> Int {
         var low = 1
-        var high = 1000000
+        var high = 1_000_000
 
         while low < high {
             let mid = (low + high) >> 1
@@ -43,5 +43,5 @@ class Solution {
         }
         return 8 * low
     }
-    
+
 }

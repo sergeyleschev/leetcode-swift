@@ -27,13 +27,13 @@ class Solution {
     // -10^4 <= nums[i] <= 10^4
     // nums is guaranteed to be rotated at some pivot.
     // -10^4 <= target <= 10^4
-     
+
     // Follow up: This problem is the same as Search in Rotated Sorted Array, where nums may contain duplicates. Would this affect the runtime complexity? How and why?
 
     // - Complexity:
     //   - time: O(n), where n is the length of nums.
     //   - space: O(1), only constant space is used.
-    
+
     func search(_ nums: [Int], _ target: Int) -> Bool {
         guard !nums.isEmpty else { return false }
 

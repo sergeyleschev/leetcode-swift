@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -40,7 +38,6 @@ class Solution {
         return min(state[1], state[2])
     }
 
-
     // state0: Strict subtree: All the nodes below this node are covered, but not this node.
     // state1: Normal subtree: All the nodes below and including this node are covered, but there is no camera here.
     // state2: Placed camera: All the nodes below and including this node are covered, and there is a camera here (which may cover nodes above this node).
@@ -59,5 +56,5 @@ class Solution {
         let s2 = 1 + min(left[0], minLeft12) + min(right[0], minRight12)
         return [s0, s1, s2]
     }
-    
+
 }

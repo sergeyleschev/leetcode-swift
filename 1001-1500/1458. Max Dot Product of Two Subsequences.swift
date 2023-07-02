@@ -41,9 +41,9 @@ class Solution {
         let n = nums1.count
         let m = nums2.count
         var mark = Array(repeating: Array(repeating: Int.min, count: m + 1), count: n + 1)
-        
-        for x in 1 ... n {
-            for y in 1 ... m {
+
+        for x in 1...n {
+            for y in 1...m {
                 mark[x][y] = nums1[x - 1] * nums2[y - 1]
                 mark[x][y] += max(0, mark[x - 1][y - 1])
                 mark[x][y] = max(mark[x - 1][y], mark[x][y])

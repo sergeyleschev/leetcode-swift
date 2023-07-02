@@ -40,7 +40,7 @@ class Solution {
         let m = grid.count
         let n = grid[0].count
         var ans = [Int]()
-        
+
         func getBallLastPosition(_ from: Int) -> Int {
             var c1 = from
             var c2 = -1

@@ -30,16 +30,17 @@ class Solution {
     // start, end, and bank[i] consist of only the characters ['A', 'C', 'G', 'T'].
 
     func minMutation(_ start: String, _ end: String, _ bank: [String]) -> Int {
-        var visited: [Int] = Array(repeating: 0, count: bank.count + 1), bankDict: [String: Int] = [:]
+        var visited: [Int] = Array(repeating: 0, count: bank.count + 1)
+        var bankDict: [String: Int] = [:]
         let characters: [Character] = [.init("A"), .init("C"), .init("G"), .init("T")]
-        
+
         for i in 0..<bank.count { bankDict[bank[i]] = i + 1 }
         bankDict[start] = 0
         guard let target = bankDict[end] else { return -1 }
-        
+
         var queue: [(Int, Int)] = [(0, 0)]
         visited[0] = 1
-        
+
         while !queue.isEmpty {
             let tail = queue.removeFirst()
             if tail.0 == target { return tail.1 }
@@ -49,7 +50,7 @@ class Solution {
             } else {
                 gene = bank[tail.0 - 1]
             }
-            
+
             for (i, c) in gene.enumerated() {
                 for replace in characters {
                     if replace == c { continue }
@@ -62,10 +63,10 @@ class Solution {
                     }
                 }
             }
-            
+
         }
 
         return -1
     }
-   
+
 }

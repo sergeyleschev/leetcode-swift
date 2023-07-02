@@ -17,7 +17,7 @@ class Solution {
     // Example:
     // Input: words = ["gin", "zen", "gig", "msg"]
     // Output: 2
-    // Explanation: 
+    // Explanation:
     // The transformation of each word is:
     // "gin" -> "--...-."
     // "zen" -> "--...-."
@@ -32,7 +32,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the sum of the lengths of words in the words.
     //   - space: O(m), where m is the length of the words.
-    
+
     func uniqueMorseRepresentations(_ words: [String]) -> Int {
         var ans = Set<String>()
 
@@ -48,7 +48,6 @@ class Solution {
 
         return ans.count
     }
-
 
     private let morse: [Character: String] = [
         "a": ".-",
@@ -76,7 +75,7 @@ class Solution {
         "w": ".--",
         "x": "-..-",
         "y": "-.--",
-        "z": "--.."
+        "z": "--..",
     ]
 
 }

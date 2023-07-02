@@ -42,7 +42,7 @@ class Solution {
         var luckyInt = -1
 
         let map = arr.reduce(into: [:]) { dict, num in dict[num, default: 0] += 1 }
-        
+
         for (key, value) in map where key == value && key > luckyInt { luckyInt = key }
         return luckyInt
     }

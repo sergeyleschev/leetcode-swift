@@ -40,8 +40,8 @@ class Solution {
 
     func isPrefixOfWord(_ sentence: String, _ searchWord: String) -> Int {
         let words = sentence.split(separator: " ").map(String.init)
-        for i in  0..<words.count where words[i].hasPrefix(searchWord) { return i + 1 }
+        for i in 0..<words.count where words[i].hasPrefix(searchWord) { return i + 1 }
         return -1
     }
-    
+
 }

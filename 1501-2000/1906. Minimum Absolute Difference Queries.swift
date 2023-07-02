@@ -39,18 +39,18 @@ class Solution {
 
     func minDifference(_ nums: [Int], _ queries: [[Int]]) -> [Int] {
         var ans = [Int]()
-        var preffix = [[Int]]()
+        var prefix = [[Int]]()
         var curCounter = [Int](repeating: 0, count: 101)
-        preffix.append(curCounter)
+        prefix.append(curCounter)
 
         for num in nums {
             curCounter[num] += 1
-            preffix.append(curCounter)
+            prefix.append(curCounter)
         }
 
         for query in queries {
-            let leftCounter = preffix[query[0]]
-            let rightCounter = preffix[query[1] + 1]
+            let leftCounter = prefix[query[0]]
+            let rightCounter = prefix[query[1] + 1]
             var temp = Int.max
             var last = -1
             for idx in 0...100 where rightCounter[idx] - leftCounter[idx] > 0 {
@@ -61,5 +61,5 @@ class Solution {
         }
         return ans
     }
-    
+
 }

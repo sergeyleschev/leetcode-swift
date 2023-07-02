@@ -21,7 +21,7 @@ class Solution {
 
     // Example 3:
     // Input: nums = [0,1]
-    // Output: [1,0] 
+    // Output: [1,0]
 
     // Constraints:
     // 2 <= nums.length <= 3 * 10^4
@@ -38,7 +38,7 @@ class Solution {
 
         for num in nums { diff ^= num }
         diff &= -diff
-        
+
         for num in nums {
             if num & diff == 0 {
                 ans[0] ^= num

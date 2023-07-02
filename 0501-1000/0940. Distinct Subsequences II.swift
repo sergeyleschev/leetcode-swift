@@ -20,7 +20,7 @@ class Solution {
     // Input: s = "aaa"
     // Output: 3
     // Explanation: The 3 distinct subsequences are "a", "aa" and "aaa".
-     
+
     // Note:
     // s contains only lowercase letters.
     // 1 <= s.length <= 2000
@@ -36,15 +36,15 @@ class Solution {
         let a = Int(Character("a").asciiValue!)
         var added = 0
         var res = 0
-        
+
         for c in S {
             let index = Int(c.asciiValue!) - a
             added = (res - end[index] + 1) % mod
             res = (res + added) % mod
             end[index] = (end[index] + added) % mod
         }
-        
+
         return (res + mod) % mod
     }
-    
+
 }

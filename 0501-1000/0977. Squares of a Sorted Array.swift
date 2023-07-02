@@ -24,13 +24,13 @@ class Solution {
     // 1 <= nums.length <= 10^4
     // -10^4 <= nums[i] <= 10^4
     // nums is sorted in non-decreasing order.
-     
+
     // Follow up: Squaring each element and sorting the new array is very trivial, could you find an O(n) solution using a different approach?
 
     // - Complexity:
     //   - time: O(n), where n is the length of the A.
     //   - space: O(n), where n is the length of the A.
-    
+
     func sortedSquares(_ A: [Int]) -> [Int] {
         let n = A.count
         var i = n - 1

@@ -10,14 +10,14 @@ class Solution {
     // Example 1:
     // Input: s = "dcab", pairs = [[0,3],[1,2]]
     // Output: "bacd"
-    // Explaination: 
+    // Explanation:
     // Swap s[0] and s[3], s = "bcad"
     // Swap s[1] and s[2], s = "bacd"
 
     // Example 2:
     // Input: s = "dcab", pairs = [[0,3],[1,2],[0,2]]
     // Output: "abcd"
-    // Explaination: 
+    // Explanation:
     // Swap s[0] and s[3], s = "bcad"
     // Swap s[0] and s[2], s = "acbd"
     // Swap s[1] and s[2], s = "abcd"
@@ -25,7 +25,7 @@ class Solution {
     // Example 3:
     // Input: s = "cba", pairs = [[0,1],[1,2]]
     // Output: "abc"
-    // Explaination: 
+    // Explanation:
     // Swap s[0] and s[1], s = "bca"
     // Swap s[1] and s[2], s = "bac"
     // Swap s[0] and s[1], s = "abc"
@@ -41,36 +41,43 @@ class Solution {
         var ans = Array(s)
         var dsu: [Int: Set<Int>] = [:]
         var newPairs: [[Int]] = []
-        
+
         for pair in pairs {
-            if dsu[pair[0]] == nil { dsu[pair[0]] = [pair[1]] } else { dsu[pair[0]]!.insert(pair[1]) }
-            if dsu[pair[1]] == nil { dsu[pair[1]] = [pair[0]] } else { dsu[pair[1]]!.insert(pair[0]) }
+            if dsu[pair[0]] == nil {
+                dsu[pair[0]] = [pair[1]]
+            } else {
+                dsu[pair[0]]!.insert(pair[1])
+            }
+            if dsu[pair[1]] == nil {
+                dsu[pair[1]] = [pair[0]]
+            } else {
+                dsu[pair[1]]!.insert(pair[0])
+            }
         }
 
         let keys = dsu.keys
-        
+
         for key in keys {
             var connection = Set<Int>()
             connect(key, &connection, &dsu)
-            if !connection.isEmpty { newPairs.append(Array(connection).sorted(by: < )) }
+            if !connection.isEmpty { newPairs.append(Array(connection).sorted(by: <)) }
         }
 
         for pair in newPairs {
             var array: [Character] = []
             for position in pair { array.append(characters[position]) }
-            array.sort(by: < )
+            array.sort(by: <)
             for i in 0..<array.count { ans[pair[i]] = array[i] }
         }
 
         return String(ans)
     }
-    
-    
+
     private func connect(_ key: Int, _ connection: inout Set<Int>, _ dsu: inout [Int: Set<Int>]) {
         guard let set = dsu[key] else { return }
         connection.insert(key)
         dsu.removeValue(forKey: key)
         for newKey in set { connect(newKey, &connection, &dsu) }
     }
-    
+
 }

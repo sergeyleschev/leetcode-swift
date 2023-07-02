@@ -55,7 +55,10 @@ class Solution {
                     rightCnt = 0
                 }
             } else {
-                if leftCnt == 0 { leftCnt += 1; ans += 1 }
+                if leftCnt == 0 {
+                    leftCnt += 1
+                    ans += 1
+                }
                 rightCnt += 1
                 if rightCnt == 2 {
                     if leftCnt > 0 { leftCnt -= 1 } else { ans += 1 }
@@ -63,7 +66,7 @@ class Solution {
                 }
             }
         }
-        
+
         ans += (leftCnt << 1 - rightCnt)
         return ans
     }

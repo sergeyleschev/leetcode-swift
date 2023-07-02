@@ -9,10 +9,10 @@ class Solution {
     // Example 1:
     // Input: prices = [8,4,6,2,3]
     // Output: [4,2,4,2,3]
-    // Explanation: 
-    // For item 0 with price[0]=8 you will receive a discount equivalent to prices[1]=4, therefore, the final price you will pay is 8 - 4 = 4. 
-    // For item 1 with price[1]=4 you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is 4 - 2 = 2. 
-    // For item 2 with price[2]=6 you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is 6 - 2 = 4. 
+    // Explanation:
+    // For item 0 with price[0]=8 you will receive a discount equivalent to prices[1]=4, therefore, the final price you will pay is 8 - 4 = 4.
+    // For item 1 with price[1]=4 you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is 4 - 2 = 2.
+    // For item 2 with price[2]=6 you will receive a discount equivalent to prices[3]=2, therefore, the final price you will pay is 6 - 2 = 4.
     // For items 3 and 4 you will not receive any discount at all.
 
     // Example 2:
@@ -30,11 +30,14 @@ class Solution {
 
     func finalPrices(_ prices: [Int]) -> [Int] {
         var result = prices
-        
+
         for i in 0..<prices.count - 1 {
-            for j in i + 1..<prices.count where prices[j] <= prices[i] { result[i] = prices[i] - prices[j]; break }
+            for j in i + 1..<prices.count where prices[j] <= prices[i] {
+                result[i] = prices[i] - prices[j]
+                break
+            }
         }
-        
+
         return result
     }
 

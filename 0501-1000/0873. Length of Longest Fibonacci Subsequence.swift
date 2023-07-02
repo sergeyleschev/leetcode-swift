@@ -40,7 +40,7 @@ class Solution {
                 }
             }
         }
-        
+
         return res > 2 ? res : 0
     }
 

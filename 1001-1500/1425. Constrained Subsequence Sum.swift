@@ -34,11 +34,11 @@ class Solution {
 
     func constrainedSubsetSum(_ nums: [Int], _ k: Int) -> Int {
         let n = nums.count
-        var dp = Array(repeating: 0, count: n) // dp[i] - nums[0...i] if nums[i] is in the subsequence
+        var dp = Array(repeating: 0, count: n)  // dp[i] - nums[0...i] if nums[i] is in the subsequence
         var cacheK = [Int]()
 
         dp[0] = nums[0]
-        insert(dp[0], &cacheK) // cache dp[i-k..<i], cacheK.last! will be previous largest element
+        insert(dp[0], &cacheK)  // cache dp[i-k..<i], cacheK.last! will be previous largest element
 
         var maxSum = dp[0]
 
@@ -52,9 +52,11 @@ class Solution {
         return maxSum
     }
 
-
     private func insert(_ target: Int, _ cacheK: inout [Int]) {
-        if cacheK.isEmpty { cacheK.append(target); return }
+        if cacheK.isEmpty {
+            cacheK.append(target)
+            return
+        }
         var left = 0
         var right = cacheK.count - 1
 
@@ -74,15 +76,16 @@ class Solution {
         }
     }
 
-
     private func remove(_ target: Int, _ cacheK: inout [Int]) {
         var left = 0
         var right = cacheK.count - 1
-        
+
         while left <= right {
             let mid = left + (right - left) / 2
-            if cacheK[mid] == target { cacheK.remove(at: mid); return } 
-            else if cacheK[mid] < target {
+            if cacheK[mid] == target {
+                cacheK.remove(at: mid)
+                return
+            } else if cacheK[mid] < target {
                 left = mid + 1
             } else {
                 right = mid - 1

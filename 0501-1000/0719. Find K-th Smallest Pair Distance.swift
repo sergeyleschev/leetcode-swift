@@ -34,25 +34,25 @@ class Solution {
         let nums = nums.sorted()
         var left = 0
         var right = nums.last! - nums.first! + 1
-        
+
         // O(nlogw)
         while left < right {
             let mid = left + (right - left) / 2
             var count = 0
             var start = 0
-            
-            for end in 0 ..< nums.count {
+
+            for end in 0..<nums.count {
                 while nums[end] - nums[start] > mid { start += 1 }
                 count += end - start
             }
-            
+
             if count >= k {
                 right = mid
             } else {
                 left = mid + 1
             }
         }
-        
+
         return left == (nums.last! - nums.first! + 1) ? -1 : left
     }
 

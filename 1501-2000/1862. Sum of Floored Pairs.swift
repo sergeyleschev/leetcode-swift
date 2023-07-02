@@ -25,29 +25,27 @@ class Solution {
     // 1 <= nums.length <= 10^5
     // 1 <= nums[i] <= 10^5
 
-    private let mod  = 1_000_000_007
-
+    private let mod = 1_000_000_007
 
     func sumOfFlooredPairs(_ nums: [Int]) -> Int {
         var ans = 0
         let maxEle = nums.max()!
         let minEle = nums.min()!
-        var counter = [Int](repeating: 0, count: maxEle  + 1)
-        var preffix = [0]
-        
+        var counter = [Int](repeating: 0, count: maxEle + 1)
+        var prefix = [0]
 
-        func getSum(of num:  Int) -> Int {
+        func getSum(of num: Int) -> Int {
             var t = 0
             var d = 1
             while d * num <= maxEle {
-                t  += d * (preffix[min(maxEle + 1, (d + 1) * num)] - preffix[d * num])
+                t += d * (prefix[min(maxEle + 1, (d + 1) * num)] - prefix[d * num])
                 d += 1
             }
             return t
         }
 
         for num in nums { counter[num] += 1 }
-        for cnt in counter { preffix.append(preffix.last! + cnt) }
+        for cnt in counter { prefix.append(prefix.last! + cnt) }
 
         for idx in minEle...maxEle where counter[idx] > 0 {
             ans += (counter[idx] * getSum(of: idx) % mod)

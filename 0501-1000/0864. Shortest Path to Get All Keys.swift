@@ -22,9 +22,8 @@ class Solution {
     // grid[i][j] contains only '.', '#', '@', 'a'-'f' and 'A'-'F'
     // The number of keys is in [1, 6].  Each key has a different letter and opens exactly one lock.
 
-    typealias Direction = (dx:Int,dy:Int)    
-    private let directions: [Direction] = [(0,1),(0,-1),(1,0),(-1,0)]
-
+    typealias Direction = (dx: Int, dy: Int)
+    private let directions: [Direction] = [(0, 1), (0, -1), (1, 0), (-1, 0)]
 
     struct Position: Hashable {
         var x: Int
@@ -35,10 +34,9 @@ class Solution {
         var pos: Position
         var withKeys: Set<Character>
     }
-    
 
-    func shortestPathAllKeys(_ grid: [String]) -> Int {    
-        let gridCopy = grid.map{ Array<Character>($0)}
+    func shortestPathAllKeys(_ grid: [String]) -> Int {
+        let gridCopy = grid.map { [Character]($0) }
         var row = gridCopy.count
         var col = gridCopy[0].count
         var startPosition = Position(x: -1, y: -1)
@@ -49,9 +47,10 @@ class Solution {
         var potentialStates = [State]()
         var depth = 0
 
+        func valid(_ p: Position) -> Bool {
+            p.x >= 0 && p.x < row && p.y >= 0 && p.y < col && !walls.contains(p)
+        }
 
-        func valid(_ p: Position) -> Bool { p.x >= 0 && p.x < row && p.y >= 0 && p.y < col && !walls.contains(p) }
-        
         for i in 0..<row {
             for j in 0..<col {
                 if gridCopy[i][j] == "@" {
@@ -67,13 +66,13 @@ class Solution {
             }
         }
 
-        let keysCount  = keys.count
+        let keysCount = keys.count
 
         //BFS
         let startState = State(pos: startPosition, withKeys: [])
         visited.insert(startState)
         potentialStates.append(startState)
-        
+
         while !potentialStates.isEmpty {
             depth += 1
             let length = potentialStates.count
@@ -86,12 +85,14 @@ class Solution {
                     let nextP = Position(x: p.x + dir.dx, y: p.y + dir.dy)
                     if valid(nextP) {
                         if keys.contains(nextP) {
-                            var  currentKeys = s.withKeys
+                            var currentKeys = s.withKeys
                             currentKeys.insert(gridCopy[nextP.x][nextP.y])
                             if currentKeys.count == keysCount { return depth }
                         }
 
-                        if !locks.contains(nextP) || s.withKeys.contains(gridCopy[nextP.x][nextP.y].lowercased().first!) {
+                        if !locks.contains(nextP)
+                            || s.withKeys.contains(gridCopy[nextP.x][nextP.y].lowercased().first!)
+                        {
                             s.pos = nextP
                             if !visited.contains(s) {
                                 potentialStates.append(s)
@@ -102,7 +103,7 @@ class Solution {
                 }
             }
         }
-        
+
         return -1
     }
 

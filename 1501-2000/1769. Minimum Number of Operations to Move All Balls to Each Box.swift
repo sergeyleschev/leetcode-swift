@@ -29,11 +29,11 @@ class Solution {
         let n = boxes.count
         let balls = boxes.map { $0 == "1" }
         var ballCnt = 0
-        var preffix: [Int] = []
+        var prefix: [Int] = []
         var suffix = [Int]()
 
         for ball in balls {
-            preffix.append((preffix.last ?? 0) + ballCnt)
+            prefix.append((prefix.last ?? 0) + ballCnt)
             if ball { ballCnt += 1 }
         }
 
@@ -44,7 +44,7 @@ class Solution {
             if ball { ballCnt += 1 }
         }
 
-        return (0..<n).map { preffix[$0] + suffix[$0] }
+        return (0..<n).map { prefix[$0] + suffix[$0] }
     }
 
 }

@@ -22,11 +22,13 @@ class Solution {
         var length = min(grid.count, grid[0].count)
 
         while length > 0 {
-            for i in 0 ... grid.count - length {
-                for j in 0 ... grid[0].count - length {
+            for i in 0...grid.count - length {
+                for j in 0...grid[0].count - length {
                     var det = true
-                    for k in 0 ..< length {
-                        if grid[i + k][j] == 0 || grid[i][j + k] == 0 || grid[i + length - 1][j + k] == 0 || grid[i + k][j + length - 1] == 0 {
+                    for k in 0..<length {
+                        if grid[i + k][j] == 0 || grid[i][j + k] == 0
+                            || grid[i + length - 1][j + k] == 0 || grid[i + k][j + length - 1] == 0
+                        {
                             det = false
                             break
                         }
@@ -34,7 +36,7 @@ class Solution {
                     if det { return length * length }
                 }
             }
-            
+
             length -= 1
         }
 

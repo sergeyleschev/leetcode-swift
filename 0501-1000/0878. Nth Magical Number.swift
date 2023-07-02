@@ -20,7 +20,7 @@ class Solution {
 
     // Example 4:
     // Input: n = 3, a = 6, b = 4
-    // Output: 8 
+    // Output: 8
 
     // Constraints:
     // 1 <= n <= 10^9
@@ -28,9 +28,7 @@ class Solution {
 
     private let MOD = 1_000_000_007
 
-
     private func gcd(_ a: Int, _ b: Int) -> Int { b == 0 ? a : gcd(b, a % b) }
-
 
     func nthMagicalNumber(_ N: Int, _ A: Int, _ B: Int) -> Int {
         let lcm = A * B / gcd(A, B)
@@ -51,7 +49,7 @@ class Solution {
                 } else {
                     right = mid
                 }
-                
+
             }
         }
 

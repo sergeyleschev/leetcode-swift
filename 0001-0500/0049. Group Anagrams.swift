@@ -17,7 +17,7 @@ class Solution {
     // Example 3:
     // Input: strs = ["a"]
     // Output: [["a"]]
-     
+
     // Constraints:
     // 1 <= strs.length <= 10^4
     // 0 <= strs[i].length <= 100
@@ -27,7 +27,6 @@ class Solution {
         var map: [String: [String]] = [:]
         var res: [[String]] = []
 
-        
         func sort(_ str: String) -> String {
             var chars = Array(str)
             let sorted = chars.sorted()
@@ -44,7 +43,7 @@ class Solution {
                 map[sorted_str] = [str]
             }
         }
-        for (_, value) in map { res.append(value) }        
+        for (_, value) in map { res.append(value) }
         return res
     }
 

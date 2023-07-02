@@ -11,7 +11,7 @@ class Solution {
     // Example:
     // Input: nums1 = [1,3,5,4], nums2 = [1,2,3,7]
     // Output: 1
-    // Explanation: 
+    // Explanation:
     // Swap nums1[3] and nums2[3].  Then the sequences are:
     // nums1 = [1, 3, 5, 7] and nums2 = [1, 2, 3, 4]
     // which are both strictly increasing.
@@ -21,7 +21,7 @@ class Solution {
 
     func minSwap(_ A: [Int], _ B: [Int]) -> Int {
         var (swap, keep) = (1, 0)
-        
+
         for i in 1..<A.count {
             var (swap0, keep0) = (0, 0)
             if A[i] <= A[i - 1] || B[i] <= B[i - 1] {
@@ -36,8 +36,8 @@ class Solution {
             }
             (swap, keep) = (swap0, keep0)
         }
-        
+
         return min(swap, keep)
     }
-    
+
 }

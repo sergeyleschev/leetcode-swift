@@ -4,7 +4,7 @@ class Solution {
 
     // 886. Possible Bipartition
     // Given a set of n people (numbered 1, 2, ..., n), we would like to split everyone into two groups of any size.
-    // Each person may dislike some other people, and they should not go into the same group. 
+    // Each person may dislike some other people, and they should not go into the same group.
     // Formally, if dislikes[i] = [a, b], it means it is not allowed to put the people numbered a and b into the same group.
     // Return true if and only if it is possible to split everyone into two groups in this way.
 
@@ -38,16 +38,15 @@ class Solution {
     func possibleBipartition(_ N: Int, _ dislikes: [[Int]]) -> Bool {
         var graph = Array(repeating: [Int](), count: N + 1)
         var colors = Array(repeating: 0, count: N + 1)
-        
+
         for d in dislikes {
             graph[d[0]].append(d[1])
             graph[d[1]].append(d[0])
         }
-        
+
         for i in 1...N where !dfs(i, &colors, graph) { return false }
         return true
     }
-    
 
     private func dfs(_ node: Int, _ colors: inout [Int], _ graph: [[Int]]) -> Bool {
         for neightbor in graph[node] {
@@ -61,11 +60,10 @@ class Solution {
         return true
     }
 
-    
     private func bfs(_ node: Int, _ colors: inout [Int], _ graph: [[Int]]) -> Bool {
         var graph = graph
         var queue = [node]
-        
+
         while !queue.isEmpty {
             let first = queue.removeFirst()
             for neighbor in graph[first] {

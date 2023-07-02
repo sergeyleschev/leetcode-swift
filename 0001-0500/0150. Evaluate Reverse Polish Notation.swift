@@ -40,12 +40,15 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the tokens.
     //   - space: O(n), where n is the length of the tokens.
-    
+
     func evalRPN(_ tokens: [String]) -> Int {
         var stack = [Int]()
 
         for token in tokens {
-            if let num = Int(token) { stack.append(num); continue }
+            if let num = Int(token) {
+                stack.append(num)
+                continue
+            }
 
             guard stack.count >= 2 else { fatalError("RPN expression isn't valid.") }
 

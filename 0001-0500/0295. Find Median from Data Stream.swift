@@ -11,7 +11,7 @@ class MedianFinder {
     // MedianFinder() initializes the MedianFinder object.
     // void addNum(int num) adds the integer num from the data stream to the data structure.
     // double findMedian() returns the median of all elements so far. Answers within 10-5 of the actual answer will be accepted.
-     
+
     // Example 1:
     // Input
     // ["MedianFinder", "addNum", "addNum", "findMedian", "addNum", "findMedian"]
@@ -26,27 +26,29 @@ class MedianFinder {
     // medianFinder.findMedian(); // return 1.5 (i.e., (1 + 2) / 2)
     // medianFinder.addNum(3);    // arr[1, 2, 3]
     // medianFinder.findMedian(); // return 2.0
-     
+
     // Constraints:
     // -10^5 <= num <= 10^5
     // There will be at least one element in the data structure before calling findMedian.
     // At most 5 * 10^4 calls will be made to addNum and findMedian.
-     
+
     // Follow up:
     // If all integer numbers from the stream are in the range [0, 100], how would you optimize your solution?
     // If 99% of all integer numbers from the stream are in the range [0, 100], how would you optimize your solution?
-    
-    var nums : [Int]
-    
+
+    var nums: [Int]
+
     /** initialize your data structure here. */
     init() {
         nums = [Int]()
     }
-    
-    
+
     func addNum(_ num: Int) {
-        if nums.isEmpty { nums.append(num); return }
-        
+        if nums.isEmpty {
+            nums.append(num)
+            return
+        }
+
         var left = 0
         var right = nums.count - 1
 
@@ -55,19 +57,19 @@ class MedianFinder {
             if nums[mid] < num {
                 left = mid + 1
             } else if nums[mid] == num {
-                left = mid; break
+                left = mid
+                break
             } else {
                 right = mid - 1
             }
         }
-        
+
         nums.insert(num, at: left)
     }
-    
-    
+
     func findMedian() -> Double {
         guard !nums.isEmpty else { return 0 }
-        
+
         if nums.count % 2 == 1 {
             return Double(nums[nums.count / 2])
         } else {
@@ -76,7 +78,7 @@ class MedianFinder {
             return Double(r1 + r2) / 2
         }
     }
-    
+
 }
 
 /**

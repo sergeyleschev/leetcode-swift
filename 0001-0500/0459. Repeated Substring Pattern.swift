@@ -31,7 +31,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the input string.
     //   - space: O(n), where n is the length of the input string.
-    
+
     func repeatedSubstringPattern(_ s: String) -> Bool {
         let s = Array(s)
         var dp = [Int](repeating: 0, count: s.count)

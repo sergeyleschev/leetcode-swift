@@ -17,7 +17,7 @@ class SubrectangleQueries {
     // Output
     // [null,1,null,5,5,null,10,5]
     // Explanation
-    // SubrectangleQueries subrectangleQueries = new SubrectangleQueries([[1,2,1],[4,3,4],[3,2,1],[1,1,1]]);  
+    // SubrectangleQueries subrectangleQueries = new SubrectangleQueries([[1,2,1],[4,3,4],[3,2,1],[1,1,1]]);
     // // The initial rectangle (4x3) looks like:
     // // 1 2 1
     // // 4 3 4
@@ -29,7 +29,7 @@ class SubrectangleQueries {
     // // 5 5 5
     // // 5 5 5
     // // 5 5 5
-    // // 5 5 5 
+    // // 5 5 5
     // subrectangleQueries.getValue(0, 2); // return 5
     // subrectangleQueries.getValue(3, 1); // return 5
     // subrectangleQueries.updateSubrectangle(3, 0, 3, 2, 10);
@@ -37,7 +37,7 @@ class SubrectangleQueries {
     // // 5   5   5
     // // 5   5   5
     // // 5   5   5
-    // // 10  10  10 
+    // // 10  10  10
     // subrectangleQueries.getValue(3, 1); // return 10
     // subrectangleQueries.getValue(0, 2); // return 5
 
@@ -69,19 +69,16 @@ class SubrectangleQueries {
 
     var rectangle: [[Int]]
 
-    
     init(_ rectangle: [[Int]]) { self.rectangle = rectangle }
-    
 
     func updateSubrectangle(_ row1: Int, _ col1: Int, _ row2: Int, _ col2: Int, _ newValue: Int) {
         for y in row1...row2 {
             for x in col1...col2 { rectangle[y][x] = newValue }
         }
     }
-    
 
     func getValue(_ row: Int, _ col: Int) -> Int { rectangle[row][col] }
-    
+
 }
 
 /**

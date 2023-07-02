@@ -25,15 +25,16 @@ class Solution {
     // words[i] consists of lower-case English letters.
 
     func palindromePairs(_ words: [String]) -> [[Int]] {
-        var states = Array(repeating: Array(repeating: false, count: words.count), count: words.count)
+        var states = Array(
+            repeating: Array(repeating: false, count: words.count), count: words.count)
         var dict = [String: Int]()
         var ans = [[Int]]()
-        
+
         for (i, word) in words.enumerated() {
             dict[word] = i
             states[i][i] = true
         }
-        
+
         for (i, word) in words.enumerated() {
             var palin = findPalinMatch(word: word)
             for str in palin {
@@ -54,14 +55,13 @@ class Solution {
 
         return ans
     }
-    
-    
-    private func findPalinMatch(word: String) -> [String]{
+
+    private func findPalinMatch(word: String) -> [String] {
         let chars = Array((word + "#" + String(word.reversed())))
         var p = Array(repeating: 0, count: chars.count)
         var res = [String]()
 
-        for i in 1..<chars.count{
+        for i in 1..<chars.count {
             var j = p[i - 1]
             while j > 0 && chars[i] != chars[j] { j = p[j - 1] }
             p[i] = chars[i] != chars[j] ? 0 : j + 1

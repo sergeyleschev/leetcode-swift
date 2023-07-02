@@ -7,18 +7,18 @@ class Solution {
     // Return the answer in an array.
 
     // For each nums[i] finds out how many numbers in the array are smaller than it.
-    
+
     // - Parameter nums: Array of numbers.
     // - Returns: Array where number on position *i* represent how many numbers are smaller than *nums[i]*.
 
     // Example 1:
     // Input: nums = [8,1,2,2,3]
     // Output: [4,0,1,1,3]
-    // Explanation: 
-    // For nums[0]=8 there exist four smaller numbers than it (1, 2, 2 and 3). 
+    // Explanation:
+    // For nums[0]=8 there exist four smaller numbers than it (1, 2, 2 and 3).
     // For nums[1]=1 does not exist any smaller number than it.
-    // For nums[2]=2 there exist one smaller number than it (1). 
-    // For nums[3]=2 there exist one smaller number than it (1). 
+    // For nums[2]=2 there exist one smaller number than it (1).
+    // For nums[3]=2 there exist one smaller number than it (1).
     // For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).
 
     // Example 2:
@@ -36,7 +36,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the nums.
     //   - space: O(n), where n is the length of the nums.
-    
+
     func smallerNumbersThanCurrent(_ nums: [Int]) -> [Int] {
         var rank = [Int](repeating: 0, count: 101)
         var ans = [Int](repeating: 0, count: nums.count)

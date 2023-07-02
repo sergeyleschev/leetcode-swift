@@ -28,7 +28,7 @@ class Solution {
     // Output: "B"
     // Explanation: "B" wins.
     // "X  "    "X  "    "XX "    "XXO"    "XXO"    "XXO"
-    // "   " -> " O " -> " O " -> " O " -> "XO " -> "XO " 
+    // "   " -> " O " -> " O " -> " O " -> "XO " -> "XO "
     // "   "    "   "    "   "    "   "    "   "    "O  "
 
     // Example 3:
@@ -63,11 +63,13 @@ class Solution {
             win[step[1] + 3] += 1
 
             if step[0] == step[1] { win[6] += 1 }
-            if step[0] + step[1] == 2 { win[7] += 1  }
-            if win[step[0]] == 3 || win[step[1] + 3] == 3 || win[6] == 3 || win[7] == 3 { return moves.count % 2 == 0 ? "B" : "A" }
+            if step[0] + step[1] == 2 { win[7] += 1 }
+            if win[step[0]] == 3 || win[step[1] + 3] == 3 || win[6] == 3 || win[7] == 3 {
+                return moves.count % 2 == 0 ? "B" : "A"
+            }
         }
 
         return moves.count >= 9 ? "Draw" : "Pending"
     }
-    
+
 }

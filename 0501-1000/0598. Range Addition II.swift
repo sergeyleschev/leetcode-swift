@@ -30,12 +30,12 @@ class Solution {
         if ops.isEmpty { return m * n }
         var m = m
         var n = n
-        
+
         for op in ops {
             m = min(m, op[0])
             n = min(n, op[1])
         }
-        
+
         return m * n
     }
 

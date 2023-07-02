@@ -9,7 +9,7 @@ class Solution {
     // Example 1:
     // Input: nums = [1,17,8]
     // Output: 2
-    // Explanation: 
+    // Explanation:
     // [1,8,17] and [17,8,1] are the valid permutations.
 
     // Example 2:
@@ -19,7 +19,7 @@ class Solution {
     // Note:
     // 1 <= nums.length <= 12
     // 0 <= nums[i] <= 10^9
-    
+
     func numSquarefulPerms(_ A: [Int]) -> Int {
         var ans = 0
         var set = Set<[Int]>()
@@ -39,8 +39,7 @@ class Solution {
             }
         }
 
-        
-        func backtracking(_ currentArr: inout [Int], _ visited: inout [Bool],_ lastIndex: Int) {
+        func backtracking(_ currentArr: inout [Int], _ visited: inout [Bool], _ lastIndex: Int) {
             guard currentArr.count < A.count else {
                 if !set.contains(currentArr) {
                     ans += 1
@@ -52,7 +51,7 @@ class Solution {
             if let indices = map[lastIndex] {
                 var temp = Set<Int>()
                 for index in indices {
-                    if !visited[index] && !temp.contains(A[index]){
+                    if !visited[index] && !temp.contains(A[index]) {
                         temp.insert(A[index])
                         visited[index] = true
                         currentArr.append(A[index])
@@ -69,7 +68,7 @@ class Solution {
                 beginings.insert(A[i])
                 currentArr.append(A[i])
                 visited[i] = true
-                backtracking(&currentArr, &visited,i)
+                backtracking(&currentArr, &visited, i)
                 currentArr.removeLast()
                 visited[i] = false
             }
@@ -77,9 +76,8 @@ class Solution {
 
         return ans
     }
-    
-    
-    private func isSqureNumber(_  num: Int) -> Bool {
+
+    private func isSqureNumber(_ num: Int) -> Bool {
         let sq = Int(sqrt(Double(num)))
         return sq * sq == num
     }

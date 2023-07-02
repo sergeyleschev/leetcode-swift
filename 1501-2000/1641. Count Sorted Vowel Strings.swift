@@ -28,18 +28,18 @@ class Solution {
     // Output: 66045
 
     // Constraints:
-    // 1 <= n <= 50 
+    // 1 <= n <= 50
 
     // - Complexity:
     //   - time: O(n), where n is given n.
     //   - space: O(n), where n is given n.
-    
+
     func countVowelStrings(_ n: Int) -> Int {
         guard n > 1 else { return 5 }
         var dp = [[Int]](repeating: [Int](repeating: 0, count: 6), count: n + 1)
-        
+
         for i in 1...5 { dp[1][i] = i }
-        
+
         for i in 2...n {
             dp[i][1] = 1
             for j in 2...5 { dp[i][j] = dp[i][j - 1] + dp[i - 1][j] }

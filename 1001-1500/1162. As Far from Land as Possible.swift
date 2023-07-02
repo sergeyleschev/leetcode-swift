@@ -33,7 +33,7 @@ class Solution {
         for i in 0..<row {
             for j in 0..<col where grid[i][j] == 1 { queue.append([i, j]) }
         }
-        
+
         if queue.count == 0 || queue.count == row * col { return -1 }
         var arr = grid
 
@@ -54,7 +54,7 @@ class Solution {
                 size -= 1
             }
         }
-        
+
         return distance
     }
 

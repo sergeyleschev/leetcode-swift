@@ -52,28 +52,28 @@ class Solution {
     func minDays(_ bloomDay: [Int], _ m: Int, _ k: Int) -> Int {
         let length = bloomDay.count
         guard length >= m * k else { return -1 }
-        var left = Int.max, right = Int.min
+        var left = Int.max
+        var right = Int.min
 
         for day in bloomDay {
             left = min(left, day)
             right = max(right, day)
         }
-        
+
         while left < right {
             let days = (left + right) >> 1
             if canMake(bloomDay, days, m, k) { right = days } else { left = days + 1 }
         }
-        
+
         return left
     }
-    
 
     private func canMake(_ bloomDay: [Int], _ days: Int, _ m: Int, _ k: Int) -> Bool {
         var bouquets = 0
         var flowers = 0
         let length = bloomDay.count
         var i = 0
-        
+
         while i < length && bouquets < m {
             if bloomDay[i] <= days {
                 flowers += 1
@@ -81,10 +81,12 @@ class Solution {
                     bouquets += 1
                     flowers = 0
                 }
-            } else { flowers = 0 }
+            } else {
+                flowers = 0
+            }
             i += 1
         }
-        
+
         return bouquets >= m
     }
 

@@ -40,7 +40,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n^2), where n is the length of the given lists.
     //   - space: O(n^2), where n is the length of the given lists.
-    
+
     func fourSumCount(_ A: [Int], _ B: [Int], _ C: [Int], _ D: [Int]) -> Int {
         var dict = [Int: Int]()
         var ans = 0
@@ -51,10 +51,9 @@ class Solution {
             }
         }
 
-
         for c in C {
             for d in D {
-                guard let val = dict[ -(c + d)] else { continue }
+                guard let val = dict[-(c + d)] else { continue }
                 ans += val
             }
         }

@@ -1,13 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init() { self.val = 0; self.next = nil; }
- *     public init(_ val: Int) { self.val = val; self.next = nil; }
- *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init() { self.val = 0; self.next = nil; }
+///     public init(_ val: Int) { self.val = val; self.next = nil; }
+///     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -22,11 +20,11 @@ class Solution {
     // Example 2:
     // Input: head = [1,2]
     // Output: false
-     
+
     // Constraints:
     // The number of nodes in the list is in the range [1, 10^5].
     // 0 <= Node.val <= 9
- 
+
     // Follow up: Could you do it in O(n) time and O(1) space?
 
     func isPalindrome(_ head: ListNode?) -> Bool {
@@ -36,13 +34,13 @@ class Solution {
         var prev: ListNode?
         var next: ListNode?
         var index = 0
-        
+
         while curr != nil {
             count += 1
             if curr?.next == nil { tail = curr }
             curr = curr?.next
         }
-        
+
         curr = head
         while curr != nil {
             if index >= count / 2 {
@@ -55,15 +53,15 @@ class Solution {
             }
             index += 1
         }
-        
+
         var head = head
         while head != nil && tail != nil {
             if head!.val != tail!.val { return false }
             head = head?.next
             tail = tail?.next
         }
-        
+
         return true
     }
-    
+
 }

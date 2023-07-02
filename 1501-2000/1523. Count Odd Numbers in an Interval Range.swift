@@ -22,10 +22,10 @@ class Solution {
         var count = 0
 
         if low % 2 != 0 && high % 2 != 0 { count -= 1 }
-        if low % 2 != 0 {  count += 1 }
+        if low % 2 != 0 { count += 1 }
         if high % 2 != 0 { count += 1 }
 
-        return (count  + ((high - low) / 2))
+        return (count + ((high - low) / 2))
     }
 
 }

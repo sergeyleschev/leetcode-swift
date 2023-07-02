@@ -19,8 +19,7 @@ class Solution {
     // k will be an integer in the range [0, 109].
 
     func preimageSizeFZF(_ K: Int) -> Int { rightBound(target: K) - leftBound(target: K) + 1 }
-    
-    
+
     func leftBound(target: Int) -> Int {
         var low = 0
         var high = Int.max
@@ -36,7 +35,6 @@ class Solution {
         }
         return low
     }
-    
 
     func rightBound(target: Int) -> Int {
         var low = 0
@@ -53,7 +51,6 @@ class Solution {
         }
         return low - 1
     }
-    
 
     func trailingZeroes(number: Int) -> Int {
         var result = 0

@@ -28,20 +28,20 @@ class Solution {
     // 1 <= m, n <= 200
     // 0 <= img[i][j] <= 255
 
-    func imageSmoother(_ M: [[Int]]) -> [[Int]] {        
+    func imageSmoother(_ M: [[Int]]) -> [[Int]] {
         var ans = M
 
         for r in 0..<M.count {
             for c in 0..<M[0].count {
-                let r1 = r == 0 ? 0:r - 1
-                let r2 = r == M.count - 1 ? M.count - 1: r + 1
-                let c1 = c == 0 ? 0:c - 1
-                let c2 = c == M[0].count - 1 ? M[0].count - 1: c + 1
-                
+                let r1 = r == 0 ? 0 : r - 1
+                let r2 = r == M.count - 1 ? M.count - 1 : r + 1
+                let c1 = c == 0 ? 0 : c - 1
+                let c2 = c == M[0].count - 1 ? M[0].count - 1 : c + 1
+
                 var total = 0
                 var n = 0
-                for rs in r1...r2{
-                    for cs in c1...c2{
+                for rs in r1...r2 {
+                    for cs in c1...c2 {
                         total += M[rs][cs]
                         n += 1
                     }
@@ -49,7 +49,7 @@ class Solution {
                 ans[r][c] = total / n
             }
         }
-        
+
         return ans
     }
 

@@ -50,7 +50,6 @@ class Solution {
         return true
     }
 
-
     private func check(_ a: [Character], _ b: [Character]) -> Bool {
         var i = 0
         var j = a.count - 1
@@ -61,7 +60,6 @@ class Solution {
         }
         return true
     }
-
 
     func checkPalindromeFormation(_ a: String, _ b: String) -> Bool {
         let aChars = [Character](a)

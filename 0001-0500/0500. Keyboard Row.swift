@@ -24,23 +24,22 @@ class Solution {
     // Constraints:
     // 1 <= words.length <= 20
     // 1 <= words[i].length <= 100
-    // words[i] consists of English letters (both lowercase and uppercase). 
+    // words[i] consists of English letters (both lowercase and uppercase).
 
     func findWords(_ words: [String]) -> [String] {
-        let rules =  ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"]
+        let rules = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"]
         var result = words
 
-        
         func checkWords(word: String) -> Bool {
             let rule = rules.filter { $0.range(of: String(word.first!)) != nil }
             for c in word where (rule.first!.range(of: String(c))) == nil { return true }
             return false
         }
-        
+
         words.forEach { word in
-            if (checkWords(word: word.uppercased())) { result = result.filter { $0 != word } }
+            if checkWords(word: word.uppercased()) { result = result.filter { $0 != word } }
         }
-        
+
         return result
     }
 

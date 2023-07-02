@@ -35,7 +35,7 @@ class Solution {
 
         nums.forEach { num in counter[num, default: 0] += 1 }
         let sortedKeys = counter.keys.sorted()
-        
+
         for key in sortedKeys {
             if counter[key] ?? 0 > 0 {
                 let minus = counter[key]
@@ -45,7 +45,7 @@ class Solution {
                 }
             }
         }
-        
+
         return true
     }
 

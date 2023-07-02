@@ -36,11 +36,11 @@ class Solution {
     // Explanation: The encoded message can represent any of the encoded messages "21", "22", "23", "24", "25", "26", "27", "28", or "29".
     // "21", "22", "23", "24", "25", and "26" have 2 ways of being decoded, but "27", "28", and "29" only have 1 way.
     // Hence, there are a total of (6 * 2) + (3 * 1) = 12 + 3 = 15 ways to decode "2*".
-     
+
     // Constraints:
     // 1 <= s.length <= 10^5
     // s[i] is a digit or '*'.
-    
+
     // - Complexity:
     //   - time: O(n)
     //   - space: O(1)
@@ -49,44 +49,40 @@ class Solution {
         let chs = Array(s)
         let len = chs.count
 
-        var dp = Array(repeating: 0, count:2)
+        var dp = Array(repeating: 0, count: 2)
         dp[0] = ways(String(chs[0]))
 
         if len < 2 { return dp[0] }
 
         dp[1] = dp[0] * ways(String(chs[1])) + ways(String(chs[0]), String(chs[1]))
 
-        for i in 2 ..< len {
+        for i in 2..<len {
             let temp = dp[1]
             let test = dp[1] * ways(String(chs[i]))
-            let finish = dp[0] * ways(String(chs[i-1]), String(chs[i]))
-            dp[1] = (test + finish) % 1000000007
+            let finish = dp[0] * ways(String(chs[i - 1]), String(chs[i]))
+            dp[1] = (test + finish) % 1_000_000_007
             dp[0] = temp
         }
 
         return dp[1]
     }
 
-    
     func ways(_ ch: String) -> Int {
         if ch == "*" { return 9 }
         if ch == "0" { return 0 }
         return 1
     }
 
-    
     func ways(_ ch1: String, _ ch2: String) -> Int {
         if ch1 == "*" && ch2 == "*" {
             return 15
         } else if ch1 != "*" && ch2 == "*" {
             if let int1 = Int(ch1) {
-                if int1 == 1 { return 9 }
-                else if int1 == 2 { return 6 }
+                if int1 == 1 { return 9 } else if int1 == 2 { return 6 }
             }
         } else if ch1 == "*" && ch2 != "*" {
             if let int2 = Int(ch2) {
-                if int2 >= 0 && int2 <= 6 { return 2 } 
-                else { return 1 }
+                if int2 >= 0 && int2 <= 6 { return 2 } else { return 1 }
             }
         } else {
             if let combine = Int(ch1 + ch2) {

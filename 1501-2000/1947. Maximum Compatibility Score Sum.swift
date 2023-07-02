@@ -37,12 +37,15 @@ class Solution {
         var permutations = [[Int]]()
         var maxCount = 0
         var cachedCount = [String: Int]()
-        
+
         do {
             let n = rowCount
             var output = [Int](0..<n)
             func permute(first: Int) {
-                if first == n { permutations.append(output); return }
+                if first == n {
+                    permutations.append(output)
+                    return
+                }
                 for i in first..<n {
                     output.swapAt(i, first)
                     permute(first: first + 1)
@@ -65,7 +68,10 @@ class Solution {
                 let mentorIndex = permutation[i]
                 let mentor = mentors[mentorIndex]
                 let key = i.description + mentorIndex.description
-                if let cached = cachedCount[key] { perCount += cached; continue }
+                if let cached = cachedCount[key] {
+                    perCount += cached
+                    continue
+                }
                 let c = count(student: student, mentor: mentor)
                 cachedCount[key] = c
                 perCount += c
@@ -75,5 +81,5 @@ class Solution {
 
         return maxCount
     }
-    
+
 }

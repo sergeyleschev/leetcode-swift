@@ -24,7 +24,6 @@ class Solution {
     func findLUSlength(_ strs: [String]) -> Int {
         var dict = [String: Int]()
 
-
         func isSubstring(s: String, t: String) -> Bool {
             var arr1 = Array(s)
             var arr2 = Array(t)
@@ -36,19 +35,21 @@ class Solution {
             }
             return index1 == arr1.count
         }
-        
 
         for str in strs { dict[str] = (dict[str] ?? 0) + 1 }
-        let sortStrs = strs.sorted{ $0.count > $1.count }
+        let sortStrs = strs.sorted { $0.count > $1.count }
         for (i, s) in sortStrs.enumerated() {
             guard dict[s] == 1 else { continue }
             var flag = true
             for j in 0..<i {
-                if isSubstring(s: s, t: sortStrs[j]) { flag = false; break }
+                if isSubstring(s: s, t: sortStrs[j]) {
+                    flag = false
+                    break
+                }
             }
             if flag { return s.count }
         }
-        
+
         return -1
     }
 

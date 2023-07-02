@@ -24,11 +24,12 @@ class Solution {
     // matrix[i][j] is '0' or '1'.
 
     func maximalSquare(_ matrix: [[Character]]) -> Int {
-        var maximal = 0 //  length
+        var maximal = 0  //  length
         let row = matrix.count
         let col = matrix[0].count
-        var dp: [[(Int, Int, Int)]] = Array(repeating: Array(repeating: (0, 0, 0), count: col), count: row)
-        
+        var dp: [[(Int, Int, Int)]] = Array(
+            repeating: Array(repeating: (0, 0, 0), count: col), count: row)
+
         for i in 0..<row {
             for j in 0..<col {
                 if matrix[i][j] == "0" {
@@ -39,14 +40,17 @@ class Solution {
                         let y = (j > 0 ? dp[i][j - 1].2 : 0) + 1
                         dp[i][j] = (1, x, y)
                     } else {
-                        dp[i][j] = (min(1 + dp[i - 1][j - 1].0, 1 + dp[i - 1][j].1, 1 + dp[i][j - 1].2), 1 + dp[i - 1][j].1, 1 + dp[i][j - 1].2)
+                        dp[i][j] = (
+                            min(1 + dp[i - 1][j - 1].0, 1 + dp[i - 1][j].1, 1 + dp[i][j - 1].2),
+                            1 + dp[i - 1][j].1, 1 + dp[i][j - 1].2
+                        )
                     }
                 }
                 maximal = max(dp[i][j].0, maximal)
             }
         }
-        
+
         return maximal * maximal
     }
-    
+
 }

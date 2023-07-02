@@ -1,13 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init() { self.val = 0; self.next = nil; }
- *     public init(_ val: Int) { self.val = val; self.next = nil; }
- *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init() { self.val = 0; self.next = nil; }
+///     public init(_ val: Int) { self.val = val; self.next = nil; }
+///     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -23,7 +21,7 @@ class Solution {
     // Example 2:
     // Input: head = [2,1], x = 2
     // Output: [1,2]
-     
+
     // Constraints:
     // The number of nodes in the list is in the range [0, 200].
     // -100 <= Node.val <= 100
@@ -35,29 +33,29 @@ class Solution {
         var right_nodes: [ListNode?] = []
         var head: ListNode?
         var prev: ListNode?
-        
+
         while current != nil {
             if current!.val < x {
                 left_nodes.append(current)
             } else {
                 right_nodes.append(current)
             }
-            
+
             current = current?.next
         }
-        
+
         for node in left_nodes + right_nodes {
             node?.next = nil
-            
+
             if head == nil {
                 head = node
             } else {
                 prev?.next = node
             }
-            
+
             prev = node
         }
-        
+
         return head
     }
 

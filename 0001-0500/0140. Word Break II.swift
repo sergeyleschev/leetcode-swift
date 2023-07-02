@@ -42,8 +42,9 @@ class Solution {
         return dfs(s, wordDict, &dict)
     }
 
-
-    private func dfs(_ s: String, _ wordDict: [String], _ dict: inout [String: [String]]) -> [String] {
+    private func dfs(_ s: String, _ wordDict: [String], _ dict: inout [String: [String]])
+        -> [String]
+    {
         if let val = dict[s] { return val }
         guard !s.isEmpty else { return [""] }
         var ans = [String]()

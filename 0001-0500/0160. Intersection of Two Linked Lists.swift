@@ -1,14 +1,12 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init(_ val: Int) {
- *         self.val = val
- *         self.next = nil
- *     }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init(_ val: Int) {
+///         self.val = val
+///         self.next = nil
+///     }
+/// }
 
 class Solution {
 
@@ -44,7 +42,7 @@ class Solution {
     // Input: intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2
     // Output: No intersection
     // Explanation: From the head of A, it reads as [2,6,4]. From the head of B, it reads as [1,5]. Since the two lists do not intersect, intersectVal must be 0, while skipA and skipB can be arbitrary values.
-    // Explanation: The two lists do not intersect, so return null. 
+    // Explanation: The two lists do not intersect, so return null.
 
     // Constraints:
     // The number of nodes of listA is in the m.
@@ -55,24 +53,24 @@ class Solution {
     // 0 <= skipB <= n
     // intersectVal is 0 if listA and listB do not intersect.
     // intersectVal == listA[skipA + 1] == listB[skipB + 1] if listA and listB intersect.
-     
+
     // Follow up: Could you write a solution that runs in O(n) time and use only O(1) memory?
 
     // - Complexity:
     //   - time: O(n + m), where n is the length of the list A, and m is the length of list B.
     //   - space: O(1), only constant space is used.
-    
+
     func getIntersectionNode(_ headA: ListNode?, _ headB: ListNode?) -> ListNode? {
         guard headA != nil, headB != nil else { return nil }
-        
+
         var a: ListNode? = headA
         var b: ListNode? = headB
-        
+
         while a !== b {
             a = a == nil ? headB : a?.next
             b = b == nil ? headA : b?.next
         }
-        
+
         return a
     }
 

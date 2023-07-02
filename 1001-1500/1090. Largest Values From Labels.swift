@@ -27,7 +27,7 @@ class Solution {
     // Example 4:
     // Input: values = [9,8,8,7,6], labels = [0,0,0,1,1], num_wanted = 3, use_limit = 2
     // Output: 24
-    // Explanation: The subset chosen is the first, second, and fourth item. 
+    // Explanation: The subset chosen is the first, second, and fourth item.
 
     // Note:
     // 1 <= values.length == labels.length <= 20000
@@ -37,21 +37,30 @@ class Solution {
     struct ValueWithLabel: Comparable {
         var value: Int
         var label: Int
-        
-        static func <(first: ValueWithLabel, second: ValueWithLabel) -> Bool { first.value < second.value }
-        static func >(first: ValueWithLabel, second: ValueWithLabel) -> Bool { first.value > second.value }
-        static func ==(first: ValueWithLabel, second: ValueWithLabel) -> Bool { first.value == second.value }
+
+        static func < (first: ValueWithLabel, second: ValueWithLabel) -> Bool {
+            first.value < second.value
+        }
+        static func > (first: ValueWithLabel, second: ValueWithLabel) -> Bool {
+            first.value > second.value
+        }
+        static func == (first: ValueWithLabel, second: ValueWithLabel) -> Bool {
+            first.value == second.value
+        }
     }
-    
-    
-    func largestValsFromLabels(_ values: [Int], _ labels: [Int], _ num_wanted: Int, _ use_limit: Int) -> Int {
+
+    func largestValsFromLabels(
+        _ values: [Int], _ labels: [Int], _ num_wanted: Int, _ use_limit: Int
+    ) -> Int {
         var ans = 0
         var data = [ValueWithLabel]()
         var labelCount = [Int: Int]()
         var choosedValueNumber = 0
 
-        for i in 0..<values.count { data.append(Solution.ValueWithLabel(value: values[i], label: labels[i])) }
-        data = data.sorted(by: > )
+        for i in 0..<values.count {
+            data.append(Solution.ValueWithLabel(value: values[i], label: labels[i]))
+        }
+        data = data.sorted(by: >)
 
         for ele in data {
             if nil == labelCount[ele.label] {
@@ -64,10 +73,10 @@ class Solution {
                 ans += ele.value
                 choosedValueNumber += 1
             }
-            
+
             if choosedValueNumber == num_wanted { break }
         }
-        
+
         return ans
     }
 

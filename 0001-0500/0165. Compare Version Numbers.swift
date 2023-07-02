@@ -70,7 +70,6 @@ class Solution {
         return 0
     }
 
-
     private func getNextChunk(_ version: String, _ index: Int) -> (ver: Int, nextIndex: Int) {
         guard index < version.count else { return (0, index) }
 

@@ -11,7 +11,7 @@ class Solution {
     // Example 1:
     // Input: s = "xyzzaz"
     // Output: 1
-    // Explanation: There are 4 substrings of size 3: "xyz", "yzz", "zza", and "zaz". 
+    // Explanation: There are 4 substrings of size 3: "xyz", "yzz", "zza", and "zaz".
     // The only good substring of length 3 is "xyz".
 
     // Example 2:
@@ -31,7 +31,11 @@ class Solution {
         var cnt = 0
 
         while idx <= s.count - 3 {
-            if chars[idx] != chars[idx + 1] && chars[idx + 1] != chars[idx + 2] && chars[idx] != chars[idx + 2] { cnt += 1 }
+            if chars[idx] != chars[idx + 1] && chars[idx + 1] != chars[idx + 2]
+                && chars[idx] != chars[idx + 2]
+            {
+                cnt += 1
+            }
             idx += 1
         }
         return cnt

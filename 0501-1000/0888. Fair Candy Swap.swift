@@ -37,18 +37,18 @@ class Solution {
         let sumB = B.reduce(0, +)
         let diff = sumA - sumB
         var record: [Int: Int] = [:]
-        
+
         for b in B { record[b] = b }
-    
+
         // A - a + b = B - b + a
         // a - b == diff / 2
-        
+
         for a in A {
             let b = a - diff / 2
             if record[b] != nil { return [a, b] }
         }
-        
+
         return []
     }
-    
+
 }

@@ -22,7 +22,7 @@ class Solution {
     // Example 2:
     // Input: nums = [-1,-100,3,99], k = 2
     // Output: [3,99,-1,-100]
-    // Explanation: 
+    // Explanation:
     // rotate 1 steps to the right: [99,-1,-100,3]
     // rotate 2 steps to the right: [3,99,-1,-100]
 
@@ -30,7 +30,7 @@ class Solution {
     // 1 <= nums.length <= 10^5
     // -2^31 <= nums[i] <= 2^31 - 1
     // 0 <= k <= 10^5
-     
+
     // Follow up:
     // Try to come up with as many solutions as you can. There are at least three different ways to solve this problem.
     // Could you do it in-place with O(1) extra space?
@@ -47,7 +47,6 @@ class Solution {
         reverse(&nums, start: 0, end: k - 1)
         reverse(&nums, start: k, end: nums.count - 1)
     }
-    
 
     private func reverse(_ nums: inout [Int], start: Int, end: Int) {
         var start = start

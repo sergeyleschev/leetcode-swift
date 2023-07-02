@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 
 class BSTIterator {
 
@@ -54,9 +52,8 @@ class BSTIterator {
     // Follow up:
     // Could you implement next() and hasNext() to run in average O(1) time and use O(h) memory, where h is the height of the tree?
 
-
     private var stack: [TreeNode]
-    
+
     // Initialization of data structures.
     // - Parameter root: Binary tree root.
 
@@ -68,7 +65,7 @@ class BSTIterator {
         stack = [TreeNode]()
         leftMostInorder(root)
     }
-    
+
     private func leftMostInorder(_ root: TreeNode?) {
         var root = root
         while let node = root {
@@ -76,7 +73,7 @@ class BSTIterator {
             root = root?.left
         }
     }
-    
+
     // Finds the next element.
     // - Returns: The next element.
 
@@ -89,18 +86,18 @@ class BSTIterator {
         leftMostInorder(topMost.right)
         return topMost.val
     }
-    
+
     // Finds if the next element exists.
     // - Returns: True if the next element exists, otherwise returns false.
 
     // - Complexity:
     //   - time: O(1), only constant time is used.
     //   - space: O(1), only constant space is used.
-    
+
     func hasNext() -> Bool {
         !stack.isEmpty
     }
-    
+
 }
 
 /**

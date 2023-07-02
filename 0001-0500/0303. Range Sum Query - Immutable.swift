@@ -1,7 +1,7 @@
 class NumArray {
 
     // Solution by Sergey Leschev
-    
+
     // 303. Range Sum Query - Immutable
     // Given an integer array nums, handle multiple queries of the following type:
     // Calculate the sum of the elements of nums between indices left and right inclusive where left <= right.
@@ -29,7 +29,6 @@ class NumArray {
 
     private var sums: [Int] = []
 
-    
     init(_ nums: [Int]) {
         var sum: Int = 0
         for n in nums {
@@ -37,10 +36,9 @@ class NumArray {
             sums.append(sum)
         }
     }
-    
-    
+
     func sumRange(_ i: Int, _ j: Int) -> Int {
-        let vi = i == 0 ? sums[i] : sums[i] - sums[i-1]
+        let vi = i == 0 ? sums[i] : sums[i] - sums[i - 1]
         let ans = sums[j] - sums[i] + vi
 
         return ans

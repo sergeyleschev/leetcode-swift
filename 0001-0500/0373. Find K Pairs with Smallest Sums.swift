@@ -33,7 +33,7 @@ class Solution {
         var ret: [[Int]] = []
         guard nums1.count > 0 && nums2.count > 0 && k > 0 else { return [] }
 
-        for i in (0 ..< min(nums1.count , k)) {
+        for i in (0..<min(nums1.count, k)) {
             queue.enqueue((nums1[i], nums2[0], 0))
         }
 
@@ -51,13 +51,11 @@ class Solution {
 
 }
 
-
 struct Heap<Element> {
     var elements: [Element]
     let priorityFunction: (Element, Element) -> Bool
     var isEmpty: Bool { return elements.isEmpty }
     var count: Int { return elements.count }
-
 
     init(elements: [Element], priorityFunction: @escaping (Element, Element) -> Bool) {
         self.elements = elements
@@ -65,15 +63,12 @@ struct Heap<Element> {
         buildHeap()
     }
 
-
     func peek() -> Element? { return elements.first }
-
 
     mutating func enqueue(_ element: Element) {
         elements.append(element)
         siftUp(elementAtIndex: count - 1)
     }
-
 
     mutating func dequeue() -> Element? {
         guard !isEmpty else { return nil }
@@ -83,51 +78,42 @@ struct Heap<Element> {
         return element
     }
 
-
     mutating func buildHeap() {
-        for index in (0 ..< count / 2).reversed() {
+        for index in (0..<count / 2).reversed() {
             siftDown(elementAtIndex: index)
         }
     }
-
 
     func isRoot(_ index: Int) -> Bool {
         return index == 0
     }
 
-
     func childs(of index: Int) -> (left: Int, right: Int) {
         return (2 * index + 1, 2 * index + 2)
     }
-
 
     func parentIndex(of index: Int) -> Int {
         return (index - 1) / 2
     }
 
-
     func isHigherPriority(at firstIndex: Int, than secondIndex: Int) -> Bool {
         return priorityFunction(elements[firstIndex], elements[secondIndex])
     }
-
 
     func higherPriorityIndex(of parentIndex: Int, and childIndex: Int) -> Int {
         guard childIndex < count else { return parentIndex }
         return isHigherPriority(at: childIndex, than: parentIndex) ? childIndex : parentIndex
     }
 
-
     func highestPriorityIndex(for node: Int) -> Int {
         let (left, right) = childs(of: node)
         return higherPriorityIndex(of: higherPriorityIndex(of: node, and: left), and: right)
     }
 
-
     mutating func swapElement(at firstIndex: Int, with secondIndex: Int) {
         guard firstIndex != secondIndex else { return }
         elements.swapAt(firstIndex, secondIndex)
     }
-
 
     mutating func siftUp(elementAtIndex index: Int) {
         let parent = parentIndex(of: index)
@@ -137,7 +123,6 @@ struct Heap<Element> {
         swapElement(at: index, with: parent)
         siftUp(elementAtIndex: parent)
     }
-
 
     mutating func siftDown(elementAtIndex index: Int) {
         let childIndex = highestPriorityIndex(for: index)

@@ -36,7 +36,7 @@ class Solution {
 
     func specialArray(_ nums: [Int]) -> Int {
         var cnt = [Int](repeating: 0, count: 1001)
-        nums.forEach { cnt[$0] += 1}
+        nums.forEach { cnt[$0] += 1 }
         var curCnt = 0
 
         for i in stride(from: 1000, through: 0, by: -1) {
@@ -45,5 +45,5 @@ class Solution {
         }
         return -1
     }
-    
+
 }

@@ -39,9 +39,8 @@ class FindSumPairs {
 
     private var nums1: [Int]
     private var nums2: [Int]
-    private var map1 =  [Int: Int]()
+    private var map1 = [Int: Int]()
     private var map2 = [Int: Int]()
-
 
     init(_ nums1: [Int], _ nums2: [Int]) {
         self.nums1 = nums1
@@ -50,20 +49,18 @@ class FindSumPairs {
         nums2.forEach { map2[$0, default: 0] += 1 }
     }
 
-    
     func add(_ index: Int, _ val: Int) {
         map2[nums2[index], default: 0] -= 1
-        nums2[index]  += val
-        map2[nums2[index], default: 0 ] += 1
+        nums2[index] += val
+        map2[nums2[index], default: 0] += 1
     }
 
-    
     func count(_ tot: Int) -> Int {
         var ans = 0
-        for (num,cnt) in map1 {
-            if let c =  map2[tot - num] { ans += cnt * c }
+        for (num, cnt) in map1 {
+            if let c = map2[tot - num] { ans += cnt * c }
         }
-        return  ans
+        return ans
     }
 }
 

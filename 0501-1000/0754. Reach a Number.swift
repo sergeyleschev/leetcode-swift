@@ -34,16 +34,16 @@ class Solution {
     // - Complexity:
     //   - time: O(sqrt(target)), where target is the given target.
     //   - space: O(1), only constant space is used.
-    
+
     func reachNumber(_ target: Int) -> Int {
         var target = abs(target)
         var step = 0
-        
+
         while target > 0 {
             step += 1
             target -= step
         }
-        
+
         return target % 2 == 0 ? step : step + (step % 2) + 1
     }
 

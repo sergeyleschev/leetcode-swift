@@ -20,5 +20,5 @@ class Solution {
     // sentence consists of lowercase English letters.
 
     func checkIfPangram(_ sentence: String) -> Bool { Set<Character>(sentence).count == 26 }
-    
+
 }

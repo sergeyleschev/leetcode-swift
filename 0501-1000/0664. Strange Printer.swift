@@ -25,7 +25,6 @@ class Solution {
     private var memo: [[Int]] = []
     private var chars: [Character] = []
 
-
     func strangePrinter(_ s: String) -> Int {
         guard s.count > 1 else { return s.count }
         chars = [Character](s)
@@ -33,7 +32,6 @@ class Solution {
         memo = [[Int]](repeating: [Int](repeating: 0, count: N), count: N)
         return dp(0, N - 1)
     }
-    
 
     private func dp(_ i: Int, _ j: Int) -> Int {
         guard i <= j else { return 0 }
@@ -42,7 +40,7 @@ class Solution {
         var k = i + 1
 
         while k <= j {
-            if chars[k] == chars[i] { ans = min(ans, dp(i, k - 1) + dp(k + 1,j)) }
+            if chars[k] == chars[i] { ans = min(ans, dp(i, k - 1) + dp(k + 1, j)) }
             k += 1
         }
 

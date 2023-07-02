@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -73,7 +71,6 @@ class Solution {
         var nums = [Int]()
         var last = -1
 
-
         func dfs1(_ root: TreeNode?) {
             guard let r = root else { return }
             if let left = r.left {
@@ -92,13 +89,12 @@ class Solution {
             dfs1(r.right)
         }
 
-        func dfs(_ root: TreeNode?, _ nums: inout [Int])  {
+        func dfs(_ root: TreeNode?, _ nums: inout [Int]) {
             guard let r = root else { return }
             dfs(r.left, &nums)
             nums.append(r.val)
             dfs(r.right, &nums)
         }
-
 
         for root in trees {
             if let left = root?.left {
@@ -133,5 +129,5 @@ class Solution {
         }
         return finalRoot
     }
-    
+
 }

@@ -21,11 +21,11 @@ class Solution {
     // Constraints:
     // 1 <= s.length <= 1000
     // s consists of lowercase English letters.
-    
+
     // - Complexity:
     //   - time: O(n), where n is the length of the s.
     //   - space: O(1), only constant space is used.
-    
+
     func smallestSubsequence(_ s: String) -> String {
         var stack = [Character]()
         var seen = Set<Character>()
@@ -37,9 +37,10 @@ class Solution {
         for (i, ch) in s.enumerated() {
             guard !seen.contains(ch) else { continue }
             while !stack.isEmpty,
-                  let last = stack.last,
-                  ch < last,
-                  lastOccurrence[last, default: 0] > i {
+                let last = stack.last,
+                ch < last,
+                lastOccurrence[last, default: 0] > i
+            {
                 seen.remove(last)
                 stack.removeLast()
             }
@@ -50,5 +51,5 @@ class Solution {
         for ch in stack { ans = "\(ans)\(ch)" }
         return ans
     }
-    
+
 }

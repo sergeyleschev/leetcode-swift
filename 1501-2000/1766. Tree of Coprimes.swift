@@ -34,9 +34,8 @@ class Solution {
     // 0 <= uj, vj < n
     // uj != vj
 
-    private typealias Pair = (level:Int,node:Int)
+    private typealias Pair = (level: Int, node: Int)
     private static var primerNumbers = [[Int]](repeating: [], count: 55)
-
 
     func getCoprimes(_ nums: [Int], _ edges: [[Int]]) -> [Int] {
         let n = nums.count
@@ -48,11 +47,12 @@ class Solution {
             tree[edge[1]].append(edge[0])
         }
 
-
         func dfs(_ node: Int, _ pre: Int, _ level: Int) {
             var res = -1
             var lev = -1
-            if Solution.primerNumbers[nums[node]].isEmpty { Solution.primerNumbers[nums[node]] = getPrimerNumbers(of: nums[node]) }
+            if Solution.primerNumbers[nums[node]].isEmpty {
+                Solution.primerNumbers[nums[node]] = getPrimerNumbers(of: nums[node])
+            }
             for idx in Solution.primerNumbers[nums[node]] where !stack[idx].isEmpty {
                 if let pair = stack[idx].last, pair.level > lev {
                     res = pair.node
@@ -70,14 +70,12 @@ class Solution {
         return ans
     }
 
-
     private func getPrimerNumbers(of num: Int) -> [Int] {
         var ans = [Int]()
         for another in 1...50 where gcd(num, another) == 1 { ans.append(another) }
         return ans
     }
 
-    
     private func gcd(_ a: Int, _ b: Int) -> Int { a % b == 0 ? b : gcd(b, a % b) }
 
 }

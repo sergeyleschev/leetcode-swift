@@ -28,15 +28,15 @@ class Solution {
 
     func integerReplacement(_ n: Int) -> Int {
         if n == 1 { return 0 }
-        
+
         if n % 2 == 0 {
-          return integerReplacement(n / 2) + 1
-      
+            return integerReplacement(n / 2) + 1
+
         } else {
-              let minV = integerReplacement(n - 1) + 1
-              let maxV = integerReplacement(n + 1) + 1
-        
-              return min(minV, maxV)
+            let minV = integerReplacement(n - 1) + 1
+            let maxV = integerReplacement(n + 1) + 1
+
+            return min(minV, maxV)
         }
     }
 

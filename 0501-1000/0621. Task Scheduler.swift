@@ -17,7 +17,7 @@ class Solution {
     // Example 1:
     // Input: tasks = ["A","A","A","B","B","B"], n = 2
     // Output: 8
-    // Explanation: 
+    // Explanation:
     // A -> B -> idle -> A -> B -> idle -> A -> B
     // There is at least 2 units of time between any two same tasks.
 
@@ -34,7 +34,7 @@ class Solution {
     // Example 3:
     // Input: tasks = ["A","A","A","A","A","A","B","C","D","E","F","G"], n = 2
     // Output: 16
-    // Explanation: 
+    // Explanation:
     // One possible solution is
     // A -> B -> C -> A -> D -> E -> A -> F -> G -> A -> idle -> idle -> A -> idle -> idle -> A
 
@@ -46,7 +46,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the tasks.
     //   - space: O(1), only constant space is used.
-    
+
     func leastInterval(_ tasks: [Character], _ n: Int) -> Int {
         guard !tasks.isEmpty else { return 0 }
         var counter = [Int](repeating: 0, count: 26)

@@ -1,25 +1,23 @@
-/**
- * // This is the interface that allows for creating nested lists.
- * // You should not implement it, or speculate about its implementation
- * class NestedInteger {
- *     // Return true if this NestedInteger holds a single integer, rather than a nested list.
- *     public func isInteger() -> Bool
- *
- *     // Return the single integer that this NestedInteger holds, if it holds a single integer
- *     // The result is undefined if this NestedInteger holds a nested list
- *     public func getInteger() -> Int
- *
- *     // Set this NestedInteger to hold a single integer.
- *     public func setInteger(value: Int)
- *
- *     // Set this NestedInteger to hold a nested list and adds a nested integer to it.
- *     public func add(elem: NestedInteger)
- *
- *     // Return the nested list that this NestedInteger holds, if it holds a nested list
- *     // The result is undefined if this NestedInteger holds a single integer
- *     public func getList() -> [NestedInteger]
- * }
- */
+/// // This is the interface that allows for creating nested lists.
+/// // You should not implement it, or speculate about its implementation
+/// class NestedInteger {
+///     // Return true if this NestedInteger holds a single integer, rather than a nested list.
+///     public func isInteger() -> Bool
+///
+///     // Return the single integer that this NestedInteger holds, if it holds a single integer
+///     // The result is undefined if this NestedInteger holds a nested list
+///     public func getInteger() -> Int
+///
+///     // Set this NestedInteger to hold a single integer.
+///     public func setInteger(value: Int)
+///
+///     // Set this NestedInteger to hold a nested list and adds a nested integer to it.
+///     public func add(elem: NestedInteger)
+///
+///     // Return the nested list that this NestedInteger holds, if it holds a nested list
+///     // The result is undefined if this NestedInteger holds a single integer
+///     public func getList() -> [NestedInteger]
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -53,7 +51,7 @@ class Solution {
         let nestedInteger = NestedInteger()
         var value: Int? = nil
         var symbol = 1
-        
+
         for char in s {
             let num = Int(String(char)) ?? -1
             if num >= 0 && num <= 9 {
@@ -76,13 +74,13 @@ class Solution {
                     let last = stack.removeLast()
                     if stack.isEmpty {
                         return last
-                    }else {
+                    } else {
                         stack.last?.add(last)
                     }
                 }
             }
         }
-        
+
         nestedInteger.setInteger((value ?? 0) * symbol)
         return nestedInteger
     }

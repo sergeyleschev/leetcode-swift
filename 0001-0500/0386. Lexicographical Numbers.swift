@@ -4,7 +4,7 @@ class Solution {
 
     // 386. Lexicographical Numbers
     // Given an integer n, return all the numbers in the range [1, n] sorted in lexicographical order.
-    // You must write an algorithm that runs in O(n) time and uses O(1) extra space. 
+    // You must write an algorithm that runs in O(n) time and uses O(1) extra space.
 
     // Example 1:
     // Input: n = 13
@@ -20,11 +20,10 @@ class Solution {
     func lexicalOrder(_ n: Int) -> [Int] {
         var ans = [Int]()
 
-
         func innerLexicalOrder(current: Int) {
             ans.append(current)
             for i in 0...9 {
-                let next =  current * 10 + i
+                let next = current * 10 + i
                 guard next <= n else { return }
                 innerLexicalOrder(current: next)
             }
@@ -33,5 +32,5 @@ class Solution {
         for i in 1...9 where i <= n { innerLexicalOrder(current: i) }
         return ans
     }
-    
- }
+
+}

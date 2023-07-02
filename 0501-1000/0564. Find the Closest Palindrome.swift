@@ -27,7 +27,7 @@ class Solution {
 
     func nearestPalindromic(_ n: String) -> String {
         let size = n.count
-        if size == 1 { return String(Int(n)!-1) }
+        if size == 1 { return String(Int(n)! - 1) }
 
         var candidates = getInitCandidates(size)
         var s = Array(n)
@@ -35,16 +35,16 @@ class Solution {
         let val = Int(n)!
         var minDiff = Int.max
 
-        var half = Int(String(s[0..<(size+1)/2]))!
-        for leftHalf in [half-1, half, half+1] {
+        var half = Int(String(s[0..<(size + 1) / 2]))!
+        for leftHalf in [half - 1, half, half + 1] {
             var temp = leftHalf
-            var even = leftHalf * 10 + temp%10
+            var even = leftHalf * 10 + temp % 10
             var odd = leftHalf
 
             temp /= 10
             while temp != 0 {
-                even = even*10 + temp%10
-                odd = odd*10 + temp%10
+                even = even * 10 + temp % 10
+                odd = odd * 10 + temp % 10
 
                 temp /= 10
             }
@@ -57,26 +57,25 @@ class Solution {
 
         for c in candidates {
             if c == val { continue }
-            let diff = abs(c-val)
+            let diff = abs(c - val)
             if diff < minDiff {
                 minDiff = diff
                 nearStr = String(c)
             }
         }
-        
+
         return nearStr
     }
-
 
     func getInitCandidates(_ n: Int) -> [Int] {
         var res = [Int]()
         let tempN = Int(pow(Double(10), Double(n)))
-        let tempN1 = Int(pow(Double(10), Double(n-1)))
+        let tempN1 = Int(pow(Double(10), Double(n - 1)))
 
-        res.append(tempN1-1)
-        res.append(tempN1+1)
-        res.append(tempN-1)
-        res.append(tempN+1)
+        res.append(tempN1 - 1)
+        res.append(tempN1 + 1)
+        res.append(tempN - 1)
+        res.append(tempN + 1)
         return res
     }
 

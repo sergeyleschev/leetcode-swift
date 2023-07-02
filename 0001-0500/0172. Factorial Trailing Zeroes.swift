@@ -26,13 +26,13 @@ class Solution {
     func trailingZeroes(_ n: Int) -> Int {
         var num = n
         var count = 0
-        
+
         while num > 0 {
             count += num / 5
             num /= 5
         }
-        
+
         return count
     }
-    
+
 }

@@ -26,7 +26,7 @@ class Solution {
         var dp = [Int: Int]()
         let mod = Int(pow(10.0, 9.0)) + 7
         let sortedA = A.sorted()
-        
+
         for (i, a) in sortedA.enumerated() {
             var num = 0
             for m in sortedA[0..<i] {
@@ -37,11 +37,13 @@ class Solution {
             }
             dp[a] = num + 1
         }
-        
-        return dp.reduce(0, { (res, arg1) -> Int in
-            let (_, v) = arg1
-            return v + res
-        }) % mod
+
+        return dp.reduce(
+            0,
+            { (res, arg1) -> Int in
+                let (_, v) = arg1
+                return v + res
+            }) % mod
     }
-    
+
 }

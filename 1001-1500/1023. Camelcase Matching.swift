@@ -9,7 +9,7 @@ class Solution {
     // Example 1:
     // Input: queries = ["FooBar","FooBarTest","FootBall","FrameBuffer","ForceFeedBack"], pattern = "FB"
     // Output: [true,false,true,true,false]
-    // Explanation: 
+    // Explanation:
     // "FooBar" can be generated like this "F" + "oo" + "B" + "ar".
     // "FootBall" can be generated like this "F" + "oot" + "B" + "all".
     // "FrameBuffer" can be generated like this "F" + "rame" + "B" + "uffer".
@@ -17,14 +17,14 @@ class Solution {
     // Example 2:
     // Input: queries = ["FooBar","FooBarTest","FootBall","FrameBuffer","ForceFeedBack"], pattern = "FoBa"
     // Output: [true,false,true,false,false]
-    // Explanation: 
+    // Explanation:
     // "FooBar" can be generated like this "Fo" + "o" + "Ba" + "r".
     // "FootBall" can be generated like this "Fo" + "ot" + "Ba" + "ll".
 
     // Example 3:
     // Input: queries = ["FooBar","FooBarTest","FootBall","FrameBuffer","ForceFeedBack"], pattern = "FoBaT"
     // Output: [false,true,false,false,false]
-    // Explanation: 
+    // Explanation:
     // "FooBarTest" can be generated like this "Fo" + "o" + "Ba" + "r" + "T" + "est".
 
     // Note:
@@ -33,29 +33,28 @@ class Solution {
     // 1 <= pattern.length <= 100
     // All strings consists only of lower and upper case English letters.
 
-    func isValidPattern(_ s: String,_ pattern: String) -> Bool {
+    func isValidPattern(_ s: String, _ pattern: String) -> Bool {
         var indexP = 0
         let arrP = Array(pattern)
-        
+
         for c in s {
-            if (c.isUppercase) {
-                if (indexP == pattern.count) { return false }
-                if (c != arrP[indexP]) { return false }
+            if c.isUppercase {
+                if indexP == pattern.count { return false }
+                if c != arrP[indexP] { return false }
                 indexP += 1
             } else {
                 if indexP < arrP.count {
-                    if (c == arrP[indexP]) { indexP += 1 }
+                    if c == arrP[indexP] { indexP += 1 }
                 }
             }
         }
         return indexP == pattern.count
     }
-    
 
     func camelMatch(_ queries: [String], _ pattern: String) -> [Bool] {
         var results = [Bool]()
         for s in queries { results.append(isValidPattern(s, pattern)) }
         return results
     }
-    
+
 }

@@ -1,6 +1,5 @@
 import CoreFoundation
 
-
 class Solution {
 
     // Solution by Sergey Leschev
@@ -67,7 +66,6 @@ class Solution {
         return ans
     }
 }
-
 
 extension CFBinaryHeap {
     static func getMinHeapOfTime() -> CFBinaryHeap {

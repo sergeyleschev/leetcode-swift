@@ -1,13 +1,11 @@
-/** 
- * Forward declaration of guess API.
- * @param  num -> your guess number
- * @return 	     -1 if the picked number is lower than your guess number
- *			      1 if the picked number is higher than your guess number
- *               otherwise return 0
- * func guess(_ num: Int) -> Int 
- */
+/// Forward declaration of guess API.
+/// @param  num -> your guess number
+/// @return 	     -1 if the picked number is lower than your guess number
+/// *			      1 if the picked number is higher than your guess number
+///               otherwise return 0
+/// func guess(_ num: Int) -> Int
 
-class Solution : GuessGame {
+class Solution: GuessGame {
 
     // Solution by Sergey Leschev
 
@@ -45,10 +43,10 @@ class Solution : GuessGame {
         guard n > 1 else { return 1 }
         var left = 1
         var right = n
-        
+
         while left <= right {
             let middle = (left + right) / 2
-            
+
             if guess(middle) == 0 {
                 return middle
             } else if guess(middle) == -1 {
@@ -57,8 +55,8 @@ class Solution : GuessGame {
                 left = middle + 1
             }
         }
-        
+
         return left
     }
-    
+
 }

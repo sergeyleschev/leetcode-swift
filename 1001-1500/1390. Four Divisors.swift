@@ -22,7 +22,6 @@ class Solution {
     func sumFourDivisors(_ nums: [Int]) -> Int {
         var ans = 0
 
-
         func fourDivisorsSum(of num: Int) -> Int? {
             var divisorsCount = 0
             var ans = 0

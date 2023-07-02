@@ -40,13 +40,13 @@ class Solution {
         s.map {
             r = ($0 == "R") ? r + 1 : r
             l = ($0 == "L") ? l + 1 : l
-            if (l==r) {
+            if l == r {
                 res = res + 1
                 r = 0
                 l = 0
             }
         }
-        
+
         return res
     }
 

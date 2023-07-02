@@ -35,7 +35,6 @@ class Solution {
         var visited = [Int](repeating: 0, count: nodesCount)
         var ans = 0
 
-
         func dfs(_ node: Int) -> Bool {
             if visited[node] == 0 {
                 visited[node] = 1

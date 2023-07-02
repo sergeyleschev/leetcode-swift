@@ -26,10 +26,10 @@ class Solution {
             var mid = low + (high - low) / 2
 
             if mid % 2 == 1 { mid -= 1 }
-            
+
             if nums[mid] == nums[mid + 1] { low += 2 } else { high = mid }
         }
-        
+
         return nums[low]
     }
 

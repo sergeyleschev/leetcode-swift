@@ -12,10 +12,9 @@ class Solution {
 
     // A Sudoku board (partially filled) could be valid but is not necessarily solvable.
     // Only the filled cells need to be validated according to the mentioned rules.
-     
 
     // Example 1:
-    // Input: board = 
+    // Input: board =
     // [["5","3",".",".","7",".",".",".","."]
     // ,["6",".",".","1","9","5",".",".","."]
     // ,[".","9","8",".",".",".",".","6","."]
@@ -28,7 +27,7 @@ class Solution {
     // Output: true
 
     // Example 2:
-    // Input: board = 
+    // Input: board =
     // [["8","3",".",".","7",".",".",".","."]
     // ,["6",".",".","1","9","5",".",".","."]
     // ,[".","9","8",".",".",".",".","6","."]
@@ -60,10 +59,12 @@ class Solution {
             if isInvalid(board.map({ $0[i] })) { return false }
             let col = (i % 3) * 3
             let row = (i / 3) * 3
-            let box = Array(board[row][col..<col + 3]) + Array(board[row + 1][col..<col + 3]) + Array(board[row + 2][col..<col + 3])
+            let box =
+                Array(board[row][col..<col + 3]) + Array(board[row + 1][col..<col + 3])
+                + Array(board[row + 2][col..<col + 3])
             if isInvalid(box) { return false }
         }
         return true
     }
-    
+
 }

@@ -13,7 +13,7 @@ class Solution {
     // Input: houses = [1,4,8,10,20], k = 3
     // Output: 5
     // Explanation: Allocate mailboxes in position 3, 9 and 20.
-    // Minimum total distance from each houses to nearest mailboxes is |3-1| + |4-3| + |9-8| + |10-9| + |20-20| = 5 
+    // Minimum total distance from each houses to nearest mailboxes is |3-1| + |4-3| + |9-8| + |10-9| + |20-20| = 5
 
     // Example 2:
     // Input: houses = [2,3,5,12,18], k = 2
@@ -50,10 +50,9 @@ class Solution {
     func minDistance(_ houses: [Int], _ k: Int) -> Int {
         var houses = houses.sorted()
         let n = houses.count
-        var costs = Array(repeating: Array(repeating: 0, count: n), count: n) // cost to put mailbox among houses[i...j], best way is put it at median of houses[i...j]
+        var costs = Array(repeating: Array(repeating: 0, count: n), count: n)  // cost to put mailbox among houses[i...j], best way is put it at median of houses[i...j]
         let maxDis = 100 * 10000
         var dp: [[Int?]] = Array(repeating: Array(repeating: nil, count: k + 1), count: n + 1)
-
 
         func check(_ index: Int, _ k: Int) -> Int {
             if k == 0, index == n { return 0 }
@@ -62,7 +61,7 @@ class Solution {
 
             var val = maxDis
             for i in index..<n {
-                let cost = costs[index][i] // if we put one mailbox between houses[index...i], remaining would be dp(i + 1, k - 1)
+                let cost = costs[index][i]  // if we put one mailbox between houses[index...i], remaining would be dp(i + 1, k - 1)
                 val = min(val, cost + check(i + 1, k - 1))
             }
             dp[index][k] = val

@@ -26,7 +26,7 @@ class Solution {
     // Example 3:
     // Input: nums = [11,13,15,17]
     // Output: 11
-    // Explanation: The original array was [11,13,15,17] and it was rotated 4 times. 
+    // Explanation: The original array was [11,13,15,17] and it was rotated 4 times.
 
     // Constraints:
     // n == nums.length
@@ -41,10 +41,10 @@ class Solution {
 
     func findMin(_ nums: [Int]) -> Int {
         guard nums.count > 1 else { return nums.count == 1 ? nums[0] : -1 }
-      
+
         var left = 0
         var right = nums.count - 1
-    
+
         let target = nums[right]
         while left + 1 < right {
             let mid = left + (right - left) / 2
@@ -54,7 +54,7 @@ class Solution {
                 right = mid
             }
         }
-      
+
         if nums[left] > nums[right] { return nums[right] }
         return nums[left]
     }

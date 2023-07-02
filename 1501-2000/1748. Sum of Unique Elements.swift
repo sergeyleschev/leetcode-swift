@@ -29,10 +29,10 @@ class Solution {
     func sumOfUnique(_ nums: [Int]) -> Int {
         var ans = 0
         var cnt = [Int](repeating: 0, count: 101)
-        
+
         for num in nums { cnt[num] += 1 }
         for idx in 0...100 where cnt[idx] == 1 { ans += idx }
         return ans
     }
-    
+
 }

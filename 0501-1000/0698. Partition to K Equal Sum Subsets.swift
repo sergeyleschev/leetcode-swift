@@ -18,11 +18,13 @@ class Solution {
     // 1 <= k <= nums.length <= 16
     // 1 <= nums[i] <= 10^4
     // The frequency of each element is in the range [1, 4].
-    
-    func helper(_ p: Int, _ k: Int, _ target: Int, _ sum: Int, _ nums: inout [Int], _ visited: inout [Bool]) -> Bool {
+
+    func helper(
+        _ p: Int, _ k: Int, _ target: Int, _ sum: Int, _ nums: inout [Int], _ visited: inout [Bool]
+    ) -> Bool {
         if k == 1 { return true }
         if sum == target { return helper(0, k - 1, target, 0, &nums, &visited) }
-        
+
         for i in p..<nums.count {
             if visited[i] { continue }
             if sum + nums[i] > target { break }
@@ -34,17 +36,16 @@ class Solution {
         return false
     }
 
-    
     func canPartitionKSubsets(_ nums: [Int], _ k: Int) -> Bool {
         guard !nums.isEmpty && nums.count >= k else { return false }
-        
+
         let sum = nums.reduce(0) { $0 + $1 }
         if sum % k > 0 { return false }
         let target = sum / k
-        
+
         var nums = nums.sorted()
         var visited = Array(repeating: false, count: nums.count)
         return helper(0, k, target, 0, &nums, &visited)
     }
-  
+
 }

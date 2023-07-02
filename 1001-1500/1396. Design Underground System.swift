@@ -54,7 +54,7 @@ class UndergroundSystem {
     // undergroundSystem.getAverageTime("Leyton", "Paradise"); // return 5.50000, (5 + 6) / 2 = 5.5
     // undergroundSystem.checkIn(2, "Leyton", 21);
     // undergroundSystem.checkOut(2, "Paradise", 30); // Customer 2 "Leyton" -> "Paradise" in 30-21 = 9
-    // undergroundSystem.getAverageTime("Leyton", "Paradise"); // return 6.66667, (5 + 6 + 9) / 3 = 6.66667 
+    // undergroundSystem.getAverageTime("Leyton", "Paradise"); // return 6.66667, (5 + 6 + 9) / 3 = 6.66667
 
     // Constraints:
     // 1 <= id, t <= 10^6
@@ -66,13 +66,11 @@ class UndergroundSystem {
     private var checkInData: [Int: (String, Int)]
     private var journeyData: [String: (Double, Double)]
 
-
     init() {
         checkInData = [Int: (String, Int)]()
         journeyData = [String: (Double, Double)]()
     }
 
-    
     // Checks in a passenger at the station.
     // - Parameters:
     //   - id: A passenger ID.
@@ -84,7 +82,6 @@ class UndergroundSystem {
     //   - space: O(1), only constant space is used.
 
     func checkIn(_ id: Int, _ stationName: String, _ t: Int) { checkInData[id] = (stationName, t) }
-    
 
     // Checks out passengers from the station.
     // - Parameters:
@@ -95,16 +92,15 @@ class UndergroundSystem {
     // - Complexity:
     //   - time: O(1), only constant time is used.
     //   - space: O(1), only constant space is used.
-    
+
     func checkOut(_ id: Int, _ stationName: String, _ t: Int) {
         guard let checkInDataForId = checkInData[id] else { return }
         let routeKey = stationsKey(checkInDataForId.0, stationName)
         let routeStats = journeyData[routeKey] ?? (0.0, 0.0)
-        
+
         journeyData[routeKey] = (routeStats.0 + Double(t - checkInDataForId.1), routeStats.1 + 1)
         checkInData[id] = nil
     }
-    
 
     // The average time for traveling from startStation to endStation that happened directly.
     // - Parameters:
@@ -115,16 +111,17 @@ class UndergroundSystem {
     // - Complexity:
     //   - time: O(1), only constant time is used.
     //   - space: O(1), only constant space is used.
-    
+
     func getAverageTime(_ startStation: String, _ endStation: String) -> Double {
         let routeKey = stationsKey(startStation, endStation)
         guard let data = journeyData[routeKey] else { return -1 }
         return data.0 / data.1
     }
-    
-    
-    private func stationsKey(_ startStation: String, _ endStation: String) -> String { "\(startStation) -> \(endStation)" }
-    
+
+    private func stationsKey(_ startStation: String, _ endStation: String) -> String {
+        "\(startStation) -> \(endStation)"
+    }
+
 }
 
 /**

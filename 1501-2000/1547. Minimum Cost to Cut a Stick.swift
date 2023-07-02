@@ -32,14 +32,12 @@ class Solution {
     var memo: [String: Int] = [:]
     var cuts: [Int] = []
 
-
     func minCost(_ n: Int, _ cuts: [Int]) -> Int {
         self.cuts = cuts
         return helper(0, n)
     }
 
-
-    func helper(_ l: Int, _ r: Int) ->Int {
+    func helper(_ l: Int, _ r: Int) -> Int {
         var res = Int.max
         let key = "\(l)-\(r)"
         if let val = memo[key] { return val }

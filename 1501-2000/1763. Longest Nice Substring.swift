@@ -33,12 +33,11 @@ class Solution {
     // s consists of uppercase and lowercase English letters.
 
     func longestNiceSubstring(_ s: String) -> String {
-        guard s.count > 1  else { return "" }
+        guard s.count > 1 else { return "" }
         let chars = [Character](s)
         let n = s.count
         let values = chars.map { $0.asciiValue! }
-        
-        
+
         func valid(_ length: Int) -> String {
             for idx in 0...(n - length) {
                 let tempValues = Set<UInt8>(values[idx..<(idx + length)]).sorted()
@@ -47,7 +46,7 @@ class Solution {
                 let half = m >> 1
                 var flag = true
                 for l in 0..<half {
-                    guard tempValues[l + half] - tempValues[l] == 32 else  {
+                    guard tempValues[l + half] - tempValues[l] == 32 else {
                         flag = false
                         break
                     }
@@ -56,7 +55,7 @@ class Solution {
             }
             return ""
         }
-        
+
         for length in stride(from: n, through: 2, by: -1) {
             let ans = valid(length)
             guard ans.isEmpty else { return ans }

@@ -11,7 +11,7 @@ class Solution {
     // Example 1:
     // Input: groupSizes = [3,3,3,3,3,1,3]
     // Output: [[5],[0,1,2],[3,4,6]]
-    // Explanation: 
+    // Explanation:
     // The first group is [5]. The size is 1, and groupSizes[5] = 1.
     // The second group is [0,1,2]. The size is 3, and groupSizes[0] = groupSizes[1] = groupSizes[2] = 3.
     // The third group is [3,4,6]. The size is 3, and groupSizes[3] = groupSizes[4] = groupSizes[6] = 3.
@@ -40,7 +40,7 @@ class Solution {
                 groups[number] = group
             }
         }
-        
+
         return answer
     }
 

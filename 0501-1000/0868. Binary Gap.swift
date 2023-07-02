@@ -43,8 +43,8 @@ class Solution {
         var ans = 0
         var N = N
         var index = 0
-        
-        while  N > 0 {
+
+        while N > 0 {
             index += 1
             if N & 1 > 0 {
                 if last >= 0 { ans = max(ans, index - last) }
@@ -52,8 +52,8 @@ class Solution {
             }
             N = N >> 1
         }
-        
+
         return ans
     }
-    
+
 }

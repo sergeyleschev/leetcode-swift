@@ -23,11 +23,11 @@ class Solution {
 
     func minCostClimbingStairs(_ cost: [Int]) -> Int {
         guard cost.count > 1 else { return cost.last ?? 0 }
-        
+
         var dp = [cost[0], cost[1]]
         for i in 2..<cost.count { dp.append(min(dp[i - 1], dp[i - 2]) + cost[i]) }
-        
+
         return min(dp[dp.count - 1], dp[dp.count - 2])
     }
-    
+
 }

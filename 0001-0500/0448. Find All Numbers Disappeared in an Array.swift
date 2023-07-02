@@ -24,17 +24,17 @@ class Solution {
         guard nums.count > 0 else { return [] }
         var nums = nums
         var output = [Int]()
-        
+
         for i in 0..<nums.count {
             let n = abs(nums[i])
-            if nums[n-1] > 0 { nums[n - 1] *= -1  }
+            if nums[n - 1] > 0 { nums[n - 1] *= -1 }
         }
-        
+
         for i in 0..<nums.count {
             if nums[i] > 0 { output.append(i + 1) }
         }
-        
+
         return output
     }
-    
+
 }

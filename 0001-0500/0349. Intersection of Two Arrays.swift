@@ -27,7 +27,7 @@ class Solution {
     // - Complexity:
     //   - time: O(max(n, m)), where n is the length of the nums1, and m is the length of the nums2.
     //   - space: O(max(n, m)), where n is the length of the nums1, and m is the length of the nums2.
-    
+
     func intersection(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
         var buf = Set<Int>()
         var ans = Set<Int>()

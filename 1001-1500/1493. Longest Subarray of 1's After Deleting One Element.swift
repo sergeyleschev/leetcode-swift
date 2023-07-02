@@ -41,14 +41,16 @@ class Solution {
 
         for num in nums {
             if num == 0 {
-                if count >= 1 && record[count] == record[count - 1] && record[count] == 0 { } 
-                else {
+                if count >= 1 && record[count] == record[count - 1] && record[count] == 0 {
+                } else {
                     record.append(0)
                     count += 1
                 }
             } else {
                 record[count] += 1
-                if count > 0 && record[count] + record[count - 1] > result { result = record[count] + record[count - 1] }
+                if count > 0 && record[count] + record[count - 1] > result {
+                    result = record[count] + record[count - 1]
+                }
             }
         }
 
@@ -56,7 +58,7 @@ class Solution {
             result = record[0]
             if count == 0 { result -= 1 }
         }
-        
+
         return result
     }
 

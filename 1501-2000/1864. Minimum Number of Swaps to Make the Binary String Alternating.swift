@@ -29,7 +29,7 @@ class Solution {
     func minSwaps(_ s: String) -> Int {
         var oneCnt = 0
         var zeroCnt = 0
-        
+
         for ch in s {
             if ch == "1" {
                 oneCnt += 1
@@ -49,14 +49,13 @@ class Solution {
         }
     }
 
-
     private func helper(_ s: String, _ char: Character) -> Int {
         var swaps = 0
         var targetChar = char
-        
+
         for ch in s {
             if ch != targetChar { swaps += 1 }
-            targetChar =  targetChar == "0" ? "1" : "0"
+            targetChar = targetChar == "0" ? "1" : "0"
         }
         return swaps >> 1
     }

@@ -36,7 +36,6 @@ class Solution {
         var curState = [Bool](repeating: false, count: 10)
         let N = s.count
 
-        
         func getMaxLength(_ curState: [Bool], _ curIndex: Int) -> Int {
             var ans = 1
             if let index = state[curState] { ans = max(ans, curIndex - index) }
@@ -52,7 +51,7 @@ class Solution {
 
         state[curState] = -1
         for i in 0..<N {
-            curState[sToIntNumbers[i] ] = !curState[sToIntNumbers[i]]
+            curState[sToIntNumbers[i]] = !curState[sToIntNumbers[i]]
             ans = max(getMaxLength(curState, i), ans)
             if nil == state[curState] { state[curState] = i }
         }

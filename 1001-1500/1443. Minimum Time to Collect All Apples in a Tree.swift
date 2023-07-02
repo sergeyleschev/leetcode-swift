@@ -8,13 +8,13 @@ class Solution {
 
     // Example 1:
     // Input: n = 7, edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]], hasApple = [false,false,true,false,true,true,false]
-    // Output: 8 
-    // Explanation: The figure above represents the given tree where red vertices have an apple. One optimal path to collect all apples is shown by the green arrows.  
+    // Output: 8
+    // Explanation: The figure above represents the given tree where red vertices have an apple. One optimal path to collect all apples is shown by the green arrows.
 
     // Example 2:
     // Input: n = 7, edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]], hasApple = [false,false,true,false,false,true,false]
     // Output: 6
-    // Explanation: The figure above represents the given tree where red vertices have an apple. One optimal path to collect all apples is shown by the green arrows.  
+    // Explanation: The figure above represents the given tree where red vertices have an apple. One optimal path to collect all apples is shown by the green arrows.
 
     // Example 3:
     // Input: n = 7, edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]], hasApple = [false,false,false,false,false,false,false]
@@ -30,14 +30,13 @@ class Solution {
 
     func minTime(_ n: Int, _ edges: [[Int]], _ hasApple: [Bool]) -> Int {
         guard n > 1 && hasApple.contains(true) else { return 0 }
-        var tree = [Int:[Int]]()
+        var tree = [Int: [Int]]()
         var visited = [Bool](repeating: false, count: n)
         var visitedEdges = Set<Int>()
 
-
         func update(_ path: [Int]) {
             guard path.count > 1 else { return }
-            
+
             for idx in stride(from: path.count - 1, through: 1, by: -1) {
                 let from = min(path[idx], path[idx - 1])
                 let to = max(path[idx], path[idx - 1])
@@ -47,24 +46,22 @@ class Solution {
             }
         }
 
-
         func dfs(_ node: Int, _ curPath: [Int]) {
             guard !visited[node] else { return }
             visited[node] = true
             let newPath = curPath + [node]
             if hasApple[node] { update(newPath) }
             guard let children = tree[node] else { return }
-            
+
             for ch in children {
                 guard !visited[ch] else { continue }
                 dfs(ch, newPath)
             }
         }
 
-
         for edge in edges {
             tree[edge[0], default: []].append(edge[1])
-            tree[edge[1],default: []].append(edge[0])
+            tree[edge[1], default: []].append(edge[0])
         }
 
         dfs(0, [])

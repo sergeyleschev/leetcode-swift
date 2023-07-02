@@ -12,19 +12,18 @@ class Solution {
     // Example 2:
     // Input: root = [1,0,48,null,null,12,49]
     // Output: 1
-     
+
     // Constraints:
     // The number of nodes in the tree is in the range [2, 100].
     // 0 <= Node.val <= 10^5
 
-    // - Complexity: 
+    // - Complexity:
     //   - Time: O(n), n is the number of nodes in the tree. It takes O(n) to complete inorder, Then, takes O(n) to computer minimum differences.
     //   - Space: O(n), n is the number of nodes in the tree. It stores values in every node.
 
     func minDiffInBST(_ root: TreeNode?) -> Int {
         var list = [Int]()
         var minDiff = Int.max
-
 
         func inorder(_ root: TreeNode?) {
             guard let root = root else { return }

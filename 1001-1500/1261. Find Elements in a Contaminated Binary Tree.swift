@@ -28,7 +28,7 @@ class FindElements {
     // Implement the FindElements class:
     // FindElements(TreeNode* root) Initializes the object with a contaminated binary tree and recovers it.
     // bool find(int target) Returns true if the target value exists in the recovered binary tree.
-     
+
     // Example 1:
     // Input
     // ["FindElements","find","find"]
@@ -36,9 +36,9 @@ class FindElements {
     // Output
     // [null,false,true]
     // Explanation
-    // FindElements findElements = new FindElements([-1,null,-1]); 
-    // findElements.find(1); // return False 
-    // findElements.find(2); // return True 
+    // FindElements findElements = new FindElements([-1,null,-1]);
+    // findElements.find(1); // return False
+    // findElements.find(2); // return True
 
     // Example 2:
     // Input
@@ -64,28 +64,26 @@ class FindElements {
     // findElements.find(3); // return False
     // findElements.find(4); // return False
     // findElements.find(5); // return True
-     
+
     // Constraints:
     // TreeNode.val == -1
     // The height of the binary tree is less than or equal to 20
     // The total number of nodes is between [1, 10^4]
     // Total calls of find() is between [1, 10^4]
     // 0 <= target <= 10^6
-    
+
     var root: TreeNode?
-    
-    
+
     init(_ root: TreeNode?) {
         root?.val = 0
         recover(root)
         self.root = root
     }
-    
-    
+
     func find(_ target: Int) -> Bool {
         var target = target
         var path = [Int]()
-        
+
         while target > 0 {
             if target % 2 == 0 {
                 target = (target - 2) / 2
@@ -95,19 +93,18 @@ class FindElements {
                 path.insert(0, at: 0)
             }
         }
-        
+
         var node = root
         for p in path { node = p == 0 ? node?.left : node?.right }
         return node != nil
     }
-    
-    
+
     private func recover(_ node: TreeNode?) {
         guard let node = node else { return }
 
         node.left?.val = 2 * node.val + 1
         node.right?.val = 2 * node.val + 2
-        
+
         recover(node.left)
         recover(node.right)
     }

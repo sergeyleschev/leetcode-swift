@@ -33,7 +33,7 @@ class Solution {
     // Input: n = 7
     // Output: false
     // Explanation: Alice can't win the game if Bob plays optimally.
-    // If Alice starts removing 4 stones, Bob will remove 1 stone then Alice should remove only 1 stone and finally Bob removes the last one (7 -> 3 -> 2 -> 1 -> 0). 
+    // If Alice starts removing 4 stones, Bob will remove 1 stone then Alice should remove only 1 stone and finally Bob removes the last one (7 -> 3 -> 2 -> 1 -> 0).
     // If Alice starts removing 1 stone, Bob will remove 4 stones then Alice only can remove 1 stone and finally Bob removes the last one (7 -> 6 -> 2 -> 1 -> 0).
 
     // Example 5:
@@ -47,7 +47,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n sqrt(n)), where n is the given number of stones.
     //   - space: O(n), where n is the given number of stones.
-    
+
     func winnerSquareGame(_ n: Int) -> Bool {
         var dp = [Bool](repeating: false, count: n + 1)
 

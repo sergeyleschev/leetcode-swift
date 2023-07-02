@@ -29,12 +29,11 @@ class Solution {
         let num = jobs.count
         let jobArr = jobs.sorted(by: >)
 
-
         func helper(_ i: Int, _ arr: inout [Int], _ mid: Int) -> Bool {
             if i == num { return true }
             let job = jobArr[i]
             for j in 0..<k {
-                if (arr[j] + job <= mid) {
+                if arr[j] + job <= mid {
                     arr[j] += job
                     if helper(i + 1, &arr, mid) { return true }
                     arr[j] -= job
@@ -43,13 +42,14 @@ class Solution {
             }
             return false
         }
-        
+
         func check(_ mid: Int) -> Bool {
-            var arr = Array.init(repeating:0, count: k)
+            var arr = Array.init(repeating: 0, count: k)
             return helper(0, &arr, mid)
         }
-        
-        var left = jobArr[0], right = jobArr.reduce(0) { x, y in x + y }
+
+        var left = jobArr[0]
+        var right = jobArr.reduce(0) { x, y in x + y }
         while left < right {
             let mid = (left + right) >> 1
             if check(mid) {

@@ -37,7 +37,7 @@ class Solution {
                 ans += i - lastLargeThanRNumIndex
             }
         }
-        
+
         return ans
     }
 

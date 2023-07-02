@@ -5,7 +5,7 @@ class Solution {
     // 916. Word Subsets
     // We are given two arrays words1 and words2 of words.  Each word is a string of lowercase letters.
     // Now, say that word b is a subset of word a if every letter in b occurs in a, including multiplicity.  For example, "wrr" is a subset of "warrior", but is not a subset of "world".
-    // Now say a word a from words1 is universal if for every b in words2, b is a subset of a. 
+    // Now say a word a from words1 is universal if for every b in words2, b is a subset of a.
     // Return a list of all universal words in words1.  You can return the words in any order.
 
     // Example 1:
@@ -35,7 +35,7 @@ class Solution {
     // All words in words1[i] are unique: there isn't i != j with words1[i] == words1[j].
 
     // Solution: build memoB for recording char accurs in B iteratively check each a to see if a char array cover memoB.
-    
+
     // - Complexity:
     //   - time: O(B.count + A.count)
     //   - space: O(1), only constant space is used.
@@ -58,7 +58,10 @@ class Solution {
             for c in a { temp[Int(c.asciiValue! - asciiA)] += 1 }
 
             isUniversal = true
-            for i in 0..<26 where temp[i] < memoB[i] { isUniversal = false; break }
+            for i in 0..<26 where temp[i] < memoB[i] {
+                isUniversal = false
+                break
+            }
 
             if isUniversal { res.append(a) }
         }

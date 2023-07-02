@@ -23,7 +23,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of A.
     //   - space: O(n), where n is the length of A.
-    
+
     func sortArrayByParity(_ A: [Int]) -> [Int] {
         var ans = A
         var i = 0

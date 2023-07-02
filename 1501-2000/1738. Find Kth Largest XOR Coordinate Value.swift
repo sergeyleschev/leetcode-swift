@@ -45,9 +45,11 @@ class Solution {
         var res = [Int]()
         var preXOR = [[Int]](repeating: [Int](repeating: 0, count: n + 1), count: m + 1)
 
-        for i in 1 ... m {
-            for j in 1 ... n {
-                preXOR[i][j] = preXOR[i - 1][j] ^ preXOR[i][j - 1] ^ preXOR[i - 1][j - 1] ^ matrix[i - 1][j - 1]
+        for i in 1...m {
+            for j in 1...n {
+                preXOR[i][j] =
+                    preXOR[i - 1][j] ^ preXOR[i][j - 1] ^ preXOR[i - 1][j - 1]
+                    ^ matrix[i - 1][j - 1]
                 res.append(preXOR[i][j])
             }
         }

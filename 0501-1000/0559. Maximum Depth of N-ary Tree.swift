@@ -1,14 +1,12 @@
-/**
- * Definition for a Node.
- * public class Node {
- *     public var val: Int
- *     public var children: [Node]
- *     public init(_ val: Int) {
- *         self.val = val
- *         self.children = []
- *     }
- * }
- */
+/// Definition for a Node.
+/// public class Node {
+///     public var val: Int
+///     public var children: [Node]
+///     public init(_ val: Int) {
+///         self.val = val
+///         self.children = []
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -33,16 +31,15 @@ class Solution {
     private class NodeDepth {
         let node: Node
         let depth: Int
-        
 
         init(_ node: Node, _ depth: Int) {
-            self.node = node; self.depth = depth
+            self.node = node
+            self.depth = depth
         }
     }
 
-
     func maxDepth(_ root: Node?) -> Int {
-        guard let root = root else {return 0}
+        guard let root = root else { return 0 }
         let rootND = NodeDepth(root, 1)
         var output: Int = 1
         var stack = [NodeDepth]()
@@ -53,11 +50,11 @@ class Solution {
             let node = current.node
             let depth = current.depth
             let children = node.children
-            
+
             output = max(output, depth)
             if children.count > 0 {
                 for child in children {
-                    let nd = NodeDepth (child, depth + 1)
+                    let nd = NodeDepth(child, depth + 1)
                     stack.append(nd)
                 }
             }

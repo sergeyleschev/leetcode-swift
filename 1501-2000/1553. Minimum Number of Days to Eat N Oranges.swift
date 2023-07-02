@@ -15,9 +15,9 @@ class Solution {
     // Input: n = 10
     // Output: 4
     // Explanation: You have 10 oranges.
-    // Day 1: Eat 1 orange,  10 - 1 = 9.  
+    // Day 1: Eat 1 orange,  10 - 1 = 9.
     // Day 2: Eat 6 oranges, 9 - 2*(9/3) = 9 - 6 = 3. (Since 9 is divisible by 3)
-    // Day 3: Eat 2 oranges, 3 - 2*(3/3) = 3 - 2 = 1. 
+    // Day 3: Eat 2 oranges, 3 - 2*(3/3) = 3 - 2 = 1.
     // Day 4: Eat the last orange  1 - 1  = 0.
     // You need at least 4 days to eat the 10 oranges.
 
@@ -40,7 +40,7 @@ class Solution {
 
     // Constraints:
     // 1 <= n <= 2*10^9
-    
+
     func minDays(_ n: Int) -> Int {
         guard n > 2 else { return n }
         var visited = Set<Int>()
@@ -49,12 +49,12 @@ class Solution {
 
         visited.insert(n)
         queue.append(n)
-        
+
         while !queue.isEmpty {
             depth += 1
             var nextLevel = [Int]()
-            
-            for r in queue {    
+
+            for r in queue {
                 if r % 3 == 0 {
                     let nextRemain = r / 3
                     guard nextRemain > 2 else { return depth + nextRemain }
@@ -82,7 +82,7 @@ class Solution {
             }
             queue = nextLevel.sorted()
         }
-        
+
         return -1
     }
 

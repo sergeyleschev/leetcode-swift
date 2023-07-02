@@ -1,13 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init() { self.val = 0; self.next = nil; }
- *     public init(_ val: Int) { self.val = val; self.next = nil; }
- *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init() { self.val = 0; self.next = nil; }
+///     public init(_ val: Int) { self.val = val; self.next = nil; }
+///     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -18,19 +16,19 @@ class Solution {
     // Return the number of connected components in nums, where two values are connected if they appear consecutively in the linked list.
 
     // Example 1:
-    // Input: 
+    // Input:
     // head: 0->1->2->3
     // nums = [0, 1, 3]
     // Output: 2
-    // Explanation: 
+    // Explanation:
     // 0 and 1 are connected, so [0, 1] and [3] are the two connected components.
 
     // Example 2:
-    // Input: 
+    // Input:
     // head: 0->1->2->3->4
     // nums = [0, 3, 1, 4]
     // Output: 2
-    // Explanation: 
+    // Explanation:
     // 0 and 1 are connected, 3 and 4 are connected, so [0, 1] and [3, 4] are the two connected components.
 
     // Note:
@@ -44,7 +42,7 @@ class Solution {
         var g = Set(G)
         var ans = 0
         var flag = false
-        
+
         while let node = pre {
             if !g.contains(node.val) {
                 ans += flag ? 1 : 0
@@ -58,5 +56,5 @@ class Solution {
 
         return flag ? ans + 1 : ans
     }
-    
+
 }

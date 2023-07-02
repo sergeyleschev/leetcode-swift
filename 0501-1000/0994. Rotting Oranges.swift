@@ -11,7 +11,7 @@ class Solution {
     // Return the minimum number of minutes that must elapse until no cell has a fresh orange. If this is impossible, return -1.
 
     // Finds the minimum number of minutes that must elapse until no cell has a fresh orange in a grid.
-    
+
     // - Parameter grid: The grid.
     // - Returns: The minimum number of minutes. Or -1 if this is impossible.
 
@@ -38,7 +38,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n * m), where n is the number of rows in the grid, and m is the number of columns in the grid.
     //   - space: O(n * m), where n is the number of rows in the grid, and m is the number of columns in the grid.
-    
+
     func orangesRotting(_ grid: [[Int]]) -> Int {
         var grid = grid
         let directions: [(row: Int, col: Int)] = [(-1, 0), (0, 1), (1, 0), (0, -1)]
@@ -59,7 +59,9 @@ class Solution {
                 for direction in directions {
                     let row = rotten.row + direction.row
                     let col = rotten.col + direction.col
-                    if row >= 0, row < grid.count, col >= 0, col < grid[row].count, grid[row][col] == 1 {
+                    if row >= 0, row < grid.count, col >= 0, col < grid[row].count,
+                        grid[row][col] == 1
+                    {
                         grid[row][col] = 2
                         ans += counted ? 0 : 1
                         counted = true

@@ -39,7 +39,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of `nums`.
     //   - space: O(n), where n is the length of `nums`.
-    
+
     func findMaximumXOR(_ nums: [Int]) -> Int {
         guard let maxNum = nums.max() else { return 0 }
         let L = String(maxNum, radix: 2).count
@@ -87,13 +87,11 @@ class Solution {
 
 }
 
-
 final class TrieNode {
     var children: [Character: TrieNode]
-
 
     init() {
         children = [Character: TrieNode]()
     }
-    
+
 }

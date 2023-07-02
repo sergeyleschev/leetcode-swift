@@ -1,13 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init() { self.val = 0; self.next = nil; }
- *     public init(_ val: Int) { self.val = val; self.next = nil; }
- *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init() { self.val = 0; self.next = nil; }
+///     public init(_ val: Int) { self.val = val; self.next = nil; }
+///     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -15,7 +13,7 @@ class Solution {
     // 1669. Merge In Between Linked Lists
     // You are given two linked lists: list1 and list2 of sizes n and m respectively.
     // Remove list1's nodes from the ath node to the bth node, and put list2 in their place.
-    // The blue edges and nodes in the following figure incidate the result:
+    // The blue edges and nodes in the following figure indicate the result:
     // Build the result list and return its head.
 
     // Example 1:
@@ -40,7 +38,7 @@ class Solution {
         var bNodeNext: ListNode? = nil
         let list1Head: ListNode? = ListNode()
         var temp = list1Head
-        
+
         list1Head?.next = list1
 
         while let n = node, cnt <= b {

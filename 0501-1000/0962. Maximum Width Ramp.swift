@@ -9,13 +9,13 @@ class Solution {
     // Example 1:
     // Input: nums = [6,0,8,2,1,5]
     // Output: 4
-    // Explanation: 
+    // Explanation:
     // The maximum width ramp is achieved at (i, j) = (1, 5): nums[1] = 0 and nums[5] = 5.
 
     // Example 2:
     // Input: nums = [9,8,1,0,1,9,4,0,4,1]
     // Output: 7
-    // Explanation: 
+    // Explanation:
     // The maximum width ramp is achieved at (i, j) = (2, 9): nums[2] = 1 and nums[9] = 1.
 
     // Note:
@@ -35,7 +35,7 @@ class Solution {
         for j in A.indices.reversed() {
             while !mono.isEmpty, A[mono.last!] <= A[j] {
                 ans = max(ans, j - mono.last!)
-                mono.removeLast() // we have obtained the best result whose lower end is at mono.last
+                mono.removeLast()  // we have obtained the best result whose lower end is at mono.last
             }
         }
 

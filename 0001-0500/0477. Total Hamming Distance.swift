@@ -24,7 +24,7 @@ class Solution {
 
     func totalHammingDistance(_ nums: [Int]) -> Int {
         var ans = 0
-        
+
         for i in 0..<32 {
             var count = 0
             for num in nums {
@@ -32,8 +32,8 @@ class Solution {
             }
             ans += (nums.count - count) * count
         }
-        
+
         return ans
     }
-    
+
 }

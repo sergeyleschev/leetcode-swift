@@ -37,24 +37,27 @@ class Solution {
 
         return helper(maxChoosableInteger, desiredTotal, 0, &memo)
     }
-    
-    
-    private func helper(_ maxChoosableInteger: Int, _ desiredTotal: Int, _ used: Int, _ memo: inout [Int: Bool]) -> Bool {
+
+    private func helper(
+        _ maxChoosableInteger: Int, _ desiredTotal: Int, _ used: Int, _ memo: inout [Int: Bool]
+    ) -> Bool {
         if let canWin = memo[used] { return canWin }
-        
+
         for i in 0..<maxChoosableInteger {
             let current = 1 << i
             if current & used == 0 {
-                if desiredTotal <= i + 1 || !helper(maxChoosableInteger, desiredTotal - i - 1, current | used, &memo) {
+                if desiredTotal <= i + 1
+                    || !helper(maxChoosableInteger, desiredTotal - i - 1, current | used, &memo)
+                {
                     memo[used] = true
                     return true
                 }
             }
-            
+
         }
-        
+
         memo[used] = false
         return false
     }
-    
+
 }

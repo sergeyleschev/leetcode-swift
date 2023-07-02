@@ -12,17 +12,17 @@ class Solution {
     // Input: s = "QWER"
     // Output: 0
     // Explanation: s is already balanced.
-    
+
     // Example 2:
     // Input: s = "QQWE"
     // Output: 1
     // Explanation: We need to replace a 'Q' to 'R', so that "RQWE" (or "QRWE") is balanced.
-    
+
     // Example 3:
     // Input: s = "QQQW"
     // Output: 2
-    // Explanation: We can replace the first "QQ" to "ER". 
-    
+    // Explanation: We can replace the first "QQ" to "ER".
+
     // Example 4:
     // Input: s = "QQQQ"
     // Output: 3
@@ -38,9 +38,10 @@ class Solution {
         var arr: [Character: Int] = [:]
         var element: [Character: Int] = [:]
         let s = [Character](s)
-        var l = 0, r = 0
+        var l = 0
+        var r = 0
         var count = s.count
-        
+
         for c in s { if arr[c] == nil { arr[c] = 1 } else { arr[c]! += 1 } }
 
         for key in arr.keys {
@@ -53,15 +54,17 @@ class Solution {
         while l <= r, r < s.count {
             if element[s[r]] != nil { element[s[r]]! -= 1 }
             let res = element.values.reduce(0) { (res, val) -> Int in res + max(val, 0) }
-            
+
             if res == 0 {
                 count = min(count, r - l + 1)
                 if element[s[l]] != nil { element[s[l]]! += 1 }
                 if element[s[r]] != nil { element[s[r]]! += 1 }
                 l += 1
-            } else { r += 1 }
+            } else {
+                r += 1
+            }
         }
-        
+
         return count
     }
 

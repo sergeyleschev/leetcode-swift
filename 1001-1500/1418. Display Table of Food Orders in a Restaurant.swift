@@ -9,7 +9,7 @@ class Solution {
 
     // Example 1:
     // Input: orders = [["David","3","Ceviche"],["Corina","10","Beef Burrito"],["David","3","Fried Chicken"],["Carla","5","Water"],["Carla","5","Ceviche"],["Rous","3","Ceviche"]]
-    // Output: [["Table","Beef Burrito","Ceviche","Fried Chicken","Water"],["3","0","2","1","0"],["5","0","1","0","1"],["10","1","0","0","0"]] 
+    // Output: [["Table","Beef Burrito","Ceviche","Fried Chicken","Water"],["3","0","2","1","0"],["5","0","1","0","1"],["10","1","0","0","0"]]
     // Explanation:
     // The displaying table looks like:
     // Table,Beef Burrito,Ceviche,Fried Chicken,Water
@@ -18,12 +18,12 @@ class Solution {
     // 10   ,1           ,0      ,0            ,0
     // For the table 3: David orders "Ceviche" and "Fried Chicken", and Rous orders "Ceviche".
     // For the table 5: Carla orders "Water" and "Ceviche".
-    // For the table 10: Corina orders "Beef Burrito". 
+    // For the table 10: Corina orders "Beef Burrito".
 
     // Example 2:
     // Input: orders = [["James","12","Fried Chicken"],["Ratesh","12","Fried Chicken"],["Amadeus","12","Fried Chicken"],["Adam","1","Canadian Waffles"],["Brianna","1","Canadian Waffles"]]
-    // Output: [["Table","Canadian Waffles","Fried Chicken"],["1","2","0"],["12","0","3"]] 
-    // Explanation: 
+    // Output: [["Table","Canadian Waffles","Fried Chicken"],["1","2","0"],["12","0","3"]]
+    // Explanation:
     // For the table 1: Adam and Brianna order "Canadian Waffles".
     // For the table 12: James, Ratesh and Amadeus order "Fried Chicken".
 
@@ -45,8 +45,8 @@ class Solution {
         var validTables = Set<Int>()
 
         for order in orders { foodNames.insert(order[2]) }
-        
-        let sortedFoodNames  = foodNames.sorted()
+
+        let sortedFoodNames = foodNames.sorted()
         tableHead.append(contentsOf: sortedFoodNames)
         for i in 0..<tableHead.count { mapFoodAndIndex[tableHead[i]] = i }
 

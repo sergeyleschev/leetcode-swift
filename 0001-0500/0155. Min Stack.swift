@@ -10,7 +10,7 @@ class MinStack {
     // void pop() removes the element on the top of the stack.
     // int top() gets the top element of the stack.
     // int getMin() retrieves the minimum element in the stack.
-     
+
     // Example 1:
     // Input
     // ["MinStack","push","push","push","getMin","pop","top","getMin"]
@@ -26,7 +26,7 @@ class MinStack {
     // minStack.pop();
     // minStack.top();    // return 0
     // minStack.getMin(); // return -2
-     
+
     // Constraints:
     // -2^31 <= val <= 2^31 - 1
     // Methods pop, top and getMin operations will always be called on non-empty stacks.
@@ -34,11 +34,10 @@ class MinStack {
 
     private var stack: [Node]
 
-    
     init() {
         stack = [Node]()
     }
-    
+
     // Push element x onto stack.
     // - Parameter x: The element.
 
@@ -49,10 +48,10 @@ class MinStack {
     func push(_ x: Int) {
         let prevMin = stack.last?.min ?? Int.max
         let node = Node(value: x, min: min(prevMin, x))
-        
+
         stack.append(node)
     }
-    
+
     // Removes the element on top of the stack.
 
     // - Complexity:
@@ -61,10 +60,10 @@ class MinStack {
 
     func pop() {
         guard !stack.isEmpty else { return }
-        
+
         stack.removeLast()
     }
-    
+
     // Get the top element.
     // - Returns: The top element.
 
@@ -75,7 +74,7 @@ class MinStack {
     func top() -> Int {
         stack.last?.value ?? -1
     }
-    
+
     // Retrieve the minimum element in the stack.
     // - Returns: The minimum element.
 

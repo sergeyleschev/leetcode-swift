@@ -38,11 +38,12 @@ class Solution {
         let dirs: [[Int]] = [[1, 0], [0, 1]]
         var edges: [[Int]] = []
         var ans = 0
-        
+
         for i in 0..<row {
             for j in 0..<column {
                 for dir in dirs {
-                    let x = i + dir[0], y = j + dir[1]
+                    let x = i + dir[0]
+                    let y = j + dir[1]
                     if 0 <= x && x < row && 0 <= y && y < column {
                         edges.append([i * column + j, x * column + y, max(grid[i][j], grid[x][y])])
                     }
@@ -62,23 +63,19 @@ class Solution {
 
         return ans
     }
-    
-    
+
     private class Union {
         private var union: [Int] = []
-        
 
         init(_ n: Int) {
             for i in 0..<n { union.append(i) }
         }
-        
-        
+
         func find(_ i: Int) -> Int {
             if union[i] != i { union[i] = find(union[i]) }
             return union[i]
         }
-        
-        
+
         func unit(_ i1: Int, _ i2: Int) {
             if find(i1) != find(i2) { union[find(i1)] = find(i2) }
         }

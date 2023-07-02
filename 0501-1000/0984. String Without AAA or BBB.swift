@@ -46,5 +46,5 @@ class Solution {
         }
         return result.reduce("") { $0 + $1 }
     }
-    
+
 }

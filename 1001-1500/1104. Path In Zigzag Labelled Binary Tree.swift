@@ -42,7 +42,7 @@ class Solution {
                 output.insert(label, at: 0)
             } else {
                 let powValue = Int(pow(2, powNum))
-                let offset =  (label - (num - powValue + 1) + 1) + (label - (num - powValue + 1)) / 2
+                let offset = (label - (num - powValue + 1) + 1) + (label - (num - powValue + 1)) / 2
                 label -= offset
                 output.insert(label, at: 0)
             }
@@ -50,7 +50,7 @@ class Solution {
             powNum -= 1
             level -= 1
         }
-        
+
         return output
     }
 

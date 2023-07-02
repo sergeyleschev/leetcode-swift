@@ -8,21 +8,19 @@
  *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
  * }
  */
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -47,7 +45,7 @@ class Solution {
     // Example 4:
     // Input: head = [1,3]
     // Output: [3,1]
-     
+
     // Constraints:
     // The number of nodes in head is in the range [0, 2 * 10^4].
     // -10^5 <= Node.val <= 10^5
@@ -55,25 +53,25 @@ class Solution {
     func sortedListToBST(_ head: ListNode?) -> TreeNode? {
         var nums: [ListNode] = []
         var curr = head
-        
+
         while curr != nil {
             nums.append(curr!)
             curr = curr?.next
         }
-        
+
         return sortedArrayToBST(nums)
     }
-    
-    
+
     func sortedArrayToBST(_ nums: [ListNode]) -> TreeNode? {
         let count = nums.count
         guard count > 0 else { return nil }
-        
+
         let rootIndex = count / 2
         let root = TreeNode(nums[rootIndex].val)
-        
+
         root.left = rootIndex > 0 ? sortedArrayToBST(Array(nums[0..<rootIndex])) : nil
-        root.right = rootIndex < count - 1 ? sortedArrayToBST(Array(nums[rootIndex + 1..<count])) : nil
+        root.right =
+            rootIndex < count - 1 ? sortedArrayToBST(Array(nums[rootIndex + 1..<count])) : nil
         return root
     }
 

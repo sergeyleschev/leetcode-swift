@@ -7,7 +7,7 @@ class Solution {
     // The distance between two indices i and j is abs(i - j), where abs is the absolute value function.
 
     // Finds an array of integers answer where answer.count == s.count and answer[i] is the shortest distance from s[i] to the character c in s.
-    
+
     // - Parameters:
     //   - s: A string.
     //   - c: A character.
@@ -34,7 +34,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the s.
     //   - space: O(n), where n is the length of the s.
-    
+
     func shortestToChar(_ s: String, _ c: Character) -> [Int] {
         let s = Array(s)
         let n = s.count
@@ -45,13 +45,13 @@ class Solution {
             if s[i] == c { prev = i }
             ans[i] = i - prev
         }
-        
+
         prev = Int.max / 2
         for i in (0..<n).reversed() {
             if s[i] == c { prev = i }
             ans[i] = min(ans[i], prev - i)
         }
-        
+
         return ans
     }
 

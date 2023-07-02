@@ -42,20 +42,20 @@ class Solution {
     // - Complexity:
     //   - time: O(n * m), where n is the number of coins, and m is the given amount.
     //   - space: O(m), where m is the given amount.
-    
+
     func change(_ amount: Int, _ coins: [Int]) -> Int {
         guard amount > 0 else { return 1 }
-                
-        var ans = [Int](repeating: 0, count: amount+1)
+
+        var ans = [Int](repeating: 0, count: amount + 1)
         ans[0] = 1
-        
-        for coin in coins  {
+
+        for coin in coins {
             guard coin <= amount else { continue }
             for i in coin...amount {
                 ans[i] += ans[i - coin]
             }
         }
-        
+
         return ans[amount]
     }
 

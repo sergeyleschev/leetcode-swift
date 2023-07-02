@@ -32,7 +32,7 @@ class Solution {
         var ans = 0.0
 
         dp[r][c] = 1
-        
+
         for _ in 0..<K {
             var dp1 = Array(repeating: Array(repeating: 0.0, count: N), count: N)
             for i in 0..<dp.count {
@@ -41,7 +41,7 @@ class Solution {
                         let current = (i + dx, j + dy)
                         if current.0 < 0 || current.0 >= N || current.1 < 0 || current.1 >= N {
                             ans += dp[i][j] * 0.125
-                        }else {
+                        } else {
                             dp1[current.0][current.1] += dp[i][j] * 0.125
                         }
                     }
@@ -49,7 +49,7 @@ class Solution {
             }
             dp = dp1
         }
-        
+
         return 1 - ans
     }
 

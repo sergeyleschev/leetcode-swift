@@ -45,7 +45,7 @@ class Solution {
             let side = p[1]
 
             let i = insert(left, pos, true)
-            let j = insert(left+side, pos, false)
+            let j = insert(left + side, pos, false)
             var high = 0
 
             for k in (i - 1)..<j { high = max(high, height[k]) }
@@ -60,7 +60,6 @@ class Solution {
 
         return res
     }
-
 
     // isLeft:
     // true if target exist, return left insert point

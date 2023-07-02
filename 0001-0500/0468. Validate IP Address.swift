@@ -37,26 +37,27 @@ class Solution {
     // Constraints:
     // IP consists only of English letters, digits and the characters '.' and ':'.
 
-
     enum IPAddressStatus: String {
         case validIPv4 = "IPv4"
         case validIPv6 = "IPv6"
         case neither = "Neither"
     }
 
-
     func validIPAddress(_ IP: String) -> String {
         if IP.isEmpty { return IPAddressStatus.neither.rawValue }
-        
-        if isValidIPv4Address(IP.components(separatedBy: ".")) { return IPAddressStatus.validIPv4.rawValue }
-        else if isValidIPv6Address(IP.components(separatedBy: ":")) { return IPAddressStatus.validIPv6.rawValue }
-        else { return IPAddressStatus.neither.rawValue }
+
+        if isValidIPv4Address(IP.components(separatedBy: ".")) {
+            return IPAddressStatus.validIPv4.rawValue
+        } else if isValidIPv6Address(IP.components(separatedBy: ":")) {
+            return IPAddressStatus.validIPv6.rawValue
+        } else {
+            return IPAddressStatus.neither.rawValue
+        }
     }
-    
-    
+
     func isValidIPv4Address(_ ipComponents: [String]) -> Bool {
         if ipComponents.count != 4 { return false }
-        
+
         for ipComponent in ipComponents {
             guard let integerIPComponent = Int(ipComponent) else { return false }
             if integerIPComponent < 0 || integerIPComponent > 255 { return false }
@@ -64,26 +65,29 @@ class Solution {
             for char in ipComponent {
                 if char < "0" || char > "9" { return false }
             }
-            
-            if integerIPComponent > 0 && ipComponent.first == "0" || integerIPComponent == 0 && ipComponent.count > 1 { return false }
+
+            if integerIPComponent > 0 && ipComponent.first == "0"
+                || integerIPComponent == 0 && ipComponent.count > 1
+            {
+                return false
+            }
         }
-        
+
         return true
     }
-    
-    
+
     func isValidIPv6Address(_ ipComponents: [String]) -> Bool {
         if ipComponents.count != 8 { return false }
-        
+
         for ipComponent in ipComponents {
             if ipComponent.count > 4 || ipComponent.count < 1 { return false }
-            
+
             for char in ipComponent.lowercased() {
                 if (char < "0" || char > "9") && (char < "a" || char > "f") { return false }
             }
         }
-        
+
         return true
     }
-    
+
 }

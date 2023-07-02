@@ -16,7 +16,7 @@ class Solution {
                 }
             }
             if newNumbers.isEmpty {
-                break // no new numbers to add
+                break  // no new numbers to add
             }
             prevNumbers = Array(newNumbers)
             board.formUnion(newNumbers)

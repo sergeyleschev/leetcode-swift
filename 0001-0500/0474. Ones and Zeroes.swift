@@ -29,33 +29,33 @@ class Solution {
         var counts: [(Int, Int)] = []
         var memo: [String: Int] = [:]
 
-        
         for s in strs {
-            var zero = 0, one = 0
+            var zero = 0
+            var one = 0
             for c in s {
-                if c == "0" { zero += 1 }
-                else { one += 1 }
+                if c == "0" { zero += 1 } else { one += 1 }
             }
             counts.append((zero, one))
         }
-        
-        
+
         func dfs(_ index: Int, _ zero: Int, _ one: Int) -> Int {
             if index == 0 { return zero >= counts[0].0 && one >= counts[0].1 ? 1 : 0 }
             if index < 0 || zero < 0 || one < 0 { return 0 }
-            
+
             let key = "\(index)_\(zero)_\(one)"
             if memo[key] != nil { return memo[key]! }
-            
+
             if zero >= counts[index].0 && one >= counts[index].1 {
-                memo[key] = max(1 + dfs(index - 1, zero - counts[index].0, one - counts[index].1), dfs(index - 1, zero, one))
+                memo[key] = max(
+                    1 + dfs(index - 1, zero - counts[index].0, one - counts[index].1),
+                    dfs(index - 1, zero, one))
             } else {
                 memo[key] = dfs(index - 1, zero, one)
             }
 
             return memo[key]!
         }
-        
+
         return dfs(strs.count - 1, m, n)
     }
 

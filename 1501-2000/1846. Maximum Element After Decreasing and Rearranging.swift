@@ -14,14 +14,14 @@ class Solution {
     // Example 1:
     // Input: arr = [2,2,1,2,1]
     // Output: 2
-    // Explanation: 
+    // Explanation:
     // We can satisfy the conditions by rearranging arr so it becomes [1,2,2,2,1].
     // The largest element in arr is 2.
 
     // Example 2:
     // Input: arr = [100,1,1000]
     // Output: 3
-    // Explanation: 
+    // Explanation:
     // One possible way to satisfy the conditions is by doing the following:
     // 1. Rearrange arr so it becomes [1,100,1000].
     // 2. Decrease the value of the second element to 2.

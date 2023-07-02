@@ -30,7 +30,7 @@ class Solution {
     // - How can rank help removing circle
     //   - have a current path of length k during a DFS. The nodes on the path has increasing ranks from 0 to kand incrementing by 1. Surprisingly, your next visit finds a node that has a rank of p where 0 <= p < k. Why does it happen? Aha! You found a node that is on the current search path!
     //   - How does the upper level of search knows, if you backtrack? Let's make use of the return value of DFS: dfs function returns the minimum rank it finds. During a step of search from node u to its neighbor v, if dfs(v) returns something smaller than or equal to rank(u), then u knows its neighbor v helped it to find a cycle back to u or u's ancestor. So u knows it should discard the edge (u, v) which is in a cycle.
-    
+
     // - Complexity:
     //   - time: O(V + E)
     //   - space: O(E)
@@ -51,28 +51,30 @@ class Solution {
         return Array(setc)
     }
 
-
-    func dfs(_ graph: [Int: [Int]], _ node: Int, _ depth: Int, _ n: Int, _ rank: inout [Int], _ setc: inout Set<[Int]>) -> Int {
-        if rank[node] >= 0 { return rank[node] } // visited node
+    func dfs(
+        _ graph: [Int: [Int]], _ node: Int, _ depth: Int, _ n: Int, _ rank: inout [Int],
+        _ setc: inout Set<[Int]>
+    ) -> Int {
+        if rank[node] >= 0 { return rank[node] }  // visited node
         rank[node] = depth
         var minDepth = n
 
         if let list = graph[node] {
             for next in list {
-                if rank[next] == depth - 1 { continue } // ignore parent
+                if rank[next] == depth - 1 { continue }  // ignore parent
                 let temp = dfs(graph, next, depth + 1, n, &rank, &setc)
-                
+
                 if temp <= depth {
                     // try to remove both possible combinations
                     setc.remove([node, next])
                     setc.remove([next, node])
                 }
-                
+
                 minDepth = min(minDepth, temp)
             }
         }
 
         return minDepth
     }
-    
+
 }

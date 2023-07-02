@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -47,16 +45,15 @@ class Solution {
 
     func getAllElements(_ root1: TreeNode?, _ root2: TreeNode?) -> [Int] {
         var result = [Int]()
-        
+
         inorder(root1, &result)
         inorder(root2, &result)
         return result.sorted()
     }
 
-    
-    private func inorder(_ root: TreeNode?,_ array: inout [Int]) {
+    private func inorder(_ root: TreeNode?, _ array: inout [Int]) {
         guard let root = root else { return }
-        
+
         inorder(root.left, &array)
         array.append(root.val)
         inorder(root.right, &array)

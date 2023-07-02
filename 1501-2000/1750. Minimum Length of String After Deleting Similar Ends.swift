@@ -38,7 +38,7 @@ class Solution {
 
     func minimumLength(_ s: String) -> Int {
         var curS = [Character](s)
-        while curS.count > 1 && curS.first! == curS.last!{
+        while curS.count > 1 && curS.first! == curS.last! {
             let targetChar = curS[0]
             let n = curS.count
             var l = 0

@@ -25,7 +25,7 @@ class Solution {
         if A.isEmpty { return 0 }
         var sortedArr = A.sorted(by: <)
         var res = 0
-        
+
         for i in 1..<sortedArr.count {
             let pre = sortedArr[i - 1]
             let cur = sortedArr[i]
@@ -34,8 +34,8 @@ class Solution {
                 sortedArr[i] = pre + 1
             }
         }
-        
+
         return res
     }
-    
+
 }

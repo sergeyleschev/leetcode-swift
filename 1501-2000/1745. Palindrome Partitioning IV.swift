@@ -29,11 +29,13 @@ class Solution {
         var second = [Int]()
 
         (0..<n).forEach { dp[$0][$0] = true }
-        
+
         for j in 1..<n {
-            for i in 0..<j where s2Chars[i] == s2Chars[j] && (j - i < 3 || dp[i + 1][j - 1]) { dp[i][j] = true }
+            for i in 0..<j where s2Chars[i] == s2Chars[j] && (j - i < 3 || dp[i + 1][j - 1]) {
+                dp[i][j] = true
+            }
         }
-        
+
         for i in 0..<n {
             if dp[0][i] { first.append(i) }
             if dp[i][n - 1] { second.append(i) }

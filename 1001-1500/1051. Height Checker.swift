@@ -10,7 +10,7 @@ class Solution {
     // Example 1:
     // Input: heights = [1,1,4,2,1,3]
     // Output: 3
-    // Explanation: 
+    // Explanation:
     // heights:  [1,1,4,2,1,3]
     // expected: [1,1,1,2,3,4]
     // Indices 2, 4, and 5 do not match.
@@ -37,20 +37,20 @@ class Solution {
 
     func heightChecker(_ heights: [Int]) -> Int {
         var count = 0
-        var digitCount : [Int] = Array(repeating: 0, count: 101)
+        var digitCount: [Int] = Array(repeating: 0, count: 101)
         var mirrorHeights: [Int] = Array(repeating: 0, count: heights.count)
         var j = 0
-        
+
         for i in 0..<heights.count { digitCount[heights[i]] = digitCount[heights[i]] + 1 }
-        
+
         for i in 0..<digitCount.count {
-            if(digitCount[i] != 0) {
+            if digitCount[i] != 0 {
                 for k in j..<j + digitCount[i] { mirrorHeights[k] = i }
                 j = j + digitCount[i]
             }
         }
-        
-        for i in 0..<heights.count where (mirrorHeights[i] != heights[i]) { count += 1 }    
+
+        for i in 0..<heights.count where (mirrorHeights[i] != heights[i]) { count += 1 }
         return count
     }
 

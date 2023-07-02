@@ -12,7 +12,7 @@ class Solution {
     // Example 1:
     // Input: stones = [5,3,1,4,2]
     // Output: 6
-    // Explanation: 
+    // Explanation:
     // - Alice removes 2 and gets 5 + 3 + 1 + 4 = 13 points. Alice = 13, Bob = 0, stones = [5,3,1,4].
     // - Bob removes 5 and gets 3 + 1 + 4 = 8 points. Alice = 13, Bob = 8, stones = [3,1,4].
     // - Alice removes 3 and gets 1 + 4 = 5 points. Alice = 18, Bob = 8, stones = [1,4].
@@ -31,20 +31,22 @@ class Solution {
 
     var result: [[Int?]] = [[]]
 
-    
     func stoneGameVII(_ stones: [Int]) -> Int {
         result = Array(repeating: Array(repeating: nil, count: stones.count), count: stones.count)
         let sum = stones.reduce(0, +)
         return stoneGame(stones, left: 0, right: stones.count - 1, sum: sum)
     }
 
-
     func stoneGame(_ stones: [Int], left: Int, right: Int, sum: Int) -> Int {
         guard left < right else { return 0 }
         if let currentResult = result[left][right] { return currentResult }
-        let firstScenario = (sum - stones[left]) - stoneGame(stones, left: left + 1, right: right, sum: sum - stones[left])
-        let secondScenario = (sum - stones[right]) - stoneGame(stones, left: left, right: right - 1, sum: sum - stones[right])
-        
+        let firstScenario =
+            (sum - stones[left])
+            - stoneGame(stones, left: left + 1, right: right, sum: sum - stones[left])
+        let secondScenario =
+            (sum - stones[right])
+            - stoneGame(stones, left: left, right: right - 1, sum: sum - stones[right])
+
         result[left][right] = max(firstScenario, secondScenario)
         return result[left][right]!
     }

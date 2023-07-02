@@ -34,13 +34,16 @@ class Solution {
     // 0 <= rowj, colj < n
 
     func gridIllumination(_ N: Int, _ lamps: [[Int]], _ queries: [[Int]]) -> [Int] {
-        var rowMap = [Int: Int](), colMap = [Int: Int]()
-        var diag1Map = [Int: Int](), diag2Map = [Int: Int]()
+        var rowMap = [Int: Int]()
+        var colMap = [Int: Int]()
+        var diag1Map = [Int: Int]()
+        var diag2Map = [Int: Int]()
         var lamps = Set(lamps)
         var answers = [Int]()
 
         for lamp in lamps {
-            let i = lamp[0], j = lamp[1]
+            let i = lamp[0]
+            let j = lamp[1]
             rowMap[i, default: 0] += 1
             colMap[j, default: 0] += 1
             diag1Map[i - j, default: 0] += 1
@@ -49,8 +52,11 @@ class Solution {
 
         for query in queries {
             // get answer
-            let i = query[0], j = query[1]
-            if rowMap[i, default: 0] > 0 || colMap[j, default: 0] > 0 || diag1Map[i - j, default: 0] > 0 || diag2Map[i + j, default: 0] > 0 {
+            let i = query[0]
+            let j = query[1]
+            if rowMap[i, default: 0] > 0 || colMap[j, default: 0] > 0
+                || diag1Map[i - j, default: 0] > 0 || diag2Map[i + j, default: 0] > 0
+            {
                 answers.append(1)
             } else {
                 answers.append(0)
@@ -63,12 +69,12 @@ class Solution {
                     lamps.remove([m, n])
                     rowMap[m, default: 0] -= 1
                     colMap[n, default: 0] -= 1
-                    diag1Map[m - n, default: 0] -= 1 // path \
-                    diag2Map[m + n, default: 0] -= 1 // path /
+                    diag1Map[m - n, default: 0] -= 1  // path \
+                    diag2Map[m + n, default: 0] -= 1  // path /
                 }
             }
         }
-        
+
         return answers
     }
 

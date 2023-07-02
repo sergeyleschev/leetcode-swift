@@ -34,18 +34,18 @@ class Solution {
         let M = a.count
         let N = b.count
         var ans = Int.max
-        var preffixA = 0
-        var preffixB = 0
+        var prefixA = 0
+        var prefixB = 0
 
         for ch in a { aCounter[Int(ch.asciiValue! - 97)] += 1 }
         for ch in b { bCounter[Int(ch.asciiValue! - 97)] += 1 }
 
         for i in 0..<26 {
-            preffixA += aCounter[i]
-            preffixB += bCounter[i]
-            
+            prefixA += aCounter[i]
+            prefixB += bCounter[i]
+
             ans = min(ans, M + N - (aCounter[i] + bCounter[i]))
-            if i != 25 { ans = min(ans, M - preffixA + preffixB,N - preffixB + preffixA) }
+            if i != 25 { ans = min(ans, M - prefixA + prefixB, N - prefixB + prefixA) }
         }
         return ans
     }

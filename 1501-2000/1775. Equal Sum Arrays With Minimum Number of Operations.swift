@@ -23,7 +23,7 @@ class Solution {
     // Example 3:
     // Input: nums1 = [6,6], nums2 = [1]
     // Output: 3
-    // Explanation: You can make the sums of nums1 and nums2 equal with 3 operations. All indices are 0-indexed. 
+    // Explanation: You can make the sums of nums1 and nums2 equal with 3 operations. All indices are 0-indexed.
     // - Change nums1[0] to 2. nums1 = [2,6], nums2 = [1].
     // - Change nums1[1] to 2. nums1 = [2,2], nums2 = [1].
     // - Change nums2[0] to 4. nums1 = [2,2], nums2 = [4].
@@ -34,15 +34,15 @@ class Solution {
 
     func minOperations(_ nums1: [Int], _ nums2: [Int]) -> Int {
         var count = 0
-        var ascSum = nums1.reduce(0, {$0+$1})
-        var descSum = nums2.reduce(0, {$0+$1})
+        var ascSum = nums1.reduce(0, { $0 + $1 })
+        var descSum = nums2.reduce(0, { $0 + $1 })
         var ascNum = [Int]()
         var descNum = [Int]()
         let max = 6
         let min = 1
         var ascIndex = 0
         var descIndex = 0
-        
+
         if ascSum < descSum {
             ascNum = nums1.sorted()
             descNum = nums2.sorted().reversed()
@@ -50,12 +50,12 @@ class Solution {
             ascNum = nums2.sorted()
             descNum = nums1.sorted().reversed()
         }
-        
+
         ascSum = ascNum.reduce(0, { $0 + $1 })
         descSum = descNum.reduce(0, { $0 + $1 })
         var tempDiff = descSum - ascSum
-        
-        while ascSum != descSum {            
+
+        while ascSum != descSum {
             if descIndex >= descNum.count && ascIndex >= ascNum.count { return -1 }
             var shouldPickASC = true
 
@@ -64,7 +64,7 @@ class Solution {
             } else {
                 if descNum[descIndex] - min > max - ascNum[ascIndex] { shouldPickASC = false }
             }
-            
+
             if !shouldPickASC {
                 let diff = tempDiff > descNum[descIndex] - min ? descNum[descIndex] - min : tempDiff
                 descSum -= diff
@@ -81,5 +81,5 @@ class Solution {
         }
         return count
     }
-    
+
 }

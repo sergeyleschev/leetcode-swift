@@ -38,11 +38,15 @@ class Solution {
         while index != folder.endIndex {
             results.append(folder[index])
             let sub = folder[index] + "/"
-            guard let next = (index + 1..<folder.endIndex).firstIndex(where: { !folder[$0].starts(with: sub) }) else { break }
+            guard
+                let next = (index + 1..<folder.endIndex).firstIndex(where: {
+                    !folder[$0].starts(with: sub)
+                })
+            else { break }
             index = next
         }
 
         return results
     }
-    
+
 }

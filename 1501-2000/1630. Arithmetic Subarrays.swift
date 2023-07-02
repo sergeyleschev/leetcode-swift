@@ -25,7 +25,7 @@ class Solution {
     // Example 2:
     // Input: nums = [-12,-9,-3,-12,-6,15,20,-25,-20,-15,-10], l = [0,1,6,4,8,7], r = [4,4,9,7,9,10]
     // Output: [false,true,false,false,true,true]
-     
+
     // Constraints:
     // n == nums.length
     // m == l.length
@@ -35,24 +35,26 @@ class Solution {
     // 0 <= l[i] < r[i] < n
     // -10^5 <= nums[i] <= 10^5
 
-    func checkArithmeticSubarrays(_ numbers: [Int], _ lowerbounds: [Int], _ upperbounds: [Int]) -> [Bool] {
+    func checkArithmeticSubarrays(_ numbers: [Int], _ lowerbounds: [Int], _ upperbounds: [Int])
+        -> [Bool]
+    {
         zip(lowerbounds, upperbounds).map { lowerbound, upperbound in
-          let range = numbers[lowerbound ... upperbound]
-          var min: Int = .max
-          var max: Int = .min
-          var numbers: Set<Int> = []
+            let range = numbers[lowerbound...upperbound]
+            var min: Int = .max
+            var max: Int = .min
+            var numbers: Set<Int> = []
 
-          for number in range {
-              min = Swift.min(min, number)
-              max = Swift.max(max, number)
-              numbers.insert(number)
-          }
+            for number in range {
+                min = Swift.min(min, number)
+                max = Swift.max(max, number)
+                numbers.insert(number)
+            }
 
-          if numbers.count == 1 { return true }
-          guard (max - min) % (range.count - 1) == 0 else { return false }
-          let distance = (max - min) / (range.count - 1)
-          let expectedNumbers = stride(from: min, to: max, by: distance)
-          return expectedNumbers.allSatisfy(numbers.contains)
+            if numbers.count == 1 { return true }
+            guard (max - min) % (range.count - 1) == 0 else { return false }
+            let distance = (max - min) / (range.count - 1)
+            let expectedNumbers = stride(from: min, to: max, by: distance)
+            return expectedNumbers.allSatisfy(numbers.contains)
         }
     }
 }

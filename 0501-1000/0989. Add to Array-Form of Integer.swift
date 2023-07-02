@@ -37,20 +37,20 @@ class Solution {
         var K = K
         var A = A
         var i = A.count
-        
+
         while i > 0 && K > 0 {
             i -= 1
             let sum = A[i] + K
             A[i] = sum % 10
             K = sum / 10
         }
-        
+
         while K > 0 {
             A.insert(K % 10, at: 0)
             K /= 10
         }
-        
+
         return A
     }
-    
+
 }

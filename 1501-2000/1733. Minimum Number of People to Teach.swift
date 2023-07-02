@@ -20,7 +20,7 @@ class Solution {
     // Input: n = 3, languages = [[2],[1,3],[1,2],[3]], friendships = [[1,4],[1,2],[3,4],[2,3]]
     // Output: 2
     // Explanation: Teach the third language to users 1 and 3, yielding two users to teach.
-     
+
     // Constraints:
     // 2 <= n <= 500
     // languages.length == m
@@ -38,27 +38,26 @@ class Solution {
         var peopleCount = 0
         var visited = [Bool](repeating: false, count: languages.count)
 
-        
         func check(_ p1: Int, _ p2: Int) -> Bool {
             for l in languagesSets[p1] {
                 guard !languagesSets[p2].contains(l) else { return true }
             }
             return false
         }
-        
+
         for friendShip in friendships {
             let p1 = friendShip[0] - 1
             let p2 = friendShip[1] - 1
             guard !check(p1, p2) else { continue }
 
             if !visited[p1] {
-                for l in languages[p1] { counter[l,default: 0] += 1 }
+                for l in languages[p1] { counter[l, default: 0] += 1 }
                 visited[p1] = true
                 peopleCount += 1
             }
 
             if !visited[p2] {
-                for l in languages[p2] { counter[l,default: 0] += 1 }
+                for l in languages[p2] { counter[l, default: 0] += 1 }
                 visited[p2] = true
                 peopleCount += 1
             }

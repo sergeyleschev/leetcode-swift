@@ -27,18 +27,18 @@ class Solution {
     // 1 <= n <= 10^4
     // leftChild.length == rightChild.length == n
     // -1 <= leftChild[i], rightChild[i] <= n - 1
-    
+
     func validateBinaryTreeNodes(_ n: Int, _ leftChild: [Int], _ rightChild: [Int]) -> Bool {
         var count = 0
         var root = -1
-        var degrees = [Int](repeating:0, count: n)
+        var degrees = [Int](repeating: 0, count: n)
         var visited = [Bool](repeating: false, count: n)
 
         for i in 0..<n {
             if leftChild[i] != -1 { degrees[leftChild[i]] += 1 }
             if rightChild[i] != -1 { degrees[rightChild[i]] += 1 }
         }
-        
+
         for i in 0..<n {
             guard degrees[i] <= 1 else { return false }
             if degrees[i] == 0 {
@@ -49,7 +49,7 @@ class Solution {
         }
 
         guard root != -1 else { return false }
-        
+
         // DFS
         func dfs(_ node: Int) -> Bool {
             guard !visited[node] else { return false }
@@ -62,7 +62,7 @@ class Solution {
             }
             return true
         }
-        
+
         guard dfs(root) else { return false }
         return !visited.contains(false)
     }

@@ -65,7 +65,7 @@ class Solution {
                 result.append(tempName)
             }
         }
-        
+
         return result
     }
 

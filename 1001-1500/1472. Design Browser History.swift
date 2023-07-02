@@ -41,12 +41,10 @@ class BrowserHistory {
     private var urlLists = [String]()
     private var currentPosition = -1
 
-
     init(_ homepage: String) {
         urlLists.append(homepage)
         currentPosition = 0
     }
-    
 
     func visit(_ url: String) {
         if currentPosition == urlLists.count - 1 {
@@ -56,16 +54,14 @@ class BrowserHistory {
         }
         currentPosition = urlLists.count - 1
     }
-    
 
     func back(_ steps: Int) -> String {
         currentPosition = steps >= currentPosition ? 0 : currentPosition - steps
         return urlLists[currentPosition]
     }
-    
 
     func forward(_ steps: Int) -> String {
-        let maxForwardStepos = urlLists.count  - currentPosition - 1
+        let maxForwardStepos = urlLists.count - currentPosition - 1
         currentPosition = steps >= maxForwardStepos ? urlLists.count - 1 : currentPosition + steps
         return urlLists[currentPosition]
     }

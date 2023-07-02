@@ -35,7 +35,8 @@ class Solution {
     func replaceDigits(_ s: String) -> String {
         var chars = [Character](s)
         for idx in 0..<chars.count where idx & 1 == 1 {
-            chars[idx] = Character.init(Unicode.Scalar.init(chars[idx - 1].asciiValue! + chars[idx].asciiValue! - 48))
+            chars[idx] = Character.init(
+                Unicode.Scalar.init(chars[idx - 1].asciiValue! + chars[idx].asciiValue! - 48))
         }
         return String(chars)
     }

@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -34,7 +32,7 @@ class Solution {
         guard root != nil else { return 0 }
         var ans = 0
         var nodes: [TreeNode] = [root!]
-        
+
         while !nodes.isEmpty {
             let node = nodes.removeFirst()
             if node.val % 2 == 0 { ans += sum(node) }
@@ -44,14 +42,13 @@ class Solution {
 
         return ans
     }
-    
-    
+
     func sum(_ node: TreeNode?) -> Int {
         let v1 = node?.left?.left?.val ?? 0
         let v2 = node?.left?.right?.val ?? 0
         let v3 = node?.right?.left?.val ?? 0
-        let v4 = node?.right?.right?.val ?? 0    
-        
+        let v4 = node?.right?.right?.val ?? 0
+
         return v1 + v2 + v3 + v4
     }
 

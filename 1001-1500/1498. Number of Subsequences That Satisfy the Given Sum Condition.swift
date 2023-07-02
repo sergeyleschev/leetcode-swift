@@ -39,16 +39,16 @@ class Solution {
 
     func numSubseq(_ nums: [Int], _ target: Int) -> Int {
         var result = 0
-        let factor = 1000000007
+        let factor = 1_000_000_007
         let nums = nums.sorted()
         var left = 0
         var right = nums.count - 1
         var dp = [Int].init(repeating: 0, count: nums.count + 1)
 
         dp[0] = 1
-        
+
         for i in 1..<nums.count { dp[i] = (dp[i - 1] << 1) % factor }
-        
+
         while left <= right {
             if nums[left] * 2 > target { break }
             while right > left && nums[right] + nums[left] > target { right -= 1 }
@@ -58,5 +58,5 @@ class Solution {
 
         return result
     }
-    
+
 }

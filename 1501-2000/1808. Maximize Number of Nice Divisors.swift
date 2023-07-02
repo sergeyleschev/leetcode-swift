@@ -35,18 +35,21 @@ class Solution {
         let a = primeFactors / 3
         let b = primeFactors % 3
 
-        if b == 0 { return helpPow(3, a, mod) }
-        else if b == 1 { return helpPow(3, a - 1, mod) * 4 % mod } 
-        else if b == 2 { return helpPow(3, a, mod) * 2 % mod }
+        if b == 0 {
+            return helpPow(3, a, mod)
+        } else if b == 1 {
+            return helpPow(3, a - 1, mod) * 4 % mod
+        } else if b == 2 {
+            return helpPow(3, a, mod) * 2 % mod
+        }
         return 0
     }
-
 
     private func helpPow(_ a: Int, _ power: Int, _ mod: Int) -> Int {
         var res = 1
         var a = a
         var power = power
-        
+
         while power != 0 {
             // power % 2 == 1
             if power & 1 == 1 { res = res * a % mod }

@@ -1,18 +1,16 @@
-/**
- * Definition for a Node.
- * public class Node {
- *     public var val: Int
- *     public var prev: Node?
- *     public var next: Node?
- *     public var child: Node?
- *     public init(_ val: Int) {
- *         self.val = val
- *         self.prev = nil
- *         self.next = nil
- *         self.child  = nil
- *     }
- * }
- */
+/// Definition for a Node.
+/// public class Node {
+///     public var val: Int
+///     public var prev: Node?
+///     public var next: Node?
+///     public var child: Node?
+///     public init(_ val: Int) {
+///         self.val = val
+///         self.prev = nil
+///         self.next = nil
+///         self.child  = nil
+///     }
+/// }
 
 class Solution {
 
@@ -67,14 +65,17 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of elements in multilevel linked list.
     //   - space: O(1), only constant space is used.
-    
+
     func flatten(_ head: Node?) -> Node? {
         let dummy = Node(-1)
         dummy.next = head
         var cur = dummy.next
 
         while cur != nil {
-            if cur?.child == nil { cur = cur?.next; continue }
+            if cur?.child == nil {
+                cur = cur?.next
+                continue
+            }
 
             var tmp = cur?.child
 

@@ -27,7 +27,7 @@ class Solution {
 
     func largestPerimeter(_ A: [Int]) -> Int {
         var A = A.sorted(by: >)
-        
+
         for i in 0..<A.count - 2 {
             let a = A[i]
             let b = A[i + 1]
@@ -36,8 +36,8 @@ class Solution {
                 return a + b + c
             }
         }
-        
+
         return 0
     }
-    
+
 }

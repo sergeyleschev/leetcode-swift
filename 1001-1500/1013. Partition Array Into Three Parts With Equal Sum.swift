@@ -42,8 +42,10 @@ class Solution {
                 }
             }
             if countParts < 3 { return false }
-        } else { return false }
-        
+        } else {
+            return false
+        }
+
         return true
     }
 

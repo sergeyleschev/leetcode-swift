@@ -1,16 +1,14 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init(_ val: Int) {
- *         self.val = val
- *         self.left = nil
- *         self.right = nil
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init(_ val: Int) {
+///         self.val = val
+///         self.left = nil
+///         self.right = nil
+///     }
+/// }
 
 class Codec {
 
@@ -49,7 +47,6 @@ class Codec {
         return ans
     }
 
-
     private func serialize(_ root: TreeNode?, _ ans: inout String) {
         guard let root = root else { return }
 
@@ -58,7 +55,6 @@ class Codec {
         serialize(root.right, &ans)
     }
 
-
     // Deserializes binary search tree.
     // - Parameter data: Serialized data.
     // - Returns: The binary search tree root.
@@ -66,18 +62,17 @@ class Codec {
     // - Complexity:
     //   - time: O(n), where n is the number of nodes in the tree.
     //   - space: O(n), where n is the number of nodes in the tree.
-    
+
     func deserialize(_ data: String) -> TreeNode? {
         guard !data.isEmpty else { return nil }
         var queue = data.split(separator: ",").map { String($0) }
         return deserialize(&queue, Int.min, Int.max)
     }
 
-
     private func deserialize(_ queue: inout [String], _ lower: Int, _ upper: Int) -> TreeNode? {
         guard !queue.isEmpty else { return nil }
 
-        guard 
+        guard
             let first = queue.first,
             let val = Int(first),
             lower < val, val < upper

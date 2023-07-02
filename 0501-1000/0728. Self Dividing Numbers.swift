@@ -20,9 +20,9 @@ class Solution {
     // 1 <= left <= right <= 10^4
 
     func selfDividingNumbers(_ left: Int, _ right: Int) -> [Int] {
-        var ans = (0..<10).map{$0}
-        guard right > 10 else { return Array(ans[left...min(9, right)])  }
-        
+        var ans = (0..<10).map { $0 }
+        guard right > 10 else { return Array(ans[left...min(9, right)]) }
+
         ans.removeSubrange(Range(NSRange(location: 0, length: min(10, left)))!)
         for num in max(11, left)...right {
             let divide = Array("\(num)")
@@ -37,7 +37,7 @@ class Solution {
                 ans.append(num)
             }
         }
-        
+
         return ans
     }
 

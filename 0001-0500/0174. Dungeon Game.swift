@@ -23,7 +23,7 @@ class Solution {
     // Example 2:
     // Input: dungeon = [[0]]
     // Output: 1
-     
+
     // Constraints:
     // m == dungeon.length
     // n == dungeon[i].length
@@ -33,7 +33,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n * m), where n * m is the number of rooms in the dungeon.
     //   - space: O(n * m), where n * m is the number of rooms in the dungeon.
-    
+
     func calculateMinimumHP(_ dungeon: [[Int]]) -> Int {
         guard !dungeon.isEmpty else { return 1 }
 

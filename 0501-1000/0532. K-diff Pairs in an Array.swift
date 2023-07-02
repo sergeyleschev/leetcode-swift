@@ -39,7 +39,7 @@ class Solution {
     // Example 5:
     // Input: nums = [-1,-2,-3], k = 1
     // Output: 2
-     
+
     // Constraints:
     // 1 <= nums.length <= 10^4
     // -10^7 <= nums[i] <= 10^7
@@ -48,7 +48,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the `nums`.
     //   - space: O(n), where n is the length of the `nums`.
-    
+
     func findPairs(_ nums: [Int], _ k: Int) -> Int {
         var dict = [Int: Int]()
         var ans = 0
@@ -56,7 +56,9 @@ class Solution {
         for num in nums { dict[num, default: 0] += 1 }
 
         for (_, el) in dict.enumerated() {
-            guard (k == 0 && el.value > 1) || (k > 0 && dict.keys.contains(el.key + k)) else { continue }
+            guard (k == 0 && el.value > 1) || (k > 0 && dict.keys.contains(el.key + k)) else {
+                continue
+            }
             ans += 1
         }
 

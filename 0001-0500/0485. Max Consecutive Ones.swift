@@ -26,13 +26,16 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of nums.
     //   - space: O(1), only constant space is used.
-    
+
     func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {
         var ans = 0
         var currentMax = 0
 
         for i in nums {
-            guard i != 1 else { currentMax += 1; continue }
+            guard i != 1 else {
+                currentMax += 1
+                continue
+            }
             ans = max(ans, currentMax)
             currentMax = 0
         }

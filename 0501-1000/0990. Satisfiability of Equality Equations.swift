@@ -39,16 +39,19 @@ class Solution {
         var equals: [Set<Character>] = []
         var unequals: [[Character]] = []
         var record: [Character: Int] = [:]
-        
+
         for equation in equations {
             let equation = [Character](equation)
-            let a = equation[0], b = equation[3], symbal = equation[1]
+            let a = equation[0]
+            let b = equation[3]
+            let symbal = equation[1]
             if symbal == "=" {
-                let i1 = record[a], i2 = record[b]
+                let i1 = record[a]
+                let i2 = record[b]
                 if i1 == nil && i2 == nil {
                     equals.append(.init([a, b]))
-                    record[a] = equals.count-1
-                    record[b] = equals.count-1
+                    record[a] = equals.count - 1
+                    record[b] = equals.count - 1
                 } else if i1 == nil {
                     equals[i2!].insert(a)
                     equals[i2!].insert(b)
@@ -71,16 +74,17 @@ class Solution {
                 }
             } else {
                 if equation[0] == equation[3] { return false }
-                unequals.append([equation[0],equation[3]])
+                unequals.append([equation[0], equation[3]])
             }
         }
-        
+
         for unequal in unequals {
-            let a = unequal[0], b = unequal[1]
+            let a = unequal[0]
+            let b = unequal[1]
             if let i1 = record[a], let i2 = record[b], i1 == i2 { return false }
         }
-        
+
         return true
     }
-    
+
 }

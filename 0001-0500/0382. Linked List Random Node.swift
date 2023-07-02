@@ -1,13 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init() { self.val = 0; self.next = nil; }
- *     public init(_ val: Int) { self.val = val; self.next = nil; }
- *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init() { self.val = 0; self.next = nil; }
+///     public init(_ val: Int) { self.val = val; self.next = nil; }
+///     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+/// }
 
 class Solution {
 
@@ -30,18 +28,17 @@ class Solution {
     // solution.getRandom(); // return 2
     // solution.getRandom(); // return 3
     // // getRandom() should return either 1, 2, or 3 randomly. Each element should have equal probability of returning.
-     
+
     // Constraints:
     // The number of nodes in the linked list will be in the range [1, 10^4].
     // -10^4 <= Node.val <= 10^4
     // At most 10^4 calls will be made to getRandom.
-     
+
     // Follow up:
     // What if the linked list is extremely large and its length is unknown to you?
     // Could you solve this efficiently without using extra space?
 
     private let head: ListNode?
-
 
     // Initialize data structure.
     // - Parameter head: The linked list head.
@@ -49,7 +46,6 @@ class Solution {
     init(_ head: ListNode?) {
         self.head = head
     }
-
 
     // Returns a random node's value from the linked list.
     // - Returns: A random node's value.
@@ -73,7 +69,6 @@ class Solution {
     }
 
 }
-
 
 /**
  * Your Solution object will be instantiated and called as such:

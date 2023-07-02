@@ -25,11 +25,11 @@ class Solution {
         let row = matrix.count
         let column = matrix.first?.count ?? 0
         var ans: [[Int]] = Array(repeating: Array(repeating: 0, count: row), count: column)
-        
+
         for i in 0..<matrix.count {
             for j in 0..<matrix[i].count { ans[j][i] = matrix[i][j] }
         }
-        
+
         return ans
     }
 

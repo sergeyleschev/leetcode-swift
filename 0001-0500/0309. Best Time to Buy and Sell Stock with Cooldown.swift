@@ -29,20 +29,20 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the prices.
     //   - space: O(1), only constant space is used.
-    
+
     func maxProfit(_ prices: [Int]) -> Int {
         var sold = 0
         var hold = Int.min
         var rest = 0
         var prevSold = 0
-        
+
         for price in prices {
             prevSold = sold
             sold = hold + price
             hold = max(hold, rest - price)
             rest = max(rest, prevSold)
         }
-        
+
         return max(sold, rest)
     }
 

@@ -33,7 +33,7 @@ class Solution {
     // log(n)
 
     func divide(_ dividend: Int, _ divisor: Int) -> Int {
-        let is_negtive = (dividend < 0 && divisor > 0) || (dividend > 0 && divisor < 0)
+        let isNegative = (dividend < 0 && divisor > 0) || (dividend > 0 && divisor < 0)
         let dividend = abs(dividend)
         let divisor = abs(divisor)
         var tmp = divisor
@@ -47,15 +47,15 @@ class Solution {
                 tmp *= 10
             }
             tmp = divisor
-            rem = rem - Int(pow(10, Double(count-1))) * tmp
+            rem = rem - Int(pow(10, Double(count - 1))) * tmp
             if rem >= 0 {
-                res += Int(pow(10, Double(count-1)))
+                res += Int(pow(10, Double(count - 1)))
             }
         }
-        
-        if (is_negtive && res >= 2147483648) { res = 2147483648 }
-        if (!is_negtive && res >= 2147483647) { res = 2147483647 }
-        return is_negtive ? -1 * res : res
+
+        if isNegative && res >= 2_147_483_648 { res = 2_147_483_648 }
+        if !isNegative && res >= 2_147_483_647 { res = 2_147_483_647 }
+        return isNegative ? -1 * res : res
     }
-    
+
 }

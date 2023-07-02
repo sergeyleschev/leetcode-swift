@@ -24,5 +24,5 @@ class Solution {
     // 1 <= n <= 1000
 
     func divisorGame(_ N: Int) -> Bool { N % 2 == 0 }
-    
+
 }

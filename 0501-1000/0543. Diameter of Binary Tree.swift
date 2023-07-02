@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -37,23 +35,22 @@ class Solution {
 
     var maxPath = 0
 
-
     func diameterOfBinaryTree(_ root: TreeNode?) -> Int {
         guard let root = root else { return 0 }
 
         helper(root)
         return maxPath
     }
-    
 
     func helper(_ node: TreeNode) -> Int {
-        var leftpath = 0, rightpath = 0
+        var leftpath = 0
+        var rightpath = 0
 
         if let leftChild = node.left { leftpath = helper(leftChild) + 1 }
         if let rightChild = node.right { rightpath = helper(rightChild) + 1 }
 
         maxPath = max(maxPath, leftpath + rightpath)
-        return max(leftpath, rightpath)  
+        return max(leftpath, rightpath)
     }
-    
+
 }

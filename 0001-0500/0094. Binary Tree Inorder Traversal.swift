@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -44,17 +42,17 @@ class Solution {
     // Example 5:
     // Input: root = [1,null,2]
     // Output: [1,2]
-     
+
     // Constraints:
     // The number of nodes in the tree is in the range [0, 100].
     // -100 <= Node.val <= 100
-     
+
     // Follow up: Recursive solution is trivial, could you do it iteratively?
 
     // - Complexity:
     //   - time: O(n), where n is the number of nodes in the tree.
     //   - space: O(n), where n is the number of nodes in the tree.
-    
+
     func inorderTraversal(_ root: TreeNode?) -> [Int] {
         var ans = [Int]()
         var stack = [TreeNode?]()
@@ -78,15 +76,15 @@ class Solution {
     /*
     func inorderTraversal(_ root: TreeNode?) -> [Int] {
         var res: [Int] = []
-        
+
         func inorder(_ node: TreeNode?) {
-            if node == nil { return } 
-            
+            if node == nil { return }
+
             inorder(node!.left)
             res.append(node!.val)
             inorder(node!.right)
         }
-        
+
         inorder(root)
         return res
     }

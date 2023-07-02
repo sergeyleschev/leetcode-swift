@@ -28,12 +28,12 @@ class Solution {
     // 1 <= x, y, ai, bi <= 10^4
 
     func nearestValidPoint(_ x: Int, _ y: Int, _ points: [[Int]]) -> Int {
-        var (idx,dis) = (-1, Int.max)
+        var (idx, dis) = (-1, Int.max)
         let n = points.count
 
         for i in 0..<n {
             guard x == points[i][0] || y == points[i][1] else { continue }
-            let curDis =  x == points[i][0] ? abs(y - points[i][1]) : abs(x - points[i][0])
+            let curDis = x == points[i][0] ? abs(y - points[i][1]) : abs(x - points[i][0])
             if curDis < dis { (idx, dis) = (i, curDis) }
         }
         return idx

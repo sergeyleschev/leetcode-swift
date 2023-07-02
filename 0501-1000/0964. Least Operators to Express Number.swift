@@ -51,7 +51,7 @@ class Solution {
             // get target by
             // - add (target) times x/x
             // - subtract (x-target) times x/x
-            return min(target * 2 - 1, (x-target) * 2)
+            return min(target * 2 - 1, (x - target) * 2)
         }
 
         var cur = x

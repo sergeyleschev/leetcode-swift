@@ -30,12 +30,10 @@ class RangeModule {
     // At most 10^4 calls will be made to addRange, queryRange, and removeRange.
 
     // height = 1 means a valid range
-    
+
     var intervals: [(pos: Int, height: Int)]
 
-
     init() { intervals = [(pos: Int, height: Int)]() }
-
 
     func addRange(_ left: Int, _ right: Int) {
         if intervals.isEmpty {
@@ -46,7 +44,7 @@ class RangeModule {
 
         if intervals.first!.pos > right {
             intervals.insert((right, 0), at: 0)
-            intervals.insert((left, 1), at:0)
+            intervals.insert((left, 1), at: 0)
             return
         }
 
@@ -76,12 +74,11 @@ class RangeModule {
             } else {
                 intervals[l..<r] = [
                     (left, 1),
-                    (right, intervals[r - 1].height)
+                    (right, intervals[r - 1].height),
                 ]
             }
         }
     }
-
 
     func queryRange(_ left: Int, _ right: Int) -> Bool {
         if intervals.isEmpty { return false }
@@ -102,7 +99,6 @@ class RangeModule {
         }
     }
 
-
     func removeRange(_ left: Int, _ right: Int) {
         if intervals.isEmpty { return }
         if right <= intervals[0].pos { return }
@@ -114,7 +110,8 @@ class RangeModule {
         if l == r {
             // check if this remove range is in the addedRange
             if intervals[l].pos >= right, intervals[l].height == 1,
-            (l > 0 && intervals[l - 1].height == 0 && intervals[l - 1].pos <= left) {
+                l > 0 && intervals[l - 1].height == 0 && intervals[l - 1].pos <= left
+            {
                 // this range is not valid range now, don't need to do extra remove action
                 return
             }
@@ -137,10 +134,9 @@ class RangeModule {
         }
     }
 
-
     func getIndex(_ target: Int, _ isLeft: Bool) -> Int {
         var left = 0
-        var right = intervals.count-1
+        var right = intervals.count - 1
 
         while left < right {
             let mid = left + (right - left) / 2
@@ -154,7 +150,7 @@ class RangeModule {
         if intervals[left].pos == target {
             return isLeft ? left : left + 1
         } else if intervals[left].pos < target {
-            return left+1
+            return left + 1
         } else {
             return left
         }

@@ -23,14 +23,15 @@ class Solution {
     // 1 <= mat[i][j] <= 100
 
     func matrixBlockSum(_ mat: [[Int]], _ K: Int) -> [[Int]] {
-        let m = mat.count, n = mat.first?.count ?? 0
+        let m = mat.count
+        let n = mat.first?.count ?? 0
         guard m > 0 && n > 0 else { return [] }
-        
+
         var dp = mat
         for i in 0..<m {
             for j in 1..<n { dp[i][j] = dp[i][j - 1] + dp[i][j] }
         }
-        
+
         for i in 1..<m {
             for j in 0..<n { dp[i][j] = dp[i - 1][j] + dp[i][j] }
         }
@@ -42,15 +43,19 @@ class Solution {
                 if i <= K && j <= K {
                     ans[i][j] = dp[min(i + K, m - 1)][min(j + K, n - 1)]
                 } else if i > K && j <= K {
-                    ans[i][j] = dp[min(i + K, m - 1)][min(j + K, n - 1)] - dp[i - K - 1][min(j + K, n - 1)]
+                    ans[i][j] =
+                        dp[min(i + K, m - 1)][min(j + K, n - 1)] - dp[i - K - 1][min(j + K, n - 1)]
                 } else if j > K && i <= K {
-                    ans[i][j] = dp[min(i + K, m - 1)][min(j + K, n - 1)] - dp[min(i + K, m - 1)][j - K - 1]
+                    ans[i][j] =
+                        dp[min(i + K, m - 1)][min(j + K, n - 1)] - dp[min(i + K, m - 1)][j - K - 1]
                 } else {
-                    ans[i][j] = dp[min(i + K, m - 1)][min(j + K, n - 1)] - dp[i - K - 1][min(j + K, n - 1)]  - dp[min(i + K, m - 1)][j - K - 1] + dp[i - K - 1][j - K - 1]
+                    ans[i][j] =
+                        dp[min(i + K, m - 1)][min(j + K, n - 1)] - dp[i - K - 1][min(j + K, n - 1)]
+                        - dp[min(i + K, m - 1)][j - K - 1] + dp[i - K - 1][j - K - 1]
                 }
             }
         }
-        
+
         return ans
     }
 

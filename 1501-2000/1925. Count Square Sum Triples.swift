@@ -21,7 +21,7 @@ class Solution {
 
     // - Complexity:
     //   - time: O(n^2)
-    
+
     func countTriples(_ n: Int) -> Int {
         var count = 0
 
@@ -34,5 +34,5 @@ class Solution {
         }
         return count * 2
     }
-    
+
 }

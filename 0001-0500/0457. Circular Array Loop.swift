@@ -65,10 +65,13 @@ class Solution {
             var visit = Set([node])
 
             while true {
-                if visit.contains(next) { return true } 
-                else if !unvisited.contains(next) { break } 
-                else if (node.value > 0) != (next.value > 0) { break } 
-                else {
+                if visit.contains(next) {
+                    return true
+                } else if !unvisited.contains(next) {
+                    break
+                } else if (node.value > 0) != (next.value > 0) {
+                    break
+                } else {
                     visit.insert(next)
                     unvisited.remove(next)
                     next = successors[next]!
@@ -81,11 +84,9 @@ class Solution {
 
 }
 
-
 private struct Node: Hashable {
     let index: Int
     let value: Int
-
 
     init(value: Int, index: Int) {
         self.index = index
@@ -93,13 +94,16 @@ private struct Node: Hashable {
     }
 }
 
-
-private extension Array where Element == Int {
-    func circularIndex(after index: Int) -> Int {
+extension Array where Element == Int {
+    fileprivate func circularIndex(after index: Int) -> Int {
         let next = index + self[index]
 
-        if next >= count { return next % count } 
-        else if next < 0 { return count - (abs(next) % count) } 
-        else { return next }
+        if next >= count {
+            return next % count
+        } else if next < 0 {
+            return count - (abs(next) % count)
+        } else {
+            return next
+        }
     }
 }

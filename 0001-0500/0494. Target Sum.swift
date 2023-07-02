@@ -1,7 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
-    
+
     // 494. Target Sum
     // You are given an integer array nums and an integer target.
     // You want to build an expression out of nums by adding one of the symbols '+' and '-' before each integer in nums and then concatenate all the integers.
@@ -37,8 +37,8 @@ class Solution {
         let offset = sum
 
         dp[0][nums[0] + offset] = 1
-        dp[0][ -nums[0] + offset] += 1 // here use '+=' instead of '=' in case of nums[0] == 0
-        
+        dp[0][-nums[0] + offset] += 1  // here use '+=' instead of '=' in case of nums[0] == 0
+
         for i in stride(from: 1, to: nums.count, by: 1) {
             for j in -sum...sum {
                 if j + nums[i] <= sum {
@@ -50,7 +50,7 @@ class Solution {
                 }
             }
         }
-        
+
         return dp[nums.count - 1][S + offset]
     }
 

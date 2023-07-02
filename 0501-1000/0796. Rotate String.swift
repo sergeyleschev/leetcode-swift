@@ -16,6 +16,8 @@ class Solution {
     // Note:
     // s and goal will have length at most 100.
 
-    func rotateString(_ A: String, _ B: String) -> Bool { (A.count == B.count && (B + B).contains(A)) || (A.count == 0 && B.count == 0) }
-    
+    func rotateString(_ A: String, _ B: String) -> Bool {
+        (A.count == B.count && (B + B).contains(A)) || (A.count == 0 && B.count == 0)
+    }
+
 }

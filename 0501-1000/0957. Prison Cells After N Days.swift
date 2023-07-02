@@ -43,7 +43,7 @@ class Solution {
     // - Complexity:
     //   - time: O(1), only constant time is used.
     //   - space: O(1), only constant space is used.
-    
+
     func prisonAfterNDays(_ cells: [Int], _ N: Int) -> [Int] {
         var ans = cells
 

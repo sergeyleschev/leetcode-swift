@@ -20,16 +20,16 @@ class Solution {
     // 1 <= k <= 10^4
 
     func reverseStr(_ s: String, _ k: Int) -> String {
-        if k == 0{
+        if k == 0 {
             return s
         } else if k > s.count {
             return String(s.reversed())
         }
-        
+
         var index = 1
         var temp = ""
         var result = ""
-        
+
         for char in s {
             temp += String(char)
             if index == k {
@@ -48,8 +48,8 @@ class Solution {
         } else {
             result += temp
         }
-        
+
         return result
     }
-    
+
 }

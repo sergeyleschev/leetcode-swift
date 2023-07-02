@@ -21,7 +21,7 @@ class Solution {
     // Example 2:
     // Input: board = [[1,1],[1,0]]
     // Output: [[1,1],[1,1]]
-     
+
     // Constraints:
     // m == board.length
     // n == board[i].length
@@ -40,32 +40,34 @@ class Solution {
         let neighbors = [0, 1, -1]
         let rows = board.count
         let cols = board[0].count
-        
+
         for row in 0..<rows {
             for col in 0..<cols {
                 var liveNeighbors = 0
-                
+
                 for i in 0..<3 {
                     for j in 0..<3 {
                         guard !(neighbors[i] == 0 && neighbors[j] == 0) else { continue }
                         let r = row + neighbors[i]
                         let c = col + neighbors[j]
-                        
-                        guard r < rows, r >= 0, c < cols, c >= 0, abs(board[r][c]) == 1 else { continue }
+
+                        guard r < rows, r >= 0, c < cols, c >= 0, abs(board[r][c]) == 1 else {
+                            continue
+                        }
                         liveNeighbors += 1
                     }
                 }
-                
-                if board[row][col] == 1, (liveNeighbors < 2 || liveNeighbors > 3) {
+
+                if board[row][col] == 1, liveNeighbors < 2 || liveNeighbors > 3 {
                     board[row][col] = -1
                 }
-                
+
                 if board[row][col] == 0, liveNeighbors == 3 {
                     board[row][col] = 2
                 }
             }
         }
-        
+
         for row in 0..<rows {
             for col in 0..<cols {
                 board[row][col] = board[row][col] > 0 ? 1 : 0

@@ -33,7 +33,7 @@ class Solution {
     // Example 5:
     // Input: nums = [1], target = 0
     // Output: 0
-     
+
     // Constraints:
     // 1 <= nums.length <= 10^4
     // -10^4 <= nums[i] <= 10^4

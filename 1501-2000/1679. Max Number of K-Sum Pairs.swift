@@ -36,11 +36,11 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the nums.
     //   - space: O(n), where n is the length of the nums.
-    
+
     func maxOperations(_ nums: [Int], _ k: Int) -> Int {
         var dict = [Int: Int]()
         var ans = 0
-        
+
         for num in nums {
             if let val = dict[k - num] {
                 dict[k - num] = val > 1 ? val - 1 : nil
@@ -49,7 +49,7 @@ class Solution {
                 dict[num, default: 0] += 1
             }
         }
-        
+
         return ans
     }
 

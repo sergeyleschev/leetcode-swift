@@ -16,16 +16,16 @@ class Solution {
     // Example 1:
     // Input: arr = [4,2,3,0,3,1,2], start = 5
     // Output: true
-    // Explanation: 
-    // All possible ways to reach at index 3 with value 0 are: 
-    // index 5 -> index 4 -> index 1 -> index 3 
-    // index 5 -> index 6 -> index 4 -> index 1 -> index 3 
+    // Explanation:
+    // All possible ways to reach at index 3 with value 0 are:
+    // index 5 -> index 4 -> index 1 -> index 3
+    // index 5 -> index 6 -> index 4 -> index 1 -> index 3
 
     // Example 2:
     // Input: arr = [4,2,3,0,3,1,2], start = 0
-    // Output: true 
-    // Explanation: 
-    // One possible way to reach at index 3 with value 0 is: 
+    // Output: true
+    // Explanation:
+    // One possible way to reach at index 3 with value 0 is:
     // index 0 -> index 4 -> index 1 -> index 3
 
     // Example 3:
@@ -41,12 +41,11 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the arr.
     //   - space: O(n), where n is the length of the arr.
-    
+
     func canReach(_ arr: [Int], _ start: Int) -> Bool {
         var arr = arr
         return dfs(&arr, arr.count, start)
     }
-
 
     private func dfs(_ arr: inout [Int], _ n: Int, _ start: Int) -> Bool {
         guard start >= 0, start < n, arr[start] >= 0 else { return false }

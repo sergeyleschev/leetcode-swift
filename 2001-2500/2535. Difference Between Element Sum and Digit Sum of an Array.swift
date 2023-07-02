@@ -5,7 +5,7 @@ class Solution {
     func differenceOfSum(_ nums: [Int]) -> Int {
         var elementSum = 0
         var digitSum = 0
-        
+
         for num in nums {
             elementSum += num
             var currentNum = num
@@ -14,7 +14,7 @@ class Solution {
                 currentNum /= 10
             }
         }
-        
+
         return abs(elementSum - digitSum)
     }
 }

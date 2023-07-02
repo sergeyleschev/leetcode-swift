@@ -31,7 +31,7 @@ class SummaryRanges {
     // Constraints:
     // 0 <= val <= 10^4
     // At most 3 * 10^4 calls will be made to addNum and getIntervals.
-     
+
     // Follow up: What if there are lots of merges and the number of disjoint intervals is small compared to the size of the data stream?
 
     // - Complexity:
@@ -40,23 +40,24 @@ class SummaryRanges {
 
     var intervals: [[Int]]
 
-
     /** Initialize your data structure here. */
     init() {
         intervals = [[Int]]()
     }
 
-
     func addNum(_ val: Int) {
-        if intervals.isEmpty { intervals.append([val, val]); return }
+        if intervals.isEmpty {
+            intervals.append([val, val])
+            return
+        }
 
         var left = 0
-        var right = intervals.count-1
+        var right = intervals.count - 1
 
         while left < right {
-            let mid = left + (right-left)/2
+            let mid = left + (right - left) / 2
             if intervals[mid][0] < val {
-                left = mid+1
+                left = mid + 1
             } else {
                 right = mid
             }
@@ -65,7 +66,7 @@ class SummaryRanges {
         if intervals[left][0] == val { return }
         var cur = [val, val]
 
-        var index = intervals[left][0] < val ? left : left-1
+        var index = intervals[left][0] < val ? left : left - 1
         while index >= 0 {
             // merge left side
             if cur[0] <= intervals[index][1] + 1 {
@@ -79,7 +80,9 @@ class SummaryRanges {
                 )
                 intervals.remove(at: index)
                 index -= 1
-            } else { break }
+            } else {
+                break
+            }
         }
 
         index += 1
@@ -89,24 +92,25 @@ class SummaryRanges {
                     intervals[index][1],
                     cur[1]
                 )
-                cur[0] = min (
+                cur[0] = min(
                     intervals[index][0],
                     cur[0]
                 )
                 intervals.remove(at: index)
-            } else { break }
+            } else {
+                break
+            }
         }
 
         if index == intervals.count {
             intervals.append(cur)
         } else if intervals[index][0] < cur[0] {
-            intervals.insert(cur, at: index+1)
+            intervals.insert(cur, at: index + 1)
         } else {
             intervals.insert(cur, at: index)
         }
     }
 
-    
     func getIntervals() -> [[Int]] { intervals }
 
 }

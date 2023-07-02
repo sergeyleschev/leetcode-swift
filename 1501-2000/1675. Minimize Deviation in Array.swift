@@ -44,14 +44,14 @@ class Solution {
         }
 
         for i in nums {
-            if i % 2 == 1 { // i is odd
+            if i % 2 == 1 {  // i is odd
                 if 2 * i > maxOdd {
-                    dev.append((2 * i - maxOdd, maxOdd-i))
+                    dev.append((2 * i - maxOdd, maxOdd - i))
                 } else {
                     dev.append((Int.max, maxOdd - 2 * i))
                 }
             } else {
-                if i < maxOdd { // i is even
+                if i < maxOdd {  // i is even
                     dev.append((Int.max, maxOdd - i))
                 } else {
                     var j = i
@@ -61,8 +61,8 @@ class Solution {
             }
         }
 
-        dev.sort{ $0 > $1 }
-        
+        dev.sort { $0 > $1 }
+
         if dev.count == 0 { return 0 }
         var maxDown: [Int] = Array(repeating: 0, count: dev.count)
 
@@ -72,7 +72,9 @@ class Solution {
         }
 
         var mn = (min(maxDown.last!, dev[0].0))
-        for i in 0..<maxDown.count - 1 where dev[i + 1].0 != Int.max { mn = min(mn, (maxDown[i] + dev[i + 1].0)) }
+        for i in 0..<maxDown.count - 1 where dev[i + 1].0 != Int.max {
+            mn = min(mn, (maxDown[i] + dev[i + 1].0))
+        }
         return Int(mn)
     }
 

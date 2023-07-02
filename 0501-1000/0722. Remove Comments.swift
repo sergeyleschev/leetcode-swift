@@ -24,20 +24,20 @@ class Solution {
     // Explanation: The line by line code is visualized as below:
     // /*Test program */
     // int main()
-    // { 
-    //   // variable declaration 
+    // {
+    //   // variable declaration
     // int a, b, c;
     // /* This is a test
-    //    multiline  
-    //    comment for 
+    //    multiline
+    //    comment for
     //    testing */
     // a = b + c;
     // }
     // The string /* denotes a block comment, including line 1 and lines 6-9. The string // denotes line 4 as comments.
     // The line by line output code is visualized as below:
     // int main()
-    // { 
-      
+    // {
+
     // int a, b, c;
     // a = b + c;
     // }
@@ -46,7 +46,7 @@ class Solution {
     // Input: source = ["a/*comment", "line", "more_comment*/b"]
     // Output: ["ab"]
     // Explanation: The original source string is "a/*comment\nline\nmore_comment*/b", where we have bolded the newline characters.  After deletion, the implicit newline characters are deleted, leaving the string "ab", which when delimited by newline characters becomes ["ab"].
-     
+
     // Constraints:
     // 1 <= source.length <= 100
     // 0 <= source[i].length <= 80
@@ -56,14 +56,14 @@ class Solution {
 
     func removeComments(_ source: [String]) -> [String] {
         var sourceCode = ""
-        var ans =  [String]()
+        var ans = [String]()
 
         for s in source {
             sourceCode += s
             sourceCode += "#"
         }
         var sourceCodeWithoutComments = ""
-        
+
         while !sourceCode.isEmpty {
             if sourceCode.hasPrefix("//") {
                 sourceCode.removeFirst(2)
@@ -80,10 +80,10 @@ class Solution {
                 sourceCodeWithoutComments.append(sourceCode.removeFirst())
             }
         }
-        
+
         let lines = sourceCodeWithoutComments.split(separator: "#")
         for line in lines {
-            if  !line.isEmpty {
+            if !line.isEmpty {
                 ans.append(String(line))
             }
         }

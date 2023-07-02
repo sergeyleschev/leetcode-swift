@@ -52,9 +52,12 @@ class Solution {
         let grid = strs.map { [Character]($0) }
 
         for c in 0..<grid[0].count {
-            for r in 0..<grid.count - 1 where grid[r][c] > grid[r + 1][c] { num += 1; break }
+            for r in 0..<grid.count - 1 where grid[r][c] > grid[r + 1][c] {
+                num += 1
+                break
+            }
         }
-        
+
         return num
     }
 

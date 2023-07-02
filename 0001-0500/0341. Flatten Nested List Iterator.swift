@@ -1,30 +1,28 @@
-/**
- * // This is the interface that allows for creating nested lists.
- * // You should not implement it, or speculate about its implementation
- * class NestedInteger {
- *     // Return true if this NestedInteger holds a single integer, rather than a nested list.
- *     public func isInteger() -> Bool
- *
- *     // Return the single integer that this NestedInteger holds, if it holds a single integer
- *     // The result is undefined if this NestedInteger holds a nested list
- *     public func getInteger() -> Int
- *
- *     // Set this NestedInteger to hold a single integer.
- *     public func setInteger(value: Int)
- *
- *     // Set this NestedInteger to hold a nested list and adds a nested integer to it.
- *     public func add(elem: NestedInteger)
- *
- *     // Return the nested list that this NestedInteger holds, if it holds a nested list
- *     // The result is undefined if this NestedInteger holds a single integer
- *     public func getList() -> [NestedInteger]
- * }
- */
+/// // This is the interface that allows for creating nested lists.
+/// // You should not implement it, or speculate about its implementation
+/// class NestedInteger {
+///     // Return true if this NestedInteger holds a single integer, rather than a nested list.
+///     public func isInteger() -> Bool
+///
+///     // Return the single integer that this NestedInteger holds, if it holds a single integer
+///     // The result is undefined if this NestedInteger holds a nested list
+///     public func getInteger() -> Int
+///
+///     // Set this NestedInteger to hold a single integer.
+///     public func setInteger(value: Int)
+///
+///     // Set this NestedInteger to hold a nested list and adds a nested integer to it.
+///     public func add(elem: NestedInteger)
+///
+///     // Return the nested list that this NestedInteger holds, if it holds a nested list
+///     // The result is undefined if this NestedInteger holds a single integer
+///     public func getList() -> [NestedInteger]
+/// }
 
 class NestedIterator {
 
     // Solution by Sergey Leschev
-    
+
     // 341. Flatten Nested List Iterator
     // You are given a nested list of integers nestedList. Each element is either an integer or a list whose elements may also be integers or other lists. Implement an iterator to flatten it.
     // Implement the NestedIterator class:
@@ -48,14 +46,13 @@ class NestedIterator {
     // Input: nestedList = [1,[4,[6]]]
     // Output: [1,4,6]
     // Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: [1,4,6].
-     
+
     // Constraints:
     // 1 <= nestedList.length <= 500
     // The values of the integers in the nested list is in the range [-10^6, 10^6].
 
     private var stack: [Int]
-    
-    
+
     init(_ nestedList: [NestedInteger]) {
         stack = []
         var nestedList = nestedList
@@ -68,17 +65,15 @@ class NestedIterator {
             }
         }
     }
-    
-    
+
     func next() -> Int {
         return stack.removeFirst()
     }
-    
-    
+
     func hasNext() -> Bool {
         return !stack.isEmpty
     }
-    
+
 }
 
 /**

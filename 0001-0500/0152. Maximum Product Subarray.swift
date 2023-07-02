@@ -8,7 +8,7 @@ class Solution {
     // A subarray is a contiguous subsequence of the array.
 
     // Finds the contiguous subarray within an array that has the largest product.
-    
+
     // - Parameter nums: The array of integers.
     // - Returns: The largest product.
 
@@ -30,7 +30,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of nums.
     //   - space: O(1), only constant space is used.
-    
+
     func maxProduct(_ nums: [Int]) -> Int {
         guard !nums.isEmpty else { return 0 }
 

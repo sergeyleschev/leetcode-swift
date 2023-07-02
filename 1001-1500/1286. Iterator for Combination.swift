@@ -22,7 +22,7 @@ class CombinationIterator {
     // itr.hasNext(); // return True
     // itr.next();    // return "bc"
     // itr.hasNext(); // return False
-     
+
     // Constraints:
     // 1 <= combinationLength <= characters.length <= 15
     // All the characters of characters are unique.
@@ -30,7 +30,6 @@ class CombinationIterator {
     // It's guaranteed that all calls of the function next are valid.
 
     private var combinations: [String]
-
 
     // Initialization of data structures.
     // - Parameters:
@@ -46,7 +45,7 @@ class CombinationIterator {
         let n = characters.count
         let k = combinationLength
 
-        for bitmask in 0..<(1<<n) {
+        for bitmask in 0..<(1 << n) {
             guard bitmask.nonzeroBitCount == k else { continue }
 
             var current = ""
@@ -59,16 +58,14 @@ class CombinationIterator {
         }
     }
 
-
     // Gets the next combination of length combinationLength in lexicographical order.
     // - Returns: The next combination.
 
     // - Complexity:
     //   - time: O(1), only constant time is used.
     //   - space: O(1), only constant space is used.
-    
-    func next() -> String { combinations.removeLast() }
 
+    func next() -> String { combinations.removeLast() }
 
     // Checks if the next combination exists.
     // - Returns: True if the next combination exists, otherwise returns false.
@@ -76,7 +73,7 @@ class CombinationIterator {
     // - Complexity:
     //   - time: O(1), only constant time is used.
     //   - space: O(1), only constant space is used.
-    
+
     func hasNext() -> Bool { !combinations.isEmpty }
 
 }

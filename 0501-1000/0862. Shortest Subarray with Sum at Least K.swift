@@ -47,7 +47,9 @@ class Solution {
 
         for i in 0..<sum.count {
             while !list.isEmpty, sum[i] <= sum[list.last!] { list.removeLast() }
-            while !list.isEmpty, sum[i] - sum[list.first!] >= K { len = min(len, i - list.removeFirst()) }
+            while !list.isEmpty, sum[i] - sum[list.first!] >= K {
+                len = min(len, i - list.removeFirst())
+            }
             list.append(i)
         }
 

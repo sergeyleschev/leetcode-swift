@@ -26,20 +26,17 @@ class Solution {
     // -10^6 <= nums[i] <= 10^6
     // All the elements of nums are unique.
     // At most 5 * 10^4 calls will be made to reset and shuffle.
-        
+
     private let nums: [Int]
 
-    
     init(_ nums: [Int]) {
         self.nums = nums
     }
-        
-    
+
     /** Resets the array to its original configuration and return it. */
     func reset() -> [Int] {
         return nums
     }
-        
 
     /** Returns a random shuffling of the array. */
     func shuffle() -> [Int] {
@@ -50,7 +47,7 @@ class Solution {
         }
         return shuffled
     }
-    
+
 }
 
 /**

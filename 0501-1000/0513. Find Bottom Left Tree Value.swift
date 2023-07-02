@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -33,17 +31,16 @@ class Solution {
     // -2^31 <= Node.val <= 2^31 - 1
 
     func findBottomLeftValue(_ root: TreeNode?) -> Int {
-        var res:(depth: Int, value: Int) = (0, 0)
+        var res: (depth: Int, value: Int) = (0, 0)
         return findOperation(root, depth: 1, res: &res)
     }
-    
-    
-    func findOperation(_ root: TreeNode?, depth: Int, res: inout (depth: Int, value: Int)) -> Int{
+
+    func findOperation(_ root: TreeNode?, depth: Int, res: inout (depth: Int, value: Int)) -> Int {
         if res.depth < depth {
             res.value = (root?.val)!
             res.depth = depth
         }
-        
+
         if root?.left != nil { let _ = findOperation(root?.left, depth: depth + 1, res: &res) }
         if root?.right != nil { let _ = findOperation(root?.right, depth: depth + 1, res: &res) }
         return res.value

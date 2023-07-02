@@ -32,21 +32,23 @@ class Solution {
     // The words in sentence1 and sentence2 are separated by a single space.
 
     func areSentencesSimilar(_ sentence1: String, _ sentence2: String) -> Bool {
-        let wordsOfSentance1 = sentence1.split(separator: " ").map { String($0) }
-        let wordsOfSentance2 = sentence2.split(separator: " ").map { String($0) }
-        guard wordsOfSentance1.count != wordsOfSentance2.count else { return sentence1 == sentence2 }
-        return wordsOfSentance1.count < wordsOfSentance2.count ? check(wordsOfSentance2, wordsOfSentance1) : check(wordsOfSentance1, wordsOfSentance2)
+        let wordsOfSentence1 = sentence1.split(separator: " ").map { String($0) }
+        let wordsOfSentence2 = sentence2.split(separator: " ").map { String($0) }
+        guard wordsOfSentence1.count != wordsOfSentence2.count else {
+            return sentence1 == sentence2
+        }
+        return wordsOfSentence1.count < wordsOfSentence2.count
+            ? check(wordsOfSentence2, wordsOfSentence1) : check(wordsOfSentence1, wordsOfSentence2)
     }
 
-
     private func check(_ long: [String], _ short: [String]) -> Bool {
-        guard !long.hasSuffix(short)  && !long.hasPreffix(short) else { return true }
+        guard !long.hasSuffix(short) && !long.hasPrefix(short) else { return true }
         var left = [String]()
         var right = short
 
         while !right.isEmpty {
             left.append(right.removeFirst())
-            guard long.hasPreffix(left) else { continue }
+            guard long.hasPrefix(left) else { continue }
             guard !long.hasSuffix(right) else { return true }
         }
         return false
@@ -54,17 +56,16 @@ class Solution {
 
 }
 
-
 extension Array where Element == String {
-    func hasPreffix(_ preffix: [String]) -> Bool {
-        for idx in 0..<preffix.count {
-            guard self[idx] == preffix[idx] else { return false }
+    func hasPrefix(_ Prefix: [String]) -> Bool {
+        for idx in 0..<Prefix.count {
+            guard self[idx] == Prefix[idx] else { return false }
         }
         return true
     }
 
     func hasSuffix(_ suffix: [String]) -> Bool {
-        for idx in 0..<suffix.count { 
+        for idx in 0..<suffix.count {
             guard self[count - suffix.count + idx] == suffix[idx] else { return false }
         }
         return true

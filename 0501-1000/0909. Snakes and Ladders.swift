@@ -21,7 +21,7 @@ class Solution {
     // [-1,-1,-1,-1,-1,-1],
     // [-1,15,-1,-1,-1,-1]]
     // Output: 4
-    // Explanation: 
+    // Explanation:
     // At the beginning, you start at square 1 [at row 5, column 0].
     // You decide to move to square 2, and must take the ladder to square 15.
     // You then decide to move to square 17 (row 3, column 5), and must take the snake to square 13.
@@ -35,26 +35,25 @@ class Solution {
     // The board square with number 1 has no snake or ladder.
     // The board square with number N*N has no snake or ladder.
 
-   func rowAndCol(s: Int, N: Int) -> (Int, Int) {
+    func rowAndCol(s: Int, N: Int) -> (Int, Int) {
         var s = s - 1
         var row = N - (s / N) - 1
         var col = row % 2 != N % 2 ? s % N : N - 1 - (s % N)
         return (row, col)
     }
 
-
     func snakesAndLadders(_ board: [[Int]]) -> Int {
         var N = board.count
         var cache = [1: 0]
         var queue = [Int]()
-        
+
         queue.append(1)
 
         while !queue.isEmpty {
-            var curr = queue.removeFirst() // pop
+            var curr = queue.removeFirst()  // pop
             if curr == N * N { return cache[curr]! }
 
-            for var next in curr+1...min(curr + 6, N * N) {
+            for var next in curr + 1...min(curr + 6, N * N) {
                 let rc = rowAndCol(s: next, N: N)
                 if board[rc.0][rc.1] != -1 { next = board[rc.0][rc.1] }
                 if cache[next] == nil {

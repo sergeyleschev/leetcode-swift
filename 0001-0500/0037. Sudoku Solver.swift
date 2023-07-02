@@ -57,11 +57,10 @@ class Solution {
             }
             loop = tmp
         } while loop
-        
+
         //  2.
         backtrack([], board, 0)
     }
-
 
     func fill(_ board: inout [[Character]], _ x: Int, _ y: Int) -> Bool {
         let chars = available(board, x, y)
@@ -73,34 +72,32 @@ class Solution {
         }
     }
 
-
     func available(_ board: [[Character]], _ x: Int, _ y: Int) -> [Character] {
         if board[x][y] != "." { return [board[x][y]] }
 
         // [[0, 1, 2],
         //  [3, 4, 5],
         //  [6, 7, 8],]
-        let j = (x / 3) * 3 + (y / 3)   
+        let j = (x / 3) * 3 + (y / 3)
         var res: [Character] = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
         var c: Character
 
         for i in 0..<9 {
             c = board[x][i]
             if let index = res.firstIndex(of: c) { res.remove(at: index) }
-        
+
             c = board[i][y]
             if let index = res.firstIndex(of: c) { res.remove(at: index) }
-            
+
             let x = (j / 3) * 3 + i / 3
             let y = (j % 3) * 3 + i % 3
-            
+
             c = board[x][y]
             if let index = res.firstIndex(of: c) { res.remove(at: index) }
         }
 
         return res
     }
-
 
     func isValidSudoku(_ board: [[Character]]) -> Bool {
         func isInvalid(_ box: [Character]) -> Bool {
@@ -116,7 +113,9 @@ class Solution {
             if isInvalid(board.map({ $0[i] })) { return false }
             let col = (i % 3) * 3
             let row = (i / 3) * 3
-            let box = Array(board[row][col..<col + 3]) + Array(board[row + 1][col..<col + 3]) + Array(board[row + 2][col..<col + 3])
+            let box =
+                Array(board[row][col..<col + 3]) + Array(board[row + 1][col..<col + 3])
+                + Array(board[row + 2][col..<col + 3])
             if isInvalid(box) { return false }
         }
         return true

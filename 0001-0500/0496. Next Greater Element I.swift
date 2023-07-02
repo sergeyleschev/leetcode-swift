@@ -26,19 +26,19 @@ class Solution {
     // 1 <= nums1.length <= nums2.length <= 1000
     // 0 <= nums1[i], nums2[i] <= 10^4
     // All integers in nums1 and nums2 are unique.
-    // All the integers of nums1 also appear in nums2. 
+    // All the integers of nums1 also appear in nums2.
 
     // Follow up: Could you find an O(nums1.length + nums2.length) solution?
 
     func nextGreaterElement(_ findNums: [Int], _ nums: [Int]) -> [Int] {
         var dict = [Int: Int]()
         var stack = [Int]()
-        
+
         for n in nums {
             while !stack.isEmpty && stack.last! < n { dict[stack.removeLast()] = n }
             stack.append(n)
         }
-        
+
         return findNums.map { dict[$0] ?? -1 }
     }
 

@@ -20,14 +20,14 @@ class Solution {
         if num == 0 { return "0" }
         var result = ""
         var n = abs(num)
-        
+
         while n > 0 {
             let remainder = n % 7
             result = "\(remainder)" + result
             n /= 7
         }
-        
+
         return num < 0 ? "-" + result : result
     }
-    
+
 }

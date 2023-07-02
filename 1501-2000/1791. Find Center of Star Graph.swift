@@ -26,7 +26,7 @@ class Solution {
     func findCenter(_ edges: [[Int]]) -> Int {
         let n = edges.count + 1
         var degree = [Int](repeating: 0, count: n + 1)
-        
+
         for e in edges {
             degree[e[0]] += 1
             degree[e[1]] += 1

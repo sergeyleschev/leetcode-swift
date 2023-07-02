@@ -4,9 +4,9 @@ class Solution {
 
     // 866. Prime Palindrome
     // Find the smallest prime palindrome greater than or equal to n.
-    // Recall that a number is prime if it's only divisors are 1 and itself, and it is greater than 1. 
+    // Recall that a number is prime if it's only divisors are 1 and itself, and it is greater than 1.
     // For example, 2,3,5,7,11 and 13 are primes.
-    // Recall that a number is a palindrome if it reads the same from left to right as it does from right to left. 
+    // Recall that a number is a palindrome if it reads the same from left to right as it does from right to left.
     // For example, 12321 is a palindrome.
 
     // Example 1:
@@ -27,24 +27,22 @@ class Solution {
 
     func primePalindrome(_ N: Int) -> Int {
         for num in arr where num >= N { return num }
-        return 100030001
+        return 100_030_001
     }
 }
 
-
 let arr = createPalindromeNumbers(8)
-
 
 func createPalindromeNumbers(_ count: Int) -> [Int] {
     var ans: [Int] = [11, 33, 77, 99]
     guard count != 2 else { return ans }
-    var last: [[Int]] = ans.map{ $0.toArr }
+    var last: [[Int]] = ans.map { $0.toArr }
 
     ans.insert(7, at: 0)
     ans.insert(5, at: 0)
     ans.insert(3, at: 0)
     ans.insert(2, at: 0)
-        
+
     for _ in 3...count {
         let length = last.count
         for _ in 0..<length {
@@ -64,11 +62,10 @@ func createPalindromeNumbers(_ count: Int) -> [Int] {
         }
         ans.append(contentsOf: last.map({ $0.toNumber }))
     }
-    ans = ans.filter{ $0.isPrimeNumber }
+    ans = ans.filter { $0.isPrimeNumber }
     ans.sort()
     return ans
 }
-
 
 extension Int {
     var toArr: [Int] {
@@ -81,9 +78,7 @@ extension Int {
         return ans
     }
 
-
     var isPalindrome: Bool { toArr.reversed() == toArr }
-
 
     var isPrimeNumber: Bool {
         if self < 2 { return true }
@@ -96,7 +91,6 @@ extension Int {
         return true
     }
 }
-
 
 extension Array where Element == Int {
     var toNumber: Int {

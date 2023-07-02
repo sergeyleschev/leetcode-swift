@@ -10,13 +10,13 @@ class Solution {
     // Example 1:
     // Input: words = ["cat","bt","hat","tree"], chars = "atach"
     // Output: 6
-    // Explanation: 
+    // Explanation:
     // The strings that can be formed are "cat" and "hat" so the answer is 3 + 3 = 6.
 
     // Example 2:
     // Input: words = ["hello","world","leetcode"], chars = "welldonehoneyr"
     // Output: 10
-    // Explanation: 
+    // Explanation:
     // The strings that can be formed are "hello" and "world" so the answer is 5 + 5 = 10.
 
     // Note:
@@ -25,9 +25,10 @@ class Solution {
     // All strings contain lowercase English letters only.
 
     func countCharacters(_ words: [String], _ chars: String) -> Int {
-        var charDict: [Character: Int] = [:], ans = 0
+        var charDict: [Character: Int] = [:]
+        var ans = 0
         for c in chars { charDict[c] = (charDict[c] ?? 0) + 1 }
-        
+
         outer: for word in words {
             var copyDict = charDict
             for c in word {
@@ -36,8 +37,8 @@ class Solution {
             }
             ans += word.count
         }
-        
+
         return ans
     }
-    
+
 }

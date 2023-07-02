@@ -27,7 +27,7 @@ class Solution {
     // Example 2:
     // Input: n = 2
     // Output: false
-     
+
     // Constraints:
     // 1 <= n <= 2^31 - 1
 
@@ -38,16 +38,15 @@ class Solution {
     func isHappy(_ n: Int) -> Bool {
         var n = n
         var seen = Set<Int>()
-        
+
         while n != 1, !seen.contains(n) {
             seen.insert(n)
             n = getNext(n)
         }
-        
+
         return n == 1
     }
-    
-    
+
     private func getNext(_ n: Int) -> Int {
         var n = n
         var ans = 0

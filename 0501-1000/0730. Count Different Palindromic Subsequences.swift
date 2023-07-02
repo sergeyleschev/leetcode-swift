@@ -31,17 +31,17 @@ class Solution {
         let n = S.count
         if n == 1 { return 1 }
 
-        let mod = Int(1e9+7)
+        let mod = Int(1e9 + 7)
         var S = Array(S)
         var dp = Array(repeating: Array(repeating: 0, count: n), count: n)
 
         for i in 0..<n { dp[i][i] = 1 }
 
         for len in 1..<n {
-            for i in 0..<n-len {
+            for i in 0..<n - len {
                 let j = i + len
                 if S[i] != S[j] {
-                    dp[i][j] = dp[i + 1][j] + dp[i][j-1] - dp[i + 1][j - 1]
+                    dp[i][j] = dp[i + 1][j] + dp[i][j - 1] - dp[i + 1][j - 1]
                 } else {
                     var left = i + 1
                     var right = j - 1

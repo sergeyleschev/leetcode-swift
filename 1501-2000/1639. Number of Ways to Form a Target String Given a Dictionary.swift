@@ -7,7 +7,7 @@ class Solution {
     // Your task is to form target using the given words under the following rules:
     // target should be formed from left to right.
     // To form the ith character (0-indexed) of target, you can choose the kth character of the jth string in words if target[i] = words[j][k].
-    // Once you use the kth character of the jth string of words, you can no longer use the xth character of any string in words where x <= k. In other words, all characters to the left of or at index k become unusuable for every string.
+    // Once you use the kth character of the jth string of words, you can no longer use the xth character of any string in words where x <= k. In other words, all characters to the left of or at index k become unusable for every string.
     // Repeat the process until you form the string target.
     // Notice that you can use multiple characters from the same string in words provided the conditions above are met.
 
@@ -63,7 +63,7 @@ class Solution {
         var target = Array(target)
         let n = words[0].count
         let k = target.count
-        var charArr = Array(repeating: Array(repeating: 0, count: n), count: 26) // charArr[i][j] means, how many char i at word[j] in words
+        var charArr = Array(repeating: Array(repeating: 0, count: n), count: 26)  // charArr[i][j] means, how many char i at word[j] in words
         let charA = Character("a").asciiValue!
         var dp = Array(repeating: Array(repeating: 0, count: k), count: n)  // dp[i][j], number of ways use 0...i index to form target[0...k]
         var index = 0
@@ -82,10 +82,12 @@ class Solution {
                 let c = Int(target[j].asciiValue! - charA)
                 let val = charArr[c][i]
                 if val > 0, temp == -1 { temp = i }
-                dp[i][j] = (dp[i][j] + (i > 0 ? dp[i - 1][j] : 0) + val * (i > 0 && j > 0 ? dp[i - 1][j - 1] : 1)) % mod
+                dp[i][j] =
+                    (dp[i][j] + (i > 0 ? dp[i - 1][j] : 0) + val
+                        * (i > 0 && j > 0 ? dp[i - 1][j - 1] : 1)) % mod
             }
 
-            if temp == -1 { return 0 } // temp == -1 means cannot find next proper index
+            if temp == -1 { return 0 }  // temp == -1 means cannot find next proper index
             index = temp + 1
         }
 

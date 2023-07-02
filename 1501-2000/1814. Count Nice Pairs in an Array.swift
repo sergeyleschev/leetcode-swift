@@ -25,9 +25,8 @@ class Solution {
 
     private let mod = 1_000_000_007
 
-
     func countNicePairs(_ nums: [Int]) -> Int {
-        var counter = [Int:Int]()
+        var counter = [Int: Int]()
         for num in nums { counter[num - Int(String("\(num)".reversed()))!, default: 0] += 1 }
         var cnt = 0
 

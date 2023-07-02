@@ -47,7 +47,7 @@ class Solution {
     func largestNumber(_ cost: [Int], _ target: Int) -> String {
         var dp = [Int](repeating: -10000, count: target + 1)
         var ans = ""
-        
+
         dp[0] = 0
         for t in 1...target {
             var cnt = -10000
@@ -63,7 +63,7 @@ class Solution {
                 curCost -= cost[i]
             }
         }
-        
+
         return ans
     }
 

@@ -39,7 +39,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the pattern and the str.
     //   - space: O(n), where n is the length of the pattern and the str.
-    
+
     func wordPattern(_ pattern: String, _ str: String) -> Bool {
         var dict = [String: Int]()
         let str = str.split(separator: " ")

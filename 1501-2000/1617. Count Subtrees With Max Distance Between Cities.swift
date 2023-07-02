@@ -38,7 +38,6 @@ class Solution {
         var adj = [Set<Int>](repeating: .init(), count: n + 1)
         var ans = [Int](repeating: 0, count: n - 1)
 
-
         func isConn(_ av: Set<Int>) -> Bool {
             if av.isEmpty { return false }
             var visited = [Bool](repeating: false, count: n + 1)
@@ -51,7 +50,6 @@ class Solution {
             dfs(av.first!)
             return av.allSatisfy { visited[$0] }
         }
-
 
         for e in edges {
             adj[e[0]].insert(e[1])

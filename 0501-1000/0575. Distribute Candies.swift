@@ -29,9 +29,9 @@ class Solution {
     // -10^5 <= candyType[i] <= 10^5
 
     func distributeCandies(_ candies: [Int]) -> Int {
-        var candDic = [Int : Int]()
+        var candDic = [Int: Int]()
         var count = 0
-        
+
         for candy in candies {
             candDic[candy] = count + 1
             count = candDic.count

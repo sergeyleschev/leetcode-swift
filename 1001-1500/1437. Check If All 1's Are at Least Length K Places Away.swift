@@ -37,18 +37,18 @@ class Solution {
 
     // - Complexity:
     //   - time: O(n), where n is the length of nums.
-    //   - space: O(1), only constant space is used.   
-    
+    //   - space: O(1), only constant space is used.
+
     func kLengthApart(_ nums: [Int], _ k: Int) -> Bool {
         guard k > 0 else { return true }
         var i: Int?
-        
+
         for (j, num) in nums.enumerated() {
             guard num == 1 else { continue }
             if let prev = i, j - prev <= k { return false }
             i = j
         }
-        
+
         return true
     }
 

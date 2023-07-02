@@ -43,5 +43,5 @@ class Solution {
 
         return next[N - 1] == -1 ? "" : String(chars[0...next[N - 1]])
     }
-    
+
 }

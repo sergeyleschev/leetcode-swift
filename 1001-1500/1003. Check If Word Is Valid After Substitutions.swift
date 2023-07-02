@@ -42,7 +42,7 @@ class Solution {
 
     func isValid(_ S: String) -> Bool {
         var stack: [Character] = []
-        
+
         for char in S {
             if char == "c" {
                 if stack.popLast() != "b" { return false }
@@ -51,7 +51,7 @@ class Solution {
                 stack.append(char)
             }
         }
-        
+
         return stack.isEmpty
     }
 

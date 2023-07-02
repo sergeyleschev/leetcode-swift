@@ -39,7 +39,7 @@ class Solution {
             }
 
         }
-        
+
         let sortKeys = map.keys.sorted()
         for key in sortKeys where result.count < K { result.append(contentsOf: map[key]!) }
         return result

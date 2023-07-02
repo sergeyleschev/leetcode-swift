@@ -33,5 +33,5 @@ class Solution {
     // n == nums.length
 
     func xorOperation(_ n: Int, _ start: Int) -> Int { (0..<n).map { start + $0 * 2 }.reduce(0, ^) }
-    
+
 }

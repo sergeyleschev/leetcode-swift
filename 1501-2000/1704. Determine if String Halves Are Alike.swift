@@ -36,7 +36,7 @@ class Solution {
         let chars = Array(s)
         let half = chars.count / 2
         let vowels: Set<Character> = ["a", "e", "u", "i", "o", "A", "E", "U", "I", "O"]
-        var count = 0;
+        var count = 0
 
         for i in 0..<half where vowels.contains(chars[i]) { count += 1 }
         for i in half..<chars.count where vowels.contains(chars[i]) { count -= 1 }

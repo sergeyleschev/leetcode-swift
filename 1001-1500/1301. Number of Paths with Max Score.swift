@@ -37,8 +37,8 @@ class Solution {
 
         dp[n - 1][n - 1] = [0, 1]
 
-        for i in stride(from: n-1, through: 0, by: -1) {
-            for j in stride(from: n-1, through: 0, by: -1) {
+        for i in stride(from: n - 1, through: 0, by: -1) {
+            for j in stride(from: n - 1, through: 0, by: -1) {
                 if board[i][j] == "S" || board[i][j] == "X" { continue }
                 for d in 0..<3 {
                     let r = i + dir[d]
@@ -46,7 +46,9 @@ class Solution {
 
                     if r <= n - 1, c <= n - 1 {
                         if dp[i][j][0] < dp[r][c][0] { dp[i][j] = [dp[r][c][0], 0] }
-                        if dp[i][j][0] == dp[r][c][0] { dp[i][j][1] = (dp[i][j][1] + dp[r][c][1]) % mod }
+                        if dp[i][j][0] == dp[r][c][0] {
+                            dp[i][j][1] = (dp[i][j][1] + dp[r][c][1]) % mod
+                        }
                     }
                 }
                 dp[i][j][0] += board[i][j].wholeNumberValue ?? 0

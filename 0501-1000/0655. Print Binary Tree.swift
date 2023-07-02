@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -29,13 +27,13 @@ class Solution {
 
     // Example 1:
     // Input: root = [1,2]
-    // Output: 
+    // Output:
     // [["","1",""],
     //  ["2","",""]]
 
     // Example 2:
     // Input: root = [1,2,3,null,4]
-    // Output: 
+    // Output:
     // [["","","","1","","",""],
     //  ["","2","","","","3",""],
     //  ["","","4","","","",""]]
@@ -47,29 +45,30 @@ class Solution {
 
     func getHeight(_ root: TreeNode?) -> Int {
         guard let root = root else { return 0 }
-        
+
         return 1 + max(getHeight(root.left), getHeight(root.right))
     }
-    
-    
-    func printTreeResult(_ root: TreeNode?, _ result: inout [[String]], _ level: Int, _ l: Int, _ r: Int) {
+
+    func printTreeResult(
+        _ root: TreeNode?, _ result: inout [[String]], _ level: Int, _ l: Int, _ r: Int
+    ) {
         guard let root = root else { return }
-        
+
         let mid = l + (r - l) / 2
         result[level][mid] = String(root.val)
         printTreeResult(root.left, &result, level + 1, l, mid - 1)
         printTreeResult(root.right, &result, level + 1, mid + 1, r)
     }
-    
-    
+
     func printTree(_ root: TreeNode?) -> [[String]] {
         let height = getHeight(root)
         let width = Int(pow(2, Double(height))) - 1
-        var result:[[String]] = Array(repeatElement(Array(repeatElement("", count: width)), count: height))
-        
+        var result: [[String]] = Array(
+            repeatElement(Array(repeatElement("", count: width)), count: height))
+
         printTreeResult(root, &result, 0, 0, width - 1)
-        
+
         return result
     }
-       
+
 }

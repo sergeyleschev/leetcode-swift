@@ -8,7 +8,7 @@ class Solution {
     // The height of each building must be a non-negative integer.
     // The height of the first building must be 0.
     // The height difference between any two adjacent buildings cannot exceed 1.
-    // Additionally, there are city restrictions on the maximum height of specific buildings. These restrictions are given as a 2D integer array restrictions where restrictions[i] = [idi, maxHeighti] indicates that building idi must have a height less than or equal to maxHeighti.
+    // Additionally, there are city restrictions on the maximum height of specific buildings. These restrictions are given as a 2D integer array restrictions where restrictions[i] = [idi, maxHeight(i)] indicates that building idi must have a height less than or equal to maxHeight(i).
     // It is guaranteed that each building will appear at most once in restrictions, and building 1 will not be in restrictions.
 
     // Return the maximum possible height of the tallest building.
@@ -36,7 +36,7 @@ class Solution {
     // 0 <= restrictions.length <= min(n - 1, 10^5)
     // 2 <= idi <= n
     // idi is unique.
-    // 0 <= maxHeighti <= 10^9
+    // 0 <= maxHeight(i) <= 10^9
 
     // Solution: 2 pointer
     // think simple scenario first, height can be either
@@ -50,7 +50,7 @@ class Solution {
     // We solve this issue by
     // first "propagating" restrictions from left to right and then from right to right.
     // ex: n = 8, restrictions = [[2,1], [5,5], [7,1]]
-    // first propogate from left to right to tighten the restriction [5,5] to [5,4] then right to left
+    // first propagate from left to right to tighten the restriction [5,5] to [5,4] then right to left
 
     // - Complexity:
     //   - time: O(size log size)
@@ -64,11 +64,15 @@ class Solution {
         let size = restrictions.count
 
         for i in 1..<size {
-            restrictions[i][1] = min(restrictions[i][1], restrictions[i - 1][1] + restrictions[i][0] - restrictions[i - 1][0])
+            restrictions[i][1] = min(
+                restrictions[i][1],
+                restrictions[i - 1][1] + restrictions[i][0] - restrictions[i - 1][0])
         }
 
         for i in stride(from: size - 2, through: 0, by: -1) {
-            restrictions[i][1] = min(restrictions[i][1], restrictions[i + 1][1] + restrictions[i + 1][0] - restrictions[i][0])
+            restrictions[i][1] = min(
+                restrictions[i][1],
+                restrictions[i + 1][1] + restrictions[i + 1][0] - restrictions[i][0])
         }
 
         for i in 1..<size {

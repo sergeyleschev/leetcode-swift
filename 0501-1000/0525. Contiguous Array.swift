@@ -21,7 +21,8 @@ class Solution {
 
     func findMaxLength(_ nums: [Int]) -> Int {
         guard nums.count > 0 else { return 0 }
-        var maxLen = 0, count = 0
+        var maxLen = 0
+        var count = 0
         var dict = [Int: Int]()
         dict[0] = -1
 
@@ -33,8 +34,8 @@ class Solution {
                 dict[count] = i
             }
         }
-        
+
         return maxLen
     }
-    
+
 }

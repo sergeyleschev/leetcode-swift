@@ -57,5 +57,5 @@ class Solution {
 
         return arr.max()!
     }
-    
+
 }

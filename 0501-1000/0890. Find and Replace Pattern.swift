@@ -10,7 +10,7 @@ class Solution {
     // Example 1:
     // Input: words = ["abc","deq","mee","aqq","dkd","ccc"], pattern = "abb"
     // Output: ["mee","aqq"]
-    // Explanation: "mee" matches the pattern because there is a permutation {a -> m, b -> e, ...}. 
+    // Explanation: "mee" matches the pattern because there is a permutation {a -> m, b -> e, ...}.
     // "ccc" does not match the pattern because {a -> c, b -> c, ...} is not a permutation, since a and b map to the same letter.
 
     // Example 2:
@@ -43,18 +43,25 @@ class Solution {
             var table = Array(repeating: -1, count: 26)
             var index = -1
             var flag = true
-            
+
             for (i, c) in word.unicodeScalars.enumerated() {
                 let v = Int(c.value) - 97
                 if table[v] == -1 {
                     index += 1
-                    if index >= chars.count { flag = false; break }
+                    if index >= chars.count {
+                        flag = false
+                        break
+                    }
                     table[v] = chars[index]
 
                 }
                 guard let indexs = rules[table[v]],
                     indexs.contains(i),
-                    index < chars.count else { flag = false; break }
+                    index < chars.count
+                else {
+                    flag = false
+                    break
+                }
             }
             if flag { ans.append(word) }
         }

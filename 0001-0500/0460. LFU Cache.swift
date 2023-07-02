@@ -37,27 +37,25 @@ class LFUCache {
     //                  // cache=[3,4], cnt(4)=1, cnt(3)=3
     // lfu.get(4);      // return 4
     //                  // cache=[3,4], cnt(4)=2, cnt(3)=3
-     
+
     // Constraints:
     // 0 <= capacity, key, value <= 10^4
     // At most 10^5 calls will be made to get and put.
-     
+
     // Follow up: Could you do both operations in O(1) time complexity?
 
     var capacity: Int
     var total: Int
     private var dict: [Int: (Int, Int, Int)]
     var t: Int
-    
-    
+
     init(_ capacity: Int) {
         self.capacity = capacity
         total = 0
         t = 0
         dict = [:]
     }
-    
-    
+
     func get(_ key: Int) -> Int {
         if let val = dict[key] {
             t += 1
@@ -67,8 +65,7 @@ class LFUCache {
             return -1
         }
     }
-    
-    
+
     func put(_ key: Int, _ value: Int) {
         if capacity > 0 {
             if total < capacity {
@@ -118,7 +115,7 @@ class LFUCache {
             }
         }
     }
-    
+
 }
 
 /**

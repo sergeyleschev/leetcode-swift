@@ -23,12 +23,17 @@ class Solution {
     // The given dates are valid dates between the years 1971 and 2100.
 
     func dayOfTheWeek(_ day: Int, _ month: Int, _ year: Int) -> String {
-        let numOfDays: [Int: Int] = [1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30, 7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31] // leap year: 2020      
-        let days: [String] = ["Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"] // since 1/1/1971 is Friday
-        var totalDays = -1 // zero based index
+        let numOfDays: [Int: Int] = [
+            1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30, 7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31,
+        ]  // leap year: 2020
+        let days: [String] = [
+            "Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
+        ]  // since 1/1/1971 is Friday
+        var totalDays = -1  // zero based index
 
-
-        func isLeapYear(_ year: Int) -> Bool { year % 4 == 0 ? (year % 100 == 0 ? (year % 400 == 0 ? true : false) : true) : false }
+        func isLeapYear(_ year: Int) -> Bool {
+            year % 4 == 0 ? (year % 100 == 0 ? (year % 400 == 0 ? true : false) : true) : false
+        }
 
         for i in 1971..<year { totalDays += isLeapYear(i) ? 366 : 365 }
         for i in 1..<month { totalDays += numOfDays[i]! }

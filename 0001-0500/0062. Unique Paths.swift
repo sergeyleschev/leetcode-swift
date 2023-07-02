@@ -34,7 +34,7 @@ class Solution {
     // Example 4:
     // Input: m = 3, n = 3
     // Output: 6
-     
+
     // Constraints:
     // 1 <= m, n <= 100
     // It's guaranteed that the answer will be less than or equal to 2 * 10^9.
@@ -42,10 +42,10 @@ class Solution {
     // - Complexity:
     //   - time: O(n * m), where n is the number of rows, and m is the number of columns.
     //   - space: O(min(n, m)), where n is the number of rows, and m is the number of columns.
-    
+
     func uniquePaths(_ m: Int, _ n: Int) -> Int {
         var matrix: [[Int]] = Array(repeating: Array(repeating: 0, count: m), count: n)
-        
+
         for i in 0..<n {
             for j in 0..<m {
                 if i == 0 || j == 0 {
@@ -55,7 +55,7 @@ class Solution {
                 }
             }
         }
-        
+
         return matrix[n - 1][m - 1]
     }
 

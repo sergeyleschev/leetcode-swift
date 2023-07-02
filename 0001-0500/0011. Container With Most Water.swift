@@ -13,7 +13,7 @@ class Solution {
     // Example 1:
     // Input: height = [1,8,6,2,5,4,8,3,7]
     // Output: 49
-    // Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. 
+    // Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7].
     // In this case, the max area of water (blue section) the container can contain is 49.
 
     // Example 2:
@@ -36,17 +36,17 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of heights.
     //   - space: O(1), only constant space is used.
-    
+
     func maxArea(_ height: [Int]) -> Int {
         var start = 0
         var end = height.count - 1
         var ans = 0
-        
+
         while start < end {
             ans = max(ans, min(height[start], height[end]) * (end - start))
             if height[start] < height[end] { start += 1 } else { end -= 1 }
         }
-        
+
         return ans
     }
 

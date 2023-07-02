@@ -19,7 +19,7 @@ class Solution {
     // Example 2:
     // Input: heights = [2,4]
     // Output: 4
-     
+
     // Constraints:
     // 1 <= heights.length <= 10^5
     // 0 <= heights[i] <= 10^4
@@ -32,7 +32,7 @@ class Solution {
         var stack = [Int]()
         let n = heights.count
         var ans = 0
-        
+
         for i in 0..<n {
             while let curHeight = stack.last, heights[curHeight] >= heights[i] {
                 stack.removeLast()
@@ -41,13 +41,13 @@ class Solution {
             }
             stack.append(i)
         }
-        
+
         while !stack.isEmpty {
             let curHeight = stack.removeLast()
             let curWidth = stack.last ?? -1
             ans = max(ans, heights[curHeight] * (n - curWidth - 1))
         }
-        
+
         return ans
     }
 

@@ -10,7 +10,7 @@ class Solution {
     // Example:
     // Input: 10
     // Output: 4
-    // Explanation: 
+    // Explanation:
     // There are four good numbers in the range [1, 10] : 2, 5, 6, 9.
     // Note that 1 and 10 are not good numbers, since they remain unchanged after rotating.
     // Note:
@@ -21,19 +21,18 @@ class Solution {
         for i in 1...N where isValid(i) { count += 1 }
         return count
     }
-    
-    
+
     private func isValid(_ N: Int) -> Bool {
         var N = N
         var valid = false
-        
+
         while N > 0 {
             if N % 10 == 2 || N % 10 == 5 || N % 10 == 6 || N % 10 == 9 { valid = true }
             if N % 10 == 3 || N % 10 == 4 || N % 10 == 7 { return false }
             N /= 10
         }
-        
+
         return valid
     }
-    
+
 }

@@ -18,7 +18,7 @@ class Solution {
     // Input: expression = "1&(0|1)"
     // Output: 1
     // Explanation: We can turn "1&(0|1)" into "1&(0&1)" by changing the '|' to a '&' using 1 operation.
-    // The new expression evaluates to 0. 
+    // The new expression evaluates to 0.
 
     // Example 2:
     // Input: expression = "(0&0)&(0&0&0)"
@@ -48,8 +48,9 @@ class Solution {
         var stack = [Int]()
 
         for (i, c) in e.enumerated() {
-            if c == "(" { stack.append(i) } 
-            else if c == ")" {
+            if c == "(" {
+                stack.append(i)
+            } else if c == ")" {
                 let last = stack.removeLast()
                 pair[i] = last
             }
@@ -58,10 +59,11 @@ class Solution {
         return check(0, n - 1, e, pair).minOperation
     }
 
-
-    private func check(_ start: Int, _ end: Int, _ e: [Character], _ pair: [Int: Int]) -> (val: Int, minOperation: Int) {
+    private func check(_ start: Int, _ end: Int, _ e: [Character], _ pair: [Int: Int]) -> (
+        val: Int, minOperation: Int
+    ) {
         if start == end { return (e[start].wholeNumberValue!, 1) }
-        
+
         if e[end] == Character("0") || e[end] == Character("1") {
             let (v1, p1) = check(start, end - 2, e, pair)
             let (v2, p2) = check(end, end, e, pair)
@@ -75,8 +77,9 @@ class Solution {
         }
     }
 
-
-    private func calculate(_ v1: Int, _ p1: Int, _ v2: Int, _ p2: Int, _ operation: Character) -> (val: Int, minOperation: Int) {
+    private func calculate(_ v1: Int, _ p1: Int, _ v2: Int, _ p2: Int, _ operation: Character) -> (
+        val: Int, minOperation: Int
+    ) {
         if v1 == 0 && v2 == 0 && operation == Character("|") { return (0, min(p1, p2)) }
         if v1 == 1 && v2 == 0 && operation == Character("|") { return (1, 1) }
         if v1 == 1 && v2 == 1 && operation == Character("|") { return (1, 1 + min(p1, p2)) }

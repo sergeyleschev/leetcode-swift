@@ -43,9 +43,8 @@ class Solution {
         return ans
     }
 
-
     private func getMinutesFromMiddleNight(to time: String) -> Int {
         Int(time.prefix(2))! * 60 + Int(time.suffix(2))!
     }
-    
+
 }

@@ -37,7 +37,7 @@ class Solution {
     // The total number of weeks is 7.
     // Note that you cannot work on the last milestone of project 0 on 8th week because it would violate the rules.
     // Thus, one milestone in project 0 will remain unfinished.
- 
+
     // Constraints:
     // n == milestones.length
     // 1 <= n <= 10^5
@@ -45,7 +45,7 @@ class Solution {
 
     func numberOfWeeks(_ milestones: [Int]) -> Int {
         var m = Int.min
-        
+
         let sum = milestones.reduce(into: 0) { sum, i in
             sum += i
             m = max(m, i)

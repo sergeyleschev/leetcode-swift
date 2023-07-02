@@ -15,7 +15,7 @@ class Solution {
     // Example 2:
     // Input: s = "deeedbbcccbdaa", k = 3
     // Output: "aa"
-    // Explanation: 
+    // Explanation:
     // First delete "eee" and "ccc", get "ddbbbdaa"
     // Then delete "bbb", get "dddaa"
     // Finally delete "ddd", get "aa"
@@ -30,11 +30,11 @@ class Solution {
     // s only contains lower case English letters.
 
     func removeDuplicates(_ s: String, _ k: Int) -> String { stack(s, k) }
-    
-    
+
     func stack(_ s: String, _ k: Int) -> String {
-        var s = [Character](s), stack: [Int] = []
-        var i = 0 
+        var s = [Character](s)
+        var stack: [Int] = []
+        var i = 0
         while i < s.count {
             let c = s[i]
             if i == 0 || s[i - 1] != c {
@@ -52,34 +52,36 @@ class Solution {
                     }
                 }
             }
-            
+
         }
         return String(s)
     }
-    
-    
+
     func exceeded(_ s: String, _ k: Int) -> String {
         if s.isEmpty { return s }
-        var string = [Character](s), flag = true
-        
+        var string = [Character](s)
+        var flag = true
+
         while flag {
             var i = 0
             flag = false
             while i < string.count {
                 var j = i + 1
                 var head: Character = string[i]
-                
+
                 while j < string.count, string[j] == head, j - i < k { j += 1 }
 
                 if j - i >= k {
                     flag = true
                     string.removeSubrange(i..<j)
-                } else { i += 1 }
+                } else {
+                    i += 1
+                }
 
                 if string.count == 0 { return "" }
             }
         }
-        
+
         return String(string)
     }
 

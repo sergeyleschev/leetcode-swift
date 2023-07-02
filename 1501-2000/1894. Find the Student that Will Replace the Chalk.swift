@@ -34,7 +34,7 @@ class Solution {
     // - Student number 3 uses 2 chalk so k = 5.
     // - Student number 0 uses 3 chalk so k = 2.
     // Student number 1 does not have enough chalk, so they will have to replace it.
-     
+
     // Constraints:
     // chalk.length == n
     // 1 <= n <= 10^5
@@ -43,11 +43,11 @@ class Solution {
 
     func chalkReplacer(_ chalk: [Int], _ k: Int) -> Int {
         let n = chalk.count
-        var preffix = [0]    
-        for v in chalk { preffix.append(preffix.last! + v) }
-        let remain = k % preffix.last!
+        var prefix = [0]
+        for v in chalk { prefix.append(prefix.last! + v) }
+        let remain = k % prefix.last!
         guard remain != 0 else { return 0 }
-        for idx in 1...n where remain < preffix[idx] { return idx - 1 }
+        for idx in 1...n where remain < prefix[idx] { return idx - 1 }
         return -1
     }
 

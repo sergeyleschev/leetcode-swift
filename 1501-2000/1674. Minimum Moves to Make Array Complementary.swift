@@ -39,7 +39,7 @@ class Solution {
         var times = [Int](repeating: 0, count: 2 * limit + 2)
         var ans = n
         var sum = 0
-        
+
         for idx in 0..<(n >> 1) {
             let a = nums[idx]
             let b = nums[n - 1 - idx]
@@ -55,7 +55,7 @@ class Solution {
             sum += times[idx]
             if sum < ans { ans = sum }
         }
-        
+
         return ans
     }
 

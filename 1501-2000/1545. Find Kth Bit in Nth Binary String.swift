@@ -52,5 +52,5 @@ class Solution {
 
         return cur[k - 1] ? "1" : "0"
     }
-    
+
 }

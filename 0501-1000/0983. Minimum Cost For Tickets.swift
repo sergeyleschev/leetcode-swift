@@ -46,15 +46,16 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of the days in the travel plan.
     //   - space: O(n), where n is the number of the days in the travel plan.
-    
+
     func mincostTickets(_ days: [Int], _ costs: [Int]) -> Int {
         var memo = [Int](repeating: -1, count: days.count)
         let durations = [1, 7, 30]
         return dp(0, days, costs, &memo, durations)
     }
 
-    
-    private func dp(_ i: Int, _ days: [Int], _ costs: [Int], _ memo: inout [Int], _ durations: [Int]) -> Int {
+    private func dp(
+        _ i: Int, _ days: [Int], _ costs: [Int], _ memo: inout [Int], _ durations: [Int]
+    ) -> Int {
         guard i < days.count else { return 0 }
         guard memo[i] == -1 else { return memo[i] }
         var ans = Int.max

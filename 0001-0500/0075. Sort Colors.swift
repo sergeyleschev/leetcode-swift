@@ -32,7 +32,7 @@ class Solution {
     // n == nums.length
     // 1 <= n <= 300
     // nums[i] is 0, 1, or 2.
-     
+
     // Follow up: Could you come up with a one-pass algorithm using only constant extra space?
 
     // - Complexity:

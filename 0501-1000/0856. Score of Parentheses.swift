@@ -33,7 +33,7 @@ class Solution {
         var ans = 0
         var depth = 0.0
         var last = Character(")")
-        
+
         for char in S {
             if char == "(" {
                 stack.append(char)
@@ -47,7 +47,7 @@ class Solution {
             }
             last = char
         }
-        
+
         return ans
     }
 

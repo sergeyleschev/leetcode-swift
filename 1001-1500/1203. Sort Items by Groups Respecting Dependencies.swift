@@ -28,7 +28,7 @@ class Solution {
     // beforeItems[i] does not contain duplicates elements.
 
     func sortItems(_ n: Int, _ m: Int, _ group: [Int], _ beforeItems: [[Int]]) -> [Int] {
-        let N = n + m // add some pseudo-vertex to represent group
+        let N = n + m  // add some pseudo-vertex to represent group
         var adj = [[Int]](repeating: [], count: N)
         var inDegree = [Int](repeating: 0, count: N)
 
@@ -42,10 +42,10 @@ class Solution {
                 let gu = group[u] >= 0 ? n + group[u] : u
                 let gv = group[v] >= 0 ? n + group[v] : v
                 if gu == gv {
-                    adj[u].append(v) // in-group prerequisites => attach on normal vertices
+                    adj[u].append(v)  // in-group prerequisites => attach on normal vertices
                     inDegree[v] += 1
                 } else {
-                    adj[gu].append(gv) // inter-group prerequisites => attach on group vertices
+                    adj[gu].append(gv)  // inter-group prerequisites => attach on group vertices
                     inDegree[gv] += 1
                 }
             }
@@ -55,7 +55,7 @@ class Solution {
         var topo = [Int]()
         func dfs(_ u: Int) {
             topo.append(u)
-            inDegree[u] = -1 // visited
+            inDegree[u] = -1  // visited
             for v in adj[u] {
                 inDegree[v] -= 1
                 if inDegree[v] == 0 { dfs(v) }

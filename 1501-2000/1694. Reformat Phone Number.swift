@@ -61,7 +61,7 @@ class Solution {
             ans.append(temp)
             str.removeFirst(3)
         }
-        
+
         if !(str.count == 4) {
             ans.append(str)
         } else {

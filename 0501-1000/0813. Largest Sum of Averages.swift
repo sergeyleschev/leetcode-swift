@@ -7,15 +7,15 @@ class Solution {
     // Note that our partition must use every number in nums, and that scores are not necessarily integers.
 
     // Example:
-    // Input: 
+    // Input:
     // nums = [9,1,2,3,9]
     // k = 3
     // Output: 20
-    // Explanation: 
+    // Explanation:
     // The best choice is to partition nums into [9], [1, 2, 3], [9]. The answer is 9 + (1 + 2 + 3) / 3 + 9 = 20.
     // We could have also partitioned nums into [9, 1], [2], [3, 9], for example.
     // That partition would lead to a score of 5 + 2 + 6 = 13, which is worse.
-     
+
     // Note:
     // 1 <= nums.length <= 100.
     // 1 <= nums[i] <= 10000.
@@ -33,7 +33,7 @@ class Solution {
             dp[i - 1] = Double(sum) / Double(i)
         }
 
-        for i in 0..<K-1 {
+        for i in 0..<K - 1 {
             var dp0 = Array(repeating: 0.0, count: A.count)
             for j in i..<A.count {
                 for k in i..<j {
@@ -42,8 +42,8 @@ class Solution {
             }
             dp = dp0
         }
-        
+
         return dp.last!
     }
-    
+
 }

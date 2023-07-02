@@ -41,7 +41,7 @@ class Solution {
         var wordCount = 0
         var isWord = false
         var i = 0
-        
+
         for i in 0..<text.count {
             if text[i].isWhitespace {
                 spaceCount += 1
@@ -51,20 +51,25 @@ class Solution {
                 isWord = true
             }
         }
-        
+
         guard wordCount > 0 else { return String(text) }
         isWord = false
-        let spacing = wordCount == 1 ? spaceCount :  spaceCount / (wordCount - 1)
-        
+        let spacing = wordCount == 1 ? spaceCount : spaceCount / (wordCount - 1)
+
         while i < text.count {
-            if i == 0 && text[i].isWhitespace { text.remove(at: i); continue }
+            if i == 0 && text[i].isWhitespace {
+                text.remove(at: i)
+                continue
+            }
             var count = 0
             while i < text.count && text[i].isWhitespace {
                 if count < spacing {
                     spaceCount -= 1
                     count += 1
                     i += 1
-                } else { text.remove(at: i) }
+                } else {
+                    text.remove(at: i)
+                }
             }
             while i < text.count && count != 0 && count < spacing {
                 text.insert(Character(" "), at: i)
@@ -75,8 +80,10 @@ class Solution {
             count = 0
             i += 1
         }
-        
-        if spaceCount > 0 { text.append(contentsOf: [Character](repeating: Character(" "), count: spaceCount)) }
+
+        if spaceCount > 0 {
+            text.append(contentsOf: [Character](repeating: Character(" "), count: spaceCount))
+        }
         if spaceCount < 0 { text.removeLast(-spaceCount) }
         return String(text)
     }

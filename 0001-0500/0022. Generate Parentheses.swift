@@ -12,13 +12,12 @@ class Solution {
     // Example 2:
     // Input: n = 1
     // Output: ["()"]
-     
+
     // Constraints:
     // 1 <= n <= 8
 
     func generateParenthesis(_ n: Int) -> [String] {
         var res: [String] = []
-
 
         func backtrack(_ path: [String], _ target: Int) {
             var path = path
@@ -33,7 +32,9 @@ class Solution {
 
             for c in path where c == "(" { count += 1 }
             for c in ["(", ")"] {
-                if (c == "(" && count >= n) || (c == ")" && path.count - count >= count)  { continue }
+                if (c == "(" && count >= n) || (c == ")" && path.count - count >= count) {
+                    continue
+                }
                 path.append(c)
                 backtrack(path, target - 1)
                 path.remove(at: path.count - 1)

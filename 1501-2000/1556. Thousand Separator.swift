@@ -28,7 +28,7 @@ class Solution {
         let s = [Character]("\(n)".reversed())
         var ans = ""
         let n = s.count
-        
+
         for i in 0..<n {
             ans.append(s[i])
             if i % 3 == 2 && i != n - 1 { ans.append(".") }

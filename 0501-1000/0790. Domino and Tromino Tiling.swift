@@ -13,7 +13,7 @@ class Solution {
     // Example:
     // Input: n = 3
     // Output: 5
-    // Explanation: 
+    // Explanation:
     // The five different ways are listed below, different letters indicates different tiles:
     // XYZ XXZ XYY XXY XYY
     // XYZ YYZ XZZ XYY XXY
@@ -22,20 +22,20 @@ class Solution {
 
     func numTilings(_ N: Int) -> Int {
         guard N > 2 else { return N }
-        
-        var dp = Array(repeating: [0,0,0] , count: N + 1)
-        let kMod = 1000000007;
-        
+
+        var dp = Array(repeating: [0, 0, 0], count: N + 1)
+        let kMod = 1_000_000_007
+
         dp[0][0] = 1
         dp[1][0] = 1
-        
-        for i in 2...N  {
+
+        for i in 2...N {
             dp[i][0] = (dp[i - 1][0] + dp[i - 2][0] + dp[i - 1][1] + dp[i - 1][2]) % kMod
             dp[i][1] = (dp[i - 2][0] + dp[i - 1][2]) % kMod
             dp[i][2] = (dp[i - 2][0] + dp[i - 1][1]) % kMod
         }
-        
+
         return dp.last![0]
     }
-    
+
 }

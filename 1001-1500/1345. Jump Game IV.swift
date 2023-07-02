@@ -46,7 +46,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of arr.
     //   - space: O(n), where n is the length of arr.
-    
+
     func minJumps(_ arr: [Int]) -> Int {
         let n = arr.count
         guard n > 1 else { return 0 }
@@ -56,31 +56,37 @@ class Solution {
         var step = 0
 
         for i in 0..<n { graph[arr[i], default: [Int]()].append(i) }
-        
+
         cur.append(0)
-        
+
         while !cur.isEmpty {
             var next = [Int]()
 
             for node in cur {
                 guard node != n - 1 else { return step }
-                
+
                 for child in graph[arr[node]] ?? [] {
                     guard !visited.contains(child) else { continue }
                     visited.insert(child)
                     next.append(child)
                 }
-                
+
                 graph.removeValue(forKey: arr[node])
 
-                if node + 1 < n, !visited.contains(node + 1) { visited.insert(node + 1); next.append(node + 1) }
-                if node - 1 >= 0, !visited.contains(node - 1) { visited.insert(node - 1); next.append(node - 1) }
+                if node + 1 < n, !visited.contains(node + 1) {
+                    visited.insert(node + 1)
+                    next.append(node + 1)
+                }
+                if node - 1 >= 0, !visited.contains(node - 1) {
+                    visited.insert(node - 1)
+                    next.append(node - 1)
+                }
             }
-            
+
             cur = next
             step += 1
         }
-        
+
         return -1
     }
 

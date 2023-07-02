@@ -5,7 +5,7 @@ class Solution {
     // 891. Sum of Subsequence Widths
     // Given an array of integers nums, consider all non-empty subsequences of nums.
     // For any sequence seq, let the width of seq be the difference between the maximum and minimum element of seq.
-    // Return the sum of the widths of all subsequences of nums. 
+    // Return the sum of the widths of all subsequences of nums.
     // As the answer may be very large, return the answer modulo 10^9 + 7.
 
     // Example 1:
@@ -22,16 +22,15 @@ class Solution {
 
     private let mod = 1_000_000_007
 
-
     func sumSubseqWidths(_ A: [Int]) -> Int {
         var ans = 0
         let N = A.count
         let sortedA = A.sorted()
         var powTwo = [1]
-        
+
         for _ in 1..<N { powTwo.append(powTwo.last! * 2 % mod) }
         for i in 0..<N { ans = (ans + (powTwo[i] - powTwo[N - 1 - i]) * sortedA[i]) % mod }
         return ans
     }
-    
+
 }

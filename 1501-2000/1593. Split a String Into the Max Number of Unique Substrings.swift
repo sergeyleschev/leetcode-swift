@@ -32,7 +32,6 @@ class Solution {
         return helper(s: s, seen: &seen)
     }
 
-
     private func helper(s: String, seen: inout Set<String>) -> Int {
         guard !s.isEmpty else { return 0 }
         var ans = 0
@@ -49,5 +48,5 @@ class Solution {
         }
         return ans
     }
-    
+
 }

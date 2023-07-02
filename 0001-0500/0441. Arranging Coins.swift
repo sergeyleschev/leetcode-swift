@@ -27,7 +27,7 @@ class Solution {
     // - Complexity:
     //   - time: O(1), only constant time is used.
     //   - space: O(1), only constant space is used.
-    
+
     func arrangeCoins(_ n: Int) -> Int {
         return Int(sqrt(2.0 * Double(n) + 0.25) - 0.5)
     }

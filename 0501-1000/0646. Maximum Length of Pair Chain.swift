@@ -24,10 +24,10 @@ class Solution {
     // -1000 <= lefti < righti < 1000
 
     func findLongestChain(_ pairs: [[Int]]) -> Int {
-        let chains = pairs.sorted{$0[0] < $1[0]}
+        let chains = pairs.sorted { $0[0] < $1[0] }
         var res = 0
         var pre = Int.min
-        
+
         for pair in chains {
             if pair[0] > pre {
                 res += 1
@@ -36,8 +36,8 @@ class Solution {
                 pre = pair[1]
             }
         }
-        
+
         return res
     }
-    
+
 }

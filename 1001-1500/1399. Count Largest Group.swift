@@ -3,7 +3,7 @@ class Solution {
     // Solution by Sergey Leschev
 
     // 1399. Count Largest Group
-    // Given an integer n. Each number from 1 to n is grouped according to the sum of its digits. 
+    // Given an integer n. Each number from 1 to n is grouped according to the sum of its digits.
     // Return how many groups have the largest size.
 
     // Example 1:
@@ -42,7 +42,7 @@ class Solution {
             counter.updateValue((counter[sum] ?? 0) + 1, forKey: sum)
         }
 
-        let maxGroupSize = counter.values.max()!    
+        let maxGroupSize = counter.values.max()!
         for (_, val) in counter where val == maxGroupSize { ans += 1 }
         return ans
     }

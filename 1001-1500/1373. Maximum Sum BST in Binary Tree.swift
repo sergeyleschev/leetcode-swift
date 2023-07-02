@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -55,21 +53,19 @@ class Solution {
     // Check on the validation of both left subtree and right subtree while calculating the sum of each subtrees.
     // If both of subtrees are valid and current tree is also valid, compare the maxSum with sum for current tree, rooted from root
     // Otherwise, current tree should contribute nothing for the sum of this tree, which might be the subtree of another node.
- 
+
     // - Complexity:
     //   - time: O(n), n is the number of nodes in this tree rooted from root
 
-    private var maxSum = 0 // The max sum value of a valid BST or sub BST.
-
+    private var maxSum = 0  // The max sum value of a valid BST or sub BST.
 
     func maxSumBST(_ root: TreeNode?) -> Int {
         maxSum = 0
         guard let root = root else { return maxSum }
-        
+
         validBST(root)
         return maxSum
     }
-
 
     // - Returns:
     //   - Validation: if subtree rooted from current root is valid
@@ -84,35 +80,32 @@ class Solution {
         var sum = root.val
         let leftSum: Int
         let rightSum: Int
-        
-        if let left = root.left { // If root has left child
+
+        if let left = root.left {  // If root has left child
             let (lvalid, lmin, lmax, lsum) = self.validBST(left)
-            if lmax >= minV { isValid = false }
-            else { minV = lmin }
+            if lmax >= minV { isValid = false } else { minV = lmin }
             isValid = lvalid && isValid
             leftSum = lvalid ? lsum : 0
         } else {
             leftSum = 0
         }
-        
-        if let right = root.right { // If root has right child
+
+        if let right = root.right {  // If root has right child
             let (rvalid, rmin, rmax, rsum) = self.validBST(right)
-            if rmin <= maxV { isValid = false }
-            else { maxV = rmax}
+            if rmin <= maxV { isValid = false } else { maxV = rmax }
             isValid = rvalid && isValid
             rightSum = rvalid ? rsum : 0
         } else {
             rightSum = 0
         }
-        
-        
-        if isValid { // If current tree rooted from root is a valid BST
+
+        if isValid {  // If current tree rooted from root is a valid BST
             sum += leftSum + rightSum
             maxSum = max(maxSum, sum)
         } else {
             sum = 0
         }
-        
+
         return (isValid, minV, maxV, sum)
     }
 

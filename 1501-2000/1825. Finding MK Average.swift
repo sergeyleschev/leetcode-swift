@@ -20,7 +20,7 @@ class MKAverage {
     // Output
     // [null, null, null, -1, null, 3, null, null, null, 5]
     // Explanation
-    // MKAverage obj = new MKAverage(3, 1); 
+    // MKAverage obj = new MKAverage(3, 1);
     // obj.addElement(3);        // current elements are [3]
     // obj.addElement(1);        // current elements are [3,1]
     // obj.calculateMKAverage(); // return -1, because m = 3 and only 2 elements exist.
@@ -34,7 +34,7 @@ class MKAverage {
     // obj.calculateMKAverage(); // The last 3 elements are [5,5,5].
     //                           // After removing smallest and largest 1 element the container will be [5].
     //                           // The average of [5] equals 5/1 = 5, return 5
-     
+
     // Constraints:
     // 3 <= m <= 10^5
     // 1 <= k*2 < m
@@ -56,7 +56,6 @@ class MKAverage {
     let k: Int
     var sum: Int
 
-
     init(_ m: Int, _ k: Int) {
         arr = [Int]()
         sorted = [Int]()
@@ -64,7 +63,6 @@ class MKAverage {
         self.k = k
         sum = 0
     }
-
 
     func addElement(_ num: Int) {
         if arr.count == m {
@@ -76,9 +74,11 @@ class MKAverage {
         insertIntoSorted(num)
     }
 
-
     func insertIntoSorted(_ target: Int) {
-        if sorted.isEmpty { sorted.append(target); return }
+        if sorted.isEmpty {
+            sorted.append(target)
+            return
+        }
         var left = 0
         var right = sorted.count - 1
 
@@ -106,7 +106,6 @@ class MKAverage {
         sorted.insert(target, at: index)
     }
 
-
     func removeFromSorted(_ target: Int) {
         var left = 0
         var right = m - 1
@@ -131,7 +130,6 @@ class MKAverage {
             sorted.remove(at: left)
         }
     }
-
 
     func calculateMKAverage() -> Int {
         if arr.count < m { return -1 }

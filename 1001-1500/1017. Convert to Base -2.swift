@@ -9,32 +9,32 @@ class Solution {
     // Example 1:
     // Input: n = 2
     // Output: "110"
-    // Explantion: (-2) ^ 2 + (-2) ^ 1 = 2
+    // Explanation: (-2) ^ 2 + (-2) ^ 1 = 2
 
     // Example 2:
     // Input: n = 3
     // Output: "111"
-    // Explantion: (-2) ^ 2 + (-2) ^ 1 + (-2) ^ 0 = 3
+    // Explanation: (-2) ^ 2 + (-2) ^ 1 + (-2) ^ 0 = 3
 
     // Example 3:
     // Input: n = 4
     // Output: "100"
-    // Explantion: (-2) ^ 2 = 4
+    // Explanation: (-2) ^ 2 = 4
 
     // Note:
     // 0 <= n <= 10^9
 
     func baseNeg2(_ N: Int) -> String {
-        if (N == 0) { return "0" }
+        if N == 0 { return "0" }
         var N = N
         var ans = String()
-        
-        while (N != 0) {
-            ans = String(N&1) + ans
+
+        while N != 0 {
+            ans = String(N & 1) + ans
             N = -(N >> 1)
         }
-        
+
         return ans
     }
-    
+
 }

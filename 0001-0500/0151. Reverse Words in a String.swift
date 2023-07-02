@@ -45,7 +45,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of words in the input string.
     //   - space: O(m), where m is the length of the input string.
-    
+
     func reverseWords(_ s: String) -> String {
         var ans = s.split(separator: " ")
         var start = 0

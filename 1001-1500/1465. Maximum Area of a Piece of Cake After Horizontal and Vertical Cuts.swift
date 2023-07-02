@@ -10,7 +10,7 @@ class Solution {
 
     // Example 1:
     // Input: h = 5, w = 4, horizontalCuts = [1,2,4], verticalCuts = [1,3]
-    // Output: 4 
+    // Output: 4
     // Explanation: The figure above represents the given rectangular cake. Red lines are the horizontal and vertical cuts. After you cut the cake, the green piece of cake has the maximum area.
 
     // Example 2:
@@ -30,26 +30,26 @@ class Solution {
     // 1 <= verticalCuts[i] < w
     // All the elements in horizontalCuts are distinct.
     // All the elements in verticalCuts are distinct.
-    
+
     func maxArea(_ h: Int, _ w: Int, _ horizontalCuts: [Int], _ verticalCuts: [Int]) -> Int {
         var horizontalCuts = horizontalCuts.sorted()
         var verticalCuts = verticalCuts.sorted()
         if horizontalCuts.last != h { horizontalCuts.append(h) }
         if verticalCuts.last != w { verticalCuts.append(w) }
 
-        let maxH = horizontalCuts.reduce(into: (0,0)) {
-            let dist = $1 - $0.1        
-            if dist > $0.0 { $0.0 = dist }
-            $0.1 = $1
-        }.0
-        
-        let maxV = verticalCuts.reduce(into: (0,0)) {
+        let maxH = horizontalCuts.reduce(into: (0, 0)) {
             let dist = $1 - $0.1
             if dist > $0.0 { $0.0 = dist }
             $0.1 = $1
         }.0
-        
-        return (maxH * maxV) % (1000000007)
+
+        let maxV = verticalCuts.reduce(into: (0, 0)) {
+            let dist = $1 - $0.1
+            if dist > $0.0 { $0.0 = dist }
+            $0.1 = $1
+        }.0
+
+        return (maxH * maxV) % (1_000_000_007)
     }
 
 }

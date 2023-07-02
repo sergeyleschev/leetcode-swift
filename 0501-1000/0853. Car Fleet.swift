@@ -1,4 +1,4 @@
- class Solution {
+class Solution {
 
     // Solution by Sergey Leschev
 
@@ -27,16 +27,15 @@
     // 0 <= position[i] < target
     // All initial positions are different.
 
-    struct  Car {
+    struct Car {
         var position: Int
         var costTime: Double
-        
+
         init(position: Int, costTime: Double) {
             self.position = position
             self.costTime = costTime
         }
     }
-
 
     func carFleet(_ target: Int, _ position: [Int], _ speed: [Int]) -> Int {
         let N = position.count
@@ -44,11 +43,16 @@
         var ans = 0
         var index = N - 1
 
-        for i in 0..<N { cars.append(Car(position: position[i], costTime: Double(target - position[i]) /  Double(speed[i]))) }
+        for i in 0..<N {
+            cars.append(
+                Car(
+                    position: position[i], costTime: Double(target - position[i]) / Double(speed[i])
+                ))
+        }
         cars.sort { (car0, car1) -> Bool in car0.position < car1.position }
 
         while index > 0 {
-            if cars[index].costTime < cars[index  - 1].costTime  {
+            if cars[index].costTime < cars[index - 1].costTime {
                 ans += 1
             } else {
                 cars[index - 1].costTime = cars[index].costTime
@@ -58,5 +62,5 @@
 
         return ans + (index == 0 ? 1 : 0)
     }
-    
- }
+
+}

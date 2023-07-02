@@ -43,7 +43,10 @@ class Solution {
                 var findSpace = false
                 while index < text.endIndex {
                     let char = text[index]
-                    if char == " " { findSpace = true; break }
+                    if char == " " {
+                        findSpace = true
+                        break
+                    }
                     index = text.index(index, offsetBy: 1)
                 }
                 if findSpace { continue }

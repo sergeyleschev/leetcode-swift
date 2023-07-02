@@ -3,7 +3,7 @@ class Solution {
     // Solution by Sergey Leschev
 
     // 434. Number of Segments in a String
-    // You are given a string s, return the number of segments in the string. 
+    // You are given a string s, return the number of segments in the string.
     // A segment is defined to be a contiguous sequence of non-space characters.
 
     // Example 1:
@@ -33,16 +33,16 @@ class Solution {
 
         var isContinuous = false
         var result = 0
-        
+
         for i in s {
             if i == " " {
                 result = isContinuous ? result + 1 : result
                 isContinuous = false
-            }else {
+            } else {
                 isContinuous = true
             }
         }
-        
+
         return isContinuous ? result + 1 : result
     }
 

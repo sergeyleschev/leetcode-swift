@@ -25,7 +25,7 @@ class Solution {
     // n == matrix[i].length
     // 1 <= m, n <= 20
     // 0 <= matrix[i][j] <= 99
-     
+
     // Follow up:
     // What if the matrix is stored on disk, and the memory is limited such that you can only load at most one row of the matrix into the memory at once?
     // What if the matrix is so large that you can only load up a partial row into the memory at once?
@@ -33,10 +33,10 @@ class Solution {
     func isToeplitzMatrix(_ matrix: [[Int]]) -> Bool {
         for i in 0..<matrix.count - 1 {
             for j in 0..<matrix[i].count - 1
-                where matrix[i][j] != matrix[i + 1][j + 1] { return false }
+            where matrix[i][j] != matrix[i + 1][j + 1] { return false }
         }
-        
+
         return true
     }
-    
+
 }

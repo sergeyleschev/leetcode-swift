@@ -18,14 +18,14 @@ class Solution {
     // Example 1:
     // Input: [[1,0,0,0],[0,0,0,0],[0,0,2,-1]]
     // Output: 2
-    // Explanation: We have the following two paths: 
+    // Explanation: We have the following two paths:
     // 1. (0,0),(0,1),(0,2),(0,3),(1,3),(1,2),(1,1),(1,0),(2,0),(2,1),(2,2)
     // 2. (0,0),(1,0),(2,0),(2,1),(1,1),(0,1),(0,2),(0,3),(1,3),(1,2),(2,2)
 
     // Example 2:
     // Input: [[1,0,0,0],[0,0,0,0],[0,0,0,2]]
     // Output: 4
-    // Explanation: We have the following four paths: 
+    // Explanation: We have the following four paths:
     // 1. (0,0),(0,1),(0,2),(0,3),(1,3),(1,2),(1,1),(1,0),(2,0),(2,1),(2,2),(2,3)
     // 2. (0,0),(0,1),(1,1),(1,0),(2,0),(2,1),(2,2),(1,2),(0,2),(0,3),(1,3),(2,3)
     // 3. (0,0),(1,0),(2,0),(2,1),(2,2),(1,2),(1,1),(0,1),(0,2),(0,3),(1,3),(2,3)
@@ -34,7 +34,7 @@ class Solution {
     // Example 3:
     // Input: [[0,1],[2,0]]
     // Output: 0
-    // Explanation: 
+    // Explanation:
     // There is no path that walks over every empty square exactly once.
     // Note that the starting and ending square can be anywhere in the grid.
 
@@ -44,13 +44,13 @@ class Solution {
     // - Complexity:
     //   - time: O(3^n), where n is the number of cells in the grid.
     //   - space: O(n), where n is the number of cells in the grid.
-    
+
     func uniquePathsIII(_ grid: [[Int]]) -> Int {
         var nonObstacles = 0
         var start = (row: 0, col: 0)
         var grid = grid
         var ans = 0
-        
+
         for row in 0..<grid.count {
             for col in 0..<grid[row].count {
                 guard grid[row][col] != -1 else { continue }
@@ -63,8 +63,9 @@ class Solution {
         return ans
     }
 
-    
-    private func backtrack(_ row: Int, _ col: Int, _ grid: inout [[Int]], _ nonObstacles: Int, _ ans: inout Int) {
+    private func backtrack(
+        _ row: Int, _ col: Int, _ grid: inout [[Int]], _ nonObstacles: Int, _ ans: inout Int
+    ) {
         if grid[row][col] == 2 {
             if nonObstacles == 1 { ans += 1 }
             return
@@ -79,7 +80,8 @@ class Solution {
             let nextRow = row + rowOffsets[i]
             let nextCol = col + colOffsets[i]
 
-            guard nextRow >= 0, nextRow < grid.count, nextCol >= 0, nextCol < grid[nextRow].count else { continue }
+            guard nextRow >= 0, nextRow < grid.count, nextCol >= 0, nextCol < grid[nextRow].count
+            else { continue }
             guard grid[nextRow][nextCol] >= 0 else { continue }
             backtrack(nextRow, nextCol, &grid, nonObstacles - 1, &ans)
         }

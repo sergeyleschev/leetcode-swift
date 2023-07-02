@@ -5,7 +5,7 @@ class Solution {
     // 1300. Sum of Mutated Array Closest to Target
     // Given an integer array arr and a target value target, return the integer value such that when we change all the integers larger than value in the given array to be equal to value, the sum of the array gets as close as possible (in absolute difference) to target.
     // In case of a tie, return the minimum such integer.
-    // Notice that the answer is not neccesarilly a number from arr.
+    // Notice that the answer is not necessarily a number from arr.
 
     // Example 1:
     // Input: arr = [4,9,3], target = 10
@@ -27,7 +27,6 @@ class Solution {
     // - Complexity:
     //   - time: O(NlogN)
     //   - space: O(N)
-
 
     func findBestValue(_ arr: [Int], _ target: Int) -> Int {
         var sortArr = arr

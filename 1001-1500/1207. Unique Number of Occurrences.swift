@@ -25,10 +25,10 @@ class Solution {
     func uniqueOccurrences(_ arr: [Int]) -> Bool {
         var hash = [Int: Int]()
         for num in arr { hash[num] = hash[num] != nil ? hash[num]! + 1 : 1 }
-        
+
         let occurrences = hash.values.sorted()
         if occurrences.count <= 1 { return true }
-        
+
         for i in 1..<occurrences.count where occurrences[i] == occurrences[i - 1] { return false }
         return true
     }

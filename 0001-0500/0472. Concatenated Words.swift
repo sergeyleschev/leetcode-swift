@@ -9,8 +9,8 @@ class Solution {
     // Example 1:
     // Input: words = ["cat","cats","catsdogcats","dog","dogcatsdog","hippopotamuses","rat","ratcatdogcat"]
     // Output: ["catsdogcats","dogcatsdog","ratcatdogcat"]
-    // Explanation: "catsdogcats" can be concatenated by "cats", "dog" and "cats"; 
-    // "dogcatsdog" can be concatenated by "dog", "cats" and "dog"; 
+    // Explanation: "catsdogcats" can be concatenated by "cats", "dog" and "cats";
+    // "dogcatsdog" can be concatenated by "dog", "cats" and "dog";
     // "ratcatdogcat" can be concatenated by "rat", "cat", "dog" and "cat".
 
     // Example 2:
@@ -27,18 +27,17 @@ class Solution {
         guard words.count > 2 else { return [] }
         var ans = [String]()
         var map = [Int: Set<String>]()
-        
+
         for word in words {
             if !word.isEmpty {
                 if nil == map[word.count] { map[word.count] = [] }
                 map[word.count]?.insert(word)
             }
         }
-        
+
         let minWordLength = map.keys.min()!
         let maxWordLength = map.keys.max()!
         let targetLength = minWordLength << 1
-        
 
         func dfs(_ totalCount: Int, word: [Character]) -> Bool {
             guard word.count >= minWordLength else { return false }
@@ -49,10 +48,10 @@ class Solution {
                 }
             }
             guard word.count >= targetLength else { return false }
-            
+
             var length = minWordLength
             while length <= min(maxWordLength, word.count) {
-                if  word.count - length < minWordLength { break }
+                if word.count - length < minWordLength { break }
                 let left = String(word[0..<length])
                 if let strs = map[length], strs.contains(left) {
                     var temp = word
@@ -63,14 +62,13 @@ class Solution {
             }
             return false
         }
-        
-        
+
         for index in 0..<words.count {
             if words[index].count >= targetLength && dfs(0, word: [Character](words[index])) {
                 ans.append(words[index])
             }
         }
-        
+
         return ans
     }
 

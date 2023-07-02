@@ -39,7 +39,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n * m), where n is the length of A and m is the length of B.
     //   - space: O(m), where m is the length of *B*.
-    
+
     func maxUncrossedLines(_ A: [Int], _ B: [Int]) -> Int {
         var dp = [Int](repeating: 0, count: B.count + 1)
 

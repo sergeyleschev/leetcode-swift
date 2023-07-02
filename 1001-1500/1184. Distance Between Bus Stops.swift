@@ -11,7 +11,7 @@ class Solution {
     // Input: distance = [1,2,3,4], start = 0, destination = 1
     // Output: 1
     // Explanation: Distance between 0 and 1 is 1 or 9, minimum is 1.
-     
+
     // Example 2:
     // Input: distance = [1,2,3,4], start = 0, destination = 2
     // Output: 3
@@ -38,5 +38,5 @@ class Solution {
         let sum2 = doubleDistance[maxPoint..<(minPoint + distance.count)].reduce(0, +)
         return min(sum1, sum2)
     }
-    
+
 }

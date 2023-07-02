@@ -5,16 +5,16 @@ class Solution {
 
     let mod = 1_000_000_007
     var fact = [Int](repeating: 0, count: 100_002)
-    
+
     func modmul(_ a: Int, _ b: Int) -> Int {
         return ((a % mod) * (b % mod)) % mod
     }
-    
+
     func binExpo(_ a: Int, _ b: Int) -> Int {
         if b == 0 {
             return 1
         }
-        var res = binExpo(a, b/2)
+        var res = binExpo(a, b / 2)
         res = modmul(res, res)
         if b % 2 == 1 {
             return modmul(a, res)
@@ -22,18 +22,18 @@ class Solution {
             return res
         }
     }
-    
+
     func modmulinv(_ a: Int) -> Int {
-        return binExpo(a, mod-2)
+        return binExpo(a, mod - 2)
     }
-    
+
     func getfact() {
         fact[0] = 1
         for i in 1...100_001 {
-            fact[i] = modmul(fact[i-1], i)
+            fact[i] = modmul(fact[i - 1], i)
         }
     }
-    
+
     func ways(_ str: String) -> Int {
         var freq = [Int](repeating: 0, count: 26)
         for char in str {
@@ -47,7 +47,7 @@ class Solution {
         }
         return modmul(totalWays, modmulinv(factR))
     }
-    
+
     func countAnagrams(_ s: String) -> Int {
         getfact()
         let words = s.split(separator: " ")

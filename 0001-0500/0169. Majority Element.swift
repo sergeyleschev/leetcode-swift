@@ -23,13 +23,13 @@ class Solution {
     // n == nums.length
     // 1 <= n <= 5 * 10^4
     // -2^31 <= nums[i] <= 2^31 - 1
-     
+
     // Follow-up: Could you solve the problem in linear time and in O(1) space?
 
     // - Complexity:
     //   - time: O(n), where n is the length of the nums.
     //   - space: O(1), only constant space is used.
-    
+
     func majorityElement(_ nums: [Int]) -> Int {
         var ans = -1
         var count = 0

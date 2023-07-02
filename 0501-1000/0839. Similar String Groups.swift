@@ -21,18 +21,17 @@ class Solution {
     // 1 <= strs[i].length <= 300
     // strs[i] consists of lowercase letters only.
     // All words in strs have the same length and are anagrams of each other.
-    
+
     private var union: [Int] = []
     private var setCount: Int = 0
-    
-    
+
     func numSimilarGroups(_ strs: [String]) -> Int {
         let n = strs.count
         let count = strs[0].count
-        
+
         setCount = n
         for i in 0..<n { union.append(i) }
-        
+
         for i in 0..<strs.count {
             for j in i + 1..<strs.count {
                 let f1 = find(i)
@@ -48,14 +47,12 @@ class Solution {
         }
         return setCount
     }
-    
-    
+
     private func find(_ i: Int) -> Int {
         if union[i] != i { union[i] = find(union[i]) }
         return union[i]
     }
-    
-    
+
     private func isSimilar(_ str1: String, _ str2: String, _ count: Int) -> Bool {
         var str1 = Array(str1)
         var str2 = Array(str2)
@@ -65,4 +62,3 @@ class Solution {
     }
 
 }
-

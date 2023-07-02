@@ -32,8 +32,10 @@ class Solution {
 
     func maxTurbulenceSize(_ arr: [Int]) -> Int {
         var transformed: [Int] = []
-        var left = 0, right = 0, ans = 0
-        
+        var left = 0
+        var right = 0
+        var ans = 0
+
         for i in 1..<arr.count {
             if arr[i] == arr[i - 1] {
                 transformed.append(0)
@@ -51,17 +53,17 @@ class Solution {
                 left = right
                 continue
             }
-            
+
             if right > left && transformed[right] == transformed[right - 1] {
                 ans = max(ans, right - left + 1)
                 left = right
                 continue
             }
-            
+
             if left == right || transformed[right] != transformed[right - 1] {
                 right += 1
                 continue
-            }          
+            }
         }
 
         ans = max(right - left + 1, ans)

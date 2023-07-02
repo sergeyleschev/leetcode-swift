@@ -20,28 +20,31 @@ class Solution {
     // word1 and word2 consist of only lowercase English letters.
 
     func minDistance(_ word1: String, _ word2: String) -> Int {
-        guard !word1.isEmpty && !word2.isEmpty else { return word1.isEmpty ? word2.count : word1.count }
-        
-        var dp = Array(repeating: Array(repeating: 0, count: word2.count + 1), count: word1.count + 1)
-        
+        guard !word1.isEmpty && !word2.isEmpty else {
+            return word1.isEmpty ? word2.count : word1.count
+        }
+
+        var dp = Array(
+            repeating: Array(repeating: 0, count: word2.count + 1), count: word1.count + 1)
+
         let chars1 = Array(word1)
         let chars2 = Array(word2)
         let c1 = word1.count
         let c2 = word2.count
-        
+
         for i in 0...c1 { dp[i][0] = i }
         for i in 0...c2 { dp[0][i] = i }
-        
+
         for i in 1...c1 {
             for j in 1...c2 {
                 if chars1[i - 1] == chars2[j - 1] {
                     dp[i][j] = dp[i - 1][j - 1]
-                }else {
+                } else {
                     dp[i][j] = min(dp[i - 1][j - 1] + 2, dp[i - 1][j] + 1, dp[i][j - 1] + 1)
                 }
             }
         }
-        
+
         return dp[c1][c2]
     }
 

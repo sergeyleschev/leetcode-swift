@@ -63,10 +63,13 @@ class Solution {
         return ans
     }
 
-
     private func backtracking(k: Int, n: Int, start: Int, curr: inout [Int], ans: inout [[Int]]) {
-        if n == 0, curr.count == k { ans.append(curr); return } 
-        else if n < 0 || curr.count == k { return }
+        if n == 0, curr.count == k {
+            ans.append(curr)
+            return
+        } else if n < 0 || curr.count == k {
+            return
+        }
 
         for i in start..<9 {
             curr.append(i + 1)

@@ -47,7 +47,10 @@ class Solution {
 
         for ch in keysPressed {
             let pressTime = idx == 0 ? releaseTimes[0] : (releaseTimes[idx] - releaseTimes[idx - 1])
-            if pressTime < maxPressTime { idx += 1; continue }
+            if pressTime < maxPressTime {
+                idx += 1
+                continue
+            }
             if pressTime > maxPressTime {
                 maxPressTime = pressTime
                 ans = ch

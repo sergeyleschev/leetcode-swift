@@ -33,8 +33,9 @@ class Solution {
     //   - space: O(1)
 
     func dominantIndex(_ nums: [Int]) -> Int {
-        var largest = 0, largestIndex = 0
-        
+        var largest = 0
+        var largestIndex = 0
+
         for (index, num) in nums.enumerated() {
             if num > largest {
                 largest = num

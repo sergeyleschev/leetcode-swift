@@ -47,26 +47,24 @@ class Solution {
     private var wordsPerfect = Set<String>()
     private var wordsCap = [String: String]()
     private var wordsVow = [String: String]()
-    
-    
+
     func spellchecker(_ wordlist: [String], _ queries: [String]) -> [String] {
         var ans = [String]()
 
         for word in wordlist {
             wordsPerfect.insert(word)
-            
+
             let wordlow = word.lowercased()
             if !wordsCap.keys.contains(wordlow) { wordsCap[wordlow] = word }
-            
+
             let wordlowDV = devowel(wordlow)
             if !wordsVow.keys.contains(wordlowDV) { wordsVow[wordlowDV] = word }
         }
-        
+
         for query in queries { ans.append(solve(query)) }
         return ans
     }
-    
-    
+
     private func solve(_ query: String) -> String {
         guard !wordsPerfect.contains(query) else { return query }
         let wordlow = query.lowercased()
@@ -74,15 +72,15 @@ class Solution {
         if let val = wordsVow[devowel(wordlow)] { return val }
         return ""
     }
-    
-    
+
     private func devowel(_ word: String) -> String {
         var ans = [Character]()
         for ch in word { ans.append(isVowel(ch) ? "*" : ch) }
         return String(ans)
     }
-    
-    
-    private func isVowel(_ ch: Character) -> Bool { ch == "a" || ch == "e" || ch == "i" || ch == "o" || ch == "u" }
+
+    private func isVowel(_ ch: Character) -> Bool {
+        ch == "a" || ch == "e" || ch == "i" || ch == "o" || ch == "u"
+    }
 
 }

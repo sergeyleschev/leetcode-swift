@@ -31,22 +31,22 @@ class Solution {
         var queue: [(Int, Int)] = []
         let directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
         var distance = 1
-        
+
         for i in 0..<m {
             for j in 0..<n {
                 if matrix[i][j] == 0 {
                     queue.append((i, j))
                 } else {
-                    matrix[i][j] = -1 // use -1 to identify cells that have not been visited yet
+                    matrix[i][j] = -1  // use -1 to identify cells that have not been visited yet
                 }
             }
         }
-        
+
         while !queue.isEmpty {
             let count = queue.count
             for _ in 0..<count {
                 let (i, j) = queue.removeFirst()
-                
+
                 for direction in directions {
                     let x = i + direction.0
                     let y = j + direction.1
@@ -57,10 +57,10 @@ class Solution {
                     queue.append((x, y))
                 }
             }
-            
+
             distance += 1
         }
-        
+
         return matrix
     }
 

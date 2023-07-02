@@ -51,7 +51,7 @@ class Solution {
 
     func getMoneyAmount(_ n: Int) -> Int {
         var dp = Array(repeating: Array(repeating: 0, count: n + 1), count: n + 1)
-        
+
         for index in 1..<n {
             for i in 1...(n - index) {
                 let j = i + index
@@ -69,8 +69,8 @@ class Solution {
                 dp[i][j] = maxNum
             }
         }
-        
+
         return dp[1][n]
     }
-    
+
 }

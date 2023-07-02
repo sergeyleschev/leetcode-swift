@@ -24,7 +24,7 @@ class Solution {
         for barcode in barcodes { dict[barcode, default: 0] += 1 }
         var ans = Array(repeating: 0, count: barcodes.count)
         let sortKeys = dict.keys.sorted { dict[$0]! > dict[$1]! }
-        
+
         for k in sortKeys {
             for _ in 0..<dict[k]! {
                 ans[i] = k
@@ -32,7 +32,7 @@ class Solution {
                 if i >= barcodes.count { i = 1 }
             }
         }
-        
+
         return ans
     }
 

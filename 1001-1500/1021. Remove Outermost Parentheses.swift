@@ -12,21 +12,21 @@ class Solution {
     // Example 1:
     // Input: s = "(()())(())"
     // Output: "()()()"
-    // Explanation: 
+    // Explanation:
     // The input string is "(()())(())", with primitive decomposition "(()())" + "(())".
     // After removing outer parentheses of each part, this is "()()" + "()" = "()()()".
 
     // Example 2:
     // Input: s = "(()())(())(()(()))"
     // Output: "()()()()(())"
-    // Explanation: 
+    // Explanation:
     // The input string is "(()())(())(()(()))", with primitive decomposition "(()())" + "(())" + "(()(()))".
     // After removing outer parentheses of each part, this is "()()" + "()" + "()(())" = "()()()()(())".
 
     // Example 3:
     // Input: s = "()()"
     // Output: ""
-    // Explanation: 
+    // Explanation:
     // The input string is "()()", with primitive decomposition "()" + "()".
     // After removing outer parentheses of each part, this is "" + "" = "".
 
@@ -41,10 +41,12 @@ class Solution {
 
         for c in S {
             switch c {
-            case "(": if t != 0 { r.append(c) }
-                      t += 1
-            case ")": t -= 1
-                      if t != 0 { r.append(c) }
+            case "(":
+                if t != 0 { r.append(c) }
+                t += 1
+            case ")":
+                t -= 1
+                if t != 0 { r.append(c) }
             default: break
             }
         }

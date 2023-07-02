@@ -19,7 +19,7 @@ class Solution {
     // Constraints:
     // 1 <= s.length <= 10^5
     // s[i] is a printable ascii character.
-     
+
     // Follow up: Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
 
     // - Complexity:
@@ -28,7 +28,7 @@ class Solution {
 
     func reverseString(_ s: inout [Character]) {
         var i = 0
-        var j = s.count-1
+        var j = s.count - 1
 
         while i < j {
             s.swapAt(i, j)

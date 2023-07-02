@@ -31,7 +31,7 @@ class Solution {
     // Example 5:
     // Input: s = "acdcb", p = "a*c?b"
     // Output: false
-     
+
     // Constraints:
     // 0 <= s.length, p.length <= 2000
     // s contains only lowercase English letters.
@@ -40,7 +40,7 @@ class Solution {
     func isMatch(_ s: String, _ p: String) -> Bool {
         var regular = ""
         var last: Character = " "
-        
+
         for c in p {
             if c == "?" {
                 regular += "."
@@ -54,15 +54,13 @@ class Solution {
         return regularExpressionMatching(s, regular)
     }
 
-
     func regularExpressionMatching(_ s: String, _ p: String) -> Bool {
         var string = Array(s)
         var chars: [Character] = []
-        var marks : [Bool] = []
+        var marks: [Bool] = []
         var isMark: Bool = false
-        var list = [[-1, -1, 1]] // [start, end, is need to add next start]
+        var list = [[-1, -1, 1]]  // [start, end, is need to add next start]
         var max = Int.min
-
 
         func nextRange(_ list: [[Int]], _ char: Character, _ mark: Bool) -> [[Int]] {
             var res = Set<[Int]>()
@@ -81,7 +79,7 @@ class Solution {
                                 break
                             }
                         }
-                        j = i + (count > 0 ? count - 1 : 0) 
+                        j = i + (count > 0 ? count - 1 : 0)
                         if count > 0 {
                             res.insert([i, j, 0])
                         } else {
@@ -112,7 +110,7 @@ class Solution {
             let mark = marks[index]
             list = nextRange(list, c, mark)
         }
-        for rang in list { max = max > rang[1] ? max : rang[1] }        
+        for rang in list { max = max > rang[1] ? max : rang[1] }
         return max == string.count - 1
     }
 

@@ -52,13 +52,19 @@ class Solution {
         var dy = [1, 0, -1, 0]
         var ans = 0
         var obstacleSet = Set<Int>()
-        
-        for obstacle in obstacles { obstacleSet.insert(((obstacle[0] + 30000) << 16) + obstacle[1] + 30000) }
+
+        for obstacle in obstacles {
+            obstacleSet.insert(((obstacle[0] + 30000) << 16) + obstacle[1] + 30000)
+        }
 
         for command in commands {
-            if command == -1 { direction = direction == 3 ? 0 : direction + 1; continue } 
-            else if command == -2 { direction = direction == 0 ? 3 : direction - 1; continue } 
-            else {
+            if command == -1 {
+                direction = direction == 3 ? 0 : direction + 1
+                continue
+            } else if command == -2 {
+                direction = direction == 0 ? 3 : direction - 1
+                continue
+            } else {
                 for _ in 0..<command {
                     let nx = x + dx[direction]
                     let ny = y + dy[direction]
@@ -71,7 +77,7 @@ class Solution {
                 ans = max(ans, x * x + y * y)
             }
         }
-        
+
         return ans
     }
 

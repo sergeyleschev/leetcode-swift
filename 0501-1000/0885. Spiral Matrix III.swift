@@ -5,8 +5,8 @@ class Solution {
     // 885. Spiral Matrix III
     // On a 2 dimensional grid with rows rows and cols columns, we start at (rStart, cStart) facing east.
     // Here, the north-west corner of the grid is at the first row and column, and the south-east corner of the grid is at the last row and column.
-    // Now, we walk in a clockwise spiral shape to visit every position in this grid. 
-    // Whenever we would move outside the boundary of the grid, we continue our walk outside the grid (but may return to the grid boundary later.) 
+    // Now, we walk in a clockwise spiral shape to visit every position in this grid.
+    // Whenever we would move outside the boundary of the grid, we continue our walk outside the grid (but may return to the grid boundary later.)
     // Eventually, we reach all rows * cols spaces of the grid.
     // Return a list of coordinates representing the positions of the grid in the order they were visited.
 
@@ -26,22 +26,24 @@ class Solution {
 
     func spiralMatrixIII(_ R: Int, _ C: Int, _ r0: Int, _ c0: Int) -> [[Int]] {
         var ans: [[Int]] = [[r0, c0]]
-        var i = 0, r = r0, c = c0
+        var i = 0
+        var r = r0
+        var c = c0
         let dr = [0, 1, 0, -1]
         let dc = [1, 0, -1, 0]
-        
+
         while ans.count < R * C {
             let d = i % 4
-            for _ in 0 ..< (i / 2 + 1) {
+            for _ in 0..<(i / 2 + 1) {
                 r += dr[d]
-                c += dc[d]    
+                c += dc[d]
                 if r < 0 || r >= R || c < 0 || c >= C { continue }
                 ans.append([r, c])
             }
 
             i += 1
         }
-        
+
         return ans
     }
 

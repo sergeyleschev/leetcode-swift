@@ -40,10 +40,10 @@ class Solution {
         for ch in s {
             subStr.append(ch)
             charsCounter.updateValue(1 + (charsCounter[ch] ?? 0), forKey: ch)
-            
+
             if subStr.count == minSize {
                 if charsCounter.count <= maxLetters {
-                    substrsCount.updateValue(1 + (substrsCount[subStr]  ?? 0), forKey: subStr)
+                    substrsCount.updateValue(1 + (substrsCount[subStr] ?? 0), forKey: subStr)
                 }
 
                 let ch = subStr.removeFirst()
@@ -56,8 +56,8 @@ class Solution {
                 }
             }
         }
-        
+
         return substrsCount.values.max() ?? 0
     }
-    
- }
+
+}

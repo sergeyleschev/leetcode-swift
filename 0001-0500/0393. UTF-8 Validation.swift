@@ -58,5 +58,5 @@ class Solution {
 
         return nBytes == 0
     }
-    
+
 }

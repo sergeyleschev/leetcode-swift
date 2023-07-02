@@ -18,20 +18,20 @@ class Solution {
     // Example 1:
     // Input: s = "leet2code3", k = 10
     // Output: "o"
-    // Explanation: 
+    // Explanation:
     // The decoded string is "leetleetcodeleetleetcodeleetleetcode".
     // The 10th letter in the string is "o".
 
     // Example 2:
     // Input: s = "ha22", k = 5
     // Output: "h"
-    // Explanation: 
+    // Explanation:
     // The decoded string is "hahahaha".  The 5th letter is "h".
 
     // Example 3:
     // Input: s = "a2345678999999999999999", k = 1
     // Output: "a"
-    // Explanation: 
+    // Explanation:
     // The decoded string is "a" repeated 8301530446056247680 times.  The 1st letter is "a".
 
     // Constraints:
@@ -45,12 +45,12 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of an encoded string.
     //   - space: O(1), only constant space is used.
-    
+
     func decodeAtIndex(_ S: String, _ K: Int) -> String {
         var size = 0
         let n = S.count
         var k = K
-        
+
         for ch in S {
             if ch.isLetter {
                 size += 1
@@ -58,18 +58,18 @@ class Solution {
                 size *= num
             }
         }
-        
+
         for ch in S.reversed() {
-            k %= size            
+            k %= size
             if k == 0, ch.isLetter { return String(ch) }
-            
+
             if ch.isLetter {
                 size -= 1
             } else if let num = Int(String(ch)) {
                 size /= num
             }
         }
-        
+
         fatalError("Invalid input string")
     }
 

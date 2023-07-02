@@ -24,8 +24,8 @@ class Solution {
     func longestWord(_ words: [String]) -> String {
         var ans = ""
         var dict = ["": 0]
-        
-        for word in words.sorted(by: {$0.count < $1.count}) {
+
+        for word in words.sorted(by: { $0.count < $1.count }) {
             let s = String(word[word.startIndex..<word.index(before: word.endIndex)])
             if dict[s] != nil {
                 dict[word] = 0
@@ -36,8 +36,8 @@ class Solution {
                 }
             }
         }
-        
+
         return ans
     }
-    
+
 }

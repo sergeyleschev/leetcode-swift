@@ -35,20 +35,20 @@ class Solution {
     // 0 <= grid[i][j] <= 50
 
     func surfaceArea(_ grid: [[Int]]) -> Int {
-         let count = grid.count
-         var nums = 0
-         var faces = 0
-        
-         for i in 0..<count {
-             for j in 0..<count {
-                 nums += grid[i][j]
-                 if grid[i][j] > 0 { faces += grid[i][j] - 1 }
-                 if i > 0 { faces += min(grid[i - 1][j], grid[i][j]) }
-                 if j > 0 { faces += min(grid[i][j - 1], grid[i][j]) }
-             }
-         }
-        
-         return 6 * nums - faces * 2
+        let count = grid.count
+        var nums = 0
+        var faces = 0
+
+        for i in 0..<count {
+            for j in 0..<count {
+                nums += grid[i][j]
+                if grid[i][j] > 0 { faces += grid[i][j] - 1 }
+                if i > 0 { faces += min(grid[i - 1][j], grid[i][j]) }
+                if j > 0 { faces += min(grid[i][j - 1], grid[i][j]) }
+            }
+        }
+
+        return 6 * nums - faces * 2
     }
-    
+
 }

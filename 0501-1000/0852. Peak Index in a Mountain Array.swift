@@ -34,18 +34,18 @@ class Solution {
     // 3 <= arr.length <= 10^4
     // 0 <= arr[i] <= 10^6
     // arr is guaranteed to be a mountain array.
- 
+
     // Follow up: Finding the O(n) is straightforward, could you find an O(log(n)) solution?
 
     func peakIndexInMountainArray(_ A: [Int]) -> Int {
         var currentMax = A[0]
         var currentIdx = 0
- 
+
         for i in 1..<A.endIndex where A[i] > currentMax {
             currentMax = A[i]
             currentIdx = i
         }
- 
+
         return currentIdx
     }
 

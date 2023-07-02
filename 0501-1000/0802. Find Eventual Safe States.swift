@@ -27,8 +27,7 @@ class Solution {
     // The number of edges in the graph will be in the range [1, 4 * 10^4].
 
     func eventualSafeNodes(_ graph: [[Int]]) -> [Int] {
-        var flag = Array(repeating: 0, count: graph.count+1)
-        
+        var flag = Array(repeating: 0, count: graph.count + 1)
 
         func dfs(nodes: [Int], node: Int) -> Bool {
             guard flag[node] == 0 else { return flag[node] == 2 }
@@ -47,5 +46,5 @@ class Solution {
             return false
         }
     }
-    
+
 }

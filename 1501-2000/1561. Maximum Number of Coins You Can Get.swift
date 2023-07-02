@@ -49,9 +49,10 @@ class Solution {
         return output
     }
 
-
     func maxCoins(_ piles: [Int]) -> Int {
-        var sortedPile = mySort(piles), sum = 0, pos = 0
+        var sortedPile = mySort(piles)
+        var sum = 0
+        var pos = 0
 
         while piles.count - pos * 2 - 2 > pos {
             sum += sortedPile[piles.count - pos * 2 - 2]

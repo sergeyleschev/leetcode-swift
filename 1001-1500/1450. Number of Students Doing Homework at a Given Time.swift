@@ -39,8 +39,10 @@ class Solution {
     // 1 <= queryTime <= 1000
 
     func busyStudent(_ startTime: [Int], _ endTime: [Int], _ queryTime: Int) -> Int {
-        var num = 0    
-        for i in 0..<startTime.count where queryTime >= startTime[i] && queryTime <= endTime[i] { num += 1 }
+        var num = 0
+        for i in 0..<startTime.count where queryTime >= startTime[i] && queryTime <= endTime[i] {
+            num += 1
+        }
         return num
     }
 

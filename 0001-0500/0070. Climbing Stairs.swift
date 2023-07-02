@@ -25,7 +25,7 @@ class Solution {
     // 1. 1 step + 1 step + 1 step
     // 2. 1 step + 2 steps
     // 3. 2 steps + 1 step
-     
+
     // Constraints:
     // 1 <= n <= 45
 
@@ -39,7 +39,7 @@ class Solution {
         var first = 1
         var second = 1
         var third = 0
-        
+
         for _ in 2...n {
             third = first + second
             first = second

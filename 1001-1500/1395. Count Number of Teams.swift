@@ -12,7 +12,7 @@ class Solution {
     // Example 1:
     // Input: rating = [2,5,3,4,1]
     // Output: 3
-    // Explanation: We can form three teams given the conditions. (2,3,4), (5,4,1), (5,3,1). 
+    // Explanation: We can form three teams given the conditions. (2,3,4), (5,4,1), (5,3,1).
 
     // Example 2:
     // Input: rating = [2,1,3]
@@ -32,7 +32,7 @@ class Solution {
     func numTeams(_ rating: [Int]) -> Int {
         var teamCount = 0
 
-        for i in 1..<rating.count - 1{
+        for i in 1..<rating.count - 1 {
             let origin = rating[i]
             var leftSmaller = 0
             var leftLarger = 0

@@ -31,13 +31,19 @@ class Solution {
     func maxDepthAfterSplit(_ seq: String) -> [Int] {
         var ans: [Int] = []
         var depth = 0
-        
+
         for c in seq {
-            if c == "(" { ans.append(depth % 2); depth += 1 }
-            if c == ")" { depth -= 1; ans.append(depth % 2) }
+            if c == "(" {
+                ans.append(depth % 2)
+                depth += 1
+            }
+            if c == ")" {
+                depth -= 1
+                ans.append(depth % 2)
+            }
         }
-        
+
         return ans
     }
-    
+
 }

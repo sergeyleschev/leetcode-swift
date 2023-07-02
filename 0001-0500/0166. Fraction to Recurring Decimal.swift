@@ -34,14 +34,14 @@ class Solution {
 
     func fractionToDecimal(_ numerator: Int, _ denominator: Int) -> String {
         if numerator == 0 { return "0" }
-        
+
         var numerator = numerator
         var denominator = denominator
         var string = ""
         var index: Int?
         var map: [Int] = []
         var nums: [Int] = []
-        
+
         if numerator ^ denominator < 0 { string = "-" }
         numerator = abs(numerator)
         denominator = abs(denominator)
@@ -61,7 +61,7 @@ class Solution {
             }
             rem > 0 ? map.append(rem) : ()
         }
-        
+
         if nums.count > 0 {
             string += "."
             if let index = index {
@@ -78,7 +78,7 @@ class Solution {
                 }
             }
         }
-        
+
         return string
     }
 

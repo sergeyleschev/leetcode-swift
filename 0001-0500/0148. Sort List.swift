@@ -1,13 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init() { self.val = 0; self.next = nil; }
- *     public init(_ val: Int) { self.val = val; self.next = nil; }
- *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init() { self.val = 0; self.next = nil; }
+///     public init(_ val: Int) { self.val = val; self.next = nil; }
+///     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -44,7 +42,6 @@ class Solution {
     private var tail = ListNode(-1)
     private var nextSublist: ListNode? = ListNode(-1)
 
-
     func sortList(_ head: ListNode?) -> ListNode? {
         guard head?.next != nil else { return head }
 
@@ -74,7 +71,6 @@ class Solution {
         return dummy.next
     }
 
-
     private func split(_ start: ListNode?, _ size: Int) -> ListNode? {
         var start = start
         var end = start?.next
@@ -90,7 +86,6 @@ class Solution {
 
         return mid
     }
-
 
     private func merge(_ list1: inout ListNode?, _ list2: inout ListNode?) {
         let dummy = ListNode(-1)
@@ -112,7 +107,6 @@ class Solution {
         tail.next = dummy.next
         if let newTail = newTail { tail = newTail }
     }
-
 
     private func getCount(_ head: ListNode?) -> Int {
         var count = 0

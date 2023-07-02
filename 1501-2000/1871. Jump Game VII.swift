@@ -12,7 +12,7 @@ class Solution {
     // Input: s = "011010", minJump = 2, maxJump = 3
     // Output: true
     // Explanation:
-    // In the first step, move from index 0 to index 3. 
+    // In the first step, move from index 0 to index 3.
     // In the second step, move from index 3 to index 5.
 
     // Example 2:
@@ -43,11 +43,11 @@ class Solution {
                 if l <= r {
                     for i in l...r where chars[i] == "0" { nextLevel.append(i) }
                 }
-                
+
             }
             queue = nextLevel
         }
         return false
     }
-    
+
 }

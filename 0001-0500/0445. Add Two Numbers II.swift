@@ -1,13 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init() { self.val = 0; self.next = nil; }
- *     public init(_ val: Int) { self.val = val; self.next = nil; }
- *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init() { self.val = 0; self.next = nil; }
+///     public init(_ val: Int) { self.val = val; self.next = nil; }
+///     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -43,7 +41,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n + m), where n is the length of l1, and m is the length of l2.
     //   - space: O(max(n, m)), where n is the length of l1, and m is the length of l2.
-    
+
     func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
         var n1 = 0
         var n2 = 0

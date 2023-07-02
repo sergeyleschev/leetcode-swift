@@ -1,14 +1,12 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init(_ val: Int) {
- *         self.val = val
- *         self.next = nil
- *     }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init(_ val: Int) {
+///         self.val = val
+///         self.next = nil
+///     }
+/// }
 
 class Solution {
 
@@ -52,7 +50,7 @@ class Solution {
     // - Complexity:
     //   - time: O(1), only constant time is used.
     //   - space: O(1), only constant space is used.
-    
+
     func deleteNode(_ node: ListNode?) {
         guard let node = node, let next = node.next else { return }
         node.val = next.val

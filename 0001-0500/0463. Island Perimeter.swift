@@ -34,7 +34,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n * m), where n is the number of rows in the grid, and m is the number of columns in the grid.
     //   - space: O(1), only constant space is used.
-    
+
     func islandPerimeter(_ grid: [[Int]]) -> Int {
         var ans = 0
 
@@ -42,8 +42,8 @@ class Solution {
             for j in 0..<grid[i].count {
                 guard grid[i][j] == 1 else { continue }
                 ans += 4
-                if i > 0, grid[i-1][j] == 1 { ans -= 2 }
-                if j > 0, grid[i][j-1] == 1 { ans -= 2 }
+                if i > 0, grid[i - 1][j] == 1 { ans -= 2 }
+                if j > 0, grid[i][j - 1] == 1 { ans -= 2 }
             }
         }
 

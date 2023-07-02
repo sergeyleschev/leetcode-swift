@@ -39,12 +39,12 @@ class Solution {
         var queue = [(Int, Int, Bool)]()
 
         for i in forbidden {
-            visited[i][0] = false // forward
-            visited[i][1] = false // backward
+            visited[i][0] = false  // forward
+            visited[i][1] = false  // backward
         }
-        
-        queue.append((0,1,true))
-        
+
+        queue.append((0, 1, true))
+
         while !queue.isEmpty {
             let data = queue.removeFirst()
             let now = data.0
@@ -52,20 +52,20 @@ class Solution {
             let prev = now - b
             let step = data.1
             let canGoBack = data.2
-            
+
             if next == x || prev == x && canGoBack { return step }
 
-            if  next < 6000 && visited[next][0] {
+            if next < 6000 && visited[next][0] {
                 visited[next][0] = false
                 queue.append((next, step + 1, true))
             }
-            
-            if  prev > 0 && canGoBack && visited[prev][1] {
+
+            if prev > 0 && canGoBack && visited[prev][1] {
                 visited[prev][1] = false
                 queue.append((prev, step + 1, false))
             }
         }
-        
+
         return -1
     }
 

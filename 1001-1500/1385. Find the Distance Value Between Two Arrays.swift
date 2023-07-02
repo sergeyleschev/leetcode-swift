@@ -9,16 +9,16 @@ class Solution {
     // Example 1:
     // Input: arr1 = [4,5,8], arr2 = [10,9,1,8], d = 2
     // Output: 2
-    // Explanation: 
-    // For arr1[0]=4 we have: 
-    // |4-10|=6 > d=2 
-    // |4-9|=5 > d=2 
-    // |4-1|=3 > d=2 
-    // |4-8|=4 > d=2 
-    // For arr1[1]=5 we have: 
-    // |5-10|=5 > d=2 
-    // |5-9|=4 > d=2 
-    // |5-1|=4 > d=2 
+    // Explanation:
+    // For arr1[0]=4 we have:
+    // |4-10|=6 > d=2
+    // |4-9|=5 > d=2
+    // |4-1|=3 > d=2
+    // |4-8|=4 > d=2
+    // For arr1[1]=5 we have:
+    // |5-10|=5 > d=2
+    // |5-9|=4 > d=2
+    // |5-1|=4 > d=2
     // |5-8|=3 > d=2
     // For arr1[2]=8 we have:
     // |8-10|=2 <= d=2
@@ -47,7 +47,10 @@ class Solution {
 
         while i < arr1.count {
             while j < arr2.count {
-                if abs(arr1[i] - arr2[j]) <= d { diff += 1; break }
+                if abs(arr1[i] - arr2[j]) <= d {
+                    diff += 1
+                    break
+                }
                 j += 1
             }
             if diff == 0 { distance += 1 }
@@ -58,5 +61,5 @@ class Solution {
 
         return distance
     }
-    
+
 }

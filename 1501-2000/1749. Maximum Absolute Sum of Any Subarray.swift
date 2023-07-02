@@ -3,7 +3,7 @@ class Solution {
     // Solution by Sergey Leschev
 
     // 1749. Maximum Absolute Sum of Any Subarray
-    // You are given an integer array nums. The absolute sum of a subarray [numsl, numsl+1, ..., numsr-1, numsr] is abs(numsl + numsl+1 + ... + numsr-1 + numsr).
+    // You are given an integer array nums. The absolute sum of a subarray [nums(l), nums(l+1), ..., nums(r-1), nums(r)] is abs(nums(l) + nums(l+1) + ... + nums(r-1) + nums(r)).
 
     // Return the maximum absolute sum of any (possibly empty) subarray of nums.
 

@@ -37,7 +37,7 @@ class Solution {
         var queue = [Int]()
         var visited = [Bool](repeating: false, count: n)
         var cnt = 0
-        
+
         connections.forEach { (connection) in
             graph[connection[0], default: [Int]()].append(connection[1])
             reversedGraph[connection[1], default: [Int]()].append(connection[0])
@@ -45,11 +45,11 @@ class Solution {
 
         queue.append(0)
         visited[0] = true
-        
+
         while !queue.isEmpty {
             var nextLevel = [Int]()
             for node in queue {
-                
+
                 if let children = graph[node] {
                     for ch in children {
                         if !visited[ch] {

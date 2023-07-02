@@ -15,7 +15,7 @@ class Solution {
     // Example:
     // Input: n = 50
     // Output: 0.625
-    // Explanation: 
+    // Explanation:
     // If we choose the first two operations, A will become empty first. For the third operation, A and B will become empty at the same time. For the fourth operation, B will become empty first. So the total probability of A becoming empty first plus half the probability that A and B become empty at the same time, is 0.25 * (1 + 1 + 0.5 + 0) = 0.625.
     // Notes:
     // 0 <= n <= 109.
@@ -25,21 +25,36 @@ class Solution {
         guard N != 0 else { return 0.5 }
         guard N < 5000 else { return 1.0 }
         let soupVolume = Int(ceil(Double(N) / 25))
-        var probability  = [[Double]](repeating: [Double](repeating: 0, count: soupVolume + 1), count: soupVolume + 1)
+        var probability = [[Double]](
+            repeating: [Double](repeating: 0, count: soupVolume + 1), count: soupVolume + 1)
         probability[0][0] = 0.5
-        
+
         for i in 1...soupVolume { probability[0][i] = 1 }
-        
+
         for soupAVolume in 1...soupVolume {
-            let remainSoupA: [Int] = [soupAVolume - 4 > 0 ? soupAVolume - 4 : 0, soupAVolume - 3 > 0 ? soupAVolume - 3 : 0, soupAVolume - 2 > 0 ? soupAVolume - 2 : 0, soupAVolume - 1 > 0 ? soupAVolume - 1 : 0]
+            let remainSoupA: [Int] = [
+                soupAVolume - 4 > 0 ? soupAVolume - 4 : 0,
+                soupAVolume - 3 > 0 ? soupAVolume - 3 : 0,
+                soupAVolume - 2 > 0 ? soupAVolume - 2 : 0,
+                soupAVolume - 1 > 0 ? soupAVolume - 1 : 0,
+            ]
             for soupBVolume in 1...soupVolume {
-                let remainSoupB = [soupBVolume,soupBVolume - 1 > 0 ?  soupBVolume - 1 : 0,soupBVolume - 2 > 0 ?  soupBVolume - 2 : 0,soupBVolume - 3 > 0 ?  soupBVolume - 3 : 0]
-                
-                probability[soupAVolume][soupBVolume] = 0.25  * (probability[remainSoupA[0]][remainSoupB[0]] + probability[remainSoupA[1]][remainSoupB[1]] + probability[remainSoupA[2]][remainSoupB[2]]  + probability[remainSoupA[3]][remainSoupB[3]])
+                let remainSoupB = [
+                    soupBVolume, soupBVolume - 1 > 0 ? soupBVolume - 1 : 0,
+                    soupBVolume - 2 > 0 ? soupBVolume - 2 : 0,
+                    soupBVolume - 3 > 0 ? soupBVolume - 3 : 0,
+                ]
+
+                probability[soupAVolume][soupBVolume] =
+                    0.25
+                    * (probability[remainSoupA[0]][remainSoupB[0]]
+                        + probability[remainSoupA[1]][remainSoupB[1]]
+                        + probability[remainSoupA[2]][remainSoupB[2]]
+                        + probability[remainSoupA[3]][remainSoupB[3]])
             }
         }
-        
+
         return probability[soupVolume][soupVolume]
     }
 
- }
+}

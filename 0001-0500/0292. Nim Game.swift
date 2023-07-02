@@ -30,7 +30,7 @@ class Solution {
     // Example 3:
     // Input: n = 2
     // Output: true
-     
+
     // Constraints:
     // 1 <= n <= 2^31 - 1
 

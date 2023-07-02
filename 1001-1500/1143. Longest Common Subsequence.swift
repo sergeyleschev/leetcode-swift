@@ -9,8 +9,8 @@ class Solution {
     // A common subsequence of two strings is a subsequence that is common to both strings.
 
     // Example 1:
-    // Input: text1 = "abcde", text2 = "ace" 
-    // Output: 3  
+    // Input: text1 = "abcde", text2 = "ace"
+    // Output: 3
     // Explanation: The longest common subsequence is "ace" and its length is 3.
 
     // Example 2:
@@ -31,8 +31,9 @@ class Solution {
         guard text1.count > 0 && text2.count > 0 else { return 0 }
         let text1 = Array(text1)
         let text2 = Array(text2)
-        var dp: [[Int]] = Array(repeating: Array(repeating: 0, count: text2.count + 1), count: text1.count + 1)
-        
+        var dp: [[Int]] = Array(
+            repeating: Array(repeating: 0, count: text2.count + 1), count: text1.count + 1)
+
         for i in 1...text1.count {
             for j in 1...text2.count {
                 if text1[i - 1] == text2[j - 1] {
@@ -42,9 +43,9 @@ class Solution {
                 }
             }
         }
-        
+
         let ans = dp.last?.last ?? 0
         return ans
     }
-    
+
 }

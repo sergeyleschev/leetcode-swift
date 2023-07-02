@@ -38,12 +38,10 @@ class MyQueue {
     private var input: [Int]
     private var output: [Int]
 
-
     init() {
         input = [Int]()
         output = [Int]()
     }
-
 
     // Push element x to the back of queue.
     // - Parameter x: New element.
@@ -56,19 +54,17 @@ class MyQueue {
         input.append(x)
     }
 
-
     // Removes the element from in front of queue and returns that element.
     // - Returns: First element in the queue.
 
     // - Complexity:
     //     - time: O(1), only constant time is used.
     //     - space: O(1), only constant space is used.
-    
+
     func pop() -> Int {
         peek()
         return output.removeLast()
     }
-
 
     // Get the front element.
     // - Returns: First element in the queue.
@@ -83,14 +79,13 @@ class MyQueue {
         return output.last ?? -1
     }
 
-
     // Returns whether the queue is empty.
     // - Returns: True if the queue is empty, otherwise returns false.
 
     // - Complexity:
     //     - time: O(1), only constant time is used.
     //     - space: O(1), only constant space is used.
-    
+
     func empty() -> Bool {
         input.isEmpty && output.isEmpty
     }

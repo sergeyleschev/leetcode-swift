@@ -50,7 +50,6 @@ class Solution {
 
     private let directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
 
-
     func minCost(_ grid: [[Int]]) -> Int {
         let m = grid.count
         let n = grid.first?.count ?? 0
@@ -65,7 +64,9 @@ class Solution {
             for _ in 0..<queue.count {
                 let cell = queue.removeFirst()
                 for i in 0..<4 {
-                    dfs(grid, cell.0 + directions[i].0, cell.1 + directions[i].1, &costs, cost, &queue)
+                    dfs(
+                        grid, cell.0 + directions[i].0, cell.1 + directions[i].1, &costs, cost,
+                        &queue)
                 }
             }
         }
@@ -73,8 +74,10 @@ class Solution {
         return costs[m - 1][n - 1]
     }
 
-    
-    private func dfs(_ grid: [[Int]], _ r: Int, _ c: Int, _ costs: inout [[Int]], _ cost: Int, _ queue: inout [(Int, Int)]) {
+    private func dfs(
+        _ grid: [[Int]], _ r: Int, _ c: Int, _ costs: inout [[Int]], _ cost: Int,
+        _ queue: inout [(Int, Int)]
+    ) {
         let m = grid.count
         let n = grid.first?.count ?? 0
 

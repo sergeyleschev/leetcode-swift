@@ -25,10 +25,10 @@ class Solution {
     func minMoves(_ nums: [Int]) -> Int {
         var minNum = nums[0]
         var result = 0
-        
+
         for i in nums { minNum = min(i, minNum) }
         for i in nums { result += i - minNum }
-        
+
         return result
     }
 

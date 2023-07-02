@@ -35,7 +35,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of nums.
     //   - space: O(1), only constant space is used.
-    
+
     func thirdMax(_ nums: [Int]) -> Int {
         var top3 = Set<Int>()
 

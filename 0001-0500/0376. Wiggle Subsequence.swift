@@ -42,17 +42,17 @@ class Solution {
     func wiggleMaxLength(_ nums: [Int]) -> Int {
         let n = nums.count
         guard n > 1 else { return n }
-        
+
         var diff = nums[1] - nums[0]
         var ans = diff != 0 ? 2 : 1
-        
+
         for i in 2..<n {
             let tmp = nums[i] - nums[i - 1]
             guard (tmp > 0 && diff <= 0) || (tmp < 0 && diff >= 0) else { continue }
             ans += 1
             diff = tmp
         }
-        
+
         return ans
     }
 

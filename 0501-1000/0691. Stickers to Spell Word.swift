@@ -30,25 +30,26 @@ class Solution {
     // stickers[i] and target consist of lowercase English letters.
 
     func minStickers(_ stickers: [String], _ target: String) -> Int {
-        let n = stickers.count, alph = ("a"..."z").array!
+        let n = stickers.count
+        let alph = ("a"..."z").array!
         let map = [Int](repeating: 0, count: alph.count)
         var freq = [[Int]](repeating: map, count: n)
-        var memo = [String:Int]()
+        var memo = [String: Int]()
 
         memo[""] = 0
-        
+
         for i in 0..<n { for char in stickers[i] { freq[i][char.ascii - 97] += 1 } }
-        
+
         return helper(&freq, target, &memo)
     }
 
-    
-    private func helper(_ freq: inout [[Int]], _ target: String,_ memo: inout [String:Int]) -> Int {
+    private func helper(_ freq: inout [[Int]], _ target: String, _ memo: inout [String: Int]) -> Int
+    {
         if let num = memo[target] { return num }
         var res = Int.max
-        var cnt = [Int](repeating:0, count: 26)
+        var cnt = [Int](repeating: 0, count: 26)
         target.forEach({ cnt[$0.ascii - 97] += 1 })
-        
+
         for i in 0..<freq.count {
             if freq[i][target[0].ascii - 97] == 0 { continue }
             var t = ""
@@ -58,39 +59,37 @@ class Solution {
                 }
             }
             let ans = helper(&freq, t, &memo)
-            if ans != -1 {res = min(res, ans + 1)}
+            if ans != -1 { res = min(res, ans + 1) }
         }
 
         memo[target, default: 0] = (res == Int.max) ? -1 : res
-        return memo[target,default:0]
+        return memo[target, default: 0]
     }
 }
 
-
 extension String {
-    subscript (_ i: Int) -> Character { get { return self[index(startIndex, offsetBy: i)] } }
+    subscript(_ i: Int) -> Character { get { return self[index(startIndex, offsetBy: i)] } }
 }
-
 
 extension Character {
-    var ascii: Int { get { return Int(unicodeScalars.first?.value ?? 0) } }
+    var ascii: Int { return Int(unicodeScalars.first?.value ?? 0) }
 }
-
 
 extension Int {
-    var ASCII: Character { get { return Character(UnicodeScalar(self)!) } }
+    var ASCII: Character { return Character(UnicodeScalar(self)!) }
 }
-
 
 extension ClosedRange where Bound == UnicodeScalar {
-    func toArray() -> [UnicodeScalar] { (lowerBound.value...upperBound.value).compactMap { UnicodeScalar($0) } }
+    func toArray() -> [UnicodeScalar] {
+        (lowerBound.value...upperBound.value).compactMap { UnicodeScalar($0) }
+    }
 }
-
 
 extension ClosedRange where Bound == String {
     private func toArray() -> [UnicodeScalar]? {
         guard let lower = lowerBound.first?.unicodeScalars.first,
-              let upper = upperBound.first?.unicodeScalars.first else { return nil }
+            let upper = upperBound.first?.unicodeScalars.first
+        else { return nil }
         return (lower...upper).toArray()
     }
 

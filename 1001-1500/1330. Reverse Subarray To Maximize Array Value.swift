@@ -25,10 +25,12 @@ class Solution {
 
         let lo = zip(nums, nums.dropFirst()).map { a, b in max(a, b) }.min()!
         let hi = zip(nums, nums.dropFirst()).map { c, d in min(c, d) }.max()!
-        
-        let fromFirst = zip(nums, nums.dropFirst()).map { c, d in abs(nums.first! - d) - abs(c - d) }.max()!
-        let toLast = zip(nums, nums.dropFirst()).map { a, b in abs(nums.last! - a) - abs(b - a) }.max()!
-        
+
+        let fromFirst = zip(nums, nums.dropFirst()).map { c, d in abs(nums.first! - d) - abs(c - d)
+        }.max()!
+        let toLast = zip(nums, nums.dropFirst()).map { a, b in abs(nums.last! - a) - abs(b - a) }
+            .max()!
+
         return value + max((hi - lo) * 2, fromFirst, toLast)
     }
 

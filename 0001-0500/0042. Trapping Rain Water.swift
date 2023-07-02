@@ -13,7 +13,7 @@ class Solution {
     // Example 2:
     // Input: height = [4,2,0,3,2,5]
     // Output: 9
-     
+
     // Constraints:
     // n == height.length
     // 0 <= n <= 3 * 10^4
@@ -44,13 +44,13 @@ class Solution {
             if max == 0 {
                 return 0
             } else {
-                for k in iMax+1..<jMax {
+                for k in iMax + 1..<jMax {
                     let h = min(height[iMax], height[jMax])
                     max -= (height[k] > h ? h : height[k])
                 }
                 var extra = -1
                 var tmpHeight = 0
-                for k in iMax+1...jMax-1 {
+                for k in iMax + 1...jMax - 1 {
                     if height[k] > min(height[iMax], height[jMax]) && height[k] > tmpHeight {
                         tmpHeight = height[k]
                         extra = k

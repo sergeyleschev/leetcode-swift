@@ -39,7 +39,7 @@ class Solution {
 
         sortedArr.removeFirst(toDelete)
         sortedArr.removeLast(toDelete)
-        return sortedArr.reduce(0.0, { $0 +  Double($1) }) / Double(n - toDelete * 2)
+        return sortedArr.reduce(0.0, { $0 + Double($1) }) / Double(n - toDelete * 2)
     }
 
 }

@@ -45,7 +45,7 @@ class Solution {
             }
             return res
         }
-        
+
         // cost map cache
         let cost: [[Int]] = {
             var res = Array(repeating: Array(repeating: 0, count: n), count: n)
@@ -54,9 +54,9 @@ class Solution {
             }
             return res
         }()
-        
+
         for j in 0..<n { dp[1][j] = cost[0][j] }
-        
+
         if k == 1 { return dp[1][n - 1] }
 
         for i in 2...k {

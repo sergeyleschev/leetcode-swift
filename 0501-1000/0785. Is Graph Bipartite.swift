@@ -38,18 +38,23 @@ class Solution {
     // - Complexity:
     //   - time: O(n + e), where n is the number of nodes in the graph, and e is the number of edges in the graph.
     //   - space: O(n), where n is the number of nodes in the graph.
-    
+
     func isBipartite(_ graph: [[Int]]) -> Bool {
         var colors = Array(repeating: -1, count: graph.count)
-        for i in 0..<graph.count where colors[i] == -1 && !validColor(&colors, 0, graph, i) { return false }
+        for i in 0..<graph.count where colors[i] == -1 && !validColor(&colors, 0, graph, i) {
+            return false
+        }
         return true
     }
-    
 
-    fileprivate func validColor(_ colors: inout [Int], _ color: Int, _ graph: [[Int]], _ index: Int) -> Bool {
+    fileprivate func validColor(_ colors: inout [Int], _ color: Int, _ graph: [[Int]], _ index: Int)
+        -> Bool
+    {
         if colors[index] != -1 { return colors[index] == color }
         colors[index] = color
-        for neighbor in graph[index] where !validColor(&colors, 1 - color, graph, neighbor) { return false }
+        for neighbor in graph[index] where !validColor(&colors, 1 - color, graph, neighbor) {
+            return false
+        }
         return true
     }
 

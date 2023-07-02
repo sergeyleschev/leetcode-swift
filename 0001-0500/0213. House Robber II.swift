@@ -7,7 +7,7 @@ class Solution {
     // Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.
 
     // Determines the maximum amount of money you can rob tonight without alerting the police.
-    
+
     // - Parameter nums: A list of non-negative integers representing the amount of money
     //   of each house.
     // - Returns: The maximum amount of money you can rob.
@@ -44,7 +44,6 @@ class Solution {
 
         return max(ans1, ans2)
     }
-
 
     private func rob(_ nums: [Int], start: Int, end: Int) -> Int {
         var pre = 0

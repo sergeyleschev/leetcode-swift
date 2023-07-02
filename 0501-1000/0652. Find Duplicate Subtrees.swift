@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -40,18 +38,17 @@ class Solution {
 
     var cache: [String: Int] = [:]
     var ans: [TreeNode?] = []
-    
-    
+
     func findDuplicateSubtrees(_ root: TreeNode?) -> [TreeNode?] {
         recursive(root)
         return ans
     }
-    
-    
+
     func recursive(_ node: TreeNode?) -> String {
         guard let node = node else { return "#" }
 
-        let literal = "," + recursive(node.left) + "," + String(node.val) + "," + recursive(node.right)
+        let literal =
+            "," + recursive(node.left) + "," + String(node.val) + "," + recursive(node.right)
         if cache[literal] == nil {
             cache[literal] = 1
         } else {

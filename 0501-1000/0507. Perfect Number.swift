@@ -33,17 +33,17 @@ class Solution {
 
     func checkPerfectNumber(_ num: Int) -> Bool {
         if num <= 1 { return false }
-        
+
         let sqrtNum = Int(sqrt(Double(num)))
         var sum = -num
-        
+
         for i in 1...sqrtNum {
             if num % i == 0 {
                 sum += i + num / i
             }
         }
-        
+
         return sum == num
     }
-    
+
 }

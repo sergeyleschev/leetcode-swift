@@ -25,7 +25,7 @@ class Solution {
     // Example 3:
     // Input: source = [5,1,2,4,3], target = [1,5,4,2,3], allowedSwaps = [[0,4],[4,2],[1,3],[1,4]]
     // Output: 0
-     
+
     // Constraints:
     // n == source.length == target.length
     // 1 <= n <= 10^5
@@ -45,7 +45,6 @@ class Solution {
         var visited = [Bool](repeating: false, count: n)
         var ans = 0
 
-        
         func dfs(_ node: Int, _ indices: inout [Int]) {
             visited[node] = true
             indices.append(node)

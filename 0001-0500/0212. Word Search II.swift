@@ -23,7 +23,7 @@ class Solution {
     // 1 <= words[i].length <= 10
     // words[i] consists of lowercase English letters.
     // All the strings of words are unique.
-    
+
     class TrieNode {
         var isEnd = false
         var children: [TrieNode?] = Array(repeating: nil, count: 26)
@@ -41,23 +41,22 @@ class Solution {
         }
     }
 
-    
     func findWords(_ board: [[Character]], _ words: [String]) -> [String] {
         if board.isEmpty || board[0].isEmpty { return [] }
         var result: [String] = []
-        var visited = Array(repeating: Array(repeating: false, count: board[0].count), count: board.count)
+        var visited = Array(
+            repeating: Array(repeating: false, count: board[0].count), count: board.count)
         let trie = TrieNode()
-
 
         func dfs(_ path: String, _ node: TrieNode, _ i: Int, _ j: Int) {
             if node.isEnd {
                 result.append(path)
-                node.isEnd = false      // to avoid duplicated words
+                node.isEnd = false  // to avoid duplicated words
                 // return               // don't return here, we should keep on finding, consider ["bend", "benda"]
             }
-            
+
             if i < 0 || i >= board.count || j < 0 || j >= board[0].count { return }
-            
+
             if visited[i][j] { return }
 
             let char = board[i][j]
@@ -80,7 +79,7 @@ class Solution {
                 dfs("", trie, i, j)
             }
         }
-        
+
         return result
     }
 

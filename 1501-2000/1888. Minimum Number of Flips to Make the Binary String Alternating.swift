@@ -9,7 +9,7 @@ class Solution {
     // Return the minimum number of type-2 operations you need to perform such that s becomes alternating.
     // The string is called alternating if no two adjacent characters are equal.
     // For example, the strings "010" and "1010" are alternating, while the string "0100" is not.
-     
+
     // Example 1:
     // Input: s = "111000"
     // Output: 2
@@ -30,43 +30,48 @@ class Solution {
     // 1 <= s.length <= 10^5
     // s[i] is either '0' or '1'.
 
-     func minFlips(_ s: String) -> Int {
-         guard s.count > 1 else { return 0 }
-         let sToInt = s.map { Int($0.asciiValue! - 48)}
-         let n = s.count
-         var infos = [[Int]](repeating: [Int](repeating: 0, count: 2), count: s.count + 1)
-         var ans = Int.max
-         
-         infos[1][1 - sToInt[0]] += 1
-         
-         for idx in 1..<n {
-             let j = idx + 1
-             let length = idx + 1
-             var temp = infos[idx]
+    func minFlips(_ s: String) -> Int {
+        guard s.count > 1 else { return 0 }
+        let sToInt = s.map { Int($0.asciiValue! - 48) }
+        let n = s.count
+        var infos = [[Int]](repeating: [Int](repeating: 0, count: 2), count: s.count + 1)
+        var ans = Int.max
 
-             if length % 2 == 0 { temp[sToInt[idx]] += 1 } 
-             else { temp[1 - sToInt[idx]] += 1 }
-             infos[j] = temp
-         }
+        infos[1][1 - sToInt[0]] += 1
 
-         for idx in 0..<n {
-             let right = n - idx
-             let left = idx
-             var temp = 0
-             
-             if left % 2 == 0 {
-                 temp = infos[n][sToInt[idx]] - infos[idx][sToInt[idx]]
-                 if right % 2 == 0 { temp += infos[idx][sToInt[idx]] } 
-                 else { temp += infos[idx][1 - sToInt[idx]] }
-             
-             } else {
-                 temp = infos[n][1 - sToInt[idx]] - infos[idx][1 - sToInt[idx]]
-                 if right % 2 == 0 { temp += infos[idx][sToInt[idx]] } 
-                 else { temp += infos[idx][1 - sToInt[idx]] }
-             }
-             ans = min(ans, temp)
-         }
-         return ans
-     }
- 
- }
+        for idx in 1..<n {
+            let j = idx + 1
+            let length = idx + 1
+            var temp = infos[idx]
+
+            if length % 2 == 0 { temp[sToInt[idx]] += 1 } else { temp[1 - sToInt[idx]] += 1 }
+            infos[j] = temp
+        }
+
+        for idx in 0..<n {
+            let right = n - idx
+            let left = idx
+            var temp = 0
+
+            if left % 2 == 0 {
+                temp = infos[n][sToInt[idx]] - infos[idx][sToInt[idx]]
+                if right % 2 == 0 {
+                    temp += infos[idx][sToInt[idx]]
+                } else {
+                    temp += infos[idx][1 - sToInt[idx]]
+                }
+
+            } else {
+                temp = infos[n][1 - sToInt[idx]] - infos[idx][1 - sToInt[idx]]
+                if right % 2 == 0 {
+                    temp += infos[idx][sToInt[idx]]
+                } else {
+                    temp += infos[idx][1 - sToInt[idx]]
+                }
+            }
+            ans = min(ans, temp)
+        }
+        return ans
+    }
+
+}

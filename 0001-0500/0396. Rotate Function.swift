@@ -28,22 +28,22 @@ class Solution {
     // -2^31 <= nums[i] <= 2^31 - 1
 
     func maxRotateFunction(_ A: [Int]) -> Int {
-        let sum = A.reduce(0) { $0 + $1}
+        let sum = A.reduce(0) { $0 + $1 }
         var curr = 0
-        
-        for (index,value) in A.enumerated() { curr += index * value }
-        
+
+        for (index, value) in A.enumerated() { curr += index * value }
+
         let count = A.count
         var res = curr
         var i = 1
-        
+
         while i < count {
             curr = curr + A[i - 1] * count - sum
             res = max(res, curr)
             i += 1
         }
-        
+
         return res
     }
-    
+
 }

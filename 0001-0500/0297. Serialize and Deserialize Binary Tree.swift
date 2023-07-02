@@ -1,16 +1,14 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init(_ val: Int) {
- *         self.val = val
- *         self.left = nil
- *         self.right = nil
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init(_ val: Int) {
+///         self.val = val
+///         self.left = nil
+///         self.right = nil
+///     }
+/// }
 
 class Codec {
 
@@ -45,11 +43,11 @@ class Codec {
         var ans = ""
         guard root != nil else { return ans }
         var queue: [TreeNode?] = [root]
-        
+
         while !queue.isEmpty {
             let node = queue.removeFirst()
-            
-            if node != nil{
+
+            if node != nil {
                 ans += String(node!.val) + ","
                 queue.append(node!.left)
                 queue.append(node!.right)
@@ -57,22 +55,22 @@ class Codec {
                 ans += "#,"
             }
         }
-        
+
         return ans
     }
-    
-    
+
     func deserialize(_ data: String) -> TreeNode? {
         let arr = data.split(separator: ",")
         guard !arr.isEmpty else { return nil }
-        
+
         let root = TreeNode(Int(String(arr[0]))!)
         var queue = [TreeNode]()
         queue.append(root)
-        var index = 0, leftNode = true
-        
-        for i in 1..<arr.count{
-            
+        var index = 0
+        var leftNode = true
+
+        for i in 1..<arr.count {
+
             if String(arr[i]) != "#" {
                 let node: TreeNode = TreeNode(Int(String(arr[i]))!)
                 if leftNode {
@@ -82,11 +80,11 @@ class Codec {
                 }
                 queue.append(node)
             }
-            
+
             if !leftNode { index += 1 }
             leftNode = !leftNode
         }
-        
+
         return root
     }
 

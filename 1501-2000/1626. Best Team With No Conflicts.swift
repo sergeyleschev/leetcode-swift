@@ -20,7 +20,7 @@ class Solution {
     // Example 3:
     // Input: scores = [1,2,3,5], ages = [8,9,10,1]
     // Output: 6
-    // Explanation: It is best to choose the first 3 players. 
+    // Explanation: It is best to choose the first 3 players.
 
     // Constraints:
     // 1 <= scores.length, ages.length <= 1000
@@ -34,10 +34,10 @@ class Solution {
             if p1.0 == p2.0 { return p1.1 < p2.1 }
             return p1.0 < p2.0
         }
-        
+
         let n = sortedPlayers.count
         var dp = sortedPlayers.map { $0.1 }
-        
+
         for i in 1..<n {
             for j in 0..<i where sortedPlayers[i].1 >= sortedPlayers[j].1 {
                 dp[i] = max(dp[i], dp[j] + sortedPlayers[i].1)
@@ -47,4 +47,3 @@ class Solution {
     }
 
 }
-

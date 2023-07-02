@@ -1,14 +1,12 @@
-/**
- * Definition for a Node.
- * public class Node {
- *     public var val: Int
- *     public var neighbors: [Node?]
- *     public init(_ val: Int) {
- *         self.val = val
- *         self.neighbors = []
- *     }
- * }
- */
+/// Definition for a Node.
+/// public class Node {
+///     public var val: Int
+///     public var neighbors: [Node?]
+///     public init(_ val: Int) {
+///         self.val = val
+///         self.neighbors = []
+///     }
+/// }
 
 class Solution {
 
@@ -55,7 +53,7 @@ class Solution {
     // Example 4:
     // Input: adjList = [[2],[1]]
     // Output: [[2],[1]]
-     
+
     // Constraints:
     // The number of nodes in the graph is in the range [0, 100].
     // 1 <= Node.val <= 100
@@ -66,13 +64,12 @@ class Solution {
     // - Complexity:
     //   - time: O(n + m), where n is the number of nodes in the graph, and m is the number of edges in the graph.
     //   - space: O(n), where n is the number of nodes in the graph.
-    
+
     func cloneGraph(_ node: Node?) -> Node? {
         var visited = [Int: Node]()
         return cloneGraphDFS(node, visited: &visited)
     }
 
-    
     func cloneGraphDFS(_ node: Node?, visited: inout [Int: Node]) -> Node? {
         guard let node = node else { return nil }
 

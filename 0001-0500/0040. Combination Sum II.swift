@@ -9,7 +9,7 @@ class Solution {
 
     // Example 1:
     // Input: candidates = [10,1,2,7,6,1,5], target = 8
-    // Output: 
+    // Output:
     // [
     // [1,1,6],
     // [1,2,5],
@@ -19,12 +19,12 @@ class Solution {
 
     // Example 2:
     // Input: candidates = [2,5,2,1,2], target = 5
-    // Output: 
+    // Output:
     // [
     // [1,2,2],
     // [5]
     // ]
-     
+
     // Constraints:
     // 1 <= candidates.length <= 100
     // 1 <= candidates[i] <= 50
@@ -33,7 +33,6 @@ class Solution {
     func combinationSum2(_ candidates: [Int], _ target: Int) -> [[Int]] {
         let sorted = candidates.sorted()
         var res: [[Int]] = []
-
 
         func backtrack(_ path: [Int], _ input: [Int], _ target: Int, _ index: Int) {
             var path = path

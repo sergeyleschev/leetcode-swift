@@ -44,7 +44,6 @@ class Solution {
         return firstValue >= 2
     }
 
-
     func gcd(_ a: Int, _ b: Int) -> Int { a == 0 ? b : gcd(b % a, a) }
 
 }

@@ -57,7 +57,6 @@ class Solution {
     private var finish = -1
     private var locationsCnt = -1
 
-
     func countRoutes(_ locations: [Int], _ start: Int, _ finish: Int, _ fuel: Int) -> Int {
         self.memo = [:]
         self.locations = locations
@@ -67,11 +66,13 @@ class Solution {
         return dfs(start, fuel)
     }
 
-    
     private func dfs(_ curPos: Int, _ restFuel: Int) -> Int {
         let key = curPos << 32 | restFuel
         guard nil == memo[key] else { return memo[key]! }
-        guard abs(self.locations[curPos] - self.locations[self.finish]) <= restFuel else { memo[key] = 0; return 0 }
+        guard abs(self.locations[curPos] - self.locations[self.finish]) <= restFuel else {
+            memo[key] = 0
+            return 0
+        }
         var ways = 0
         var pos = 0
 
@@ -85,12 +86,12 @@ class Solution {
             }
             pos += 1
         }
-        
+
         if curPos == finish {
             ways += 1
             ways %= mod
         }
-        
+
         memo[key] = ways
         return ways
     }

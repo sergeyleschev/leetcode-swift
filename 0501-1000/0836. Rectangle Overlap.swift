@@ -32,7 +32,8 @@ class Solution {
 
     func isRectangleOverlap(_ rec1: [Int], _ rec2: [Int]) -> Bool {
         guard rec1.count == 4 && rec2.count == 4 else { return false }
-        return min(rec1[2], rec2[2]) - max(rec1[0], rec2[0]) > 0 && min(rec1[3], rec2[3]) - max(rec1[1], rec2[1]) > 0
+        return min(rec1[2], rec2[2]) - max(rec1[0], rec2[0]) > 0
+            && min(rec1[3], rec2[3]) - max(rec1[1], rec2[1]) > 0
     }
 
 }

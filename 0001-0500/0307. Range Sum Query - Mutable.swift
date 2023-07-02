@@ -34,7 +34,6 @@ class NumArray {
     private var nums: [Int]
     private var blockSums: [Int]
 
-
     init(_ nums: [Int]) {
         self.nums = nums
         let blockCount = Int(sqrt(Double(nums.count)).rounded(.up))
@@ -45,13 +44,11 @@ class NumArray {
         }
     }
 
-
     func update(_ i: Int, _ val: Int) {
         let blockNum = i / blockSums.count
         blockSums[blockNum] += val - nums[i]
         nums[i] = val
     }
-
 
     func sumRange(_ i: Int, _ j: Int) -> Int {
         let blockCount = blockSums.count
@@ -59,7 +56,7 @@ class NumArray {
         let startBlockStartIndex = startBlock * blockCount
         let endBlock = j / blockCount
         let endBlockEndIndex = min(endBlock * blockCount + (blockCount - 1), nums.count - 1)
-        
+
         var blockSum = blockSums[startBlock...endBlock].reduce(0, +)
 
         for k in startBlockStartIndex..<i { blockSum -= nums[k] }
@@ -67,7 +64,7 @@ class NumArray {
 
         return blockSum
     }
-    
+
 }
 
 /**

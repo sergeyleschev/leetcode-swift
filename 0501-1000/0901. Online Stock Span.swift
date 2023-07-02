@@ -10,7 +10,7 @@ class StockSpanner {
     // Example 1:
     // Input: ["StockSpanner","next","next","next","next","next","next","next"], [[],[100],[80],[60],[70],[60],[75],[85]]
     // Output: [null,1,1,1,2,1,4,6]
-    // Explanation: 
+    // Explanation:
     // First, S = StockSpanner() is initialized.  Then:
     // S.next(100) is called and returns 1,
     // S.next(80) is called and returns 1,
@@ -30,13 +30,10 @@ class StockSpanner {
 
     typealias Stock = (price: Int, span: Int)
 
-
     private var stack: [Stock]
-
 
     init() { stack = [Stock]() }
 
-    
     // Collects daily price quotes for the stock, and returns the span of that stock's price for the current day.
     // - Parameter price: The daily price for the stock.
     // - Returns: The span of that stock's price for the current day.
@@ -44,7 +41,7 @@ class StockSpanner {
     // - Complexity:
     //   - time: O(q), where q is the number of calls to *StockSpanner.next*.
     //   - space: O(q), where q is the number of calls to *StockSpanner.next*.
-    
+
     func next(_ price: Int) -> Int {
         var span = 1
 

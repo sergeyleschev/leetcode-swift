@@ -1,8 +1,6 @@
-/**
- * The rand7() API is already defined in the parent class SolBase.
- * func rand7() -> Int = {}
- * @return a random integer in the range 1 to 7
- */
+/// The rand7() API is already defined in the parent class SolBase.
+/// func rand7() -> Int = {}
+/// @return a random integer in the range 1 to 7
 class Solution: SolBase {
 
     // Solution by Sergey Leschev
@@ -16,7 +14,7 @@ class Solution: SolBase {
 
     // Generates a uniform random integer in the range 1 to 10.
     // - Returns: The random integer in the range 1 to 10.
-     
+
     // Example 1:
     // Input: n = 1
     // Output: [2]
@@ -35,7 +33,7 @@ class Solution: SolBase {
     // - Complexity:
     //   - time: O(1), only constant time is used in the average case, but O(∞) is the worst case.
     //   - space: O(1), only constant space is used.
-    
+
     func rand10() -> Int {
         var ans = 40
 

@@ -35,7 +35,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of elements in A.
     //   - space: O(n), where n is the number of elements in A.
-    
+
     func flipAndInvertImage(_ A: [[Int]]) -> [[Int]] {
         var ans = A
 

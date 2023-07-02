@@ -8,7 +8,7 @@ class Solution {
     // A substring is a contiguous sequence of characters within the string.
 
     // Return a string representing the largest possible integer after mutating (or choosing not to) a single substring of num.
-     
+
     // Example 1:
     // Input: num = "132", change = [9,8,5,0,3,6,4,2,6,8]
     // Output: "832"

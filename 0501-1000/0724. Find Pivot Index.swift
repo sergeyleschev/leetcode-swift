@@ -50,8 +50,8 @@ class Solution {
             let rightCount = count - leftCount - nums[i]
             if leftCount == rightCount { return i }
         }
-        
+
         return -1
     }
-    
+
 }

@@ -23,7 +23,7 @@ class Solution {
     // s and words[i] consist of only lowercase English letters.
 
     // Set O(mn) O(words) Using set exclude or include the word already seen
-    
+
     func numMatchingSubseq(_ S: String, _ words: [String]) -> Int {
         let sLen = S.count
         var containSet: Set<String> = []
@@ -33,7 +33,10 @@ class Solution {
         var count = 0
 
         for word in words {
-            if containSet.contains(word) { count += 1; continue }
+            if containSet.contains(word) {
+                count += 1
+                continue
+            }
             if excludeSet.contains(word) { continue }
             let wArray = Array(word)
             let wLen = wArray.count
@@ -45,7 +48,7 @@ class Solution {
                 s += 1
             }
 
-            if w == wLen { // pointer stops at the end + 1 of word, that means we got a matching subsequence
+            if w == wLen {  // pointer stops at the end + 1 of word, that means we got a matching subsequence
                 count += 1
                 containSet.insert(word)
             } else {

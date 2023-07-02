@@ -24,7 +24,7 @@ class Solution {
     func consecutiveNumbersSum(_ N: Int) -> Int {
         var ans = 0
         var c = 0
-        
+
         while true {
             c += 1
             if N / c < c / 2 + c % 2 { break }
@@ -34,8 +34,8 @@ class Solution {
                 ans += 1
             }
         }
-        
+
         return ans
     }
-    
+
 }

@@ -37,14 +37,13 @@ class Solution {
         while next(&curr, l + 1, mat), test(curr, l + 1, threshold) { l = l + 1 }
         return l
     }
-    
 
     func next(_ mat: inout [[Int]], _ l: Int, _ omat: [[Int]]) -> Bool {
         let rCount = mat.count
         let cCount = mat[0].count
         guard l <= rCount, l <= cCount else { return false }
         var hasNext = false
-        
+
         for r in 0...(rCount - l) {
             for c in 0...(cCount - l) {
                 let lastCol = (c + l) - 1
@@ -53,24 +52,23 @@ class Solution {
                 var rowSum = 0
 
                 for rp in r...lastRow { colSum += omat[rp][lastCol] }
-                for cp in c..<lastCol {  rowSum += omat[lastRow][cp] }
+                for cp in c..<lastCol { rowSum += omat[lastRow][cp] }
                 mat[r][c] = mat[r][c] + colSum + rowSum
                 hasNext = true
             }
         }
-        
+
         return hasNext
     }
-    
 
     func test(_ mat: [[Int]], _ l: Int, _ threshold: Int) -> Bool {
         let rCount = mat.count
         let cCount = mat[0].count
-        
+
         for r in 0...(rCount - l) {
             for c in 0...(cCount - l) where mat[r][c] <= threshold { return true }
         }
-        
+
         return false
     }
 

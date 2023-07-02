@@ -6,7 +6,7 @@ class Solution {
         let mod = 1_000_000_007
         var dp = Array(repeating: 0, count: target + 1)
         dp[0] = 1
-        
+
         for type in types {
             let count = type[0]
             let marks = type[1]
@@ -18,7 +18,7 @@ class Solution {
                 }
             }
         }
-        
+
         return dp[target]
     }
 }

@@ -27,7 +27,7 @@ class Solution {
         var right = 0
         var ans = 0
         var K = K
-        
+
         while right < A.count {
             if A[right] == 0 {
                 if K == 0 {
@@ -40,7 +40,7 @@ class Solution {
             right += 1
             ans = max(ans, right - left)
         }
-        
+
         return ans
     }
 

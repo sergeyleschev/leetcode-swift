@@ -73,12 +73,12 @@ class WordDictionary {
 
         if c != "." {
             if let child = node.children[c] {
-                return searchHelper(word, index+1, child)
+                return searchHelper(word, index + 1, child)
             }
             return false
         } else {
             for child in node.children.values {
-                if searchHelper(word, index+1, child) {
+                if searchHelper(word, index + 1, child) {
                     return true
                 }
             }

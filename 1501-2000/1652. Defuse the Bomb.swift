@@ -19,7 +19,7 @@ class Solution {
     // Example 2:
     // Input: code = [1,2,3,4], k = 0
     // Output: [0,0,0,0]
-    // Explanation: When k is zero, the numbers are replaced by 0. 
+    // Explanation: When k is zero, the numbers are replaced by 0.
 
     // Example 3:
     // Input: code = [2,4,9,3], k = -2
@@ -38,7 +38,7 @@ class Solution {
         var ans = [Int]()
         let codeCopy = code + code
         var prefix = codeCopy
-        
+
         for i in 1..<(2 * n) { prefix[i] += prefix[i - 1] }
         if k > 0 {
             for i in 0..<n { ans.append(prefix[i + k] - prefix[i]) }

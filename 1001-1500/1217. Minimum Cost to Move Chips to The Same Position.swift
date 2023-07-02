@@ -37,7 +37,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of chips.
     //   - space: O(1), only constant space is used.
-    
+
     func minCostToMoveChips(_ position: [Int]) -> Int {
         var even = 0
         var odd = 0

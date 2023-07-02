@@ -21,17 +21,18 @@ class Solution {
             }
         }
     }
-    
-    func survivedRobotsHealths(_ positions: [Int], _ healths: [Int], _ directions: String) -> [Int] {
+
+    func survivedRobotsHealths(_ positions: [Int], _ healths: [Int], _ directions: String) -> [Int]
+    {
         var v = positions
         var h = healths
-        var s = Array(directions) // Convert string to character array
-        
+        var s = Array(directions)  // Convert string to character array
+
         var st = [Int]()
         let n = v.count
         var idx = Array(0..<n)
         idx.sort { v[$0] < v[$1] }
-        
+
         for j in 0..<n {
             let i = idx[j]
             if s[i] == Character("L") && st.isEmpty {
@@ -42,14 +43,14 @@ class Solution {
                 performOperations(&h, &st, i)
             }
         }
-        
+
         var ans = [Int]()
         for x in h {
             if x != 0 {
                 ans.append(x)
             }
         }
-        
+
         return ans
     }
 }

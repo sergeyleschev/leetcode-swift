@@ -33,34 +33,28 @@ class FrontMiddleBackQueue {
     // q.popMiddle();    // return 4 -> [2]
     // q.popBack();      // return 2 -> []
     // q.popFront();     // return -1 -> [] (The queue is empty)
-     
+
     // Constraints:
     // 1 <= val <= 10^9
     // At most 1000 calls will be made to pushFront, pushMiddle, pushBack, popFront, popMiddle, and popBack.
 
     private var values = [Int]()
-    
 
     init() {}
-    
 
     func pushFront(_ val: Int) { values.insert(val, at: 0) }
-    
 
     func pushMiddle(_ val: Int) {
         let N = values.count >> 1
         values.insert(val, at: N)
     }
-    
 
     func pushBack(_ val: Int) { values.append(val) }
-    
 
     func popFront() -> Int {
         guard !values.isEmpty else { return -1 }
         return values.removeFirst()
     }
-    
 
     func popMiddle() -> Int {
         guard !values.isEmpty else { return -1 }
@@ -68,7 +62,6 @@ class FrontMiddleBackQueue {
         return values.remove(at: (N >> 1) - (N % 2 == 0 ? 1 : 0))
     }
 
-    
     func popBack() -> Int {
         guard !values.isEmpty else { return -1 }
         return values.removeLast()

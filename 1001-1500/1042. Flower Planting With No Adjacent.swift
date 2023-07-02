@@ -23,7 +23,7 @@ class Solution {
 
     // Example 3:
     // Input: n = 4, paths = [[1,2],[2,3],[3,4],[4,1],[1,3],[2,4]]
-    // Output: [1,2,3,4] 
+    // Output: [1,2,3,4]
 
     // Constraints:
     // 1 <= n <= 10^4
@@ -38,19 +38,19 @@ class Solution {
         let path: [Int] = Array()
         var G: [[Int]] = Array(repeating: path, count: N)
         var colorsArray = Array(repeating: 0, count: N)
-        
+
         for i in 0..<paths.count {
             G[paths[i][0] - 1].append(paths[i][1])
             G[paths[i][1] - 1].append(paths[i][0])
         }
-        
+
         for i in 0..<G.count {
-            let colors: [Int] = [1,2,3,4]
+            let colors: [Int] = [1, 2, 3, 4]
             for j in 0..<4 {
                 colorsArray[i] = colors[j]
                 var flag = true
                 for item in G[i] {
-                    if colorsArray[i] == colorsArray[item - 1]{
+                    if colorsArray[i] == colorsArray[item - 1] {
                         flag = false
                         break
                     }
@@ -58,7 +58,7 @@ class Solution {
                 if flag { break }
             }
         }
-        
+
         return colorsArray
     }
 

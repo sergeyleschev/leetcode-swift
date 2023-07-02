@@ -19,7 +19,7 @@ class Solution {
     // Example 2:
     // Input: votes = ["WXYZ","XYZW"]
     // Output: "XWYZ"
-    // Explanation: X is the winner due to tie-breaking rule. X has same votes as W for the first position but X has one vote as second position while W doesn't have any votes as second position. 
+    // Explanation: X is the winner due to tie-breaking rule. X has same votes as W for the first position but X has one vote as second position while W doesn't have any votes as second position.
 
     // Example 3:
     // Input: votes = ["ZMNAGUEDSJYLBOPHRQICWFXTVK"]
@@ -29,7 +29,7 @@ class Solution {
     // Example 4:
     // Input: votes = ["BCA","CAB","CBA","ABC","ACB","BAC"]
     // Output: "ABC"
-    // Explanation: 
+    // Explanation:
     // Team A was ranked first by 2 voters, second by 2 voters and third by 2 voters.
     // Team B was ranked first by 2 voters, second by 2 voters and third by 2 voters.
     // Team C was ranked first by 2 voters, second by 2 voters and third by 2 voters.
@@ -70,7 +70,7 @@ class Solution {
             }
             return $0 < $1
         }
-        
+
         return String(teams)
     }
 

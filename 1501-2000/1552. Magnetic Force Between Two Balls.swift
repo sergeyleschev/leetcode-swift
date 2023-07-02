@@ -32,7 +32,6 @@ class Solution {
         var r = sortedPosition.last! - sortedPosition[0]
         var ans = Int.min
 
-
         func check(_ dis: Int) -> Bool {
             var cnt = 1
             var curPosition = sortedPosition[0]

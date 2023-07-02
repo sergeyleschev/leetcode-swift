@@ -14,7 +14,7 @@ class Solution {
     // Example 1:
     // Input: nums = [9], maxOperations = 2
     // Output: 3
-    // Explanation: 
+    // Explanation:
     // - Divide the bag with 9 balls into two bags of sizes 6 and 3. [9] -> [6,3].
     // - Divide the bag with 6 balls into two bags of sizes 3 and 3. [6,3] -> [3,3,3].
     // The bag with the most number of balls has 3 balls, so your penalty is 3 and you should return 3.
@@ -46,7 +46,6 @@ class Solution {
         var r = nums.max()!
         var ans = Int.max
 
-        
         func check(_ maxCost: Int) -> Bool {
             guard maxCost > 0 else { return false }
             var remainOperationsCnt = maxOperations
@@ -56,7 +55,7 @@ class Solution {
                 if sortedNums[idx] % maxCost == 0 { remainOperationsCnt += 1 }
                 guard remainOperationsCnt >= 0 else { return false }
             }
-            return true 
+            return true
         }
 
         while l < r {

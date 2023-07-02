@@ -12,7 +12,7 @@ class Solution {
     // Example 1:
     // Input: s = "DID"
     // Output: 5
-    // Explanation: 
+    // Explanation:
     // The 5 valid permutations of (0, 1, 2, 3) are:
     // (1, 0, 3, 2)
     // (2, 0, 3, 1)
@@ -25,12 +25,13 @@ class Solution {
     // s consists only of characters from the set {'D', 'I'}.
 
     func numPermsDISequence(_ s: String) -> Int {
-        let n = s.count,mod = 1_000_000_007
+        let n = s.count
+        let mod = 1_000_000_007
         let oeders = [Character](s)
         var dp = [[Int]](repeating: [Int](repeating: 0, count: n + 1), count: n + 1)
-        
+
         for j in 0...n { dp[0][j] = 1 }
-        
+
         for i in 0..<n {
             if oeders[i] == "I" {
                 var j = 0
@@ -50,7 +51,7 @@ class Solution {
                 }
             }
         }
-        
+
         return dp[n][0]
     }
 

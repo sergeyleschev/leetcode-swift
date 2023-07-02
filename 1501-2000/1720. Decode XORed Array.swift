@@ -29,5 +29,5 @@ class Solution {
         for num in encoded { ans.append(ans.last! ^ num) }
         return ans
     }
-    
+
 }

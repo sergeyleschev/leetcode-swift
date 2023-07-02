@@ -28,11 +28,13 @@ class Solution {
     // preoder consist of integers in the range [0, 100] and '#' separated by commas ','.
 
     func isValidSerialization(_ preorder: String) -> Bool {
-        var nodes = preorder.split(separator: ",").map { String($0) }, stack: [Int] = [1], i = 0
-        
+        var nodes = preorder.split(separator: ",").map { String($0) }
+        var stack: [Int] = [1]
+        var i = 0
+
         while i < nodes.count {
             if stack.isEmpty { return false }
-            
+
             switch nodes[i] {
             case "#":
                 stack.append(stack.removeLast() - 1)
@@ -46,11 +48,11 @@ class Solution {
                 }
                 stack.append(2)
             }
-            
+
             i += 1
         }
-        
+
         return stack.isEmpty
     }
-    
+
 }

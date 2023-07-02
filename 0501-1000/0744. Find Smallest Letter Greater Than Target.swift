@@ -44,22 +44,22 @@ class Solution {
     // - Complexity:
     //   - time: O(log n), where n is the length of letters.
     //   - space: O(1), only constant space is used.
-    
+
     func nextGreatestLetter(_ letters: [Character], _ target: Character) -> Character {
         let n = letters.count
         var start = 0
         var end = n
-        
+
         while start < end {
             let mid = start + (end - start) / 2
-            
+
             if letters[mid] <= target {
                 start = mid + 1
             } else {
                 end = mid
             }
         }
-        
+
         return letters[start % n]
     }
 

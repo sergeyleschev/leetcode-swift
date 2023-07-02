@@ -26,17 +26,16 @@ class Solution {
         let k1 = subarraysWithAtMostKDistinct(A, K)
         let k2 = subarraysWithAtMostKDistinct(A, K - 1)
         let ans = k1 - k2
-        
+
         return ans
     }
-    
 
     private func subarraysWithAtMostKDistinct(_ A: [Int], _ K: Int) -> Int {
         var left = 0
         var right = 0
         var map: [Int: Int] = [:]
         var ans = 0
-        
+
         while right < A.count {
             let rightVal = A[right]
             map[rightVal] = (map[rightVal] ?? 0) + 1
@@ -49,8 +48,8 @@ class Solution {
             }
             ans += (right - left)
         }
-        
+
         return ans
     }
-    
+
 }

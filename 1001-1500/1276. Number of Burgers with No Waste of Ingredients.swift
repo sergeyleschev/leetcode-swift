@@ -11,17 +11,17 @@ class Solution {
     // Example 1:
     // Input: tomatoSlices = 16, cheeseSlices = 7
     // Output: [1,6]
-    // Explantion: To make one jumbo burger and 6 small burgers we need 4*1 + 2*6 = 16 tomato and 1 + 6 = 7 cheese. There will be no remaining ingredients.
+    // Explanation: To make one jumbo burger and 6 small burgers we need 4*1 + 2*6 = 16 tomato and 1 + 6 = 7 cheese. There will be no remaining ingredients.
 
     // Example 2:
     // Input: tomatoSlices = 17, cheeseSlices = 4
     // Output: []
-    // Explantion: There will be no way to use all ingredients to make small and jumbo burgers.
+    // Explanation: There will be no way to use all ingredients to make small and jumbo burgers.
 
     // Example 3:
     // Input: tomatoSlices = 4, cheeseSlices = 17
     // Output: []
-    // Explantion: Making 1 jumbo burger there will be 16 cheese remaining and making 2 small burgers there will be 15 cheese remaining.
+    // Explanation: Making 1 jumbo burger there will be 16 cheese remaining and making 2 small burgers there will be 15 cheese remaining.
 
     // Example 4:
     // Input: tomatoSlices = 0, cheeseSlices = 0
@@ -39,8 +39,8 @@ class Solution {
         let temp = (tomatoSlices - cheeseSlices * 2)
         let j = temp / 2
         let s = cheeseSlices - j
-        
-        if temp % 2 == 0 && j >= 0 && s >= 0 { return [j, s] } else { return []  }
+
+        if temp % 2 == 0 && j >= 0 && s >= 0 { return [j, s] } else { return [] }
     }
-    
+
 }

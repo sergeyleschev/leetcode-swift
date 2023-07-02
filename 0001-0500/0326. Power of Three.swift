@@ -27,6 +27,6 @@ class Solution {
 
     // Follow up: Could you solve it without loops/recursion?
 
-    func isPowerOfThree(_ n: Int) -> Bool { n > 0 && (1162261467 % n == 0) }
-    
+    func isPowerOfThree(_ n: Int) -> Bool { n > 0 && (1_162_261_467 % n == 0) }
+
 }

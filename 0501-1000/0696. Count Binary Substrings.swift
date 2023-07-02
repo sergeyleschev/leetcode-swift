@@ -27,7 +27,7 @@ class Solution {
         var count = [0, 0]
         var ans = 0
         var last = -1
-        
+
         for char in chars {
             let c = Int(String(char))!
             if c != last { count[c] = 0 }
@@ -35,7 +35,7 @@ class Solution {
             if count[c] <= count[1 - c] { ans += 1 }
             last = c
         }
-        
+
         return ans
     }
 

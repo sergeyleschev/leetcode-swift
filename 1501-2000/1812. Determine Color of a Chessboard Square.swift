@@ -27,6 +27,8 @@ class Solution {
     // 'a' <= coordinates[0] <= 'h'
     // '1' <= coordinates[1] <= '8'
 
-    func squareIsWhite(_ coordinates: String) -> Bool { Int(coordinates.first!.asciiValue! - 97 + coordinates.last!.asciiValue! - 48) & 1 == 0 }
-    
+    func squareIsWhite(_ coordinates: String) -> Bool {
+        Int(coordinates.first!.asciiValue! - 97 + coordinates.last!.asciiValue! - 48) & 1 == 0
+    }
+
 }

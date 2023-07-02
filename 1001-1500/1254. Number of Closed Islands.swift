@@ -9,7 +9,7 @@ class Solution {
     // Example 1:
     // Input: grid = [[1,1,1,1,1,1,1,0],[1,0,0,0,0,1,1,0],[1,0,1,0,1,1,1,0],[1,0,0,0,0,1,0,1],[1,1,1,1,1,1,1,0]]
     // Output: 2
-    // Explanation: 
+    // Explanation:
     // Islands in gray are closed because they are completely surrounded by water (group of 1s).
 
     // Example 2:
@@ -37,18 +37,18 @@ class Solution {
         let cols = grid[0].count
         var count = 0
 
-        for row in 0 ..< rows {
+        for row in 0..<rows {
             if grid[row][0] == 0 { dfs(grid: &grid, row: row, col: 0) }
             if grid[row][cols - 1] == 0 { dfs(grid: &grid, row: row, col: cols - 1) }
         }
 
-        for col in 0 ..< cols {
+        for col in 0..<cols {
             if grid[0][col] == 0 { dfs(grid: &grid, row: 0, col: col) }
             if grid[rows - 1][col] == 0 { dfs(grid: &grid, row: rows - 1, col: col) }
         }
 
-        for row in 0 ..< rows {
-            for col in 0 ..< cols {
+        for row in 0..<rows {
+            for col in 0..<cols {
                 if grid[row][col] == 0 {
                     dfs(grid: &grid, row: row, col: col)
                     count = count + 1
@@ -59,9 +59,10 @@ class Solution {
         return count
     }
 
-
     func dfs(grid: inout [[Int]], row: Int, col: Int) {
-        if row < 0 || row >= grid.count || col < 0 || col >= grid[0].count || grid[row][col] == 1 { return }
+        if row < 0 || row >= grid.count || col < 0 || col >= grid[0].count || grid[row][col] == 1 {
+            return
+        }
 
         grid[row][col] = 1
 

@@ -12,7 +12,7 @@ class Solution {
     // Example 1:
     // Input: richer = [[1,0],[2,1],[3,1],[3,7],[4,3],[5,3],[6,3]], quiet = [3,2,5,4,6,1,7,0]
     // Output: [5,5,2,5,4,5,6,7]
-    // Explanation: 
+    // Explanation:
     // answer[0] = 5.
     // Person 5 has more money than 3, which has more money than 1, which has more money than 0.
     // The only person who is quieter (has lower quiet[x]) is person 7, but
@@ -32,8 +32,7 @@ class Solution {
     // richer[i]'s are all different.
     // The observations in richer are all logically consistent.
 
-    typealias Person = (Number:Int,Quiet:Int)
-
+    typealias Person = (Number: Int, Quiet: Int)
 
     func loudAndRich(_ richer: [[Int]], _ quiet: [Int]) -> [Int] {
         let personCount = quiet.count
@@ -45,26 +44,27 @@ class Solution {
             graph[r[1]]?.insert(r[0])
         }
 
-
         func dfs(_ person: Person) -> Person {
             guard let richers = graph[person.Number] else { return person }
             var temp = person
             for r in richers {
-                if ans[r]  == -1 {
-                    let p = dfs((r,quiet[r]))
+                if ans[r] == -1 {
+                    let p = dfs((r, quiet[r]))
                     ans[r] = p.Number
                 }
                 if quiet[ans[r]] < temp.Quiet {
-                     temp.Quiet = quiet[ans[r]]
-                     temp.Number = ans[r]
-                 }
+                    temp.Quiet = quiet[ans[r]]
+                    temp.Number = ans[r]
+                }
             }
             return temp
         }
 
-        for personNum in 0..<personCount where ans[personNum] == -1 { ans[personNum] = dfs((personNum,quiet[personNum])).Number }
-        
+        for personNum in 0..<personCount where ans[personNum] == -1 {
+            ans[personNum] = dfs((personNum, quiet[personNum])).Number
+        }
+
         return ans
     }
 
- }
+}

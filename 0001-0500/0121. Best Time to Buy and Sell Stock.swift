@@ -22,7 +22,7 @@ class Solution {
     // Input: prices = [7,6,4,3,1]
     // Output: 0
     // Explanation: In this case, no transactions are done and the max profit = 0.
-     
+
     // Constraints:
     // 1 <= prices.length <= 10^5
     // 0 <= prices[i] <= 10^4
@@ -30,17 +30,17 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of prices.
     //   - space: O(1), only constant space is used.
-    
+
     func maxProfit(_ prices: [Int]) -> Int {
         var minPrice = Int.max
         var ans = 0
-        
+
         for price in prices {
             minPrice = min(minPrice, price)
             ans = max(ans, price - minPrice)
         }
-        
-        return ans        
+
+        return ans
     }
 
 }

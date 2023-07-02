@@ -56,7 +56,6 @@ class Solution {
         return false
     }
 
-
     private func getID(_ x: Int, _ w: Int) -> Int {
         return x < 0 ? ((x + 1) / w) - 1 : x / w
     }

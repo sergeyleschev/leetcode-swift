@@ -50,7 +50,7 @@ class Solution {
 
         for i in 0..<indices.count { map[indices[i]] = sa[i] }
         for i in 0..<indices.count { ans.append(map[i]!) }
-        
+
         return ans
     }
 

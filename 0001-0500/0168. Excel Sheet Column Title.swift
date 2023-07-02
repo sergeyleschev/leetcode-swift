@@ -11,7 +11,7 @@ class Solution {
     // ...
     // Z -> 26
     // AA -> 27
-    // AB -> 28 
+    // AB -> 28
     // ...
 
     // Example 1:
@@ -38,25 +38,25 @@ class Solution {
         var num = columnNumber - 1
         var rem = 0
         var nums: [Int] = []
-        
+
         while num >= 0 {
             rem = num % 26
             num = num / 26
             nums.append(rem)
             if num == 0 { break }
         }
-        
+
         nums[0] += 1
         if nums.count > 1 && nums[nums.count - 1] == 1 && nums[nums.count - 2] == 0 {
             nums.remove(at: nums.count - 1)
         }
-        
+
         for num in nums {
             let c = num == 0 ? 26 : num
             string = "\(Character(Unicode.Scalar(c + 64)!))\(string)"
         }
-        
+
         return string
     }
-    
+
 }

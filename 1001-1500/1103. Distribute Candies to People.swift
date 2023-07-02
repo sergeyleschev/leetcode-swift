@@ -28,7 +28,7 @@ class Solution {
     // Example 2:
     // Input: candies = 10, num_people = 3
     // Output: [5,2,3]
-    // Explanation: 
+    // Explanation:
     // On the first turn, ans[0] += 1, and the array is [1,0,0].
     // On the second turn, ans[1] += 2, and the array is [1,2,0].
     // On the third turn, ans[2] += 3, and the array is [1,2,3].
@@ -41,7 +41,7 @@ class Solution {
     // - Complexity:
     //   - time: O(sqrt(n)), where n is the number of candies.
     //   - space: O(m), where m is the number of people.
-    
+
     func distributeCandies(_ candies: Int, _ num_people: Int) -> [Int] {
         var ans = [Int](repeating: 0, count: num_people)
         var candies = candies

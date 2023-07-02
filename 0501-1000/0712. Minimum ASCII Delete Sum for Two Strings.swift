@@ -29,22 +29,23 @@ class Solution {
         var dp = [0]
         var arr1 = Array(s1.unicodeScalars)
         var arr2 = Array(s2.unicodeScalars)
-        
+
         for char in s1.unicodeScalars { dp.append(dp.last! + Int(char.value)) }
-        
+
         for i in 1...arr2.count {
             var tmp = [dp[0] + Int(arr2[i - 1].value)]
             for j in 1...arr1.count {
                 if arr2[i - 1] == arr1[j - 1] {
                     tmp.append(dp[j - 1])
                 } else {
-                    tmp.append(min(dp[j] + Int(arr2[i - 1].value), tmp[j - 1] + Int(arr1[j - 1].value)))
+                    tmp.append(
+                        min(dp[j] + Int(arr2[i - 1].value), tmp[j - 1] + Int(arr1[j - 1].value)))
                 }
             }
             dp = tmp
         }
-        
+
         return dp.last!
     }
-    
+
 }

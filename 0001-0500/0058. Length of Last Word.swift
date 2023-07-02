@@ -18,7 +18,7 @@ class Solution {
     // Example 2:
     // Input: s = " "
     // Output: 0
-     
+
     // Constraints:
     // 1 <= s.length <= 10^4
     // s consists of only English letters and spaces ' '.

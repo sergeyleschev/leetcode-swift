@@ -28,7 +28,7 @@ class Solution {
     // Example 3:
     // Input: numCourses = 1, prerequisites = []
     // Output: [0]
-     
+
     // Constraints:
     // 1 <= numCourses <= 2000
     // 0 <= prerequisites.length <= numCourses * (numCourses - 1)

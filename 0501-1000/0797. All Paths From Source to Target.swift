@@ -42,12 +42,11 @@ class Solution {
     // - Complexity:
     //   - time: O(V + E), where V represents the number of vertices and E represents the number of edges.
     //   - space: O(V * 2^V), where V represents the number of vertices.
-    
+
     func allPathsSourceTarget(_ graph: [[Int]]) -> [[Int]] {
         var dict = [Int: [[Int]]]()
         return dfs(graph, node: 0, dict: &dict)
     }
-
 
     private func dfs(_ graph: [[Int]], node: Int, dict: inout [Int: [[Int]]]) -> [[Int]] {
         if let path = dict[node] { return path }

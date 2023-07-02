@@ -37,7 +37,6 @@ class Solution {
 
     private let mod = 1_000_000_007
 
-
     func numSub(_ s: String) -> Int {
         var ans = 0
         var cntOnes = 0
@@ -59,7 +58,7 @@ class Solution {
             ans += (cntOnes * (1 + cntOnes)) >> 1
             ans %= mod
         }
-        
+
         return ans
     }
 

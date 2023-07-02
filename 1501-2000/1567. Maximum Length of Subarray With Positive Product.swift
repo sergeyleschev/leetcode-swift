@@ -38,27 +38,28 @@ class Solution {
 
     private enum Product { case positive, negative, null }
 
-
     func getMaxLen(_ nums: [Int]) -> Int {
         var ans = 0
         var tempArr = [Bool]()
 
-
-        func getAns(_ arr: [Bool]){
+        func getAns(_ arr: [Bool]) {
             var negativeIndices = [Int]()
             for i in 0..<arr.count where !arr[i] { negativeIndices.append(i) }
-            guard negativeIndices.count % 2 == 1 else { ans = max(ans, arr.count); return }
+            guard negativeIndices.count % 2 == 1 else {
+                ans = max(ans, arr.count)
+                return
+            }
             let n = arr.count
 
             if let first = negativeIndices.first {
                 let left = first > 0 ? first : 0
                 let right = max(0, n - (first + 1))
-                ans = max(ans, left,right)
+                ans = max(ans, left, right)
             }
             if let last = negativeIndices.last {
                 let right = last == n - 1 ? 0 : (n - (last + 1))
                 let left = last
-                ans = max(ans, left,right)
+                ans = max(ans, left, right)
             }
         }
 
@@ -66,7 +67,9 @@ class Solution {
             if num == 0 {
                 if !tempArr.isEmpty { getAns(tempArr) }
                 tempArr = []
-            } else { tempArr.append(num > 0) }
+            } else {
+                tempArr.append(num > 0)
+            }
         }
         if !tempArr.isEmpty { getAns(tempArr) }
         return ans

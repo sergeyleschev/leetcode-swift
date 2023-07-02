@@ -29,7 +29,9 @@ class Solution {
         if n % 2 != 0 {
             newArr.append(0)
             i += 1
-        } else { i += 1 }
+        } else {
+            i += 1
+        }
 
         while i <= limit {
             newArr.append(i)
@@ -39,5 +41,5 @@ class Solution {
 
         return newArr
     }
-    
+
 }

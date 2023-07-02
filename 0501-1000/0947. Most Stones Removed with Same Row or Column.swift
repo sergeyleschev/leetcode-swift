@@ -43,12 +43,10 @@ class Solution {
         return stones.count - unionFind.count
     }
 
-
     private class UnionFind {
         private var parentMap = [Int: Int]()
         private(set) var count = 0
 
-        
         func union(x: Int, y: Int) {
             let fx = find(num: x)
             let fy = find(num: y)
@@ -58,7 +56,6 @@ class Solution {
             }
         }
 
-        
         func find(num: Int) -> Int {
             if let res = parentMap[num] {
                 if num != res { parentMap[num] = find(num: res) }

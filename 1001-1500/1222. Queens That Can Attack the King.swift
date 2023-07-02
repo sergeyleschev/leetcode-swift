@@ -9,12 +9,12 @@ class Solution {
     // Example 1:
     // Input: queens = [[0,1],[1,0],[4,0],[0,4],[3,3],[2,4]], king = [0,0]
     // Output: [[0,1],[1,0],[3,3]]
-    // Explanation:  
-    // The queen at [0,1] can attack the king cause they're in the same row. 
-    // The queen at [1,0] can attack the king cause they're in the same column. 
-    // The queen at [3,3] can attack the king cause they're in the same diagnal. 
-    // The queen at [0,4] can't attack the king cause it's blocked by the queen at [0,1]. 
-    // The queen at [4,0] can't attack the king cause it's blocked by the queen at [1,0]. 
+    // Explanation:
+    // The queen at [0,1] can attack the king cause they're in the same row.
+    // The queen at [1,0] can attack the king cause they're in the same column.
+    // The queen at [3,3] can attack the king cause they're in the same diagnal.
+    // The queen at [0,4] can't attack the king cause it's blocked by the queen at [0,1].
+    // The queen at [4,0] can't attack the king cause it's blocked by the queen at [1,0].
     // The queen at [2,4] can't attack the king cause it's not in the same row/column/diagnal as the king.
 
     // Example 2:
@@ -37,13 +37,13 @@ class Solution {
         var attackingQueens: [[Int]] = []
 
         let nextPositionGenerators: [([Int]) -> [Int]] = [
-          { [$0[0] + 1, $0[1] + 1] }, { [$0[0] + 1, $0[1] - 1] },
-          { [$0[0] - 1, $0[1] + 1] }, { [$0[0] - 1, $0[1] - 1] },
-          { [$0[0] + 1, $0[1]] }, { [$0[0], $0[1] + 1] },
-          { [$0[0] - 1, $0[1]] }, { [$0[0], $0[1] - 1] },
+            { [$0[0] + 1, $0[1] + 1] }, { [$0[0] + 1, $0[1] - 1] },
+            { [$0[0] - 1, $0[1] + 1] }, { [$0[0] - 1, $0[1] - 1] },
+            { [$0[0] + 1, $0[1]] }, { [$0[0], $0[1] + 1] },
+            { [$0[0] - 1, $0[1]] }, { [$0[0], $0[1] - 1] },
         ]
 
-        let boardRange = 0 ..< 8
+        let boardRange = 0..<8
 
         let isWithinBoard: ([Int]) -> Bool = { position in
             let hasValidX = boardRange.contains(position[0])
@@ -56,12 +56,15 @@ class Solution {
         for generateNextPosition in nextPositionGenerators {
             var position = generateNextPosition(king)
             while isWithinBoard(position) {
-                if queens.contains(position) { attackingQueens.append(position); break }
+                if queens.contains(position) {
+                    attackingQueens.append(position)
+                    break
+                }
                 position = generateNextPosition(position)
             }
         }
 
         return attackingQueens
     }
-    
+
 }

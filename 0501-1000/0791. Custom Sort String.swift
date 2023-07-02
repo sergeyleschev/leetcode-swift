@@ -8,12 +8,12 @@ class Solution {
     // Return any permutation of str (as a string) that satisfies this property.
 
     // Example:
-    // Input: 
+    // Input:
     // order = "cba"
     // str = "abcd"
     // Output: "cbad"
-    // Explanation: 
-    // "a", "b", "c" appear in order, so the order of "a", "b", "c" should be "c", "b", and "a". 
+    // Explanation:
+    // "a", "b", "c" appear in order, so the order of "a", "b", "c" should be "c", "b", and "a".
     // Since "d" does not appear in order, it can be at any position in the returned string. "dcba", "cdba", "cbda" are also valid outputs.
     // Note:
     // order has length at most 26, and no character is repeated in order.
@@ -35,5 +35,5 @@ class Solution {
 
         return String(tArr)
     }
-    
+
 }

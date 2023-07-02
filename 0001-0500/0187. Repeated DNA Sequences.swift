@@ -32,12 +32,10 @@ class Solution {
     private let dict: [Character: Int] = ["A": 0, "C": 1, "G": 2, "T": 3]
     private let L = 10
     private let a = 4
-    
 
     private var aL: Int {
         Int(pow(Double(a), Double(L)))
     }
-
 
     func findRepeatedDnaSequences(_ s: String) -> [String] {
         guard s.count > L else { return [] }

@@ -10,7 +10,7 @@ class Solution {
     // Example 1:
     // Input: n = 4, k = 2
     // Output: 5
-    // Explanation: 
+    // Explanation:
     // The two line segments are shown in red and blue.
     // The image above shows the 5 different ways {(0,2),(2,3)}, {(0,1),(1,3)}, {(0,1),(2,3)}, {(1,2),(2,3)}, {(0,1),(1,2)}.
 
@@ -39,7 +39,6 @@ class Solution {
     func numberOfSets(_ N: Int, _ K: Int) -> Int {
         var memo = [[Int?]](repeating: .init(repeating: nil, count: K + 1), count: N + 1)
         var sum = [[Int?]](repeating: .init(repeating: nil, count: K + 1), count: N + 1)
-
 
         func sumWorker(_ n: Int, _ k: Int) -> Int {
             if let s = sum[n][k] { return s }

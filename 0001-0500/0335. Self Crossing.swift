@@ -26,15 +26,15 @@ class Solution {
     func isSelfCrossing(_ x: [Int]) -> Bool {
         if x.count <= 3 { return false }
 
-        let x = [0,0] + x
+        let x = [0, 0] + x
         var idx = 0
         while idx < x.count - 5 {
-            let a = x[idx+0]
-            let b = x[idx+1]
-            let c = x[idx+2]
-            let d = x[idx+3]
-            let e = x[idx+4]
-            let f = x[idx+5]
+            let a = x[idx + 0]
+            let b = x[idx + 1]
+            let c = x[idx + 2]
+            let d = x[idx + 3]
+            let e = x[idx + 4]
+            let f = x[idx + 5]
 
             if e < c - a && f > d {
                 return true
@@ -50,5 +50,5 @@ class Solution {
 
         return false
     }
-    
+
 }

@@ -34,20 +34,20 @@ class Solution {
         var mapy = [Int: Int]()
         let mod: Int = 1_000_000_007
         var area = 0
-        
+
         for rec in rectangles {
             Xvals.insert(rec[0])
             Xvals.insert(rec[2])
             Yvals.insert(rec[1])
             Yvals.insert(rec[3])
         }
-        
+
         var imapx = Xvals.sorted()
         var imapy = Yvals.sorted()
-        
+
         for i in 0..<imapx.count { mapx[imapx[i]] = i }
         for i in 0..<imapy.count { mapy[imapy[i]] = i }
-        
+
         var grid = Array(repeating: Array(repeating: false, count: imapy.count), count: imapx.count)
         for rec in rectangles {
             for x in mapx[rec[0]]!..<mapx[rec[2]]! {
@@ -56,7 +56,7 @@ class Solution {
                 }
             }
         }
-        
+
         for x in 0..<grid.count {
             for y in 0..<grid[0].count {
                 if grid[x][y] {
@@ -64,7 +64,7 @@ class Solution {
                 }
             }
         }
-        
+
         return area % mod
     }
 

@@ -26,7 +26,7 @@ class Solution {
     func crackSafe(_ n: Int, _ k: Int) -> String {
         // n = length of the input
         // k = range of characters
-        var M = Int(pow(Double(k), Double(n - 1))) // The size of the sequence/2
+        var M = Int(pow(Double(k), Double(n - 1)))  // The size of the sequence/2
         var P = Array(repeating: 0, count: M * k)
         var A = Array(repeating: 0, count: M * k)
         var ans = [Character]()
@@ -34,13 +34,13 @@ class Solution {
         // for input n = 2, k = 4
         // Creates the array [0, 2, 4, 6, 8, 10, 12, 14, 1, 3, 5, 7, 9, 11, 13, 15]
         //                   [0, 1, 0, 1, 0,  1,  0,  1, 0, 1, 0, 1, 0,  1,  0,  1]
-            
-        for i in 0..<k {// For each possible input value
-                for q in 0..<M { // For each possible position that a value can have
-                    P[i * M + q] = q * k + i
-                    A[i * M + q] = q * k + i + 1
-                }   
+
+        for i in 0..<k {  // For each possible input value
+            for q in 0..<M {  // For each possible position that a value can have
+                P[i * M + q] = q * k + i
+                A[i * M + q] = q * k + i + 1
             }
+        }
 
         for i in 0..<M * k {
             var j = i

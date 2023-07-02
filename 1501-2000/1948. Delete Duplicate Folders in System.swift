@@ -30,7 +30,7 @@ class Solution {
     // Example 2:
     // Input: paths = [["a"],["c"],["a","b"],["c","b"],["a","b","x"],["a","b","x","y"],["w"],["w","y"]]
     // Output: [["c"],["c","b"],["a"],["a","b"]]
-    // Explanation: The file structure is as shown. 
+    // Explanation: The file structure is as shown.
     // Folders "/a/b/x" and "/w" (and their subfolders) are marked for deletion because they both contain an empty folder named "y".
     // Note that folders "/a" and "/c" are identical after the deletion, but they are not deleted because they were not marked beforehand.
 
@@ -67,19 +67,17 @@ class Solution {
     // For any folder not at the root level, its parent folder will also be in the input.
 
     private class Node {
-        var name:String
-        var next = [String:Node]()
+        var name: String
+        var next = [String: Node]()
         var del = false
-        
+
         init(_ name: String = "") { self.name = name }
     }
-
 
     func deleteDuplicateFolder(_ paths: [[String]]) -> [[String]] {
         var seen = [String: Node]()
 
-
-        func addPath(_ node: Node,_ path: [String]) {
+        func addPath(_ node: Node, _ path: [String]) {
             var curNode = node
             for cur in path {
                 if curNode.next[cur] == nil { curNode.next[cur] = Node(cur) }
@@ -95,12 +93,14 @@ class Solution {
                 if let existed = seen[subFolder] {
                     existed.del = true
                     node.del = true
-                } else { seen[subFolder] = node }
+                } else {
+                    seen[subFolder] = node
+                }
             }
             return "(" + node.name + subFolder + ")"
         }
 
-        func getPath(_ path: inout [String],_ folders: inout [[String]], _ node: Node) {
+        func getPath(_ path: inout [String], _ folders: inout [[String]], _ node: Node) {
             guard !node.del else { return }
             path.append(node.name)
             folders.append(path)
@@ -113,7 +113,7 @@ class Solution {
         let _ = dedupe(root)
         var ans = [[String]]()
         var path = [String]()
-        for (_,next) in root.next { getPath(&path, &ans, next) }
+        for (_, next) in root.next { getPath(&path, &ans, next) }
         return ans
     }
 

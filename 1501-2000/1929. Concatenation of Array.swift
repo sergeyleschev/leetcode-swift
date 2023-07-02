@@ -28,5 +28,5 @@ class Solution {
     // 1 <= nums[i] <= 1000
 
     func getConcatenation(_ nums: [Int]) -> [Int] { nums + nums }
-    
+
 }

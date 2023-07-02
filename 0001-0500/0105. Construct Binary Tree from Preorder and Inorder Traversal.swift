@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -27,7 +25,7 @@ class Solution {
     // Example 2:
     // Input: preorder = [-1], inorder = [-1]
     // Output: [-1]
-     
+
     // Constraints:
     // 1 <= preorder.length <= 3000
     // inorder.length == preorder.length
@@ -39,24 +37,25 @@ class Solution {
 
     func buildTree(_ preorder: [Int], _ inorder: [Int]) -> TreeNode? {
         guard preorder.count > 0 else { return nil }
-        
+
         let totalСount = preorder.count
         let root = TreeNode(preorder[0])
         var rootIndex = -1
-        
+
         for (i, val) in inorder.enumerated() {
             if val == root.val {
                 rootIndex = i
                 break
-            } 
+            }
         }
-        
+
         let leftCount = rootIndex
         let rightCount = totalСount - leftCount - 1
-        
+
         root.left = buildTree(Array(preorder[1..<1 + leftCount]), Array(inorder[0..<leftCount + 1]))
-        root.right = buildTree(Array(preorder[1 + leftCount..<totalСount]), Array(inorder[1 + leftCount..<totalСount]))
+        root.right = buildTree(
+            Array(preorder[1 + leftCount..<totalСount]), Array(inorder[1 + leftCount..<totalСount]))
         return root
     }
-    
+
 }

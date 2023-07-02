@@ -19,7 +19,7 @@ class Solution {
     // Example 3:
     // Input: sequence = "ababc", word = "ac"
     // Output: 0
-    // Explanation: "ac" is not a substring in "ababc". 
+    // Explanation: "ac" is not a substring in "ababc".
 
     // Constraints:
     // 1 <= sequence.length <= 100

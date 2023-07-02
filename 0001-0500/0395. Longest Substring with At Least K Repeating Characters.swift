@@ -54,7 +54,7 @@ class Solution {
                     countMap[idx] += 1
                     if countMap[idx] == k { countAtLeastK += 1 }
                     windowEnd += 1
-                    
+
                 } else {
                     idx = str[windowStart]
                     if countMap[idx] == k { countAtLeastK -= 1 }
@@ -70,7 +70,6 @@ class Solution {
 
         return ans
     }
-
 
     private func getMaxUniqueLetters(from str: String) -> Int {
         var set = Set<Character>()

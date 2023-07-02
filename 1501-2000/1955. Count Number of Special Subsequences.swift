@@ -37,9 +37,7 @@ class Solution {
 
     typealias Counter = (zero: Int, one: Int, two: Int)
 
-
     private let mod = 1_000_000_007
-
 
     func countSpecialSubsequences(_ nums: [Int]) -> Int {
         var counter: Counter = (0, 0, 0)
@@ -47,13 +45,17 @@ class Solution {
         for num in nums {
             var newCounter = counter
 
-            if num == 0 { newCounter.zero = (counter.zero * 2 + 1) % mod } 
-            else if num == 1 { newCounter.one = (counter.one * 2 + newCounter.zero) % mod } 
-            else { newCounter.two = (counter.one + counter.two * 2) % mod }
-            
+            if num == 0 {
+                newCounter.zero = (counter.zero * 2 + 1) % mod
+            } else if num == 1 {
+                newCounter.one = (counter.one * 2 + newCounter.zero) % mod
+            } else {
+                newCounter.two = (counter.one + counter.two * 2) % mod
+            }
+
             counter = newCounter
         }
         return counter.two
     }
-    
+
 }

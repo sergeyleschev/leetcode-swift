@@ -42,7 +42,7 @@ class Solution {
 
     func getMinSwaps(_ num: String, _ k: Int) -> Int {
         var kCopy = k
-        var originalNum = num.map { Int($0.asciiValue! - 48)}
+        var originalNum = num.map { Int($0.asciiValue! - 48) }
         var newNum = originalNum
         while kCopy > 0 {
             nextPermutation(&newNum)
@@ -51,8 +51,7 @@ class Solution {
         return countSteps(&originalNum, &newNum)
     }
 
-
-    private func countSteps(_ originalNum:inout  [Int], _ newNum: inout [Int] ) -> Int {
+    private func countSteps(_ originalNum: inout [Int], _ newNum: inout [Int]) -> Int {
         let size = originalNum.count
         var i = 0
         var j = 0
@@ -70,7 +69,6 @@ class Solution {
         return ans
     }
 
-
     private func nextPermutation(_ nums: inout [Int]) {
         var left: Int = nums.count - 2
         while left >= 0 && nums[left] >= nums[left + 1] { left -= 1 }
@@ -81,7 +79,6 @@ class Solution {
         }
         reverse(&nums, left + 1, nums.count - 1)
     }
-    
 
     private func reverse(_ nums: inout [Int], _ left: Int, _ right: Int) {
         var left = left

@@ -31,16 +31,17 @@ class Solution {
 
     func judgeSquareSum(_ c: Int) -> Bool {
         let value = sqrt(Double(c))
-        
-        if Double(Int(value)) == value { return true } 
-        else {
+
+        if Double(Int(value)) == value {
+            return true
+        } else {
             for num in 0..<Int(ceil(value)) {
                 let square = sqrt(Double(c - num * num))
                 if Double(Int(square)) == square { return true }
             }
             return false
         }
-        
+
     }
 
 }

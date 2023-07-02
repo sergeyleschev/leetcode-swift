@@ -15,8 +15,8 @@ class Solution {
     // Example 1:
     // Input: points = [[1,1],[3,4],[-1,0]]
     // Output: 7
-    // Explanation: One optimal path is [1,1] -> [2,2] -> [3,3] -> [3,4] -> [2,3] -> [1,2] -> [0,1] -> [-1,0]   
-    // Time from [1,1] to [3,4] = 3 seconds 
+    // Explanation: One optimal path is [1,1] -> [2,2] -> [3,3] -> [3,4] -> [2,3] -> [1,2] -> [0,1] -> [-1,0]
+    // Time from [1,1] to [3,4] = 3 seconds
     // Time from [3,4] to [-1,0] = 4 seconds
     // Total time = 7 seconds
 
@@ -32,15 +32,16 @@ class Solution {
 
     func minTimeToVisitAllPoints(_ points: [[Int]]) -> Int {
         var minTime = 0
-        for i in 0..<points.count - 1 { minTime += minTimeToVisitTwoPoints(points[i], points[i + 1])  }
+        for i in 0..<points.count - 1 {
+            minTime += minTimeToVisitTwoPoints(points[i], points[i + 1])
+        }
         return minTime
     }
-    
-    
+
     func minTimeToVisitTwoPoints(_ point: [Int], _ point2: [Int]) -> Int {
         let distanceX = abs(point[0] - point2[0])
         let distanceY = abs(point[1] - point2[1])
         return max(distanceX, distanceY)
     }
-    
+
 }

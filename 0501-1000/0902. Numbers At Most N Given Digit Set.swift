@@ -7,7 +7,7 @@ class Solution {
     // Return the number of positive integers that can be generated that are less than or equal to a given integer n.
 
     // Finds the number of positive integers that can be generated that are less than or equal to a given integer n.
-    
+
     // - Parameters:
     //   - digits: An array of digits.
     //   - n: An integer.
@@ -16,14 +16,14 @@ class Solution {
     // Example 1:
     // Input: digits = ["1","3","5","7"], n = 100
     // Output: 20
-    // Explanation: 
+    // Explanation:
     // The 20 numbers that can be written are:
     // 1, 3, 5, 7, 11, 13, 15, 17, 31, 33, 35, 37, 51, 53, 55, 57, 71, 73, 75, 77.
 
     // Example 2:
     // Input: digits = ["1","4","9"], n = 1000000000
     // Output: 29523
-    // Explanation: 
+    // Explanation:
     // We can write 3 one digit numbers, 9 two digit numbers, 27 three digit numbers,
     // 81 four digit numbers, 243 five digit numbers, 729 six digit numbers,
     // 2187 seven digit numbers, 6561 eight digit numbers, and 19683 nine digit numbers.
@@ -44,13 +44,13 @@ class Solution {
     // - Complexity:
     //   - time: O(log (n)), where n is the length of digits.
     //   - space: O(1), only constant space is used.
-    
+
     func atMostNGivenDigitSet(_ digits: [String], _ n: Int) -> Int {
         guard !digits.isEmpty, n > 0 else { return 0 }
         var n = Array(String(n))
         var digitsCount = Double(digits.count)
         var ans = 0
-        
+
         for i in 1..<n.count { ans += Int(pow(digitsCount, Double(i))) }
 
         for i in 0..<n.count {

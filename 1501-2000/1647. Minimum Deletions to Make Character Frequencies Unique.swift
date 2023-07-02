@@ -30,7 +30,7 @@ class Solution {
 
     func minDeletions(_ s: String) -> Int {
         var cnt = [Int](repeating: 0, count: 26)
-        s.forEach { cnt[ Int($0.asciiValue! - 97) ] += 1 }
+        s.forEach { cnt[Int($0.asciiValue! - 97)] += 1 }
         cnt.sort { $0 > $1 }
         var ans = 0
 
@@ -42,5 +42,5 @@ class Solution {
         }
         return ans
     }
-    
+
 }

@@ -26,7 +26,7 @@ class Solution {
     // - Complexity:
     //   - time: O(log(p)), where p is wall length.
     //   - space: O(1), only constant space is used.
-    
+
     func mirrorReflection(_ p: Int, _ q: Int) -> Int {
         var m = q
         var n = p

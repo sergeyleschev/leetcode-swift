@@ -28,8 +28,12 @@ class Solution {
 
         while j < na.count {
             na[j] = arr[i]
-            if arr[i] == 0, j < na.count - 1 { j += 1; na[j] = 0 }
-            i += 1; j += 1
+            if arr[i] == 0, j < na.count - 1 {
+                j += 1
+                na[j] = 0
+            }
+            i += 1
+            j += 1
         }
 
         arr = na

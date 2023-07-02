@@ -33,14 +33,13 @@ class StreamChecker {
     private var stream: [Character]
     private let longestWord: Int
 
-
     // Initialization of data structures.
     // - Parameter words: The given words.
 
     // - Complexity:
     //   - time: O(n * m), where n is the number of given words, and m is the word length.
     //   - space: O(n * m), where n is the number of given words, and m is the word length.
-    
+
     init(_ words: [String]) {
         trie = TrieNode()
         stream = [Character]()
@@ -59,7 +58,6 @@ class StreamChecker {
         self.longestWord = longestWord
     }
 
-
     // Finds if the last k characters queried spell one of the words.
     // - Parameter letter: The query.
     // - Returns: True if the word exists in the list, otherwise returns false.
@@ -67,7 +65,7 @@ class StreamChecker {
     // - Complexity:
     //   - time: O(m), where m is the max word length.
     //   - space: O(m), where m is the max word length.
-    
+
     func query(_ letter: Character) -> Bool {
         stream.insert(letter, at: 0)
         if stream.count > longestWord { stream.removeLast() }
@@ -86,7 +84,6 @@ class StreamChecker {
     }
 
 }
-
 
 final class TrieNode {
     var children: [Character: TrieNode]

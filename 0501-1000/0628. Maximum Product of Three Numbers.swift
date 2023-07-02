@@ -22,8 +22,9 @@ class Solution {
     // -1000 <= nums[i] <= 1000
 
     func maximumProduct(_ nums: [Int]) -> Int {
-        var nums = nums.sorted(by: > )
-        
-        return max(nums[0] * nums[1] * nums[2], nums[0] * nums[nums.count - 1] * nums[nums.count - 2])
+        var nums = nums.sorted(by: >)
+
+        return max(
+            nums[0] * nums[1] * nums[2], nums[0] * nums[nums.count - 1] * nums[nums.count - 2])
     }
 }

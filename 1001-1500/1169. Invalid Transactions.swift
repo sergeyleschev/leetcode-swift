@@ -1,10 +1,9 @@
 class Transaction {
-    let name:String
-    let time:Int
-    let price:Int
-    let city:String
-    var isVaild:Bool
-    
+    let name: String
+    let time: Int
+    let price: Int
+    let city: String
+    var isValid: Bool
 
     init(transaction: String) {
         let info = transaction.split(separator: ",")
@@ -12,24 +11,20 @@ class Transaction {
         self.time = Int(String(info[1]))!
         self.price = Int(String(info[2]))!
         self.city = String(info[3])
-        self.isVaild = self.price <= 1000
+        self.isValid = self.price <= 1000
     }
 
-    
-    func isVaild(with other:Transaction) -> Bool{
-        if self.isVaild {
-            self.isVaild = other.city == city ||
-                abs(other.time - time) > 60
-            other.isVaild = other.isVaild && self.isVaild
+    func isValid(with other: Transaction) -> Bool {
+        if self.isValid {
+            self.isValid = other.city == city || abs(other.time - time) > 60
+            other.isValid = other.isValid && self.isValid
         }
-        return self.isVaild
+        return self.isValid
     }
-    
-    
+
     func toString() -> String { "\(name),\(time),\(price),\(city)" }
 
 }
-
 
 class Solution {
 
@@ -67,21 +62,24 @@ class Solution {
         var result = [Transaction]()
 
         for transaction in transactions {
-            let entiy = Transaction(transaction: transaction)
-            if var value = map[entiy.name]{
-                value.append(entiy)
-                map[entiy.name] = value
+            let entity = Transaction(transaction: transaction)
+            if var value = map[entity.name] {
+                value.append(entity)
+                map[entity.name] = value
             } else {
-                map[entiy.name] = [entiy]
+                map[entity.name] = [entity]
             }
         }
-        
-        for (_,value) in map {
+
+        for (_, value) in map {
             for transaction in value {
-                for other in value where !transaction.isVaild(with: other) { result.append(transaction); break }
+                for other in value where !transaction.isValid(with: other) {
+                    result.append(transaction)
+                    break
+                }
             }
         }
-        
+
         return result.map({ $0.toString() })
     }
 

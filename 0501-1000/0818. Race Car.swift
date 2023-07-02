@@ -17,14 +17,14 @@ class Solution {
     // Example 1:
     // Input: target = 3
     // Output: 2
-    // Explanation: 
+    // Explanation:
     // The shortest instruction sequence is "AA".
     // Your position goes from 0 --> 1 --> 3.
 
     // Example 2:
     // Input: target = 6
     // Output: 5
-    // Explanation: 
+    // Explanation:
     // The shortest instruction sequence is "AAARA".
     // Your position goes from 0 --> 1 --> 3 --> 7 --> 7 --> 6.
 
@@ -36,21 +36,22 @@ class Solution {
         return racecarRecusive(target, &dp)
     }
 
-    
     private func racecarRecusive(_ target: Int, _ dp: inout [Int]) -> Int {
         if dp[target] > 0 { return dp[target] }
-        
+
         let n = Int(floor(log2(Double(target)))) + 1
         if target + 1 == (1 << n) {
             dp[target] = n
-            
+
         } else {
             dp[target] = n + 1 + racecarRecusive((1 << n) - 1 - target, &dp)
-            for i in 0 ..< n - 1 {
-                dp[target] = min(dp[target], n + i + 1 + racecarRecusive(target - (1 << (n - 1)) + (1 << i), &dp))
+            for i in 0..<n - 1 {
+                dp[target] = min(
+                    dp[target], n + i + 1 + racecarRecusive(target - (1 << (n - 1)) + (1 << i), &dp)
+                )
             }
         }
-        
+
         return dp[target]
     }
 

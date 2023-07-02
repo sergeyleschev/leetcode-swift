@@ -34,54 +34,60 @@ class Solution {
         var secondNode: Int
     }
 
-    
     func findCriticalAndPseudoCriticalEdges(_ n: Int, _ edges: [[Int]]) -> [[Int]] {
-        let sortedEdges = edges.sorted{a, b in a[2] < b[2] } // ascending edge weight to find the minumum overall weight
-        var positionDictionary: [(Edges): Int] = [:]        
-        // indicies must be returned in the initial order, so we store these edges and their order
-        for e in 0..<edges.count { positionDictionary[(Edges(firstNode: edges[e][0], weight: edges[e][1], secondNode: edges[e][2]))] = e }
-        let minWeight = dist(n: n, edges: sortedEdges, edge: -1, exclude: -1) // Calculate MST
-        var output: [[Int]] = [[],[]]
-        
-        for e in 0..<sortedEdges.count { // for each edge
-            let index = positionDictionary[(Edges(firstNode: sortedEdges[e][0], weight: sortedEdges[e][1], secondNode: sortedEdges[e][2]))]! // we use the original (sorted index)
-            if dist(n: n, edges: sortedEdges, edge: -1, exclude: e) > minWeight { output[0].append(index) } 
-            else if dist(n: n, edges: sortedEdges, edge: e, exclude: -1) == minWeight { output[1].append(index) }
+        let sortedEdges = edges.sorted { a, b in a[2] < b[2] }  // ascending edge weight to find the minimum overall weight
+        var positionDictionary: [(Edges): Int] = [:]
+        // indices must be returned in the initial order, so we store these edges and their order
+        for e in 0..<edges.count {
+            positionDictionary[
+                (Edges(firstNode: edges[e][0], weight: edges[e][1], secondNode: edges[e][2]))] = e
         }
-        
+        let minWeight = dist(n: n, edges: sortedEdges, edge: -1, exclude: -1)  // Calculate MST
+        var output: [[Int]] = [[], []]
+
+        for e in 0..<sortedEdges.count {  // for each edge
+            let index = positionDictionary[
+                (Edges(
+                    firstNode: sortedEdges[e][0], weight: sortedEdges[e][1],
+                    secondNode: sortedEdges[e][2]))]!  // we use the original (sorted index)
+            if dist(n: n, edges: sortedEdges, edge: -1, exclude: e) > minWeight {
+                output[0].append(index)
+            } else if dist(n: n, edges: sortedEdges, edge: e, exclude: -1) == minWeight {
+                output[1].append(index)
+            }
+        }
+
         return output
     }
-    
 
-    private func dist(n: Int, edges: [[Int]], edge: Int, exclude: Int) -> Int { // nodes, edges (ordered), chosen edge, exclude
+    private func dist(n: Int, edges: [[Int]], edge: Int, exclude: Int) -> Int {  // nodes, edges (ordered), chosen edge, exclude
         var parents: [Int] = Array(0...n)
         var cost = 0
         var count = 0
 
-        if (edge != -1) {
+        if edge != -1 {
             let pick = edges[edge]
             parents[pick[0]] = parents[pick[1]]
             cost += pick[2]
             count += 1
         }
-        
-        for i in 0..<edges.count { // for each edge
-            if (i == exclude) { continue }  // do not take into account the excluded edge
+
+        for i in 0..<edges.count {  // for each edge
+            if i == exclude { continue }  // do not take into account the excluded edge
             let root1 = find(p: parents, j: edges[i][0])
             let root2 = find(p: parents, j: edges[i][1])
-            if (root1 != root2) {
+            if root1 != root2 {
                 parents[root1] = root2
                 count += 1
-                cost += edges[i][2] // the cost if the node is not part of the network
+                cost += edges[i][2]  // the cost if the node is not part of the network
             }
         }
-        
-        if (count == n - 1) { return cost } else { return Int.max }
+
+        if count == n - 1 { return cost } else { return Int.max }
     }
-    
-    
+
     private func find(p: [Int], j: Int) -> Int {
-        if (p[j] != j) { return find(p: p, j: p[j]) } // basic union find
+        if p[j] != j { return find(p: p, j: p[j]) }  // basic union find
         return j
     }
 

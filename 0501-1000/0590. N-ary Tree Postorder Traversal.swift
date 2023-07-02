@@ -1,14 +1,12 @@
-/**
- * Definition for a Node.
- * public class Node {
- *     public var val: Int
- *     public var children: [Node]
- *     public init(_ val: Int) {
- *         self.val = val
- *         self.children = []
- *     }
- * }
- */
+/// Definition for a Node.
+/// public class Node {
+///     public var val: Int
+///     public var children: [Node]
+///     public init(_ val: Int) {
+///         self.val = val
+///         self.children = []
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -29,11 +27,11 @@ class Solution {
     // The number of nodes in the tree is in the range [0, 10^4].
     // 0 <= Node.val <= 10^4
     // The height of the n-ary tree is less than or equal to 1000.
-     
+
     // Follow up: Recursive solution is trivial, could you do it iteratively?
 
     func postorder(_ root: Node?) -> [Int] {
-        guard let root = root else {return []}
+        guard let root = root else { return [] }
         var output = [Int]()
         var stack = [(Node, Bool)]()
 
@@ -41,17 +39,17 @@ class Solution {
         while !stack.isEmpty {
             let (current, isVisited) = stack.removeLast()
             let children = current.children
-            
+
             if children.isEmpty || isVisited {
                 output.append(current.val)
             } else {
                 stack.append((current, true))
-                children.reversed().map{stack.append(($0, false))}
+                children.reversed().map { stack.append(($0, false)) }
             }
-            
+
         }
-        
+
         return output
     }
-    
+
 }

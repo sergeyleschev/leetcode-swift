@@ -54,7 +54,6 @@ class Solution {
     func closestCost(_ baseCosts: [Int], _ toppingCosts: [Int], _ target: Int) -> Int {
         var best = Int.max
 
-        
         func better(_ l: Int, _ r: Int) -> Int {
             let lLoss = abs(l - target)
             let rLoss = abs(r - target)
@@ -64,7 +63,7 @@ class Solution {
                 return lLoss < rLoss ? l : r
             }
         }
-        
+
         func addTopping(_ current: Int, _ index: Int) -> Int {
             if index == toppingCosts.count {
                 return current
@@ -75,7 +74,7 @@ class Solution {
                 return better(cur, better(one, two))
             }
         }
-        
+
         for base in baseCosts { best = better(best, addTopping(base, 0)) }
         return best
     }

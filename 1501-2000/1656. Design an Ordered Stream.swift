@@ -27,7 +27,7 @@ class OrderedStream {
     // // Concatentating all the chunks returned:
     // // [] + ["aaaaa"] + ["bbbbb", "ccccc"] + [] + ["ddddd", "eeeee"] = ["aaaaa", "bbbbb", "ccccc", "ddddd", "eeeee"]
     // // The resulting order is the same as the order above.
-     
+
     // Constraints:
     // 1 <= n <= 1000
     // 1 <= id <= n
@@ -39,23 +39,23 @@ class OrderedStream {
     var index = 0
     var n = 0
     var array: [String] = []
-    
 
     init(_ n: Int) {
         self.n = n
         self.array = Array(repeating: "", count: n)
     }
-    
 
     func insert(_ id: Int, _ value: String) -> [String] {
-        var chunkStrs:[String] = []    
+        var chunkStrs: [String] = []
         self.array[id - 1] = value
-        
+
         while self.index < self.n {
-            if self.array[self.index] != ""{
+            if self.array[self.index] != "" {
                 chunkStrs.append(self.array[self.index])
                 self.index += 1
-            } else { break }
+            } else {
+                break
+            }
         }
         return chunkStrs
     }

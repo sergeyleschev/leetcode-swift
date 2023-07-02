@@ -24,15 +24,15 @@ class Solution {
         var p = 1
         var q = n
         var res = [Int](repeating: 0, count: n)
-        var useP = true        
+        var useP = true
         guard k > 1 else { return res.enumerated().map { $0.0 + 1 } }
 
-        for i in 0 ..< k {
+        for i in 0..<k {
             if i % 2 == 0 {
                 res[i] = p
                 p += 1
                 useP = false
-            } else{
+            } else {
                 res[i] = q
                 q -= 1
                 useP = true
@@ -40,17 +40,16 @@ class Solution {
         }
 
         var u = useP == true ? q : p
-        
-        for i in k ..< n {
+
+        for i in k..<n {
             res[i] = u
             if useP == false {
                 u += 1
-            }
-            else {
+            } else {
                 u -= 1
             }
         }
-        
+
         return res
     }
 

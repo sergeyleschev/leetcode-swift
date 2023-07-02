@@ -41,7 +41,6 @@ class Solution {
         var left = ""
         var right = s
 
-
         func check(_ maxNumber: Int, _ last: Int, _ remainStr: String) -> Bool {
             guard !remainStr.isEmpty else { return maxNumber != last }
             let target = last - 1
@@ -51,7 +50,9 @@ class Solution {
             for ch in remainStr {
                 new.append(ch)
                 if let newNum = Int(new), target == newNum {
-                    guard !check(maxNumber, target, String(remainStr.dropFirst(new.count))) else { return true }
+                    guard !check(maxNumber, target, String(remainStr.dropFirst(new.count))) else {
+                        return true
+                    }
                 }
             }
             return false
@@ -60,7 +61,7 @@ class Solution {
         while right.count > 1 {
             left.append(right.removeFirst())
             if let maxNumber = Int(left) {
-                guard !check(maxNumber,maxNumber, right) else { return true }
+                guard !check(maxNumber, maxNumber, right) else { return true }
             }
         }
         return false

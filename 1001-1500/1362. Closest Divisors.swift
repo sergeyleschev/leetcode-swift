@@ -27,7 +27,7 @@ class Solution {
             let mid = Int(sqrt(Double(n)))
             var temp = mid
             while temp > 0 {
-                if n % temp == 0 { return [temp,n / temp] }
+                if n % temp == 0 { return [temp, n / temp] }
                 temp -= 1
             }
             return []
@@ -38,5 +38,5 @@ class Solution {
         let pair2 = getTwoNearestFactors(num + 2)
         return abs(pair1[1] - pair1[0]) > abs(pair2[1] - pair2[0]) ? pair2 : pair1
     }
-    
- }
+
+}

@@ -1,4 +1,4 @@
- class Solution {
+class Solution {
 
     // Solution by Sergey Leschev
 
@@ -34,7 +34,7 @@
         while let t = node {
             sum += t.val
             if set.contains(sum) {
-                while !values.isEmpty &&  values.last! != sum{
+                while !values.isEmpty && values.last! != sum {
                     set.remove(values.removeLast())
                     nodes.removeLast()
                 }
@@ -44,11 +44,11 @@
                 values.append(sum)
                 set.insert(sum)
             }
-            
+
             node = t.next
         }
-        
+
         return nodes.isEmpty ? nil : nodes.first!
     }
-    
- }
+
+}

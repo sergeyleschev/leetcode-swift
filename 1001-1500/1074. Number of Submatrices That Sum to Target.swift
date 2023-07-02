@@ -1,7 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
-    
+
     // 1074. Number of Submatrices That Sum to Target
     // Given a matrix and a target, return the number of non-empty submatrices that sum to target.
     // A submatrix x1, y1, x2, y2 is the set of all cells matrix[x][y] with x1 <= x <= x2 and y1 <= y <= y2.
@@ -36,7 +36,7 @@ class Solution {
         for i in 0..<M {
             for j in 1..<N { prefixSum[i][j] += prefixSum[i][j - 1] }
         }
-        
+
         for c1 in 0..<N {
             for c2 in c1..<N {
                 var map: [Int: Int] = [0: 1]
@@ -44,7 +44,7 @@ class Solution {
                 for r in 0..<M {
                     cur += prefixSum[r][c2] - (c1 > 0 ? prefixSum[r][c1 - 1] : 0)
                     ans += map[cur - target] ?? 0
-                    map.updateValue((map[cur] ?? 0 ) + 1, forKey: cur)
+                    map.updateValue((map[cur] ?? 0) + 1, forKey: cur)
                 }
             }
         }

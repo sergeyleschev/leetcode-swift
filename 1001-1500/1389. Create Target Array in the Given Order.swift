@@ -47,5 +47,5 @@ class Solution {
         for i in 0..<nums.count { res.insert(nums[i], at: index[i]) }
         return res
     }
-    
+
 }

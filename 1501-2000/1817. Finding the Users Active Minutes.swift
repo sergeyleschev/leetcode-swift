@@ -3,7 +3,7 @@ class Solution {
     // Solution by Sergey Leschev
 
     // 1817. Finding the Users Active Minutes
-    // You are given the logs for users' actions on LeetCode, and an integer k. The logs are represented by a 2D integer array logs where each logs[i] = [IDi, timei] indicates that the user with IDi performed an action at the minute timei.
+    // You are given the logs for users' actions on LeetCode, and an integer k. The logs are represented by a 2D integer array logs where each logs[i] = [IDi, time(i)] indicates that the user with IDi performed an action at the minute time(i).
     // Multiple users can perform actions simultaneously, and a single user can perform multiple actions in the same minute.
     // The user active minutes (UAM) for a given user is defined as the number of unique minutes in which the user performed an action on LeetCode. A minute can only be counted once, even if multiple actions occur during it.
     // You are to calculate a 1-indexed array answer of size k such that, for each j (1 <= j <= k), answer[j] is the number of users whose UAM equals j.
@@ -30,7 +30,7 @@ class Solution {
     // Constraints:
     // 1 <= logs.length <= 10^4
     // 0 <= IDi <= 10^9
-    // 1 <= timei <= 10^5
+    // 1 <= time(i) <= 10^5
     // k is in the range [The maximum UAM for a user, 10^5].
 
     func findingUsersActiveMinutes(_ logs: [[Int]], _ k: Int) -> [Int] {
@@ -43,6 +43,5 @@ class Solution {
         for (t, cnt) in counter2 { ans[t - 1] = cnt }
         return ans
     }
-    
-}
 
+}

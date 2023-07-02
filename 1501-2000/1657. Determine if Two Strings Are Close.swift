@@ -50,12 +50,12 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the max length of word1 and word2.
     //   - space: O(n), where n is the max length of word1 and word2.
-    
+
     func closeStrings(_ word1: String, _ word2: String) -> Bool {
-        if word1.count != word2.count { return false }        
+        if word1.count != word2.count { return false }
         var dict1 = [String: Int]()
         var dict2 = [String: Int]()
-        
+
         for char in word1 {
             if let value = dict1["\(char)"] {
                 dict1["\(char)"] = value + 1
@@ -63,7 +63,7 @@ class Solution {
                 dict1["\(char)"] = 1
             }
         }
-        
+
         for char in word2 {
             if let value = dict2["\(char)"] {
                 dict2["\(char)"] = value + 1
@@ -71,8 +71,9 @@ class Solution {
                 dict2["\(char)"] = 1
             }
         }
-        
-        return dict1.compactMap { return $1 }.sorted() == dict2.compactMap { return $1 }.sorted() && dict1.keys.sorted() == dict2.keys.sorted()
+
+        return dict1.compactMap { return $1 }.sorted() == dict2.compactMap { return $1 }.sorted()
+            && dict1.keys.sorted() == dict2.keys.sorted()
     }
 
 }

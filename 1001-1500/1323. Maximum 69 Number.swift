@@ -9,11 +9,11 @@ class Solution {
     // Example 1:
     // Input: num = 9669
     // Output: 9969
-    // Explanation: 
+    // Explanation:
     // Changing the first digit results in 6669.
     // Changing the second digit results in 9969.
     // Changing the third digit results in 9699.
-    // Changing the fourth digit results in 9666. 
+    // Changing the fourth digit results in 9666.
     // The maximum number is 9969.
 
     // Example 2:
@@ -30,9 +30,9 @@ class Solution {
     // 1 <= num <= 10^4
     // num's digits are 6 or 9.
 
-    func maximum69Number (_ num: Int) -> Int {
+    func maximum69Number(_ num: Int) -> Int {
         var numbers = String(num).map { char -> Int in char.wholeNumberValue! }
-        
+
         for (index, number) in numbers.enumerated() {
             guard number == 6 else { continue }
             numbers[index] = 9

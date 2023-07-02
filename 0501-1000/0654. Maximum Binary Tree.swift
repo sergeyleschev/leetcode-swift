@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -51,9 +49,8 @@ class Solution {
         if nums.count == 0 { return nil }
         return self.buildTree(nums, 0, nums.count - 1)
     }
-    
-    
-    func buildTree(_ nums:[Int],_ start:Int,_ end:Int) -> TreeNode? {
+
+    func buildTree(_ nums: [Int], _ start: Int, _ end: Int) -> TreeNode? {
         guard start <= end else { return nil }
         var max = start
         var i = start + 1
@@ -62,12 +59,12 @@ class Solution {
             if nums[i] > nums[max] { max = i }
             i += 1
         }
-        
+
         let root = TreeNode(nums[max])
         root.left = buildTree(nums, start, max - 1)
         root.right = buildTree(nums, max + 1, end)
-        
+
         return root
     }
-    
+
 }

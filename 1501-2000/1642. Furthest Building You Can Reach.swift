@@ -36,11 +36,10 @@ class Solution {
 
     private struct SortedArray {
         private var array: [Int]
-        
+
         var count: Int { return self.array.count }
 
         init() { self.array = [] }
-
 
         mutating func insert(_ element: Int) {
             var left = 0
@@ -60,14 +59,12 @@ class Solution {
             }
         }
 
-
         mutating func top() -> Int? {
             guard let element = self.array.first else { return nil }
             self.array.removeFirst()
             return element
         }
     }
-
 
     func furthestBuilding(_ heights: [Int], _ bricks: Int, _ ladders: Int) -> Int {
         var sortedArray = SortedArray()

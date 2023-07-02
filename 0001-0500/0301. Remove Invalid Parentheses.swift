@@ -1,7 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
-    
+
     // 301. Remove Invalid Parentheses
     // Given a string s that contains parentheses and letters, remove the minimum number of invalid parentheses to make the input string valid.
     // Return all the possible results. You may return the answer in any order.
@@ -26,11 +26,11 @@ class Solution {
     func removeInvalidParentheses(_ s: String) -> [String] {
         var level = Set<String>()
         level.insert(s)
-        
+
         while true {
             let valid = level.filter({ isValid($0) })
             if valid.count > 0 { return Array(valid) }
-            
+
             var nextLevel = Set<String>()
             for s in level {
                 for i in 0..<s.count {
@@ -44,14 +44,12 @@ class Solution {
             level = nextLevel
         }
     }
-    
-    
+
     private func isValid(_ s: String) -> Bool {
         var leftMinusRight = 0
         for i in Array(s) {
-            if i == "(" { leftMinusRight += 1 }
-            else if i == ")" { leftMinusRight -= 1 }
-            
+            if i == "(" { leftMinusRight += 1 } else if i == ")" { leftMinusRight -= 1 }
+
             if leftMinusRight < 0 { return false }
         }
         return leftMinusRight == 0

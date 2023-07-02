@@ -29,22 +29,22 @@ class Solution {
         let mod = Int(1e9 + 7)
         let dir = [0, 1, 0, -1, 0]
         var count = 0
-        var dp = Array( repeating: Array(repeating: 0, count: n), count: m)
+        var dp = Array(repeating: Array(repeating: 0, count: n), count: m)
 
         dp[i][j] = 1
         for moves in 1...N {
-            var temp = Array( repeating: Array(repeating: 0, count: n), count: m )
+            var temp = Array(repeating: Array(repeating: 0, count: n), count: m)
             for r in 0..<m {
                 for c in 0..<n {
                     if r == m - 1 { count = (count + dp[r][c]) % mod }
                     if c == n - 1 { count = (count + dp[r][c]) % mod }
                     if r == 0 { count = (count + dp[r][c]) % mod }
                     if c == 0 { count = (count + dp[r][c]) % mod }
-                    temp[r][c] = ((
-                        (r > 0 ? dp[r - 1][c] : 0) + (c > 0 ? dp[r][c - 1] : 0)
-                    ) % mod + (
-                        (r < m - 1 ? dp[r + 1][c] : 0) + (c < n - 1 ? dp[r][c + 1] : 0)
-                    ) % mod) % mod
+                    temp[r][c] =
+                        (((r > 0 ? dp[r - 1][c] : 0) + (c > 0 ? dp[r][c - 1] : 0)) % mod
+                            + ((r < m - 1 ? dp[r + 1][c] : 0) + (c < n - 1 ? dp[r][c + 1] : 0))
+                                % mod)
+                        % mod
                 }
             }
             dp = temp
@@ -52,5 +52,5 @@ class Solution {
 
         return count
     }
-    
+
 }

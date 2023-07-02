@@ -28,7 +28,7 @@ class Solution {
     // Input: prices = [7,6,4,3,1]
     // Output: 0
     // Explanation: In this case, no transaction is done, i.e., max profit = 0.
-     
+
     // Constraints:
     // 1 <= prices.length <= 3 * 10^4
     // 0 <= prices[i] <= 10^4
@@ -36,17 +36,17 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the prices.
     //   - space: O(1), only constant space is used.
-    
+
     func maxProfit(_ prices: [Int]) -> Int {
         guard !prices.isEmpty else { return 0 }
-        
+
         var ans = 0
-        
+
         for i in 1..<prices.count {
             guard prices[i] > prices[i - 1] else { continue }
             ans += prices[i] - prices[i - 1]
         }
-        
+
         return ans
     }
 

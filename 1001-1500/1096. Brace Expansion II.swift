@@ -35,7 +35,7 @@ class Solution {
     // The given expression represents a set of words based on the grammar given in the description.
 
     // - Complexity:
-    //   - time: O(n + mlogm) 
+    //   - time: O(n + mlogm)
     //   - space: O(n^3)
 
     func braceExpansionII(_ expression: String) -> [String] {
@@ -49,7 +49,7 @@ class Solution {
         var end = -1
         var expression = Array(expression)
         var set = Set<String>()
-        
+
         for i in 0..<expression.count {
             let char = expression[i]
             if char == "{" {
@@ -69,7 +69,7 @@ class Solution {
                 list[list.count - 1].append([String(char)])
             }
         }
-                
+
         for subList in list {
             var temp = [""]
             for sub in subList {
@@ -81,7 +81,7 @@ class Solution {
             }
             set = set.union(temp)
         }
-        
+
         return set.sorted()
     }
 

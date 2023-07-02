@@ -38,24 +38,20 @@ class Solution {
         var willBeInfected: Set<Int>
         var needWalls: Int
     }
-    
-    
-    private let dx = [0,0,1,-1]
-    private let dy = [1,-1,0,0]
-    
 
-    func containVirus(_ grid: [[Int]]) -> Int {    
+    private let dx = [0, 0, 1, -1]
+    private let dy = [1, -1, 0, 0]
+
+    func containVirus(_ grid: [[Int]]) -> Int {
         let M = grid.count
         let N = grid[0].count
         var gridCopy = grid
-        var totalWalls = 0        
+        var totalWalls = 0
         var infected = Set<Int>()
         var blocked = Set<Int>()
-        var varius = [Int:InfectedZone]() //key: infected source value: varius
+        var varius = [Int: InfectedZone]()  //key: infected source value: varius
 
-        
         func valid(_ x: Int, _ y: Int) -> Bool { x < M && x >= 0 && y >= 0 && y < N }
-        
 
         func dfs(currentPosition: Int, source: Int) {
             for index in 0..<4 {
@@ -67,7 +63,8 @@ class Solution {
                         varius[source]?.willBeInfected.insert(p)
                         varius[source]?.needWalls += 1
                     }
-                    if gridCopy[nextX][nextY] == 1 && !infected.contains(p) && !blocked.contains(p){
+                    if gridCopy[nextX][nextY] == 1 && !infected.contains(p) && !blocked.contains(p)
+                    {
                         infected.insert(p)
                         varius[source]?.infected.insert(p)
                         dfs(currentPosition: p, source: source)
@@ -75,9 +72,8 @@ class Solution {
                 }
             }
         }
-        
 
-        while true {            
+        while true {
             varius = [:]
             infected = []
             var infectedCount = 0
@@ -89,15 +85,19 @@ class Solution {
                         let source = r << 8 | c
                         if !infected.contains(source) && !blocked.contains(source) {
                             infected.insert(source)
-                            varius[source] = InfectedZone(infected: [source], willBeInfected: [], needWalls: 0)
+                            varius[source] = InfectedZone(
+                                infected: [source], willBeInfected: [], needWalls: 0)
                             dfs(currentPosition: source, source: source)
                         }
                     }
                 }
             }
-            
+
             if varius.isEmpty || infectedCount == M * N { break }
-            if varius.count == 1 { totalWalls += (varius.first?.value.needWalls ?? 0); break }
+            if varius.count == 1 {
+                totalWalls += (varius.first?.value.needWalls ?? 0)
+                break
+            }
             let sortedVarius = varius.sorted { (varius1, varius2) -> Bool in
                 varius1.value.willBeInfected.count > varius2.value.willBeInfected.count
             }

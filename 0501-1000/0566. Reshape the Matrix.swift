@@ -26,9 +26,9 @@ class Solution {
     func matrixReshape(_ nums: [[Int]], _ r: Int, _ c: Int) -> [[Int]] {
         var array = nums.flatMap({ $0 })
         var returnArray = [[Int]]()
-        
-        if array.count != r * c { return nums }        
-        
+
+        if array.count != r * c { return nums }
+
         for i in 0..<r {
             returnArray.append([Int]())
             for _ in 0..<c {
@@ -36,8 +36,8 @@ class Solution {
                 array.removeFirst()
             }
         }
-        
+
         return returnArray
     }
-    
+
 }

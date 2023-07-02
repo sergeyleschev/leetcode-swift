@@ -50,7 +50,7 @@ class Solution {
             }
         }
         guard let f = first, let s = second else { return false }
-        return  s1Chars[f] == s2Chars[s] && s1Chars[s] == s2Chars[f]
+        return s1Chars[f] == s2Chars[s] && s1Chars[s] == s2Chars[f]
     }
-    
+
 }

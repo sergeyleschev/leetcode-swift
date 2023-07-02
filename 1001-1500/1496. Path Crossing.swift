@@ -8,7 +8,7 @@ class Solution {
 
     // Example 1:
     // Input: path = "NES"
-    // Output: false 
+    // Output: false
     // Explanation: Notice that the path doesn't cross any point more than once.
 
     // Example 2:
@@ -25,7 +25,7 @@ class Solution {
         var set = Set<Int>([cur])
 
         return path.first { c in
-            switch(c) {
+            switch c {
             case "N": cur += 1
             case "S": cur -= 1
             case "E": cur += 10001

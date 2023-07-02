@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -51,7 +49,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of nodes in the binary tree.
     //   - space: O(n), where n is the number of nodes in the binary tree.
-    
+
     func sumRootToLeaf(_ root: TreeNode?) -> Int {
         guard let root = root else { return 0 }
         var ans = 0
@@ -59,10 +57,12 @@ class Solution {
         return ans
     }
 
-    
     private func dfs(_ root: TreeNode, _ currNumber: Int, _ ans: inout Int) {
-        if root.left == nil, root.right == nil { ans += currNumber; return }
-        
+        if root.left == nil, root.right == nil {
+            ans += currNumber
+            return
+        }
+
         if let left = root.left { dfs(left, (currNumber * 2) + left.val, &ans) }
         if let right = root.right { dfs(right, (currNumber * 2) + right.val, &ans) }
     }

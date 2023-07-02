@@ -29,9 +29,9 @@ class Solution {
 
     func uniqueLetterString(_ S: String) -> Int {
         var characterMap = [Character: [Int]]()
-        let mod = 1000000007
+        let mod = 1_000_000_007
         var count = 0
-        
+
         for index in 0..<S.count {
             let c = S[String.Index.init(encodedOffset: index)]
             if var subArr = characterMap[c] {
@@ -42,7 +42,7 @@ class Solution {
                 characterMap[c]!.append(index)
             }
         }
-        
+
         for indexArr in characterMap.values {
             for index in 0..<indexArr.count {
                 let prev = index == 0 ? -1 : indexArr[index - 1]
@@ -50,8 +50,8 @@ class Solution {
                 count = (count + (indexArr[index] - prev) * (next - indexArr[index]) % mod) % mod
             }
         }
-        
+
         return count
     }
-    
+
 }

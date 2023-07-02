@@ -25,7 +25,7 @@ class Solution {
 
     // Example 5:
     // Input: nums = [1,1,1]
-    // Output: true 
+    // Output: true
 
     // Note:
     // 1 <= nums.length <= 50000
@@ -35,14 +35,14 @@ class Solution {
         guard A.count > 2 else { return true }
         var isDec: Bool = false
         var isInc: Bool = false
-        
+
         for i in 1..<A.count {
-            let dif = A[i] - A[i-1]
+            let dif = A[i] - A[i - 1]
             if dif < 0 { isDec = true }
             if dif > 0 { isInc = true }
         }
-        
+
         return !(isDec && isInc)
     }
-    
+
 }

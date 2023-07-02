@@ -30,5 +30,5 @@ class Solution {
         let n = nums.count
         return sortedNums[n - 1] * sortedNums[n - 2] - sortedNums[0] * sortedNums[1]
     }
-    
+
 }

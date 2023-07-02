@@ -30,11 +30,10 @@ class Solution {
     // s contains only lowercase English letters.
 
     private let N = 127
-    private var dp = [[Int]]() //dp[left][k]:the minimal coding size for substring s[left:] and remove at most at k
+    private var dp = [[Int]]()  //dp[left][k]:the minimal coding size for substring s[left:] and remove at most at k
     private var chars: [Int] = []
     private var n = -1
 
-    
     func getLengthOfOptimalCompression(_ s: String, _ k: Int) -> Int {
         guard k < s.count else { return 0 }
         guard s.count > 1 else { return s.count }
@@ -43,12 +42,10 @@ class Solution {
         self.chars = s.map({ Int($0.asciiValue!) - 97 })
         return solve(0, k)
     }
-    
 
-    private func getLengthOfDigit(_ x : Int) -> Int {
+    private func getLengthOfDigit(_ x: Int) -> Int {
         x == 1 ? 0 : (x < 10 ? 1 : (x < 100 ? 2 : 3))
     }
-    
 
     private func solve(_ left: Int, _ k: Int) -> Int {
         guard k >= 0 else { return N }
@@ -66,7 +63,7 @@ class Solution {
             ans = min(ans, 1 + getLengthOfDigit(most) + solve(j + 1, k - (j - left + 1 - most)))
             j += 1
         }
-        
+
         dp[left][k] = ans
         return ans
     }

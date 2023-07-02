@@ -33,7 +33,7 @@ class Solution {
         var sum: Double = 0
 
         for i in K..<(K + W) {
-            dp[i] = i <= N ? 1:0
+            dp[i] = i <= N ? 1 : 0
             sum += dp[i]
         }
 
@@ -41,8 +41,8 @@ class Solution {
             dp[i] = sum / Double(W)
             sum = sum - dp[i + W] + dp[i]
         }
-         
-        return dp[0]   
+
+        return dp[0]
     }
 
 }

@@ -12,12 +12,12 @@ class Solution {
     // Input: s = "0100"
     // Output: 1
     // Explanation: If you change the last character to '1', s will be "0101", which is alternating.
-    
+
     // Example 2:
     // Input: s = "10"
     // Output: 0
     // Explanation: s is already alternating.
-    
+
     // Example 3:
     // Input: s = "1111"
     // Output: 2
@@ -26,12 +26,11 @@ class Solution {
     // Constraints:
     // 1 <= s.length <= 10^4
     // s[i] is either '0' or '1'.
-    
+
     func minOperations(_ s: String) -> Int {
-        guard s.count > 1 else { return  0}
+        guard s.count > 1 else { return 0 }
         return min(getOPerationsCount(s, "0"), getOPerationsCount(s, "1"))
     }
-
 
     private func getOPerationsCount(_ s: String, _ startWith: Character) -> Int {
         var cnt = 0
@@ -46,7 +45,6 @@ class Solution {
     }
 
 }
-
 
 extension Character {
     var next: Character { self == "0" ? "1" : "0" }

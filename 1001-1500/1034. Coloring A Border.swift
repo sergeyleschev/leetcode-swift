@@ -31,7 +31,6 @@ class Solution {
     private let dx = [0, 0, 1, -1]
     private let dy = [1, -1, 0, 0]
 
-
     func colorBorder(_ grid: [[Int]], _ r0: Int, _ c0: Int, _ color: Int) -> [[Int]] {
         let M = grid.count
         let N = grid[0].count
@@ -39,31 +38,30 @@ class Solution {
         let targetColor = grid[r0][c0]
         var visited = [[Bool]](repeating: [Bool](repeating: false, count: N), count: M)
 
+        func valid(_ x: Int, _ y: Int) -> Bool { x >= 0 && y >= 0 && x < M && y < N }
 
-        func valid(_ x: Int,_ y: Int) -> Bool { x >= 0 &&  y >= 0 && x < M  &&  y < N }
-        
-
-        func isToBeColoured(_ x: Int,_ y: Int)  -> Bool {
-            if x == 0 || y == 0 || x == M - 1 || y == N - 1 { return  true }
-            for i in 0..<4 where grid[x  + dx[i]][y + dy[i]] != targetColor { return true }
+        func isToBeColoured(_ x: Int, _ y: Int) -> Bool {
+            if x == 0 || y == 0 || x == M - 1 || y == N - 1 { return true }
+            for i in 0..<4 where grid[x + dx[i]][y + dy[i]] != targetColor { return true }
             return false
         }
 
-        
-        func dfs(_ x: Int,_ y: Int) {
-            if isToBeColoured(x,y) { ans[x][y] = color }
+        func dfs(_ x: Int, _ y: Int) {
+            if isToBeColoured(x, y) { ans[x][y] = color }
             for i in 0..<4 {
                 let nextX = x + dx[i]
                 let nextY = y + dy[i]
-                if valid(nextX,nextY) && targetColor ==  grid[nextX][nextY] && !visited[nextX][nextY]{
+                if valid(nextX, nextY) && targetColor == grid[nextX][nextY]
+                    && !visited[nextX][nextY]
+                {
                     visited[nextX][nextY] = true
                     dfs(nextX, nextY)
                 }
             }
         }
-        
+
         dfs(r0, c0)
         return ans
     }
 
- }
+}

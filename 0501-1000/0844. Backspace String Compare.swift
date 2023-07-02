@@ -53,5 +53,5 @@ class Solution {
 
         return _backspace(s: S) == _backspace(s: T)
     }
-    
+
 }

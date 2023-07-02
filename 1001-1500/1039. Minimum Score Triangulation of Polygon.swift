@@ -31,12 +31,12 @@ class Solution {
     func minScoreTriangulation(_ A: [Int]) -> Int {
         let N = A.count
         var dp = [[Int]](repeating: [Int](repeating: Int.max, count: N), count: N)
-        
+
         dp[N - 1][0] = 0
         for i in 0..<N - 1 { dp[i][i + 1] = 0 }
 
         for i in (0..<N - 1).reversed() {
-            for j in (i  + 1)..<N {
+            for j in (i + 1)..<N {
                 var k = i + 1
                 while k < j {
                     dp[i][j] = min(dp[i][j], dp[i][k] + dp[k][j] + A[i] * A[k] * A[j])
@@ -47,5 +47,5 @@ class Solution {
 
         return dp[0][N - 1]
     }
-  
+
 }

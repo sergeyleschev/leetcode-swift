@@ -23,13 +23,15 @@ class Solution {
         guard coordinates.count > 2 else { return true }
         let point1 = coordinates[0]
         let point2 = coordinates[1]
-      
+
         for i in 2..<coordinates.count {
             let coordinate = coordinates[i]
-            let qualify = (point1[1] - point2[1]) * (point1[0] - coordinate[0]) == (point1[0] - point2[0]) * (point1[1] - coordinate[1])
+            let qualify =
+                (point1[1] - point2[1]) * (point1[0] - coordinate[0]) == (point1[0] - point2[0])
+                * (point1[1] - coordinate[1])
             if !qualify { return false }
         }
-        
+
         return true
     }
 

@@ -34,27 +34,27 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the nums.
     //   - space: O(1), only constant space is used.
-    
+
     func findMin(_ nums: [Int]) -> Int {
         var left = 0
         var mid = 0
-        var right = nums.count-1
+        var right = nums.count - 1
 
         while left < right {
             mid = left + (right - left) / 2
 
             if nums[mid] > nums[right] {
                 left = mid + 1
-            
+
             } else if nums[mid] < nums[right] {
                 right = mid
-            
+
             } else {
                 right -= 1
             }
         }
 
-       return nums[left]
+        return nums[left]
     }
 
 }

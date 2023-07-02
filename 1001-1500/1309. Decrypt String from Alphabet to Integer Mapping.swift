@@ -5,7 +5,7 @@ class Solution {
     // 1309. Decrypt String from Alphabet to Integer Mapping
     // Given a string s formed by digits ('0' - '9') and '#' . We want to map s to English lowercase characters as follows:
     // Characters ('a' to 'i') are represented by ('1' to '9') respectively.
-    // Characters ('j' to 'z') are represented by ('10#' to '26#') respectively. 
+    // Characters ('j' to 'z') are represented by ('10#' to '26#') respectively.
     // Return the string formed after mapping.
     // It's guaranteed that a unique mapping will always exist.
 
@@ -35,11 +35,12 @@ class Solution {
         var i = 0
         var s = Array(s)
         var ans = ""
-        
+
         while i < s.count {
             let j = i + 2
             if j < s.count && s[j] == "#",
-                let ascii = Int(String(s[i..<j])) {
+                let ascii = Int(String(s[i..<j]))
+            {
                 ans += ascii.letter
                 i = j + 1
             } else {
@@ -47,12 +48,11 @@ class Solution {
                 i += 1
             }
         }
-        
+
         return ans
     }
-    
-}
 
+}
 
 extension Int {
     var letter: String { String(UnicodeScalar(UInt8(self + 96))) }

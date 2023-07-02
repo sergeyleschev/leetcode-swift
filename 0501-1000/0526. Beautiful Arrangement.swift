@@ -16,7 +16,7 @@ class Solution {
     // Example 1:
     // Input: n = 2
     // Output: 2
-    // Explanation: 
+    // Explanation:
     // The first beautiful arrangement is [1,2]:
     //     - perm[1] = 1 is divisible by i = 1
     //     - perm[2] = 2 is divisible by i = 2
@@ -36,21 +36,19 @@ class Solution {
     //   - space: O(n), where n is the given n.
 
     private var ans = 0
-    
 
     func countArrangement(_ n: Int) -> Int {
         var visited = [Bool](repeating: false, count: n + 1)
         calculate(n, 1, &visited)
-        
+
         return ans
     }
-    
 
     private func calculate(_ n: Int, _ position: Int, _ visited: inout [Bool]) {
         if position > n { ans += 1 }
-        
+
         for i in 1...n {
-            guard !visited[i], (position % i == 0 || i % position == 0) else { continue }
+            guard !visited[i], position % i == 0 || i % position == 0 else { continue }
             visited[i] = true
             calculate(n, position + 1, &visited)
             visited[i] = false

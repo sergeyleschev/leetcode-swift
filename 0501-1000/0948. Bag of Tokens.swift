@@ -44,7 +44,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n log(n)), where n is the number of tokens.
     //   - space: O(n), where n is the number of tokens.
-    
+
     func bagOfTokensScore(_ tokens: [Int], _ P: Int) -> Int {
         var tokens = tokens.sorted(by: <)
         var P = P

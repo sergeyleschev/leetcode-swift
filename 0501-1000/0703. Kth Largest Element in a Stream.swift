@@ -33,13 +33,11 @@ class KthLargest {
     var values: [Int] = []
     let k: Int
     var size: Int = 0
-    
 
     init(_ k: Int, _ nums: [Int]) {
         self.k = k
         for n in nums { add(n) }
     }
-    
 
     func add(_ val: Int) -> Int {
         if size >= k {
@@ -56,12 +54,11 @@ class KthLargest {
 
         return values[0]
     }
-    
 
     private func shiftUp(_ index: Int) {
         let e = values[index]
         var i = index
-        
+
         while i > 0 {
             let parentIndex = (i - 1) >> 1
             let parent = values[parentIndex]
@@ -71,23 +68,22 @@ class KthLargest {
         }
         values[i] = e
     }
-    
 
     private func shiftDown(_ index: Int) {
         let e = values[index]
         let half = size >> 1
         var i = index
-        
-        while i < half { 
-            var childIndex = (i << 1) + 1   
-            var child = values[childIndex]      
+
+        while i < half {
+            var childIndex = (i << 1) + 1
+            var child = values[childIndex]
             let rightIndex = childIndex + 1
 
             if rightIndex < size && values[rightIndex] < child {
-                child = values[rightIndex] 
+                child = values[rightIndex]
                 childIndex = rightIndex
             }
-            
+
             if child >= e { break }
             values[i] = child
             i = childIndex

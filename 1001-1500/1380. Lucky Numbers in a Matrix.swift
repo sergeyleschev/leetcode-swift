@@ -42,7 +42,10 @@ class Solution {
             maxVal = minVal
             j = 0
             while j < m {
-                if matrix[j][i] > maxVal { maxVal = matrix[j][i]; break }
+                if matrix[j][i] > maxVal {
+                    maxVal = matrix[j][i]
+                    break
+                }
                 j += 1
             }
             if j == m && maxVal == minVal { arrWithLuckkyNum.append(maxVal) }
@@ -51,7 +54,6 @@ class Solution {
 
         return arrWithLuckkyNum
     }
-
 
     private func findMin(_ arr: [Int]) -> Int {
         var i = 0
@@ -62,7 +64,6 @@ class Solution {
         }
         return minVal
     }
-
 
     private func findPositionMinVal(_ arr: [Int], _ minVal: Int) -> Int {
         var i = 0

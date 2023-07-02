@@ -21,7 +21,7 @@ class Solution {
     // Example 4:
     // Input: x = 0
     // Output: 0
-     
+
     // Constraints:
     // -2^31 <= x <= 2^31 - 1
 
@@ -31,15 +31,15 @@ class Solution {
         var nums: [Int] = []
         let max: Double = pow(2, 31)
         var res: Int = 0
-        
+
         while val > 0 {
             nums.append(val % 10)
             val = val / 10
         }
-        
+
         for num in nums { res = 10 * res + num }
         res = isNegtive ? -res : res
-        if res < -Int(max) || res > Int(max)  - 1 { res = 0 }
+        if res < -Int(max) || res > Int(max) - 1 { res = 0 }
         return res
     }
 

@@ -10,7 +10,6 @@ public class ListNode {
     }
 }
 
-
 class AllOne {
 
     // Solution by Sergey Leschev
@@ -23,7 +22,7 @@ class AllOne {
     // dec(String key) Decrements the count of the string key by 1. If the count of key is 0 after the decrement, remove it from the data structure. It is guaranteed that key exists in the data structure before the decrement.
     // getMaxKey() Returns one of the keys with the maximal count. If no element exists, return an empty string "".
     // getMinKey() Returns one of the keys with the minimum count. If no element exists, return an empty string "".
-     
+
     // Example 1:
     // Input
     // ["AllOne", "inc", "inc", "getMaxKey", "getMinKey", "inc", "getMaxKey", "getMinKey"]
@@ -39,21 +38,19 @@ class AllOne {
     // allOne.inc("leet");
     // allOne.getMaxKey(); // return "hello"
     // allOne.getMinKey(); // return "leet"
-     
+
     // Constraints:
     // 1 <= key.length <= 10
     // key consists of lowercase English letters.
     // It is guaranteed that for each call to dec, key is existing in the data structure.
     // At most 3 * 10^4 calls will be made to inc, dec, getMaxKey, and getMinKey.
-     
-    // Follow up: Could you apply all the operations in O(1) time complexity?
 
+    // Follow up: Could you apply all the operations in O(1) time complexity?
 
     var head: ListNode
     var tail: ListNode
     var map = [String: ListNode]()
 
-    
     /** Initialize your data structure here. */
     init() {
         head = ListNode(0)
@@ -61,7 +58,6 @@ class AllOne {
         head.next = tail
         tail.prev = head
     }
-
 
     /** Inserts a new key <Key> with value 1. Or increments an existing key by 1. */
     func inc(_ key: String) {
@@ -73,14 +69,12 @@ class AllOne {
         }
     }
 
-
     /** Decrements an existing key by 1. If Key's value is 1, remove it from the data structure. */
     func dec(_ key: String) {
         guard let curNode = map[key] else { return }
         attachToPrev(curNode, key)
         reset(curNode, key)
     }
-
 
     private func attachToNext(_ curNode: ListNode, _ key: String) {
         let nextNode = curNode.next!
@@ -98,7 +92,6 @@ class AllOne {
             newNode.prev = curNode
         }
     }
-
 
     private func attachToPrev(_ curNode: ListNode, _ key: String) {
         let prevNode = curNode.prev!
@@ -121,7 +114,6 @@ class AllOne {
         }
     }
 
-
     private func reset(_ curNode: ListNode, _ key: String) {
         curNode.lists.remove(key)
         if curNode.lists.count == 0 {
@@ -132,14 +124,12 @@ class AllOne {
         }
     }
 
-
     /** Returns one of the keys with maximal value. */
     func getMaxKey() -> String {
         guard let strs = tail.prev?.lists else { return "" }
         guard let key = strs.first else { return "" }
         return key
     }
-
 
     /** Returns one of the keys with Minimal value. */
     func getMinKey() -> String {

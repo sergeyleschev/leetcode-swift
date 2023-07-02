@@ -3,13 +3,12 @@ class TreeNode {
     let end: Int
     var left: TreeNode?
     var right: TreeNode?
-    
+
     init(_ start: Int, _ end: Int) {
         self.start = start
         self.end = end
     }
 }
-
 
 class MyCalendar {
 
@@ -40,29 +39,30 @@ class MyCalendar {
     // At most 1000 calls will be made to book.
 
     var root: TreeNode?
-    
 
-    init() { }
-    
+    init() {}
 
     func bookHelper(_ start: Int, _ end: Int, _ node: inout TreeNode) -> Bool {
-        if start >= node.end  {
-            if node.right != nil { return self.bookHelper(start, end, &node.right!) }
-            else {
+        if start >= node.end {
+            if node.right != nil {
+                return self.bookHelper(start, end, &node.right!)
+            } else {
                 node.right = TreeNode(start, end)
                 return true
             }
 
         } else if end <= node.start {
-            if node.left != nil { return self.bookHelper(start, end, &node.left!) } 
-            else {
+            if node.left != nil {
+                return self.bookHelper(start, end, &node.left!)
+            } else {
                 node.left = TreeNode(start, end)
                 return true
             }
-            
-        } else { return false }
+
+        } else {
+            return false
+        }
     }
-    
 
     func book(_ start: Int, _ end: Int) -> Bool {
         if let root = self.root { return self.bookHelper(start, end, &self.root!) }

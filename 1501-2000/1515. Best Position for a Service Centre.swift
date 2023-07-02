@@ -44,21 +44,23 @@ class Solution {
         var y: Double
     }
 
-    private typealias Direction = (dx:Double,dy:Double)
-    
+    private typealias Direction = (dx: Double, dy: Double)
+
     private let error = 1e-6
-    private let directions: [Direction] = [(1,0),(-1,0),(0,1),(0,-1)]
-    
+    private let directions: [Direction] = [(1, 0), (-1, 0), (0, 1), (0, -1)]
 
     private func square(_ x: Double) -> Double { x * x }
-    private func distance(from p: Point, to q: Point) -> Double { sqrt(square(p.x - q.x) + square(p.y - q.y)) }
-    private func check(_ points: [Point], _ center: Point) -> Double { points.reduce(0.0) { $0 + distance(from: $1, to: center)} }
-    
+    private func distance(from p: Point, to q: Point) -> Double {
+        sqrt(square(p.x - q.x) + square(p.y - q.y))
+    }
+    private func check(_ points: [Point], _ center: Point) -> Double {
+        points.reduce(0.0) { $0 + distance(from: $1, to: center) }
+    }
 
     private func getOriginalCenter(_ points: [Point]) -> Point {
         let n = points.count
         var center = Point(x: 0, y: 0)
-        
+
         points.forEach { (p) in
             center.x += p.x
             center.y += p.y
@@ -68,10 +70,9 @@ class Solution {
         center.y /= Double(n)
         return center
     }
-    
 
     func getMinDistSum(_ positions: [[Int]]) -> Double {
-        let points = positions.map {Point(x: Double($0[0]), y: Double($0[1]))}
+        let points = positions.map { Point(x: Double($0[0]), y: Double($0[1])) }
         var center = getOriginalCenter(points)
         var step = 50.0
 
@@ -79,7 +80,7 @@ class Solution {
             var flag = false
             let currentDistanceSum = check(points, center)
             for dir in directions {
-                let nextCenter = Point(x: center.x + dir.dx * step , y: center.y + dir.dy * step)
+                let nextCenter = Point(x: center.x + dir.dx * step, y: center.y + dir.dy * step)
                 if check(points, nextCenter) < currentDistanceSum {
                     center = nextCenter
                     flag = true
@@ -87,7 +88,7 @@ class Solution {
             }
             if !flag { step /= 2.0 }
         }
-        
+
         return check(points, center)
     }
 

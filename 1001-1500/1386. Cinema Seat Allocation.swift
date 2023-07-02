@@ -32,7 +32,9 @@ class Solution {
         var dict = [Int: [Bool]]()
         var number = 0
 
-        reservedSeats.forEach { dict[$0[0], default: .init(repeating: true, count: 10)][$0[1] - 1] = false }
+        reservedSeats.forEach {
+            dict[$0[0], default: .init(repeating: true, count: 10)][$0[1] - 1] = false
+        }
 
         for row in dict.values {
             var count = 0

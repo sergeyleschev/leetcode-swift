@@ -11,14 +11,14 @@ class Solution {
     // Example 1:
     // Input: "112358"
     // Output: true
-    // Explanation: The digits can form an additive sequence: 1, 1, 2, 3, 5, 8. 
+    // Explanation: The digits can form an additive sequence: 1, 1, 2, 3, 5, 8.
     //              1 + 1 = 2, 1 + 2 = 3, 2 + 3 = 5, 3 + 5 = 8
     // Example 2:
     // Input: "199100199"
     // Output: true
-    // Explanation: The additive sequence is: 1, 99, 100, 199. 
+    // Explanation: The additive sequence is: 1, 99, 100, 199.
     //              1 + 99 = 100, 99 + 100 = 199
-     
+
     // Constraints:
     // num consists only of digits '0'-'9'.
     // 1 <= num.length <= 35
@@ -33,29 +33,30 @@ class Solution {
         return res
     }
 
-    
     private func checkHelper(_ num: [Character], _ offset: Int, _ res: inout Bool) {
         var i = offset
         while i < num.count && (i == offset || num[offset] != "0") {
             let first: [Character] = Array(num[offset...i])
 
             var j = i + 1
-            while j < num.count && (j == i+1 || num[i+1] != "0") {
-                let second: [Character] = Array(num[i+1...j])
-                backtrace(num, j+1, first, second, &res)
+            while j < num.count && (j == i + 1 || num[i + 1] != "0") {
+                let second: [Character] = Array(num[i + 1...j])
+                backtrace(num, j + 1, first, second, &res)
                 j += 1
             }
 
             i += 1
         }
     }
-    
 
-    private func backtrace(_ num: [Character], _ offset: Int, _ first: [Character], _ second: [Character], _ res: inout Bool) {
+    private func backtrace(
+        _ num: [Character], _ offset: Int, _ first: [Character], _ second: [Character],
+        _ res: inout Bool
+    ) {
         let sum = sumNumberStr(first, second)
         var k = 0
         while k < sum.count && offset + k < num.count {
-            if sum[k] == num[offset+k] {
+            if sum[k] == num[offset + k] {
                 k += 1
             } else {
                 break
@@ -63,7 +64,7 @@ class Solution {
         }
 
         if k == sum.count {
-            if offset+k == num.count {
+            if offset + k == num.count {
                 res = true
                 return
             } else {
@@ -71,7 +72,6 @@ class Solution {
             }
         }
     }
-
 
     private func sumNumberStr(_ a: [Character], _ b: [Character]) -> [Character] {
         let aLen = a.count
@@ -86,7 +86,7 @@ class Solution {
 
         var i = 0
         while i < b.count {
-            let sum = Int(a[i].asciiValue! + b[i].asciiValue! - 2*Character("0").asciiValue!)
+            let sum = Int(a[i].asciiValue! + b[i].asciiValue! - 2 * Character("0").asciiValue!)
             res[i] = Character(String((sum + carry) % 10))
             carry = (sum + carry) / 10
             i += 1

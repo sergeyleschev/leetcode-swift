@@ -27,7 +27,7 @@ class Solution {
     func numRabbits(_ answers: [Int]) -> Int {
         var dict = [Int: Int]()
         var ans = 0
-        
+
         for answer in answers {
             if let v = dict[answer + 1], v > 0 {
                 dict[answer + 1] = v - 1
@@ -36,8 +36,8 @@ class Solution {
                 dict[answer + 1] = answer
             }
         }
-        
+
         return ans
     }
-    
+
 }

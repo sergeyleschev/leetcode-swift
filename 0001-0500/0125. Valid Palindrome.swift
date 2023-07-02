@@ -13,7 +13,7 @@ class Solution {
     // Input: s = "A man, a plan, a canal: Panama"
     // Output: true
     // Explanation: "amanaplanacanalpanama" is a palindrome.
-    
+
     // Example 2:
     // Input: s = "race a car"
     // Output: false
@@ -35,9 +35,15 @@ class Solution {
         var j = s.count - 1
 
         while i < j {
-            if !s[i].isLetter, !s[i].isNumber { i += 1; continue }
+            if !s[i].isLetter, !s[i].isNumber {
+                i += 1
+                continue
+            }
 
-            if !s[j].isLetter, !s[j].isNumber { j -= 1; continue }
+            if !s[j].isLetter, !s[j].isNumber {
+                j -= 1
+                continue
+            }
 
             guard s[i].lowercased() == s[j].lowercased() else { return false }
             i += 1

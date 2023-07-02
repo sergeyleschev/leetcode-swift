@@ -25,22 +25,22 @@ class Solution {
 
     func productExceptSelf(_ nums: [Int]) -> [Int] {
         guard nums.count > 0 else { return [] }
-        
+
         var output = Array(repeating: 1, count: nums.count)
         var prod = nums[0]
-        
-        for i in 1..<nums.count{
+
+        for i in 1..<nums.count {
             output[i] = prod
             prod *= nums[i]
         }
-        
-        prod = nums[nums.count-1]
-        for i in stride(from: nums.count - 2, to: -1, by: -1){
+
+        prod = nums[nums.count - 1]
+        for i in stride(from: nums.count - 2, to: -1, by: -1) {
             output[i] *= prod
             prod *= nums[i]
         }
-        
+
         return output
     }
-    
+
 }

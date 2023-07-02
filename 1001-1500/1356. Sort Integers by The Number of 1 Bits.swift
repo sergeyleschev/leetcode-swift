@@ -9,7 +9,7 @@ class Solution {
     // Example 1:
     // Input: arr = [0,1,2,3,4,5,6,7,8]
     // Output: [0,1,2,4,8,3,5,6,7]
-    // Explantion: [0] is the only integer with 0 bits.
+    // Explanation: [0] is the only integer with 0 bits.
     // [1,2,4,8] all have 1 bit.
     // [3,5,6] have 2 bits.
     // [7] has 3 bits.
@@ -18,7 +18,7 @@ class Solution {
     // Example 2:
     // Input: arr = [1024,512,256,128,64,32,16,8,4,2,1]
     // Output: [1,2,4,8,16,32,64,128,256,512,1024]
-    // Explantion: All integers have 1 bit in the binary representation, you should just sort them in ascending order.
+    // Explanation: All integers have 1 bit in the binary representation, you should just sort them in ascending order.
 
     // Example 3:
     // Input: arr = [10000,10000]
@@ -38,20 +38,20 @@ class Solution {
 
     func sortByBits(_ arr: [Int]) -> [Int] {
         var cache: [Int: Int] = [:]
-        
+
         for num in arr {
             let bs = String(num, radix: 2)
             var count = 0
             for c in bs where c == Character("1") { count += 1 }
             cache[num] = count
         }
-        
+
         let ans = arr.sorted { (n1, n2) -> Bool in
             if cache[n1]! == cache[n2]! { return n1 < n2 }
             return cache[n1]! < cache[n2]!
         }
-        
+
         return ans
     }
-    
+
 }

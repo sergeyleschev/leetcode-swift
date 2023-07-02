@@ -34,7 +34,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the string.
     //   - space: O(1), only constant space is used.
-    
+
     func checkValidString(_ s: String) -> Bool {
         var open = 0
         var close = 0

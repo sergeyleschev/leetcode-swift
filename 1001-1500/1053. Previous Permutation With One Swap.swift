@@ -29,7 +29,6 @@ class Solution {
     // 1 <= arr.length <= 10^4
     // 1 <= arr[i] <= 10^4
 
-
     func prevPermOpt1(_ A: [Int]) -> [Int] {
         var res = A
 
@@ -37,7 +36,7 @@ class Solution {
             if res[i - 1] > res[i] {
                 var maxSmallerThanPrev = Int.min
                 var maxSmallerThanPrevIdx = 0
-                
+
                 for j in i..<res.count {
                     if res[j] < res[i - 1] && res[j] > maxSmallerThanPrev {
                         maxSmallerThanPrev = res[j]

@@ -6,7 +6,7 @@ class Solution {
     // Given two numbers, hour and minutes. Return the smaller angle (in degrees) formed between the hour and the minute hand.
 
     // Calculates the smaller angle formed between the hour and the minute hand.
-    
+
     // - Parameters:
     //   - hour: Hour hand.
     //   - minutes: Minute hand.
@@ -40,7 +40,7 @@ class Solution {
     // - Complexity:
     //   - time: O(1), only constant time is used.
     //   - space: O(1), only constant space is used.
-    
+
     func angleClock(_ hour: Int, _ minutes: Int) -> Double {
         let hour = (Double(hour % 12) * 30.0) + (Double(minutes) * 0.5)
         let minutes = Double(minutes) * 6.0

@@ -44,7 +44,7 @@ class Solution {
         var words = words.sorted(by: { first, second -> Bool in first.count < second.count })
         var len = 0
         var dp = [String: Int]()
-        
+
         for word in words {
             var temp = 0
             for i in word.indices {
@@ -58,5 +58,5 @@ class Solution {
 
         return len
     }
-    
+
 }

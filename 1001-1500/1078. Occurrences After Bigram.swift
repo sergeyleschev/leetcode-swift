@@ -24,13 +24,13 @@ class Solution {
     func findOcurrences(_ text: String, _ first: String, _ second: String) -> [String] {
         var components = text.split(separator: " ").map { String($0) }
         var ans: [String] = []
-        
+
         while components.count > 2 {
             if first == components[0] && second == components[1] { ans.append(components[2]) }
             components.removeFirst()
         }
-        
+
         return ans
     }
-    
+
 }

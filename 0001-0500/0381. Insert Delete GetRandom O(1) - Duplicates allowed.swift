@@ -34,12 +34,10 @@ class RandomizedCollection {
     private var nums: [Int] = [Int]()
     private var idx: [Int: Set<Int>] = [:]
     static var state: UInt32 = 1
-    
 
     /** Initialize your data structure here. */
     init() {}
 
-    
     /** Inserts a value to the collection. Returns true if the collection did not already contain the specified element. */
     func insert(_ val: Int) -> Bool {
         nums.append(val)
@@ -55,7 +53,6 @@ class RandomizedCollection {
             return true
         }
     }
-    
 
     /** Removes a value from the collection. Returns true if the collection contained the specified element. */
     func remove(_ val: Int) -> Bool {
@@ -72,22 +69,20 @@ class RandomizedCollection {
         nums.removeLast()
         return true
     }
-    
 
     /** Get a random element from the collection. */
     func getRandom() -> Int {
-        if nums.count > 0 { return nums[Int(random())%nums.count] }
+        if nums.count > 0 { return nums[Int(random()) % nums.count] }
         return 0
     }
-    
 
     private func random() -> UInt32 {
         var x: UInt32 = RandomizedCollection.state
-        x = x^(x << 13)
-        x = x^(x >> 17)
-        x = x^(x << 5)
+        x = x ^ (x << 13)
+        x = x ^ (x >> 17)
+        x = x ^ (x << 5)
         RandomizedCollection.state = x
         return x
     }
-    
+
 }

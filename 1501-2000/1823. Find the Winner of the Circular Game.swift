@@ -39,5 +39,5 @@ class Solution {
         for i in 1...n { ans = (ans + k) % i }
         return ans + 1
     }
-    
+
 }

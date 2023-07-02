@@ -30,7 +30,7 @@ class Solution {
         let n = nums.count
 
         for idx in 0..<n {
-            ans.append((2 * idx - n) * nums[idx] - 2 * preSum  + total)
+            ans.append((2 * idx - n) * nums[idx] - 2 * preSum + total)
             preSum += nums[idx]
         }
         return ans

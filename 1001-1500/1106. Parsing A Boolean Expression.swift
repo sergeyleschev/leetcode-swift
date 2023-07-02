@@ -34,16 +34,15 @@ class Solution {
 
     let operators = Set<Character>("!|&")
 
-
     func parseBoolExpr(_ expression: String) -> Bool {
         var stack = [Character]()
-        
+
         for ch in expression {
             if ch.isLetter || operators.contains(ch) { stack.append(ch) }
             if ch == ")" {
-                var  temp = Set<Character>()
-                while !operators.contains(stack.last!){ temp.insert(stack.removeLast()) }
-                
+                var temp = Set<Character>()
+                while !operators.contains(stack.last!) { temp.insert(stack.removeLast()) }
+
                 switch stack.removeLast() {
                 case "|":
                     if temp.count == 2 || (temp.count == 1 && temp.first! == "t") {

@@ -24,12 +24,12 @@ class Solution {
     // 0 <= nums[i] <= 10^6
     // It is guaranteed there is at least one way to partition nums as described.
 
-     func partitionDisjoint(_ A: [Int]) -> Int {
+    func partitionDisjoint(_ A: [Int]) -> Int {
         if A.isEmpty { return 0 }
         var indexAndMin: (Int, Int) = (0, A[0])
         var leftMax = 0
         var pivotIndex = 0
-        
+
         // find min - O(N)
         for (i, v) in A.enumerated() where indexAndMin.1 >= v { indexAndMin = (i, v) }
 

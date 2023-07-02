@@ -22,16 +22,16 @@ class Solution {
     func integerBreak(_ n: Int) -> Int {
         if n == 2 { return 1 }
         if n == 3 { return 2 }
-        
+
         var num = n
         var res = 1
-        
+
         while num > 4 {
             res *= 3
             num -= 3
         }
-        
+
         return num > 0 ? res * num : res
     }
-    
+
 }

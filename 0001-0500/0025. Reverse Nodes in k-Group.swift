@@ -1,13 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init() { self.val = 0; self.next = nil; }
- *     public init(_ val: Int) { self.val = val; self.next = nil; }
- *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init() { self.val = 0; self.next = nil; }
+///     public init(_ val: Int) { self.val = val; self.next = nil; }
+///     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -32,25 +30,25 @@ class Solution {
     // Example 4:
     // Input: head = [1], k = 1
     // Output: [1]
-     
+
     // Constraints:
     // The number of nodes in the list is in the range sz.
     // 1 <= sz <= 5000
     // 0 <= Node.val <= 1000
     // 1 <= k <= sz
-     
+
     // Follow-up: Can you solve the problem in O(1) extra memory space?
 
     func reverseKGroup(_ head: ListNode?, _ k: Int) -> ListNode? {
         var tmp1: ListNode? = head
-        
+
         for _ in 0..<k - 1 { tmp1 = tmp1?.next }
         if tmp1 == nil {
             return head
         } else {
             var current: ListNode?
             var tmp2: ListNode?
-            
+
             for _ in 0..<k {
                 if current == nil {
                     current = head?.next

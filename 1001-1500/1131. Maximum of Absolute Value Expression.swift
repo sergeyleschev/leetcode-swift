@@ -28,7 +28,7 @@ class Solution {
         var CMin = Int.max
         var DMax = Int.min
         var DMin = Int.max
-        
+
         for i in 0..<arr1.count {
             AMax = max(AMax, arr1[i] + arr2[i] + i)
             AMin = min(AMin, arr1[i] + arr2[i] + i)

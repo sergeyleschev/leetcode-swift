@@ -13,23 +13,23 @@ class Solution {
     //   [0,1,1,1]
     // ]
     // Output: 15
-    // Explanation: 
+    // Explanation:
     // There are 10 squares of side 1.
     // There are 4 squares of side 2.
     // There is  1 square of side 3.
     // Total number of squares = 10 + 4 + 1 = 15.
 
     // Example 2:
-    // Input: matrix = 
+    // Input: matrix =
     // [
     //   [1,0,1],
     //   [1,1,0],
     //   [1,1,0]
     // ]
     // Output: 7
-    // Explanation: 
-    // There are 6 squares of side 1.  
-    // There is 1 square of side 2. 
+    // Explanation:
+    // There are 6 squares of side 1.
+    // There is 1 square of side 2.
     // Total number of squares = 6 + 1 = 7.
 
     // Constraints:
@@ -39,13 +39,13 @@ class Solution {
 
     // - Complexity:
     //   - time: O(n^2)
-    
+
     // DP Solution
 
     func countSquares(_ matrix: [[Int]]) -> Int {
         var m: Int = matrix.count
         var n: Int = matrix[0].count
-        var dp: [[Int]] = matrix.map{$0}
+        var dp: [[Int]] = matrix.map { $0 }
         var result: Int = 0
 
         for i in 0..<m {

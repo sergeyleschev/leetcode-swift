@@ -39,11 +39,11 @@ class Solution {
         for email in emails {
             var filteredEmails = email.split(separator: "@")
             let localName = filteredEmails[0].filter { $0 != "." }.split(separator: "+")[0]
-            filteredEmails[0] = localName // change current localName to filterd localName wiothout "."
+            filteredEmails[0] = localName  // change current localName to filterd localName wiothout "."
             validEmails.insert(filteredEmails.joined(separator: "@"))
         }
 
         return validEmails.count
     }
-    
+
 }

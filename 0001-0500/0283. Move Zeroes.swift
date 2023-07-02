@@ -24,7 +24,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the nums.
     //   - space: O(1), only constant space is used.
-    
+
     func moveZeroes(_ nums: inout [Int]) {
         guard !nums.isEmpty else { return }
 

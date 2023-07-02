@@ -39,13 +39,11 @@ class Solution {
         var xorSum = 0
 
         for e1 in arr1 {
-            if set1.contains(e1) { set1.remove(e1) } 
-            else { set1.insert(e1) }
+            if set1.contains(e1) { set1.remove(e1) } else { set1.insert(e1) }
         }
 
         for e2 in arr2 {
-            if set2.contains(e2) { set2.remove(e2) } 
-            else { set2.insert(e2) }
+            if set2.contains(e2) { set2.remove(e2) } else { set2.insert(e2) }
         }
 
         for e1 in set1 {
@@ -53,6 +51,5 @@ class Solution {
         }
         return xorSum
     }
-    
-}
 
+}

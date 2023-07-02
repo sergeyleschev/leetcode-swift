@@ -1,14 +1,12 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init(_ val: Int) {
- *         self.val = val
- *         self.next = nil
- *     }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init(_ val: Int) {
+///         self.val = val
+///         self.next = nil
+///     }
+/// }
 
 class Solution {
 
@@ -38,7 +36,7 @@ class Solution {
     // Input: head = [1], pos = -1
     // Output: false
     // Explanation: There is no cycle in the linked list.
-     
+
     // Constraints:
     // The number of the nodes in the list is in the range [0, 10^4].
     // -10^5 <= Node.val <= 10^5
@@ -49,18 +47,18 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of nodes in the linked list.
     //   - space: O(1), only constant space is used.
-    
+
     func hasCycle(_ head: ListNode?) -> Bool {
         var slow = head
         var fast = head?.next
-        
+
         while slow != nil, fast != nil {
             guard slow !== fast else { return true }
-            
+
             slow = slow?.next
-            fast = fast?.next?.next            
+            fast = fast?.next?.next
         }
-        
+
         return false
     }
 

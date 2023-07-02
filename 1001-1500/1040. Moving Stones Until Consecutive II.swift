@@ -12,7 +12,7 @@ class Solution {
     // Example 1:
     // Input: [7,4,9]
     // Output: [1,2]
-    // Explanation: 
+    // Explanation:
     // We can move 4 -> 8 for one move to finish the game.
     // Or, we can move 9 -> 5, 4 -> 6 for two moves to finish the game.
 
@@ -36,8 +36,8 @@ class Solution {
         if stones.count <= 2 { return [0, 0] }
         var stones = stones
         let n = stones.count
-        
-        stones.sort() // Make stones ascending
+
+        stones.sort()  // Make stones ascending
         var maxValue = stones[n - 1] - stones[0] + 1 - n
         maxValue -= min(stones[n - 1] - stones[n - 2] - 1, stones[1] - stones[0] - 1)
         var minValue = maxValue
@@ -47,11 +47,11 @@ class Solution {
         while i < n {
             while j + 1 < n && stones[j + 1] - stones[i] + 1 <= n { j += 1 }
             var cost = n - (j - i + 1)
-            if j - i + 1 == n-1 && stones[j] - stones[i] + 1 == n - 1 { cost = 2 }
+            if j - i + 1 == n - 1 && stones[j] - stones[i] + 1 == n - 1 { cost = 2 }
             minValue = min(minValue, cost)
             i += 1
         }
-        
+
         return [minValue, maxValue]
     }
 

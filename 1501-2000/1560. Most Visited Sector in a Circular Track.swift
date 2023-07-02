@@ -36,7 +36,7 @@ class Solution {
         for i in 1..<rounds.count {
             let f = rounds[i - 1]
             let t = rounds[i]
-            
+
             if t > f {
                 for j in (f + 1)...t { passby[j] += 1 }
             } else {

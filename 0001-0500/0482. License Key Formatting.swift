@@ -29,13 +29,13 @@ class Solution {
         var sArray = Array(s)
         let count = sArray.count
         var index = K
-        
+
         while index < count {
             sArray.insert("-", at: (count - index))
             index += K
         }
-        
+
         return String(sArray)
     }
-    
+
 }

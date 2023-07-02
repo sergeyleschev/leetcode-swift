@@ -40,15 +40,20 @@ class Solution {
         var visited: [Bool] = Array(repeating: false, count: points.count)
         var dis: [Int] = Array(repeating: Int.max, count: points.count)
         var edges = points.count - 1
-        var start = 0, nextPos = 0, minDis = 0, res = 0
-        
+        var start = 0
+        var nextPos = 0
+        var minDis = 0
+        var res = 0
+
         visited[0] = true
-        
+
         while edges > 0 {
             minDis = Int.max
             for i in 0..<points.count {
                 if visited[i] { continue }
-                dis[i] = min(abs(points[start][0] - points[i][0]) + abs(points[start][1] - points[i][1]), dis[i])
+                dis[i] = min(
+                    abs(points[start][0] - points[i][0]) + abs(points[start][1] - points[i][1]),
+                    dis[i])
                 if dis[i] < minDis {
                     minDis = dis[i]
                     nextPos = i
@@ -58,7 +63,7 @@ class Solution {
             start = nextPos
             res += minDis
             edges -= 1
-        }    
+        }
         return res
     }
 

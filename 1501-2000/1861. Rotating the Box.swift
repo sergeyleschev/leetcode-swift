@@ -54,31 +54,30 @@ class Solution {
         return ans
     }
 
-
     private func getCol(from row: [Character]) -> [Character] {
         let m = row.count
-        var preffix = [0]
+        var prefix = [0]
         var cnt = 0
         var ans = [Character](repeating: ".", count: m)
-        
+
         for ch in row {
             if ch == "#" {
                 cnt += 1
             } else if ch == "*" {
                 cnt = 0
             }
-            preffix.append(cnt)   
+            prefix.append(cnt)
         }
 
         for idx in 0..<m {
-            if row[idx] ==  "*" {
-                if preffix[idx] > 0 {
-                    for i  in 0..<preffix[idx] { ans[idx - 1 - i] = "#" }
+            if row[idx] == "*" {
+                if prefix[idx] > 0 {
+                    for i in 0..<prefix[idx] { ans[idx - 1 - i] = "#" }
                 }
                 ans[idx] = "*"
-            } else if idx  == m - 1 {
-                if preffix[idx + 1]  >  0  {
-                    for i in 0..<preffix[idx + 1] { ans[idx - i] = "#" }
+            } else if idx == m - 1 {
+                if prefix[idx + 1] > 0 {
+                    for i in 0..<prefix[idx + 1] { ans[idx - i] = "#" }
                 }
             }
         }

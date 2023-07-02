@@ -36,7 +36,7 @@ class Solution {
         var last = S.first!
         var count = 0
         var ans = [[Int]]()
-        
+
         for (i, char) in (S + "#").enumerated() {
             if last == char {
                 count += 1
@@ -46,8 +46,8 @@ class Solution {
                 count = 1
             }
         }
-        
+
         return ans
     }
-    
+
 }

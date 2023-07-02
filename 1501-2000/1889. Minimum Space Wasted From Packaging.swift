@@ -56,13 +56,12 @@ class Solution {
 
         for box in boxes {
             var sortBox = box.sorted()
-            if maxP > sortBox.last! { continue } // current supplier cannot use for last package
+            if maxP > sortBox.last! { continue }  // current supplier cannot use for last package
             let sumB = check(packages, sortBox, n)
             minSpace = min(minSpace, sumB - sumP)
         }
         return minSpace == Int.max ? -1 : minSpace % mod
     }
-
 
     private func check(_ packages: [Int], _ box: [Int], _ n: Int) -> Int {
         var sumB = 0
@@ -77,7 +76,6 @@ class Solution {
         }
         return sumB
     }
-
 
     private func find(_ target: Int, _ arr: [Int]) -> Int {
         var left = 0

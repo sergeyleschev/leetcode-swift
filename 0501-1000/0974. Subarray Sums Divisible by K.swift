@@ -9,7 +9,7 @@ class Solution {
     // Input: nums = [4,5,0,-2,-3,1], k = 5
     // Output: 7
     // Explanation: There are 7 subarrays with a sum divisible by k = 5:
-    // [4, 5, 0, -2, -3, 1], [5], [5, 0], [5, 0, -2, -3], [0], [0, -2, -3], [-2, -3] 
+    // [4, 5, 0, -2, -3, 1], [5], [5, 0], [5, 0, -2, -3], [0], [0, -2, -3], [-2, -3]
 
     // Note:
     // 1 <= nums.length <= 30000
@@ -17,10 +17,10 @@ class Solution {
     // 2 <= k <= 10000
 
     func subarraysDivByK(_ A: [Int], _ K: Int) -> Int {
-        var prefixSum = [0] // using first i elements
+        var prefixSum = [0]  // using first i elements
         var remCount = [Int](repeating: 0, count: K)
-        
-        remCount[0] = 1 // no elements => 0
+
+        remCount[0] = 1  // no elements => 0
 
         A.forEach {
             let new = ((prefixSum.last! + $0) % K + K) % K
@@ -30,5 +30,5 @@ class Solution {
 
         return remCount.reduce(0) { $0 + $1 * ($1 - 1) / 2 }
     }
-    
+
 }

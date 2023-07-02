@@ -38,15 +38,14 @@ class Solution {
     //   - space: O(n * m), where n is the number of rows in the matrix height, and m is the number of columns in the matrix height.
 
     private let directions: [(x: Int, y: Int)] = [(1, 0), (-1, 0), (0, 1), (0, -1)]
-    
-    
+
     func minimumEffortPath(_ heights: [[Int]]) -> Int {
         let n = heights.count
         let m = heights[0].count
         var left = 0
         var right = 1_000_000
         var ans = right
-        
+
         while left <= right {
             let mid = left + (right - left) / 2
             var visited = [[Bool]](repeating: [Bool](repeating: false, count: m), count: n)
@@ -59,25 +58,33 @@ class Solution {
         }
         return ans
     }
-    
 
-    private func dfs(_ x: Int, _ y: Int, _ heights: [[Int]], _ visited: inout [[Bool]], _ row: Int, _ col: Int, _ mid: Int) -> Bool {
+    private func dfs(
+        _ x: Int, _ y: Int, _ heights: [[Int]], _ visited: inout [[Bool]], _ row: Int, _ col: Int,
+        _ mid: Int
+    ) -> Bool {
         guard x != row - 1 || y != col - 1 else { return true }
-        
+
         visited[x][y] = true
         for direction in directions {
             let adjacentX = x + direction.x
             let adjacentY = y + direction.y
-            
-            guard isValidCell(adjacentX, adjacentY, row, col), !visited[adjacentX][adjacentY] else { continue }
-                
+
+            guard isValidCell(adjacentX, adjacentY, row, col), !visited[adjacentX][adjacentY] else {
+                continue
+            }
+
             var diff = abs(heights[adjacentX][adjacentY] - heights[x][y])
-            guard diff <= mid, dfs(adjacentX, adjacentY, heights, &visited, row, col, mid) else { continue }
+            guard diff <= mid, dfs(adjacentX, adjacentY, heights, &visited, row, col, mid) else {
+                continue
+            }
             return true
         }
         return false
     }
-    
-    private func isValidCell(_ x: Int, _ y: Int, _ row: Int, _ col: Int) -> Bool { x >= 0 && x < row && y >= 0 && y < col }
+
+    private func isValidCell(_ x: Int, _ y: Int, _ row: Int, _ col: Int) -> Bool {
+        x >= 0 && x < row && y >= 0 && y < col
+    }
 
 }

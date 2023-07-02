@@ -6,7 +6,7 @@ class Solution {
         var currentIndex = 1
         var direction = 1
         var remainingTime = time
-        
+
         while remainingTime > 0 {
             if currentIndex == 1 && direction == -1 {
                 // If the pillow reaches the beginning of the line
@@ -22,7 +22,7 @@ class Solution {
                 remainingTime -= 1
             }
         }
-        
+
         return currentIndex
     }
 }

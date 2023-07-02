@@ -1,7 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
-    
+
     // 201. Bitwise AND of Numbers Range
     // Given two integers left and right that represent the range [left, right], return the bitwise AND of all numbers in this range, inclusive.
 
@@ -19,7 +19,7 @@ class Solution {
 
     // Constraints:
     // 0 <= left <= right <= 2^31 - 1
-    
+
     func rangeBitwiseAnd(_ left: Int, _ right: Int) -> Int {
         var mask = 0
 
@@ -27,9 +27,11 @@ class Solution {
             let temp = 1 << (31 - i)
             if temp & left == temp & right {
                 mask |= temp
-            } else { break }
+            } else {
+                break
+            }
         }
-        
+
         return right & mask
     }
 

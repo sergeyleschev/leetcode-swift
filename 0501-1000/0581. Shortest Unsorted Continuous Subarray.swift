@@ -26,25 +26,32 @@ class Solution {
     func findUnsortedSubarray(_ nums: [Int]) -> Int {
         var unorderedMin = Int.max
         var unorderedMax = Int.min
-        var start = 0, end = 0
-        
+        var start = 0
+        var end = 0
+
         for i in stride(from: 1, to: nums.count, by: 1) {
             if nums[i] < nums[i - 1] { unorderedMin = min(unorderedMin, nums[i]) }
         }
-        
+
         for i in stride(from: nums.count - 2, through: 0, by: -1) {
             if nums[i] > nums[i + 1] { unorderedMax = max(unorderedMax, nums[i]) }
         }
-        
+
         for i in 0..<nums.count {
-            if nums[i] > unorderedMin { start = i; break }
+            if nums[i] > unorderedMin {
+                start = i
+                break
+            }
         }
-        
+
         for i in stride(from: nums.count - 1, through: 0, by: -1) {
-            if nums[i] < unorderedMax { end = i; break }
+            if nums[i] < unorderedMax {
+                end = i
+                break
+            }
         }
-        
+
         return end == start ? 0 : end - start + 1
     }
-    
+
 }

@@ -24,7 +24,8 @@ class Solution {
 
     func movesToMakeZigzag(_ nums: [Int]) -> Int {
         var res = [Int].init(repeating: 0, count: 2)
-        var left = 0, right = 0
+        var left = 0
+        var right = 0
 
         for i in 0..<nums.count {
             left = i > 0 ? nums[i - 1] : 1001
@@ -34,5 +35,5 @@ class Solution {
 
         return min(res[0], res[1])
     }
-    
+
 }

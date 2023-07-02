@@ -10,15 +10,15 @@ class Solution {
     // Example 1:
     // Input: numCourses = 2, prerequisites = [[1,0]]
     // Output: true
-    // Explanation: There are a total of 2 courses to take. 
+    // Explanation: There are a total of 2 courses to take.
     // To take course 1 you should have finished course 0. So it is possible.
 
     // Example 2:
     // Input: numCourses = 2, prerequisites = [[1,0],[0,1]]
     // Output: false
-    // Explanation: There are a total of 2 courses to take. 
+    // Explanation: There are a total of 2 courses to take.
     // To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.
-     
+
     // Constraints:
     // 1 <= numCourses <= 10^5
     // 0 <= prerequisites.length <= 5000
@@ -26,11 +26,11 @@ class Solution {
     // 0 <= ai, bi < numCourses
     // All the pairs prerequisites[i] are unique.
 
-    // - Approach: BFS Topological Sorting    
+    // - Approach: BFS Topological Sorting
 
     func canFinish(_ numCourses: Int, _ prerequisites: [[Int]]) -> Bool {
-        var neighbors: [[Int]] = Array(repeating: [], count: numCourses) // Array to keep tracking neighbors of course
-        var degreeOfCourses: [Int] = Array(repeating: 0, count: numCourses) // Array to keep tracking prerequisites courses count of course
+        var neighbors: [[Int]] = Array(repeating: [], count: numCourses)  // Array to keep tracking neighbors of course
+        var degreeOfCourses: [Int] = Array(repeating: 0, count: numCourses)  // Array to keep tracking prerequisites courses count of course
         var queue: [Int] = []
         var count: Int = 0
 

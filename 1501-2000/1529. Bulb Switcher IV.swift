@@ -45,9 +45,9 @@ class Solution {
     func minFlips(_ target: String) -> Int {
         let targetA = Array(target)
         var dp = Array.init(repeating: Int.max, count: targetA.count + 1)
-        
+
         dp[0] = targetA[0] == "0" ? 0 : 1
-        
+
         for i in 1..<targetA.count {
             if targetA[i] == "0", dp[i - 1] % 2 == 0 {
                 dp[i] = dp[i - 1]

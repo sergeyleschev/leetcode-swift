@@ -27,16 +27,16 @@ class Solution {
     func findAnagrams(_ s: String, _ p: String) -> [Int] {
         let s = s.map { $0.asciiValue ?? 0 }
         let p = p.map { $0.asciiValue ?? 0 }
-        
+
         var ref = Array(repeating: 0, count: 256)
         for char in p { ref[Int(char)] += 1 }
-        
+
         var result = [Int]()
         var map = ref.map { _ in 0 }
-        
+
         for i in 0..<s.count {
             map[Int(s[i])] += 1
-            
+
             if i - p.count >= 0 {
                 map[Int(s[i - p.count])] -= 1
             }
@@ -45,8 +45,8 @@ class Solution {
                 result.append(i - p.count + 1)
             }
         }
-        
+
         return result
     }
-    
+
 }

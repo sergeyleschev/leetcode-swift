@@ -34,7 +34,7 @@ class Solution {
     // n == matrix[i].length
     // 1 <= m * n <= 10^5
     // matrix[i][j] is 0 or 1.
-    
+
     func largestSubmatrix(_ matrix: [[Int]]) -> Int {
         let m = matrix.count
         let n = matrix[0].count
@@ -46,12 +46,12 @@ class Solution {
         guard countOnes > 0 else { return 0 }
         var counter = [[Int: Int]](repeating: [:], count: m + 1)
         var maxArea = 0
-        
+
         for r in 0..<m {
             for c in 0..<n where matrix[r][c] == 1 {
                 var r1 = r
                 while r1 >= 0 && matrix[r1][c] == 1 {
-                    let l = r - r1  + 1
+                    let l = r - r1 + 1
                     let key = r << 32 | r1
                     counter[l][key, default: 0] += 1
                     maxArea = max(maxArea, l * counter[l][key]!)

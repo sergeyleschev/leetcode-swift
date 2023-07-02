@@ -32,7 +32,7 @@ class Solution {
     func networkDelayTime(_ times: [[Int]], _ N: Int, _ K: Int) -> Int {
         typealias Node = Int
         typealias Weight = Int
-        let inf = Weight.max / 3 // avoid overflow
+        let inf = Weight.max / 3  // avoid overflow
         var adj = [[(node: Node, weight: Weight)]](repeating: [], count: N + 1)
         times.forEach { adj[$0[0]].append((node: $0[1], weight: $0[2])) }
 
@@ -51,12 +51,11 @@ class Solution {
                     }
                 }
             }
-            if newUpdated.allSatisfy({ $0 == false }) { break }
-            else { updated = newUpdated }
+            if newUpdated.allSatisfy({ $0 == false }) { break } else { updated = newUpdated }
         }
 
-        let ans = dist.dropFirst().max()! // v = 0 is not used
+        let ans = dist.dropFirst().max()!  // v = 0 is not used
         return ans == inf ? -1 : ans
     }
-    
+
 }

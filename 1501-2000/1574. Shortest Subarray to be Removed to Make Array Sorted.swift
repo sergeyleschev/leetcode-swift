@@ -38,23 +38,27 @@ class Solution {
         var arrCopy = arr
         guard n > 1 else { return 0 }
         var leftArr = [Int]()
-        while  !arrCopy.isEmpty && (leftArr.isEmpty || arrCopy.first! >= leftArr.last!) { leftArr.append(arrCopy.removeFirst()) }
+        while !arrCopy.isEmpty && (leftArr.isEmpty || arrCopy.first! >= leftArr.last!) {
+            leftArr.append(arrCopy.removeFirst())
+        }
         guard leftArr.count != n else { return 0 }
         var rightArr = [Int]()
 
         ans = leftArr.count
 
-        while !arrCopy.isEmpty && (rightArr.isEmpty || arrCopy.last! <= rightArr.first!) { rightArr.insert(arrCopy.removeLast(), at: 0) }
+        while !arrCopy.isEmpty && (rightArr.isEmpty || arrCopy.last! <= rightArr.first!) {
+            rightArr.insert(arrCopy.removeLast(), at: 0)
+        }
         ans = max(ans, rightArr.count)
         for i in 0..<leftArr.count {
             if let r = rightArr.firstIndex(where: { $0 >= leftArr[i] }) {
                 ans = max(i + 1 + rightArr.count - r, ans)
             } else {
-                ans = max(leftArr.count,rightArr.count, ans)
+                ans = max(leftArr.count, rightArr.count, ans)
                 break
             }
         }
         return arr.count - ans
     }
-    
+
 }

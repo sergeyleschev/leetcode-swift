@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -44,7 +42,7 @@ class Solution {
 
     // Example 4:
     // Input: root = [3,2,4,1]
-    // Output: [7,9,4,10] 
+    // Output: [7,9,4,10]
 
     // Constraints:
     // The number of nodes in the tree is in the range [1, 100].
@@ -55,17 +53,16 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of nodes in the tree.
     //   - space: O(n), where n is the number of nodes in the tree.
-    
+
     func bstToGst(_ root: TreeNode?) -> TreeNode? {
         var sum = 0
         dfs(root, &sum)
         return root
     }
-    
-    
+
     private func dfs(_ root: TreeNode?, _ sum: inout Int) {
         guard let root = root else { return }
-        
+
         dfs(root.right, &sum)
         sum += root.val
         root.val = sum

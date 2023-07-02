@@ -29,17 +29,17 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of s.
     //   - space: O(n), where n is the length of s.
-    
+
     func isAnagram(_ s: String, _ t: String) -> Bool {
         var dict = [Character: Int]()
 
         for ch in s { dict[ch, default: 0] += 1 }
-        
+
         for ch in t {
             guard let val = dict[ch] else { return false }
             dict[ch] = val > 1 ? val - 1 : nil
         }
-        
+
         return dict.isEmpty
     }
 

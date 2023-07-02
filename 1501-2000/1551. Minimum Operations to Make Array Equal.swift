@@ -23,8 +23,8 @@ class Solution {
     // 1 <= n <= 10^4
 
     func minOperations(_ n: Int) -> Int {
-        var result = 0    
-        for i in n>>1..<n { result += ((2 * i) + 1) - n }
+        var result = 0
+        for i in n >> 1..<n { result += ((2 * i) + 1) - n }
         return result
     }
 

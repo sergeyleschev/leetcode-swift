@@ -30,10 +30,9 @@ class Solution {
         let f = rotate(m)
         let s = rotate(f)
         let t1 = rotate(s)
-        
+
         return m == t || f == t || s == t || t1 == t
     }
-
 
     private func rotate(_ mat: [[Int]]) -> [[Int]] {
         let n = mat.count

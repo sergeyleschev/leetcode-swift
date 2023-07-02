@@ -35,7 +35,7 @@ class Solution {
         let L: Character = "L"
         let U: Character = "U"
         let D: Character = "D"
-        
+
         for move in moves {
             if move == L {
                 v -= 1
@@ -50,5 +50,5 @@ class Solution {
 
         return h == 0 && v == 0
     }
-    
+
 }

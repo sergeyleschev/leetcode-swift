@@ -36,13 +36,11 @@ class Solution {
 
     private let leftShiftResults: [Int] = (0..<14).map { 1 << $0 }
 
-
-    func maxScore(_ nums: [Int]) -> Int {    
+    func maxScore(_ nums: [Int]) -> Int {
         let n = nums.count
         let maxTime = n >> 1
         var gcdResults = [[Int]](repeating: [Int](repeating: 0, count: n), count: n)
         var memo = [Int: Int]()
-        
 
         func dpSolve(_ visited: Int, _ time: Int) -> Int {
             guard time <= maxTime else { return 0 }
@@ -50,10 +48,14 @@ class Solution {
             var tempScore = 0
 
             for i in 0..<(n - 1) {
-                guard visited & leftShiftResults[i] == 0 else { continue } 
+                guard visited & leftShiftResults[i] == 0 else { continue }
                 for j in (i + 1)..<n {
                     guard visited & leftShiftResults[j] == 0 else { continue }
-                    tempScore = max(tempScore, time * gcdResults[i][j] + dpSolve(visited | leftShiftResults[i] | leftShiftResults[j], time + 1))
+                    tempScore = max(
+                        tempScore,
+                        time * gcdResults[i][j]
+                            + dpSolve(visited | leftShiftResults[i] | leftShiftResults[j], time + 1)
+                    )
                 }
             }
             memo[visited] = tempScore
@@ -67,9 +69,8 @@ class Solution {
                 gcdResults[j][i] = ans
             }
         }
-        return dpSolve(0,1)
+        return dpSolve(0, 1)
     }
-
 
     @inline(__always) private func gcd(_ a: Int, _ b: Int) -> Int {
         if b == 0 { return a }

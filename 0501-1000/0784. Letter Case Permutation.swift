@@ -34,11 +34,11 @@ class Solution {
     // - Complexity:
     //   - time: O(2^n * n), where n is the length of S.
     //   - space: O(2^n * n), where n is the length of S.
-    
+
     func letterCasePermutation(_ S: String) -> [String] {
         var ans = [[Character]]()
         ans.append([])
-        
+
         for ch in S {
             let n = ans.count
             if ch.isLetter {
@@ -51,7 +51,7 @@ class Solution {
                 for i in 0..<n { ans[i].append(ch) }
             }
         }
-        
+
         return ans.map { String($0) }
     }
 

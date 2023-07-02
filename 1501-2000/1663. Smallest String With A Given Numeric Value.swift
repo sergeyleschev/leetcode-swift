@@ -31,7 +31,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the given n.
     //   - space: O(n), where n is the given n.
-    
+
     func getSmallestString(_ n: Int, _ k: Int) -> String {
         let a = Character("a").asciiValue ?? 0
         var ans = [String](repeating: "", count: n)

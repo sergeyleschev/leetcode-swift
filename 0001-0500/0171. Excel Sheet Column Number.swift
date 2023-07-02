@@ -11,7 +11,7 @@ class Solution {
     // ...
     // Z -> 26
     // AA -> 27
-    // AB -> 28 
+    // AB -> 28
     // ...
 
     // Finds the corresponding column number for a column title.
@@ -43,14 +43,14 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the column title.
     //   - space: O(1), only constant space is used.
-    
+
     func titleToNumber(_ s: String) -> Int {
         var res = 0
-        
+
         for i in s.utf8 {
             res = res * 26 + (Int(i) - 64)
         }
-        
+
         return res
     }
 

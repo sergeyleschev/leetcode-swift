@@ -26,5 +26,5 @@ class Solution {
     // n does not contain any leading zeros and represents a positive integer.
 
     func minPartitions(_ n: String) -> Int { Int(n.max()!.asciiValue! - 48) }
-    
+
 }

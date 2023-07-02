@@ -30,7 +30,7 @@ class Solution {
         var rSum = [Int]()
 
         rSum.append(nums[0])
-        
+
         for i in 1..<nums.count { rSum.append(rSum[i - 1] + nums[i]) }
         return rSum
     }

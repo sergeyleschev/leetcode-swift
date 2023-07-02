@@ -33,13 +33,13 @@ class Solution {
     func prefixesDivBy5(_ A: [Int]) -> [Bool] {
         var ans = [Bool]()
         var leftover = 0
-        
+
         for num in A {
             leftover = (leftover * 2 + num) % 5
             ans.append(leftover == 0)
         }
-        
+
         return ans
     }
-    
+
 }

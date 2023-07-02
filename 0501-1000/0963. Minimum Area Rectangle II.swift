@@ -3,31 +3,26 @@ struct Point: Hashable {
     var y: Int
 }
 
-
 struct Vector {
     var x: Int
     var y: Int
     var squreDistance: Int { x * x + y * y }
-    
 
     init(from: Point, to: Point) {
         self.x = to.x - from.x
         self.y = to.y - from.y
     }
 
-    
     init(x: Int, y: Int) {
         self.x = x
         self.y = y
     }
-
 
     func multiply(other vec: Vector) -> Int { x * vec.x + y * vec.y }
     func isVertical(with other: Vector) -> Bool { multiply(other: other) == 0 }
     func add(other vec: Vector) -> Vector { Vector(x: x + vec.x, y: y + vec.y) }
     func getToPoint(from: Point) -> Point { Point(x: x + from.x, y: y + from.y) }
 }
-
 
 class Solution {
 
@@ -65,7 +60,7 @@ class Solution {
     // Answers within 10^-5 of the actual value will be accepted as correct.
 
     typealias ResultType = (area: Double, point: Point?)
-    typealias Parameters = (first:Vector?, second:Vector?, third:Vector?, commonPoint: Point?)
+    typealias Parameters = (first: Vector?, second: Vector?, third: Vector?, commonPoint: Point?)
 
     private var pointsSet = Set<Point>()
     private let doubleMax = Double(Int.max)
@@ -74,11 +69,11 @@ class Solution {
     func minAreaFreeRect(_ points: [[Int]]) -> Double {
         guard points.count >= 4 else { return 0.0 }
         var ans = doubleMax
-        let pointsArr = [Point](points.map{Point(x: $0[0], y: $0[1])})
+        let pointsArr = [Point](points.map { Point(x: $0[0], y: $0[1]) })
         let length = points.count
 
         pointsSet = Set<Point>(pointsArr)
-        
+
         for i in 0..<(length - 2) {
             for j in (i + 1)..<(length - 1) {
                 for k in (j + 1)..<length {
@@ -91,25 +86,28 @@ class Solution {
         }
         return ans == doubleMax ? 0.0 : ans
     }
-    
 
-    private func getRectangleArea(_ first: Point,_ second:Point, _ third: Point) -> Double {        
+    private func getRectangleArea(_ first: Point, _ second: Point, _ third: Point) -> Double {
         let v1 = Vector(from: first, to: second)
         let v2 = Vector(from: first, to: third)
         let v3 = Vector(from: second, to: third)
-        var  parameters: Parameters = (nil, nil, nil, nil)
+        var parameters: Parameters = (nil, nil, nil, nil)
 
         if v1.isVertical(with: v2) {
-            if v3.squreDistance > v1.squreDistance && v3.squreDistance > v2.squreDistance { parameters = (v1, v2, v3, first) }
+            if v3.squreDistance > v1.squreDistance && v3.squreDistance > v2.squreDistance {
+                parameters = (v1, v2, v3, first)
+            }
         }
-        if  v1.isVertical(with: v3) {
+        if v1.isVertical(with: v3) {
             if v2.squreDistance > v1.squreDistance && v2.squreDistance > v3.squreDistance {
-                parameters = (Vector(from: second, to: first),v3,v2,second)
+                parameters = (Vector(from: second, to: first), v3, v2, second)
             }
         }
         if v2.isVertical(with: v3) {
             if v1.squreDistance > v2.squreDistance && v1.squreDistance > v3.squreDistance {
-                parameters = (Vector(from: third, to: first),Vector(from: third, to: second), v1, third)
+                parameters = (
+                    Vector(from: third, to: first), Vector(from: third, to: second), v1, third
+                )
             }
         }
 
@@ -122,14 +120,14 @@ class Solution {
         calculateRectangles.insert([first, third, forth])
         return ans.area
     }
-    
 
     private func area(parameters: Parameters) -> ResultType {
-        guard let v1 = parameters.first, let v2 =  parameters.second,
-              let _ = parameters.third, let commonPoint = parameters.commonPoint else { return (doubleMax, nil) }
+        guard let v1 = parameters.first, let v2 = parameters.second,
+            let _ = parameters.third, let commonPoint = parameters.commonPoint
+        else { return (doubleMax, nil) }
         let forthVec = v1.add(other: v2)
         let forthPoint = forthVec.getToPoint(from: commonPoint)
-        guard pointsSet.contains(forthPoint) else { return (doubleMax,nil) }
+        guard pointsSet.contains(forthPoint) else { return (doubleMax, nil) }
         return (sqrt(Double(v1.squreDistance * v2.squreDistance)), forthPoint)
     }
 

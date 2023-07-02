@@ -23,7 +23,7 @@ class ThroneInheritance {
     // void birth(string parentName, string childName) Indicates that parentName gave birth to childName.
     // void death(string name) Indicates the death of name. The death of the person doesn't affect the Successor function nor the current inheritance order. You can treat it as just marking the person as dead.
     // string[] getInheritanceOrder() Returns a list representing the current order of inheritance excluding dead people.
-     
+
     // Example 1:
     // Input
     // ["ThroneInheritance", "birth", "birth", "birth", "birth", "birth", "birth", "getInheritanceOrder", "death", "getInheritanceOrder"]
@@ -41,7 +41,7 @@ class ThroneInheritance {
     // t.getInheritanceOrder(); // return ["king", "andy", "matthew", "bob", "alex", "asha", "catherine"]
     // t.death("bob"); // order: king > andy > matthew > bob > alex > asha > catherine
     // t.getInheritanceOrder(); // return ["king", "andy", "matthew", "alex", "asha", "catherine"]
-     
+
     // Constraints:
     // 1 <= kingName.length, parentName.length, childName.length, name.length <= 15
     // kingName, parentName, childName, and name consist of lowercase English letters only.
@@ -59,19 +59,15 @@ class ThroneInheritance {
     private var isInCurrentOrderSet = [String: Bool]()
     private var changed = true
 
-
     init(_ kingName: String) { self.kingName = kingName }
-    
 
     func birth(_ parentName: String, _ childName: String) {
-        children[parentName, default: [] ].append(childName)
+        children[parentName, default: []].append(childName)
         parent[childName] = parentName
         changed = true
     }
-    
 
     func death(_ name: String) { dead.insert(name) }
-    
 
     func getInheritanceOrder() -> [String] {
         var ans = [String]()
@@ -80,7 +76,7 @@ class ThroneInheritance {
             self.currentOrder = [kingName]
             self.isInCurrentOrderSet = [:]
             self.isInCurrentOrderSet[kingName] = true
-            
+
             while let next = succcessor(currentOrder.last!, currentOrder) {
                 self.currentOrder.append(next)
                 self.isInCurrentOrderSet[next] = true
@@ -91,15 +87,13 @@ class ThroneInheritance {
         return ans
     }
 
-
     private func succcessor(_ x: String, _ curOrder: [String]) -> String? {
         if let next = checkIsAllInCurrentOrder(x) { return next }
         return x == self.kingName ? nil : succcessor(parent[x]!, curOrder)
     }
 
-    
     private func checkIsAllInCurrentOrder(_ x: String) -> String? {
-        guard let nextGeneration =  children[x] else { return nil }
+        guard let nextGeneration = children[x] else { return nil }
         for next in nextGeneration where nil == isInCurrentOrderSet[next] { return next }
         return nil
     }

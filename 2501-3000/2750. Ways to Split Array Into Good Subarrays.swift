@@ -14,17 +14,17 @@ class Solution {
         for i in 0..<nums.count {
             if nums[i] == 1 {
                 if first {
-                    v.append(cnt) // Store the count of consecutive zeros
+                    v.append(cnt)  // Store the count of consecutive zeros
                 }
                 first = true
                 cnt = 0
             } else {
-                cnt += 1 // Count consecutive zeros
+                cnt += 1  // Count consecutive zeros
             }
         }
 
         if !first {
-            return 0 // If there is no '1' in the array, return 0
+            return 0  // If there is no '1' in the array, return 0
         }
 
         var ans: Int64 = 1

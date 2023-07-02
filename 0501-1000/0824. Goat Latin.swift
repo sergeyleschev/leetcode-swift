@@ -12,7 +12,7 @@ class Solution {
     // For example, the word "goat" becomes "oatgma".
     // Add one letter 'a' to the end of each word per its word index in the sentence, starting with 1.
     // For example, the first word gets "a" added to the end, the second word gets "aa" added to the end and so on.
-    // Return the final sentence representing the conversion from sentence to Goat Latin. 
+    // Return the final sentence representing the conversion from sentence to Goat Latin.
 
     // Converts the sentence to "Goat Latin".
 
@@ -34,9 +34,9 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of the sentence.
     //   - space: O(m), where m is the length of the sentence on Goat Latin.
-    
+
     func toGoatLatin(_ S: String) -> String {
-        let vowels = Set(arrayLiteral: "a","e","i","o","u")
+        let vowels = Set(arrayLiteral: "a", "e", "i", "o", "u")
         var ans = S.split(separator: " ")
 
         for i in 0..<ans.count {

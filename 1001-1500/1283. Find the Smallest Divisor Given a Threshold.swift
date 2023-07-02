@@ -17,8 +17,8 @@ class Solution {
     // Example 1:
     // Input: nums = [1,2,5,9], threshold = 6
     // Output: 5
-    // Explanation: We can get a sum to 17 (1+2+5+9) if the divisor is 1. 
-    // If the divisor is 4 we can get a sum of 7 (1+1+2+3) and if the divisor is 5 the sum will be 5 (1+1+1+2). 
+    // Explanation: We can get a sum to 17 (1+2+5+9) if the divisor is 1.
+    // If the divisor is 4 we can get a sum of 7 (1+1+2+3) and if the divisor is 5 the sum will be 5 (1+1+1+2).
 
     // Example 2:
     // Input: nums = [44,22,33,11,1], threshold = 5
@@ -40,7 +40,7 @@ class Solution {
     // - Complexity:
     //   - time: O(log n), where n is the maximum number in nums.
     //   - space: O(1), only constant space is used.
-    
+
     func smallestDivisor(_ nums: [Int], _ threshold: Int) -> Int {
         var left = 1
         var right = 2
@@ -63,7 +63,6 @@ class Solution {
         return left
     }
 
-    
     private func computeSum(_ nums: [Int], _ x: Int) -> Int {
         var ans = 0
         for num in nums { ans += num / x + (num % x == 0 ? 0 : 1) }

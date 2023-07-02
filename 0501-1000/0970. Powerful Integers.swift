@@ -33,19 +33,19 @@ public class Solution {
     func powerfulIntegers(_ x: Int, _ y: Int, _ bound: Int) -> [Int] {
         var set = Set<Int>()
         var i = 1
-        
+
         while i <= bound {
-            var j = 1 
+            var j = 1
             while i + j <= bound {
                 set.insert(i + j)
                 if y == 1 { break }
                 j *= y
             }
-            
+
             if x == 1 { break }
             i *= x
         }
-        
+
         return Array(set)
     }
 

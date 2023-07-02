@@ -27,7 +27,7 @@ class Solution {
     // Example 4:
     // Input: cardPoints = [1,1000,1], k = 1
     // Output: 1
-    // Explanation: You cannot take the card in the middle. Your best score is 1. 
+    // Explanation: You cannot take the card in the middle. Your best score is 1.
 
     // Example 5:
     // Input: cardPoints = [1,79,80,1,1,1,200,1], k = 3
@@ -40,14 +40,17 @@ class Solution {
 
     func maxScore(_ cardPoints: [Int], _ k: Int) -> Int {
         guard cardPoints.count > k else { return cardPoints.reduce(0, +) }
-        var left = 0, right = 0, sum = 0, ans = 0
-        
+        var left = 0
+        var right = 0
+        var sum = 0
+        var ans = 0
+
         while right < k {
             sum += cardPoints[right]
             right += 1
         }
         ans = sum
-        
+
         while right > 0 {
             right -= 1
             left += 1
@@ -55,8 +58,8 @@ class Solution {
             sum += cardPoints[cardPoints.count - left]
             ans = max(ans, sum)
         }
-        
+
         return ans
     }
-    
+
 }

@@ -32,10 +32,8 @@ class MyHashSet {
 
     private var set: [Int]
 
-    
     /** Initialize your data structure here. */
     init() { set = [] }
-    
 
     func add(_ key: Int) {
         if key < set.count {
@@ -46,12 +44,10 @@ class MyHashSet {
             set = newSet
         }
     }
-    
 
     func remove(_ key: Int) {
         if key < set.count { set[key] = 0 }
     }
-    
 
     /** Returns true if this set contains the specified element */
     func contains(_ key: Int) -> Bool {
@@ -61,7 +57,7 @@ class MyHashSet {
             return false
         }
     }
-    
+
 }
 
 /**

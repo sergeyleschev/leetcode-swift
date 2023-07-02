@@ -4,7 +4,7 @@ class Solution {
 
     // 1268. Search Suggestions System
     // Given an array of strings products and a string searchWord. We want to design a system that suggests at most three product names from products after each character of searchWord is typed. Suggested products should have common prefix with the searchWord. If there are more than three products with a common prefix return the three lexicographically minimums products.
-    // Return list of lists of the suggested products after each character of searchWord is typed. 
+    // Return list of lists of the suggested products after each character of searchWord is typed.
 
     // Example 1:
     // Input: products = ["mobile","mouse","moneypot","monitor","mousepad"], searchWord = "mouse"
@@ -43,7 +43,6 @@ class Solution {
 
     private let maximumSuggestedNumber = 3
 
-
     func suggestedProducts(_ products: [String], _ searchWord: String) -> [[String]] {
         let products = products.sorted()
         var results = [[String]]()
@@ -64,7 +63,7 @@ class Solution {
                         startIndex = map[product]! + 1
                     }
 
-                    if newResult.count == maximumSuggestedNumber { break  }
+                    if newResult.count == maximumSuggestedNumber { break }
                 }
             }
 
@@ -76,7 +75,7 @@ class Solution {
             }
             results.append(newResult)
         }
-        
+
         return results
     }
 

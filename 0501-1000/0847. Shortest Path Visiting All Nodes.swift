@@ -29,12 +29,10 @@ class Solution {
         var node: Int
     }
 
-
     private let one: UInt16 = 1
-    
 
     func shortestPathLength(_ graph: [[Int]]) -> Int {
-        let allNodes: UInt16 = one << graph.count - 1        
+        let allNodes: UInt16 = one << graph.count - 1
         var queue = [State]()
         var visited = Set<State>()
         var depth = 0
@@ -61,7 +59,7 @@ class Solution {
             }
             queue = nextLevel
         }
-        
+
         return 0
     }
 

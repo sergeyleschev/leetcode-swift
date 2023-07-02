@@ -11,7 +11,7 @@ class Solution {
     // Return true if and only if there exists a circle in the plane such that the robot never leaves the circle.
 
     // Finds if the robot is bounded in a circle.
-    
+
     // - Parameter instructions: Movement instructions.
     // - Returns: True if there is a circle that the robot never leaves, otherwise returns false.
 
@@ -38,7 +38,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of instructions.
     //   - space: O(1), only constant space is used.
-    
+
     func isRobotBounded(_ instructions: String) -> Bool {
         var directions: [(x: Int, y: Int)] = [(0, 1), (1, 0), (0, -1), (-1, 0)]
         var x = 0

@@ -25,7 +25,7 @@ class Solution {
     // Example 3:
     // Input: digits = [0]
     // Output: [1]
-     
+
     // Constraints:
     // 1 <= digits.length <= 100
     // 0 <= digits[i] <= 9

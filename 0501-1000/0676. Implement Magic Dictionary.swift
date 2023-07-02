@@ -40,12 +40,10 @@ class MagicDictionary {
 
     var patternMap = [String: Set<String>]()
 
-
     /** Initialize your data structure here. */
     init() {
 
     }
-
 
     func buildDict(_ dictionary: [String]) {
         for word in dictionary {
@@ -59,10 +57,9 @@ class MagicDictionary {
         }
     }
 
-
     func search(_ searchWord: String) -> Bool {
         var pattern = Array(searchWord)
-        
+
         for i in 0..<pattern.count {
             let c = pattern[i]
             pattern[i] = "*"
@@ -73,7 +70,6 @@ class MagicDictionary {
         return false
     }
 
-
     private func canFind(_ pattern: [Character], _ searchWord: String) -> Bool {
         var pattern = String(pattern)
         // if current list has 2 more value, return true
@@ -81,8 +77,8 @@ class MagicDictionary {
         // if current list is empty, return false
         if let list = patternMap[pattern] {
             return list.count == 1
-            ? !list.contains(searchWord)
-            : true
+                ? !list.contains(searchWord)
+                : true
         } else {
             return false
         }

@@ -16,7 +16,7 @@ class Solution {
     // Example 1:
     // Input: towers = [[1,2,5],[2,1,7],[3,1,9]], radius = 2
     // Output: [2,1]
-    // Explanation: 
+    // Explanation:
     // At coordinate (2, 1) the total quality is 13
     // - Quality of 7 from (2, 1) results in ⌊7 / (1 + sqrt(0)⌋ = ⌊7⌋ = 7
     // - Quality of 5 from (1, 2) results in ⌊5 / (1 + sqrt(2)⌋ = ⌊2.07⌋ = 2
@@ -45,7 +45,7 @@ class Solution {
     func bestCoordinate(_ towers: [[Int]], _ radius: Int) -> [Int] {
         var (oi, oj) = (0, 0)
         var maxSum = Int.min
-        
+
         for i in 0...50 {
             for j in 0...50 {
                 var sum = 0

@@ -46,7 +46,7 @@ class Solution {
     // Insert 1 with cost min(0, 6) = 0, now nums = [1,1,2,2,3,3,3,4].
     // Insert 2 with cost min(2, 4) = 2, now nums = [1,1,2,2,2,3,3,3,4].
     // The total cost is 0 + 0 + 0 + 0 + 1 + 0 + 1 + 0 + 2 = 4.
-     
+
     // Constraints:
     // 1 <= instructions.length <= 10^5
     // 1 <= instructions[i] <= 10^5
@@ -54,14 +54,12 @@ class Solution {
     private class BinaryIndexTree {
         var space: Int
         var tree = [Int]()
-        
-        
+
         init(_ space: Int) {
             self.space = space
             self.tree = Array(repeating: 0, count: space)
         }
-        
-        
+
         func getCost(_ newIndex: Int) -> Int {
             var result = 0
             var index = newIndex
@@ -71,8 +69,7 @@ class Solution {
             }
             return result
         }
-        
-        
+
         func update(_ newIndex: Int, _ value: Int) {
             var index = newIndex
             while index < self.space {
@@ -81,13 +78,12 @@ class Solution {
             }
         }
     }
-    
-    
+
     func findLastIndex(_ nums: [Int], _ val: Int, _ n: Int) -> Int {
         var start = 0
         var end = n
         var index = -1
-        
+
         while start <= end {
             let mid = (start + end) / 2
             if nums[mid] > val {
@@ -101,35 +97,33 @@ class Solution {
         }
         return index
     }
-    
-    
+
     func getInsertPoint(_ nums: [Int], _ val: Int, _ n: Int) -> Int {
         var start = 0
         var end = n
-        
+
         while start <= end {
             let mid = (start + end) / 2
             if nums[mid] < val {
-                start = mid + 1        
+                start = mid + 1
             } else {
                 end = mid - 1
             }
         }
         return start
     }
-    
-    
+
     func createSortedArray(_ instructions: [Int]) -> Int {
         let tree = BinaryIndexTree(instructions.max()! + 2)
         var cost = 0
-        
+
         for i in 0..<instructions.count {
             let leftCost = tree.getCost(instructions[i])
             let rightCost = i - tree.getCost(instructions[i] + 1)
             cost += min(leftCost, rightCost)
             tree.update(instructions[i] + 1, 1)
         }
-        return cost % 1000000007
+        return cost % 1_000_000_007
     }
 
 }

@@ -9,7 +9,7 @@ class Solution {
 
     // Example 1:
     // Input: candies = [2,3,5,1,3], extraCandies = 3
-    // Output: [true,true,true,false,true] 
+    // Output: [true,true,true,false,true]
     // Explanation: If you give all extraCandies to:
     // - Kid 1, they will have 2 + 3 = 5 candies, which is the greatest among the kids.
     // - Kid 2, they will have 3 + 3 = 6 candies, which is the greatest among the kids.
@@ -19,7 +19,7 @@ class Solution {
 
     // Example 2:
     // Input: candies = [4,2,1,1,2], extraCandies = 1
-    // Output: [true,false,false,false,false] 
+    // Output: [true,false,false,false,false]
     // Explanation: There is only 1 extra candy.
     // Kid 1 will always have the greatest number of candies, even if a different kid is given the extra candy.
 
@@ -37,9 +37,11 @@ class Solution {
         if candies.count == 0 { return [] }
         let max = candies.max()!
         var res = [Bool](repeating: false, count: candies.count)
-        
-        for (index, item) in candies.enumerated() where (item + extraCandies) >= max { res[index] = true }
+
+        for (index, item) in candies.enumerated() where (item + extraCandies) >= max {
+            res[index] = true
+        }
         return res
     }
-    
+
 }

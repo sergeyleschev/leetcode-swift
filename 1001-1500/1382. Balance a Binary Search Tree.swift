@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -32,16 +30,15 @@ class Solution {
     // The tree nodes will have distinct values between 1 and 10^5.
 
     // - Complexity:
-    //   - time: O(n) 
-    //   - space: O(n) 
+    //   - time: O(n)
+    //   - space: O(n)
 
     func balanceBST(_ root: TreeNode?) -> TreeNode? {
         var valList: [Int] = []
-        
+
         getTreeList(root, &valList)
         return buildTree(valList, 0, valList.count - 1)
     }
-
 
     func getTreeList(_ root: TreeNode?, _ valList: inout [Int]) {
         guard let root = root else { return }
@@ -50,7 +47,6 @@ class Solution {
         valList.append(root.val)
         getTreeList(root.right, &valList)
     }
-
 
     func buildTree(_ valList: [Int], _ left: Int, _ right: Int) -> TreeNode? {
         if left > right { return nil }

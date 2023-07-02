@@ -10,7 +10,7 @@ class Solution {
     // It means there are n files (f1.txt, f2.txt ... fn.txt) with content (f1_content, f2_content ... fn_content) respectively in the directory "root/d1/d2/.../dm". Note that n >= 1 and m >= 0. If m = 0, it means the directory is just the root directory.
     // The output is a list of groups of duplicate file paths. For each group, it contains all the file paths of the files that have the same content. A file path is a string that has the following format:
     // "directory_path/file_name.txt"
-     
+
     // Example 1:
     // Input: paths = ["root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)","root/c/d 4.txt(efgh)","root 4.txt(efgh)"]
     // Output: [["root/a/2.txt","root/c/d/4.txt","root/4.txt"],["root/a/1.txt","root/c/3.txt"]]
@@ -35,28 +35,28 @@ class Solution {
     // How to make sure the duplicated files you find are not false positive?
 
     func findDuplicate(_ paths: [String]) -> [[String]] {
-        var dict = [String : Int]()
+        var dict = [String: Int]()
         var res = [[String]]()
         var index = 0
-        
+
         for path in paths {
             let arr = path.components(separatedBy: " ")
             let head = arr.first ?? ""
             for str in arr {
                 let content = str.components(separatedBy: "(")
-                if let first = content.first, let last = content.last, content.count == 2{
+                if let first = content.first, let last = content.last, content.count == 2 {
                     dict[last] = dict[last] ?? index
                     if dict[last]! >= res.count {
                         res.append([head + "/" + first])
                         index += 1
-                    }else {
+                    } else {
                         res[dict[last]!].append(head + "/" + first)
                     }
                 }
             }
         }
-        
-        return res.filter{ $0.count > 1 }
+
+        return res.filter { $0.count > 1 }
     }
 
 }

@@ -39,14 +39,14 @@ class Solution {
     // - Complexity:
     //   - time: O(n log(n)), where n is the number of intervals.
     //   - space: O(n), where n is the number of intervals.
-    
+
     func findRightInterval(_ intervals: [[Int]]) -> [Int] {
         guard !intervals.isEmpty else { return [] }
         guard intervals.count > 1 else { return [-1] }
         var dict = [Int: Int]()
         var sp = [Int]()
         var ans = [Int]()
-        
+
         for (i, el) in intervals.enumerated() {
             dict[el[0]] = i
             sp.append(el[0])

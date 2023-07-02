@@ -32,7 +32,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n log(m)), where n is the number of elements in A, and m is the maximum value in A.
     //   - space: O(n + m), where n is the number of elements in A, and m is the maximum value in A.
-    
+
     func largestComponentSize(_ A: [Int]) -> Int {
         guard let maxValue = A.max() else { return 0 }
         let dsu = DisjointSetUnion(maxValue)
@@ -43,7 +43,9 @@ class Solution {
         for num in A {
             let primeFactors = Array(Set(primeDecompose(num)))
             numFactorDict[num] = primeFactors[0]
-            for i in 0..<primeFactors.count - 1 { dsu.union(x: primeFactors[i], y: primeFactors[i + 1]) }
+            for i in 0..<primeFactors.count - 1 {
+                dsu.union(x: primeFactors[i], y: primeFactors[i + 1])
+            }
         }
 
         for num in A {
@@ -51,13 +53,12 @@ class Solution {
             let groupID = dsu.find(n)
             let count = groupCount[groupID] ?? 0
             groupCount[groupID, default: 0] += 1
-            ans = max(ans, count+1)
+            ans = max(ans, count + 1)
         }
 
         return ans
     }
 
-    
     private func primeDecompose(_ num: Int) -> [Int] {
         var ans = [Int]()
         var num = num
@@ -78,7 +79,6 @@ class Solution {
 
 }
 
-
 final class DisjointSetUnion {
     private var parent: [Int]
     private var size: [Int]
@@ -91,11 +91,11 @@ final class DisjointSetUnion {
             self.size.append(1)
         }
     }
-    
+
     // Finds the component ID that the element x belongs to.
     // - Parameter x: The integer.
     // - Returns: The component ID.
-    
+
     func find(_ x: Int) -> Int {
         if parent[x] != x { parent[x] = find(parent[x]) }
         return parent[x]
@@ -106,7 +106,7 @@ final class DisjointSetUnion {
     //   - x: The integer.
     //   - y: The integer.
     // - Returns: The merged component ID.
-    
+
     func union(x: Int, y: Int) -> Int {
         var px = find(x)
         var py = find(y)

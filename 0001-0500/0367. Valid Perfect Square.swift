@@ -17,7 +17,7 @@ class Solution {
 
     // Example 2:
     // Input: num = 14
-    // Output: false 
+    // Output: false
 
     // Constraints:
     // 1 <= num <= 2^31 - 1

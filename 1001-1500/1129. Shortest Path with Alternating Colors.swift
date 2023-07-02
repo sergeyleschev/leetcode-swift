@@ -39,7 +39,6 @@ class Solution {
         var colour: Int
     }
 
-
     func shortestAlternatingPaths(_ n: Int, _ red_edges: [[Int]], _ blue_edges: [[Int]]) -> [Int] {
         var distanceTo = [Int](repeating: Int.max, count: n)
         let graph = builgGraph(vertexNumber: n, redEdges: red_edges, blueEdges: blue_edges)
@@ -50,7 +49,7 @@ class Solution {
         distanceTo[0] = 0
         queue.append(ColouredNode(node: 0, colour: 1))
         queue.append(ColouredNode(node: 0, colour: -1))
-        
+
         while !queue.isEmpty {
             let size = queue.count
             pathLength += 1
@@ -62,7 +61,7 @@ class Solution {
                 for j in 1..<n {
                     if graph[node][j] == oppositeColor || graph[node][j] == 0 {
                         let nextColouredNode = ColouredNode(node: j, colour: oppositeColor)
-                        if  !visited.contains(nextColouredNode) {
+                        if !visited.contains(nextColouredNode) {
                             queue.append(nextColouredNode)
                             distanceTo[j] = min(distanceTo[j], pathLength)
                             visited.insert(nextColouredNode)
@@ -75,18 +74,18 @@ class Solution {
         for i in 1..<n where distanceTo[i] == Int.max { distanceTo[i] = -1 }
         return distanceTo
     }
-    
 
-    private func builgGraph(vertexNumber: Int, redEdges: [[Int]], blueEdges: [[Int]]) ->  [[Int]] {
-        var graph = [[Int]](repeating: [Int](repeating: Int.min, count: vertexNumber), count: vertexNumber)
-        
+    private func builgGraph(vertexNumber: Int, redEdges: [[Int]], blueEdges: [[Int]]) -> [[Int]] {
+        var graph = [[Int]](
+            repeating: [Int](repeating: Int.min, count: vertexNumber), count: vertexNumber)
+
         for redEdge in redEdges { graph[redEdge[0]][redEdge[1]] = 1 }
         for blueEdge in blueEdges {
             let from = blueEdge[0]
             let to = blueEdge[1]
             graph[from][to] = graph[from][to] == 1 ? 0 : -1
         }
-        
+
         return graph
     }
 

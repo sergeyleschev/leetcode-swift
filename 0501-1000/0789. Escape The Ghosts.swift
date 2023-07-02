@@ -40,11 +40,15 @@ class Solution {
     // -10^4 <= xtarget, ytarget <= 10^4
 
     func escapeGhosts(_ ghosts: [[Int]], _ target: [Int]) -> Bool {
-        func manhattanDistance(lhs: [Int], rhs: [Int]) -> Int { abs(lhs[0] - rhs[0]) + abs(lhs[1] - rhs[1]) }
+        func manhattanDistance(lhs: [Int], rhs: [Int]) -> Int {
+            abs(lhs[0] - rhs[0]) + abs(lhs[1] - rhs[1])
+        }
 
         var minGhost = manhattanDistance(lhs: [0, 0], rhs: target)
-        for point in ghosts where manhattanDistance(lhs: point, rhs: target) <= minGhost { return false }
-        
+        for point in ghosts where manhattanDistance(lhs: point, rhs: target) <= minGhost {
+            return false
+        }
+
         return true
     }
 

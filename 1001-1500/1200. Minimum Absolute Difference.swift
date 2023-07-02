@@ -3,7 +3,7 @@ class Solution {
     // Solution by Sergey Leschev
 
     // 1200. Minimum Absolute Difference
-    // Given an array of distinct integers arr, find all pairs of elements with the minimum absolute difference of any two elements. 
+    // Given an array of distinct integers arr, find all pairs of elements with the minimum absolute difference of any two elements.
     // Return a list of pairs in ascending order(with respect to pairs), each pair [a, b] follows
     // a, b are from arr
     // a < b
@@ -32,7 +32,7 @@ class Solution {
         var j = i + 1
         var minDiff = 0
         var ans = [[Int]]()
-        
+
         while j < arr.count {
             let diff = arr[j] - arr[i]
             if i == 0 {
@@ -40,19 +40,19 @@ class Solution {
             } else {
                 minDiff = min(diff, minDiff)
             }
-            i+=1
-            j+=1
+            i += 1
+            j += 1
         }
         i = 0
         j = 1
-        
+
         while j < arr.count {
             if arr[j] - arr[i] == minDiff { ans.append([arr[i], arr[j]]) }
             i += 1
             j += 1
         }
-        
+
         return ans
     }
-    
+
 }

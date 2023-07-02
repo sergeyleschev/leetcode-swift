@@ -28,7 +28,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n^2), where n is the length of nums.
     //   - space: O(n), where n is the length of nums.
-    
+
     func findNumberOfLIS(_ nums: [Int]) -> Int {
         guard nums.count > 1 else { return nums.count }
         var lengths = [Int](repeating: 0, count: nums.count)

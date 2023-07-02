@@ -7,7 +7,7 @@ class Solution {
     // Follow-up: Could you solve the problem in linear time and in O(1) space?
 
     // Finds all elements that appear more than ⌊n/3⌋ times.
-    
+
     // - Parameter nums: An integer array.
     // - Returns: All elements that appear more than ⌊n/3⌋ times.
 
@@ -30,16 +30,16 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of `nums`.
     //   - space: O(1), only constant space is used.
-    
+
     func majorityElement(_ nums: [Int]) -> [Int] {
         var elems = [Int: Int]()
-        
-        for n in nums { elems[n, default: 0] +=  1 }
-        
+
+        for n in nums { elems[n, default: 0] += 1 }
+
         return elems.compactMap { key, value in
             if value > nums.count / 3 { return key }
             return nil
         }
     }
-    
+
 }

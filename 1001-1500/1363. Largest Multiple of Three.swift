@@ -34,9 +34,11 @@ class Solution {
         var sum = 0
         var temp = 9
 
-
         func del(_ n: Int) -> Bool {
-            for i in 0...9 where i % 3 == n && counter[i] > 0 { counter[i] -= 1; return true }
+            for i in 0...9 where i % 3 == n && counter[i] > 0 {
+                counter[i] -= 1
+                return true
+            }
             return false
         }
 
@@ -44,11 +46,17 @@ class Solution {
             counter[digit] += 1
             sum += digit
         }
-        
+
         if sum % 3 == 1 {
-            if !del(1) { del(2); del(2) }
+            if !del(1) {
+                del(2)
+                del(2)
+            }
         } else if sum % 3 == 2 {
-            if !del(2) { del(1); del(1) }
+            if !del(2) {
+                del(1)
+                del(1)
+            }
         }
 
         while temp >= 0 {
@@ -60,4 +68,4 @@ class Solution {
         return ans
     }
 
- }
+}

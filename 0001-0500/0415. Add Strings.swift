@@ -28,8 +28,8 @@ class Solution {
         var index2 = num2.index(before: num2.endIndex)
         var result = ""
         var digit = 0
-        
-        while index1 != num1.endIndex || index2 != num2.endIndex{
+
+        while index1 != num1.endIndex || index2 != num2.endIndex {
             var temp = 0
             if index1 != num1.endIndex {
                 temp += Int(String(num1[index1]))!
@@ -43,12 +43,12 @@ class Solution {
             if temp >= 10 {
                 temp -= 10
                 digit = 1
-            }else {
+            } else {
                 digit = 0
             }
             result = "\(temp)" + result
         }
-        
+
         result = digit == 1 ? "1" + result : result
         return result
     }

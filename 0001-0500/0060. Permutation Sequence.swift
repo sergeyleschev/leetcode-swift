@@ -25,7 +25,7 @@ class Solution {
     // Example 3:
     // Input: n = 3, k = 1
     // Output: "123"
-     
+
     // Constraints:
     // 1 <= n <= 9
     // 1 <= k <= n!
@@ -49,12 +49,11 @@ class Solution {
         return res
     }
 
-
     func permutation(_ n: Int) -> Int {
         guard n > 1 else { return 1 }
         var res = 1
         for i in 1...n { res *= i }
         return res
     }
-    
+
 }

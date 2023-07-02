@@ -23,7 +23,7 @@ class Solution {
     // -10^9 <= goal <= 10^9
 
     func minElements(_ nums: [Int], _ limit: Int, _ goal: Int) -> Int {
-        Int(ceil(Double(abs(nums.reduce(0, { $0 + $1 }) - goal)) / Double(limit) ))
+        Int(ceil(Double(abs(nums.reduce(0, { $0 + $1 }) - goal)) / Double(limit)))
     }
 
 }

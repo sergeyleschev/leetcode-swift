@@ -14,7 +14,7 @@ class Solution {
     // Input: ring = "godding", key = "gd"
     // Output: 4
     // Explanation:
-    // For the first key character 'g', since it is already in place, we just need 1 step to spell this character. 
+    // For the first key character 'g', since it is already in place, we just need 1 step to spell this character.
     // For the second key character 'd', we need to rotate the ring "godding" anticlockwise by two steps to make it become "ddinggo".
     // Also, we need 1 more step for spelling.
     // So the final output is 4.
@@ -29,17 +29,16 @@ class Solution {
     // It is guaranteed that key could always be spelled by rotating ring.
 
     func findRotateSteps(_ ring: String, _ key: String) -> Int {
-        var map = [Character:[Int]]()
-        ring.enumerated().forEach {map[$0.element,default: []].append($0.offset)}
+        var map = [Character: [Int]]()
+        ring.enumerated().forEach { map[$0.element, default: []].append($0.offset) }
         let keyChars = [Character](key)
         let N = ring.count
-        var memo = [[Int]:Int]()
-
+        var memo = [[Int]: Int]()
 
         func backtracking(_ idx: Int, _ last: Int) -> Int {
             guard idx < key.count else { return 0 }
             guard let nextPotentialPositions = map[keyChars[idx]] else { return 0 }
-            let curKey = [last,idx]
+            let curKey = [last, idx]
             guard nil == memo[curKey] else { return memo[curKey]! }
             var ans = Int.max
 
@@ -47,13 +46,13 @@ class Solution {
                 let needSteps = backtracking(idx + 1, np)
                 var step = abs(last - np)
                 step = min(N - step, step)
-                ans = min(ans,step + needSteps)
+                ans = min(ans, step + needSteps)
             }
-            memo[curKey]  = ans
+            memo[curKey] = ans
             return ans
         }
-        
-        return backtracking(0,0) + key.count
+
+        return backtracking(0, 0) + key.count
     }
 
 }

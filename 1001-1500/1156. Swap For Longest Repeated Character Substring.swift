@@ -34,24 +34,23 @@ class Solution {
 
     typealias CharState = (length: Int, start: Int, end: Int)
 
-
     func maxRepOpt1(_ text: String) -> Int {
         let differentCharsLength = Set<Character>(text).count
-        guard  differentCharsLength > 1 else { return text.count }
+        guard differentCharsLength > 1 else { return text.count }
         guard differentCharsLength != text.count else { return 1 }
-        var ans =  0
+        var ans = 0
         var counter = [Character: [CharState]]()
         let chars = [Character](text)
-        var state: CharState  = (-1, 0, -1)
+        var state: CharState = (-1, 0, -1)
         var i = 1
 
         while i < chars.count {
             if chars[i] != chars[i - 1] {
                 state.end = i - 1
                 state.length = state.end - state.start + 1
-                if state.length > ans { ans  = state.length }
-                if nil == counter[chars[i  - 1]] { counter[chars[i  - 1]] = [CharState]() }
-                counter[chars[i  - 1]]?.append(state)
+                if state.length > ans { ans = state.length }
+                if nil == counter[chars[i - 1]] { counter[chars[i - 1]] = [CharState]() }
+                counter[chars[i - 1]]?.append(state)
                 state = (-1, i, -1)
             }
             i += 1
@@ -64,19 +63,24 @@ class Solution {
         } else {
             counter[chars.last!]?.append(state)
         }
-        
-        
+
         for (_, val) in counter {
             if val.count == 2 {
-                ans = val[1].start - val[0].end  == 2 ? max(ans, val[1].length + val[0].length) : max(ans, val[0].length + 1, val[1].length + 1)
-            }  else if val.count > 2 {
-                for i in 0..<(val.count  - 1) {
-                    ans = val[i + 1].start - 2 == val[i].end ? max(ans, val[i].length + 1 +  val[i + 1].length) : max(ans, val[i].length + 1)
+                ans =
+                    val[1].start - val[0].end == 2
+                    ? max(ans, val[1].length + val[0].length)
+                    : max(ans, val[0].length + 1, val[1].length + 1)
+            } else if val.count > 2 {
+                for i in 0..<(val.count - 1) {
+                    ans =
+                        val[i + 1].start - 2 == val[i].end
+                        ? max(ans, val[i].length + 1 + val[i + 1].length)
+                        : max(ans, val[i].length + 1)
                 }
-                ans = max(val.last!.length  + 1,ans)
+                ans = max(val.last!.length + 1, ans)
             }
         }
-        
+
         return ans
     }
 

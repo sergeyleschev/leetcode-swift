@@ -21,27 +21,27 @@ class Solution {
     // Follow up: Could you implement the O(n) solution?
 
     func longestConsecutive(_ nums: [Int]) -> Int {
-        var map: [Int: (Int,Int)] = [:]
+        var map: [Int: (Int, Int)] = [:]
         var max = 0
-        
+
         for num in nums {
             if map[num] == nil {
                 let left = map[num - 1]
                 let right = map[num + 1]
-                
+
                 if let left = left, let right = right {
                     map[num] = (left.0 + 1, right.1 + 1)
-                
+
                 } else if let left = left {
                     map[num] = (left.0 + 1, 0)
-                
+
                 } else if let right = right {
                     map[num] = (0, right.1 + 1)
-                
+
                 } else {
                     map[num] = (0, 0)
                 }
-                
+
                 let lower = num - map[num]!.0
                 let upper = num + map[num]!.1
                 map[lower] = (0, upper - lower)
@@ -50,8 +50,8 @@ class Solution {
                 max = max > count ? max : count
             }
         }
-        
+
         return max
     }
-    
+
 }

@@ -33,7 +33,7 @@ class Solution {
 
     func largestOverlap(_ A: [[Int]], _ B: [[Int]]) -> Int {
         var maxCount = 0
-        
+
         for i in -A.count + 1..<A.count {
             for j in -A.count + 1..<A.count {
                 maxCount = max(maxCount, matchAndCount(A, B, i, j))
@@ -42,20 +42,21 @@ class Solution {
 
         return maxCount
     }
-    
 
     func matchAndCount(_ A: [[Int]], _ B: [[Int]], _ k: Int, _ l: Int) -> Int {
         var count = 0
         let dim = A.count
-        
+
         for j in l..<dim {
             for i in k..<dim {
-                if j >= 0 && j < dim && i >= 0 && i < dim && j - l >= 0 && i - k >= 0 && j-l < dim && i - k < dim {
-                    count += A[j][i] & B[j-l][i-k]
+                if j >= 0 && j < dim && i >= 0 && i < dim && j - l >= 0 && i - k >= 0 && j - l < dim
+                    && i - k < dim
+                {
+                    count += A[j][i] & B[j - l][i - k]
                 }
             }
         }
-        
+
         return count
     }
 

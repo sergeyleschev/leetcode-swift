@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -34,7 +32,7 @@ class Solution {
     // Input: root = [3,1,4,null,null,2]
     // Output: [2,1,4,null,null,3]
     // Explanation: 2 cannot be in the right subtree of 3 because 2 < 3. Swapping 2 and 3 makes the BST valid.
-     
+
     // Constraints:
     // The number of nodes in the tree is in the range [2, 1000].
     // -2^31 <= Node.val <= 2^31 - 1
@@ -47,7 +45,6 @@ class Solution {
     private var second: TreeNode?
     private var prev = TreeNode(Int.min)
 
-    
     func recoverTree(_ root: TreeNode?) {
         traverse(root)
 
@@ -57,7 +54,6 @@ class Solution {
         first.val = second.val
         second.val = tmp
     }
-
 
     private func traverse(_ root: TreeNode?) {
         guard let root = root else { return }

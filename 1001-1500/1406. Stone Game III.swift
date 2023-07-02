@@ -35,7 +35,7 @@ class Solution {
     // Example 5:
     // Input: values = [-1,-2,-3]
     // Output: "Tie"
-     
+
     // Constraints:
     // 1 <= values.length <= 50000
     // -1000 <= values[i] <= 1000
@@ -52,7 +52,7 @@ class Solution {
             dp[i % 4] = Int.min
             for k in i...min(i + 2, n - 1) {
                 take += stoneValue[k]
-                dp[i % 4] = max(dp[i % 4], take - dp[(k+1) % 4])
+                dp[i % 4] = max(dp[i % 4], take - dp[(k + 1) % 4])
             }
         }
 

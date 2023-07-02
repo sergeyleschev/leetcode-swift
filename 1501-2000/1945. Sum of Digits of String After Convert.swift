@@ -44,7 +44,6 @@ class Solution {
         var scalarIndice = [Unicode.Scalar: Int]()
         var nums = ""
 
-
         func transform(nums: String, n: Int) -> String {
             var sum: UInt32 = 0
             for num in nums.unicodeScalars { sum += num.value - zero.value }

@@ -65,15 +65,17 @@ class Solution {
             if directManager == -1 { continue }
             graph[directManager, default: [Int]()].append(i)
         }
-        
+
         while !nodeQueue.isEmpty {
             var (currentManager, infoTime) = nodeQueue.removeFirst()
             totalTime = max(totalTime, infoTime)
             if let neighbours = graph[currentManager] {
-                for neighbour in neighbours { nodeQueue.append((neighbour, infoTime + informTime[currentManager])) }
+                for neighbour in neighbours {
+                    nodeQueue.append((neighbour, infoTime + informTime[currentManager]))
+                }
             }
         }
-        
+
         return totalTime
     }
 

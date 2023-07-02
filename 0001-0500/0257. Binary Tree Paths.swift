@@ -1,18 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public var val: Int
- *     public var left: TreeNode?
- *     public var right: TreeNode?
- *     public init() { self.val = 0; self.left = nil; self.right = nil; }
- *     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
- *     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
- *         self.val = val
- *         self.left = left
- *         self.right = right
- *     }
- * }
- */
+/// Definition for a binary tree node.
+/// public class TreeNode {
+///     public var val: Int
+///     public var left: TreeNode?
+///     public var right: TreeNode?
+///     public init() { self.val = 0; self.left = nil; self.right = nil; }
+///     public init(_ val: Int) { self.val = val; self.left = nil; self.right = nil; }
+///     public init(_ val: Int, _ left: TreeNode?, _ right: TreeNode?) {
+///         self.val = val
+///         self.left = left
+///         self.right = right
+///     }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -48,15 +46,14 @@ class Solution {
         dfs(root, path: "", ans: &ans)
         return ans
     }
-    
 
     private func dfs(_ node: TreeNode?, path: String, ans: inout [String]) {
         guard let node = node else { return }
-        
+
         let path = "\(path)\(node.val)"
         if node.left == nil, node.right == nil {
             ans.append(path)
-            
+
         } else {
             dfs(node.left, path: "\(path)->", ans: &ans)
             dfs(node.right, path: "\(path)->", ans: &ans)

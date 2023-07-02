@@ -37,7 +37,7 @@ class Solution {
     // Example 4:
     // Input: path = "/a/./b/../../c/"
     // Output: "/c"
-     
+
     // Constraints:
     // 1 <= path.length <= 3000
     // path consists of English letters, digits, period '.', slash '/' or '_'.
@@ -49,11 +49,11 @@ class Solution {
 
     func simplifyPath(_ path: String) -> String {
         let paths = path.split(separator: "/")
-        
+
         var stack = [String]()
         for path in paths {
             guard path != ".", !path.isEmpty else { continue }
-            
+
             if path == ".." {
                 if !stack.isEmpty {
                     stack.removeLast()
@@ -62,7 +62,7 @@ class Solution {
                 stack.append(String(path))
             }
         }
-        
+
         return "/\(stack.joined(separator: "/"))"
     }
 

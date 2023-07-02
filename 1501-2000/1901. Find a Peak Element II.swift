@@ -32,13 +32,25 @@ class Solution {
         var j = 0
 
         while true {
-            if i + 1 < m && mat[i + 1][j] > mat[i][j] { i += 1; continue }
-            if i - 1 >= 0 && mat[i - 1][j] > mat[i][j] { i -= 1; continue }
-            if j + 1 < n && mat[i][j + 1] > mat[i][j] { j += 1; continue }
-            if j - 1 >= 0 && mat[i][j - 1] > mat[i][j] { j -= 1; continue }
+            if i + 1 < m && mat[i + 1][j] > mat[i][j] {
+                i += 1
+                continue
+            }
+            if i - 1 >= 0 && mat[i - 1][j] > mat[i][j] {
+                i -= 1
+                continue
+            }
+            if j + 1 < n && mat[i][j + 1] > mat[i][j] {
+                j += 1
+                continue
+            }
+            if j - 1 >= 0 && mat[i][j - 1] > mat[i][j] {
+                j -= 1
+                continue
+            }
             break
         }
         return [i, j]
     }
-    
+
 }

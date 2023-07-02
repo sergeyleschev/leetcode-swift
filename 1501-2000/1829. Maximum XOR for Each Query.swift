@@ -39,7 +39,6 @@ class Solution {
 
     private let bits = (0...20).map { 1 << $0 }
 
-
     func getMaximumXor(_ nums: [Int], _ maximumBit: Int) -> [Int] {
         var total = nums.reduce(0) { $0 ^ $1 }
         var ans = [Int]()
@@ -52,5 +51,5 @@ class Solution {
         }
         return ans
     }
-    
+
 }

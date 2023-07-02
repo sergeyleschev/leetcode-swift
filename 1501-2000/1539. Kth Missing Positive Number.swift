@@ -31,14 +31,14 @@ class Solution {
 
     func findKthPositive(_ arr: [Int], _ k: Int) -> Int {
         guard !arr.isEmpty, k >= arr[0] else { return k }
-        var k = k - arr[0] + 1 // + 1, because number is start from 1, 2, 3
+        var k = k - arr[0] + 1  // + 1, because number is start from 1, 2, 3
         let n = arr.count
-        
+
         for i in 1..<n {
             if arr[i] - arr[i - 1] > k {
                 return arr[i - 1] + k
             } else {
-                k -= arr[i] - arr[i - 1] - 1 // - 1 here, ex: 2,3 no missing number, need to -1 distance
+                k -= arr[i] - arr[i - 1] - 1  // - 1 here, ex: 2,3 no missing number, need to -1 distance
             }
         }
 

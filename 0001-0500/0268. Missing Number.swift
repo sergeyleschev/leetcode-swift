@@ -7,7 +7,7 @@ class Solution {
     // Follow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?
 
     // Finds the only number in the range that is missing from the array.
-    
+
     // - Parameter nums: An array of numbers.
     // - Returns: The missing number.
 
@@ -29,7 +29,7 @@ class Solution {
     // Example 4:
     // Input: nums = [0]
     // Output: 1
-    // Explanation: n = 1 since there is 1 number, so all numbers are in the range [0,1]. 1 is the missing number in the range since it does not appear in nums. 
+    // Explanation: n = 1 since there is 1 number, so all numbers are in the range [0,1]. 1 is the missing number in the range since it does not appear in nums.
 
     // Constraints:
     // n == nums.length
@@ -44,9 +44,9 @@ class Solution {
     func missingNumber(_ nums: [Int]) -> Int {
         let n = nums.count
         var ans = n
-        
+
         for i in 0..<n { ans ^= i ^ nums[i] }
-        
+
         return ans
     }
 

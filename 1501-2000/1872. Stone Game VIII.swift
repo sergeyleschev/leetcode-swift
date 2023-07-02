@@ -60,14 +60,14 @@ class Solution {
     func stoneGameVIII(_ stones: [Int]) -> Int {
         let n = stones.count
         if n == 2 { return stones[0] + stones[1] }
-        var sum = stones // sum[i] = stones[0] + stones[1] + ... + stones[i]
+        var sum = stones  // sum[i] = stones[0] + stones[1] + ... + stones[i]
         var diff = Int.min
 
-        for i in 1..<n { sum[i] += sum[i -  1] }
-        var val = sum[n - 1] // dp[n - 1] = sum[n - 1]
+        for i in 1..<n { sum[i] += sum[i - 1] }
+        var val = sum[n - 1]  // dp[n - 1] = sum[n - 1]
         for i in stride(from: n - 2, through: 0, by: -1) {
-            diff = max(diff, val) // dp[i] is val, use dp[i] to update diff
-            val = max(val, sum[i] - val) // update val by using sum[i] - dp[i]
+            diff = max(diff, val)  // dp[i] is val, use dp[i] to update diff
+            val = max(val, sum[i] - val)  // update val by using sum[i] - dp[i]
         }
         return diff
     }

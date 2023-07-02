@@ -51,7 +51,7 @@ class Solution {
         var start = [Int?](repeating: nil, count: n)
         var end = [Int?](repeating: nil, count: n)
         var length = [Int: Set<[Int]>]()
-        
+
         for i in 0..<n {
             let idx = arr[i] - 1
             start[idx] = idx
@@ -63,33 +63,35 @@ class Solution {
                     length[idx2 - idx]?.remove([idx + 1, idx2])
                     start[idx] = idx2
                     flag = true
-                    length[idx2 - idx + 1, default: [] ].insert([idx,idx2])
+                    length[idx2 - idx + 1, default: []].insert([idx, idx2])
                     start[idx + 1] = nil
                 }
             }
-            
+
             if idx > 0 {
                 if let idx2 = end[idx - 1] {
                     flag = true
-                    length[idx - idx2]?.remove([idx2,idx - 1])
+                    length[idx - idx2]?.remove([idx2, idx - 1])
                     end[idx] = idx2
                     end[idx - 1] = nil
-                    length[idx - idx2 + 1, default: []].insert([idx2,idx])
+                    length[idx - idx2 + 1, default: []].insert([idx2, idx])
                 }
             }
-            
+
             if flag {
                 if let left = end[idx], let right = start[idx] {
-                    length[idx - left + 1 ]?.remove([left,idx])
-                    length[right - idx + 1]?.remove([idx,right])
+                    length[idx - left + 1]?.remove([left, idx])
+                    length[right - idx + 1]?.remove([idx, right])
                     start[idx] = nil
                     end[idx] = nil
                     start[left] = right
                     end[right] = left
-                    length[right - left + 1, default: [] ].insert([left,right])
+                    length[right - left + 1, default: []].insert([left, right])
                 }
-            } else { length[1, default: [] ].insert([idx,idx]) }
-            if let indices = length[m],!indices.isEmpty { ans = max(ans, i + 1) }
+            } else {
+                length[1, default: []].insert([idx, idx])
+            }
+            if let indices = length[m], !indices.isEmpty { ans = max(ans, i + 1) }
         }
         return ans
     }

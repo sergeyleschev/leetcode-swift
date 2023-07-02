@@ -38,18 +38,17 @@ class Solution {
 
     func sumOddLengthSubarrays(_ arr: [Int]) -> Int {
         var ans = 0
-        var preffix = [0]
-        for num in arr { preffix.append(preffix.last! + num) }
+        var prefix = [0]
+        for num in arr { prefix.append(prefix.last! + num) }
         let N = arr.count
         var subsequenceLength = 3
-        ans += preffix.last!
-
+        ans += prefix.last!
 
         func subsequenceSum(_ curSubsequenceLength: Int) -> Int {
             var sum = 0
             var j = 1
             while j + curSubsequenceLength - 1 <= N {
-                sum += preffix[j + curSubsequenceLength - 1] - preffix[j - 1]
+                sum += prefix[j + curSubsequenceLength - 1] - prefix[j - 1]
                 j += 1
             }
             return sum

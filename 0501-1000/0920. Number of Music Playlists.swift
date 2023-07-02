@@ -28,19 +28,19 @@ class Solution {
 
     func numMusicPlaylists(_ n: Int, _ goal: Int, _ k: Int) -> Int {
         let mod = Int(1e9 + 7)
-        var dp = [[Int]](repeating: .init(repeating: 0, count: goal + 1), count: n + 1) // songs "n" to form the goal playlist
-        
+        var dp = [[Int]](repeating: .init(repeating: 0, count: goal + 1), count: n + 1)  // songs "n" to form the goal playlist
+
         dp[0][0] = 1
-        
+
         for l in 1...goal {
             for s in 1...min(n, l) {
-                dp[s][l] = dp[s - 1][l - 1] * (n - (s - 1)) // new song
-                dp[s][l] += dp[s][l - 1] * max(s - k, 0) % mod // adding old songs, even though "k" should not be selected
+                dp[s][l] = dp[s - 1][l - 1] * (n - (s - 1))  // new song
+                dp[s][l] += dp[s][l - 1] * max(s - k, 0) % mod  // adding old songs, even though "k" should not be selected
                 dp[s][l] %= mod
             }
         }
-        
+
         return dp[n][goal]
     }
-    
+
 }

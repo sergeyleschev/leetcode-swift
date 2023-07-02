@@ -37,7 +37,8 @@ class Solution {
         }
 
         while index != queue.endIndex {
-            let (stop, level) = queue[index]; index += 1
+            let (stop, level) = queue[index]
+            index += 1
             if stop == T { return level }
 
             guard let nextRoutes = routesOf[stop] else { continue }

@@ -17,7 +17,7 @@ class Solution {
     // Example 2:
     // Input: numBottles = 15, numExchange = 4
     // Output: 19
-    // Explanation: You can exchange 4 empty bottles to get 1 full water bottle. 
+    // Explanation: You can exchange 4 empty bottles to get 1 full water bottle.
     // Number of water bottles you can drink: 15 + 3 + 1 = 19.
 
     // Example 3:
@@ -35,7 +35,7 @@ class Solution {
     func numWaterBottles(_ numBottles: Int, _ numExchange: Int) -> Int {
         var getDrink = numBottles
         var bottles = numBottles
-        
+
         while bottles / numExchange != 0 {
             getDrink += bottles / numExchange
             bottles = (bottles / numExchange) + (bottles % numExchange)

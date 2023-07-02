@@ -28,7 +28,7 @@ class Solution {
         var l = 0
         var chars = Array(s.unicodeScalars)
         var maxCount = 0
-        
+
         for (r, char) in chars.enumerated() {
             let ascii = Int(char.value) - 65
             dict[ascii] += 1
@@ -39,8 +39,8 @@ class Solution {
                 l += 1
             }
         }
-        
+
         return min(chars.count, maxCount + k)
     }
-    
+
 }

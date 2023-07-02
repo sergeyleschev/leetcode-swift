@@ -38,22 +38,22 @@ class Solution {
         var chars = [Character](s)
         var i = 0
         var j = s.count - 1
-        
+
         while i < j {
             if chars[i] != chars[j] { break }
             i += 1
             j -= 1
         }
-        
+
         guard i < j else { return 0 }
         guard s.count != 2 else { return 1 }
         chars.removeFirst(i)
         chars.removeLast(s.count - j - 1)
         let n = chars.count
-        
+
         var dp = [[Int]](repeating: [Int](repeating: 0, count: n + 1), count: n + 1)
-        
-         i = n - 1
+
+        i = n - 1
         while i >= 0 {
             j = i + 1
             while j < n {
@@ -66,8 +66,8 @@ class Solution {
             }
             i -= 1
         }
-        
+
         return dp[0][n - 1]
     }
 
- }
+}

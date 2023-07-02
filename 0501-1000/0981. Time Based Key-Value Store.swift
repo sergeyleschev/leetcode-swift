@@ -14,14 +14,14 @@ class TimeMap {
     // Example 1:
     // Input: inputs = ["TimeMap","set","get","get","set","get","get"], inputs = [[],["foo","bar",1],["foo",1],["foo",3],["foo","bar2",4],["foo",4],["foo",5]]
     // Output: [null,null,"bar","bar",null,"bar2","bar2"]
-    // Explanation:   
-    // TimeMap kv;   
-    // kv.set("foo", "bar", 1); // store the key "foo" and value "bar" along with timestamp = 1   
-    // kv.get("foo", 1);  // output "bar"   
-    // kv.get("foo", 3); // output "bar" since there is no value corresponding to foo at timestamp 3 and timestamp 2, then the only value is at timestamp 1 ie "bar"   
-    // kv.set("foo", "bar2", 4);   
-    // kv.get("foo", 4); // output "bar2"   
-    // kv.get("foo", 5); //output "bar2"   
+    // Explanation:
+    // TimeMap kv;
+    // kv.set("foo", "bar", 1); // store the key "foo" and value "bar" along with timestamp = 1
+    // kv.get("foo", 1);  // output "bar"
+    // kv.get("foo", 3); // output "bar" since there is no value corresponding to foo at timestamp 3 and timestamp 2, then the only value is at timestamp 1 ie "bar"
+    // kv.set("foo", "bar2", 4);
+    // kv.get("foo", 4); // output "bar2"
+    // kv.get("foo", 5); //output "bar2"
 
     // Example 2:
     // Input: inputs = ["TimeMap","set","set","get","get","get","get","get"], inputs = [[],["love","high",10],["love","low",20],["love",5],["love",10],["love",15],["love",20],["love",25]]
@@ -37,16 +37,13 @@ class TimeMap {
     var timestamps = [String: [Int]]()
     var values = [Int: String]()
 
-    
-    init() { }
+    init() {}
 
-    
     func set(_ key: String, _ value: String, _ timestamp: Int) {
         timestamps[key, default: []].append(timestamp)
         values[timestamp] = value
     }
 
-    
     func get(_ key: String, _ timestamp: Int) -> String {
         guard let arr = timestamps[key] else { return "" }
         guard let first = arr.first, timestamp >= first else { return "" }
@@ -54,11 +51,10 @@ class TimeMap {
         return values[timekey] ?? ""
     }
 
-    
     private func binarySearch(_ nums: [Int], _ target: Int) -> Int {
         var low = 0
         var high = nums.count - 1
-        
+
         while low < high {
             let mid = low + (high - low + 1) / 2
             if target == nums[mid] {
@@ -71,7 +67,7 @@ class TimeMap {
         }
         return nums[low]
     }
-    
+
 }
 
 /**

@@ -23,8 +23,9 @@ class Solution {
 
     func uncommonFromSentences(_ A: String, _ B: String) -> [String] {
         guard !A.isEmpty && !B.isEmpty else { return [] }
-        let wordCount = [A, B].joined(separator: " ").components(separatedBy: " ").reduce(into: [:]) { dict, word in dict[word, default: 0] += 1 }
+        let wordCount = [A, B].joined(separator: " ").components(separatedBy: " ").reduce(into: [:])
+        { dict, word in dict[word, default: 0] += 1 }
         return Array(wordCount.filter { $0.value == 1 }.keys)
     }
-    
+
 }

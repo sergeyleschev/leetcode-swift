@@ -38,20 +38,20 @@ class Solution {
 
     // DFS
 
-    let moves = [[4,6], [6,8], [7,9], [4,8], [3,9,0], [], [1,7,0], [2,6], [1,3], [2,4]]
+    let moves = [
+        [4, 6], [6, 8], [7, 9], [4, 8], [3, 9, 0], [], [1, 7, 0], [2, 6], [1, 3], [2, 4],
+    ]
     let mode = 1e9 + 7
-    
-    
+
     func knightDialer(_ n: Int) -> Int {
         var ans = 0
         var visit = Array(repeating: Array(repeating: -1, count: 10), count: n + 1)
-        
+
         for i in 0..<10 { ans = (ans + helper(n, i, &visit, [Int]())) % Int(mode) }
         return ans
     }
-    
-    
-    private func helper(_ n: Int, _ index: Int, _ visit: inout [[Int]], _ subAns: [Int]) -> Int{
+
+    private func helper(_ n: Int, _ index: Int, _ visit: inout [[Int]], _ subAns: [Int]) -> Int {
         if n == 1 { return 1 }
         if visit[n][index] != -1 { return visit[n][index] }
         var sum = 0

@@ -17,7 +17,7 @@ class Solution {
     // Example 2:
     // Input: quality = [3,1,10,10,1], wage = [4,8,2,2,7], k = 3
     // Output: 30.66667
-    // Explanation: We pay 4 to 0-th worker, 13.33333 to 2-th and 3-th workers seperately. 
+    // Explanation: We pay 4 to 0-th worker, 13.33333 to 2-th and 3-th workers seperately.
 
     // Note:
     // 1 <= k <= n <= 10000, where n = quality.length = wage.length
@@ -37,7 +37,7 @@ class Solution {
         var sumq: Double = 0
         var q = PriorityQueue(K + 1)
 
-        for i in 0 ..< N { workers[i] = [Double(quality[i]), Double(wage[i]) / Double(quality[i])] }
+        for i in 0..<N { workers[i] = [Double(quality[i]), Double(wage[i]) / Double(quality[i])] }
         workers.sort(by: { $0[1] < $1[1] })
 
         for w in workers {
@@ -52,30 +52,25 @@ class Solution {
 
 }
 
-
-public struct PriorityQueue { // need a min heap
+public struct PriorityQueue {  // need a min heap
     public private(set) var size = 0
     private var limit: Int
     private var arr: [Int]
-
 
     init(_ limit: Int) {
         self.limit = limit
         self.arr = [Int](repeating: -1, count: limit)
     }
 
-
     func left(_ i: Int) -> Int { 2 * i + 1 }
     func right(_ i: Int) -> Int { 2 * i + 2 }
     func parent(_ i: Int) -> Int { (i - 1) / 2 }
-
 
     mutating func insert(_ val: Int) {
         arr[size] = val
         size += 1
         shiftUp(size - 1)
     }
-
 
     mutating func extractMin() -> Int {
         let ans = arr[0]
@@ -85,7 +80,6 @@ public struct PriorityQueue { // need a min heap
         return ans
     }
 
-
     mutating func shiftUp(_ i: Int) {
         var i = i
         while arr[i] < arr[parent(i)] {
@@ -93,7 +87,6 @@ public struct PriorityQueue { // need a min heap
             i = parent(i)
         }
     }
-
 
     mutating func shiftDown(_ i: Int) {
         var i = i

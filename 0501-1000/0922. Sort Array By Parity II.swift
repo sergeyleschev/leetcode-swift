@@ -28,7 +28,7 @@ class Solution {
         var ans = Array(repeating: 0, count: A.count)
         var io = 0
         var ie = 1
-        
+
         for a in A {
             if a % 2 == 0 {
                 ans[io] = a
@@ -40,7 +40,7 @@ class Solution {
                 ie += 2
             }
         }
-        
+
         return ans
     }
 

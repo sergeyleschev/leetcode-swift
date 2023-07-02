@@ -38,18 +38,18 @@ class Solution {
     // - Complexity:
     //   - time: O(n log(n)), where n is the length of A.
     //   - space: O(1), only constant space is used.
-    
+
     func smallestRangeII(_ A: [Int], _ K: Int) -> Int {
         let n = A.count
         let a = A.sorted()
         var ans = a[n - 1] - a[0]
-        
+
         for i in 0..<n - 1 {
             let high = max(a[n - 1] - K, a[i] + K)
             let low = min(a[0] + K, a[i + 1] - K)
             ans = min(ans, high - low)
         }
-        
+
         return ans
     }
 

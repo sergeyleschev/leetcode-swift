@@ -24,34 +24,36 @@ class Solution {
     // 1 <= m <= 5
     // 1 <= n <= 1000
 
-    private static var adjacentStates = Array<[String:[String]]>(repeating: [:], count: 6)
+    private static var adjacentStates = [[String: [String]]](repeating: [:], count: 6)
     private let mod = 1_000_000_007
-    
- 
+
     func colorTheGrid(_ m: Int, _ n: Int) -> Int {
         let row = max(m, n)
         let col = min(m, n)
-        if Solution.adjacentStates[col].isEmpty { Solution.adjacentStates[col] = getAdjacentStates(of: getPossibleStates(col)) }
+        if Solution.adjacentStates[col].isEmpty {
+            Solution.adjacentStates[col] = getAdjacentStates(of: getPossibleStates(col))
+        }
         let curAdjacentStates = Solution.adjacentStates[col]
         guard row > 1 else { return curAdjacentStates.count }
         var lastRow = [String: Int]()
         curAdjacentStates.forEach { (s, _) in lastRow[s] = 1 }
         for _ in 2...row {
             var curRow = [String: Int]()
-            for (s,cnt) in lastRow {
+            for (s, cnt) in lastRow {
                 guard let nextRows = curAdjacentStates[s] else { continue }
-                for nr in nextRows { curRow.updateValue(((curRow[nr] ?? 0) + cnt) % mod, forKey: nr) }
+                for nr in nextRows {
+                    curRow.updateValue(((curRow[nr] ?? 0) + cnt) % mod, forKey: nr)
+                }
             }
             lastRow = curRow
         }
         return lastRow.values.reduce(0) { ($0 + $1) % mod }
     }
-    
 
     private func getPossibleStates(_ n: Int) -> [String] {
         var ans = [String]()
         let max = Int(pow(3.0, Double(n)))
-        
+
         func check(_ s: String) -> Bool {
             var last = s.first!
             for ch in s.dropFirst() {
@@ -68,7 +70,6 @@ class Solution {
         return ans
     }
 
-
     private func getAdjacentStates(of rowStates: [String]) -> [String: [String]] {
         let n = rowStates.count
         var ans = [String: [String]]()
@@ -76,15 +77,14 @@ class Solution {
             var s = f + 1
             while s < n {
                 if check(rowStates[f], rowStates[s]) {
-                    ans[rowStates[f],default: []].append(rowStates[s])
-                    ans[rowStates[s],default: []].append(rowStates[f])
+                    ans[rowStates[f], default: []].append(rowStates[s])
+                    ans[rowStates[s], default: []].append(rowStates[f])
                 }
                 s += 1
             }
         }
         return ans
     }
-    
 
     private func check(_ first: String, _ second: String) -> Bool {
         var firstIdx = first.startIndex

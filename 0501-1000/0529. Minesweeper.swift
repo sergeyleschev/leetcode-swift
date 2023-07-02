@@ -39,20 +39,24 @@ class Solution {
     func updateBoard(_ board: [[Character]], _ click: [Int]) -> [[Character]] {
         var ans = board
         let (i, j) = (click[0], click[1])
-        guard ans[i][j] != "M" else { ans[i][j] = "X"; return ans }
+        guard ans[i][j] != "M" else {
+            ans[i][j] = "X"
+            return ans
+        }
 
         for dx in [1, 0, -1] {
             for dy in [1, 0, -1] {
                 guard dx != 0 || dy != 0 else { continue }
                 if (dx + i) >= 0 && (dx + i) < ans.count
-                    && (dy + j) >= 0 && (dy + j) < ans[i].count {
+                    && (dy + j) >= 0 && (dy + j) < ans[i].count
+                {
                     if ans[dx + i][dy + j] == "M" {
                         ans[i][j] = Character("\((Int(String(ans[i][j])) ?? 0) + 1)")
                     }
                 }
             }
         }
-        
+
         if ans[i][j] == "E" {
             ans[i][j] = "B"
             for dx in [1, 0, -1] {
@@ -60,13 +64,14 @@ class Solution {
                     guard dx != 0 || dy != 0 else { continue }
                     if (dx + i) >= 0, (dx + i) < ans.count,
                         (dy + j) >= 0, (dy + j) < ans[i].count,
-                        ans[dx+i][dy+j] == "E" {
-                        ans = updateBoard(ans, [dx+i, dy+j])
+                        ans[dx + i][dy + j] == "E"
+                    {
+                        ans = updateBoard(ans, [dx + i, dy + j])
                     }
                 }
             }
         }
-        
+
         return ans
     }
 

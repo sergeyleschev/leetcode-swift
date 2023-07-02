@@ -48,7 +48,9 @@ class Solution {
                 if graph[i][j] {
                     var k = j + 1
                     while k <= n {
-                        if graph[j][k] && graph[i][k] { ans = min(ans, cnt[i] + cnt[j] + cnt[k] - 6) }
+                        if graph[j][k] && graph[i][k] {
+                            ans = min(ans, cnt[i] + cnt[j] + cnt[k] - 6)
+                        }
                         k += 1
                     }
                 }
@@ -58,5 +60,5 @@ class Solution {
         }
         return ans == Int.max ? -1 : ans
     }
-    
+
 }

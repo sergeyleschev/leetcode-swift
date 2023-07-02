@@ -13,7 +13,7 @@ class Solution {
 
     // Example 1:
     // Input: obstacles = [0,1,2,3,0]
-    // Output: 2 
+    // Output: 2
     // Explanation: The optimal solution is shown by the arrows above. There are 2 side jumps (red arrows).
     // Note that the frog can jump over obstacles only when making side jumps (as shown at point 2).
 
@@ -32,11 +32,11 @@ class Solution {
     // 1 <= n <= 5 * 10^5
     // 0 <= obstacles[i] <= 3
     // obstacles[0] == obstacles[n] == 0
-    
+
     func minSideJumps(_ obstacles: [Int]) -> Int {
         let n = obstacles.count
         var dp = [[Int]](repeating: [Int](repeating: 0, count: 4), count: n)
-        
+
         if obstacles[0] != 0 {
             dp[0][obstacles[0]] = Int.max
             dp[0][4 - obstacles[0]] = 1
@@ -45,7 +45,7 @@ class Solution {
             dp[0][3] = 1
         }
 
-        for idx in 1..<n {    
+        for idx in 1..<n {
             if obstacles[idx] != 0 { dp[idx][obstacles[idx]] = Int.max }
 
             for path in 1...3 where path != obstacles[idx] {
@@ -53,10 +53,12 @@ class Solution {
                     var ans = Int.max
                     for p in 1...3 where p != obstacles[idx] { ans = min(ans, dp[idx - 1][p]) }
                     dp[idx][path] = ans + 1
-                } else { dp[idx][path] = dp[idx - 1][path] }
+                } else {
+                    dp[idx][path] = dp[idx - 1][path]
+                }
             }
         }
-        return min(dp[n - 1][3], dp[n - 1][1],dp[n - 1][2])
+        return min(dp[n - 1][3], dp[n - 1][1], dp[n - 1][2])
     }
 
 }

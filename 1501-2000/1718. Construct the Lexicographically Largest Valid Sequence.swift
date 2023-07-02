@@ -29,11 +29,11 @@ class Solution {
         let N = 2 * n - 1
         var ans = [Int](repeating: 0, count: N)
         var visited = [Bool](repeating: false, count: n + 1)
-        
+
         func backtracking(_ curIndex: Int) -> Bool {
             guard curIndex != N else { return true }
             if ans[curIndex] != 0 { return backtracking(curIndex + 1) }
-            
+
             for i in stride(from: n, to: 0, by: -1) {
                 guard !visited[i] else { continue }
                 if i == 1 {
@@ -52,11 +52,11 @@ class Solution {
                     ans[curIndex + i] = 0
                     visited[i] = false
                 }
-                
+
             }
             return false
         }
-        
+
         backtracking(0)
         return ans
     }

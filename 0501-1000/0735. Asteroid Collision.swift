@@ -40,12 +40,15 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of asteroids.
     //   - space: O(n), where n is the number of asteroids.
-    
+
     func asteroidCollision(_ asteroids: [Int]) -> [Int] {
         var ans = [Int]()
 
         for asteroid in asteroids {
-            guard asteroid < 0 else { ans.append(asteroid); continue }
+            guard asteroid < 0 else {
+                ans.append(asteroid)
+                continue
+            }
 
             while let last = ans.last, last > 0, last < abs(asteroid) { ans.removeLast() }
 

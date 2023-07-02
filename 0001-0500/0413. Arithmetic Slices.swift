@@ -35,7 +35,7 @@ class Solution {
         guard n > 2 else { return 0 }
         var dp = 0
         var ans = 0
-        
+
         for i in 2..<n {
             if A[i] - A[i - 1] == A[i - 1] - A[i - 2] {
                 dp += 1
@@ -44,7 +44,7 @@ class Solution {
                 dp = 0
             }
         }
-        
+
         return ans
     }
 

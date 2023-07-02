@@ -1,13 +1,11 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public var val: Int
- *     public var next: ListNode?
- *     public init() { self.val = 0; self.next = nil; }
- *     public init(_ val: Int) { self.val = val; self.next = nil; }
- *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
- * }
- */
+/// Definition for singly-linked list.
+/// public class ListNode {
+///     public var val: Int
+///     public var next: ListNode?
+///     public init() { self.val = 0; self.next = nil; }
+///     public init(_ val: Int) { self.val = val; self.next = nil; }
+///     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -32,22 +30,22 @@ class Solution {
     // -5000 <= Node.val <= 5000
 
     // Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
-    
+
     func reverseList(_ head: ListNode?) -> ListNode? {
         var prev: ListNode?
         var next: ListNode?
         var curr: ListNode? = head
-        
+
         while curr != nil {
-            next =  curr?.next
+            next = curr?.next
             curr?.next = prev
             prev = curr
-            
+
             if next == nil { break }
             curr = next
         }
-        
+
         return curr
     }
-    
+
 }

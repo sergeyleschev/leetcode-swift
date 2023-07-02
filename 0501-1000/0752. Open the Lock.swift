@@ -60,7 +60,7 @@ class Solution {
                     for d in stride(from: -1, through: 1, by: 2) {
                         var neighbor = cur
                         neighbor[i] = ((neighbor[i] + d) + 10) % 10
-                        
+
                         if !visited.contains(neighbor) && !deadends.contains(neighbor) {
                             queue.append(neighbor)
                             visited.insert(neighbor)
@@ -70,7 +70,7 @@ class Solution {
             }
             turns += 1
         }
-        
+
         return -1
     }
 

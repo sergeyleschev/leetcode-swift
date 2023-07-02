@@ -23,7 +23,7 @@ class Solution {
     // text consists of lower case English letters only.
 
     func maxNumberOfBalloons(_ text: String) -> Int {
-        var countChars = ["b" : 0, "a" : 0, "l" : 0, "o" : 0, "n" : 0]
+        var countChars = ["b": 0, "a": 0, "l": 0, "o": 0, "n": 0]
         var l = 0
         var o = 0
 
@@ -31,7 +31,7 @@ class Solution {
             if char == "b" || char == "a" || char == "n" {
                 let currentVal = countChars[String(char)]!
                 countChars.updateValue(currentVal + 1, forKey: String(char))
-            } else if char == "l"  {
+            } else if char == "l" {
                 l += 1
                 if l == 2 {
                     let currentVal = countChars[String(char)]!

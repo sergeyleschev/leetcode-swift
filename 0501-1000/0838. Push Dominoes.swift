@@ -10,7 +10,7 @@ class Solution {
     // When a vertical domino has dominoes falling on it from both sides, it stays still due to the balance of the forces.
     // For the purposes of this question, we will consider that a falling domino expends no additional force to a falling or already fallen domino.
     // Given a string "S" representing the initial state. S[i] = 'L', if the i-th domino has been pushed to the left; S[i] = 'R', if the i-th domino has been pushed to the right; S[i] = '.', if the i-th domino has not been pushed.
-    // Return a string representing the final state. 
+    // Return a string representing the final state.
 
     // Example 1:
     // Input: ".L.R...LR..L.."
@@ -30,14 +30,14 @@ class Solution {
         var flag = "L"
         let dominoesArr = Array(dominoes)
         var ans = ""
-        
-        for (i, d) in (dominoesArr+["R"]).enumerated() {
+
+        for (i, d) in (dominoesArr + ["R"]).enumerated() {
             switch d {
             case "L":
                 if flag == "L" {
                     ans.append(String(repeating: "L", count: i - p + 1))
                 } else {
-                    if (i+p) % 2 == 0 {
+                    if (i + p) % 2 == 0 {
                         let m = (i + p - 1) / 2
                         ans.append(String.init(repeating: "R", count: m - p + 1))
                         ans.append(String.init(repeating: "L", count: i - m))
@@ -49,18 +49,18 @@ class Solution {
                     }
                 }
                 flag = "L"
-                p = i+1
+                p = i + 1
             case "R":
                 ans.append(String(repeating: flag == "R" ? "R" : ".", count: i - p))
                 ans.append("R")
                 flag = "R"
-                p = i+1
+                p = i + 1
             default: break
             }
         }
-        
+
         ans.removeLast()
         return ans
     }
-    
+
 }

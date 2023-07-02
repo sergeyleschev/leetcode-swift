@@ -1,11 +1,9 @@
-/**
- * // This is MountainArray's API interface.
- * // You should not implement it, or speculate about its implementation
- * interface MountainArray {
- *     public func get(_ index: Int) -> Int {}
- *     public func length() -> Int {}
- * }
- */
+/// // This is MountainArray's API interface.
+/// // You should not implement it, or speculate about its implementation
+/// interface MountainArray {
+///     public func get(_ index: Int) -> Int {}
+///     public func length() -> Int {}
+/// }
 class Solution {
 
     // Solution by Sergey Leschev
@@ -41,63 +39,66 @@ class Solution {
     func findInMountainArray(_ target: Int, _ mountainArr: MountainArray) -> Int {
         let length = mountainArr.length()
         let peakIndex = peakIndexOfMountain(mountainArr, 0, length - 1)
-        
-        if target > mountainArr.get(peakIndex) {return -1}
+
+        if target > mountainArr.get(peakIndex) { return -1 }
 
         let left = findInSortedArray(target, mountainArr, 0, peakIndex, true)
         if left != -1 { return left }
 
-        let right = findInSortedArray(target, mountainArr, peakIndex+1, length - 1, false)
+        let right = findInSortedArray(target, mountainArr, peakIndex + 1, length - 1, false)
         return right
     }
 
-    
     func peakIndexOfMountain(_ mountainArr: MountainArray, _ left: Int, _ right: Int) -> Int {
         while right - left >= 2 {
             let mid = left + (right - left) / 2
-            
-            if mountainArr.get(mid) > mountainArr.get(mid - 1) &&
-               mountainArr.get(mid) < mountainArr.get(mid + 1) {
+
+            if mountainArr.get(mid) > mountainArr.get(mid - 1)
+                && mountainArr.get(mid) < mountainArr.get(mid + 1)
+            {
                 return peakIndexOfMountain(mountainArr, mid + 1, right)
-            } else if mountainArr.get(mid) < mountainArr.get(mid - 1) &&
-                mountainArr.get(mid) > mountainArr.get(mid + 1) {
+            } else if mountainArr.get(mid) < mountainArr.get(mid - 1)
+                && mountainArr.get(mid) > mountainArr.get(mid + 1)
+            {
                 return peakIndexOfMountain(mountainArr, left, mid - 1)
             } else {
                 return mid
             }
         }
-        
+
         if mountainArr.get(left) < mountainArr.get(right) { return right }
         return left
     }
-    
 
-    func findInSortedArray(_ target: Int, _ mountainArr: MountainArray, _ left: Int, _ right: Int, _ ascending: Bool) -> Int {
+    func findInSortedArray(
+        _ target: Int, _ mountainArr: MountainArray, _ left: Int, _ right: Int, _ ascending: Bool
+    ) -> Int {
         while right - left >= 2 {
             let mid = left + (right - left) / 2
-            
+
             if shouldMoveToLeft(target, mountainArr, mid, ascending) {
                 return findInSortedArray(target, mountainArr, left, mid - 1, ascending)
             } else {
                 return findInSortedArray(target, mountainArr, mid, right, ascending)
             }
         }
-        
+
         if right - left == 1 {
-            if (mountainArr.get(left) == target) {
+            if mountainArr.get(left) == target {
                 return left
-            } else if (mountainArr.get(right) == target) {
+            } else if mountainArr.get(right) == target {
                 return right
             } else {
                 return -1
             }
         }
-        
+
         return (mountainArr.get(left) == target) ? left : -1
     }
-    
 
-    func shouldMoveToLeft(_ target: Int, _ mountainArr: MountainArray, _ mid: Int, _ ascending: Bool) -> Bool {
+    func shouldMoveToLeft(
+        _ target: Int, _ mountainArr: MountainArray, _ mid: Int, _ ascending: Bool
+    ) -> Bool {
         if ascending {
             return mountainArr.get(mid) > target
         } else {

@@ -36,13 +36,13 @@ class Solution {
         let totalSteps = h + v
         var combination = [[Int]](repeating: [Int](repeating: 0, count: h), count: totalSteps)
         var ans = ""
-                
+
         combination[0][0] = 1
-        
+
         for i in 1..<totalSteps {
             combination[i][0] = 1
             var j = 1
-            while j <= i &&  j < h{
+            while j <= i && j < h {
                 combination[i][j] = combination[i - 1][j - 1] + combination[i - 1][j]
                 j += 1
             }

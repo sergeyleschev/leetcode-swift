@@ -32,7 +32,6 @@ class Solution {
     var candidate1 = [-1, -1]
     var candidate2 = [-1, -1]
 
-    
     func findRedundantDirectedConnection(_ edges: [[Int]]) -> [Int] {
         var edges = edges
         var foundEdge: [Int]?
@@ -61,7 +60,6 @@ class Solution {
         // which is situation 1, just return candidate2.
         return candidate2
     }
-    
 
     private func union(_ x: Int, _ y: Int) -> [Int]? {
         let xParent = find(x)
@@ -76,7 +74,6 @@ class Solution {
         parents[yParent] = xParent
         return nil
     }
-    
 
     private func find(_ x: Int) -> Int {
         if parents[x] == nil { return x }

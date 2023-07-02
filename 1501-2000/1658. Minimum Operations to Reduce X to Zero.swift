@@ -6,7 +6,7 @@ class Solution {
     // You are given an integer array nums and an integer x. In one operation, you can either remove the leftmost or the rightmost element from the array nums and subtract its value from x. Note that this modifies the array for future operations.
 
     // Return the minimum number of operations to reduce x to exactly 0 if it is possible, otherwise, return -1.
-     
+
     // Example 1:
     // Input: nums = [1,1,4,2,3], x = 5
     // Output: 2
@@ -34,25 +34,25 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of nums.
     //   - space: O(1), only constant space is used.
-    
+
     func minOperations(_ nums: [Int], _ x: Int) -> Int {
         var sum = nums.reduce(0, +)
         let n = nums.count
         var ans = Int.max
         var i = 0
-        
+
         for j in 0..<n {
             sum -= nums[j]
-            
+
             while sum < x, i <= j {
                 sum += nums[i]
                 i += 1
             }
-            
+
             guard sum == x else { continue }
             ans = min(ans, (n - 1 - j) + i)
         }
-        
+
         return ans != Int.max ? ans : -1
     }
 

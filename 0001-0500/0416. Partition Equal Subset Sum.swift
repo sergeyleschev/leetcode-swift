@@ -27,7 +27,7 @@ class Solution {
     // - Complexity:
     //   - time: O(m * n), where m is the target, and n is the length of nums.
     //   - space: O(m), where m is the target.
-    
+
     func canPartition(_ nums: [Int]) -> Bool {
         guard !nums.isEmpty else { return false }
         var totalSum = nums.reduce(0, +)

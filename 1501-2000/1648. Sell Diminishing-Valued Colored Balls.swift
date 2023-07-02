@@ -47,9 +47,13 @@ class Solution {
             var prev = i > 0 ? inventory[i - 1] : 0
             let rounds = min(orders / colors, current - prev)
             orders -= rounds * colors
-            result = (result + (current * (current + 1) - (current - rounds) * (current - rounds + 1)) / 2 * colors) % 1000000007
+            result =
+                (result
+                    + (current * (current + 1) - (current - rounds) * (current - rounds + 1)) / 2
+                        * colors)
+                % 1_000_000_007
             if current - prev > rounds {
-                result = (result + orders * (current - rounds)) % 1000000007
+                result = (result + orders * (current - rounds)) % 1_000_000_007
                 break
             }
             colors += 1
@@ -57,5 +61,5 @@ class Solution {
         }
         return result
     }
-    
+
 }

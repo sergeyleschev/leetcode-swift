@@ -29,17 +29,17 @@ class Solution {
         var posRight = Array(repeating: 0, count: nums.count)
         var ans = Array(repeating: 0, count: 3)
 
-        for i in 0 ..< n { sum[i + 1] = sum[i] + nums[i] }
+        for i in 0..<n { sum[i + 1] = sum[i] + nums[i] }
 
         // DP for starting index of the left max sum interval
         var last = -1
-        for i in k ... n - 2 * k {
-            var tot: Int = sum[i] - sum[i-k]
+        for i in k...n - 2 * k {
+            var tot: Int = sum[i] - sum[i - k]
             if tot > last {
                 posLeft[i] = i - k
                 last = tot
             } else {
-                posLeft[i] = posLeft[i-1]
+                posLeft[i] = posLeft[i - 1]
             }
 
         }
@@ -56,8 +56,9 @@ class Solution {
         }
 
         // test all possible middle interval
-        for i in k ... n - 2 * k {
-            let l = posLeft[i], r = posRight[i]
+        for i in k...n - 2 * k {
+            let l = posLeft[i]
+            let r = posRight[i]
             let tot: Int = (sum[l + k] - sum[l]) + (sum[i + k] - sum[i]) + (sum[r + k] - sum[r])
             if tot > maxsum {
                 maxsum = tot
@@ -66,7 +67,7 @@ class Solution {
                 ans[2] = r
             }
         }
-        
+
         return ans
     }
 

@@ -38,7 +38,7 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the number of pixels in the image.
     //   - space: O(n), where n is the number of pixels in the image.
-    
+
     func floodFill(_ image: [[Int]], _ sr: Int, _ sc: Int, _ newColor: Int) -> [[Int]] {
         guard image[sr][sc] != newColor else { return image }
         var image = image
@@ -47,23 +47,22 @@ class Solution {
         return image
     }
 
-
     private func dfs(_ image: inout [[Int]], row: Int, col: Int, newColor: Int, oldColor: Int) {
         image[row][col] = newColor
 
-        if row + 1 < image.count, image[row+1][col] == oldColor {
+        if row + 1 < image.count, image[row + 1][col] == oldColor {
             dfs(&image, row: row + 1, col: col, newColor: newColor, oldColor: oldColor)
         }
 
-        if row - 1 >= 0, image[row-1][col] == oldColor {
+        if row - 1 >= 0, image[row - 1][col] == oldColor {
             dfs(&image, row: row - 1, col: col, newColor: newColor, oldColor: oldColor)
         }
 
-        if col + 1 < image[row].count, image[row][col+1] == oldColor {
+        if col + 1 < image[row].count, image[row][col + 1] == oldColor {
             dfs(&image, row: row, col: col + 1, newColor: newColor, oldColor: oldColor)
         }
 
-        if col - 1 >= 0, image[row][col-1] == oldColor {
+        if col - 1 >= 0, image[row][col - 1] == oldColor {
             dfs(&image, row: row, col: col - 1, newColor: newColor, oldColor: oldColor)
         }
     }

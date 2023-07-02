@@ -46,17 +46,17 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of arr.
     //   - space: O(n), where n is the length of arr.
-    
+
     func canFormArray(_ arr: [Int], _ pieces: [[Int]]) -> Bool {
         var dict = [Int: [Int]]()
         let n = arr.count
         var i = 0
-        
+
         for piece in pieces {
             guard !piece.isEmpty else { continue }
             dict[piece[0]] = piece
         }
-        
+
         while i < n {
             guard let targetPiece = dict[arr[i]] else { return false }
             for piece in targetPiece {
@@ -64,7 +64,7 @@ class Solution {
                 i += 1
             }
         }
-        
+
         return true
     }
 

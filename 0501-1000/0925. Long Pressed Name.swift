@@ -33,19 +33,28 @@ class Solution {
     func isLongPressedName(_ name: String, _ typed: String) -> Bool {
         var i = 0
         var j = 0
-        
+
         while i < name.count && j < typed.count {
-            if name[name.index(name.startIndex, offsetBy: i)] == typed[typed.index(typed.startIndex, offsetBy: j)] {
+            if name[name.index(name.startIndex, offsetBy: i)]
+                == typed[typed.index(typed.startIndex, offsetBy: j)]
+            {
                 i += 1
                 j += 1
-            } else if i > 0 && name[name.index(name.startIndex, offsetBy: i - 1)] == typed[typed.index(typed.startIndex, offsetBy: j)] {
-                 j += 1
-            } else { return false }
+            } else if i > 0
+                && name[name.index(name.startIndex, offsetBy: i - 1)]
+                    == typed[typed.index(typed.startIndex, offsetBy: j)]
+            {
+                j += 1
+            } else {
+                return false
+            }
         }
-        
+
         if i != name.count { return false }
         if j == typed.count { return true }
-        for c in typed[typed.index(typed.startIndex, offsetBy: j)...] where c != name.last { return false }
+        for c in typed[typed.index(typed.startIndex, offsetBy: j)...] where c != name.last {
+            return false
+        }
         return true
     }
 

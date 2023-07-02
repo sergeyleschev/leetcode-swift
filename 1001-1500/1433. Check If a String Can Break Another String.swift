@@ -13,7 +13,7 @@ class Solution {
 
     // Example 2:
     // Input: s1 = "abe", s2 = "acd"
-    // Output: false 
+    // Output: false
     // Explanation: All permutations for s1="abe" are: "abe", "aeb", "bae", "bea", "eab" and "eba" and all permutation for s2="acd" are: "acd", "adc", "cad", "cda", "dac" and "dca". However, there is not any permutation from s1 which can break some permutation from s2 and vice-versa.
 
     // Example 3:
@@ -34,9 +34,8 @@ class Solution {
 
 }
 
-
-private extension Array where Element == Character {
-    func breaks(_ other: [Character]) -> Bool {
+extension Array where Element == Character {
+    fileprivate func breaks(_ other: [Character]) -> Bool {
         zip(self, other).allSatisfy { lhs, rhs in lhs.asciiValue! >= rhs.asciiValue! }
     }
 }

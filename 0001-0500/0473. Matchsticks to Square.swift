@@ -26,41 +26,48 @@ class Solution {
         let sum = nums.reduce(0) { (r, v) -> Int in return r + v }
         if sum % 4 != 0 { return false }
         let target = sum / 4
-        let visited = Array<Bool>(repeating: false, count: n)
+        let visited = [Bool](repeating: false, count: n)
         let count = 0
-        
-        return canFind(target: target, left: target,
-                       visitied: visited, nums: nums, start: 0, count: count)
+
+        return canFind(
+            target: target, left: target,
+            visitied: visited, nums: nums, start: 0, count: count)
     }
-    
-    
-    func canFind(target: Int, left: Int, visitied: [Bool], nums: [Int], start: Int, count: Int) -> Bool {
+
+    func canFind(target: Int, left: Int, visitied: [Bool], nums: [Int], start: Int, count: Int)
+        -> Bool
+    {
         if start == nums.count || left < 0 { return false }
-        
+
         if left == 0 {
             let newCount = 1 + count
-            
-            if newCount == 3 { return true } 
-            else {
-                return canFind(target: target, left: target,
-                               visitied: visitied, nums: nums, start: 0, count: newCount)
+
+            if newCount == 3 {
+                return true
+            } else {
+                return canFind(
+                    target: target, left: target,
+                    visitied: visitied, nums: nums, start: 0, count: newCount)
             }
         }
-        
+
         for i in start..<nums.count {
             var v = visitied
             if v[i] { continue }
-            
+
             v[i] = true
-            if canFind(target: target, left: left - nums[i], visitied: v, nums: nums, start: i + 1, count: count) {
+            if canFind(
+                target: target, left: left - nums[i], visitied: v, nums: nums, start: i + 1,
+                count: count)
+            {
                 return true
             }
-            
+
             v[i] = false
-            
+
         }
-        
+
         return false
     }
-    
+
 }

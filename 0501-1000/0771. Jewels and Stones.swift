@@ -30,7 +30,7 @@ class Solution {
     // - Complexity:
     //   - time: O(j + s), where j is the length of the J, and s is the length of the S.
     //   - space: O(j), where j is the length of the J.
-    
+
     func numJewelsInStones(_ J: String, _ S: String) -> Int {
         var jewels = Set<Character>()
         for jewel in J { jewels.insert(jewel) }

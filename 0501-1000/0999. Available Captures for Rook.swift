@@ -35,7 +35,7 @@ class Solution {
         var r = 0
         var c = 0
         var res = 0
-        
+
         for i in 0..<row {
             for j in 0..<col {
                 if board[i][j] == "R" {
@@ -52,28 +52,40 @@ class Solution {
         while top >= 0 {
             let v = board[top][c]
             if v == "B" { break }
-            if v == "p" { res += 1; break }
+            if v == "p" {
+                res += 1
+                break
+            }
             top -= 1
         }
         while bottom < row {
             let v = board[bottom][c]
             if v == "B" { break }
-            if v == "p" { res += 1; break }
+            if v == "p" {
+                res += 1
+                break
+            }
             bottom += 1
         }
         while left >= 0 {
             let v = board[r][left]
             if v == "B" { break }
-            if v == "p" { res += 1; break }
+            if v == "p" {
+                res += 1
+                break
+            }
             left -= 1
         }
         while right < col {
             let v = board[r][right]
             if v == "B" { break }
-            if v == "p" { res += 1; break }
+            if v == "p" {
+                res += 1
+                break
+            }
             right += 1
         }
         return res
     }
-    
+
 }

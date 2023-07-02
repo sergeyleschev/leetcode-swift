@@ -25,7 +25,7 @@ class Solution {
     // Example 3:
     // Input: arr = [7,6,5,4,3,2,1], d = 1
     // Output: 7
-    // Explanation: Start at index 0. You can visit all the indicies. 
+    // Explanation: Start at index 0. You can visit all the indices.
 
     // Example 4:
     // Input: arr = [7,1,7,1,7,1], d = 2
@@ -42,25 +42,25 @@ class Solution {
 
     func maxJumps(_ arr: [Int], _ d: Int) -> Int {
         guard arr.count > 0 else { return 0 }
-        let count = arr.count // We will jump from lowest to highest
+        let count = arr.count  // We will jump from lowest to highest
         var entries = [(Int, Int)].init()
         var res = 1
         var dp = [Int](repeating: 1, count: count)
 
         for i in 0..<count { entries.append((arr[i], i)) }
         entries.sort { (kv1, kv2) -> Bool in kv1.0 < kv2.0 }
-        
+
         for i in 0..<count {
             let index = entries[i].1
-            
+
             // Find left part
             var j = index - 1
-            while j >= index-d && j >= 0 {
+            while j >= index - d && j >= 0 {
                 if arr[j] >= arr[index] { break }
                 if dp[j] != 0 { dp[index] = max(dp[index], dp[j] + 1) }
                 j -= 1
             }
-            
+
             // Find right part
             j = index + 1
             while j <= index + d && j < count {
@@ -68,11 +68,11 @@ class Solution {
                 if dp[j] != 0 { dp[index] = max(dp[index], dp[j] + 1) }
                 j += 1
             }
-            
+
             res = max(res, dp[index])
         }
-        
+
         return res
-    } 
+    }
 
 }

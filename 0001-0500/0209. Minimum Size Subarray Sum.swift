@@ -38,7 +38,7 @@ class Solution {
         var ans = Int.max
         var sum = 0
         var j = 0
-        
+
         for i in 0..<nums.count {
             sum += nums[i]
 

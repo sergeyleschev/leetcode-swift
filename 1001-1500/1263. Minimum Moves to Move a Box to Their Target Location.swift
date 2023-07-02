@@ -8,7 +8,7 @@ class Solution {
     // Your task is move the box 'B' to the target position 'T' under the following rules:
     // Player is represented by character 'S' and can move up, down, left, right in the grid if it is a floor (empy cell).
     // Floor is represented by character '.' that means free cell to walk.
-    // Wall is represented by character '#' that means obstacle  (impossible to walk there). 
+    // Wall is represented by character '#' that means obstacle  (impossible to walk there).
     // There is only one box 'B' and one target cell 'T' in the grid.
     // The box can be moved to an adjacent free cell by standing next to the box and then moving in the direction of the box. This is a push.
     // The player cannot walk through the box.
@@ -60,24 +60,23 @@ class Solution {
     typealias Direction = (dx: Int, dy: Int)
     private let directions: [Direction] = [(0, 1), (0, -1), (1, 0), (-1, 0)]
 
-
     private struct Position: Hashable {
         var x: Int
         var y: Int
         var toString: String { "(x: \(x)  y: \(y))" }
 
-        func manhattanDistance(to position: Position) -> Int { abs(position.x - x) + abs(position.y - y) }
+        func manhattanDistance(to position: Position) -> Int {
+            abs(position.x - x) + abs(position.y - y)
+        }
         func isNeighbor(with position: Position) -> Bool { manhattanDistance(to: position) == 1 }
     }
 
-    
-    private struct State: Hashable  {
+    private struct State: Hashable {
         var box: Position
         var person: Position
         var toString: String { "(box: \(box.toString) person: \(person.toString))" }
     }
 
-    
     func minPushBox(_ grid: [[Character]]) -> Int {
         let M = grid.count
         let N = grid[0].count
@@ -88,16 +87,18 @@ class Solution {
         var visited = Set<State>()
         var depth = 0
 
+        func valid(_ x: Int, _ y: Int) -> Bool {
+            x >= 0 && x < M && y >= 0 && y < N && grid[x][y] != "#"
+        }
 
-        func valid(_ x: Int, _ y: Int) -> Bool { x >= 0 && x < M  && y >= 0 && y < N && grid[x][y] != "#" }
-        
-
-        func getPersonPositions(_ currentBoxPosition: Position, _ currentPosonPosition: Position) -> [Position]{
+        func getPersonPositions(_ currentBoxPosition: Position, _ currentPosonPosition: Position)
+            -> [Position]
+        {
             var ans = [Position]()
             var visited = Set<Position>()
             visited.insert(currentPosonPosition)
             var queue = [currentPosonPosition]
-            
+
             while !queue.isEmpty {
                 var nextLevel = [Position]()
                 for p in queue {
@@ -123,28 +124,34 @@ class Solution {
         for r in 0..<M {
             for c in 0..<N {
                 switch grid[r][c] {
-                case "S": personPosition.x = r; personPosition.y = c
-                case "B": boxPosition.x = r; boxPosition.y = c
-                case "T": targetPosition.x = r; targetPosition.y = c
+                case "S":
+                    personPosition.x = r
+                    personPosition.y = c
+                case "B":
+                    boxPosition.x = r
+                    boxPosition.y = c
+                case "T":
+                    targetPosition.x = r
+                    targetPosition.y = c
                 default: break
                 }
             }
         }
-        
-        for p in getPersonPositions(boxPosition,personPosition) {
+
+        for p in getPersonPositions(boxPosition, personPosition) {
             let startState = State(box: boxPosition, person: p)
             queue.append(startState)
             visited.insert(startState)
         }
-        
+
         while !queue.isEmpty {
             depth += 1
             var nextLevel = [State]()
             for state in queue {
-                for personPosition in getPersonPositions(state.box,state.person) {
+                for personPosition in getPersonPositions(state.box, state.person) {
                     let nextBoxPositionX = state.box.x + state.box.x - personPosition.x
                     let nextBoxPositionY = state.box.y + state.box.y - personPosition.y
-                    
+
                     if valid(nextBoxPositionX, nextBoxPositionY) {
                         let nextBoxPosition = Position(x: nextBoxPositionX, y: nextBoxPositionY)
                         guard nextBoxPosition != targetPosition else { return depth }
@@ -162,4 +169,4 @@ class Solution {
         return -1
     }
 
- }
+}

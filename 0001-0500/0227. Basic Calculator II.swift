@@ -3,12 +3,12 @@ class Solution {
     // Solution by Sergey Leschev
 
     // 227. Basic Calculator II
-    // Given a string s which represents an expression, evaluate this expression and return its value. 
+    // Given a string s which represents an expression, evaluate this expression and return its value.
     // The integer division should truncate toward zero.
     // Note: You are not allowed to use any built-in function which evaluates strings as mathematical expressions, such as eval().
 
     // Calculates expression string.
-    
+
     // - Parameter s: The expression string.
     // - Returns: The result.
 
@@ -34,16 +34,16 @@ class Solution {
     // - Complexity:
     //   - time: O(n), where n is the length of `s`.
     //   - space: O(1), only constant space is used.
-    
+
     func calculate(_ s: String) -> Int {
         var num = 0
         var stack = [Int]()
         var op = "+"
-        
+
         for char in s + "+" where char != " " {
             if let number = char.wholeNumberValue {
                 num = num * 10 + number
-            
+
             } else {
                 switch op {
                 case "+": stack.append(num)
@@ -52,13 +52,13 @@ class Solution {
                 case "/": stack.append(stack.removeLast() / num)
                 default: break
                 }
-                
+
                 num = 0
                 op = String(char)
             }
         }
-        
+
         return stack.reduce(0, +)
     }
-    
+
 }

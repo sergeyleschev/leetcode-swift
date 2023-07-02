@@ -18,25 +18,25 @@ class Solution {
     // Example 2:
     // Input: numRows = 1
     // Output: [[1]]
-     
+
     // Constraints:
     // 1 <= numRows <= 30
 
     // - Complexity:
     //   - time: O(n * n), where n is the numRows.
     //   - space: O(n * n), where n is the numRows.
-    
+
     func generate(_ numRows: Int) -> [[Int]] {
         var ans = [[Int]](repeating: [Int](), count: numRows)
 
         for i in 0..<numRows {
-            ans[i] = [Int](repeating: 0, count: i+1)
+            ans[i] = [Int](repeating: 0, count: i + 1)
 
-            for j in 0..<i+1 {
+            for j in 0..<i + 1 {
                 if j == 0 || j == i {
                     ans[i][j] = 1
                 } else {
-                    ans[i][j] = ans[i-1][j-1] + ans[i-1][j]
+                    ans[i][j] = ans[i - 1][j - 1] + ans[i - 1][j]
                 }
             }
         }

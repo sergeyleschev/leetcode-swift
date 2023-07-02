@@ -14,10 +14,10 @@ class Solution {
     // Input: binary = "000110"
     // Output: "111011"
     // Explanation: A valid transformation sequence can be:
-    // "000110" -> "000101" 
-    // "000101" -> "100101" 
-    // "100101" -> "110101" 
-    // "110101" -> "110011" 
+    // "000110" -> "000101"
+    // "000101" -> "100101"
+    // "100101" -> "110101"
+    // "110101" -> "110011"
     // "110011" -> "111011"
 
     // Example 2:
@@ -41,10 +41,10 @@ class Solution {
             idx = binary.index(after: idx)
         }
         let oneCnt = binary.distance(from: firstIdx, to: binary.endIndex) - zeroCnt
-        if zeroCnt >  1 { ans += String(repeating: "1", count: zeroCnt - 1) }
+        if zeroCnt > 1 { ans += String(repeating: "1", count: zeroCnt - 1) }
         ans += "0"
         if oneCnt > 0 { ans.append(String(repeating: "1", count: oneCnt)) }
         return ans
     }
-    
+
 }

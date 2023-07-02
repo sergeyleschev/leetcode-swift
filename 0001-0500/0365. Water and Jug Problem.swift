@@ -13,7 +13,7 @@ class Solution {
     // Example 1:
     // Input: jug1Capacity = 3, jug2Capacity = 5, targetCapacity = 4
     // Output: true
-    // Explanation: The famous Die Hard example 
+    // Explanation: The famous Die Hard example
 
     // Example 2:
     // Input: jug1Capacity = 2, jug2Capacity = 6, targetCapacity = 5
@@ -30,13 +30,12 @@ class Solution {
         if x + y < z { return false }
         if x == z || y == z || x + y == z { return true }
         if x == 0 && y == z { return true }
-        
+
         return z % helper(x, y) == 0
     }
-
 
     func helper(_ x: Int, _ y: Int) -> Int {
         return x % y == 0 ? y : helper(y, x % y)
     }
-    
+
 }

@@ -19,7 +19,7 @@ class Solution {
     // Example 3:
     // Input: s = "barfoofoobarthefoobarman", words = ["bar","foo","the"]
     // Output: [6,9,12]
-     
+
     // Constraints:
     // 1 <= s.length <= 10^4
     // s consists of lower-case English letters.
@@ -53,25 +53,23 @@ class Solution {
         "w": 101,
         "x": 103,
         "y": 107,
-        "z": 109
+        "z": 109,
     ]
-
 
     func hash(_ s: [Character]) -> Int {
         var hashvalue: Int = 0
-        for c in s {  hashvalue += map[c]! }
+        for c in s { hashvalue += map[c]! }
         return hashvalue
     }
-
 
     func findSubstring(_ s: String, _ words: [String]) -> [Int] {
         let s = Array(s)
         let words = words.map({ Array($0) })
         let sLength = s.count
         let wLength = words.reduce(0, { $0 + $1.count })
-        
+
         if sLength < wLength { return [] }
-        
+
         let wHash = words.reduce(0, { $0 + hash($1) })
         let wSubLength = words.count > 0 ? words[0].count : 0
         var invalidStringList: [[Character]] = []
@@ -82,7 +80,7 @@ class Solution {
 
         while i <= sLength - wLength {
             if i == 0 {
-                sHash = hash(Array(s[i..<i+wLength]))
+                sHash = hash(Array(s[i..<i + wLength]))
             } else {
                 sHash += map[s[i + wLength - 1]]! - map[s[i - 1]]!
             }

@@ -24,7 +24,7 @@ class Solution {
     // 1 <= wall[i][j] <= 2^31 - 1
 
     func leastBricks(_ wall: [[Int]]) -> Int {
-        var numOfWidths = [Int : Int]()
+        var numOfWidths = [Int: Int]()
 
         for row in wall {
             var sum = 0
@@ -42,7 +42,7 @@ class Solution {
         for (_, sum) in numOfWidths {
             result = min(result, wall.count - sum)
         }
-        
+
         return result
     }
 

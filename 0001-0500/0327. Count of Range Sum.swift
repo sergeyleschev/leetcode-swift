@@ -26,7 +26,7 @@ class Solution {
         let n = nums.count
         var ans = 0
         var dp = Array.init(repeating: 0, count: n)
-        
+
         for i in 0..<n {
             for j in i..<n {
                 if i == j {
@@ -39,7 +39,7 @@ class Solution {
                 }
             }
         }
-        
+
         return ans
     }
 

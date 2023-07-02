@@ -17,6 +17,8 @@ class Solution {
     // Constraints:
     // The given address is a valid IPv4 address.
 
-    func defangIPaddr(_ address: String) -> String { address.replacingOccurrences(of: ".", with: "[.]") }
-    
+    func defangIPaddr(_ address: String) -> String {
+        address.replacingOccurrences(of: ".", with: "[.]")
+    }
+
 }

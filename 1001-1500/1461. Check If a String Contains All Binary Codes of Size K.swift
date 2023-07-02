@@ -19,7 +19,7 @@ class Solution {
     // Example 3:
     // Input: s = "0110", k = 1
     // Output: true
-    // Explanation: The binary codes of length 1 are "0" and "1", it is clear that both exist as a substring. 
+    // Explanation: The binary codes of length 1 are "0" and "1", it is clear that both exist as a substring.
 
     // Example 4:
     // Input: s = "0110", k = 2
@@ -61,7 +61,7 @@ class Solution {
                 if possible == 0 { return true }
             }
         }
-        
+
         return false
     }
 

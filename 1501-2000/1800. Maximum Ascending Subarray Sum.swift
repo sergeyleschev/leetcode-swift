@@ -5,7 +5,7 @@ class Solution {
     // 1800. Maximum Ascending Subarray Sum
     // Given an array of positive integers nums, return the maximum possible sum of an ascending subarray in nums.
     // A subarray is defined as a contiguous sequence of numbers in an array.
-    // A subarray [numsl, numsl+1, ..., numsr-1, numsr] is ascending if for all i where l <= i < r, numsi < numsi+1. Note that a subarray of size 1 is ascending.
+    // A subarray [nums(l), nums(l+1), ..., nums(r-1), nums(r)] is ascending if for all i where l <= i < r, nums(i) < nums(i+1). Note that a subarray of size 1 is ascending.
 
     // Example 1:
     // Input: nums = [10,20,30,5,10,50]
@@ -33,7 +33,7 @@ class Solution {
     func maxAscendingSum(_ nums: [Int]) -> Int {
         let n = nums.count
         var ans = 0
-        
+
         for i in 0..<n {
             var t = nums[i]
             var j = i + 1
@@ -45,5 +45,5 @@ class Solution {
         }
         return ans
     }
-    
+
 }

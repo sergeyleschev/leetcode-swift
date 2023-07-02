@@ -12,7 +12,7 @@ class Solution {
     // Example 2:
     // Input: s = "abpcplea", dictionary = ["a","b","c"]
     // Output: "a"
-     
+
     // Constraints:
     // 1 <= s.length <= 1000
     // 1 <= dictionary.length <= 1000
@@ -22,13 +22,13 @@ class Solution {
     func findLongestWord(_ s: String, _ d: [String]) -> String {
         let chars = Array(s)
         var res = ""
-        
+
         for str in d {
             var strArr = Array(str)
             var i = 0
-            
+
             for char in chars where i < strArr.count && char == strArr[i] { i += 1 }
-            
+
             if i == strArr.count && i >= res.count {
                 if i > res.count || res.compare(str) == .orderedDescending { res = str }
             }

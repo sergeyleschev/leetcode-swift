@@ -13,7 +13,7 @@ class Solution {
     // Output: 7
     // Explanation: First day you can finish the first 5 jobs, total difficulty = 6.
     // Second day you can finish the last job, total difficulty = 1.
-    // The difficulty of the schedule = 6 + 1 = 7 
+    // The difficulty of the schedule = 6 + 1 = 7
 
     // Example 2:
     // Input: jobDifficulty = [9,9,9], d = 4
@@ -48,14 +48,14 @@ class Solution {
 
             for j in stride(from: lastJob, through: i, by: -1) {
                 if i == d - 1 {
-                    dp[i][j] = jobDifficulty[j ... lastJob].max()!
+                    dp[i][j] = jobDifficulty[j...lastJob].max()!
                 } else {
                     var difficulty = Int.min
                     dp[i][j] = Int.max
 
                     let firstJob = i == 0 ? 0 : j
                     let lastJob = i == 0 ? j : lastJob
-                    for k in firstJob ... lastJob {
+                    for k in firstJob...lastJob {
                         difficulty = max(difficulty, jobDifficulty[k])
                         dp[i][j] = min(dp[i][j], difficulty + dp[i + 1][k + 1])
                     }

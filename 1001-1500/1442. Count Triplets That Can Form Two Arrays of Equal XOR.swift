@@ -44,14 +44,16 @@ class Solution {
         let N = arr.count
 
         for i in 1..<N { dp.append(dp.last! ^ arr[i]) }
-        
+
         for i in 0..<(N - 1) {
             for j in (i + 1)..<N {
-                for k in j..<N where dp[i] ^ dp[j - 1] ^ arr[i] == dp[k] ^ dp[j] ^ arr[j] { ans += 1 }
+                for k in j..<N where dp[i] ^ dp[j - 1] ^ arr[i] == dp[k] ^ dp[j] ^ arr[j] {
+                    ans += 1
+                }
             }
         }
 
         return ans
     }
-    
+
 }

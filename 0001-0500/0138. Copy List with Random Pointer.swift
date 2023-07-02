@@ -1,16 +1,14 @@
-/**
- * Definition for a Node.
- * public class Node {
- *     public var val: Int
- *     public var next: Node?
- *     public var random: Node?
- *     public init(_ val: Int) {
- *         self.val = val
- *         self.next = nil
- *    	   self.random = nil
- *     }
- * }
- */
+/// Definition for a Node.
+/// public class Node {
+///     public var val: Int
+///     public var next: Node?
+///     public var random: Node?
+///     public init(_ val: Int) {
+///         self.val = val
+///         self.next = nil
+///    	   self.random = nil
+///     }
+/// }
 
 class Solution {
 
@@ -59,7 +57,7 @@ class Solution {
 
     func copyRandomList(_ head: Node?) -> Node? {
         guard let head = head else { return nil }
-        
+
         var cur: Node? = head
         while let val = cur?.val {
             var newNode = Node(val)
@@ -67,17 +65,17 @@ class Solution {
             cur?.next = newNode
             cur = newNode.next
         }
-        
+
         cur = head
         while cur != nil {
             cur?.next?.random = cur?.random?.next
             cur = cur?.next?.next
         }
-        
+
         var oldList: Node? = head
         var newList = head.next
         let headOld = head.next
-        
+
         while oldList != nil {
             oldList?.next = oldList?.next?.next
             newList?.next = newList?.next?.next

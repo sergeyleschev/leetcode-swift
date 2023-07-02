@@ -35,13 +35,12 @@ class Solution {
         var c = c
         var minMove = 2
 
-        if a > b  { (a, b) = (b, a) }
+        if a > b { (a, b) = (b, a) }
         if a > c { (a, c) = (c, a) }
         if b > c { (c, b) = (b, c) }
 
-        if  b - a <= 1 && c - b <= 1 { minMove = 0 } 
-        else if b - a <= 2 || c - b <= 2 { minMove = 1 }
-        
+        if b - a <= 1 && c - b <= 1 { minMove = 0 } else if b - a <= 2 || c - b <= 2 { minMove = 1 }
+
         let leftMaxMove = max(0, b - a - 1)
         let rightMaxMove = max(0, c - b - 1)
         return [minMove, leftMaxMove + rightMaxMove]
