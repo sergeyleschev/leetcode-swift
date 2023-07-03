@@ -3,6 +3,9 @@ class Solution {
     // Solution by Sergey Leschev
     // 2577. Minimum Time to Visit a Cell In a Grid
 
+    // Time complexity: O(mn log(mn))
+    // Space complexity: O(m*n)
+
     func minimumTime(_ grid: [[Int]]) -> Int {
         // Check if the starting points are blocked
         if grid[0][1] > 1 && grid[1][0] > 1 {
