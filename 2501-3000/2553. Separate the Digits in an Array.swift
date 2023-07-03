@@ -1,6 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
+    // 2553. Separate the Digits in an Array
 
     func separateDigits(_ nums: [Int]) -> [Int] {
         var answer = [Int]()
