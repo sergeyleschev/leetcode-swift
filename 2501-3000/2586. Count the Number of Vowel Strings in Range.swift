@@ -1,6 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
+    // 2586. Count the Number of Vowel Strings in Range
 
     func vowelStrings(_ words: [String], _ left: Int, _ right: Int) -> Int {
         let vowels: Set<Character> = ["a", "e", "i", "o", "u"]
