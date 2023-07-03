@@ -1,6 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
+    // 2595. Number of Even and Odd Bits
 
     func evenOddBit(_ n: Int) -> [Int] {
         var even = 0
