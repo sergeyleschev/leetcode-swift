@@ -1,6 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
+    // 2566. Maximum Difference by Remapping a Digit
 
     func minMaxDifference(_ num: Int) -> Int {
         var minNum = num
