@@ -1,6 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
+    // 2585. Number of Ways to Earn Points
 
     func waysToReachTarget(_ target: Int, _ types: [[Int]]) -> Int {
         let mod = 1_000_000_007
