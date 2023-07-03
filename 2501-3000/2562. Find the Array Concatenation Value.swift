@@ -1,6 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
+    // 2562. Find the Array Concatenation Value
 
     func findTheArrayConcVal(_ nums: [Int]) -> Int {
         var concatValue = 0
