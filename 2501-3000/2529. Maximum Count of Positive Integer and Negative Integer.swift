@@ -1,6 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
+    // 2529. Maximum Count of Positive Integer and Negative Integer
 
     func maximumCount(_ nums: [Int]) -> Int {
         var posCount = 0
