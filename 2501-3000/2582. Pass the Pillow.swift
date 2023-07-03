@@ -1,6 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
+    // 2582. Pass the Pillow
 
     func passThePillow(_ n: Int, _ time: Int) -> Int {
         var currentIndex = 1
