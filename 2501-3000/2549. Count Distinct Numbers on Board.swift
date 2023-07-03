@@ -1,6 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
+    // 2549. Count Distinct Numbers on Board
 
     func distinctIntegers(_ n: Int) -> Int {
         var board = Set<Int>()
