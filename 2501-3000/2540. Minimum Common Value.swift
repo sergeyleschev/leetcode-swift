@@ -1,6 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
+    // 2540. Minimum Common Value
 
     func getCommon(_ nums1: [Int], _ nums2: [Int]) -> Int {
         var i = 0
