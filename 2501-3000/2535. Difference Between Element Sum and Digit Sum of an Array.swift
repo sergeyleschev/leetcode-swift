@@ -1,6 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
+    // 2535. Difference Between Element Sum and Digit Sum of an Array
 
     func differenceOfSum(_ nums: [Int]) -> Int {
         var elementSum = 0
