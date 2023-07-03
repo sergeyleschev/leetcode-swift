@@ -1,6 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
+    // 2570. Merge Two 2D Arrays by Summing Values
 
     func mergeArrays(_ nums1: [[Int]], _ nums2: [[Int]]) -> [[Int]] {
         var idToSum = [Int: Int]()
