@@ -17,9 +17,10 @@ class Solution {
 
     // For each visited position, there are potentially O(k) target positions that can be reached 
     // through reverse operations. To avoid the multiplicative cost of iterating over all 
-    // these potential positions, we update the nextNode2s array. This array initially points forward by 2, 
-    // but we update it dynamically to point beyond all the target positions considered 
-    // for each visited position. 
+    // these potential positions, we update the nextNode2s array. 
+    
+    // This array initially points forward by 2, but we update it dynamically 
+    // to point beyond all the target positions considered for each visited position. 
     
     // This optimization helps improve the efficiency of the algorithm and avoids unnecessary computations.
 
