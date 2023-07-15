@@ -1,6 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
+    // 2736. Maximum Sum Queries
     // Time complexity: O(qlogq + (n + q) * logn)
     // Space complexity: O(n)
 
