@@ -1,9 +1,10 @@
 // Solution by Sergey Leschev
+// 2620. Counter
 
 function createCounter(n: number): () => number {
-    let count = n;
+    let count = n
     return function () {
-        return count++;
+        return count++
     }
 }
 
