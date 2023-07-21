@@ -1,6 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
+    // 2496. Maximum Value of a String in an Array
 
     func maximumValue(_ strs: [String]) -> Int {
         var maxValue = 0
