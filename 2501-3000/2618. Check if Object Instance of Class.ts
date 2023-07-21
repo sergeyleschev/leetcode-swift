@@ -1,20 +1,21 @@
 // Solution by Sergey Leschev
+// 2618. Check if Object Instance of Class
 
 function checkIfInstanceOf(obj: any, classFunction: any): boolean {
     if (obj === null || obj === undefined || classFunction === null || classFunction === undefined) {
-        return false;
+        return false
     }
 
-    let prototype = Object.getPrototypeOf(obj);
+    let prototype = Object.getPrototypeOf(obj)
 
     while (prototype != null) {
         if (prototype.constructor === classFunction) {
-            return true;
+            return true
         }
-        prototype = Object.getPrototypeOf(prototype);
+        prototype = Object.getPrototypeOf(prototype)
     }
 
-    return false;
+    return false
 }
 
 /**
