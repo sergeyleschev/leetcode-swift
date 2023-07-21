@@ -1,6 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
+    // 2542. Maximum Subsequence Score
 
     func maxScore(_ nums1: [Int], _ nums2: [Int], _ k: Int) -> Int {
         let a = zip(nums1, nums2).sorted(by: { $0.1 > $1.1 })
