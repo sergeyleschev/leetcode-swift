@@ -1,7 +1,7 @@
 class Solution {
 
-    // 2646. Minimize the Total Price of the Trips
     // Solution by Sergey Leschev
+    // 2646. Minimize the Total Price of the Trips
 
     var count = [Int](repeating: 0, count: 100)
     var graph = [[Int]](repeating: [Int](), count: 100)
