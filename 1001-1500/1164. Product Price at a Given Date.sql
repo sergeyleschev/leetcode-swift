@@ -1,6 +1,6 @@
 -- Solution by Sergey Leschev
 -- 1164. Product Price at a Given Date
-
+-- MySQL
 SELECT
     product_id,
     COALESCE(new_price, 10) AS price
