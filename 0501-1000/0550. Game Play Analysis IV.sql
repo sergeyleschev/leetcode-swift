@@ -1,6 +1,6 @@
--- MySQL
 -- Solution by Sergey Leschev
 -- 0550. Game Play Analysis IV
+-- MySQL
 SELECT
     ROUND(COUNT(t2.player_id) / COUNT(t1.player_id), 2) AS fraction
 FROM
