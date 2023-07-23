@@ -1,5 +1,4 @@
 -- Solution by Sergey Leschev
-
 -- 197. Rising Temperature
 -- Table: Weather
 -- +---------------+---------+
@@ -32,10 +31,12 @@
 -- +----+
 -- In 2015-01-02, temperature was higher than the previous day (10 -> 25).
 -- In 2015-01-04, temperature was higher than the previous day (20 -> 30).
-
--- Write your MySQL query statement below
-
-select wt1.Id
-from Weather wt1, Weather wt2
-where wt1.Temperature > wt2.Temperature and
-      to_days(wt1.RecordDate) - to_days(wt2.RecordDate) = 1;
+-- MySQL query statement below
+select
+    wt1.Id
+from
+    Weather wt1,
+    Weather wt2
+where
+    wt1.Temperature > wt2.Temperature
+    and to_days(wt1.RecordDate) - to_days(wt2.RecordDate) = 1;

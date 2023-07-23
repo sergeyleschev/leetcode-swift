@@ -1,5 +1,4 @@
 -- Solution by Sergey Leschev
-
 -- 176. Second Highest Salary
 -- Write a SQL query to get the second highest salary from the Employee table.
 -- +----+--------+
@@ -15,9 +14,15 @@
 -- +---------------------+
 -- | 200                 |
 -- +---------------------+
-
--- Write your MySQL query statement below
-
-select max(Salary) as SecondHighestSalary
- from Employee
-where Salary < (select max(Salary) from Employee)
+-- MySQL query statement below
+select
+    max(Salary) as SecondHighestSalary
+from
+    Employee
+where
+    Salary < (
+        select
+            max(Salary)
+        from
+            Employee
+    )

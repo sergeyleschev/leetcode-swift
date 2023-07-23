@@ -1,5 +1,4 @@
 -- Solution by Sergey Leschev
-
 -- 184. Department Highest Salary
 -- The Employee table holds all employees. Every employee has an Id, a salary, and there is also a column for the department Id.
 -- +----+-------+--------+--------------+
@@ -28,14 +27,24 @@
 -- +------------+----------+--------+
 -- Explanation:
 -- Max and Jim both have the highest salary in the IT department and Henry has the highest salary in the Sales department.
-
--- Write your MySQL query statement below
-
-select D.Name as Department, E.Name as Employee, E.Salary 
-from Employee E,
-	 (select DepartmentId, max(Salary) as max from Employee group by DepartmentId) T,
-	 Department D
-where E.DepartmentId = T.DepartmentId 
-  and E.Salary = T.max
-  and E.DepartmentId = D.id
-
+-- MySQL query statement below
+select
+    D.Name as Department,
+    E.Name as Employee,
+    E.Salary
+from
+    Employee E,
+    (
+        select
+            DepartmentId,
+            max(Salary) as max
+        from
+            Employee
+        group by
+            DepartmentId
+    ) T,
+    Department D
+where
+    E.DepartmentId = T.DepartmentId
+    and E.Salary = T.max
+    and E.DepartmentId = D.id

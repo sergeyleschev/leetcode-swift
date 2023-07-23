@@ -1,5 +1,4 @@
 -- Solution by Sergey Leschev
-
 -- 178. Rank Scores
 -- Write a SQL query to rank scores. If there is a tie between two scores, both should have the same ranking. Note that after a tie, the next ranking number should be the next consecutive integer value. In other words, there should be no "holes" between ranks.
 -- +----+-------+
@@ -24,11 +23,22 @@
 -- | 3.50  | 4       |
 -- +-------+---------+
 -- Important Note: For MySQL solutions, to escape reserved words used as column names, you can use an apostrophe before and after the keyword. For example Rank.
-
--- Write your T-SQL query statement below
-
-select Scores.Score, count(Ranking.Score) as Rank
-  from Scores , (select distinct Score from Scores) Ranking
- where Scores.Score <= Ranking.Score
- group by Scores.Id, Scores.Score
- order by Scores.Score desc;
+-- T-SQL query statement below
+select
+    Scores.Score,
+    count(Ranking.Score) as Rank
+from
+    Scores,
+    (
+        select
+            distinct Score
+        from
+            Scores
+    ) Ranking
+where
+    Scores.Score <= Ranking.Score
+group by
+    Scores.Id,
+    Scores.Score
+order by
+    Scores.Score desc;

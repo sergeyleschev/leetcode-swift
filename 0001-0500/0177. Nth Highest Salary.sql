@@ -1,5 +1,4 @@
 -- Solution by Sergey Leschev
-
 -- 177. Nth Highest Salary
 -- Write a SQL query to get the nth highest salary from the Employee table.
 -- +----+--------+
@@ -15,13 +14,21 @@
 -- +------------------------+
 -- | 200                    |
 -- +------------------------+
+create function getNthHighestSalary(N int) returns int begin declare M int;
 
-create function getNthHighestSalary(N int) returns int
-begin
-  declare M int;
-  set M = N -1;
-    return (
-        # Write your MySQL query statement below.
-        select distinct Salary from Employee order by Salary desc limit M, 1
-    );
+set
+    M = N -1;
+
+return (
+    # MySQL query statement below.
+    select
+        distinct Salary
+    from
+        Employee
+    order by
+        Salary desc
+    limit
+        M, 1
+);
+
 end

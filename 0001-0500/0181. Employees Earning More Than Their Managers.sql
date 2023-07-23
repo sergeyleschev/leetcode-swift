@@ -1,5 +1,4 @@
 -- Solution by Sergey Leschev
-
 -- 181. Employees Earning More Than Their Managers
 -- The Employee table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.
 -- +----+-------+--------+-----------+
@@ -16,9 +15,12 @@
 -- +----------+
 -- | Joe      |
 -- +----------+
-
--- Write your MySQL query statement below
-
-select E1.Name as Employee
-  from Employee as E1, Employee as E2 
- where E1.ManagerId = E2.Id and E1.Salary > E2.Salary
+-- MySQL query statement below
+select
+    E1.Name as Employee
+from
+    Employee as E1,
+    Employee as E2
+where
+    E1.ManagerId = E2.Id
+    and E1.Salary > E2.Salary

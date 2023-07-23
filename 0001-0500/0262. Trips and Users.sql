@@ -88,7 +88,7 @@
 --   - Hence there are 2 unbanned request in total, 1 of which were canceled.
 --   - The Cancellation Rate is (1 / 2) = 0.50
 
-# Write your MySQL query statement below
+# MySQL query statement below
 
 select t.Request_at as Day,
        round (cast(sum(case when t.Status = 'completed' then 0 else 1 end) as float) / count(t.Status), 2) as 'Cancellation Rate' 

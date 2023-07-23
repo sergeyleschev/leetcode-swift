@@ -1,5 +1,4 @@
 -- Solution by Sergey Leschev
-
 -- 182. Duplicate Emails
 -- Write a SQL query to find all duplicate emails in a table named Person.
 -- +----+---------+
@@ -16,7 +15,12 @@
 -- | a@b.com |
 -- +---------+
 -- Note: All emails are in lowercase.
-
--- Write your MySQL query statement below
-
-select distinct one.Email from Person one, Person two where one.Id <> two.Id and one.Email = two.Email;
+-- MySQL query statement below
+select
+    distinct one.Email
+from
+    Person one,
+    Person two
+where
+    one.Id <> two.Id
+    and one.Email = two.Email;

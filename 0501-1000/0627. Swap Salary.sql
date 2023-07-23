@@ -1,5 +1,4 @@
 -- Solution by Sergey Leschev
-
 -- 627. Swap Salary
 -- Table: Salary
 -- +-------------+----------+
@@ -15,7 +14,6 @@
 -- The table contains information about an employee.
 -- Write an SQL query to swap all 'f' and 'm' values (i.e., change all 'f' values to 'm' and vice versa) with a single update statement and no intermediate temp table(s).
 -- Note that you must write a single update statement, DO NOT write any select statement for this problem.
-
 -- The query result format is in the following example:
 -- Salary table:
 -- +----+------+-----+--------+
@@ -37,12 +35,12 @@
 -- +----+------+-----+--------+
 -- (1, A) and (3, C) were changed from 'm' to 'f'.
 -- (2, B) and (4, D) were changed from 'f' to 'm'.
-
--- Write your MySQL query statement below
-
-update salary
-   set sex = 
-       case sex
-            when 'm' then 'f'
-            else 'm'
-       end
+-- MySQL query statement below
+update
+    salary
+set
+    sex = case
+        sex
+        when 'm' then 'f'
+        else 'm'
+    end
