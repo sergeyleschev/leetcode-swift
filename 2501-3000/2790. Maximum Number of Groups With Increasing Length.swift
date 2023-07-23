@@ -17,9 +17,8 @@ class Solution {
 
     // 6. `Returning the result`: After iterating through the entire sorted array, the count variable will represent the maximum number of groups that can be created while satisfying the conditions. The function returns this count.
 
-    // The `time complexity` of this solution is dominated by the sorting step, making it O(N logN), where N is the length of the input array usageLimits. The rest of the operations involve simple arithmetic and comparisons, which take linear time. Therefore, the overall time complexity of the function is O(N logN).
-
     // Time Complexity: O(N logN)
+    // The `time complexity` of this solution is dominated by the sorting step, making it O(N logN), where N is the length of the input array usageLimits. The rest of the operations involve simple arithmetic and comparisons, which take linear time. Therefore, the overall time complexity of the function is O(N logN).
 
     func maxIncreasingGroups(_ usageLimits: [Int]) -> Int {
         var sortedLimits = usageLimits.sorted()
