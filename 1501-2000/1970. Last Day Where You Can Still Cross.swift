@@ -1,6 +1,7 @@
 class Solution {
 
     // Solution by Sergey Leschev
+    
     // 1970. Last Day Where You Can Still Cross
 
     func latestDayToCross(_ row: Int, _ col: Int, _ cells: [[Int]]) -> Int {
