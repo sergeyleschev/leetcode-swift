@@ -4,8 +4,8 @@ class Solution {
     // 2242. Maximum Score of a Node Sequence
 
     func maximumScore(_ scores: [Int], _ edges: [[Int]]) -> Int {
-        let N = scores.count
-        var graph = [[Int]](repeating: [], count: N)
+        let n = scores.count
+        var graph = [[Int]](repeating: [], count: n)
 
         func add(_ node: Int, _ child: Int) {
             var children = graph[node]
