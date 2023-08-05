@@ -25,7 +25,7 @@ class Solution {
             let ca = ta[0] + ta[2]
             let cb = tb[0] + tb[2]
             if ca == cb { return b < a }  // larger index cross first
-            return cb < ca  // larger cross time cross first.
+            return cb < ca  // larger cross time cross first
         })
         var rBank = PriorityQueue<Int>(comparator: { (a, b) -> Bool in
             let ta = time[a]
@@ -33,7 +33,7 @@ class Solution {
             let ca = ta[0] + ta[2]
             let cb = tb[0] + tb[2]
             if ca == cb { return b < a }  // larger index cross first
-            return cb < ca  // larger cross time cross first.
+            return cb < ca  // larger cross time cross first
         })
 
         // 0 -> time of the worker will be waiting to cross the bridge, 1 ->idx
@@ -62,7 +62,7 @@ class Solution {
                 worker = rBank.poll()!
                 let t = time[worker]
                 lWorker.add((curTime + t[2] + t[3], worker))
-                curTime += t[2]  // right to left.
+                curTime += t[2]  // right to left
 
                 remainingBoxes -= 1
             } else if !lBank.isEmpty && (remainingBoxes > rBank.size + rWorker.size) {
@@ -71,7 +71,7 @@ class Solution {
                 worker = lBank.poll()!
                 let t = time[worker]
                 rWorker.add((curTime + t[0] + t[1], worker))
-                curTime += t[0]  // left to right.
+                curTime += t[0]  // left to right
             } else if remainingBoxes == rBank.size + rWorker.size {
                 curTime = rWorker.peek()!.0
             } else {
