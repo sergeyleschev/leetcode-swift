@@ -3,9 +3,8 @@ class Solution {
     // Solution by Sergey Leschev
     // 2785. Sort Vowels in a String
     
-    // Complexity
-    // Time: O(n*logn)
-    // Space: O(n)
+    // Time complexity: O(n*logn)
+    // Space complexity: O(n)
 
     func sortVowels(_ s: String) -> String {
         var vow = [Character]()

@@ -2,9 +2,9 @@ class Solution {
 
     // Solution by Sergey Leschev
     // 2763. Sum of Imbalance Numbers of All Subarrays
-    // Complexity
-    // Time: O(n^2)
-    // Space: O(n)
+
+    // Time complexity: O(n^2)
+    // Space complexity: O(n)
 
     func sumImbalanceNumbers(_ nums: [Int]) -> Int {
         var res = 0

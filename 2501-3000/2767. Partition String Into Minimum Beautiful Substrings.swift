@@ -2,9 +2,9 @@ class Solution {
 
     // Solution by Sergey Leschev
     // 2767. Partition String Into Minimum Beautiful Substrings
-    // Complexity
-    // Time: O(n^2)
-    // Space: O(n)
+
+    // Time complexity: O(n^2)
+    // Space complexity: O(n)
 
     func minimumBeautifulSubstrings(_ s: String) -> Int {
         let n = s.count

@@ -2,9 +2,9 @@ class Solution {
 
     // Solution by Sergey Leschev
     // 2771. Longest Non-decreasing Subarray From Two Arrays
-    // Complexity
-    // Time: O(n)
-    // Space: O(1)
+
+    // Time complexity: O(n)
+    // Space complexity: O(1)
 
     func maxNonDecreasingLength(_ nums1: [Int], _ nums2: [Int]) -> Int {
         var res = 1

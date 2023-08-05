@@ -3,9 +3,8 @@ class Solution {
     // Solution by Sergey Leschev
     // 2735. Collecting Chocolates
 
-    // Complexity
-    // Time: O(n^2)
-    // Space: O(n)
+    // Time complexity: O(n^2)
+    // Space complexity: O(n)
 
     func minCost(_ nums: [Int], _ x: Int) -> Int {
         let n = nums.count

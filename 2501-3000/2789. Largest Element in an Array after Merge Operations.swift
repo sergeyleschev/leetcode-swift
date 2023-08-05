@@ -3,9 +3,8 @@ class Solution {
     // Solution by Sergey Leschev
     // 2789. Largest Element in an Array after Merge Operations
     
-    // Complexity
-    // Time: O(N)
-    // Space: O(1)
+    // Time complexity: O(N)
+    // Space complexity: O(1)
 
     func maxArrayValue(_ nums: [Int]) -> Int {
         var ans = nums[nums.count - 1]

@@ -2,9 +2,9 @@ class Solution {
 
     // Solution by Sergey Leschev
     // 2772. Apply Operations to Make All Array Elements Equal to Zero
-    // Complexity
-    // Time: O(n)
-    // Space: O(1), needs O(k) if not change the input A
+
+    // Time complexity: O(n)
+    // Space complexity: O(1), needs O(k) if not change the input A
 
     func checkArray(_ nums: [Int], _ k: Int) -> Bool {
         var nums = nums  // Make a mutable copy of the input array
