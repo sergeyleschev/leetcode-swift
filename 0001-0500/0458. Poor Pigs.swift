@@ -36,13 +36,15 @@ class Solution {
     // 1 <= buckets <= 1000
     // 1 <= minutesToDie <= minutesToTest <= 100
 
-    // - Complexity:
-    //   - time: O(1), only constant time is used.
-    //   - space: O(1), only constant space is used.
-
     func poorPigs(_ buckets: Int, _ minutesToDie: Int, _ minutesToTest: Int) -> Int {
-        let states = minutesToTest / minutesToDie + 1
-        return Int(ceil(log(Double(buckets)) / log(Double(states))))
+        var pigs = 0
+        var testRounds = minutesToTest / minutesToDie + 1
+
+        while pow(Double(testRounds), Double(pigs)) < Double(buckets) {
+            pigs += 1
+        }
+
+        return pigs
     }
 
 }
