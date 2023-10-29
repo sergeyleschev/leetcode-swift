@@ -17,7 +17,7 @@ class Solution {
 
     // The variable "ans" accumulates the result as we traverse the array.
 
-    // Time complexity: O(log n)
+    // Time complexity: O(n * log n)
     // Space complexity: O(n)
 
     func sumCounts(_ nums: [Int]) -> Int {
