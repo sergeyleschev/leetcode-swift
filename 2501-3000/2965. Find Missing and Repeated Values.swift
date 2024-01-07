@@ -3,6 +3,7 @@ class Solution {
     // Solution by Sergey Leschev
     // 2965. Find Missing and Repeated Values
 
+    // HashMap
     // Time complexity: O(n * n)
     // Space complexity: O(n * n)
 
