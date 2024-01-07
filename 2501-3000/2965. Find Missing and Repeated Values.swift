@@ -3,32 +3,26 @@ class Solution {
     // Solution by Sergey Leschev
     // 2965. Find Missing and Repeated Values
 
-    // HashMap
+    // Math
     // Time complexity: O(n * n)
-    // Space complexity: O(n * n)
+    // Space complexity: O(1)
 
     func findMissingAndRepeatedValues(_ grid: [[Int]]) -> [Int] {
-        var freq = [Int: Int]()
         let n = grid.count
+        let N = n * n
+        var sum = 0
+        var sqrSum = 0
 
         for i in 0..<n {
             for j in 0..<n {
-                freq[grid[i][j], default: 0] += 1
+                sum += grid[i][j]
+                sqrSum += grid[i][j] * grid[i][j]
             }
         }
 
-        var repeated = 0
-        var missing = 0
+        let c1 = sum - N * (N + 1) / 2
+        let c2 = sqrSum - N * (N + 1) * (2 * N + 1) / 6
 
-        for i in 1...(n * n) {
-            if freq[i] == 2 {
-                repeated = i
-            }
-            if freq[i] == nil {
-                missing = i
-            }
-        }
-
-        return [repeated, missing]
+        return [(c2 / c1 + c1) / 2, (c2 / c1 - c1) / 2]
     }
 }
