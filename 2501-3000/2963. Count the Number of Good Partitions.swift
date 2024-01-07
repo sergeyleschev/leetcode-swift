@@ -3,8 +3,8 @@ class Solution {
     // Solution by Sergey Leschev
     // 2963. Count the Number of Good Partitions
 
-    // Time complexity - O(N)
-    // Space complexity - O(N)
+    // Time complexity: O(N)
+    // Space complexity: O(N)
 
     func numberOfGoodPartitions(_ nums: [Int]) -> Int {
         let m = 1_000_000_007
